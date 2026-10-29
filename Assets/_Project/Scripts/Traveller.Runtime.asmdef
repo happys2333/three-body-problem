@@ -1,0 +1,6 @@
+{
+  "name": "ThreeBodyProblem.Runtime",
+  "rootNamespace": "ThreeBodyProblem",
+  "references": [],
+  "autoReferenced": true
+}

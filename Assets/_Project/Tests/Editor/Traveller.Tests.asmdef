@@ -1,0 +1,6 @@
+{
+  "name": "ThreeBodyProblem.EditorTests",
+  "references": ["ThreeBodyProblem.Runtime", "ThreeBodyProblem.Editor"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

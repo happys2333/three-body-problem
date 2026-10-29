@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f63c627f277f94cc78b9db17358438d5, type: 3}
+  m_Name: GobiStory
+  m_EditorClassIdentifier: ThreeBodyProblem.Runtime::ThreeBodyProblem.GobiStorySettings
+  nightMeetingSeconds: 12
+  dangerRunSpeed: 4.2
+  shelterWaitSeconds: 600
+  suddenSunsetSeconds: 2
+  minimumNightWalkSeconds: 12
+  minimumNightWalkMetres: 35
+  departureGoal: {x: 2, y: 0, z: 64}
+  maximumHealth: 100
+  sunlightDamage: 10
+  sunlightDamageInterval: 1
+  burnSeconds: 32
+  recoveryFadeSeconds: 1.5
+  frameRateLimit: 90
+  shadowDistance: 70
+  terrainPixelError: 15
+  lodBias: 1
+  shadowCascades: 2
+  antiAliasingSamples: 2
+  torchPrefab: {fileID: 2596677387209847608, guid: 4c946ebd99fef4426a6d4c980dc5ae6f, type: 3}
+  vegetationFirePrefab: {fileID: 8221842725738405260, guid: f7c43982df323414da6251127720d6d7, type: 3}
+  ashPrefab: {fileID: 493474605969312121, guid: 0d04c3a48fc78452ea408462ca239599, type: 3}
+  meetingLine: {fileID: 8300000, guid: 47812b0c56cc24007b87a4b999eb3421, type: 3}
+  warningLine: {fileID: 8300000, guid: a9d7dcc4292cb45109974c8e75b92eac, type: 3}
+  shelterLine: {fileID: 8300000, guid: 3303bb2644964449f8cf889a9f5800f4, type: 3}
+  identityLine: {fileID: 8300000, guid: 74c3bc00db3154d4faff174510140a87, type: 3}
+  hourglassLine: {fileID: 8300000, guid: d8b20d84f1a26486fb6b8cce054557ad, type: 3}
+  departureLine: {fileID: 8300000, guid: 04ed837f951f348dabb2c9855d076ebb, type: 3}

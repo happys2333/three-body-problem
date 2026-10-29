@@ -1,0 +1,172 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d8a5f27e65a4c64bd5df7cb2a3d038, type: 3}
+  m_Name: 01_GobiJourney
+  m_EditorClassIdentifier: ThreeBodyProblem.Runtime::ThreeBodyProblem.TravellerSceneProfile
+  chapter: "\u7B2C\u4E00\u5E55 / \u6208\u58C1\u65C5\u4EBA"
+  subtitle: "\u5DE8\u5CA9\u907F\u65E5 \xB7 \u5CA9\u4E0B\u4EA4\u8C08 \xB7 \u98DE\u661F\u89C2\u5BDF\u4E4B\u8DEF"
+  sceneIndex: 0
+  transitionSeconds: 2
+  moments:
+  - title: "\u591C\u8272 \xB7 \u6208\u58C1\u76F8\u9047"
+    description: "\u7070\u8910\u8272\u6208\u58C1\u4E0E\u6C89\u9ED8\u7684\u77F3\u5CF0\u3002\u65C5\u4EBA\u5DF2\u5728\u5DE8\u5CA9\u65C1\u7B49\u5019\uFF0C\u5929\u8FB9\u7684\u4EAE\u5149\u6B63\u5728\u53D8\u5F97\u5F02\u5E38\u3002"
+    caption: "\u65C5\u4EBA\uFF1A\u4E00\u4E2A\u4EBA\u5728\u591C\u91CC\u8D76\u8DEF\uFF1F\u4E3E\u7740\u706B\u628A\uFF0C\u8DDF\u6211\u8D70\u3002"
+    objective: "\u6CBF\u77F3\u8DEF\u8D70\u8FD1\u65C5\u4EBA\uFF0C\u8FA8\u8BA4\u5DE8\u5CA9\u4E0B\u7684\u9634\u5F71\u3002"
+    viewPosition: {x: 0, y: 1.75, z: -30}
+    viewTarget: {x: -6, y: 7, z: 32}
+    zenith: {r: 0.005, g: 0.012, b: 0.032, a: 1}
+    horizon: {r: 0.035, g: 0.065, b: 0.105, a: 1}
+    fog: {r: 0.035, g: 0.055, b: 0.08, a: 1}
+    ambient: {r: 0.09, g: 0.115, b: 0.16, a: 1}
+    lightColor: {r: 0.4, g: 0.58, b: 0.85, a: 1}
+    lightIntensity: 0.1
+    fogDensity: 0.0015
+    sunCount: 0
+    sunA: {x: 0.3, y: -0.3, z: 1}
+    sunB: {x: -0.3, y: 0.4, z: 1}
+    sunC: {x: 0.1, y: 0.6, z: 1}
+    sunRadii: {x: 0.055, y: 0.03, z: 0.03}
+    stars: 1
+    flyingStars: 0
+    heat: 0
+    frost: 0
+    observation: 
+    interpretation: 
+  - title: "\u5DE8\u65E5 \xB7 \u5CA9\u4E0B\u907F\u9669"
+    description: "\u5DE8\u65E5\u5360\u636E\u4F4E\u7A7A\u3002\u5CA9\u5916\u67AF\u8349\u8D77\u706B\u3001\u5730\u8868\u51FA\u73B0\u88C2\u9699\uFF1B\u5CA9\u4E0B\u7559\u51FA\u53EF\u901A\u884C\u7684\u9000\u8DEF\u548C\u89C2\u5BDF\u7A97\u53E3\u3002"
+    caption: "\u65C5\u4EBA\uFF1A\u518D\u5F80\u91CC\u7AD9\u3002\u522B\u628A\u8FD9\u4E00\u7247\u9634\u5F71\uFF0C\u5F53\u6210\u6C38\u8FDC\u7684\u5B89\u5168\u3002"
+    objective: "\u7AD9\u5728\u9634\u5F71\u91CC\u770B\u5411\u5CA9\u5916\uFF1B\u8FD9\u91CC\u4EC5\u80FD\u6682\u907F\u8FD9\u4E00\u6B21\u9AD8\u6E29\u3002"
+    viewPosition: {x: -13, y: 1.75, z: 10}
+    viewTarget: {x: 28, y: 22, z: 130}
+    zenith: {r: 0.16, g: 0.26, b: 0.36, a: 1}
+    horizon: {r: 1, g: 0.58, b: 0.23, a: 1}
+    fog: {r: 0.6, g: 0.39, b: 0.22, a: 1}
+    ambient: {r: 0.5, g: 0.39, b: 0.28, a: 1}
+    lightColor: {r: 1, g: 0.76, b: 0.48, a: 1}
+    lightIntensity: 2.1
+    fogDensity: 0.004
+    sunCount: 1
+    sunA: {x: 0.3, y: 0.24, z: 1}
+    sunB: {x: -0.3, y: 0.4, z: 1}
+    sunC: {x: 0.1, y: 0.6, z: 1}
+    sunRadii: {x: 0.23, y: 0.03, z: 0.03}
+    stars: 0
+    flyingStars: 0
+    heat: 1
+    frost: 0
+    observation: "\u5DE8\u65E5\u5F02\u5E38\u5E9E\u5927\uFF0C\u5CA9\u5916\u8349\u6728\u71C3\u70E7\uFF0C\u5CA9\u4E0B\u6682\u65F6\u4FDD\u6709\u9634\u5F71\u3002"
+    interpretation: 
+  - title: "\u9AA4\u843D \xB7 \u91CD\u8FD4\u9ED1\u591C"
+    description: "\u6C99\u6F0F\u7EE7\u7EED\u8BA1\u65F6\uFF0C\u65E5\u5149\u8FC5\u901F\u6536\u675F\u3002\u65C5\u4EBA\u8868\u660E\u8EAB\u4EFD\u4E0E\u524D\u5F80\u671D\u6B4C\u732E\u5386\u6CD5\u7684\u76EE\u7684\uFF0C\u8DEF\u9014\u91CD\u65B0\u5F00\u653E\u3002"
+    caption: "\u5468\u6587\u738B\uFF1A\u6211\u662F\u59EC\u660C\u3002\u8DEF\u80FD\u8D70\u7684\u65F6\u5019\uFF0C\u5C31\u4E0D\u8981\u518D\u7B49\u3002"
+    objective: "\u67E5\u770B\u6C99\u6F0F\u4E0E\u9A7F\u8DEF\uFF0C\u6CBF\u77F3\u8DEF\u7EE7\u7EED\u524D\u884C\u3002"
+    viewPosition: {x: -8, y: 1.75, z: 21}
+    viewTarget: {x: 4, y: 9, z: 120}
+    zenith: {r: 0.005, g: 0.012, b: 0.032, a: 1}
+    horizon: {r: 0.035, g: 0.065, b: 0.105, a: 1}
+    fog: {r: 0.035, g: 0.055, b: 0.08, a: 1}
+    ambient: {r: 0.09, g: 0.115, b: 0.16, a: 1}
+    lightColor: {r: 0.4, g: 0.58, b: 0.85, a: 1}
+    lightIntensity: 0.1
+    fogDensity: 0.0015
+    sunCount: 0
+    sunA: {x: 0.3, y: -0.3, z: 1}
+    sunB: {x: -0.3, y: 0.4, z: 1}
+    sunC: {x: 0.1, y: 0.6, z: 1}
+    sunRadii: {x: 0.035, y: 0.035, z: 0.035}
+    stars: 1
+    flyingStars: 0
+    heat: 0
+    frost: 0
+    observation: 
+    interpretation: 
+  - title: "\u591C\u8DEF \xB7 \u4E00\u9897\u98DE\u661F"
+    description: "\u77F3\u5CF0\u4E0A\u65B9\u6709\u4E00\u9897\u660E\u4EAE\u5929\u4F53\u7F13\u6162\u79FB\u52A8\u3002\u80CC\u666F\u661F\u7A7A\u4E0E\u77F3\u5CF0\u63D0\u4F9B\u53C2\u7167\uFF0C\u5B83\u6CA1\u6709\u6D41\u661F\u5F0F\u957F\u5C3E\u3002"
+    caption: "\u5468\u6587\u738B\uFF1A\u522B\u53EA\u770B\u5B83\u6709\u591A\u4EAE\uFF0C\u770B\u770B\u5B83\u548C\u65C1\u8FB9\u90A3\u4E9B\u661F\u7684\u4F4D\u7F6E\u3002"
+    objective: "\u62AC\u5934\u770B\u6E05\u4E00\u9897\u79FB\u52A8\u4EAE\u70B9\uFF0C\u6309
+      E \u4FDD\u5B58\u4EB2\u773C\u89C2\u5BDF\u3002"
+    viewPosition: {x: 2, y: 1.75, z: 42}
+    viewTarget: {x: 46, y: 48, z: 185}
+    zenith: {r: 0.008, g: 0.018, b: 0.045, a: 1}
+    horizon: {r: 0.1, g: 0.17, b: 0.23, a: 1}
+    fog: {r: 0.07, g: 0.105, b: 0.145, a: 1}
+    ambient: {r: 0.23, g: 0.29, b: 0.38, a: 1}
+    lightColor: {r: 0.43, g: 0.62, b: 0.9, a: 1}
+    lightIntensity: 0.35
+    fogDensity: 0.002
+    sunCount: 0
+    sunA: {x: 0.2, y: 0.6, z: -0.6}
+    sunB: {x: -0.3, y: 0.4, z: 1}
+    sunC: {x: 0.1, y: 0.6, z: 1}
+    sunRadii: {x: 0.035, y: 0.035, z: 0.035}
+    stars: 1
+    flyingStars: 1
+    heat: 0
+    frost: 0
+    observation: "\u7B2C\u4E00\u6B21\u591C\u95F4\u89C2\u6D4B\uFF1A\u77F3\u5CF0\u4E0A\u65B9\u6709\u4E00\u9897\u7F13\u6162\u79FB\u52A8\u7684\u4EAE\u70B9\uFF0C\u6CA1\u6709\u957F\u5C3E\u3002"
+    interpretation: 
+  - title: "\u4F11\u6574\u540E \xB7 \u4E24\u9897\u98DE\u661F"
+    description: "\u7ECF\u8FC7\u4E00\u6BB5\u8DEF\u7A0B\u4E0E\u4F11\u6574\uFF0C\u4E24\u9897\u4EAE\u70B9\u540C\u65F6\u8FDB\u5165\u89C6\u91CE\uFF0C\u65B9\u5411\u548C\u9AD8\u5EA6\u53EF\u4EE5\u533A\u5206\u3002\u89C2\u5BDF\u4E0E\u5468\u6587\u738B\u7684\u89E3\u91CA\u5206\u522B\u8BB0\u5F55\u3002"
+    caption: "\u5468\u6587\u738B\uFF1A\u4E24\u9897\u98DE\u661F\u3002\u6309\u6211\u8FC7\u53BB\u7684\u63A8\u6F14\uFF0C\u6052\u7EAA\u5143\u5C06\u81F3\u3002"
+    objective: "\u5C06\u4E24\u9897\u540C\u65F6\u53EF\u89C1\u7684\u4EAE\u70B9\u4E0E\u4E0A\u4E00\u6761\u8BB0\u5F55\u5BF9\u7167\u3002"
+    viewPosition: {x: 2, y: 1.75, z: 64}
+    viewTarget: {x: 15, y: 55, z: 185}
+    zenith: {r: 0.008, g: 0.018, b: 0.045, a: 1}
+    horizon: {r: 0.1, g: 0.17, b: 0.23, a: 1}
+    fog: {r: 0.07, g: 0.105, b: 0.145, a: 1}
+    ambient: {r: 0.23, g: 0.29, b: 0.38, a: 1}
+    lightColor: {r: 0.43, g: 0.62, b: 0.9, a: 1}
+    lightIntensity: 0.35
+    fogDensity: 0.002
+    sunCount: 0
+    sunA: {x: 0.2, y: 0.6, z: -0.6}
+    sunB: {x: -0.3, y: 0.4, z: 1}
+    sunC: {x: 0.1, y: 0.6, z: 1}
+    sunRadii: {x: 0.035, y: 0.035, z: 0.035}
+    stars: 1
+    flyingStars: 2
+    heat: 0
+    frost: 0
+    observation: "\u7B2C\u4E8C\u6B21\u591C\u95F4\u89C2\u6D4B\uFF1A\u4E24\u9897\u4EAE\u70B9\u540C\u65F6\u53EF\u89C1\uFF0C\u9AD8\u5EA6\u4E0E\u4F4D\u7F6E\u4E0D\u540C\uFF0C\u5747\u6709\u7F13\u6162\u7684\u76F8\u5BF9\u8FD0\u52A8\u3002"
+    interpretation: "\u5468\u6587\u738B\u6839\u636E\u4E24\u9897\u98DE\u661F\u5224\u65AD\u6052\u7EAA\u5143\u5C06\u81F3\uFF1B\u8FD9\u662F\u4EBA\u7269\u5BF9\u89C2\u5BDF\u7684\u89E3\u91CA\u3002"
+  - title: "\u591C\u884C \xB7 \u524D\u5F80\u671D\u6B4C"
+    description: "\u592A\u9633\u7A81\u7136\u6C89\u843D\u3002\u8DDF\u968F\u706B\u5149\u8D70\u8FC7\u591C\u8DEF\uFF0C\u65C5\u7A0B\u968F\u540E\u8FC7\u6E21\u5230\u6570\u65E5\u540E\u7684\u671D\u6B4C\u3002"
+    caption: 
+    objective: "\u8DDF\u968F\u5468\u6587\u738B\u8D70\u8FC7\u591C\u8DEF\u3002"
+    viewPosition: {x: 1, y: 1.75, z: 83}
+    viewTarget: {x: 0, y: 5, z: 145}
+    zenith: {r: 0.005, g: 0.012, b: 0.032, a: 1}
+    horizon: {r: 0.035, g: 0.065, b: 0.105, a: 1}
+    fog: {r: 0.035, g: 0.055, b: 0.08, a: 1}
+    ambient: {r: 0.09, g: 0.115, b: 0.16, a: 1}
+    lightColor: {r: 0.4, g: 0.58, b: 0.85, a: 1}
+    lightIntensity: 0.1
+    fogDensity: 0.0015
+    sunCount: 0
+    sunA: {x: 0.3, y: -0.3, z: 1}
+    sunB: {x: -0.3, y: 0.4, z: 1}
+    sunC: {x: 0.1, y: 0.6, z: 1}
+    sunRadii: {x: 0.035, y: 0.035, z: 0.035}
+    stars: 1
+    flyingStars: 1
+    heat: 0
+    frost: 0
+    observation: 
+    interpretation: 
+  hasCapitalRoute: 0
+  companionArrival: {x: 0, y: 0, z: 0}
+  courtGoal: {x: 0, y: 0, z: 0}
+  waterGoal: {x: 0, y: 0, z: 0}
+  courtWaypoints: []
+  waterWaypoints: []
+  companionWalkSpeed: 2.6
+  gobiStory: {fileID: 11400000, guid: 672dc97221a8e46b591909db28f868ff, type: 2}
