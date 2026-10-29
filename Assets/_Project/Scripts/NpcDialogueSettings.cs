@@ -6,6 +6,7 @@ namespace ThreeBodyProblem
     {
         public string gatewayUrl="http://127.0.0.1:8769";
         public float replyTimeoutSeconds=10;
+        public float speechTimeoutSeconds=35;
         public TextAsset sharedPrompt;
         public bool synthesiseReplies=true;
         public float conversationDistance=5;

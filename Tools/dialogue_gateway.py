@@ -34,6 +34,7 @@ _model=None
 _model_lock=threading.Lock()
 _asr_lock=threading.Lock()
 _asr_worker=None
+_neural=None
 
 
 def load_model():
@@ -96,6 +97,7 @@ def ensure_asr_worker():
 
 
 def transcribe(wav):
+    if _neural is not None:return _neural.transcribe(wav)
     started=time.monotonic()
     if not _asr_lock.acquire(timeout=28):raise TimeoutError('ASR busy')
     try:
@@ -112,21 +114,33 @@ def transcribe(wav):
 atexit.register(close_asr_worker)
 
 
-def speech_wav(text,npc_id='wenwang'):
+def speech_wav(text,npc_id='wenwang',use_cache=True):
     text=str(text).strip()[:240]
     if not text:raise ValueError('Empty speech')
+    if _neural is not None:
+        profile=_neural.profiles.get(npc_id)
+        if profile is None:raise ValueError('Unknown voice profile')
+        digest=hashlib.sha256(('moss-f52645cb-8b7bcc93-24k-v1\0'+json.dumps(profile,sort_keys=True)+'\0'+text).encode()).hexdigest()
+        CACHE.mkdir(parents=True,exist_ok=True);cached=CACHE/(digest+'.wav')
+        if use_cache and cached.exists():
+            _neural.stats['tts']={'cacheHit':True,'voice':profile['voice']};return cached.read_bytes()
+        data=_neural.speech(text,npc_id)
+        _neural.stats['tts']['cacheHit']=False
+        if use_cache:
+            temporary=cached.with_suffix('.'+str(threading.get_ident())+'.tmp');temporary.write_bytes(data);temporary.replace(cached)
+        return data
     voice='Reed (中文（中国大陆）)';rate='150' if npc_id=='wenwang' else '165'
     digest=hashlib.sha256((voice+'\0'+rate+'\0'+npc_id+'\0'+text).encode()).hexdigest()
     CACHE.mkdir(parents=True,exist_ok=True)
     cached=CACHE/(digest+'.wav')
-    if cached.exists():return cached.read_bytes()
+    if use_cache and cached.exists():return cached.read_bytes()
     # Arguments are passed directly; character speech is never interpreted as shell code.
     with tempfile.TemporaryDirectory(prefix='traveller-tts-') as folder:
         source=Path(folder)/'voice.aiff';target=Path(folder)/'voice.wav'
         subprocess.run(['/usr/bin/say','-v',voice,'-r',rate,'-o',str(source),'--',text],check=True,timeout=12,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
         subprocess.run(['/usr/bin/afconvert','-f','WAVE','-d','LEI16@16000','-c','1',str(source),str(target)],check=True,timeout=5,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
         data=target.read_bytes()
-    cached.write_bytes(data)
+    if use_cache:cached.write_bytes(data)
     return data
 
 
@@ -194,7 +208,11 @@ class Handler(BaseHTTPRequestHandler):
             self.send_response(status);self.send_header('Content-Type',content_type);self.send_header('Content-Length',str(len(data)));self.end_headers();self.wfile.write(data)
         except (BrokenPipeError,ConnectionResetError):pass
     def do_GET(self):
-        if self.path=='/health':self.send({'ready':True,'mode':'online' if self.online and os.environ.get('DEEPSEEK_API_KEY') else 'scripted','asrModelPresent':MODEL.is_dir(),'asrModel':MODEL.name})
+        if self.path=='/health':
+            info={'ready':True,'mode':'online' if self.online and os.environ.get('DEEPSEEK_API_KEY') else 'scripted',
+                'asrModelPresent':MODEL.is_dir(),'asrModel':MODEL.name,'asrEngine':'vosk','ttsEngine':'macos-say'}
+            if _neural is not None:info.update(_neural.health());info['asrModelPresent']=True
+            self.send(info)
         else:self.send({'error':'Not found'},404)
     def do_POST(self):
         if self.headers.get('Origin') or self.headers.get('Host','').split(':')[0] not in {'127.0.0.1','localhost','[::1]'}:
@@ -206,7 +224,7 @@ class Handler(BaseHTTPRequestHandler):
             if self.path=='/transcribe':self.send({'text':transcribe(raw)});return
             data=json.loads(raw)
             if self.path=='/dialogue':self.send(dialogue(data,self.online));return
-            if self.path=='/speech':self.send(speech_wav(data.get('text',''),data.get('npcId','wenwang')),content_type='audio/wav');return
+            if self.path=='/speech':self.send(speech_wav(data.get('text',''),data.get('npcId','wenwang'),use_cache=data.get('cache',True) is not False),content_type='audio/wav');return
             self.send({'error':'Not found'},404)
         except (ValueError,KeyError,json.JSONDecodeError):self.send({'error':'Invalid request'},400)
         except Exception as error:
@@ -215,6 +233,7 @@ class Handler(BaseHTTPRequestHandler):
 
 
 def main():
+    global _neural
     if '--asr-worker' in sys.argv:
         load_model();print(json.dumps({'ready':True}),flush=True)
         for line in sys.stdin:
@@ -224,11 +243,20 @@ def main():
         return
     if '--transcribe-stdin' in sys.argv:
         print(json.dumps({'text':transcribe_in_process(sys.stdin.buffer.read(2_000_001))},ensure_ascii=False));return
-    parser=argparse.ArgumentParser();parser.add_argument('--online',action='store_true');parser.add_argument('--port',type=int,default=8769);args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--online',action='store_true');parser.add_argument('--port',type=int,default=8769)
+    parser.add_argument('--local-models',action='store_true');parser.add_argument('--legacy-voice',action='store_true');args=parser.parse_args()
     signal.signal(signal.SIGTERM,lambda *_:sys.exit(0))
     Handler.online=args.online
-    try:ensure_asr_worker()
-    except Exception as error:close_asr_worker();print('ASR warmup: '+type(error).__name__,flush=True)
+    local_setting=CACHE.parent/'active-backends.json'
+    use_local=args.local_models or (local_setting.exists() and json.loads(local_setting.read_text()).get('useLocalModels',False))
+    if use_local and not args.legacy_voice:
+        from local_voice_bridge import LocalVoice
+        candidate=LocalVoice(threads=1)
+        try:candidate.start();_neural=candidate;print('Local Qwen ASR and MOSS ONNX speech ready.',flush=True)
+        except Exception as error:candidate.close();print('Neural voice unavailable; fallback: '+type(error).__name__,flush=True)
+    if _neural is None:
+        try:ensure_asr_worker()
+        except Exception as error:close_asr_worker();print('ASR warmup: '+type(error).__name__,flush=True)
     print(f'Traveller dialogue gateway on 127.0.0.1:{args.port}; online mode {args.online}',flush=True)
     ThreadingHTTPServer(('127.0.0.1',args.port),Handler).serve_forever()
 

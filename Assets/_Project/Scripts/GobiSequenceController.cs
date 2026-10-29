@@ -66,7 +66,7 @@ namespace ThreeBodyProblem
                 if(!sunRising&&journey.Progress.Elapsed>=settings.nightMeetingSeconds)
                 {
                     sunRising=true;journey.CloseDialogue();stage.ApplyMoment(1,false,false);
-                    journey.Speak("旅人：太阳不对！别停在亮处，跟我进石下！",7);PlayLine(settings.warningLine);
+                    journey.Speak("旅人：太阳不对！别停在亮处，快跟我躲到岩石下面！",7);PlayLine(settings.warningLine);
                 }
                 if(sunRising&&!SunHasRisen&&journey.Progress.Elapsed>=settings.nightMeetingSeconds+stage.profile.transitionSeconds)
                 {SunHasRisen=true;journey.Progress.MarkGiantSunVisible();}

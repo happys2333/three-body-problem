@@ -14,6 +14,8 @@ namespace ThreeBodyProblem
         public string Status {get;private set;}="可以打字，或按住 V 说话";
         public string LastReply {get;private set;}
         public bool IsBusy {get;private set;}
+        public bool IsSpeaking => speaker!=null&&speaker.isPlaying;
+        public int CurrentSpeechSampleRate => speaker!=null&&speaker.clip!=null?speaker.clip.frequency:0;
         public event Action Changed;
         private TravellerStage stage;private TravellerJourney journey;private NpcIdentity[] identities;
         private AudioSource speaker;private AudioClip dynamicClip;
@@ -114,20 +116,20 @@ namespace ThreeBodyProblem
             using(var web=new UnityWebRequest(settings.gatewayUrl.TrimEnd('/')+"/speech","POST"))
             {
                 web.uploadHandler=new UploadHandlerRaw(Encoding.UTF8.GetBytes(JsonUtility.ToJson(new SpeechRequest{text=text,npcId=id})));
-                web.downloadHandler=new DownloadHandlerBuffer();web.SetRequestHeader("Content-Type","application/json");web.timeout=10;synthesis=web;
+                web.downloadHandler=new DownloadHandlerBuffer();web.SetRequestHeader("Content-Type","application/json");web.timeout=Mathf.CeilToInt(settings.speechTimeoutSeconds);synthesis=web;
                 yield return web.SendWebRequest();
                 if(token!=version)yield break;synthesis=null;
-                if(web.result!=UnityWebRequest.Result.Success)yield break;
+                if(web.result!=UnityWebRequest.Result.Success){SetStatus("语音暂不可用，可继续看字幕交谈");yield break;}
                 AudioClip clip=null;try{clip=VoiceWave.DecodePcm16(web.downloadHandler.data);}catch(Exception){clip=null;}
                 if(clip==null)yield break;
                 if(dynamicClip!=null)Destroy(dynamicClip);dynamicClip=clip;speaker.clip=clip;speaker.Play();
             }
         }
-        public void PlayScriptedLine(AudioClip clip){if(clip==null||speaker==null)return;StopSpeaking();speaker.clip=clip;speaker.Play();}
+        public void PlayScriptedLine(AudioClip clip){if(clip==null||speaker==null)return;CancelPending();speaker.clip=clip;speaker.Play();}
         public void StopSpeaking(){if(speaker!=null)speaker.Stop();if(synthesis!=null){synthesis.Abort();synthesis=null;}}
         public void CancelPending(){version++;if(pending!=null){pending.Abort();pending=null;}StopSpeaking();IsBusy=false;}
         public void SetStatus(string value){Status=value;Changed?.Invoke();}
-        private void OnProgressChanged(){if(!journey.DialogueOpen&&IsBusy){CancelPending();SetStatus("可以打字，或按住 V 说话");}}
+        private void OnProgressChanged(){if(!journey.DialogueOpen&&(IsBusy||synthesis!=null||(speaker!=null&&speaker.isPlaying&&speaker.clip==dynamicClip))){CancelPending();SetStatus("可以打字，或按住 V 说话");}}
         private void OnDestroy(){CancelPending();if(journey!=null)journey.Changed-=OnProgressChanged;if(dynamicClip!=null)Destroy(dynamicClip);}
     }
 }
