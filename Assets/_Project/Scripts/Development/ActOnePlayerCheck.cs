@@ -14,10 +14,10 @@ namespace ThreeBodyProblem
     // Real player check. The optional -act-one-real-wait flag waits the full 600 gameplay seconds.
     public sealed class ActOnePlayerCheck : MonoBehaviour
     {
-        [Serializable] private class Metric{public int moment;public float meanMs,p95Ms,gpuMeanMs,mainThreadMeanMs;public long triangles,batches;}
+        [Serializable] private class Metric{public int moment,actualFrameRateLimit,vSyncCount;public bool focused;public float meanMs,p95Ms,gpuMeanMs,mainThreadMeanMs,waitForTargetMeanMs;public long triangles,batches;}
         [Serializable] private class Report
         {
-            public bool passed,mechanicsPassed,performancePassed,realTenMinuteWait,hardwareMicrophoneUsed;
+            public bool passed,mechanicsPassed,performancePassed,performanceOnly,realTenMinuteWait,hardwareMicrophoneUsed;
             public int checks,ignited,burned,shaded,frameRateLimit;public string phase,gpu;public float walkedMetres,shelterWallSeconds,sunsetWallSeconds;
             public List<string> errors=new List<string>();public List<Metric> metrics=new List<Metric>();
             public string asrTranscript,playerTorchViewport;
@@ -31,6 +31,7 @@ namespace ThreeBodyProblem
             var args=Environment.GetCommandLineArgs();int index=Array.IndexOf(args,"-act-one-check");
             if(index<0||index+1>=args.Length||UnityEngine.Object.FindFirstObjectByType<ActOnePlayerCheck>()!=null)return;
             var go=new GameObject("Development Act One Check");DontDestroyOnLoad(go);var check=go.AddComponent<ActOnePlayerCheck>();check.output=args[index+1];check.report.realTenMinuteWait=Array.IndexOf(args,"-act-one-real-wait")>=0;
+            check.report.performanceOnly=Array.IndexOf(args,"-act-one-perf-only")>=0;
         }
         private IEnumerator Start()
         {
@@ -38,6 +39,8 @@ namespace ThreeBodyProblem
             Application.runInBackground=true;Application.targetFrameRate=120;QualitySettings.vSyncCount=0;report.gpu=SystemInfo.graphicsDeviceName;Application.logMessageReceived+=OnLog;
             Screen.SetResolution(1920,1080,FullScreenMode.Windowed);yield return Frames(12);Bind();settings=stage.profile.gobiStory;exposure=stage.GetComponent<SunExposureSystem>();fire=stage.GetComponent<GobiVegetationFire>();
             Application.targetFrameRate=settings.frameRateLimit;report.frameRateLimit=settings.frameRateLimit;
+            if(!report.performanceOnly)
+            {
             Check(journey.IsTitle&&stage.Current.sunCount==0,"Opening must be a night-time title.");Check(settings.shelterWaitSeconds==600,"Production wait is not 600 seconds.");
             foreach(var size in new[]{new Vector2Int(960,540),new Vector2Int(1280,720),new Vector2Int(1920,1080),new Vector2Int(1024,768)})
             {Screen.SetResolution(size.x,size.y,FullScreenMode.Windowed);yield return Frames(8);CheckInside(hud.Root.Q("title-card"));}
@@ -115,23 +118,33 @@ namespace ThreeBodyProblem
             report.mechanicsPassed=report.errors.Count==0;
             // Measure the first scene in isolated preview mode after the complete playable sequence.
             journey.ReturnToTitle();var load=SceneManager.LoadSceneAsync(TravellerStage.SceneNames[0]);while(!load.isDone)yield return null;yield return Frames(10);Bind();journey.TogglePreview();stage.player.enabled=false;hud.Root.style.display=DisplayStyle.None;
-            SetPhase("six scene performance views");
-            for(int moment=0;moment<6;moment++)
+            }
+            else
             {
-                stage.ApplyMoment(moment,true);yield return Frames(180);var frames=new List<float>();float sum=0,gpu=0,mainMs=0;int gpuCount=0,renderCount=0,mainCount=0;long triangles=0,batches=0;var timings=new FrameTiming[1];ulong last=0;
+                journey.TogglePreview();var away=SceneManager.LoadSceneAsync(TravellerStage.SceneNames[1]);while(!away.isDone)yield return null;yield return Frames(10);
+                var back=SceneManager.LoadSceneAsync(TravellerStage.SceneNames[0]);while(!back.isDone)yield return null;yield return Frames(10);Bind();
+                if(!journey.IsPreviewing)journey.TogglePreview();stage.player.enabled=false;hud.Root.style.display=DisplayStyle.None;
+            }
+            SetPhase("six scene performance views");
+            int viewCount=report.performanceOnly?1:6;
+            for(int moment=0;moment<viewCount;moment++)
+            {
+                stage.ApplyMoment(moment,true);yield return Frames(180);var frames=new List<float>();float sum=0,gpu=0,mainMs=0,waitMs=0;int gpuCount=0,renderCount=0,mainCount=0,waitCount=0;long triangles=0,batches=0;var timings=new FrameTiming[1];ulong last=0;
                 using(var main=ProfilerRecorder.StartNew(ProfilerCategory.Internal,"Main Thread",1))
                 using(var batch=ProfilerRecorder.StartNew(ProfilerCategory.Render,"Batches Count",1))
                 using(var tris=ProfilerRecorder.StartNew(ProfilerCategory.Render,"Triangles Count",1))
+                using(var wait=ProfilerRecorder.StartNew(ProfilerCategory.Internal,"WaitForTargetFPS",1))
                 for(int frame=0;frame<360;frame++)
                 {
                     FrameTimingManager.CaptureFrameTimings();yield return null;float ms=Time.unscaledDeltaTime*1000;frames.Add(ms);sum+=ms;
                     if(main.Valid&&main.LastValue>0){mainMs+=main.LastValue/1000000f;mainCount++;}
+                    if(wait.Valid&&wait.LastValue>0){waitMs+=wait.LastValue/1000000f;waitCount++;}
                     if(batch.Valid&&tris.Valid&&batch.LastValue>0){batches+=batch.LastValue;triangles+=tris.LastValue;renderCount++;}
                     if(FrameTimingManager.GetLatestTimings(1,timings)>0&&timings[0].frameStartTimestamp!=last&&timings[0].gpuFrameTime>0){last=timings[0].frameStartTimestamp;gpu+=(float)timings[0].gpuFrameTime;gpuCount++;}
                 }
-                frames.Sort();var metric=new Metric{moment=moment,meanMs=sum/frames.Count,p95Ms=frames[(int)(frames.Count*.95f)],gpuMeanMs=gpuCount>0?gpu/gpuCount:-1,mainThreadMeanMs=mainCount>0?mainMs/mainCount:-1,triangles=renderCount>0?triangles/renderCount:-1,batches=renderCount>0?batches/renderCount:-1};report.metrics.Add(metric);Check(metric.p95Ms<16.67f,"Act one view "+moment+" exceeded 60 FPS budget: "+metric.p95Ms);Capture("View_"+moment);yield return Frames(3);
+                frames.Sort();var metric=new Metric{moment=moment,actualFrameRateLimit=Application.targetFrameRate,vSyncCount=QualitySettings.vSyncCount,focused=Application.isFocused,waitForTargetMeanMs=waitCount>0?waitMs/waitCount:-1,meanMs=sum/frames.Count,p95Ms=frames[(int)(frames.Count*.95f)],gpuMeanMs=gpuCount>0?gpu/gpuCount:-1,mainThreadMeanMs=mainCount>0?mainMs/mainCount:-1,triangles=renderCount>0?triangles/renderCount:-1,batches=renderCount>0?batches/renderCount:-1};report.metrics.Add(metric);Check(metric.p95Ms<16.67f,"Act one view "+moment+" exceeded 60 FPS budget: "+metric.p95Ms);Capture("View_"+moment);yield return Frames(3);
             }
-            report.performancePassed=report.metrics.Count==6&&!report.metrics.Exists(metric=>metric.p95Ms>=16.67f);
+            report.performancePassed=report.metrics.Count==viewCount&&!report.metrics.Exists(metric=>metric.p95Ms>=16.67f);
             report.passed=report.errors.Count==0;SetPhase("complete");RestoreJournal();Application.Quit(report.passed?0:1);
         }
         private void Bind()

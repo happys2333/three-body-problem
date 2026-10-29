@@ -39,7 +39,7 @@ def main():
         'GobiStorySettings.cs','GobiSequenceController.cs','SunExposureVitality.cs','SunExposureSystem.cs',
         'SunDamageFeedback.cs','VegetationFuel.cs','GobiVegetationFire.cs','TorchBearer.cs','TorchHandIK.cs',
         'TorchFlameBillboard.cs','NpcPersona.cs','NpcIdentity.cs','NpcDialogueSettings.cs',
-        'NpcDialogueDirector.cs','VoiceWave.cs','PlayerMicrophoneInput.cs','Development/ActOnePlayerCheck.cs')]
+        'NpcDialogueDirector.cs','VoiceWave.cs','PlayerMicrophoneInput.cs','Development/ActOnePlayerCheck.cs','Development/LocalVoicePlayerCheck.cs')]
     assets += [ROOT/'Assets/_Project/Editor/ActOneProduction.cs',ROOT/'Assets/_Project/Tests/Editor/ActOneMechanicsTests.cs']
     files=[]
     for path in assets:
@@ -80,7 +80,7 @@ def main():
             'Hardware microphone and permission UI not activated by automated QA.',
             'Speech recognition requires editable confirmation, especially for names.',
             'Local ASR/TTS gateway must be running; packaged standalone voice service is not included.',
-            'Temporary macOS synthetic voice and procedural flame need final audio/art direction.']}
+            'Temporary preset model voices and procedural flame need final audio/art direction.']}
     (DOC/'delivery.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps({'readyForGameplayReview':True,'editModePassed':edit['passed'],'nativeChecks':native['checks'],
         'journeyChecks':journey['checks'],'characterChecks':characters['checks'],'worstFrameP95Ms':report['performance']['worstFrameP95Ms'],

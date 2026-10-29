@@ -1,5 +1,6 @@
 """Check the local speech path using synthetic audio, without opening a microphone."""
 import io
+from array import array
 import json
 from pathlib import Path
 import time
@@ -15,6 +16,21 @@ def request(path,data=None,content_type='application/json'):
     return urllib.request.urlopen(urllib.request.Request(URL+path,data=data,headers=headers),timeout=32)
 
 
+def to_asr_wav(audio):
+    with wave.open(io.BytesIO(audio),'rb') as sound:
+        rate=sound.getframerate();channels=sound.getnchannels();frames=sound.getnframes()
+        values=array('h',sound.readframes(frames))
+    mono=[sum(values[i*channels:(i+1)*channels])/channels for i in range(frames)]
+    converted=array('h')
+    for i in range(int(frames*16000/rate)):
+        position=i*rate/16000;left=int(position);right=min(left+1,frames-1);fraction=position-left
+        converted.append(max(-32768,min(32767,round(mono[left]*(1-fraction)+mono[right]*fraction))))
+    output=io.BytesIO()
+    with wave.open(output,'wb') as sound:
+        sound.setnchannels(1);sound.setsampwidth(2);sound.setframerate(16000);sound.writeframes(converted.tobytes())
+    return output.getvalue()
+
+
 def main():
     report={'hardwareMicrophoneUsed':False,'deepseekUsed':False,'checks':[]}
     with request('/health') as response:report['health']=json.load(response)
@@ -23,13 +39,14 @@ def main():
     with request('/speech',json.dumps({'text':text,'npcId':'wenwang'},ensure_ascii=False).encode()) as response:audio=response.read()
     with wave.open(io.BytesIO(audio),'rb') as sound:
         report['format']={'channels':sound.getnchannels(),'rate':sound.getframerate(),'sampleBytes':sound.getsampwidth(),'seconds':sound.getnframes()/sound.getframerate()}
-        assert sound.getnchannels()==1 and sound.getframerate()==16000 and sound.getsampwidth()==2
+        assert sound.getnchannels()==1 and sound.getframerate() in (16000,24000,48000) and sound.getsampwidth()==2
     report['speechSeconds']=round(time.monotonic()-start,3)
     # Keep the exact transcript as evidence; non-empty recognition is a transport/decoder
     # check, not a claim that proper nouns or live microphone accuracy have passed.
+    asr_audio=to_asr_wav(audio)
     for index in range(3):
         start=time.monotonic()
-        with request('/transcribe',audio,'audio/wav') as response:value=json.load(response)
+        with request('/transcribe',asr_audio,'audio/wav') as response:value=json.load(response)
         elapsed=round(time.monotonic()-start,3)
         assert value.get('text') and elapsed<30
         report['checks'].append({'case':'synthetic Chinese question '+str(index+1),'seconds':elapsed,'expectedSpeech':text,'transcript':value['text']})
