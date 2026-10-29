@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "description": "Temporary built-in Chinese voice presets for local integration; a profile fixes the speaker across scripted and free replies.",
+  "profiles": {
+    "wenwang": {"voice": "Weiguo", "seed": 2333},
+    "king": {"voice": "Zhiming", "seed": 2334},
+    "pope": {"voice": "Weiguo", "seed": 2335},
+    "scholar": {"voice": "Junhao", "seed": 2336},
+    "davinci": {"voice": "Zhiming", "seed": 2337},
+    "shang_guard": {"voice": "Junhao", "seed": 2338},
+    "church_guard": {"voice": "Weiguo", "seed": 2339},
+    "citizen": {"voice": "Junhao", "seed": 2340}
+  }
+}
