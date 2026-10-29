@@ -1,0 +1,28 @@
+{
+  "id": "CaravanSupplies",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/CaravanSupplies.prefab",
+  "modifications": [
+    "Seams welded, original leather/cloth UVs preserved; small fasteners retained as decorative fittings"
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    36000,
+    10000,
+    2400
+  ],
+  "sizeBlender": [
+    0.9938226938247681,
+    0.5614513158798218,
+    0.799833357334137
+  ],
+  "staticExterior": false
+}

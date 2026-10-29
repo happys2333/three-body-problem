@@ -1,0 +1,29 @@
+{
+  "id": "GobiRockCluster",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/GobiRockCluster.prefab",
+  "modifications": [
+    "Display plinth cropped and capped",
+    "Smoothed and displaced geological surface"
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    29366,
+    8000,
+    1800
+  ],
+  "sizeBlender": [
+    4.909500598907471,
+    3.8894081115722656,
+    4.010576248168945
+  ],
+  "staticExterior": false
+}

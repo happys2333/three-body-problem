@@ -1,0 +1,29 @@
+{
+  "id": "WindErodedCliff",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/WindErodedCliff.prefab",
+  "modifications": [
+    "Display plinth cropped and capped",
+    "Smoothed and displaced geological surface"
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    85000,
+    20000,
+    4500
+  ],
+  "sizeBlender": [
+    18.640012741088867,
+    18.022994995117188,
+    26.15432357788086
+  ],
+  "staticExterior": false
+}

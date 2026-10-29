@@ -1,0 +1,28 @@
+{
+  "id": "ShangMarketStall",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/ShangMarketStall.prefab",
+  "modifications": [
+    "Curved jade-trim roof removed; straight pitched timber and thick thatch roof rebuilt"
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    26000,
+    7000,
+    1600
+  ],
+  "sizeBlender": [
+    3.031698703765869,
+    2.1978185176849365,
+    3.052000045776367
+  ],
+  "staticExterior": false
+}

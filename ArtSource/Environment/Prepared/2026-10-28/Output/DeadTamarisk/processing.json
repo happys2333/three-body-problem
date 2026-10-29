@@ -1,0 +1,28 @@
+{
+  "id": "DeadTamarisk",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/DeadTamarisk.prefab",
+  "modifications": [
+    "Display soil base trimmed; vegetation surface rebuilt"
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    29208,
+    8000,
+    1800
+  ],
+  "sizeBlender": [
+    1.6796777248382568,
+    0.953482985496521,
+    2.200000047683716
+  ],
+  "staticExterior": false
+}

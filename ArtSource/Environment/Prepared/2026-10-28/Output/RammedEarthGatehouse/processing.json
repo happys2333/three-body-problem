@@ -1,0 +1,29 @@
+{
+  "id": "RammedEarthGatehouse",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/RammedEarthGatehouse.prefab",
+  "modifications": [
+    "Curved jade-trim roof removed; straight pitched timber and thick thatch roof rebuilt",
+    "Through aperture carved for first-person capsule clearance"
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    79999,
+    20000,
+    4500
+  ],
+  "sizeBlender": [
+    14.307140350341797,
+    12.31784439086914,
+    13.08250617980957
+  ],
+  "staticExterior": false
+}

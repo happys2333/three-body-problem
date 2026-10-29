@@ -1,0 +1,29 @@
+{
+  "id": "GobiMountainPeak",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/GobiMountainPeak.prefab",
+  "modifications": [
+    "Display plinth cropped and capped",
+    "Smoothed and displaced geological surface"
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    110000,
+    25000,
+    5000
+  ],
+  "sizeBlender": [
+    113.88166809082031,
+    128.61016845703125,
+    120.09989166259766
+  ],
+  "staticExterior": false
+}

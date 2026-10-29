@@ -1,0 +1,29 @@
+{
+  "id": "YardangMesa",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/YardangMesa.prefab",
+  "modifications": [
+    "Display plinth cropped and capped",
+    "Smoothed and displaced geological surface"
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    75000,
+    18000,
+    4000
+  ],
+  "sizeBlender": [
+    46.708099365234375,
+    71.42147827148438,
+    28.134183883666992
+  ],
+  "staticExterior": false
+}

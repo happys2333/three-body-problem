@@ -1,0 +1,28 @@
+{
+  "id": "ShangGranary",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/ShangGranary.prefab",
+  "modifications": [
+    "Curved jade-trim roof removed; straight pitched timber and thick thatch roof rebuilt"
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    30000,
+    8000,
+    1800
+  ],
+  "sizeBlender": [
+    5.464241027832031,
+    5.627933502197266,
+    4.8520002365112305
+  ],
+  "staticExterior": true
+}

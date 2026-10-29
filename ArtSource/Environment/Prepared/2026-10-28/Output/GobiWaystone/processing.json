@@ -1,0 +1,28 @@
+{
+  "id": "GobiWaystone",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/GobiWaystone.prefab",
+  "modifications": [
+    "Pedestal cropped; protruding front hardware flattened into stone"
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    6500,
+    1800,
+    450
+  ],
+  "sizeBlender": [
+    0.6487563848495483,
+    0.5035039186477661,
+    1.6998162269592285
+  ],
+  "staticExterior": false
+}

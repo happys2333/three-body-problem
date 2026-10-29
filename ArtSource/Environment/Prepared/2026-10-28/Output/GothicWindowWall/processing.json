@@ -1,0 +1,28 @@
+{
+  "id": "GothicWindowWall",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/GothicWindowWall.prefab",
+  "modifications": [
+    "Decorative apex removed and solid plain gable coping reconstructed; window opening retained"
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    32000,
+    8000,
+    1800
+  ],
+  "sizeBlender": [
+    5.439484596252441,
+    4.059751510620117,
+    7.999999523162842
+  ],
+  "staticExterior": false
+}

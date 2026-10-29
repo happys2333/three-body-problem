@@ -1,0 +1,29 @@
+{
+  "id": "RockOverhang",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/RockOverhang.prefab",
+  "modifications": [
+    "Display plinth cropped and capped",
+    "Smoothed and displaced geological surface"
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    80000,
+    18000,
+    4000
+  ],
+  "sizeBlender": [
+    28.15554428100586,
+    24.736557006835938,
+    15.739203453063965
+  ],
+  "staticExterior": false
+}

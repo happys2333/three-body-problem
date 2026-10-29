@@ -1,0 +1,28 @@
+{
+  "id": "ShangDwelling",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/ShangDwelling.prefab",
+  "modifications": [
+    "Curved jade-trim roof removed; straight pitched timber and thick thatch roof rebuilt"
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    65000,
+    16000,
+    3600
+  ],
+  "sizeBlender": [
+    7.292525291442871,
+    5.508171081542969,
+    4.251954078674316
+  ],
+  "staticExterior": true
+}

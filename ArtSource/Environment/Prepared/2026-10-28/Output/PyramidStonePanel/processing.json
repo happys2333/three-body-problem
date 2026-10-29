@@ -1,0 +1,28 @@
+{
+  "id": "PyramidStonePanel",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/PyramidStonePanel.prefab",
+  "modifications": [
+    "Wall depth reduced to 0.65 m"
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    20000,
+    5500,
+    1200
+  ],
+  "sizeBlender": [
+    6.000638484954834,
+    0.6499571204185486,
+    3.842602014541626
+  ],
+  "staticExterior": false
+}

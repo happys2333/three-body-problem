@@ -1,0 +1,28 @@
+{
+  "id": "PyramidPortal",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/PyramidPortal.prefab",
+  "modifications": [
+    "Through aperture carved for first-person capsule clearance"
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    29999,
+    8000,
+    1800
+  ],
+  "sizeBlender": [
+    5.0778350830078125,
+    3.498621940612793,
+    3.500234842300415
+  ],
+  "staticExterior": false
+}

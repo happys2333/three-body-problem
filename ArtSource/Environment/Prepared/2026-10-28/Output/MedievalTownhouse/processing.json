@@ -1,0 +1,26 @@
+{
+  "id": "MedievalTownhouse",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/MedievalTownhouse.prefab",
+  "modifications": [],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    75000,
+    18000,
+    4000
+  ],
+  "sizeBlender": [
+    6.248376846313477,
+    5.854247093200684,
+    8.999029159545898
+  ],
+  "staticExterior": true
+}

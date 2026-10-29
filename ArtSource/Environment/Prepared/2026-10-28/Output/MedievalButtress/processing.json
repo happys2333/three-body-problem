@@ -1,0 +1,28 @@
+{
+  "id": "MedievalButtress",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/MedievalButtress.prefab",
+  "modifications": [
+    "Rebuilt structural stepped buttress; shrine and statue excluded"
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    23998,
+    6500,
+    1500
+  ],
+  "sizeBlender": [
+    2.2062017917633057,
+    3.9919917583465576,
+    11.999999046325684
+  ],
+  "staticExterior": false
+}

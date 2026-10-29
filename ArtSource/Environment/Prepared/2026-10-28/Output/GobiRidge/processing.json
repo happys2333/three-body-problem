@@ -1,0 +1,28 @@
+{
+  "id": "GobiRidge",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/GobiRidge.prefab",
+  "modifications": [
+    "Reconstructed three-peak ridge from repaired mountain; hallucinated gate source excluded"
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    90680,
+    27204,
+    6000
+  ],
+  "sizeBlender": [
+    178.466796875,
+    101.5171127319336,
+    90.0
+  ],
+  "staticExterior": false
+}

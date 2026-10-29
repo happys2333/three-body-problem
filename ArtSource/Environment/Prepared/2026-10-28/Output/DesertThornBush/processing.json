@@ -1,0 +1,28 @@
+{
+  "id": "DesertThornBush",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/DesertThornBush.prefab",
+  "modifications": [
+    "Display soil base trimmed; vegetation surface rebuilt"
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    18000,
+    5000,
+    1200
+  ],
+  "sizeBlender": [
+    0.867577850818634,
+    0.8077391386032104,
+    1.0000083446502686
+  ],
+  "staticExterior": false
+}

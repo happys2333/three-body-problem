@@ -1,0 +1,164 @@
+{
+    "assets": [
+        {
+            "id": "GobiMountainPeak",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/GobiMountainPeak.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment/GobiMountainPeak/Textures/texture_pbr_20250901.png",
+            "width": 134.89508056640626,
+            "height": 120.0,
+            "depth": 155.97889709472657
+        },
+        {
+            "id": "GobiRidge",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/GobiRidge.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment/GobiRidge/Textures/texture_pbr_20250901.png",
+            "width": 77.73506927490235,
+            "height": 90.00000762939453,
+            "depth": 186.283935546875
+        },
+        {
+            "id": "WindErodedCliff",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/WindErodedCliff.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment/WindErodedCliff/Textures/texture_pbr_20250901.png",
+            "width": 24.028118133544923,
+            "height": 25.999998092651368,
+            "depth": 23.06083869934082
+        },
+        {
+            "id": "YardangMesa",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/YardangMesa.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment/YardangMesa/Textures/texture_pbr_20250901.png",
+            "width": 52.75627517700195,
+            "height": 27.999998092651368,
+            "depth": 76.06024169921875
+        },
+        {
+            "id": "GobiRockCluster",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/GobiRockCluster.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment/GobiRockCluster/Textures/texture_pbr_20250901.png",
+            "width": 5.584856986999512,
+            "height": 4.0,
+            "depth": 5.584995269775391
+        },
+        {
+            "id": "RockOverhang",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/RockOverhang.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment/RockOverhang/Textures/texture_pbr_20250901.png",
+            "width": 28.000001907348634,
+            "height": 16.692153930664064,
+            "depth": 24.47655487060547
+        },
+        {
+            "id": "DeadTamarisk",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/DeadTamarisk.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment/DeadTamarisk/Textures/texture_pbr_20250901.png",
+            "width": 1.7823659181594849,
+            "height": 2.200000047683716,
+            "depth": 1.8025708198547364
+        },
+        {
+            "id": "DesertThornBush",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/DesertThornBush.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment/DesertThornBush/Textures/texture_pbr_20250901.png",
+            "width": 0.8253466486930847,
+            "height": 1.0,
+            "depth": 0.6178191900253296
+        },
+        {
+            "id": "GobiWaystone",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/GobiWaystone.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment/GobiWaystone/Textures/texture_pbr_20250901.png",
+            "width": 1.3562674522399903,
+            "height": 1.7000001668930054,
+            "depth": 1.3204395771026612
+        },
+        {
+            "id": "CaravanSupplies",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/CaravanSupplies.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment/CaravanSupplies/Textures/texture_pbr_20250901.png",
+            "width": 0.9938220381736755,
+            "height": 0.800000011920929,
+            "depth": 0.5613070726394653
+        },
+        {
+            "id": "ShangDwelling",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/ShangDwelling.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment/ShangDwelling/Textures/texture_pbr_20250901.png",
+            "width": 6.733553409576416,
+            "height": 4.1999993324279789,
+            "depth": 4.952416896820068
+        },
+        {
+            "id": "ShangWorkshop",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/ShangWorkshop.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment/ShangWorkshop/Textures/texture_pbr_20250901.png",
+            "width": 6.615934371948242,
+            "height": 5.000000476837158,
+            "depth": 6.058314800262451
+        },
+        {
+            "id": "ShangGranary",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/ShangGranary.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment/ShangGranary/Textures/texture_pbr_20250901.png",
+            "width": 5.0396246910095219,
+            "height": 4.800000190734863,
+            "depth": 4.953093528747559
+        },
+        {
+            "id": "ShangMarketStall",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/ShangMarketStall.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment/ShangMarketStall/Textures/texture_pbr_20250901.png",
+            "width": 3.2540764808654787,
+            "height": 3.0,
+            "depth": 2.545118570327759
+        },
+        {
+            "id": "RammedEarthGatehouse",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/RammedEarthGatehouse.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment/RammedEarthGatehouse/Textures/texture_pbr_20250901.png",
+            "width": 13.233782768249512,
+            "height": 12.999999046325684,
+            "depth": 10.898959159851075
+        },
+        {
+            "id": "PyramidPortal",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/PyramidPortal.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment/PyramidPortal/Textures/texture_pbr_20250901.png",
+            "width": 5.078215599060059,
+            "height": 3.499999761581421,
+            "depth": 3.4983508586883547
+        },
+        {
+            "id": "PyramidStonePanel",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/PyramidStonePanel.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment/PyramidStonePanel/Textures/texture_pbr_20250901.png",
+            "width": 6.0,
+            "height": 3.8430979251861574,
+            "depth": 2.6617987155914308
+        },
+        {
+            "id": "MedievalTownhouse",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/MedievalTownhouse.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment/MedievalTownhouse/Textures/texture_pbr_20250901.png",
+            "width": 6.249485015869141,
+            "height": 8.999999046325684,
+            "depth": 5.854735374450684
+        },
+        {
+            "id": "GothicWindowWall",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/GothicWindowWall.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment/GothicWindowWall/Textures/texture_pbr_20250901.png",
+            "width": 5.441086292266846,
+            "height": 7.999999523162842,
+            "depth": 4.059936046600342
+        },
+        {
+            "id": "MedievalButtress",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/MedievalButtress.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment/MedievalButtress/Textures/texture_pbr_20250901.png",
+            "width": 3.996800184249878,
+            "height": 12.0,
+            "depth": 4.38134241104126
+        }
+    ]
+}

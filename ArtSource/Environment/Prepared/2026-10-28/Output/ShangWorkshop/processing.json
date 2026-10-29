@@ -1,0 +1,29 @@
+{
+  "id": "ShangWorkshop",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/ShangWorkshop.prefab",
+  "modifications": [
+    "Curved jade-trim roof removed; straight pitched timber and thick thatch roof rebuilt",
+    "High chimney plume region removed: 3537 faces"
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    70000,
+    18000,
+    4000
+  ],
+  "sizeBlender": [
+    7.153454780578613,
+    6.8542256355285645,
+    5.0527729988098145
+  ],
+  "staticExterior": true
+}
