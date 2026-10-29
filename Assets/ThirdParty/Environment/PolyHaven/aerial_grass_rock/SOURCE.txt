@@ -1,0 +1,4 @@
+Source: https://polyhaven.com/a/aerial_grass_rock
+License: CC0 1.0 https://polyhaven.com/license
+Retrieved: 2026-10-27
+Geometry: original FBX; maps: 2K. Materials adapted to Unity Built-in.
