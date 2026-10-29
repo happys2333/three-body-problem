@@ -1,0 +1,36 @@
+{
+    "passed": true,
+    "mechanicsPassed": false,
+    "performancePassed": true,
+    "performanceOnly": true,
+    "realTenMinuteWait": false,
+    "hardwareMicrophoneUsed": false,
+    "checks": 1,
+    "ignited": 0,
+    "burned": 0,
+    "shaded": 0,
+    "frameRateLimit": 90,
+    "phase": "complete",
+    "gpu": "Apple M5",
+    "walkedMetres": 0.0,
+    "shelterWallSeconds": 0.0,
+    "sunsetWallSeconds": 0.0,
+    "errors": [],
+    "metrics": [
+        {
+            "moment": 0,
+            "actualFrameRateLimit": 90,
+            "vSyncCount": 0,
+            "focused": true,
+            "meanMs": 11.172845840454102,
+            "p95Ms": 11.449666976928711,
+            "gpuMeanMs": 8.328598022460938,
+            "mainThreadMeanMs": 11.169903755187989,
+            "waitForTargetMeanMs": 9.175589561462403,
+            "triangles": 3221142,
+            "batches": 320
+        }
+    ],
+    "asrTranscript": "",
+    "playerTorchViewport": ""
+}

@@ -1,0 +1,523 @@
+{
+  "syntheticOnly": true,
+  "hardwareMicrophoneUsed": false,
+  "deepseekUsed": false,
+  "threads": 1,
+  "loadSeconds": 4.626925958000356,
+  "cases": [
+    {
+      "npc": "wenwang",
+      "category": "平静",
+      "text": "一个人在夜里赶路？举着火把，跟我走。",
+      "transcript": "一个人在夜里赶路，举着火把跟我走。",
+      "characterErrors": 0,
+      "referenceCharacters": 15,
+      "audio": "01_wenwang.wav",
+      "tts": {
+        "seconds": 1.5425261249911273,
+        "firstPcmSeconds": 0.3228181659942493,
+        "audioSeconds": 4.64,
+        "voice": "Weiguo",
+        "frames": 58,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 0.37622062501031905,
+        "metalPeakBytes": 1656648212,
+        "silence": false
+      },
+      "wavePeak": 0.332855224609375,
+      "waveRms": 0.031408194452524185
+    },
+    {
+      "npc": "wenwang",
+      "category": "身份",
+      "text": "我是姬昌。我要去朝歌，把推演的历法呈给纣王。",
+      "transcript": "我是姬昌。我要去朝歌，把推演的历法呈给纣王。",
+      "characterErrors": 0,
+      "referenceCharacters": 19,
+      "audio": "02_wenwang.wav",
+      "tts": {
+        "seconds": 1.500393875001464,
+        "firstPcmSeconds": 0.14814341599412728,
+        "audioSeconds": 5.6,
+        "voice": "Weiguo",
+        "frames": 70,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 0.5282588330010185,
+        "metalPeakBytes": 1674027748,
+        "silence": false
+      },
+      "wavePeak": 0.471435546875,
+      "waveRms": 0.04929414018988609
+    },
+    {
+      "npc": "wenwang",
+      "category": "紧急",
+      "text": "太阳不对！别停在亮处，快跟我躲到岩石下面！",
+      "transcript": "太阳不对，别停在亮处，快跟我躲到岩石下面。",
+      "characterErrors": 0,
+      "referenceCharacters": 18,
+      "audio": "03_wenwang.wav",
+      "tts": {
+        "seconds": 1.3738607919949573,
+        "firstPcmSeconds": 0.1250849170028232,
+        "audioSeconds": 5.04,
+        "voice": "Weiguo",
+        "frames": 63,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 0.3418904160062084,
+        "metalPeakBytes": 1669585636,
+        "silence": false
+      },
+      "wavePeak": 0.373443603515625,
+      "waveRms": 0.03367357328534126
+    },
+    {
+      "npc": "wenwang",
+      "category": "安抚",
+      "text": "先别出去。这里的阴影能挡住日光，我们暂且等一等。",
+      "transcript": "先别出去。这里的阴影能挡住日光。我们站起，等一等。",
+      "characterErrors": 2,
+      "referenceCharacters": 21,
+      "audio": "04_wenwang.wav",
+      "tts": {
+        "seconds": 1.7547621249977965,
+        "firstPcmSeconds": 0.13239524999517016,
+        "audioSeconds": 6.64,
+        "voice": "Weiguo",
+        "frames": 83,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 0.3146240839996608,
+        "metalPeakBytes": 1693649636,
+        "silence": false
+      },
+      "wavePeak": 0.41510009765625,
+      "waveRms": 0.037296172231435776
+    },
+    {
+      "npc": "wenwang",
+      "category": "计时",
+      "text": "沙漏还在走，太阳却未必守时。",
+      "transcript": "沙漏还在走，太阳却未必守时。",
+      "characterErrors": 0,
+      "referenceCharacters": 12,
+      "audio": "05_wenwang.wav",
+      "tts": {
+        "seconds": 1.005430916993646,
+        "firstPcmSeconds": 0.12801837500592228,
+        "audioSeconds": 3.6,
+        "voice": "Weiguo",
+        "frames": 45,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 0.3232807089952985,
+        "metalPeakBytes": 1641165516,
+        "silence": false
+      },
+      "wavePeak": 0.29840087890625,
+      "waveRms": 0.020577087998390198
+    },
+    {
+      "npc": "wenwang",
+      "category": "启程",
+      "text": "太阳落下了，跟紧我，趁夜色赶路。",
+      "transcript": "太阳落下了，跟景武趁夜色赶路。",
+      "characterErrors": 2,
+      "referenceCharacters": 13,
+      "audio": "06_wenwang.wav",
+      "tts": {
+        "seconds": 1.0785111670120386,
+        "firstPcmSeconds": 0.13179716700688004,
+        "audioSeconds": 4.0,
+        "voice": "Weiguo",
+        "frames": 50,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 0.3626416250044713,
+        "metalPeakBytes": 1644703456,
+        "silence": false
+      },
+      "wavePeak": 0.741058349609375,
+      "waveRms": 0.04704149067401886
+    },
+    {
+      "npc": "king",
+      "category": "质询",
+      "text": "把你已经看见的证据说清楚。",
+      "transcript": "把你已经看见的证据说清楚。",
+      "characterErrors": 0,
+      "referenceCharacters": 12,
+      "audio": "07_king.wav",
+      "tts": {
+        "seconds": 0.6970884160109563,
+        "firstPcmSeconds": 0.10926333299721591,
+        "audioSeconds": 2.56,
+        "voice": "Zhiming",
+        "frames": 32,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 0.18850466699223034,
+        "metalPeakBytes": 1621912292,
+        "silence": false
+      },
+      "wavePeak": 0.73956298828125,
+      "waveRms": 0.10591801255941391
+    },
+    {
+      "npc": "king",
+      "category": "历法",
+      "text": "就按历法等待。若日照应验，再让人们复苏。",
+      "transcript": "就按历法等待，若日照应验，再让人们复苏。",
+      "characterErrors": 0,
+      "referenceCharacters": 17,
+      "audio": "08_king.wav",
+      "tts": {
+        "seconds": 1.0972792499960633,
+        "firstPcmSeconds": 0.10581150000507478,
+        "audioSeconds": 4.24,
+        "voice": "Zhiming",
+        "frames": 53,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 0.25374754099175334,
+        "metalPeakBytes": 1653166820,
+        "silence": false
+      },
+      "wavePeak": 0.783416748046875,
+      "waveRms": 0.12756186723709106
+    },
+    {
+      "npc": "pope",
+      "category": "怀疑",
+      "text": "先说清你的依据，眼前的现象能支持你的解释吗？",
+      "transcript": "先说清你的依据，眼前的现象能支持你的解释吗？",
+      "characterErrors": 0,
+      "referenceCharacters": 20,
+      "audio": "09_pope.wav",
+      "tts": {
+        "seconds": 1.0197032080031931,
+        "firstPcmSeconds": 0.13305020799452905,
+        "audioSeconds": 3.92,
+        "voice": "Weiguo",
+        "frames": 49,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 0.37716629200440366,
+        "metalPeakBytes": 1644326628,
+        "silence": false
+      },
+      "wavePeak": 0.441741943359375,
+      "waveRms": 0.03750602900981903
+    },
+    {
+      "npc": "scholar",
+      "category": "观测",
+      "text": "一颗飞星和两颗飞星，究竟意味着什么？",
+      "transcript": "一颗飞星和两颗飞星，究竟意味着什么？",
+      "characterErrors": 0,
+      "referenceCharacters": 16,
+      "audio": "10_scholar.wav",
+      "tts": {
+        "seconds": 0.8215802919876296,
+        "firstPcmSeconds": 0.09846345799451228,
+        "audioSeconds": 3.28,
+        "voice": "Junhao",
+        "frames": 41,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 0.18428270799631719,
+        "metalPeakBytes": 1637771948,
+        "silence": false
+      },
+      "wavePeak": 0.86614990234375,
+      "waveRms": 0.11072410643100739
+    },
+    {
+      "npc": "scholar",
+      "category": "反例",
+      "text": "恒纪元的日出没有到来，我们应当保留这个反例。",
+      "transcript": "从纪元的日出没有到来，我们应当保留这个反例。",
+      "characterErrors": 1,
+      "referenceCharacters": 20,
+      "audio": "11_scholar.wav",
+      "tts": {
+        "seconds": 0.9426407919963822,
+        "firstPcmSeconds": 0.09055475000059232,
+        "audioSeconds": 3.84,
+        "voice": "Junhao",
+        "frames": 48,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 0.19160058299894445,
+        "metalPeakBytes": 1642031844,
+        "silence": false
+      },
+      "wavePeak": 0.921966552734375,
+      "waveRms": 0.12927371263504028
+    },
+    {
+      "npc": "davinci",
+      "category": "讨论",
+      "text": "有意思。把你的证据和尚未弄清的地方都说出来。",
+      "transcript": "有意思，把你的证据和上未弄清的地方都说出来。",
+      "characterErrors": 1,
+      "referenceCharacters": 20,
+      "audio": "12_davinci.wav",
+      "tts": {
+        "seconds": 1.1952845830091974,
+        "firstPcmSeconds": 0.08811183299985714,
+        "audioSeconds": 5.04,
+        "voice": "Zhiming",
+        "frames": 63,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 0.19774308300111443,
+        "metalPeakBytes": 1669583588,
+        "silence": false
+      },
+      "wavePeak": 0.999969482421875,
+      "waveRms": 0.12448757141828537
+    },
+    {
+      "npc": "shang_guard",
+      "category": "指引",
+      "text": "沿着王道往前走，到金字塔的入口等候。",
+      "transcript": "燕王道往前走，到金字塔的入口等候。",
+      "characterErrors": 2,
+      "referenceCharacters": 16,
+      "audio": "13_shang_guard.wav",
+      "tts": {
+        "seconds": 0.8376125409995439,
+        "firstPcmSeconds": 0.09771470799751114,
+        "audioSeconds": 3.36,
+        "voice": "Junhao",
+        "frames": 42,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 0.175210083994898,
+        "metalPeakBytes": 1638214324,
+        "silence": false
+      },
+      "wavePeak": 0.999969482421875,
+      "waveRms": 0.14753834903240204
+    },
+    {
+      "npc": "church_guard",
+      "category": "警告",
+      "text": "保持通道畅通，听见警报就先到安全处。",
+      "transcript": "保持通道畅通。听见警报，就先到安全处。",
+      "characterErrors": 0,
+      "referenceCharacters": 16,
+      "audio": "14_church_guard.wav",
+      "tts": {
+        "seconds": 1.3732913749990985,
+        "firstPcmSeconds": 0.10329454101156443,
+        "audioSeconds": 5.68,
+        "voice": "Weiguo",
+        "frames": 71,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 0.26969354099128395,
+        "metalPeakBytes": 1676284644,
+        "silence": false
+      },
+      "wavePeak": 0.481231689453125,
+      "waveRms": 0.04379742965102196
+    },
+    {
+      "npc": "citizen",
+      "category": "日常",
+      "text": "我们也在等天象转好，你在路上看见了什么？",
+      "transcript": "我们也在等天象转好。你在路上看见了什么？",
+      "characterErrors": 0,
+      "referenceCharacters": 18,
+      "audio": "15_citizen.wav",
+      "tts": {
+        "seconds": 0.9317713339987677,
+        "firstPcmSeconds": 0.11905779199150857,
+        "audioSeconds": 3.68,
+        "voice": "Junhao",
+        "frames": 46,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 0.19628725000075065,
+        "metalPeakBytes": 1641161428,
+        "silence": false
+      },
+      "wavePeak": 0.753875732421875,
+      "waveRms": 0.10219035297632217
+    },
+    {
+      "npc": "wenwang",
+      "category": "专名",
+      "text": "朝歌、姬昌、周文王、纣王。",
+      "transcript": "朝歌、姬昌、周文王、纣王。",
+      "characterErrors": 0,
+      "referenceCharacters": 9,
+      "audio": "16_wenwang.wav",
+      "tts": {
+        "seconds": 1.0901345000020228,
+        "firstPcmSeconds": 0.10806079200119711,
+        "audioSeconds": 4.4,
+        "voice": "Weiguo",
+        "frames": 55,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 0.22472570900572464,
+        "metalPeakBytes": 1653641956,
+        "silence": false
+      },
+      "wavePeak": 0.167022705078125,
+      "waveRms": 0.013861129991710186
+    },
+    {
+      "npc": "scholar",
+      "category": "术语",
+      "text": "乱纪元、恒纪元、脱水、复苏、三日凌空。",
+      "transcript": "乱纪元，恒纪元，脱水复苏，三日凌空。",
+      "characterErrors": 0,
+      "referenceCharacters": 14,
+      "audio": "17_scholar.wav",
+      "tts": {
+        "seconds": 1.2220135829993524,
+        "firstPcmSeconds": 0.09672633299487643,
+        "audioSeconds": 5.04,
+        "voice": "Junhao",
+        "frames": 63,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 0.25920804199995473,
+        "metalPeakBytes": 1669581540,
+        "silence": false
+      },
+      "wavePeak": 0.951690673828125,
+      "waveRms": 0.1176375150680542
+    },
+    {
+      "npc": "wenwang",
+      "category": "短问",
+      "text": "你叫什么名字？",
+      "transcript": "你叫什么名字？",
+      "characterErrors": 0,
+      "referenceCharacters": 6,
+      "audio": "18_wenwang.wav",
+      "tts": {
+        "seconds": 0.3833617499913089,
+        "firstPcmSeconds": 0.12150241699418984,
+        "audioSeconds": 1.2,
+        "voice": "Weiguo",
+        "frames": 15,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 0.1037041660019895,
+        "metalPeakBytes": 1613252564,
+        "silence": false
+      },
+      "wavePeak": 0.2762451171875,
+      "waveRms": 0.028229156509041786
+    },
+    {
+      "npc": "wenwang",
+      "category": "连续句",
+      "text": "我们先在这里等一会儿。安全以后再继续赶路。",
+      "transcript": "我们先在这里等一会儿。安全以后再继续赶路。",
+      "characterErrors": 0,
+      "referenceCharacters": 19,
+      "audio": "19_wenwang.wav",
+      "tts": {
+        "seconds": 1.36943520900968,
+        "firstPcmSeconds": 0.10075566700834315,
+        "audioSeconds": 5.68,
+        "voice": "Weiguo",
+        "frames": 71,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 0.1947002499946393,
+        "metalPeakBytes": 1676282596,
+        "silence": false
+      },
+      "wavePeak": 0.969573974609375,
+      "waveRms": 0.033035434782505035
+    },
+    {
+      "npc": "scholar",
+      "category": "数字混合",
+      "text": "我记录了三次日出，第二次比第一次更晚。",
+      "transcript": "我记录了三次日出，第二次比第一次更晚。",
+      "characterErrors": 0,
+      "referenceCharacters": 17,
+      "audio": "20_scholar.wav",
+      "tts": {
+        "seconds": 0.8712226659990847,
+        "firstPcmSeconds": 0.09076854099112097,
+        "audioSeconds": 3.52,
+        "voice": "Junhao",
+        "frames": 44,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 0.18020383299153764,
+        "metalPeakBytes": 1640901316,
+        "silence": false
+      },
+      "wavePeak": 0.999969482421875,
+      "waveRms": 0.11929459124803543
+    }
+  ],
+  "health": {
+    "asrEngine": "qwen3-asr-mlx-8bit",
+    "ttsEngine": "moss-tts-nano-onnx-cpu",
+    "asrModel": "Qwen3-ASR-0.6B-8bit",
+    "ttsModel": "MOSS-TTS-Nano-100M-ONNX",
+    "voiceProfiles": {
+      "wenwang": "Weiguo",
+      "king": "Zhiming",
+      "pope": "Weiguo",
+      "scholar": "Junhao",
+      "davinci": "Zhiming",
+      "shang_guard": "Junhao",
+      "church_guard": "Weiguo",
+      "citizen": "Junhao"
+    },
+    "lastVoiceTimings": {
+      "tts": {
+        "seconds": 0.8712226659990847,
+        "firstPcmSeconds": 0.09076854099112097,
+        "audioSeconds": 3.52,
+        "voice": "Junhao",
+        "frames": 44,
+        "torchImported": false
+      },
+      "asr": {
+        "seconds": 3.4249998861923814e-05,
+        "silence": true
+      }
+    }
+  },
+  "silenceText": "",
+  "characterErrorRate": 0.025157232704402517,
+  "passed": true,
+  "note": "Transport, non-silence, and decoder checks passed does not establish naturalness, real-microphone accuracy, or Unity coexistence performance."
+}

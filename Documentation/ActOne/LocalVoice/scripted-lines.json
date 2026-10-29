@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Meeting",
+    "text": "一个人在夜里赶路？举着火把，跟我走。天亮也未必是好事。",
+    "seconds": 1.9696790409943787,
+    "firstPcmSeconds": 0.30728537499089725,
+    "audioSeconds": 6.4,
+    "voice": "Weiguo",
+    "frames": 80,
+    "torchImported": false
+  },
+  {
+    "name": "Warning",
+    "text": "太阳不对！别停在亮处，快跟我躲到岩石下面！",
+    "seconds": 1.346009208005853,
+    "firstPcmSeconds": 0.12651883299986366,
+    "audioSeconds": 5.04,
+    "voice": "Weiguo",
+    "frames": 63,
+    "torchImported": false
+  },
+  {
+    "name": "Shelter",
+    "text": "在这里歇一会儿。你是在赶路，还是在观察天象？",
+    "seconds": 1.2860499999951571,
+    "firstPcmSeconds": 0.11150687499321066,
+    "audioSeconds": 4.96,
+    "voice": "Weiguo",
+    "frames": 62,
+    "torchImported": false
+  },
+  {
+    "name": "Identity",
+    "text": "我是姬昌。我要去朝歌，把推演的历法呈给纣王。你也在赶路吗？",
+    "seconds": 1.4643024590041023,
+    "firstPcmSeconds": 0.10725841700332239,
+    "audioSeconds": 5.84,
+    "voice": "Weiguo",
+    "frames": 73,
+    "torchImported": false
+  },
+  {
+    "name": "Hourglass",
+    "text": "沙漏还在走。太阳却未必守时；趁这里安全，你想问什么就问吧。",
+    "seconds": 1.7594642909971299,
+    "firstPcmSeconds": 0.10212845799105708,
+    "audioSeconds": 7.04,
+    "voice": "Weiguo",
+    "frames": 88,
+    "torchImported": false
+  },
+  {
+    "name": "Departure",
+    "text": "路能走的时候，就不要再等。跟上火光，前面还有一段夜路。",
+    "seconds": 1.2573684999952093,
+    "firstPcmSeconds": 0.09737049999239389,
+    "audioSeconds": 5.12,
+    "voice": "Weiguo",
+    "frames": 64,
+    "torchImported": false
+  }
+]

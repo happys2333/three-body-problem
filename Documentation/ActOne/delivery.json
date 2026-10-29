@@ -30,7 +30,7 @@
     "frameRateLimit": 90,
     "warmupFramesPerView": 180,
     "samplesPerView": 360,
-    "worstFrameP95Ms": 14.677501678466797,
+    "worstFrameP95Ms": 11.461167335510254,
     "passed": true,
     "scope": "Six first-scene preview views on this machine; not a whole-game or other-hardware guarantee."
   },
@@ -142,6 +142,6 @@
     "Hardware microphone and permission UI not activated by automated QA.",
     "Speech recognition requires editable confirmation, especially for names.",
     "Local ASR/TTS gateway must be running; packaged standalone voice service is not included.",
-    "Temporary macOS synthetic voice and procedural flame need final audio/art direction."
+    "Temporary preset model voices and procedural flame need final audio/art direction."
   ]
 }

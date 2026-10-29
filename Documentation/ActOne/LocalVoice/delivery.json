@@ -1,0 +1,139 @@
+{
+  "passed": true,
+  "publishedBaseline": "12205cdfbe54ba5c59e96723997054e4e3308494",
+  "models": [
+    {
+      "repo": "mlx-community/Qwen3-ASR-0.6B-8bit",
+      "revision": "89e96d92ba34aca20b3e29fb10cc284097d1219f",
+      "verifiedFiles": 10,
+      "upstreamLfsChecksums": 1
+    },
+    {
+      "repo": "OpenMOSS-Team/MOSS-TTS-Nano-100M-ONNX",
+      "revision": "f52645cb467506d8e18e746ddd59482685b74e58",
+      "verifiedFiles": 11,
+      "upstreamLfsChecksums": 8
+    },
+    {
+      "repo": "OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano-ONNX",
+      "revision": "ceff0d0749bfb3fa2d61149794ec6feef0d1e1ae",
+      "verifiedFiles": 7,
+      "upstreamLfsChecksums": 5
+    }
+  ],
+  "runtimeRevision": "8b7bcc9341b3b4ef3a3a58ba1338a7d85ff133eb",
+  "scriptedAudio": [
+    {
+      "name": "Meeting",
+      "sha256": "63d9a4e582add1176dbec6a4f436c714b889d6eb3ed0a66093709f0b2616f11e",
+      "seconds": 6.4,
+      "guidPreserved": true
+    },
+    {
+      "name": "Warning",
+      "sha256": "1e2501bc268f582faf46fbae2384649ebff4d29296345dfe062f00a414d425ff",
+      "seconds": 5.04,
+      "guidPreserved": true
+    },
+    {
+      "name": "Shelter",
+      "sha256": "02d21ac2e22ef21b7df739981432f2df10f54711e8f0ea715e61cde20b3caddb",
+      "seconds": 4.96,
+      "guidPreserved": true
+    },
+    {
+      "name": "Identity",
+      "sha256": "0846b4bce022e458836342c7f42b91ad5fcb57665404d25949d2d0b975ea260a",
+      "seconds": 5.84,
+      "guidPreserved": true
+    },
+    {
+      "name": "Hourglass",
+      "sha256": "55a0a055d921621317bbca7b1562b40923835c67026058fe42dc5ada34a2bf8d",
+      "seconds": 7.04,
+      "guidPreserved": true
+    },
+    {
+      "name": "Departure",
+      "sha256": "d3f1e8e7d4c14453a070804b2ce5e36a7d16f0101ade6ad26f6169ea610365ce",
+      "seconds": 5.12,
+      "guidPreserved": true
+    }
+  ],
+  "editMode": {
+    "total": 44,
+    "passed": 44,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 11.3978411,
+    "resultState": "Passed"
+  },
+  "gatewayUnitTests": 6,
+  "dependencies": "No broken requirements found.",
+  "summary": {
+    "syntheticOnly": true,
+    "cases": 20,
+    "referenceCharacters": 318,
+    "characterErrors": 8,
+    "characterErrorRate": 0.025157232704402517,
+    "silenceText": "",
+    "hardwareMicrophoneUsed": false,
+    "deepseekUsed": false,
+    "allMossRequestsAvoidedTorch": true,
+    "timings": {
+      "asr": {
+        "minSeconds": 0.1037041660019895,
+        "medianSeconds": 0.239236624998739,
+        "maxSeconds": 0.5282588330010185
+      },
+      "tts": {
+        "minSeconds": 0.3833617499913089,
+        "medianSeconds": 1.0843228335070307,
+        "maxSeconds": 1.7547621249977965
+      }
+    },
+    "unityVoiceChecks": 18,
+    "unityVoicePassed": true,
+    "replySubmissionToPlaybackSeconds": 2.8362646102905273,
+    "activeVoiceFrameP95Ms": 11.53533935546875,
+    "fullActOneChecks": 49,
+    "fullActOnePassed": true,
+    "fullActOneWorstP95Ms": 11.461167335510254
+  },
+  "currentGateway": {
+    "ready": true,
+    "mode": "scripted",
+    "asrModelPresent": true,
+    "asrModel": "Qwen3-ASR-0.6B-8bit",
+    "asrEngine": "qwen3-asr-mlx-8bit",
+    "ttsEngine": "moss-tts-nano-onnx-cpu",
+    "ttsModel": "MOSS-TTS-Nano-100M-ONNX",
+    "voiceProfiles": {
+      "wenwang": "Weiguo",
+      "king": "Zhiming",
+      "pope": "Weiguo",
+      "scholar": "Junhao",
+      "davinci": "Zhiming",
+      "shang_guard": "Junhao",
+      "church_guard": "Weiguo",
+      "citizen": "Junhao"
+    },
+    "lastVoiceTimings": {}
+  },
+  "evidenceSha256": {
+    "LocalVoice/benchmark.json": "311f6a6cd863dc03e94ca867e1ce5546dde6f32295e8aa5fa441d1135c918cf2",
+    "LocalVoice/editmode.json": "a4aeb65f8f06b781bb0b1f38fa45f54ecab7ec5ed0434f9f9b65307091cf69b9",
+    "Native/voice/report.json": "4b3c9e8d3d5debd40d996673e32d825448dce7abd93d5552f7f1d24cfbd5830d",
+    "Native/functional/report.json": "4b62ae054ed39caf2fc1c46dcaf060d0c8c4999bc6b5e46459997ea8c42ebdd2",
+    "LocalVoice/launcher-fallback-check.json": "88d4744efd1eea95a5f1411c2cbba6604918d689709934f9639fa4afe891e25e",
+    "voice-gateway-check.json": "78523cac96a223d74b644707b2ba9469dc95d9eb6e99971a15f9f5fb7ea5f820"
+  },
+  "limits": [
+    "Synthetic audio only; real microphone, accents and noise remain untested.",
+    "No real DeepSeek key used; default replies are offline scripted dialogue.",
+    "Whole-WAV playback; internal first-PCM timing is not audible startup latency.",
+    "Eight role profiles reuse three temporary male preset voices.",
+    "Foreground first-act timings apply only to this Mac and measured run.",
+    "Earlier failed performance and soak reports are preserved; no new 600-second soak."
+  ]
+}

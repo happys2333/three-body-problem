@@ -32,24 +32,26 @@ WASD 行走，Shift 快走，按住鼠标右键环顾，F 靠近人物交谈，T
 - `Ash.prefab`：散落灰烬、焦炭，三级 LOD；源文件与三档中间网格保留在同一源目录。
 - `VegetationFire.prefab`：燃烧与烟雾粒子，供池化复用；138 处植被有可复位的燃烧状态。
 - `SunDamage.shader`：第一人称晒伤反馈；`TorchFlame.shader`：随时间变化的火焰轮廓。
-- `Assets/_Project/Audio/ActOne/`：招呼、巨日警告、岩下、身份、沙漏与出发共六条本机合成临时配音。现有戈壁风声继续使用。
+- `Assets/_Project/Audio/ActOne/`：招呼、巨日警告、岩下、身份、沙漏与出发共六条 MOSS 神经语音配音，24 kHz 单声道，和实时回复使用同一周文王声线。现有戈壁风声继续使用。
 - 三个场景中的 **36 个角色**都装配了火把能力和 Humanoid 左手 IK。第一人称火把放在视野左侧；普通角色按手骨位置持火把。夜间点亮，白天熄灭火焰；主要玩家使用像素光，其他角色使用较便宜的顶点光。
 - **8 组角色提示词**覆盖周文王、纣王、教皇、学者、达芬奇、两类守卫与居民；每个可交互实例持有独立会话历史。
-- 本机中文识别模型：轻量版约 42 MB，完整模型约 1.3 GB 也已准备，均独立保存在用户缓存中。默认轻量版以控制内存占用；专名和不清楚的语音需要玩家校对。来源、许可及哈希见 [轻量模型](voice-source.json)、[完整模型](voice-full-model-source.json)。
+- 当前本机模型：Qwen3-ASR-0.6B MLX 8-bit、MOSS-TTS-Nano ONNX 及配套音频编解码器，总下载约 1.77 GB，保存在用户缓存而非 Git 仓库。旧 Vosk 轻量、完整模型保留为回退资源。当前版本与哈希核验见 [模型安装记录](LocalVoice/model-installation.json)。
 
 新火把和灰烬采用可编辑建模生成，没有额外消耗混元额度。原始环境模型和下载归档保持不变；布景继续复用上一轮戈壁整合。
 
 ## 本机语音服务
 
-### 2026-10-29 后续模型选型
+### 2026-10-29 本地神经语音已接入
 
-针对当前 Apple M5 / 16 GB Mac 与 Unity 同机运行，已选 **MOSS-TTS-Nano-100M 的 ONNX CPU 版负责 NPC 发声，Qwen3-ASR-0.6B 的 MLX 8-bit 版负责玩家语音转文字**。这是待部署和实测的替换目标；当前游戏仍使用下文的 Vosk + macOS 临时语音，尚未下载或切换新模型。
+当前 Apple M5 / 16 GB Mac 默认使用 **MOSS-TTS-Nano-100M 的 ONNX CPU 版负责 NPC 发声，Qwen3-ASR-0.6B 的 MLX 8-bit 版负责玩家语音转文字**，已安装并完成合成语音回环、Unity 实播、打断和前台性能验证。详细结果见 [本轮汇总](LocalVoice/summary.json)；真实麦克风、现场噪声和主观自然度仍需实际体验。
 
 MOSS 官方提供独立 ONNX CPU 推理、参考音频克隆和流式解码路径，适合作为减少 GPU 竞争的首选候选；同时需要配套的 `MOSS-Audio-Tokenizer-Nano-ONNX`。不把小模型直接视为音质胜出，也不默认它支持 CosyVoice 那样的自然语言情绪指令。[官方部署说明](https://github.com/OpenMOSS/MOSS-TTS-Nano#onnx-cpu-inference)
 
-ASR 选择 `mlx-community/Qwen3-ASR-0.6B-8bit`，通过 `mlx-audio` 使用 Apple Silicon 推理；它是上游 Qwen3-ASR 的社区 MLX 转换版本。继续采用按住说话、松开识别、核对文字后发送，首先验证中文和游戏专名。模型文件大小不等于实际运行内存，也不套用官方大批量吞吐量作为本机交互延迟。[MLX 实现说明](https://github.com/Blaizzy/mlx-audio/blob/main/mlx_audio/stt/models/qwen3_asr/README.md)、[模型卡](https://huggingface.co/mlx-community/Qwen3-ASR-0.6B-8bit)
+本项目使用固定到提交 `8b7bcc9` 的底层 `OrtCpuRuntime`，以 NumPy / SciPy 处理音频，未加载 PyTorch。高层参考脚本仍有 torch / torchaudio 导入，因此没有直接安装其全套推理包。`Tools/voice_profiles.json` 固定八类角色配置，当前复用 Weiguo、Zhiming、Junhao 三种内置中文男声，属于集成用临时选音，不是八名独立演员，也尚未完成男女居民的细分选音。
 
-关键剧情台词提前合成并缓存，自由回复按短句合成；每个 NPC 固定声线。CosyVoice 3 留作音质比较候选。升级前用二十条实际台词试听，并在独立 Unity 游戏同时运行时记录延迟、识别错误、峰值内存、帧时间和打断行为。具体模型 ID、配套资源与验收项见 [选型记录](voice-model-selection.json)。
+ASR 使用 `mlx-community/Qwen3-ASR-0.6B-8bit` 与 `mlx-audio 0.6.3`，是上游 Qwen3-ASR 的社区 MLX 转换版本。继续采用按住说话、松开识别、核对文字后发送；已核对该版本的 `hotwords` 参数，把朝歌、姬昌、纣王、乱纪元等作为上下文词表，不强行替换识别结果。模型文件大小不等于实际运行内存。[MLX 实现说明](https://github.com/Blaizzy/mlx-audio/blob/main/mlx_audio/stt/models/qwen3_asr/README.md)、[模型卡](https://huggingface.co/mlx-community/Qwen3-ASR-0.6B-8bit)
+
+关键剧情台词提前合成并缓存，自由回复实时合成；同一角色配置保持相同声线。MOSS 内部使用增量解码，但当前 Unity HTTP 接口仍接收完整 WAV 后播放，尚未实现网络音频流缓冲；模型内部的首段 PCM 时间不能当成玩家实际听到首音的延迟。CosyVoice 3 留作后续听感比较候选。具体模型 ID 与限制见 [选型记录](voice-model-selection.json)。
 
 ### 当前可用实现
 
@@ -57,6 +59,8 @@ ASR 选择 `mlx-community/Qwen3-ASR-0.6B-8bit`，通过 `mlx-audio` 使用 Apple
 
 ```sh
 python3 Tools/setup_voice_gateway.py
+python3 Tools/setup_local_voice_models.py --activate
+python3 Tools/play_act_one.py
 ```
 
 启动本机服务：
@@ -65,11 +69,13 @@ python3 Tools/setup_voice_gateway.py
 ~/.cache/three-body-voice/venv/bin/python Tools/dialogue_gateway.py
 ```
 
-服务监听 `127.0.0.1:8769`。Unity 上传 16 kHz 单声道 WAV 到本机识别，原始麦克风录音不保存，也不发给 DeepSeek。玩家确认发送后，才把文字作为一句对话处理。NPC 语音采用本机 macOS `say`，字幕始终保留；不依赖配音网络服务。
+服务监听 `127.0.0.1:8769`。Unity 上传 16 kHz 单声道 WAV 到本机 Qwen 识别，原始麦克风录音不保存，也不发给 DeepSeek。玩家确认发送后才作为一句对话处理。MOSS 输出 24 kHz 单声道 NPC 语音，字幕始终保留，生成音频缓存在用户目录，不依赖云端语音 API。
 
-识别在独立常驻进程的主线程运行，复用已加载的轻量模型，避免边渲染边反复加载模型。单次识别有 28 秒处理上限，客户端等待上限 32 秒；取消聊天、暂停或关闭窗口会取消录音和待处理结果，系统授权窗口返回后也会重新检查是否仍处于交谈。自动化使用合成语音，不启动硬件录音。
+ASR 与 TTS 分别在独立常驻进程运行，复用权重。MOSS 限制为一个 CPU 推理线程并关闭空闲自旋；ASR 单并发。识别处理上限 28 秒，客户端等待上限 32 秒；语音合成客户端上限 35 秒。玩家开始录音、关闭交谈或关键剧情插话时，停止旧声音并丢弃晚到结果。自动检查使用合成语音，不启动硬件录音。
 
-可选完整模型：启动服务前设置 `TRAVELLER_ASR_MODEL` 为 `~/.cache/three-body-voice/models/vosk-model-cn-0.22` 的展开绝对路径。完整模型需要更多内存，当前 16 GB 机器默认使用轻量版。合成语音回环测试不代表实际麦克风、口音或嘈杂环境已经验收。
+回退为旧 Vosk + macOS 临时语音：运行 `python3 Tools/setup_local_voice_models.py --legacy` 后再运行 `python3 Tools/play_act_one.py`。恢复神经语音则用 `--activate`。启动器会核对本项目的 PID 与命令路径，再刷新自己的旧服务，避免关闭不相关进程；双向切换已做服务级检查。六条预生成剧情配音仍可离线播放。
+
+旧 Vosk 完整模型仅在回退模式下通过 `TRAVELLER_ASR_MODEL` 选择，来源见 [轻量版](voice-source.json)、[完整版](voice-full-model-source.json)。目前仍为按键录音，尚未接入持续监听、自动 VAD 或扬声器回声消除。
 
 ## AI 角色与 DeepSeek 接入
 
@@ -96,17 +102,32 @@ python3 Tools/setup_voice_gateway.py
 5. `python3 Tools/run_act_one_checks.py --soak` 真实等待全部 600 秒；`--journey` 验证后续完整主线。自动检查使用合成语音测试同一转写接口，不请求硬件麦克风权限或录下用户声音。
 6. `python3 Tools/run_act_one_checks.py --characters` 验证三幕人物的实际手部 IK、火把、动作与坐姿表演。
 7. `python3 Tools/test_dialogue_gateway.py` 验证八角色提示词、历史隔离边界、JSON 适配、超时回退和丢弃模型越权动作；`python3 Tools/check_voice_gateway.py` 用合成中文连续三次验证本机转写和临时配音。
+8. `~/.cache/three-body-voice/local-venv/bin/python Tools/benchmark_local_voice.py` 生成二十条试听及转写对照；`python3 Tools/render_story_voice.py` 重渲染六条剧情配音，保留原 `.meta` / GUID。
+9. `python3 Tools/run_act_one_checks.py --voice` 检查实际播放、打断和活跃推理时帧率；`--perf-only` 是只做一次切场与单视角采样的诊断工具，不替代完整主线。性能采样保持游戏在前台，报告同时记录实际帧率上限、焦点与 VSync。
 
 验证结果以 `editmode.json`、`Native/*/report.json` 和最终交付审计为准。早期运行发现并修复了材质初始化时机、第一人称火把出画、场景光源开销与时序检查问题，相关原始记录保存在 `Diagnostics/`。
 
-## 本次验收
+## 第一幕初版验收
+
+以下保留神经语音升级前的验收数字，升级前快照在 `LocalVoice/baseline-*.json`；当前语音验收见下节。
 
 - 保存重载后：三个场景共 36 个有效 Humanoid、36 个火把组件、33 个 NPC 身份，零缺失脚本；8 套人物提示词、6 条临时语音和 138 处可燃植被引用完整。火把三档为 4,212 / 1,262 / 314 三角形，灰烬为 500 / 200 / 60。见 [资源审计](saved-resource-audit.json)。
 - EditMode **44/44**、最终原生第一幕 **49/49**、后续完整主线 **50/50**、人物与持物 **55/55** 通过。第一幕使用真实 CharacterController 连续走了约 **83.07 米**，经过受伤、岩下恢复、交谈、烧尽、夜行和自动朝歌转场。近距离手骨与握点误差检查覆盖全部 36 个角色，包含坐姿人物。
 - 138 处植被中 **85 处暴晒燃烧并成为灰烬，53 处遮阴存活**。最后一次快速运行向计时器注入时间验证 600 秒边界；另一次完整等待实际经过 **600.52 秒**，日落约 **2.02 秒**，随后夜行自动抵达朝歌。
-- 完整等待那次的合并报告仍为失败，保留了当时语音超时和帧预算失败。之后只改动识别服务、持物和渲染设置，并通过最终快速运行复测；没有将早期报告改写为通过，也没有再重复整个十分钟。见 [真实等待原始报告](Native/soak/report.json)、[最终运行报告](Native/functional/report.json)。
+- 完整等待那次的合并报告仍为失败，保留了当时语音超时和帧预算失败。之后只改动识别服务、持物和渲染设置，并通过最终快速运行复测；没有将早期报告改写为通过，也没有再重复整个十分钟。见 [真实等待原始报告](Native/soak/report.json)、[升级前运行报告](LocalVoice/baseline-report.json)。
 - Apple M5、1920×1080、2×MSAA、90 FPS 上限；六个第一幕视角各预热 180 帧、采样 360 帧，主循环 P95 为 **11.42–14.68 ms**，六个视角低于 16.67 ms。后台高负载时曾出现波动，此结果仅代表本机该次第一幕短时采样，不替代其他两幕或其他硬件验收。
-- 网关六项适配单测通过；常驻识别进程连续三次处理约四秒的合成中文，耗时 **1.12 / 2.87 / 2.06 秒**。报告原样保存专名识别错误，不能据此宣称真实麦克风或高准确率已经验收。见 [语音回环](voice-gateway-check.json)。
+- 网关六项适配单测通过；常驻识别进程连续三次处理约四秒的合成中文，耗时 **1.12 / 2.87 / 2.06 秒**。报告原样保存专名识别错误，不能据此宣称真实麦克风或高准确率已经验收。见 [升级前语音回环](LocalVoice/baseline-voice-gateway-check.json)。
 - 最新 macOS 开发包构建成功，零错误、零警告。朝歌与中世纪的 3,316 / 323 个 Transform 与基线逐块哈希一致，只新增交谈、语音和持物组件；角色源模型、第一人称控制器及后两幕剧情配置保持原样。见 [最终审计](delivery.json)。
 
 仍需真实 DeepSeek 密钥验证在线角色表现；真实麦克风、口音与现场噪声需要玩家实际体验。临时合成配音、火焰画风和细致手指接触可在后续美术音频制作中继续完善。独立包仍依赖随附本机服务，尚未把 Python、识别模型和配音引擎做成跨平台安装器。
+
+## 本地神经语音升级验收
+
+- [二十条回环](LocalVoice/benchmark.json)：318 个参考字符中 8 个字符编辑错误，CER 约 2.52%；中位识别耗时约 0.24 秒，中位合成耗时约 1.08 秒。数据来自模型合成语音，不能当成真实玩家识别率或主观自然度排名。试听 WAV 保存在同一目录。
+- [Unity 语音运行](Native/voice/report.json)：18 项通过；从提交一句回复到实际播放约 2.84 秒，24 kHz 音频解码播放、即时打断与丢弃晚到回复正常。采样期间按真实顺序执行 5 次 ASR、5 次未缓存 TTS，前台帧时间 P95 为 11.54 ms。
+- [完整第一幕](Native/functional/report.json)：49 项通过，约 83.09 米实走，烧尽与遮阴存活仍为 85 / 53。六视角实际帧率上限 90、VSync 0、焦点为前台，P95 为 11.21–11.46 ms。未再重复十分钟等待，升级不改剧情计时。
+- [EditMode](LocalVoice/editmode.json) 44 项通过。六条预生成台词和实时周文王回复共用声线；[安装与回退](LocalVoice/launcher-fallback-check.json) 双向服务切换通过，依赖检查无冲突。
+- 曾有一轮 P95 约 54 ms 的慢样本，原始数据保存在 [诊断目录](LocalVoice/Diagnostics/)。新增焦点、帧率上限和等待标记后，缩小切场检查与前台完整复测均通过；原慢样本没有焦点记录，因此不把后台限帧当作已证明的唯一原因。没有为排查降低游戏画质。
+- 权重固定到模型仓库提交，14 个 LFS 权重 / 图文件核验上游 SHA-256；Python 依赖锁定在 `Tools/requirements-local-voice.lock.txt`，完整权重留在用户缓存。后台进程内存足迹快照约为 ASR 1.1 GiB、TTS 1.6 GiB，不能和 Metal 分配峰值直接相加，也不能替代其他场景与硬件验收。
+
+运行 `python3 Tools/audit_local_voice.py` 可重新核对本机模型哈希、六条 WAV 与 GUID、语音和第一幕报告、依赖、网关及适配单测，并生成 [语音交付审计](LocalVoice/delivery.json)。

@@ -4,36 +4,60 @@
   "checks": [
     {
       "case": "synthetic Chinese question 1",
-      "seconds": 1.119,
+      "seconds": 0.337,
       "expectedSpeech": "你叫什么名字？我想和你一起去朝歌。",
-      "transcript": "你叫什么名字我想和你一起去找着"
+      "transcript": "你叫什么名字？我想和你一起去朝歌。"
     },
     {
       "case": "synthetic Chinese question 2",
-      "seconds": 2.866,
+      "seconds": 0.188,
       "expectedSpeech": "你叫什么名字？我想和你一起去朝歌。",
-      "transcript": "你叫什么名字我想和你一起去找着"
+      "transcript": "你叫什么名字？我想和你一起去朝歌。"
     },
     {
       "case": "synthetic Chinese question 3",
-      "seconds": 2.056,
+      "seconds": 0.209,
       "expectedSpeech": "你叫什么名字？我想和你一起去朝歌。",
-      "transcript": "你叫什么名字我想和你一起去找着"
+      "transcript": "你叫什么名字？我想和你一起去朝歌。"
     }
   ],
   "health": {
     "ready": true,
     "mode": "scripted",
     "asrModelPresent": true,
-    "asrModel": "vosk-model-small-cn-0.22"
+    "asrModel": "Qwen3-ASR-0.6B-8bit",
+    "asrEngine": "qwen3-asr-mlx-8bit",
+    "ttsEngine": "moss-tts-nano-onnx-cpu",
+    "ttsModel": "MOSS-TTS-Nano-100M-ONNX",
+    "voiceProfiles": {
+      "wenwang": "Weiguo",
+      "king": "Zhiming",
+      "pope": "Weiguo",
+      "scholar": "Junhao",
+      "davinci": "Zhiming",
+      "shang_guard": "Junhao",
+      "church_guard": "Weiguo",
+      "citizen": "Junhao"
+    },
+    "lastVoiceTimings": {
+      "tts": {
+        "cacheHit": true,
+        "voice": "Weiguo"
+      },
+      "asr": {
+        "seconds": 0.4446084160008468,
+        "metalPeakBytes": 1669583588,
+        "silence": false
+      }
+    }
   },
   "format": {
     "channels": 1,
-    "rate": 16000,
+    "rate": 24000,
     "sampleBytes": 2,
-    "seconds": 3.929625
+    "seconds": 4.16
   },
-  "speechSeconds": 0.002,
+  "speechSeconds": 2.977,
   "offlineReply": {
     "speech": "我是姬昌。我要去朝歌，把推演的历法呈给纣王。",
     "gesture": "think",

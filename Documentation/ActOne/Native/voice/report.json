@@ -1,0 +1,16 @@
+{
+    "passed": true,
+    "functionalPassed": true,
+    "performancePassed": true,
+    "hardwareMicrophoneUsed": false,
+    "checks": 18,
+    "asrRequests": 5,
+    "speechRequests": 5,
+    "playedSampleRate": 24000,
+    "audioStartupSeconds": 2.8362646102905275,
+    "frameMeanMs": 11.259137153625489,
+    "frameP95Ms": 11.53533935546875,
+    "health": "{\"ready\": true, \"mode\": \"scripted\", \"asrModelPresent\": true, \"asrModel\": \"Qwen3-ASR-0.6B-8bit\", \"asrEngine\": \"qwen3-asr-mlx-8bit\", \"ttsEngine\": \"moss-tts-nano-onnx-cpu\", \"ttsModel\": \"MOSS-TTS-Nano-100M-ONNX\", \"voiceProfiles\": {\"wenwang\": \"Weiguo\", \"king\": \"Zhiming\", \"pope\": \"Weiguo\", \"scholar\": \"Junhao\", \"davinci\": \"Zhiming\", \"shang_guard\": \"Junhao\", \"church_guard\": \"Weiguo\", \"citizen\": \"Junhao\"}, \"lastVoiceTimings\": {}}",
+    "finalHealth": "{\"ready\": true, \"mode\": \"scripted\", \"asrModelPresent\": true, \"asrModel\": \"Qwen3-ASR-0.6B-8bit\", \"asrEngine\": \"qwen3-asr-mlx-8bit\", \"ttsEngine\": \"moss-tts-nano-onnx-cpu\", \"ttsModel\": \"MOSS-TTS-Nano-100M-ONNX\", \"voiceProfiles\": {\"wenwang\": \"Weiguo\", \"king\": \"Zhiming\", \"pope\": \"Weiguo\", \"scholar\": \"Junhao\", \"davinci\": \"Zhiming\", \"shang_guard\": \"Junhao\", \"church_guard\": \"Weiguo\", \"citizen\": \"Junhao\"}, \"lastVoiceTimings\": {\"tts\": {\"seconds\": 1.479625208012294, \"firstPcmSeconds\": 0.12525554200692568, \"audioSeconds\": 4.48, \"voice\": \"Weiguo\", \"frames\": 56, \"torchImported\": false, \"cacheHit\": false}, \"asr\": {\"seconds\": 0.39941250000265427, \"metalPeakBytes\": 1669583588, \"silence\": false}}}",
+    "errors": []
+}

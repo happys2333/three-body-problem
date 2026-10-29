@@ -1,0 +1,25 @@
+{
+  "note": "Instant process RSS snapshot, not peak or total unified-memory accounting; ASR Metal allocation is separately reported by inference. A separate macOS top snapshot reported the listed physical footprints; these are not simply additive with Metal allocation.",
+  "workers": [
+    {
+      "pid": 40905,
+      "rssMiB": 8.0,
+      "engine": "qwen"
+    },
+    {
+      "pid": 40922,
+      "rssMiB": 7.9,
+      "engine": "moss"
+    }
+  ],
+  "topPhysicalFootprintSnapshot": [
+    {
+      "engine": "qwen",
+      "approxMiB": 1114
+    },
+    {
+      "engine": "moss",
+      "approxMiB": 1584
+    }
+  ]
+}

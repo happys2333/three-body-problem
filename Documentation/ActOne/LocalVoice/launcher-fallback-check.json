@@ -1,0 +1,42 @@
+{
+  "appLaunchStubbed": true,
+  "checks": [
+    {
+      "localModels": false,
+      "health": {
+        "ready": true,
+        "mode": "scripted",
+        "asrModelPresent": true,
+        "asrModel": "vosk-model-small-cn-0.22",
+        "asrEngine": "vosk",
+        "ttsEngine": "macos-say"
+      },
+      "passed": true
+    },
+    {
+      "localModels": true,
+      "health": {
+        "ready": true,
+        "mode": "scripted",
+        "asrModelPresent": true,
+        "asrModel": "Qwen3-ASR-0.6B-8bit",
+        "asrEngine": "qwen3-asr-mlx-8bit",
+        "ttsEngine": "moss-tts-nano-onnx-cpu",
+        "ttsModel": "MOSS-TTS-Nano-100M-ONNX",
+        "voiceProfiles": {
+          "wenwang": "Weiguo",
+          "king": "Zhiming",
+          "pope": "Weiguo",
+          "scholar": "Junhao",
+          "davinci": "Zhiming",
+          "shang_guard": "Junhao",
+          "church_guard": "Weiguo",
+          "citizen": "Junhao"
+        },
+        "lastVoiceTimings": {}
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}

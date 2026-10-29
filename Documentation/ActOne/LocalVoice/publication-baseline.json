@@ -1,0 +1,57 @@
+{
+  "repository": "https://github.com/happys2333/three-body-problem",
+  "branch": "main",
+  "remoteHeadVerified": "12205cdfbe54ba5c59e96723997054e4e3308494",
+  "lfsUniqueObjects": 2519,
+  "lfsUniqueGiB": 4.23,
+  "commits": [
+    {
+      "category": "1_project",
+      "sha": "64e3e51ae97e7950d06a647b6617a17c158b0abb",
+      "message": "chore(unity): 初始化 Unity 6 工程配置与 Git LFS",
+      "files": 28
+    },
+    {
+      "category": "2_third_party",
+      "sha": "c2b924d2e3efd751386b9a1781c96c1218aedf4d",
+      "message": "chore(assets): 收录第三方建筑环境素材与字体",
+      "files": 1911
+    },
+    {
+      "category": "3_characters",
+      "sha": "5b208579682c4a007631067303be8ed9042d8956",
+      "message": "feat(characters): 导入完整 Humanoid 人物和共享动作库",
+      "files": 760
+    },
+    {
+      "category": "4_environment",
+      "sha": "c1b5f320bccdc5a77536abc61e537be21656746c",
+      "message": "feat(art): 加入修整后的环境模型与可编辑制作源文件",
+      "files": 2644
+    },
+    {
+      "category": "5_gameplay",
+      "sha": "9f2f46a5e91ba3ccbb27252552fe129674c86eaa",
+      "message": "feat(gameplay): 实现第一人称旅程、巨日生存与角色对话",
+      "files": 181
+    },
+    {
+      "category": "6_scenes",
+      "sha": "98af4685b71a6aa8ed3fda0684a1d62fd7387435",
+      "message": "feat(scenes): 完成戈壁、朝歌王都与中世纪场景",
+      "files": 843
+    },
+    {
+      "category": "7_production",
+      "sha": "d5bd7e274e465ad08b1e01c178df55689283cf85",
+      "message": "chore(tools): 加入资源制作、语音服务和运行验证工具",
+      "files": 87
+    },
+    {
+      "category": "8_documentation",
+      "sha": "12205cdfbe54ba5c59e96723997054e4e3308494",
+      "message": "docs: 整理素材来源、验收报告与本地语音模型选型",
+      "files": 441
+    }
+  ]
+}

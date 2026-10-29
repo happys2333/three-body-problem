@@ -1,0 +1,21 @@
+{
+  "symptom": "One full run had approximately 32 ms average frames and approximately 54 ms P95 while GPU means remained around 10 ms. Original evidence is kept in SlowFullRun.",
+  "hypotheses": [
+    {
+      "cause": "Window background / OS scheduling throttle",
+      "result": "Consistent with the foreground rerun succeeding after raising the exact application window, but the original slow run did not record focus, so a unique cause is not proved."
+    },
+    {
+      "cause": "Frame cap restored incorrectly after scene loading",
+      "result": "Not reproduced. The reduced scene round-trip and the final full run both record target 90 and VSync 0."
+    },
+    {
+      "cause": "Resident voice workers keep consuming CPU while idle",
+      "result": "Not supported. Both workers showed 0.0% idle CPU; actual inference was separately exercised in the passing voice-native check."
+    }
+  ],
+  "changes": "Added frame-cap, focus, VSync and wait-marker measurements and a reduced opt-in performance probe. No gameplay rendering-quality reduction was made for this investigation.",
+  "reducedProbePassed": true,
+  "fullForegroundRunPassed": true,
+  "scope": "Foreground first-scene sampling on this machine only."
+}

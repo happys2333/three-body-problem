@@ -121,3 +121,9 @@ Mixamo 源模型沿用 Adobe 服务与内容条款，**不是 CC0**。本仓库 
 | [Pine Bark](https://polyhaven.com/a/pine_bark) | Poly Haven，CC0 | 荒漠枯树和灌木的粗糙树皮表面 |
 
 每套包含反照率、OpenGL 法线、粗糙度、遮蔽四张 2K JPG，共 12 张，放在 `Assets/ThirdParty/EnvironmentReady/PolyHaven/`。获取脚本为 `Tools/fetch_environment_ready_surfaces.py`；[逐文件来源与 SHA-256](EnvironmentProduction/Ready/surface-sources.json) 保留官方页面和公开下载地址。石砌、抹灰、木板、瓦面与试走场地面复用本项目已有 Poly Haven 资源。修整版将粗糙度和遮蔽合并到同一张线性纹理的 R/G 通道以减少采样；原图和授权记录仍完整保留。摄影贴图的 CC0 标识不扩展到混元网格及行囊原图集。
+
+## 本地语音模型与临时配音（2026-10-29）
+
+识别使用 [Qwen3-ASR-0.6B 的 MLX 8bit 转换](https://huggingface.co/mlx-community/Qwen3-ASR-0.6B-8bit/tree/89e96d92ba34aca20b3e29fb10cc284097d1219f)。合成使用 [MOSS-TTS-Nano-100M ONNX](https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Nano-100M-ONNX/tree/f52645cb467506d8e18e746ddd59482685b74e58) 与 [MOSS 音频编解码器](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano-ONNX/tree/ceff0d0749bfb3fa2d61149794ec6feef0d1e1ae)，底层 CPU 运行时代码固定为 [MOSS-TTS-Nano 8b7bcc9](https://github.com/OpenMOSS/MOSS-TTS-Nano/tree/8b7bcc9341b3b4ef3a3a58ba1338a7d85ff133eb)。模型与代码均从公开仓库取得；本地安装记录见 [model-installation.json](ActOne/LocalVoice/model-installation.json)，权重没有提交到游戏仓库。
+
+六条剧情 WAV 与二十条试听由这些模型的内置 Weiguo、Zhiming、Junhao 声线生成，没有采集用户或其他真实人物录音来克隆。它们是临时模型配音，不标为 CC0；模型、预设声线及生成输出分别遵循对应上游的适用说明，项目 LICENSE 不替代这些条件。脚本文字、实际生成参数和转写对照保存在 `Tools/scripted_voice_lines.json`、`Tools/voice_profiles.json` 与 [LocalVoice](ActOne/LocalVoice/) 内。

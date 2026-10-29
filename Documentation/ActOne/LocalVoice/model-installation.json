@@ -1,0 +1,23 @@
+{
+  "runtimeSourceRevision": "8b7bcc9341b3b4ef3a3a58ba1338a7d85ff133eb",
+  "models": [
+    {
+      "repo": "mlx-community/Qwen3-ASR-0.6B-8bit",
+      "revision": "89e96d92ba34aca20b3e29fb10cc284097d1219f",
+      "bytes": 1010772242,
+      "sha256CheckedFiles": 1
+    },
+    {
+      "repo": "OpenMOSS-Team/MOSS-TTS-Nano-100M-ONNX",
+      "revision": "f52645cb467506d8e18e746ddd59482685b74e58",
+      "bytes": 672625447,
+      "sha256CheckedFiles": 8
+    },
+    {
+      "repo": "OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano-ONNX",
+      "revision": "ceff0d0749bfb3fa2d61149794ec6feef0d1e1ae",
+      "bytes": 90577053,
+      "sha256CheckedFiles": 5
+    }
+  ]
+}

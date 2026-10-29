@@ -1,0 +1,30 @@
+{
+  "syntheticOnly": true,
+  "cases": 20,
+  "referenceCharacters": 318,
+  "characterErrors": 8,
+  "characterErrorRate": 0.025157232704402517,
+  "silenceText": "",
+  "hardwareMicrophoneUsed": false,
+  "deepseekUsed": false,
+  "allMossRequestsAvoidedTorch": true,
+  "timings": {
+    "asr": {
+      "minSeconds": 0.1037041660019895,
+      "medianSeconds": 0.239236624998739,
+      "maxSeconds": 0.5282588330010185
+    },
+    "tts": {
+      "minSeconds": 0.3833617499913089,
+      "medianSeconds": 1.0843228335070307,
+      "maxSeconds": 1.7547621249977965
+    }
+  },
+  "unityVoiceChecks": 18,
+  "unityVoicePassed": true,
+  "replySubmissionToPlaybackSeconds": 2.8362646102905273,
+  "activeVoiceFrameP95Ms": 11.53533935546875,
+  "fullActOneChecks": 49,
+  "fullActOnePassed": true,
+  "fullActOneWorstP95Ms": 11.461167335510254
+}
