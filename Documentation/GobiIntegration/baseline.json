@@ -1,0 +1,13 @@
+{
+  "files": {
+    "Assets/_Project/Scenes/Traveller/01_GobiJourney.unity": "30b86b32a693ab2eedbd1ac1c50d1ce02e8c47f5abf4a5b2533a6078685327b8",
+    "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity": "7507bcd0a927e5c1d174e91ebbe35af7eb96f5c2f32e7a6d36ff1a8b449d3dc2",
+    "Assets/_Project/Scenes/Traveller/03_MedievalTribunal.unity": "1238bd663d25c21a268bd218c4c68df4b222f7a109215d50e8895dc3a0c9ac88",
+    "Assets/_Project/Settings/Traveller/01_GobiJourney.asset": "6a4c7447f8837ba9ec0330d793facf1830648f65d47d3183244e948ade739d61",
+    "Assets/_Project/Settings/Traveller/02_ChaogeCourt.asset": "8eeb55218a7940a99d60e896018ee50a230907691ac9f865abf443f741dddc69",
+    "Assets/_Project/Settings/Traveller/03_MedievalTribunal.asset": "15adf4d24c47a52e8b86c714d5b9309dc012f3980b0aa229747f4521c21c15eb",
+    "Assets/_Project/Settings/Traveller/FieldNotesPanel.asset": "9369270043bfc67f566ae43d4c180b38e73010f4854665f8b879abdd6a910185",
+    "ProjectSettings/EditorBuildSettings.asset": "2ba55d958a3cfa90b1018b036772d97350a84092c86c193eaa93a430a4706ee8"
+  },
+  "backup": "Logs/GobiIntegration/before"
+}

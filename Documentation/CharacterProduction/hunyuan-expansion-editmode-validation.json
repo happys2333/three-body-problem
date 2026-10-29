@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-28",
+  "job_id": "b620d6e3b36d42919e4a382b8d473843",
+  "mode": "EditMode",
+  "started_unix_ms": 1793158560421,
+  "finished_unix_ms": 1793158607258,
+  "summary": {
+    "total": 36,
+    "passed": 36,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 44.9931771,
+    "resultState": "Passed"
+  },
+  "scope": "Existing project regression checks; expansion library meshes and motion sampling have separate reports."
+}

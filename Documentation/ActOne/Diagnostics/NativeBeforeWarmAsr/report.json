@@ -1,0 +1,80 @@
+{
+    "passed": false,
+    "realTenMinuteWait": false,
+    "hardwareMicrophoneUsed": false,
+    "checks": 49,
+    "ignited": 85,
+    "burned": 85,
+    "shaded": 53,
+    "frameRateLimit": 90,
+    "phase": "complete",
+    "gpu": "Apple M5",
+    "walkedMetres": 83.10082244873047,
+    "shelterWallSeconds": 35.40032958984375,
+    "sunsetWallSeconds": 2.0178489685058595,
+    "errors": [
+        "Synthetic Chinese speech transcription failed.",
+        "Act one view 0 exceeded 60 FPS budget: 19.56954",
+        "Act one view 1 exceeded 60 FPS budget: 21.71221",
+        "Act one view 2 exceeded 60 FPS budget: 17.2385",
+        "Act one view 4 exceeded 60 FPS budget: 21.61217"
+    ],
+    "metrics": [
+        {
+            "moment": 0,
+            "meanMs": 12.503963470458985,
+            "p95Ms": 19.569543838500978,
+            "gpuMeanMs": 19.458887100219728,
+            "mainThreadMeanMs": 12.47817325592041,
+            "triangles": 3748868,
+            "batches": 374
+        },
+        {
+            "moment": 1,
+            "meanMs": 12.468805313110352,
+            "p95Ms": 21.712209701538087,
+            "gpuMeanMs": 12.813278198242188,
+            "mainThreadMeanMs": 12.466883659362793,
+            "triangles": 4881990,
+            "batches": 311
+        },
+        {
+            "moment": 2,
+            "meanMs": 13.177502632141114,
+            "p95Ms": 17.23849868774414,
+            "gpuMeanMs": 28.068649291992189,
+            "mainThreadMeanMs": 13.176329612731934,
+            "triangles": 4624240,
+            "batches": 290
+        },
+        {
+            "moment": 3,
+            "meanMs": 11.298026084899903,
+            "p95Ms": 11.420620918273926,
+            "gpuMeanMs": 9.617563247680664,
+            "mainThreadMeanMs": 11.294166564941407,
+            "triangles": 2904348,
+            "batches": 274
+        },
+        {
+            "moment": 4,
+            "meanMs": 12.376753807067871,
+            "p95Ms": 21.61217498779297,
+            "gpuMeanMs": 8.570243835449219,
+            "mainThreadMeanMs": 12.372791290283204,
+            "triangles": 2679730,
+            "batches": 235
+        },
+        {
+            "moment": 5,
+            "meanMs": 11.451608657836914,
+            "p95Ms": 11.77375316619873,
+            "gpuMeanMs": 9.399065017700196,
+            "mainThreadMeanMs": 11.44762897491455,
+            "triangles": 2386277,
+            "batches": 227
+        }
+    ],
+    "asrTranscript": "{\"error\": \"Voice service unavailable; text dialogue remains available\"}",
+    "playerTorchViewport": "(0.08, 0.49, 0.33)"
+}

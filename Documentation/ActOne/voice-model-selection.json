@@ -1,0 +1,64 @@
+{
+  "selectedOn": "2026-10-29",
+  "status": "selected_pending_installation_and_benchmark",
+  "host": {
+    "chip": "Apple M5",
+    "unifiedMemoryGiB": 16,
+    "usage": "Unity game and local voice inference on the same Mac"
+  },
+  "tts": {
+    "model": "OpenMOSS-Team/MOSS-TTS-Nano-100M-ONNX",
+    "audioTokenizer": "OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano-ONNX",
+    "runtime": "ONNX Runtime CPU",
+    "referencePolicy": "One fixed voice profile per NPC; validate calm, urgent, and quiet readings using the same voice identity.",
+    "threadCountToBenchmark": [1, 2],
+    "emotionInstructionsSupported": "Do not assume arbitrary natural-language emotion instructions are supported; validate each supported control path."
+  },
+  "asr": {
+    "model": "mlx-community/Qwen3-ASR-0.6B-8bit",
+    "upstream": "Qwen/Qwen3-ASR-0.6B",
+    "runtime": "mlx-audio on Apple Silicon",
+    "distribution": "Community MLX conversion, separate from the upstream PyTorch runtime",
+    "language": "Chinese",
+    "interaction": "Push to talk; transcribe after release; editable confirmation before sending",
+    "concurrency": 1,
+    "maximumRecordingSeconds": 25,
+    "dedicatedHotwordApiVerified": false
+  },
+  "dialogue": {
+    "provider": "DeepSeek planned",
+    "separateFromSpeechModels": true,
+    "currentDefault": "Offline scripted replies"
+  },
+  "productionPolicy": [
+    "Pre-render and cache mandatory story lines using the same character voice as live responses.",
+    "Warm and reuse model processes; do not reload weights for every utterance.",
+    "Serialize inference requests and test frame times with the real Unity player running.",
+    "Keep Vosk and macOS say as explicit fallback paths until the replacement passes acceptance."
+  ],
+  "qualityComparisonReserve": {
+    "model": "FunAudioLLM/Fun-CosyVoice3-0.5B-2512",
+    "purpose": "Optional voice quality comparison; not selected for default same-machine runtime before measurement"
+  },
+  "requiredBenchmarks": {
+    "tts": "Twenty actual game lines: calm, urgent, quiet, names, consecutive sentences; listen for missing or repeated words, unwanted pauses, voice drift, and unsuitable emotion.",
+    "asr": "Real microphone recordings including 朝歌、姬昌、周文王、纣王、乱纪元、恒纪元、沙漏、三日凌空; measure transcription errors without silently correcting them.",
+    "silenceAndNoise": "Check that silence, breathing, wind audio, and speaker echo do not become game commands.",
+    "performance": "Measure warm/cold latency, first playable audio, peak process and GPU memory, Unity frame P95, and interrupt/cancellation behavior.",
+    "measuredOnThisMachine": false
+  },
+  "activeImplementationAtSelection": {
+    "asr": "vosk-model-small-cn-0.22",
+    "tts": "macOS say / Reed Chinese",
+    "changedByThisSelection": false
+  },
+  "sources": [
+    "https://github.com/OpenMOSS/MOSS-TTS-Nano#onnx-cpu-inference",
+    "https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Nano-100M-ONNX",
+    "https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano-ONNX",
+    "https://github.com/QwenLM/Qwen3-ASR",
+    "https://github.com/Blaizzy/mlx-audio/blob/main/mlx_audio/stt/models/qwen3_asr/README.md",
+    "https://huggingface.co/mlx-community/Qwen3-ASR-0.6B-8bit",
+    "https://github.com/QwenAudio/CosyVoice"
+  ]
+}

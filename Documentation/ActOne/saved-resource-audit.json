@@ -1,0 +1,60 @@
+{
+  "scenes": [
+    {
+      "scene": "01_GobiJourney",
+      "actors": 2,
+      "torchBearers": 2,
+      "identities": 1,
+      "validHumanoids": 2,
+      "fuel": 138,
+      "missingScripts": 0,
+      "microphone": true,
+      "dialogue": true
+    },
+    {
+      "scene": "02_ChaogeCourt",
+      "actors": 28,
+      "torchBearers": 28,
+      "identities": 27,
+      "validHumanoids": 28,
+      "fuel": 0,
+      "missingScripts": 0,
+      "microphone": true,
+      "dialogue": true
+    },
+    {
+      "scene": "03_MedievalTribunal",
+      "actors": 6,
+      "torchBearers": 6,
+      "identities": 5,
+      "validHumanoids": 6,
+      "fuel": 0,
+      "missingScripts": 0,
+      "microphone": true,
+      "dialogue": true
+    }
+  ],
+  "props": [
+    {
+      "name": "Torch",
+      "triangles": [
+        4212,
+        1262,
+        314
+      ],
+      "missingMaterials": 0
+    },
+    {
+      "name": "Ash",
+      "triangles": [
+        500,
+        200,
+        60
+      ],
+      "missingMaterials": 0
+    }
+  ],
+  "personas": 8,
+  "voiceLines": 6,
+  "microphoneUsage": "按住说话时，用麦克风把你的话转为可编辑文字，与旅人交流。"
+}

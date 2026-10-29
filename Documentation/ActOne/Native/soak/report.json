@@ -1,0 +1,80 @@
+{
+    "passed": false,
+    "realTenMinuteWait": true,
+    "hardwareMicrophoneUsed": false,
+    "checks": 47,
+    "ignited": 85,
+    "burned": 85,
+    "shaded": 53,
+    "frameRateLimit": 90,
+    "phase": "complete",
+    "gpu": "Apple M5",
+    "walkedMetres": 83.23262786865235,
+    "shelterWallSeconds": 600.5211181640625,
+    "sunsetWallSeconds": 2.016845703125,
+    "errors": [
+        "Synthetic Chinese speech transcription failed.",
+        "Act one view 0 exceeded 60 FPS budget: 22.07583",
+        "Act one view 1 exceeded 60 FPS budget: 22.97766",
+        "Act one view 4 exceeded 60 FPS budget: 54.82263",
+        "Act one view 5 exceeded 60 FPS budget: 16.68604"
+    ],
+    "metrics": [
+        {
+            "moment": 0,
+            "meanMs": 14.391570091247559,
+            "p95Ms": 22.075828552246095,
+            "gpuMeanMs": 15.962206840515137,
+            "mainThreadMeanMs": 14.375389099121094,
+            "triangles": 3649689,
+            "batches": 368
+        },
+        {
+            "moment": 1,
+            "meanMs": 14.518877029418946,
+            "p95Ms": 22.977664947509767,
+            "gpuMeanMs": 22.295276641845704,
+            "mainThreadMeanMs": 14.476837158203125,
+            "triangles": 4778160,
+            "batches": 304
+        },
+        {
+            "moment": 2,
+            "meanMs": 13.2478609085083,
+            "p95Ms": 16.28232765197754,
+            "gpuMeanMs": 29.860841751098634,
+            "mainThreadMeanMs": 13.242940902709961,
+            "triangles": 4677679,
+            "batches": 295
+        },
+        {
+            "moment": 3,
+            "meanMs": 11.820277214050293,
+            "p95Ms": 14.918041229248047,
+            "gpuMeanMs": 19.844097137451173,
+            "mainThreadMeanMs": 11.81714916229248,
+            "triangles": 3154450,
+            "batches": 295
+        },
+        {
+            "moment": 4,
+            "meanMs": 23.637876510620118,
+            "p95Ms": 54.822628021240237,
+            "gpuMeanMs": 18.12984275817871,
+            "mainThreadMeanMs": 23.66358184814453,
+            "triangles": 2755177,
+            "batches": 241
+        },
+        {
+            "moment": 5,
+            "meanMs": 13.33253002166748,
+            "p95Ms": 16.6860408782959,
+            "gpuMeanMs": 31.161924362182618,
+            "mainThreadMeanMs": 13.331615447998047,
+            "triangles": 2516529,
+            "batches": 236
+        }
+    ],
+    "asrTranscript": "",
+    "playerTorchViewport": "(0.32, 0.50, 0.56)"
+}

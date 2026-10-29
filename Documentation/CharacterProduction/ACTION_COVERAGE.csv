@@ -1,0 +1,157 @@
+﻿角色或范围,动作需求,实际状态,可用片段,Unity文件,说明
+全部六位主要角色,待机-1,已生成共享动作,Idle01,Assets/_Project/Characters/Hunyuan/Animations/Idle01.fbx,实际导出并导入 Unity；身体动作，可通过 Humanoid 共用
+全部六位主要角色,走路-1,已生成共享动作,Walk01,Assets/_Project/Characters/Hunyuan/Animations/Walk01.fbx,实际导出并导入 Unity；身体动作，可通过 Humanoid 共用
+全部六位主要角色,奔跑,已生成共享动作,Run,Assets/_Project/Characters/Hunyuan/Animations/Run.fbx,实际导出并导入 Unity；身体动作，可通过 Humanoid 共用
+全部六位主要角色,转身,已生成共享动作,Turn,Assets/_Project/Characters/Hunyuan/Animations/Turn.fbx,实际导出并导入 Unity；身体动作，可通过 Humanoid 共用
+全部六位主要角色,沮丧,已生成共享动作,Despair,Assets/_Project/Characters/Hunyuan/Animations/Despair.fbx,实际导出并导入 Unity；身体动作，可通过 Humanoid 共用
+全部六位主要角色,向前跌倒,已生成共享动作,FallForward,Assets/_Project/Characters/Hunyuan/Animations/FallForward.anim,实际导出并导入 Unity；身体动作，可通过 Humanoid 共用；Unity 派生版本已校正落地高度，原始 FBX 保留
+主要角色通用需求,IdleNeutral,共享身体动作已验证,MX_Idle;MX_WeightShift,Assets/_Project/Characters/Mixamo/Animations/MX_Idle.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_WeightShift.fbx,已有剧情触发；等候触发与看向玩家由剧情逻辑控制。
+主要角色通用需求,IdleBreathing,共享身体动作已验证,MX_Idle;MX_WeightShift,Assets/_Project/Characters/Mixamo/Animations/MX_Idle.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_WeightShift.fbx,已有剧情触发；等候触发与看向玩家由剧情逻辑控制。
+主要角色通用需求,WalkForward,共享身体动作已验证,MX_Walking,Assets/_Project/Characters/Mixamo/Animations/MX_Walking.fbx,已有剧情触发；路程与步速由移动逻辑控制。
+主要角色通用需求,WalkBackward,共享身体动作已验证,MX_WalkBackward,Assets/_Project/Characters/Mixamo/Derived/MX_WalkBackward.anim,已有剧情触发；由前向行走反向派生；需要移动逻辑匹配。
+主要角色通用需求,StrafeLeft,共享身体动作已验证,MX_LeftStrafeWalking;MX_LeftStrafe,Assets/_Project/Characters/Mixamo/Animations/MX_LeftStrafeWalking.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_LeftStrafe.fbx,已有剧情触发；
+主要角色通用需求,StrafeRight,共享身体动作已验证,MX_RightStrafeWalking;MX_RightStrafe,Assets/_Project/Characters/Mixamo/Animations/MX_RightStrafeWalking.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_RightStrafe.fbx,已有剧情触发；
+主要角色通用需求,TurnLeft90,共享身体动作已验证,MX_LeftTurn90,Assets/_Project/Characters/Mixamo/Animations/MX_LeftTurn90.fbx,资源可用，当前剧情未配置此动作触发；玩家骨盆转角实测约 -89.9°；仍需角色朝向控制。
+主要角色通用需求,TurnRight90,部分覆盖／需剧情定制,MX_RightTurn90,Assets/_Project/Characters/Mixamo/Animations/MX_RightTurn90.fbx,资源可用，当前剧情未配置此动作触发；玩家骨盆转角实测约 +103.2°，须调校后才能用于精确 90° 转向。
+主要角色通用需求,Turn180,共享身体动作已验证,MX_LeftTurn;MX_RightTurn,Assets/_Project/Characters/Mixamo/Animations/MX_LeftTurn.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_RightTurn.fbx,资源可用，当前剧情未配置此动作触发；玩家骨盆实测约 -174.5° / +173.5°；需逻辑校准方向。
+主要角色通用需求,Jog,部分覆盖／需剧情定制,MX_Running,Assets/_Project/Characters/Mixamo/Animations/MX_Running.fbx,已有剧情触发；只有奔跑模板；慢跑节奏与步幅仍需另调。
+主要角色通用需求,Run,共享身体动作已验证,MX_Running,Assets/_Project/Characters/Mixamo/Animations/MX_Running.fbx,已有剧情触发；
+主要角色通用需求,StartWalk,待定制,,,缺专用起步过渡；可用行走循环淡入，但尚未制作独立片段。
+主要角色通用需求,StopWalk,部分覆盖／需剧情定制,MX_AdventureRunToStop,Assets/_Project/Characters/Mixamo/Animations/MX_AdventureRunToStop.fbx,资源可用，当前剧情未配置此动作触发；这是奔跑急停，专用行走停止过渡仍未制作。
+主要角色通用需求,TalkCalm,共享身体动作已验证,MX_TalkCalm,Assets/_Project/Characters/Mixamo/Animations/MX_TalkCalm.fbx,已有剧情触发；
+主要角色通用需求,Listen,部分覆盖／需剧情定制,MX_WeightShift;MX_HeadNodYes,Assets/_Project/Characters/Mixamo/Animations/MX_WeightShift.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_HeadNodYes.fbx,已有剧情触发；中性站姿和点头可作倾听基础；专用倾听表演仍需调整。
+主要角色通用需求,Nod,共享身体动作已验证,MX_HeadNodYes;MX_LengthyHeadNod,Assets/_Project/Characters/Mixamo/Animations/MX_HeadNodYes.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_LengthyHeadNod.fbx,已有剧情触发；
+主要角色通用需求,ShakeHead,共享身体动作已验证,MX_ShakingHeadNo;MX_AnnoyedHeadShake,Assets/_Project/Characters/Mixamo/Animations/MX_ShakingHeadNo.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AnnoyedHeadShake.fbx,已有剧情触发；
+主要角色通用需求,PointForward,共享身体动作已验证,MX_PointForward,Assets/_Project/Characters/Mixamo/Animations/MX_PointForward.fbx,资源可用，当前剧情未配置此动作触发；无实际路线目标约束；接入时需定位指向。
+主要角色通用需求,PointSky,待定制,,,缺空手举臂指天；空手观天仅含头颈动作，不能代替指天。
+主要角色通用需求,LookSky,共享身体动作已验证,MX_LookSky,Assets/_Project/Characters/Mixamo/Derived/MX_LookSky.anim,已有剧情触发；只保留头颈观天，身体与手臂替换为自然待机；无持火把姿势。
+主要角色通用需求,CrouchStart,部分覆盖／需剧情定制,MX_AdventureStandToCover;MX_AdventureCrouchedSneakingLeft;MX_AdventureCrouchedSneakingRight;MX_AdventureCoverToStand,Assets/_Project/Characters/Mixamo/Animations/MX_AdventureStandToCover.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AdventureCrouchedSneakingLeft.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AdventureCrouchedSneakingRight.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AdventureCoverToStand.fbx,资源可用，当前剧情未配置此动作触发；掩体进入/退出及侧向蹲行；不能代表完整自由蹲伏移动组。
+主要角色通用需求,CrouchIdle,部分覆盖／需剧情定制,MX_AdventureStandToCover;MX_AdventureCrouchedSneakingLeft;MX_AdventureCrouchedSneakingRight;MX_AdventureCoverToStand,Assets/_Project/Characters/Mixamo/Animations/MX_AdventureStandToCover.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AdventureCrouchedSneakingLeft.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AdventureCrouchedSneakingRight.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AdventureCoverToStand.fbx,资源可用，当前剧情未配置此动作触发；掩体进入/退出及侧向蹲行；不能代表完整自由蹲伏移动组。
+主要角色通用需求,CrouchWalk,部分覆盖／需剧情定制,MX_AdventureStandToCover;MX_AdventureCrouchedSneakingLeft;MX_AdventureCrouchedSneakingRight;MX_AdventureCoverToStand,Assets/_Project/Characters/Mixamo/Animations/MX_AdventureStandToCover.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AdventureCrouchedSneakingLeft.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AdventureCrouchedSneakingRight.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AdventureCoverToStand.fbx,资源可用，当前剧情未配置此动作触发；掩体进入/退出及侧向蹲行；不能代表完整自由蹲伏移动组。
+主要角色通用需求,StandFromCrouch,部分覆盖／需剧情定制,MX_AdventureStandToCover;MX_AdventureCrouchedSneakingLeft;MX_AdventureCrouchedSneakingRight;MX_AdventureCoverToStand,Assets/_Project/Characters/Mixamo/Animations/MX_AdventureStandToCover.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AdventureCrouchedSneakingLeft.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AdventureCrouchedSneakingRight.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AdventureCoverToStand.fbx,资源可用，当前剧情未配置此动作触发；掩体进入/退出及侧向蹲行；不能代表完整自由蹲伏移动组。
+主要角色通用需求,Jump,共享身体动作已验证,MX_Jump,Assets/_Project/Characters/Mixamo/Animations/MX_Jump.fbx,资源可用，当前剧情未配置此动作触发；
+主要角色通用需求,Land,共享身体动作已验证,MX_AdventureHardLanding;MX_AdventureFallingToRoll,Assets/_Project/Characters/Mixamo/Animations/MX_AdventureHardLanding.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AdventureFallingToRoll.fbx,资源可用，当前剧情未配置此动作触发；重落地与翻滚；起跳和碰地时机由游戏控制。
+主要角色通用需求,ReachInteract,部分覆盖／需剧情定制,MX_PickUp,Assets/_Project/Characters/Mixamo/Animations/MX_PickUp.fbx,资源可用，当前剧情未配置此动作触发；只有拾取身体模板；实际交互目标和手指接触未完成。
+主要角色通用需求,PickUp,部分覆盖／需剧情定制,MX_PickUp,Assets/_Project/Characters/Mixamo/Animations/MX_PickUp.fbx,资源可用，当前剧情未配置此动作触发；身体动作已验证，道具位置与手指接触待制作。
+主要角色通用需求,PutDown,部分覆盖／需剧情定制,MX_PutDown,Assets/_Project/Characters/Mixamo/Derived/MX_PutDown.anim,资源可用，当前剧情未配置此动作触发；由单手拾取反向派生；双手放箱及物体接触需另做。
+主要角色通用需求,SitDown,共享身体动作已验证,MX_SitDown,Assets/_Project/Characters/Mixamo/Animations/MX_SitDown.fbx,资源可用，当前剧情未配置此动作触发；需要座椅高度与位置对齐。
+主要角色通用需求,SitIdle,共享身体动作已验证,MX_SitIdle,Assets/_Project/Characters/Mixamo/Animations/MX_SitIdle.fbx,已有剧情触发；需要座椅高度与位置对齐。
+主要角色通用需求,StandFromSeat,共享身体动作已验证,MX_StandFromSeat,Assets/_Project/Characters/Mixamo/Animations/MX_StandFromSeat.fbx,资源可用，当前剧情未配置此动作触发；坐姿至站起，需要座椅对齐。
+主要角色通用需求,Shiver,共享身体动作已验证,MX_Shiver,Assets/_Project/Characters/Mixamo/Derived/MX_Shiver.anim,已有剧情触发；项目以待机叠加胸肩头颈微振动制作的 3 秒循环，并非 Mixamo 下载的发抖。
+主要角色通用需求,ShieldEyes,共享身体动作已验证,MX_ShieldEyes,Assets/_Project/Characters/Mixamo/Animations/MX_ShieldEyes.fbx,已有剧情触发；
+主要角色通用需求,HeatExhaustion,部分覆盖／需剧情定制,MX_RunToExhaustion;MX_InjuredHurtingIdle,Assets/_Project/Characters/Mixamo/Animations/MX_RunToExhaustion.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_InjuredHurtingIdle.fbx,已有剧情触发；奔跑疲惫/疼痛模板；专门高温中暑表演仍需制作。
+主要角色通用需求,Stagger,共享身体动作已验证,MX_InjuredStumbleIdle;MX_InjuredWalk,Assets/_Project/Characters/Mixamo/Animations/MX_InjuredStumbleIdle.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_InjuredWalk.fbx,资源可用，当前剧情未配置此动作触发；受伤踉跄模板，可作身体失衡基础。
+主要角色通用需求,Collapse,部分覆盖／需剧情定制,FallForward,Assets/_Project/Characters/Hunyuan/Animations/FallForward.anim,资源可用，当前剧情未配置此动作触发；只有向前跌倒校正版；不能代表全部昏厥和倒地方向。
+主要角色通用需求,GetUp,共享身体动作已验证,MX_GetUpProne,Assets/_Project/Characters/Mixamo/Animations/MX_GetUpProne.fbx,资源可用，当前剧情未配置此动作触发；只含趴倒后起身，尚无仰面起身。
+主要角色通用需求,Shock,部分覆盖／需剧情定制,MX_Fear,Assets/_Project/Characters/Mixamo/Animations/MX_Fear.fbx,已有剧情触发；恐惧模板，惊讶/忧虑的表演强度需调整。
+主要角色通用需求,Retreat,共享身体动作已验证,MX_WalkBackward,Assets/_Project/Characters/Mixamo/Derived/MX_WalkBackward.anim,已有剧情触发；由前向行走反向派生；需要移动逻辑匹配。
+玩家／海人／哥白尼,Walk,共享身体动作已验证,MX_Walking,Assets/_Project/Characters/Mixamo/Animations/MX_Walking.fbx,已有剧情触发；路程与步速由移动逻辑控制。
+玩家／海人／哥白尼,Turn,共享身体动作已验证,MX_LeftTurn;MX_RightTurn,Assets/_Project/Characters/Mixamo/Animations/MX_LeftTurn.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_RightTurn.fbx,资源可用，当前剧情未配置此动作触发；玩家骨盆实测约 -174.5° / +173.5°；需逻辑校准方向。
+玩家／海人／哥白尼,Run,共享身体动作已验证,MX_Running,Assets/_Project/Characters/Mixamo/Animations/MX_Running.fbx,已有剧情触发；
+玩家／海人／哥白尼,Crouch,部分覆盖／需剧情定制,MX_AdventureStandToCover;MX_AdventureCrouchedSneakingLeft;MX_AdventureCrouchedSneakingRight;MX_AdventureCoverToStand,Assets/_Project/Characters/Mixamo/Animations/MX_AdventureStandToCover.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AdventureCrouchedSneakingLeft.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AdventureCrouchedSneakingRight.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AdventureCoverToStand.fbx,资源可用，当前剧情未配置此动作触发；掩体进入/退出及侧向蹲行；不能代表完整自由蹲伏移动组。
+玩家／海人／哥白尼,Interact,部分覆盖／需剧情定制,MX_PickUp,Assets/_Project/Characters/Mixamo/Animations/MX_PickUp.fbx,资源可用，当前剧情未配置此动作触发；只有拾取身体模板；实际交互目标和手指接触未完成。
+玩家／海人／哥白尼,ReadJournal,待定制,,,未取得直接阅读观察簿片段；持书与翻页待制作。
+玩家／海人／哥白尼,WriteJournal,部分覆盖／需剧情定制,MX_WriteSeated,Assets/_Project/Characters/Mixamo/Animations/MX_WriteSeated.fbx,资源可用，当前剧情未配置此动作触发；坐姿书写身体模板；笔、纸、指骨和笔尖轨迹仍需制作。
+玩家／海人／哥白尼,LookAtSky,共享身体动作已验证,MX_LookSky,Assets/_Project/Characters/Mixamo/Derived/MX_LookSky.anim,资源可用，当前剧情未配置此动作触发；只保留头颈观天，身体与手臂替换为自然待机；无持火把姿势。
+玩家／海人／哥白尼,ShieldEyes,共享身体动作已验证,MX_ShieldEyes,Assets/_Project/Characters/Mixamo/Animations/MX_ShieldEyes.fbx,资源可用，当前剧情未配置此动作触发；
+玩家／海人／哥白尼,Shiver,共享身体动作已验证,MX_Shiver,Assets/_Project/Characters/Mixamo/Derived/MX_Shiver.anim,资源可用，当前剧情未配置此动作触发；项目以待机叠加胸肩头颈微振动制作的 3 秒循环，并非 Mixamo 下载的发抖。
+玩家／海人／哥白尼,Exhaustion,部分覆盖／需剧情定制,MX_RunToExhaustion;MX_InjuredHurtingIdle,Assets/_Project/Characters/Mixamo/Animations/MX_RunToExhaustion.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_InjuredHurtingIdle.fbx,资源可用，当前剧情未配置此动作触发；奔跑疲惫/疼痛模板；专门高温中暑表演仍需制作。
+玩家／海人／哥白尼,Stagger,共享身体动作已验证,MX_InjuredStumbleIdle;MX_InjuredWalk,Assets/_Project/Characters/Mixamo/Animations/MX_InjuredStumbleIdle.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_InjuredWalk.fbx,资源可用，当前剧情未配置此动作触发；受伤踉跄模板，可作身体失衡基础。
+玩家／海人／哥白尼,Collapse,部分覆盖／需剧情定制,FallForward,Assets/_Project/Characters/Hunyuan/Animations/FallForward.anim,资源可用，当前剧情未配置此动作触发；只有向前跌倒校正版；不能代表全部昏厥和倒地方向。
+玩家／海人／哥白尼,GetUp,共享身体动作已验证,MX_GetUpProne,Assets/_Project/Characters/Mixamo/Animations/MX_GetUpProne.fbx,资源可用，当前剧情未配置此动作触发；只含趴倒后起身，尚无仰面起身。
+周文王,LeadWalk,共享身体动作已验证,MX_Walking,Assets/_Project/Characters/Mixamo/Animations/MX_Walking.fbx,已有剧情触发；路程与步速由移动逻辑控制。
+周文王,WaitForPlayer,共享身体动作已验证,MX_Idle;MX_WeightShift,Assets/_Project/Characters/Mixamo/Animations/MX_Idle.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_WeightShift.fbx,已有剧情触发；等候触发与看向玩家由剧情逻辑控制。
+周文王,Explain,部分覆盖／需剧情定制,MX_TalkCalm;MX_HappyHandGesture,Assets/_Project/Characters/Mixamo/Animations/MX_TalkCalm.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_HappyHandGesture.fbx,已有剧情触发；通用交谈和手势；尚非按台词制作的讲解。
+周文王,PointAtSky,待定制,,,缺空手举臂指天；观天片段不能代替指天。
+周文王,PointRoute,共享身体动作已验证,MX_PointForward,Assets/_Project/Characters/Mixamo/Animations/MX_PointForward.fbx,资源可用，当前剧情未配置此动作触发；无实际路线目标约束；接入时需定位指向。
+周文王,CarryCalendarBox,部分覆盖／需剧情定制,MX_CarryBoxIdle;MX_CarryBoxWalk,Assets/_Project/Characters/Mixamo/Animations/MX_CarryBoxIdle.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_CarryBoxWalk.fbx,资源可用，当前剧情未配置此动作触发；双手持箱身体模板；实际历法箱与手掌接触尚未接入。
+周文王,PutDownBox,部分覆盖／需剧情定制,MX_PutDown,Assets/_Project/Characters/Mixamo/Derived/MX_PutDown.anim,资源可用，当前剧情未配置此动作触发；由单手拾取反向派生；双手放箱及物体接触需另做。
+周文王,OpenBox,部分覆盖／需剧情定制,MX_OpenBox,Assets/_Project/Characters/Mixamo/Animations/MX_OpenBox.fbx,资源可用，当前剧情未配置此动作触发；只含身体动作；实际箱盖铰链、手掌接触与时序待制作。
+周文王,FlipHourglass,待定制,,,翻沙漏需匹配真实道具、双手接触与指骨；当前骨架没有独立手指。
+周文王,ReadCalendar,待定制,,,未取得专用读历法片段；历法道具和手部接触待制作。
+周文王,PresentCalendar,待定制,,,献历法的持物与递交表演尚未制作。
+周文王,Bow,部分覆盖／需剧情定制,MX_Bow,Assets/_Project/Characters/Mixamo/Animations/MX_Bow.fbx,已有剧情触发；通用正式鞠躬；尚未制作商朝或中世纪特定礼仪。
+周文王,Kneel,共享身体动作已验证,MX_KneelDown,Assets/_Project/Characters/Mixamo/Animations/MX_KneelDown.fbx,资源可用，当前剧情未配置此动作触发；站立至下跪；地面高度需要在场景中对齐。
+周文王,Nod,共享身体动作已验证,MX_HeadNodYes;MX_LengthyHeadNod,Assets/_Project/Characters/Mixamo/Animations/MX_HeadNodYes.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_LengthyHeadNod.fbx,资源可用，当前剧情未配置此动作触发；
+周文王,ShakeHead,共享身体动作已验证,MX_ShakingHeadNo;MX_AnnoyedHeadShake,Assets/_Project/Characters/Mixamo/Animations/MX_ShakingHeadNo.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AnnoyedHeadShake.fbx,资源可用，当前剧情未配置此动作触发；
+周文王,Doubt,共享身体动作已验证,MX_Think;MX_ThoughtfulHeadShake,Assets/_Project/Characters/Mixamo/Animations/MX_Think.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_ThoughtfulHeadShake.fbx,已有剧情触发；
+周文王,Despair,共享身体动作已验证,Despair,Assets/_Project/Characters/Hunyuan/Animations/Despair.fbx,已有剧情触发；
+周文王,Shiver,共享身体动作已验证,MX_Shiver,Assets/_Project/Characters/Mixamo/Derived/MX_Shiver.anim,已有剧情触发；项目以待机叠加胸肩头颈微振动制作的 3 秒循环，并非 Mixamo 下载的发抖。
+纣王,SitIdle,共享身体动作已验证,MX_SitIdle,Assets/_Project/Characters/Mixamo/Animations/MX_SitIdle.fbx,已有剧情触发；需要座椅高度与位置对齐。
+纣王,SitDown,共享身体动作已验证,MX_SitDown,Assets/_Project/Characters/Mixamo/Animations/MX_SitDown.fbx,资源可用，当前剧情未配置此动作触发；需要座椅高度与位置对齐。
+纣王,StandUp,共享身体动作已验证,MX_StandFromSeat,Assets/_Project/Characters/Mixamo/Animations/MX_StandFromSeat.fbx,资源可用，当前剧情未配置此动作触发；坐姿至站起，需要座椅对齐。
+纣王,Question,部分覆盖／需剧情定制,MX_TalkArgue,Assets/_Project/Characters/Mixamo/Animations/MX_TalkArgue.fbx,资源可用，当前剧情未配置此动作触发；争辩模板；需按台词剪辑与调整强度。
+纣王,Command,部分覆盖／需剧情定制,MX_PointForward;MX_AngryGesture,Assets/_Project/Characters/Mixamo/Animations/MX_PointForward.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AngryGesture.fbx,资源可用，当前剧情未配置此动作触发；指引/愤怒手势可作基础；专用命令或指控表演仍需制作。
+纣王,Dismiss,共享身体动作已验证,MX_DismissingGesture,Assets/_Project/Characters/Mixamo/Animations/MX_DismissingGesture.fbx,资源可用，当前剧情未配置此动作触发；
+纣王,Nod,共享身体动作已验证,MX_HeadNodYes;MX_LengthyHeadNod,Assets/_Project/Characters/Mixamo/Animations/MX_HeadNodYes.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_LengthyHeadNod.fbx,已有剧情触发；
+纣王,ShakeHead,共享身体动作已验证,MX_ShakingHeadNo;MX_AnnoyedHeadShake,Assets/_Project/Characters/Mixamo/Animations/MX_ShakingHeadNo.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AnnoyedHeadShake.fbx,资源可用，当前剧情未配置此动作触发；
+纣王,Anger,共享身体动作已验证,MX_TalkArgue;MX_AngryGesture,Assets/_Project/Characters/Mixamo/Animations/MX_TalkArgue.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AngryGesture.fbx,资源可用，当前剧情未配置此动作触发；
+纣王,LookAtSky,共享身体动作已验证,MX_LookSky,Assets/_Project/Characters/Mixamo/Derived/MX_LookSky.anim,资源可用，当前剧情未配置此动作触发；只保留头颈观天，身体与手臂替换为自然待机；无持火把姿势。
+纣王,ShieldEyes,共享身体动作已验证,MX_ShieldEyes,Assets/_Project/Characters/Mixamo/Animations/MX_ShieldEyes.fbx,资源可用，当前剧情未配置此动作触发；
+纣王,Shiver,共享身体动作已验证,MX_Shiver,Assets/_Project/Characters/Mixamo/Derived/MX_Shiver.anim,资源可用，当前剧情未配置此动作触发；项目以待机叠加胸肩头颈微振动制作的 3 秒循环，并非 Mixamo 下载的发抖。
+教皇,SitIdle,共享身体动作已验证,MX_SitIdle,Assets/_Project/Characters/Mixamo/Animations/MX_SitIdle.fbx,已有剧情触发；需要座椅高度与位置对齐。
+教皇,SitDown,共享身体动作已验证,MX_SitDown,Assets/_Project/Characters/Mixamo/Animations/MX_SitDown.fbx,资源可用，当前剧情未配置此动作触发；需要座椅高度与位置对齐。
+教皇,StandUp,共享身体动作已验证,MX_StandFromSeat,Assets/_Project/Characters/Mixamo/Animations/MX_StandFromSeat.fbx,资源可用，当前剧情未配置此动作触发；坐姿至站起，需要座椅对齐。
+教皇,SternSpeech,部分覆盖／需剧情定制,MX_TalkArgue,Assets/_Project/Characters/Mixamo/Animations/MX_TalkArgue.fbx,资源可用，当前剧情未配置此动作触发；争辩模板；需按台词剪辑与调整强度。
+教皇,Blessing,部分覆盖／需剧情定制,MX_PrayStanding;MX_HappyHandGesture,Assets/_Project/Characters/Mixamo/Animations/MX_PrayStanding.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_HappyHandGesture.fbx,资源可用，当前剧情未配置此动作触发；只有站姿祈祷和通用手势，专用赐福动作仍未制作。
+教皇,Accuse,部分覆盖／需剧情定制,MX_PointForward;MX_AngryGesture,Assets/_Project/Characters/Mixamo/Animations/MX_PointForward.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AngryGesture.fbx,资源可用，当前剧情未配置此动作触发；指引/愤怒手势可作基础；专用命令或指控表演仍需制作。
+教皇,Reject,共享身体动作已验证,MX_ShakingHeadNo;MX_AnnoyedHeadShake,Assets/_Project/Characters/Mixamo/Animations/MX_ShakingHeadNo.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AnnoyedHeadShake.fbx,已有剧情触发；
+教皇,Command,部分覆盖／需剧情定制,MX_PointForward;MX_AngryGesture,Assets/_Project/Characters/Mixamo/Animations/MX_PointForward.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AngryGesture.fbx,资源可用，当前剧情未配置此动作触发；指引/愤怒手势可作基础；专用命令或指控表演仍需制作。
+教皇,LookAtSky,共享身体动作已验证,MX_LookSky,Assets/_Project/Characters/Mixamo/Derived/MX_LookSky.anim,资源可用，当前剧情未配置此动作触发；只保留头颈观天，身体与手臂替换为自然待机；无持火把姿势。
+教皇,Shock,部分覆盖／需剧情定制,MX_Fear,Assets/_Project/Characters/Mixamo/Animations/MX_Fear.fbx,资源可用，当前剧情未配置此动作触发；恐惧模板，惊讶/忧虑的表演强度需调整。
+教皇,Retreat,共享身体动作已验证,MX_WalkBackward,Assets/_Project/Characters/Mixamo/Derived/MX_WalkBackward.anim,资源可用，当前剧情未配置此动作触发；由前向行走反向派生；需要移动逻辑匹配。
+学者,Listen,部分覆盖／需剧情定制,MX_WeightShift;MX_HeadNodYes,Assets/_Project/Characters/Mixamo/Animations/MX_WeightShift.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_HeadNodYes.fbx,资源可用，当前剧情未配置此动作触发；中性站姿和点头可作倾听基础；专用倾听表演仍需调整。
+学者,Think,共享身体动作已验证,MX_Think;MX_ThoughtfulHeadShake,Assets/_Project/Characters/Mixamo/Animations/MX_Think.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_ThoughtfulHeadShake.fbx,已有剧情触发；
+学者,Explain,部分覆盖／需剧情定制,MX_TalkCalm;MX_HappyHandGesture,Assets/_Project/Characters/Mixamo/Animations/MX_TalkCalm.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_HappyHandGesture.fbx,资源可用，当前剧情未配置此动作触发；通用交谈和手势；尚非按台词制作的讲解。
+学者,Debate,部分覆盖／需剧情定制,MX_TalkArgue,Assets/_Project/Characters/Mixamo/Animations/MX_TalkArgue.fbx,已有剧情触发；争辩模板；需按台词剪辑与调整强度。
+学者,PointAtSky,待定制,,,缺空手举臂指天；观天片段不能代替指天。
+学者,CountThreeSuns,待定制,,,精确手指计数尚未制作，当前骨架没有独立手指。
+学者,ReadBook,待定制,,,未取得直接读书片段；持书、翻页与手指接触待制作。
+学者,ShakeHead,共享身体动作已验证,MX_ShakingHeadNo;MX_AnnoyedHeadShake,Assets/_Project/Characters/Mixamo/Animations/MX_ShakingHeadNo.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_AnnoyedHeadShake.fbx,资源可用，当前剧情未配置此动作触发；
+学者,Shock,部分覆盖／需剧情定制,MX_Fear,Assets/_Project/Characters/Mixamo/Animations/MX_Fear.fbx,已有剧情触发；恐惧模板，惊讶/忧虑的表演强度需调整。
+学者,ShieldEyes,共享身体动作已验证,MX_ShieldEyes,Assets/_Project/Characters/Mixamo/Animations/MX_ShieldEyes.fbx,资源可用，当前剧情未配置此动作触发；
+学者,Run,共享身体动作已验证,MX_Running,Assets/_Project/Characters/Mixamo/Animations/MX_Running.fbx,已有剧情触发；
+学者,Collapse,部分覆盖／需剧情定制,FallForward,Assets/_Project/Characters/Hunyuan/Animations/FallForward.anim,资源可用，当前剧情未配置此动作触发；只有向前跌倒校正版；不能代表全部昏厥和倒地方向。
+达芬奇,Think,共享身体动作已验证,MX_Think;MX_ThoughtfulHeadShake,Assets/_Project/Characters/Mixamo/Animations/MX_Think.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_ThoughtfulHeadShake.fbx,已有剧情触发；
+达芬奇,Explain,部分覆盖／需剧情定制,MX_TalkCalm;MX_HappyHandGesture,Assets/_Project/Characters/Mixamo/Animations/MX_TalkCalm.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_HappyHandGesture.fbx,资源可用，当前剧情未配置此动作触发；通用交谈和手势；尚非按台词制作的讲解。
+达芬奇,Question,部分覆盖／需剧情定制,MX_TalkArgue,Assets/_Project/Characters/Mixamo/Animations/MX_TalkArgue.fbx,资源可用，当前剧情未配置此动作触发；争辩模板；需按台词剪辑与调整强度。
+达芬奇,Sketch,部分覆盖／需剧情定制,MX_WriteSeated,Assets/_Project/Characters/Mixamo/Animations/MX_WriteSeated.fbx,资源可用，当前剧情未配置此动作触发；坐姿书写身体模板；笔、纸、指骨和笔尖轨迹仍需制作。
+达芬奇,InspectDevice,待定制,,,检视仪器的目标约束、持物和精细动作尚未制作。
+达芬奇,LookAtSky,共享身体动作已验证,MX_LookSky,Assets/_Project/Characters/Mixamo/Derived/MX_LookSky.anim,已有剧情触发；只保留头颈观天，身体与手臂替换为自然待机；无持火把姿势。
+达芬奇,PointAtSky,待定制,,,缺空手举臂指天；观天片段不能代替指天。
+达芬奇,ExcitedNod,部分覆盖／需剧情定制,MX_HardHeadNod,Assets/_Project/Characters/Mixamo/Animations/MX_HardHeadNod.fbx,资源可用，当前剧情未配置此动作触发；已有用力点头，兴奋程度需导演调整。
+达芬奇,Worry,部分覆盖／需剧情定制,MX_Fear,Assets/_Project/Characters/Mixamo/Animations/MX_Fear.fbx,已有剧情触发；恐惧模板，惊讶/忧虑的表演强度需调整。
+达芬奇,ShieldEyes,共享身体动作已验证,MX_ShieldEyes,Assets/_Project/Characters/Mixamo/Animations/MX_ShieldEyes.fbx,资源可用，当前剧情未配置此动作触发；
+达芬奇,Run,共享身体动作已验证,MX_Running,Assets/_Project/Characters/Mixamo/Animations/MX_Running.fbx,已有剧情触发；
+商朝卫兵,IdleGuard,模型已入场；常用身体动作已验证,MX_WeightShift,Assets/_Project/Characters/Mixamo/Animations/MX_WeightShift.fbx,已有运行时触发；配角验证片段：MX_WeightShift。卫兵保持站岗朝向，循环重心变化；持矛与盾使用骨骼挂接。
+商朝卫兵,Walk,模型已入场；常用身体动作已验证,MX_Walking,Assets/_Project/Characters/Mixamo/Animations/MX_Walking.fbx,当前剧情未触发此动作；配角验证片段：MX_Walking。路程与步速由移动逻辑控制。
+商朝卫兵,Turn,模型已入场；共享模板待配角验证,MX_LeftTurn;MX_RightTurn,Assets/_Project/Characters/Mixamo/Animations/MX_LeftTurn.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_RightTurn.fbx,当前剧情未触发此动作；玩家骨盆实测约 -174.5° / +173.5°；需逻辑校准方向。
+商朝卫兵,HaltGesture,模型已入场；专用动作待制作,,,当前剧情未触发此动作；未取得符合需求的专用片段。
+商朝卫兵,Salute,模型已入场；专用动作待制作,,,当前剧情未触发此动作；未取得符合需求的专用片段。
+商朝卫兵,Alert,模型已入场；专用动作待制作,,,当前剧情未触发此动作；未取得符合需求的专用片段。
+商朝卫兵,Run,模型已入场；共享模板待配角验证,MX_Running,Assets/_Project/Characters/Mixamo/Animations/MX_Running.fbx,当前剧情未触发此动作；
+中世纪卫兵,IdleGuard,模型已入场；常用身体动作已验证,MX_WeightShift,Assets/_Project/Characters/Mixamo/Animations/MX_WeightShift.fbx,已有运行时触发；配角验证片段：MX_WeightShift。卫兵保持站岗朝向，循环重心变化；持矛与盾使用骨骼挂接。
+中世纪卫兵,Walk,模型已入场；常用身体动作已验证,MX_Walking,Assets/_Project/Characters/Mixamo/Animations/MX_Walking.fbx,当前剧情未触发此动作；配角验证片段：MX_Walking。路程与步速由移动逻辑控制。
+中世纪卫兵,Turn,模型已入场；共享模板待配角验证,MX_LeftTurn;MX_RightTurn,Assets/_Project/Characters/Mixamo/Animations/MX_LeftTurn.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_RightTurn.fbx,当前剧情未触发此动作；玩家骨盆实测约 -174.5° / +173.5°；需逻辑校准方向。
+中世纪卫兵,HaltGesture,模型已入场；专用动作待制作,,,当前剧情未触发此动作；未取得符合需求的专用片段。
+中世纪卫兵,Salute,模型已入场；专用动作待制作,,,当前剧情未触发此动作；未取得符合需求的专用片段。
+中世纪卫兵,Alert,模型已入场；专用动作待制作,,,当前剧情未触发此动作；未取得符合需求的专用片段。
+中世纪卫兵,Run,模型已入场；共享模板待配角验证,MX_Running,Assets/_Project/Characters/Mixamo/Animations/MX_Running.fbx,当前剧情未触发此动作；
+复苏平民男,Idle,模型已入场；常用身体动作已验证,MX_Idle;MX_WeightShift,Assets/_Project/Characters/Mixamo/Animations/MX_Idle.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_WeightShift.fbx,已有运行时触发；配角验证片段：MX_Idle;MX_WeightShift。等候触发与看向玩家由剧情逻辑控制。
+复苏平民男,Walk,模型已入场；常用身体动作已验证,MX_Walking,Assets/_Project/Characters/Mixamo/Animations/MX_Walking.fbx,已有运行时触发；配角验证片段：MX_Walking。路程与步速由移动逻辑控制。
+复苏平民男,SitIdle,模型已入场；共享模板待配角验证,MX_SitIdle,Assets/_Project/Characters/Mixamo/Animations/MX_SitIdle.fbx,当前剧情未触发此动作；需要座椅高度与位置对齐。
+复苏平民男,GetUp,模型已入场；共享模板待配角验证,MX_GetUpProne,Assets/_Project/Characters/Mixamo/Animations/MX_GetUpProne.fbx,当前剧情未触发此动作；只含趴倒后起身，尚无仰面起身。
+复苏平民男,Shiver,模型已入场；常用身体动作已验证,MX_Shiver,Assets/_Project/Characters/Mixamo/Derived/MX_Shiver.anim,已有运行时触发；配角验证片段：MX_Shiver。项目以待机叠加胸肩头颈微振动制作的 3 秒循环，并非 Mixamo 下载的发抖。
+复苏平民男,ShieldEyes,模型已入场；共享模板待配角验证,MX_ShieldEyes,Assets/_Project/Characters/Mixamo/Animations/MX_ShieldEyes.fbx,当前剧情未触发此动作；
+复苏平民男,Exhaustion,模型已入场；常用身体动作已验证,MX_RunToExhaustion;MX_InjuredHurtingIdle,Assets/_Project/Characters/Mixamo/Animations/MX_RunToExhaustion.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_InjuredHurtingIdle.fbx,已有运行时触发；配角验证片段：MX_InjuredHurtingIdle。奔跑疲惫/疼痛模板；专门高温中暑表演仍需制作。
+复苏平民男,Run,模型已入场；共享模板待配角验证,MX_Running,Assets/_Project/Characters/Mixamo/Animations/MX_Running.fbx,当前剧情未触发此动作；
+复苏平民男,Collapse,模型已入场；共享模板待配角验证,FallForward,Assets/_Project/Characters/Hunyuan/Animations/FallForward.anim,当前剧情未触发此动作；只有向前跌倒校正版；不能代表全部昏厥和倒地方向。
+复苏平民女,Idle,模型已入场；常用身体动作已验证,MX_Idle;MX_WeightShift,Assets/_Project/Characters/Mixamo/Animations/MX_Idle.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_WeightShift.fbx,已有运行时触发；配角验证片段：MX_Idle;MX_WeightShift。等候触发与看向玩家由剧情逻辑控制。
+复苏平民女,Walk,模型已入场；常用身体动作已验证,MX_Walking,Assets/_Project/Characters/Mixamo/Animations/MX_Walking.fbx,已有运行时触发；配角验证片段：MX_Walking。路程与步速由移动逻辑控制。
+复苏平民女,SitIdle,模型已入场；共享模板待配角验证,MX_SitIdle,Assets/_Project/Characters/Mixamo/Animations/MX_SitIdle.fbx,当前剧情未触发此动作；需要座椅高度与位置对齐。
+复苏平民女,GetUp,模型已入场；共享模板待配角验证,MX_GetUpProne,Assets/_Project/Characters/Mixamo/Animations/MX_GetUpProne.fbx,当前剧情未触发此动作；只含趴倒后起身，尚无仰面起身。
+复苏平民女,Shiver,模型已入场；常用身体动作已验证,MX_Shiver,Assets/_Project/Characters/Mixamo/Derived/MX_Shiver.anim,已有运行时触发；配角验证片段：MX_Shiver。项目以待机叠加胸肩头颈微振动制作的 3 秒循环，并非 Mixamo 下载的发抖。
+复苏平民女,ShieldEyes,模型已入场；共享模板待配角验证,MX_ShieldEyes,Assets/_Project/Characters/Mixamo/Animations/MX_ShieldEyes.fbx,当前剧情未触发此动作；
+复苏平民女,Exhaustion,模型已入场；常用身体动作已验证,MX_RunToExhaustion;MX_InjuredHurtingIdle,Assets/_Project/Characters/Mixamo/Animations/MX_RunToExhaustion.fbx;Assets/_Project/Characters/Mixamo/Animations/MX_InjuredHurtingIdle.fbx,已有运行时触发；配角验证片段：MX_InjuredHurtingIdle。奔跑疲惫/疼痛模板；专门高温中暑表演仍需制作。
+复苏平民女,Run,模型已入场；共享模板待配角验证,MX_Running,Assets/_Project/Characters/Mixamo/Animations/MX_Running.fbx,当前剧情未触发此动作；
+复苏平民女,Collapse,模型已入场；共享模板待配角验证,FallForward,Assets/_Project/Characters/Hunyuan/Animations/FallForward.anim,当前剧情未触发此动作；只有向前跌倒校正版；不能代表全部昏厥和倒地方向。

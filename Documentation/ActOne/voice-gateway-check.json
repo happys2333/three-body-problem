@@ -1,0 +1,43 @@
+{
+  "hardwareMicrophoneUsed": false,
+  "deepseekUsed": false,
+  "checks": [
+    {
+      "case": "synthetic Chinese question 1",
+      "seconds": 1.119,
+      "expectedSpeech": "你叫什么名字？我想和你一起去朝歌。",
+      "transcript": "你叫什么名字我想和你一起去找着"
+    },
+    {
+      "case": "synthetic Chinese question 2",
+      "seconds": 2.866,
+      "expectedSpeech": "你叫什么名字？我想和你一起去朝歌。",
+      "transcript": "你叫什么名字我想和你一起去找着"
+    },
+    {
+      "case": "synthetic Chinese question 3",
+      "seconds": 2.056,
+      "expectedSpeech": "你叫什么名字？我想和你一起去朝歌。",
+      "transcript": "你叫什么名字我想和你一起去找着"
+    }
+  ],
+  "health": {
+    "ready": true,
+    "mode": "scripted",
+    "asrModelPresent": true,
+    "asrModel": "vosk-model-small-cn-0.22"
+  },
+  "format": {
+    "channels": 1,
+    "rate": 16000,
+    "sampleBytes": 2,
+    "seconds": 3.929625
+  },
+  "speechSeconds": 0.002,
+  "offlineReply": {
+    "speech": "我是姬昌。我要去朝歌，把推演的历法呈给纣王。",
+    "gesture": "think",
+    "mode": "scripted"
+  },
+  "passed": true
+}

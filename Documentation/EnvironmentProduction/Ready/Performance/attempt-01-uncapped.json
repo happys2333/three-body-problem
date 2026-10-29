@@ -1,0 +1,257 @@
+{
+    "gpu": "Apple M5",
+    "width": 1920,
+    "height": 1080,
+    "shadowDistance": 60.0,
+    "passed": false,
+    "metrics": [
+        {
+            "asset": "GobiMountainPeak",
+            "meanFrameMs": 4.864984512329102,
+            "p95FrameMs": 22.542835235595704,
+            "meanMainThreadMs": 4.872952938079834,
+            "batches": 59,
+            "triangles": 392493,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "GobiRidge",
+            "meanFrameMs": 4.384825229644775,
+            "p95FrameMs": 23.996166229248048,
+            "meanMainThreadMs": 4.394351005554199,
+            "batches": 59,
+            "triangles": 368431,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "WindErodedCliff",
+            "meanFrameMs": 7.845091819763184,
+            "p95FrameMs": 28.5936222076416,
+            "meanMainThreadMs": 7.860198974609375,
+            "batches": 65,
+            "triangles": 850023,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "YardangMesa",
+            "meanFrameMs": 8.327552795410157,
+            "p95FrameMs": 35.727294921875,
+            "meanMainThreadMs": 8.245967864990235,
+            "batches": 79,
+            "triangles": 1086285,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "GobiRockCluster",
+            "meanFrameMs": 6.524262428283691,
+            "p95FrameMs": 22.40503692626953,
+            "meanMainThreadMs": 6.545116424560547,
+            "batches": 15,
+            "triangles": 99936,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "RockOverhang",
+            "meanFrameMs": 6.670798301696777,
+            "p95FrameMs": 27.376544952392579,
+            "meanMainThreadMs": 6.68574333190918,
+            "batches": 68,
+            "triangles": 739840,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "DeadTamarisk",
+            "meanFrameMs": 6.809568405151367,
+            "p95FrameMs": 26.758956909179689,
+            "meanMainThreadMs": 6.825775623321533,
+            "batches": 22,
+            "triangles": 123620,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "DesertThornBush",
+            "meanFrameMs": 7.165370464324951,
+            "p95FrameMs": 20.889957427978517,
+            "meanMainThreadMs": 7.166555881500244,
+            "batches": 16,
+            "triangles": 67255,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "GobiWaystone",
+            "meanFrameMs": 9.086933135986329,
+            "p95FrameMs": 19.929542541503908,
+            "meanMainThreadMs": 9.07373046875,
+            "batches": 21,
+            "triangles": 46663,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "CaravanSupplies",
+            "meanFrameMs": 9.6819429397583,
+            "p95FrameMs": 20.481292724609376,
+            "meanMainThreadMs": 9.691730499267579,
+            "batches": 18,
+            "triangles": 200977,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "ShangDwelling",
+            "meanFrameMs": 10.571508407592774,
+            "p95FrameMs": 21.68891716003418,
+            "meanMainThreadMs": 10.549540519714356,
+            "batches": 46,
+            "triangles": 399217,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "ShangWorkshop",
+            "meanFrameMs": 9.552555084228516,
+            "p95FrameMs": 20.58696174621582,
+            "meanMainThreadMs": 9.549985885620118,
+            "batches": 49,
+            "triangles": 411085,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "ShangGranary",
+            "meanFrameMs": 11.164113998413086,
+            "p95FrameMs": 25.469707489013673,
+            "meanMainThreadMs": 11.081290245056153,
+            "batches": 55,
+            "triangles": 315483,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "ShangMarketStall",
+            "meanFrameMs": 11.250614166259766,
+            "p95FrameMs": 26.16429328918457,
+            "meanMainThreadMs": 11.195013046264649,
+            "batches": 70,
+            "triangles": 547948,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "RammedEarthGatehouse",
+            "meanFrameMs": 11.995832443237305,
+            "p95FrameMs": 27.146499633789064,
+            "meanMainThreadMs": 11.924361228942871,
+            "batches": 98,
+            "triangles": 826914,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "PyramidPortal",
+            "meanFrameMs": 10.105306625366211,
+            "p95FrameMs": 20.38887596130371,
+            "meanMainThreadMs": 10.125354766845704,
+            "batches": 28,
+            "triangles": 170381,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "PyramidStonePanel",
+            "meanFrameMs": 10.146008491516114,
+            "p95FrameMs": 21.980960845947267,
+            "meanMainThreadMs": 10.14384651184082,
+            "batches": 47,
+            "triangles": 252112,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "MedievalTownhouse",
+            "meanFrameMs": 12.174479484558106,
+            "p95FrameMs": 27.45724868774414,
+            "meanMainThreadMs": 12.186899185180664,
+            "batches": 82,
+            "triangles": 613054,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "GothicWindowWall",
+            "meanFrameMs": 9.66019344329834,
+            "p95FrameMs": 20.63904571533203,
+            "meanMainThreadMs": 9.66994571685791,
+            "batches": 89,
+            "triangles": 781541,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "MedievalButtress",
+            "meanFrameMs": 9.912430763244629,
+            "p95FrameMs": 19.195791244506837,
+            "meanMainThreadMs": 9.876294136047364,
+            "batches": 101,
+            "triangles": 784916,
+            "visibleLods": [
+                0
+            ]
+        }
+    ],
+    "errors": [
+        "GobiMountainPeak: P95 frame time exceeds 16.67 ms.",
+        "GobiRidge: P95 frame time exceeds 16.67 ms.",
+        "WindErodedCliff: P95 frame time exceeds 16.67 ms.",
+        "YardangMesa: P95 frame time exceeds 16.67 ms.",
+        "GobiRockCluster: P95 frame time exceeds 16.67 ms.",
+        "RockOverhang: P95 frame time exceeds 16.67 ms.",
+        "DeadTamarisk: P95 frame time exceeds 16.67 ms.",
+        "DesertThornBush: P95 frame time exceeds 16.67 ms.",
+        "GobiWaystone: P95 frame time exceeds 16.67 ms.",
+        "CaravanSupplies: P95 frame time exceeds 16.67 ms.",
+        "ShangDwelling: P95 frame time exceeds 16.67 ms.",
+        "ShangWorkshop: P95 frame time exceeds 16.67 ms.",
+        "ShangGranary: P95 frame time exceeds 16.67 ms.",
+        "ShangMarketStall: P95 frame time exceeds 16.67 ms.",
+        "RammedEarthGatehouse: P95 frame time exceeds 16.67 ms.",
+        "PyramidPortal: P95 frame time exceeds 16.67 ms.",
+        "PyramidStonePanel: P95 frame time exceeds 16.67 ms.",
+        "MedievalTownhouse: P95 frame time exceeds 16.67 ms.",
+        "GothicWindowWall: P95 frame time exceeds 16.67 ms.",
+        "MedievalButtress: P95 frame time exceeds 16.67 ms."
+    ],
+    "gateClear": true,
+    "portalClear": true,
+    "gateWallSolid": true,
+    "portalWallSolid": true,
+    "gateWalkThrough": true,
+    "portalWalkThrough": true
+}

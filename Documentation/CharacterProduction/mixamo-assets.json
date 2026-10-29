@@ -1,0 +1,2482 @@
+{
+  "service": "Mixamo",
+  "acquisition": "User-authorized Chrome UI downloads",
+  "sourceCharacter": "Y Bot",
+  "format": "FBX for Unity(.fbx)",
+  "fps": 30,
+  "keyframeReduction": "none",
+  "characterMesh": "No Character / Without Skin",
+  "archives": [
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Gestures Pack Basic.zip",
+      "sourceDownload": "/Users/happys/Downloads/Gestures Pack Basic.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=head+nod&type=Motion%2CMotionPack",
+      "sha256": "cb0e8a0bf49b1bbb7cf8763e75b13ec5ed2fe31fa3b0b2d5eab67e24d799e7d4",
+      "bytes": 2055184
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Locomotion Pack.zip",
+      "sourceDownload": "/Users/happys/Downloads/Locomotion Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=locomotion&type=Motion%2CMotionPack",
+      "sha256": "4773f0c9263e2d9469cf908bc4104618224f0df2f556447ae67766bde22045b7",
+      "bytes": 1017748
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourceDownload": "/Users/happys/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "sha256": "7a4c9abf26ac23016470808e0b87d2483a20d0814df595c8d0c3bd0bb85d7c2c",
+      "bytes": 2036456
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Talking.fbx",
+      "sourceDownload": "/Users/happys/Downloads/Y Bot@Talking.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=talking&type=Motion%2CMotionPack",
+      "sha256": "a1772da77db84337d690f4727ffbbb6e7b935c9371a89c274ce8ab6bb41585c2",
+      "bytes": 1136720
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourceDownload": "/Users/happys/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "sha256": "e436233d872fb7c37a56662fe6e56441a576cc1dad8b062e4a15d5f7de33009e",
+      "bytes": 2093883
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Getting Up.fbx",
+      "sourceDownload": "/Users/happys/Downloads/Y Bot@Getting Up.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=getting+up&type=Motion%2CMotionPack",
+      "sha256": "38bdcfa050fb633acd14c9af5051e05fadb72abd8324da670556fba8a74caf22",
+      "bytes": 956704
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Running Tired.fbx",
+      "sourceDownload": "/Users/happys/Downloads/Y Bot@Running Tired.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=tired&type=Motion%2CMotionPack",
+      "sha256": "39be308c96fd8ee9e6b2fbb2cc070a7a6f983a3c2694d9020f38860a4f1d9fc6",
+      "bytes": 824576
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Pointing Forward.fbx",
+      "sourceDownload": "/Users/happys/Downloads/Y Bot@Pointing Forward.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=pointing&type=Motion%2CMotionPack",
+      "sha256": "4ed7a82219556b1a72b3c36c0ea43d8667c82e6a239b84ab951f37109168478f",
+      "bytes": 685120
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Standing Torch Inspect Upward.fbx",
+      "sourceDownload": "/Users/happys/Downloads/Y Bot@Standing Torch Inspect Upward.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=looking+up&type=Motion%2CMotionPack",
+      "sha256": "f18bd7be38abd8b280192cd37a1742622eeda448ffa9e97a8a351da9ea0f3a7d",
+      "bytes": 847040
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Praying.fbx",
+      "sourceDownload": "/Users/happys/Downloads/Y Bot@Praying.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=praying&type=Motion%2CMotionPack",
+      "sha256": "87815118b7febeba697070a63760e5e43279d8c920062a6e13e7322131cdcf03",
+      "bytes": 491600
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Sitting.fbx",
+      "sourceDownload": "/Users/happys/Downloads/Y Bot@Sitting.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=sitting+down&type=Motion%2CMotionPack",
+      "sha256": "e0e55bca39b6bfbe6c7c80d8c25e534dbb6b47836d67cce51c8ded0b2c1c7fe8",
+      "bytes": 658000
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Sitting Idle.fbx",
+      "sourceDownload": "/Users/happys/Downloads/Y Bot@Sitting Idle.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=sitting+idle&type=Motion%2CMotionPack",
+      "sha256": "e0e76b6d4bd20914605999378104f7fa202fa5cc645b4c54b2dde80407524c61",
+      "bytes": 532256
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Standing Up.fbx",
+      "sourceDownload": "/Users/happys/Downloads/Y Bot@Standing Up.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=standing+up&type=Motion%2CMotionPack",
+      "sha256": "ed24411247d7691a6bfd2d9fe7265fff2a35d32a36e1f1623caa234e4935689e",
+      "bytes": 752800
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Picking Up Object.fbx",
+      "sourceDownload": "/Users/happys/Downloads/Y Bot@Picking Up Object.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=picking+up&type=Motion%2CMotionPack",
+      "sha256": "fff209ea12d64856d2fc86e6df62dde7e949a7e5945fbc21d15b156efd9f3616",
+      "bytes": 594864
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Writing.fbx",
+      "sourceDownload": "/Users/happys/Downloads/Y Bot@Writing.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=writing&type=Motion%2CMotionPack",
+      "sha256": "5aef3c3473fc61b502c7e78450b5578a76ebc4e52d958c70f33ba1032a6b884b",
+      "bytes": 575840
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Opening A Lid.fbx",
+      "sourceDownload": "/Users/happys/Downloads/Y Bot@Opening A Lid.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=opening+a+lid&type=Motion%2CMotionPack",
+      "sha256": "3d3c9423bc2fcca107f83a3b72455565cce091dfdf9ef72fdb82bdd8212b3321",
+      "bytes": 1033760
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Thinking.fbx",
+      "sourceDownload": "/Users/happys/Downloads/Y Bot@Thinking.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=thinking&type=Motion%2CMotionPack",
+      "sha256": "52bbda4fa08b0a2a0d9a12781a076495da685704f27eed47d8442ecbd13ff8e6",
+      "bytes": 634144
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Looking.fbx",
+      "sourceDownload": "/Users/happys/Downloads/Y Bot@Looking.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=book&type=Motion%2CMotionPack",
+      "sha256": "85178b42fcc997f10e537add4c9309ba73bc4b50fd4667e4f89615148cd8d831",
+      "bytes": 649872
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Kneeling Down.fbx",
+      "sourceDownload": "/Users/happys/Downloads/Y Bot@Kneeling Down.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=kneeling+down&type=Motion%2CMotionPack",
+      "sha256": "b4d56c9bebb8f72704d4d99d8eaf3e024834fc0e2b3a1801d6bdb05b8abed76a",
+      "bytes": 544992
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Standing Arguing.fbx",
+      "sourceDownload": "/Users/happys/Downloads/Y Bot@Standing Arguing.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=standing+arguing&type=Motion%2CMotionPack",
+      "sha256": "6badfb0189671ab3c8ccc9058f0ce1fb7e112559a44e1e0fd7676eba6a34a3f1",
+      "bytes": 2013920
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Box Idle.fbx",
+      "sourceDownload": "/Users/happys/Downloads/Y Bot@Box Idle.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=holding+idle&type=Motion%2CMotionPack",
+      "sha256": "02f378dfca6fd962005310cda406183ef9616d20b73ba272c2a4f6fb9b93788a",
+      "bytes": 770432
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Holding Walk.fbx",
+      "sourceDownload": "/Users/happys/Downloads/Y Bot@Holding Walk.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=holding+walk&type=Motion%2CMotionPack",
+      "sha256": "a6592574b0ff55e4eafb5451ce27ae81bcfc9a9a6fb9aacc57d1fb965c57a461",
+      "bytes": 413168
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Terrified.fbx",
+      "sourceDownload": "/Users/happys/Downloads/Y Bot@Terrified.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=terrified&type=Motion%2CMotionPack",
+      "sha256": "9a8ca98f4790ec279cae5e8240165af0d80bd146c0c304bda67fa4f5ca3d7bbb",
+      "bytes": 1788992
+    },
+    {
+      "file": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Quick Formal Bow.fbx",
+      "sourceDownload": "/Users/happys/Downloads/Y Bot@Quick Formal Bow.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=bow&type=Motion%2CMotionPack",
+      "sha256": "9b7d854b2c52729df8eb6e2e9b365245901b4794bd644126b73fe57ebae4887f",
+      "bytes": 568144
+    }
+  ],
+  "clips": [
+    {
+      "id": "MX_LookAwayGesture",
+      "originalFilename": "look away gesture.fbx",
+      "sourceName": "look away gesture",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Gestures Pack Basic.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=head+nod&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_LookAwayGesture.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_LookAwayGesture.fbx",
+      "sha256": "218d9ee63e78198cd4032dec81407a9c050018badf0edd306ccd005b283f94ed",
+      "bytes": 525745,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 2.3333334922790527,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_DismissingGesture",
+      "originalFilename": "dismissing gesture.fbx",
+      "sourceName": "dismissing gesture",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Gestures Pack Basic.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=head+nod&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_DismissingGesture.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_DismissingGesture.fbx",
+      "sha256": "05e9df5b93c39a1f615006acd7ce039199f353b07a5f8daf847fb04b607fc489",
+      "bytes": 631585,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 3.266666889190674,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_WeightShift",
+      "originalFilename": "weight shift.fbx",
+      "sourceName": "weight shift",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Gestures Pack Basic.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=head+nod&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_WeightShift.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_WeightShift.fbx",
+      "sha256": "7141348d3f2fb750e43e84de76405c281647e73e4fcee9d445e84cc1480f7db9",
+      "bytes": 1050737,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 9.433333396911621,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_SarcasticHeadNod",
+      "originalFilename": "sarcastic head nod.fbx",
+      "sourceName": "sarcastic head nod",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Gestures Pack Basic.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=head+nod&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_SarcasticHeadNod.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_SarcasticHeadNod.fbx",
+      "sha256": "e3f5bdbda7c7b2a703cd68e2343675230045942942caf86dfd286a08515e7f5e",
+      "bytes": 525745,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 2.3333334922790527,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_ShakingHeadNo",
+      "originalFilename": "shaking head no.fbx",
+      "sourceName": "shaking head no",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Gestures Pack Basic.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=head+nod&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_ShakingHeadNo.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_ShakingHeadNo.fbx",
+      "sha256": "9710d5bbdf260273740877daff036c798a6938813f7e556242b8964fb8a18c5e",
+      "bytes": 465265,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.8000000715255737,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_HeadNodYes",
+      "originalFilename": "head nod yes.fbx",
+      "sourceName": "head nod yes",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Gestures Pack Basic.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=head+nod&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_HeadNodYes.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_HeadNodYes.fbx",
+      "sha256": "e3976395095f3e89b5acc972aea05dc2b588bda165f31cad2ecea9c7acca56f8",
+      "bytes": 555985,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 2.6000001430511475,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_BeingCocky",
+      "originalFilename": "being cocky.fbx",
+      "sourceName": "being cocky",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Gestures Pack Basic.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=head+nod&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_BeingCocky.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_BeingCocky.fbx",
+      "sha256": "808020dc47e179d15f9d1d37bb2d5ad64f8b100c5954dbaee50c023efa4a6db6",
+      "bytes": 590001,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 2.9000000953674316,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AnnoyedHeadShake",
+      "originalFilename": "annoyed head shake.fbx",
+      "sourceName": "annoyed head shake",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Gestures Pack Basic.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=head+nod&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AnnoyedHeadShake.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AnnoyedHeadShake.fbx",
+      "sha256": "1e2984784bfcb52bdb360e75c7374d5fefb8a2a544f470fc3f3bd6410a228a04",
+      "bytes": 510625,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 2.566666841506958,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_HardHeadNod",
+      "originalFilename": "hard head nod.fbx",
+      "sourceName": "hard head nod",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Gestures Pack Basic.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=head+nod&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_HardHeadNod.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_HardHeadNod.fbx",
+      "sha256": "9288477c4d509f2175e6f381628309aeba1b7ab0ac90e7d9bbb2b17beb1dd4b4",
+      "bytes": 446353,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.633333444595337,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AngryGesture",
+      "originalFilename": "angry gesture.fbx",
+      "sourceName": "angry gesture",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Gestures Pack Basic.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=head+nod&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AngryGesture.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AngryGesture.fbx",
+      "sha256": "57e7add7daf8ad95adf0e80460350bc27f7c6a7c25cd287be5f153e01f480275",
+      "bytes": 510625,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 2.200000047683716,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_HappyHandGesture",
+      "originalFilename": "happy hand gesture.fbx",
+      "sourceName": "happy hand gesture",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Gestures Pack Basic.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=head+nod&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_HappyHandGesture.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_HappyHandGesture.fbx",
+      "sha256": "927db813ef39e1732266d932a8ed3f4b44f6293e5e74b17b2a5db641f91e6bc8",
+      "bytes": 593777,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 2.933333396911621,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_Acknowledging",
+      "originalFilename": "acknowledging.fbx",
+      "sourceName": "acknowledging",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Gestures Pack Basic.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=head+nod&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_Acknowledging.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_Acknowledging.fbx",
+      "sha256": "7d7bf941e9ebe488a5285a1ad4bba5a6ab262344602aa504e517b50159b062be",
+      "bytes": 480385,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.933333396911621,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_LengthyHeadNod",
+      "originalFilename": "lengthy head nod.fbx",
+      "sourceName": "lengthy head nod",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Gestures Pack Basic.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=head+nod&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_LengthyHeadNod.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_LengthyHeadNod.fbx",
+      "sha256": "9ccdb49537545c17d99a3aecb378e0f297268b87257728dfac7f716ff1128af6",
+      "bytes": 457697,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.7333334684371948,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_ThoughtfulHeadShake",
+      "originalFilename": "thoughtful head shake.fbx",
+      "sourceName": "thoughtful head shake",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Gestures Pack Basic.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=head+nod&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_ThoughtfulHeadShake.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_ThoughtfulHeadShake.fbx",
+      "sha256": "7a91e791d62ec1dc0ec09e45954c9db1e669bc4a918318d5bdc51190f1795217",
+      "bytes": 608897,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 3.066666841506958,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_RelievedSigh",
+      "originalFilename": "relieved sigh.fbx",
+      "sourceName": "relieved sigh",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Gestures Pack Basic.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=head+nod&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_RelievedSigh.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_RelievedSigh.fbx",
+      "sha256": "065122cb71566c386156f380bf03008c6f644bd7c4beb0ce89fdae83162a77f0",
+      "bytes": 601345,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 3.000000238418579,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_LeftStrafeWalking",
+      "originalFilename": "left strafe walking.fbx",
+      "sourceName": "left strafe walking",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Locomotion Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=locomotion&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_LeftStrafeWalking.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_LeftStrafeWalking.fbx",
+      "sha256": "45d511a3133fd5e82af410a4ab6b5ceb709def5f6e575413dd366eb581cdf04c",
+      "bytes": 376081,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.033333420753479,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_RightStrafeWalking",
+      "originalFilename": "right strafe walking.fbx",
+      "sourceName": "right strafe walking",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Locomotion Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=locomotion&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_RightStrafeWalking.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_RightStrafeWalking.fbx",
+      "sha256": "cdd51172121e3c91747a0cc960c701333865e98917fc51221dee8ebe73ddc302",
+      "bytes": 376081,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.033333420753479,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_LeftStrafe",
+      "originalFilename": "left strafe.fbx",
+      "sourceName": "left strafe",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Locomotion Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=locomotion&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_LeftStrafe.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_LeftStrafe.fbx",
+      "sha256": "13e9af544ac17d4a8e74ae74b898f12b5ef8dd3d2837740d56397af4fac81273",
+      "bytes": 336737,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 0.6666666865348816,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_LeftTurn",
+      "originalFilename": "left turn.fbx",
+      "sourceName": "left turn",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Locomotion Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=locomotion&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_LeftTurn.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_LeftTurn.fbx",
+      "sha256": "51e0e58d7916e2b5e7a75eecfbf2dde72c53dad2b07d32b90f1203548bfcd68a",
+      "bytes": 442833,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.633333444595337,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_RightStrafe",
+      "originalFilename": "right strafe.fbx",
+      "sourceName": "right strafe",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Locomotion Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=locomotion&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_RightStrafe.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_RightStrafe.fbx",
+      "sha256": "5fb534f554e6093a42b9b4638000f3816b09154235c3fb43f6208efb327cd92f",
+      "bytes": 336737,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 0.6666666865348816,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_RightTurn",
+      "originalFilename": "right turn.fbx",
+      "sourceName": "right turn",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Locomotion Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=locomotion&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_RightTurn.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_RightTurn.fbx",
+      "sha256": "1b944ec3cc91affad98d204da82eee455ea5555a02030c4773c1d95e13468f49",
+      "bytes": 442833,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.633333444595337,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_Idle",
+      "originalFilename": "idle.fbx",
+      "sourceName": "idle",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Locomotion Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=locomotion&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_Idle.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_Idle.fbx",
+      "sha256": "a03a5bdfc1b599f8857540423a05c72f73c2d7f785d169d663d5a505512fb3df",
+      "bytes": 787185,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 8.333333969116211,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_Jump",
+      "originalFilename": "jump.fbx",
+      "sourceName": "jump",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Locomotion Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=locomotion&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_Jump.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_Jump.fbx",
+      "sha256": "b1f119b1e69be3257b1314083cc94eea1419172ecd115b1322265fdff347023b",
+      "bytes": 506833,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 2.1666667461395264,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_Running",
+      "originalFilename": "running.fbx",
+      "sourceName": "running",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Locomotion Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=locomotion&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_Running.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_Running.fbx",
+      "sha256": "dd55953772e0180432a5fffb71c24e1582d81c26e7562c0cb23ce5cff955e946",
+      "bytes": 339009,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 0.7000000476837158,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_Walking",
+      "originalFilename": "walking.fbx",
+      "sourceName": "walking",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Locomotion Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=locomotion&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_Walking.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_Walking.fbx",
+      "sha256": "1602b4b7998dd19218647c04d98dc55be60c2114ef30b7f695432d8b446da288",
+      "bytes": 376081,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.033333420753479,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_RightTurn90",
+      "originalFilename": "right turn 90.fbx",
+      "sourceName": "right turn 90",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Locomotion Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=locomotion&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_RightTurn90.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_RightTurn90.fbx",
+      "sha256": "ff2b5889a5520d416652348c115069e7162ef32f3d58b62ce1131ffaece8f924",
+      "bytes": 364961,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 0.9333333969116211,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_LeftTurn90",
+      "originalFilename": "left turn 90.fbx",
+      "sourceName": "left turn 90",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Locomotion Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=locomotion&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_LeftTurn90.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_LeftTurn90.fbx",
+      "sha256": "62fe098d28ff112671b81d400847fa80028c0cb8002099fadab6273697841124",
+      "bytes": 364961,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 0.9333333969116211,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureIdle",
+      "originalFilename": "idle.fbx",
+      "sourceName": "idle",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureIdle.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureIdle.fbx",
+      "sha256": "f8f002da9bca560861a775f0dae0ded203751720d17dff67aa11a6ea6badbbca",
+      "bytes": 671537,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 4.0,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureFallingIdle",
+      "originalFilename": "falling idle.fbx",
+      "sourceName": "falling idle",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureFallingIdle.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureFallingIdle.fbx",
+      "sha256": "534021cc694b68f1c53b0004a35435992c57e44fbf56ec304b679727a1674680",
+      "bytes": 332961,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 0.7000000476837158,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureIdle2",
+      "originalFilename": "idle (2).fbx",
+      "sourceName": "idle (2)",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureIdle2.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureIdle2.fbx",
+      "sha256": "739b9d983c1362c6cce5de27506d0637de57c64a39b36d93c5b2aabd3c8561ee",
+      "bytes": 1010417,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 10.000000953674316,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureIdle3",
+      "originalFilename": "idle (3).fbx",
+      "sourceName": "idle (3)",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureIdle3.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureIdle3.fbx",
+      "sha256": "d4237dca815f34bb8fb763b424b9e68ece1c0684be89745ae92bfdcd8c3a1c7c",
+      "bytes": 592769,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 3.266666889190674,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureRunning",
+      "originalFilename": "running.fbx",
+      "sourceName": "running",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureRunning.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureRunning.fbx",
+      "sha256": "ceb2e9a1d6877d115c4f90e45cb671af2ef90a0acab219a9dc175d74b9487060",
+      "bytes": 331441,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 0.7000000476837158,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureStandToCover",
+      "originalFilename": "stand to cover.fbx",
+      "sourceName": "stand to cover",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureStandToCover.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureStandToCover.fbx",
+      "sha256": "7ed155830f013aead92f1cc453b975cbb80ecaa53f600dc9af7a38ca5d335021",
+      "bytes": 377425,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.133333444595337,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureWalking",
+      "originalFilename": "walking.fbx",
+      "sourceName": "walking",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureWalking.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureWalking.fbx",
+      "sha256": "b792792521cbdcefff4324cabfd42a96334eea18d527cfe4f0b743383a02b60f",
+      "bytes": 364929,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.033333420753479,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureStandToCover2",
+      "originalFilename": "stand to cover (2).fbx",
+      "sourceName": "stand to cover (2)",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureStandToCover2.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureStandToCover2.fbx",
+      "sha256": "575c48305f5aefa3c1e8869307fd613842d1a2f26901b3bf1a13df6ab307f340",
+      "bytes": 391105,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.2666667699813843,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureRunToStop",
+      "originalFilename": "run to stop.fbx",
+      "sourceName": "run to stop",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureRunToStop.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureRunToStop.fbx",
+      "sha256": "da63410de84cb9e262563a0b85dc060cc7bbae7ae558d026c9c96dde6cd8b22e",
+      "bytes": 353473,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 0.9000000357627869,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureLeftTurn",
+      "originalFilename": "left turn.fbx",
+      "sourceName": "left turn",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureLeftTurn.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureLeftTurn.fbx",
+      "sha256": "2f5312fa90e04b87f751261d816f036fdb6990e272d2d363bf2e06d30086f217",
+      "bytes": 362689,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.033333420753479,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureRightTurn",
+      "originalFilename": "right turn.fbx",
+      "sourceName": "right turn",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureRightTurn.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureRightTurn.fbx",
+      "sha256": "dc400fc0c094ae40309382302fa381540a3b916bdc2ff23db0e9c14910fe3153",
+      "bytes": 367153,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.033333420753479,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureJumpingUp",
+      "originalFilename": "jumping up.fbx",
+      "sourceName": "jumping up",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureJumpingUp.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureJumpingUp.fbx",
+      "sha256": "6aa9608364d0e9eb22d6776dcd0897ce0075cf09e5030af8db31f2b11e7c4645",
+      "bytes": 332961,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 0.23333334922790527,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureFallingToRoll",
+      "originalFilename": "falling to roll.fbx",
+      "sourceName": "falling to roll",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureFallingToRoll.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureFallingToRoll.fbx",
+      "sha256": "6c43af57f2b5d84fadcf72e6b9438341e54cd53e520d6d90ee71b3100f8f6523",
+      "bytes": 445825,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.8000000715255737,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureHardLanding",
+      "originalFilename": "hard landing.fbx",
+      "sourceName": "hard landing",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureHardLanding.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureHardLanding.fbx",
+      "sha256": "c403f981fe4da567340d2c4a691e0eb0b1bb88a58a7d5412b5c4639786e43e25",
+      "bytes": 466337,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 2.0,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureCoverToStand",
+      "originalFilename": "cover to stand.fbx",
+      "sourceName": "cover to stand",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureCoverToStand.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureCoverToStand.fbx",
+      "sha256": "b8b5ad985475659ecb017fa5688e7345cef09a4abde45a689ce0368b3d34d930",
+      "bytes": 415041,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.5000001192092896,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureIdle4",
+      "originalFilename": "idle (4).fbx",
+      "sourceName": "idle (4)",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureIdle4.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureIdle4.fbx",
+      "sha256": "025ba6f7fea903a1426140d58d607edf3b85df500bc69cbc0f02f707542fc273",
+      "bytes": 496753,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 2.566666841506958,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureCrouchedSneakingLeft",
+      "originalFilename": "crouched sneaking left.fbx",
+      "sourceName": "crouched sneaking left",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureCrouchedSneakingLeft.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureCrouchedSneakingLeft.fbx",
+      "sha256": "def222f719ebb977b0c6101df96f759c3549855c9162894f5b7b94a540c70204",
+      "bytes": 391105,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.2666667699813843,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureCrouchedSneakingRight",
+      "originalFilename": "crouched sneaking right.fbx",
+      "sourceName": "crouched sneaking right",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureCrouchedSneakingRight.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureCrouchedSneakingRight.fbx",
+      "sha256": "52f69f9ff2e81760bc8d6c834ae1400cc66ed2b9a45ea1ef5d811f855f658716",
+      "bytes": 374001,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.100000023841858,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureLeftCoverSneak",
+      "originalFilename": "left cover sneak.fbx",
+      "sourceName": "left cover sneak",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureLeftCoverSneak.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureLeftCoverSneak.fbx",
+      "sha256": "0b0dc360284697c150ce785a41eb5e7506a7f332ca9f85f41b89da24440fb720",
+      "bytes": 372529,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.133333444595337,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureRightCoverSneak",
+      "originalFilename": "right cover sneak.fbx",
+      "sourceName": "right cover sneak",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureRightCoverSneak.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureRightCoverSneak.fbx",
+      "sha256": "d1f9406061371d9cbd7228a6bbc56ad8ab170e2485ff51fb7c243002113db8dd",
+      "bytes": 372529,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.133333444595337,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureIdle5",
+      "originalFilename": "idle (5).fbx",
+      "sourceName": "idle (5)",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureIdle5.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureIdle5.fbx",
+      "sha256": "c6f7ac0bc8f0f3dd216794f1725e93748e3612d786a344777df1fa3a050ad9a7",
+      "bytes": 488801,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 2.266666889190674,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_AdventureCoverToStand2",
+      "originalFilename": "cover to stand (2).fbx",
+      "sourceName": "cover to stand (2)",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Action Adventure Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=Action+Adventure&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_AdventureCoverToStand2.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_AdventureCoverToStand2.fbx",
+      "sha256": "22128b1296125687a18f49edb0b399447c237b739f5dfd993ccf78203b406cc2",
+      "bytes": 404785,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.4000000953674316,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_TalkCalm",
+      "originalFilename": "Y Bot@Talking.fbx",
+      "sourceName": "Talking — General Conversation",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Talking.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=talking&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_TalkCalm.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_TalkCalm.fbx",
+      "sha256": "a1772da77db84337d690f4727ffbbb6e7b935c9371a89c274ce8ab6bb41585c2",
+      "bytes": 1136720,
+      "state": "unity_humanoid_retarget_verified",
+      "validation": {
+        "humanoid": true,
+        "seconds": 10.266667366027832,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_InjuredWalk",
+      "originalFilename": "injured walk.fbx",
+      "sourceName": "injured walk",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_InjuredWalk.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_InjuredWalk.fbx",
+      "sha256": "caae52424e464e5a5a9654945eb723a3155d2d3edb251a5d04ef166dd0789127",
+      "bytes": 441057,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.633333444595337,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_InjuredWalkLeftTurn",
+      "originalFilename": "injured walk left turn.fbx",
+      "sourceName": "injured walk left turn",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_InjuredWalkLeftTurn.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_InjuredWalkLeftTurn.fbx",
+      "sha256": "1e3a136b12fed9daacc99fd002a4594ac920ad90a750e144705cd8bdba7d3842",
+      "bytes": 481457,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 2.0,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_InjuredWalkRightTurn",
+      "originalFilename": "injured walk right turn.fbx",
+      "sourceName": "injured walk right turn",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_InjuredWalkRightTurn.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_InjuredWalkRightTurn.fbx",
+      "sha256": "81ed274ccfccafcb4c242ca0ecbc94a7ab34068d8323f12a25a110a0fb9ddad6",
+      "bytes": 463089,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.8333333730697632,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_InjuredWalkBackwards",
+      "originalFilename": "injured walk backwards.fbx",
+      "sourceName": "injured walk backwards",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_InjuredWalkBackwards.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_InjuredWalkBackwards.fbx",
+      "sha256": "bb7ac63cb10b0fe9ee85e08f697ca123f53f2a24fcffac6759d86ee00be0d476",
+      "bytes": 450129,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.6666667461395264,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_InjuredBackwardsTurnRight",
+      "originalFilename": "injured backwards turn right.fbx",
+      "sourceName": "injured backwards turn right",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_InjuredBackwardsTurnRight.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_InjuredBackwardsTurnRight.fbx",
+      "sha256": "999469bbf541c81e3efcfe69a4a6e9bbf59e65d2ee71a2aea1eb19d97ce20b18",
+      "bytes": 340513,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 0.7000000476837158,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_InjuredBackwardsTurnLeft",
+      "originalFilename": "injured backwards turn left.fbx",
+      "sourceName": "injured backwards turn left",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_InjuredBackwardsTurnLeft.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_InjuredBackwardsTurnLeft.fbx",
+      "sha256": "e9e1cc230508dc1e89765b449f01afdac8a89a8910510b7b74ffcf06299637f8",
+      "bytes": 343505,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 0.7333333492279053,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_InjuredRun",
+      "originalFilename": "injured run.fbx",
+      "sourceName": "injured run",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_InjuredRun.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_InjuredRun.fbx",
+      "sha256": "9f72001ae8035d7526e3a87f50993fb1cbf129f9ff9a2f15948fa0fa4813a9e4",
+      "bytes": 329537,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 0.6333333849906921,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_InjuredRunLeftTurn",
+      "originalFilename": "injured run left turn.fbx",
+      "sourceName": "injured run left turn",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_InjuredRunLeftTurn.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_InjuredRunLeftTurn.fbx",
+      "sha256": "a8fe1d2a68e83308491a517f329f53c3eeb37de2d3a4a78a81ebcbe4c05e29f0",
+      "bytes": 327873,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 0.6000000238418579,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_InjuredRunRightTurn",
+      "originalFilename": "injured run right turn.fbx",
+      "sourceName": "injured run right turn",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_InjuredRunRightTurn.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_InjuredRunRightTurn.fbx",
+      "sha256": "bf9d8160e07641955f18a9f58c00639b95513c544862873be7a438663cb69686",
+      "bytes": 330225,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 0.6333333849906921,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_InjuredRunBackwards",
+      "originalFilename": "injured run backwards.fbx",
+      "sourceName": "injured run backwards",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_InjuredRunBackwards.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_InjuredRunBackwards.fbx",
+      "sha256": "e7a76d4e308c7614c02814c6379b270f02d5f2ded64376168020ecf08c8fb270",
+      "bytes": 327233,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 0.6000000238418579,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_InjuredRunBackwardsRightTurn",
+      "originalFilename": "injured run backwards right turn.fbx",
+      "sourceName": "injured run backwards right turn",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_InjuredRunBackwardsRightTurn.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_InjuredRunBackwardsRightTurn.fbx",
+      "sha256": "4ca3b8ec0b029c1ff12a72e9d1ca53e7155b8537e4af3870e47c0822ec754f7a",
+      "bytes": 319313,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 0.5333333611488342,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_InjuredRunBackwardsLeftTurn",
+      "originalFilename": "injured run backwards left turn.fbx",
+      "sourceName": "injured run backwards left turn",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_InjuredRunBackwardsLeftTurn.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_InjuredRunBackwardsLeftTurn.fbx",
+      "sha256": "de7945755c873c992a275340968450531abee96f52553d4e07772f9ad5bde793",
+      "bytes": 428001,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 0.5,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_InjuredIdle",
+      "originalFilename": "injured idle.fbx",
+      "sourceName": "injured idle",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_InjuredIdle.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_InjuredIdle.fbx",
+      "sha256": "2d574a5441af6b93b00a67fc6724c315d898f44cfe6f4b8b11654ca2ab620083",
+      "bytes": 1001985,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 9.333333969116211,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_InjuredStumbleIdle",
+      "originalFilename": "injured stumble idle.fbx",
+      "sourceName": "injured stumble idle",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_InjuredStumbleIdle.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_InjuredStumbleIdle.fbx",
+      "sha256": "0302b7980ec73bd1f164880eed661b6681e32c3d25fae0ee14dec4fcaac5665d",
+      "bytes": 693569,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 5.066667079925537,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_InjuredWaveIdle",
+      "originalFilename": "injured wave idle.fbx",
+      "sourceName": "injured wave idle",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_InjuredWaveIdle.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_InjuredWaveIdle.fbx",
+      "sha256": "876e74d2d101b97dbe6663ebdd0c6a73fec6c3823d62a7715b4fff372e05e7db",
+      "bytes": 711041,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 5.066667079925537,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_InjuredHurtingIdle",
+      "originalFilename": "injured hurting idle.fbx",
+      "sourceName": "injured hurting idle",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_InjuredHurtingIdle.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_InjuredHurtingIdle.fbx",
+      "sha256": "d5b88e03e1676576f25b3ed7e2b8dbdafd8dbe8a9c4de9dcfa36da73ae0f7c72",
+      "bytes": 796209,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 6.033333778381348,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_InjuredTurnRight",
+      "originalFilename": "injured turn right.fbx",
+      "sourceName": "injured turn right",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_InjuredTurnRight.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_InjuredTurnRight.fbx",
+      "sha256": "8669dae5ac8bbdfc295151a371d0f4b117b5bc0e32c913159124899387fb0241",
+      "bytes": 337713,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 0.7000000476837158,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_InjuredTurnLeft",
+      "originalFilename": "injured turn left.fbx",
+      "sourceName": "injured turn left",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_InjuredTurnLeft.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_InjuredTurnLeft.fbx",
+      "sha256": "6cc7ac9c35ec7ab08adc032c4678b34e628cf434b18fa42bfb59e7ede8b2a98b",
+      "bytes": 361249,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 0.9000000357627869,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_InjuredRunJump",
+      "originalFilename": "injured run jump.fbx",
+      "sourceName": "injured run jump",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_InjuredRunJump.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_InjuredRunJump.fbx",
+      "sha256": "d48b7626ff2b7a6a3b96e9259873127f34acfc8efe6ff88a796b2c1b9ff811c3",
+      "bytes": 341921,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 0.7333333492279053,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_InjuredStandingJump",
+      "originalFilename": "injured standing jump.fbx",
+      "sourceName": "injured standing jump",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Male Injured Pack.zip",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=emotions&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_InjuredStandingJump.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_InjuredStandingJump.fbx",
+      "sha256": "97e8912fe0f9f64a707aac49321d1807f6b9c1aaa3d06e8c87e6eb5c04a73cdd",
+      "bytes": 470433,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": false,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.9000000953674316,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_GetUpProne",
+      "originalFilename": "Y Bot@Getting Up.fbx",
+      "sourceName": "Getting Up — Getting Up From Stomach",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Getting Up.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=getting+up&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_GetUpProne.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_GetUpProne.fbx",
+      "sha256": "38bdcfa050fb633acd14c9af5051e05fadb72abd8324da670556fba8a74caf22",
+      "bytes": 956704,
+      "state": "unity_humanoid_retarget_verified",
+      "validation": {
+        "humanoid": true,
+        "seconds": 8.600000381469727,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_RunToExhaustion",
+      "originalFilename": "Y Bot@Running Tired.fbx",
+      "sourceName": "Running Tired — Running Tired To Dizzy",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Running Tired.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=tired&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_RunToExhaustion.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_RunToExhaustion.fbx",
+      "sha256": "39be308c96fd8ee9e6b2fbb2cc070a7a6f983a3c2694d9020f38860a4f1d9fc6",
+      "bytes": 824576,
+      "state": "unity_humanoid_retarget_verified",
+      "validation": {
+        "humanoid": true,
+        "seconds": 7.000000476837158,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_PointForward",
+      "originalFilename": "Y Bot@Pointing Forward.fbx",
+      "sourceName": "Pointing Forward — Looking Down Then Pointing Forward",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Pointing Forward.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=pointing&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_PointForward.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_PointForward.fbx",
+      "sha256": "4ed7a82219556b1a72b3c36c0ea43d8667c82e6a239b84ab951f37109168478f",
+      "bytes": 685120,
+      "state": "unity_humanoid_retarget_verified",
+      "validation": {
+        "humanoid": true,
+        "seconds": 4.700000286102295,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_LookUpTorchBase",
+      "originalFilename": "Y Bot@Standing Torch Inspect Upward.fbx",
+      "sourceName": "Standing Torch Inspect Upward",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Standing Torch Inspect Upward.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=looking+up&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_LookUpTorchBase.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_LookUpTorchBase.fbx",
+      "sha256": "f18bd7be38abd8b280192cd37a1742622eeda448ffa9e97a8a351da9ea0f3a7d",
+      "bytes": 847040,
+      "state": "unity_humanoid_retarget_verified",
+      "validation": {
+        "humanoid": true,
+        "seconds": 6.566667079925537,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_PrayStanding",
+      "originalFilename": "Y Bot@Praying.fbx",
+      "sourceName": "Praying — Standing Praying While Swaying",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Praying.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=praying&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_PrayStanding.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_PrayStanding.fbx",
+      "sha256": "87815118b7febeba697070a63760e5e43279d8c920062a6e13e7322131cdcf03",
+      "bytes": 491600,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 3.2333335876464844,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_SitDown",
+      "originalFilename": "Y Bot@Sitting.fbx",
+      "sourceName": "Sitting — Sitting Down Arms Outside Armrests",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Sitting.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=sitting+down&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_SitDown.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_SitDown.fbx",
+      "sha256": "e0e55bca39b6bfbe6c7c80d8c25e534dbb6b47836d67cce51c8ded0b2c1c7fe8",
+      "bytes": 658000,
+      "state": "unity_humanoid_retarget_verified",
+      "validation": {
+        "humanoid": true,
+        "seconds": 4.433333396911621,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_SitIdle",
+      "originalFilename": "Y Bot@Sitting Idle.fbx",
+      "sourceName": "Sitting Idle — Sitting With Breathing Idle",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Sitting Idle.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=sitting+idle&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_SitIdle.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_SitIdle.fbx",
+      "sha256": "e0e76b6d4bd20914605999378104f7fa202fa5cc645b4c54b2dde80407524c61",
+      "bytes": 532256,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 4.300000190734863,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_StandFromSeat",
+      "originalFilename": "Y Bot@Standing Up.fbx",
+      "sourceName": "Standing Up — Sitting To Standing",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Standing Up.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=standing+up&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_StandFromSeat.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_StandFromSeat.fbx",
+      "sha256": "ed24411247d7691a6bfd2d9fe7265fff2a35d32a36e1f1623caa234e4935689e",
+      "bytes": 752800,
+      "state": "unity_humanoid_retarget_verified",
+      "validation": {
+        "humanoid": true,
+        "seconds": 6.066667079925537,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_PickUp",
+      "originalFilename": "Y Bot@Picking Up Object.fbx",
+      "sourceName": "Picking Up Object — Picking Up An Object With One Hand",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Picking Up Object.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=picking+up&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_PickUp.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_PickUp.fbx",
+      "sha256": "fff209ea12d64856d2fc86e6df62dde7e949a7e5945fbc21d15b156efd9f3616",
+      "bytes": 594864,
+      "state": "unity_humanoid_retarget_verified",
+      "validation": {
+        "humanoid": true,
+        "seconds": 3.433333396911621,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_WriteSeated",
+      "originalFilename": "Y Bot@Writing.fbx",
+      "sourceName": "Writing — Male Writing While Seated",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Writing.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=writing&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_WriteSeated.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_WriteSeated.fbx",
+      "sha256": "5aef3c3473fc61b502c7e78450b5578a76ebc4e52d958c70f33ba1032a6b884b",
+      "bytes": 575840,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 5.000000476837158,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_OpenBox",
+      "originalFilename": "Y Bot@Opening A Lid.fbx",
+      "sourceName": "Opening A Lid — Opening The Lid On A Chest Or Box",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Opening A Lid.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=opening+a+lid&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_OpenBox.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_OpenBox.fbx",
+      "sha256": "3d3c9423bc2fcca107f83a3b72455565cce091dfdf9ef72fdb82bdd8212b3321",
+      "bytes": 1033760,
+      "state": "unity_humanoid_retarget_verified",
+      "validation": {
+        "humanoid": true,
+        "seconds": 8.933333396911621,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_Think",
+      "originalFilename": "Y Bot@Thinking.fbx",
+      "sourceName": "Thinking — Thinking While Standing",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Thinking.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=thinking&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_Think.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_Think.fbx",
+      "sha256": "52bbda4fa08b0a2a0d9a12781a076495da685704f27eed47d8442ecbd13ff8e6",
+      "bytes": 634144,
+      "state": "unity_humanoid_retarget_verified",
+      "validation": {
+        "humanoid": true,
+        "seconds": 4.233333587646484,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_ShieldEyes",
+      "originalFilename": "Y Bot@Looking.fbx",
+      "sourceName": "Looking — Looking With Hand Shading Eyes",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Looking.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=book&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_ShieldEyes.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_ShieldEyes.fbx",
+      "sha256": "85178b42fcc997f10e537add4c9309ba73bc4b50fd4667e4f89615148cd8d831",
+      "bytes": 649872,
+      "state": "unity_humanoid_retarget_verified",
+      "validation": {
+        "humanoid": true,
+        "seconds": 4.766666889190674,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_KneelDown",
+      "originalFilename": "Y Bot@Kneeling Down.fbx",
+      "sourceName": "Kneeling Down — Standing To Kneeling Down",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Kneeling Down.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=kneeling+down&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_KneelDown.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_KneelDown.fbx",
+      "sha256": "b4d56c9bebb8f72704d4d99d8eaf3e024834fc0e2b3a1801d6bdb05b8abed76a",
+      "bytes": 544992,
+      "state": "unity_humanoid_retarget_verified",
+      "validation": {
+        "humanoid": true,
+        "seconds": 2.766666889190674,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_TalkArgue",
+      "originalFilename": "Y Bot@Standing Arguing.fbx",
+      "sourceName": "Standing Arguing — Standing And Arguing With Another Person",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Standing Arguing.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=standing+arguing&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_TalkArgue.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_TalkArgue.fbx",
+      "sha256": "6badfb0189671ab3c8ccc9058f0ce1fb7e112559a44e1e0fd7676eba6a34a3f1",
+      "bytes": 2013920,
+      "state": "unity_humanoid_retarget_verified",
+      "validation": {
+        "humanoid": true,
+        "seconds": 20.80000114440918,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_CarryBoxIdle",
+      "originalFilename": "Y Bot@Box Idle.fbx",
+      "sourceName": "Box Idle — Carrying A Box",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Box Idle.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=holding+idle&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_CarryBoxIdle.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_CarryBoxIdle.fbx",
+      "sha256": "02f378dfca6fd962005310cda406183ef9616d20b73ba272c2a4f6fb9b93788a",
+      "bytes": 770432,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 6.300000190734863,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_CarryBoxWalk",
+      "originalFilename": "Y Bot@Holding Walk.fbx",
+      "sourceName": "Holding Walk — Holding An Object While Walking",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Holding Walk.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=holding+walk&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_CarryBoxWalk.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_CarryBoxWalk.fbx",
+      "sha256": "a6592574b0ff55e4eafb5451ce27ae81bcfc9a9a6fb9aacc57d1fb965c57a461",
+      "bytes": 413168,
+      "state": "unity_humanoid_retarget_verified",
+      "looping": true,
+      "validation": {
+        "humanoid": true,
+        "seconds": 1.3666667938232422,
+        "looping": true,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_Fear",
+      "originalFilename": "Y Bot@Terrified.fbx",
+      "sourceName": "Terrified — Being Terrified While Standing",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Terrified.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=terrified&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_Fear.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_Fear.fbx",
+      "sha256": "9a8ca98f4790ec279cae5e8240165af0d80bd146c0c304bda67fa4f5ca3d7bbb",
+      "bytes": 1788992,
+      "state": "unity_humanoid_retarget_verified",
+      "format": "FBX (.fbx); exact successful preset unconfirmed",
+      "formatNote": "Requested FBX for Unity and later FBX Binary retries. One downloaded file was acquired and validated; the successful request cannot be uniquely attributed. No security bypass was performed.",
+      "validation": {
+        "humanoid": true,
+        "seconds": 20.000001907348633,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    },
+    {
+      "id": "MX_Bow",
+      "originalFilename": "Y Bot@Quick Formal Bow.fbx",
+      "sourceName": "Quick Formal Bow — Quick Formal Bow",
+      "sourceArchive": "ArtSource/Characters/Mixamo/Downloads/Y Bot@Quick Formal Bow.fbx",
+      "sourcePage": "https://www.mixamo.com/#/?page=1&query=bow&type=Motion%2CMotionPack",
+      "unityFile": "Assets/_Project/Characters/Mixamo/Animations/MX_Bow.fbx",
+      "rawFile": "ArtSource/Characters/Mixamo/Motions/MX_Bow.fbx",
+      "sha256": "9b7d854b2c52729df8eb6e2e9b365245901b4794bd644126b73fe57ebae4887f",
+      "bytes": 568144,
+      "state": "unity_humanoid_retarget_verified",
+      "validation": {
+        "humanoid": true,
+        "seconds": 2.7333335876464844,
+        "looping": false,
+        "verifiedRoles": [
+          "PlayerTraveller",
+          "WenWang",
+          "KingZhou",
+          "Pope",
+          "Scholar",
+          "DaVinci"
+        ]
+      }
+    }
+  ]
+}

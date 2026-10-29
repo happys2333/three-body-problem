@@ -1,0 +1,742 @@
+{
+  "date": "2026-10-28",
+  "platform": "Tencent Hunyuan 3D Studio through user Chrome UI",
+  "observedDailyRemainingAtStart": 30,
+  "status": "core_library_delivered_pope_revision_unrigged",
+  "priority": "Complete four previously ungenerated Hunyuan supporting-character bodies; replace stylized references with consistent realistic art. Then story props within observed free quota.",
+  "scope": "User authorized generating unfinished assets; no purchases, subscriptions or new accounts.",
+  "plannedCharacters": [
+    {
+      "id": "ShangGuard",
+      "name": "商朝卫兵",
+      "conceptPrompt": "写实游戏角色，30岁东方男性商朝卫兵，健壮，束发短须。青铜圆盔不遮面，深褐交领窄袖衣，深棕皮革札甲覆盖胸背和腰，布裤绑腿皮靴，少量青铜铆钉，粗糙真实材质。全身标准A姿，双手空，手指分离，双脚分开，头脚完整，灰背景均匀光照。无披风武器盾牌，无文字，无卡通。",
+      "state": "humanoid_library_prefab_and_five_shared_motions_verified",
+      "aPose": true,
+      "targetTriangles": 50000,
+      "files": {
+        "concept": {
+          "stage": "concept",
+          "sourceDownload": "/Users/happys/Downloads/20261028093558_ecb301fd.png",
+          "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/ShangGuard/ShangGuard_Concept.png",
+          "projectFile": "Documentation/CharacterProduction/Concepts/Expansion_ShangGuard.png",
+          "sha256": "0d3e75ba9a0dc83711ea7fe0c3e2d4a148f7a20504aad9be203c7c7e4d5be867",
+          "bytes": 209487
+        },
+        "rig": {
+          "stage": "rig",
+          "sourceDownload": "/Users/happys/Downloads/20261028101804_5ef440dd.fbx",
+          "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/ShangGuard/ShangGuard_Rig.fbx",
+          "projectFile": "Assets/_Project/Art/HunyuanExpansion/ShangGuard/ShangGuard_Rig.fbx",
+          "sha256": "69ce1136516647214df4358b1cf49b702ae1119007e110b6e40eaecd0b19810a",
+          "bytes": 33052444
+        }
+      },
+      "unityValidation": {
+        "id": "ShangGuard",
+        "kind": "character",
+        "source": "Assets/_Project/Art/HunyuanExpansion/ShangGuard/ShangGuard_Rig.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanExpansion/Prefabs/ShangGuard.prefab",
+        "passed": true,
+        "validHumanAvatar": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "triangles": 49988,
+        "vertices": 37306,
+        "skinBones": 23,
+        "heightMetres": 1.8299999237060547,
+        "textures": [
+          "Assets/_Project/Art/HunyuanExpansion/ShangGuard/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanExpansion/ShangGuard/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanExpansion/ShangGuard/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanExpansion/ShangGuard/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      },
+      "sceneIntegrated": false,
+      "retargetVerifiedClips": [
+        "MX_Idle",
+        "MX_WeightShift",
+        "MX_Walking",
+        "MX_Shiver",
+        "MX_InjuredHurtingIdle"
+      ]
+    },
+    {
+      "id": "ChurchGuard",
+      "name": "中世纪卫兵",
+      "conceptPrompt": "写实游戏角色，35岁欧洲男性中世纪教廷卫兵，健壮，短棕发短须，开放式铁盔露全脸，锁子甲，暗红朴素无图案罩衣，棕皮腰带，铁护胫皮靴。真实钢铁、皮革和旧布料。全身标准A姿，双手空，手指分离，双脚分开，头脚完整，浅灰背景均匀光照。无披风武器盾牌，无文字，无卡通。",
+      "state": "humanoid_library_prefab_and_five_shared_motions_verified",
+      "aPose": true,
+      "targetTriangles": 50000,
+      "files": {
+        "concept": {
+          "stage": "concept",
+          "sourceDownload": "/Users/happys/Downloads/20261028093640_6bf14378.png",
+          "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/ChurchGuard/ChurchGuard_Concept.png",
+          "projectFile": "Documentation/CharacterProduction/Concepts/Expansion_ChurchGuard.png",
+          "sha256": "261ba56aa0f22f4252489363b4205e2093ca9bc423e296a0ba6c675017179cd3",
+          "bytes": 240222
+        },
+        "rig": {
+          "stage": "rig",
+          "sourceDownload": "/Users/happys/Downloads/20261028101655_5ecefaa5.fbx",
+          "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/ChurchGuard/ChurchGuard_Rig.fbx",
+          "projectFile": "Assets/_Project/Art/HunyuanExpansion/ChurchGuard/ChurchGuard_Rig.fbx",
+          "sha256": "028a55bdd422cee6094c40a5db1d7223525a0785cd3d3c17bf8eabeb7bd280ff",
+          "bytes": 32886924
+        }
+      },
+      "unityValidation": {
+        "id": "ChurchGuard",
+        "kind": "character",
+        "source": "Assets/_Project/Art/HunyuanExpansion/ChurchGuard/ChurchGuard_Rig.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanExpansion/Prefabs/ChurchGuard.prefab",
+        "passed": true,
+        "validHumanAvatar": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "triangles": 49988,
+        "vertices": 37070,
+        "skinBones": 23,
+        "heightMetres": 1.8499999046325684,
+        "textures": [
+          "Assets/_Project/Art/HunyuanExpansion/ChurchGuard/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanExpansion/ChurchGuard/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanExpansion/ChurchGuard/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanExpansion/ChurchGuard/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      },
+      "sceneIntegrated": false,
+      "retargetVerifiedClips": [
+        "MX_Idle",
+        "MX_WeightShift",
+        "MX_Walking",
+        "MX_Shiver",
+        "MX_InjuredHurtingIdle"
+      ]
+    },
+    {
+      "id": "CitizenMale",
+      "name": "殷商男性平民",
+      "conceptPrompt": "写实游戏角色，40岁东方男性青铜时代平民，真实成年人体比例，清瘦结实，黑发束小髻，短胡茬，旧灰褐粗麻交领窄袖短衣，布腰带，宽松布裤，绑腿布鞋。朴素贫苦，有尘土磨损，无饰品。全身标准A姿，双手空，手指分离，双脚分开，头脚完整，浅灰背景均匀光照。无道具文字，无卡通。",
+      "state": "humanoid_library_prefab_and_five_shared_motions_verified",
+      "aPose": true,
+      "targetTriangles": 50000,
+      "files": {
+        "concept": {
+          "stage": "concept",
+          "sourceDownload": "/Users/happys/Downloads/20261028093803_8d77151b.png",
+          "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/CitizenMale/CitizenMale_Concept.png",
+          "projectFile": "Documentation/CharacterProduction/Concepts/Expansion_CitizenMale.png",
+          "sha256": "a439e1d4cd35e5f73a537505d8c6de307b01e48f99ee833eb3a40b43aced004d",
+          "bytes": 197212
+        },
+        "rig": {
+          "stage": "rig",
+          "sourceDownload": "/Users/happys/Downloads/20261028101049_bd71d79e.fbx",
+          "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/CitizenMale/CitizenMale_Rig.fbx",
+          "projectFile": "Assets/_Project/Art/HunyuanExpansion/CitizenMale/CitizenMale_Rig.fbx",
+          "sha256": "6a5705b6b2445e4809953c874abefcf26834c2e999178c58461e3631b3b26a06",
+          "bytes": 29063324
+        }
+      },
+      "unityValidation": {
+        "id": "CitizenMale",
+        "kind": "character",
+        "source": "Assets/_Project/Art/HunyuanExpansion/CitizenMale/CitizenMale_Rig.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanExpansion/Prefabs/CitizenMale.prefab",
+        "passed": true,
+        "validHumanAvatar": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "triangles": 50000,
+        "vertices": 36150,
+        "skinBones": 23,
+        "heightMetres": 1.7300002574920654,
+        "textures": [
+          "Assets/_Project/Art/HunyuanExpansion/CitizenMale/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanExpansion/CitizenMale/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanExpansion/CitizenMale/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanExpansion/CitizenMale/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      },
+      "sceneIntegrated": false,
+      "retargetVerifiedClips": [
+        "MX_Idle",
+        "MX_WeightShift",
+        "MX_Walking",
+        "MX_Shiver",
+        "MX_InjuredHurtingIdle"
+      ]
+    },
+    {
+      "id": "CitizenFemale",
+      "name": "殷商女性平民",
+      "conceptPrompt": "写实游戏角色，30岁东方女性青铜时代平民，真实成年人体比例，黑发盘简朴低髻，朴素无妆，灰蓝粗麻交领窄袖上衣，布腰带，棕灰及踝裙露布鞋，裙摆宽松分片便于行走。无首饰和西式装饰。全身标准A姿，双手空，手指分离，双脚分开，头脚完整，浅灰背景均匀光照。无道具文字，无卡通。",
+      "state": "humanoid_library_prefab_and_five_shared_motions_verified",
+      "aPose": true,
+      "targetTriangles": 50000,
+      "files": {
+        "concept": {
+          "stage": "concept",
+          "sourceDownload": "/Users/happys/Downloads/20261028093908_87bb3139.png",
+          "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/CitizenFemale/CitizenFemale_Concept.png",
+          "projectFile": "Documentation/CharacterProduction/Concepts/Expansion_CitizenFemale.png",
+          "sha256": "61f83ca2f2a946e7b654ad4576dc13a1d7c5d5dadee802b3ba5fd229d4516647",
+          "bytes": 184241
+        },
+        "rig": {
+          "stage": "rig",
+          "sourceDownload": "/Users/happys/Downloads/20261028104528_5f3b203f.fbx",
+          "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/CitizenFemale/CitizenFemale_Rig.fbx",
+          "projectFile": "Assets/_Project/Art/HunyuanExpansion/CitizenFemale/CitizenFemale_Rig.fbx",
+          "sha256": "cf95c3df71dfa841a3433201d6e4b9dbb8ced739d903c063fd9b8c36b9f4dabd",
+          "bytes": 23907772
+        }
+      },
+      "visualReviewIssue": "The first rig export was a Shang guard because rig submission preceded completion of the viewer/model switch. Reject it; retry after the actual female PBR model is fully loaded and visually verified.",
+      "rejectedExports": [
+        {
+          "stage": "rig",
+          "sourceDownload": "/Users/happys/Downloads/20261028100952_e247e5ec.fbx",
+          "sha256": "649f013b96b5ee3209612d6c97335898022e96efdc97f3af65b052eac65a5d65",
+          "bytes": 33053164,
+          "reason": "First binding used the previously loaded Shang guard; this replacement was visually verified as the blue-clothed female before rigging and export.",
+          "preservedFile": "ArtSource/HunyuanExpansion/2026-10-28/Rejected/CitizenFemale_rig_649f013b96b5.fbx",
+          "originalRawFile": "ArtSource/HunyuanExpansion/2026-10-28/CitizenFemale/CitizenFemale_Rig.fbx",
+          "originalProjectFile": "Assets/_Project/Art/HunyuanExpansion/CitizenFemale/CitizenFemale_Rig.fbx"
+        }
+      ],
+      "unityValidation": {
+        "id": "CitizenFemale",
+        "kind": "character",
+        "source": "Assets/_Project/Art/HunyuanExpansion/CitizenFemale/CitizenFemale_Rig.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanExpansion/Prefabs/CitizenFemale.prefab",
+        "passed": true,
+        "validHumanAvatar": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "triangles": 50000,
+        "vertices": 34355,
+        "skinBones": 23,
+        "heightMetres": 1.649999976158142,
+        "textures": [
+          "Assets/_Project/Art/HunyuanExpansion/CitizenFemale/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanExpansion/CitizenFemale/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanExpansion/CitizenFemale/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanExpansion/CitizenFemale/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      },
+      "sceneIntegrated": false,
+      "retargetVerifiedClips": [
+        "MX_Idle",
+        "MX_WeightShift",
+        "MX_Walking",
+        "MX_Shiver",
+        "MX_InjuredHurtingIdle"
+      ]
+    },
+    {
+      "id": "PopeV2",
+      "name": "教皇服装修订版",
+      "conceptPrompt": "写实游戏角色，70岁欧洲男性教皇，真实老年面容、短白须，朴素主教冠。象牙白窄袖及膝礼袍，衣摆前后分片露出深色长裤和皮鞋，暗红短肩衣贴合肩背。厚实旧布料、暗金细纹边，无长披风和飘带。全身标准A姿，双手空，手指分离，双脚分开，头脚完整，浅灰背景均匀光照。无道具文字，无卡通。",
+      "state": "concept_rejected_after_visual_review",
+      "reason": "Existing cape and long robe stretch during broad motions; create a shorter fitted costume candidate without overwriting the original.",
+      "aPose": true,
+      "targetTriangles": 50000,
+      "files": {
+        "concept": {
+          "stage": "concept",
+          "sourceDownload": "/Users/happys/Downloads/20261028095413_5172fa37.png",
+          "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/PopeV2/PopeV2_Concept.png",
+          "projectFile": "Documentation/CharacterProduction/Concepts/Expansion_PopeV2.png",
+          "sha256": "b71af86639ba76ef894e7c700919b04d98536641f42c474cf060f32930deaf86",
+          "bytes": 191857
+        }
+      },
+      "review": "Face is excessively cartoon-like and the generated costume still includes a long red cape and joined lower garment; do not spend geometry/texture/rig quota on this candidate."
+    },
+    {
+      "id": "PopeV3",
+      "name": "教皇服装修订版第二候选",
+      "conceptPrompt": "电影写实角色，70岁欧洲男性教廷领袖，清瘦，高白主教帽，白发短白须，真实皮肤细纹，正常成年头身比，小眼睛。象牙白窄袖及膝前开襟礼袍，细金滚边，细腰带，深灰长裤与皮鞋，裤腿清晰分离。全身A姿，双臂下斜45度，空手，手指分开，头脚完整，灰背景均匀光。真人摄影质感，非卡通非插画。",
+      "state": "textured_unrigged_library_candidate_verified_as_static_only",
+      "aPose": false,
+      "poseInPrompt": true,
+      "reason": "One retry of the rejected cartoon-like cape candidate; prioritize separated trouser legs and narrow sleeves.",
+      "targetTriangles": 50000,
+      "files": {
+        "concept": {
+          "stage": "concept",
+          "sourceDownload": "/Users/happys/Downloads/20261028100334_13b67492.png",
+          "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/PopeV3/PopeV3_Concept.png",
+          "projectFile": "Documentation/CharacterProduction/Concepts/Expansion_PopeV3.png",
+          "sha256": "4a558a6e89cf03ed9e99f1782baf98fca831dee72c6aeba330076f5476592d2c",
+          "bytes": 228547
+        },
+        "textured": {
+          "stage": "textured",
+          "sourceDownload": "/Users/happys/Downloads/20261028103450_c24f90c7.fbx",
+          "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/PopeV3/PopeV3_Textured.fbx",
+          "projectFile": "Assets/_Project/Art/HunyuanExpansion/PopeV3/PopeV3_Textured.fbx",
+          "sha256": "28a00dbeb785787bf5dfc2caf30c19a01b8fd226a85808a6cc9fbaeea72ac65d",
+          "bytes": 21962620
+        }
+      },
+      "deliveryScope": "Textured unrigged costume candidate. The last generation is reassigned to correcting the mandatory female character rig; do not claim this candidate is animation-ready.",
+      "unityValidation": {
+        "id": "PopeV3",
+        "kind": "character_unrigged_candidate",
+        "source": "Assets/_Project/Art/HunyuanExpansion/PopeV3/PopeV3_Textured.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanExpansion/Prefabs/PopeV3.prefab",
+        "passed": true,
+        "validHumanAvatar": false,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "triangles": 50000,
+        "vertices": 31833,
+        "skinBones": 0,
+        "heightMetres": 1.7999999523162842,
+        "textures": [
+          "Assets/_Project/Art/HunyuanExpansion/PopeV3/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanExpansion/PopeV3/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanExpansion/PopeV3/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanExpansion/PopeV3/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      },
+      "sceneIntegrated": false
+    }
+  ],
+  "plannedProps": [
+    "CalendarChest",
+    "BronzeHourglass",
+    "ScholarlyBook"
+  ],
+  "events": [
+    {
+      "asset": "ShangGuard",
+      "event": "archived_export",
+      "stage": "concept",
+      "sourceDownload": "/Users/happys/Downloads/20261028093558_ecb301fd.png",
+      "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/ShangGuard/ShangGuard_Concept.png",
+      "projectFile": "Documentation/CharacterProduction/Concepts/Expansion_ShangGuard.png",
+      "sha256": "0d3e75ba9a0dc83711ea7fe0c3e2d4a148f7a20504aad9be203c7c7e4d5be867",
+      "bytes": 209487
+    },
+    {
+      "asset": "ChurchGuard",
+      "event": "archived_export",
+      "stage": "concept",
+      "sourceDownload": "/Users/happys/Downloads/20261028093640_6bf14378.png",
+      "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/ChurchGuard/ChurchGuard_Concept.png",
+      "projectFile": "Documentation/CharacterProduction/Concepts/Expansion_ChurchGuard.png",
+      "sha256": "261ba56aa0f22f4252489363b4205e2093ca9bc423e296a0ba6c675017179cd3",
+      "bytes": 240222
+    },
+    {
+      "asset": "CitizenMale",
+      "event": "archived_export",
+      "stage": "concept",
+      "sourceDownload": "/Users/happys/Downloads/20261028093803_8d77151b.png",
+      "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/CitizenMale/CitizenMale_Concept.png",
+      "projectFile": "Documentation/CharacterProduction/Concepts/Expansion_CitizenMale.png",
+      "sha256": "a439e1d4cd35e5f73a537505d8c6de307b01e48f99ee833eb3a40b43aced004d",
+      "bytes": 197212
+    },
+    {
+      "asset": "CitizenFemale",
+      "event": "archived_export",
+      "stage": "concept",
+      "sourceDownload": "/Users/happys/Downloads/20261028093908_87bb3139.png",
+      "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/CitizenFemale/CitizenFemale_Concept.png",
+      "projectFile": "Documentation/CharacterProduction/Concepts/Expansion_CitizenFemale.png",
+      "sha256": "61f83ca2f2a946e7b654ad4576dc13a1d7c5d5dadee802b3ba5fd229d4516647",
+      "bytes": 184241
+    },
+    {
+      "asset": "PopeV2",
+      "event": "archived_export",
+      "stage": "concept",
+      "sourceDownload": "/Users/happys/Downloads/20261028095413_5172fa37.png",
+      "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/PopeV2/PopeV2_Concept.png",
+      "projectFile": "Documentation/CharacterProduction/Concepts/Expansion_PopeV2.png",
+      "sha256": "b71af86639ba76ef894e7c700919b04d98536641f42c474cf060f32930deaf86",
+      "bytes": 191857
+    },
+    {
+      "asset": "CalendarChest",
+      "event": "archived_export",
+      "stage": "concept",
+      "sourceDownload": "/Users/happys/Downloads/20261028095542_632bd639.png",
+      "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/CalendarChest/CalendarChest_Concept.png",
+      "projectFile": "Documentation/CharacterProduction/Concepts/Expansion_CalendarChest.png",
+      "sha256": "315ab9e61fafe6740a421abfd993cbd6d4728b03434e2a25a329415f9ac2c0c4",
+      "bytes": 800463
+    },
+    {
+      "asset": "BronzeHourglass",
+      "event": "archived_export",
+      "stage": "concept",
+      "sourceDownload": "/Users/happys/Downloads/20261028095725_98aa9b3c.png",
+      "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/BronzeHourglass/BronzeHourglass_Concept.png",
+      "projectFile": "Documentation/CharacterProduction/Concepts/Expansion_BronzeHourglass.png",
+      "sha256": "e2e14d58c27f1645d009d2aa8dbc6b3b451b6f64894d8bb3058a1e03c1bb9ac8",
+      "bytes": 445985
+    },
+    {
+      "asset": "ScholarlyBook",
+      "event": "archived_export",
+      "stage": "concept",
+      "sourceDownload": "/Users/happys/Downloads/20261028095825_eabf77fe.png",
+      "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/ScholarlyBook/ScholarlyBook_Concept.png",
+      "projectFile": "Documentation/CharacterProduction/Concepts/Expansion_ScholarlyBook.png",
+      "sha256": "fd007d7a57f1d4863f56b588b67a9b9fe1c285a563193a0e904ab306412def8e",
+      "bytes": 646481
+    },
+    {
+      "asset": "PopeV3",
+      "event": "archived_export",
+      "stage": "concept",
+      "sourceDownload": "/Users/happys/Downloads/20261028100334_13b67492.png",
+      "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/PopeV3/PopeV3_Concept.png",
+      "projectFile": "Documentation/CharacterProduction/Concepts/Expansion_PopeV3.png",
+      "sha256": "4a558a6e89cf03ed9e99f1782baf98fca831dee72c6aeba330076f5476592d2c",
+      "bytes": 228547
+    },
+    {
+      "asset": "CitizenMale",
+      "event": "archived_export",
+      "stage": "rig",
+      "sourceDownload": "/Users/happys/Downloads/20261028101049_bd71d79e.fbx",
+      "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/CitizenMale/CitizenMale_Rig.fbx",
+      "projectFile": "Assets/_Project/Art/HunyuanExpansion/CitizenMale/CitizenMale_Rig.fbx",
+      "sha256": "6a5705b6b2445e4809953c874abefcf26834c2e999178c58461e3631b3b26a06",
+      "bytes": 29063324
+    },
+    {
+      "asset": "CitizenFemale",
+      "event": "archived_export",
+      "stage": "rig",
+      "sourceDownload": "/Users/happys/Downloads/20261028100952_e247e5ec.fbx",
+      "sha256": "649f013b96b5ee3209612d6c97335898022e96efdc97f3af65b052eac65a5d65",
+      "bytes": 33053164,
+      "superseded": true,
+      "preservedFile": "ArtSource/HunyuanExpansion/2026-10-28/Rejected/CitizenFemale_rig_649f013b96b5.fbx",
+      "originalRawFile": "ArtSource/HunyuanExpansion/2026-10-28/CitizenFemale/CitizenFemale_Rig.fbx",
+      "originalProjectFile": "Assets/_Project/Art/HunyuanExpansion/CitizenFemale/CitizenFemale_Rig.fbx"
+    },
+    {
+      "asset": "ShangGuard",
+      "event": "archived_export",
+      "stage": "rig",
+      "sourceDownload": "/Users/happys/Downloads/20261028101804_5ef440dd.fbx",
+      "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/ShangGuard/ShangGuard_Rig.fbx",
+      "projectFile": "Assets/_Project/Art/HunyuanExpansion/ShangGuard/ShangGuard_Rig.fbx",
+      "sha256": "69ce1136516647214df4358b1cf49b702ae1119007e110b6e40eaecd0b19810a",
+      "bytes": 33052444
+    },
+    {
+      "asset": "ChurchGuard",
+      "event": "archived_export",
+      "stage": "rig",
+      "sourceDownload": "/Users/happys/Downloads/20261028101655_5ecefaa5.fbx",
+      "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/ChurchGuard/ChurchGuard_Rig.fbx",
+      "projectFile": "Assets/_Project/Art/HunyuanExpansion/ChurchGuard/ChurchGuard_Rig.fbx",
+      "sha256": "028a55bdd422cee6094c40a5db1d7223525a0785cd3d3c17bf8eabeb7bd280ff",
+      "bytes": 32886924
+    },
+    {
+      "asset": "CitizenFemale",
+      "event": "rig_visual_review_failed_and_retry_submitted",
+      "reason": "Previous result is a guard; the correct female PBR model was visually verified with loading complete before retry."
+    },
+    {
+      "asset": "CitizenFemale",
+      "event": "archived_export",
+      "stage": "rig",
+      "sourceDownload": "/Users/happys/Downloads/20261028104528_5f3b203f.fbx",
+      "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/CitizenFemale/CitizenFemale_Rig.fbx",
+      "projectFile": "Assets/_Project/Art/HunyuanExpansion/CitizenFemale/CitizenFemale_Rig.fbx",
+      "sha256": "cf95c3df71dfa841a3433201d6e4b9dbb8ced739d903c063fd9b8c36b9f4dabd",
+      "bytes": 23907772
+    },
+    {
+      "asset": "ScholarlyBook",
+      "event": "archived_export",
+      "stage": "textured",
+      "sourceDownload": "/Users/happys/Downloads/20261028104426_9e13b7d2.fbx",
+      "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/ScholarlyBook/ScholarlyBook_Textured.fbx",
+      "projectFile": "Assets/_Project/Art/HunyuanExpansion/ScholarlyBook/ScholarlyBook_Textured.fbx",
+      "sha256": "4d4a378614a3e6466fb3da9af04bf99bbcc885ad4921e1cb57e92d6479efe02f",
+      "bytes": 41922972
+    },
+    {
+      "asset": "PopeV3",
+      "event": "archived_export",
+      "stage": "textured",
+      "sourceDownload": "/Users/happys/Downloads/20261028103450_c24f90c7.fbx",
+      "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/PopeV3/PopeV3_Textured.fbx",
+      "projectFile": "Assets/_Project/Art/HunyuanExpansion/PopeV3/PopeV3_Textured.fbx",
+      "sha256": "28a00dbeb785787bf5dfc2caf30c19a01b8fd226a85808a6cc9fbaeea72ac65d",
+      "bytes": 21962620
+    },
+    {
+      "asset": "CalendarChest",
+      "event": "archived_export",
+      "stage": "textured",
+      "sourceDownload": "/Users/happys/Downloads/20261028103800_cb8d9c20.fbx",
+      "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/CalendarChest/CalendarChest_Textured.fbx",
+      "projectFile": "Assets/_Project/Art/HunyuanExpansion/CalendarChest/CalendarChest_Textured.fbx",
+      "sha256": "0e0ff8d38cac6d90de8041ce17ff2d81a5d1d102e72722342c764c4df703aa20",
+      "bytes": 49282652
+    },
+    {
+      "asset": "BronzeHourglass",
+      "event": "archived_export",
+      "stage": "textured",
+      "sourceDownload": "/Users/happys/Downloads/20261028104354_3d77543b.fbx",
+      "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/BronzeHourglass/BronzeHourglass_Textured.fbx",
+      "projectFile": "Assets/_Project/Art/HunyuanExpansion/BronzeHourglass/BronzeHourglass_Textured.fbx",
+      "sha256": "8df9908254df7ab450f1f1294987a07d3d0393b8d7fcaeb7e7b4851b217401fa",
+      "bytes": 38833980
+    }
+  ],
+  "props": [
+    {
+      "id": "CalendarChest",
+      "name": "历法箱",
+      "conceptPrompt": "单个青铜时代木制历法箱，厚实深棕木板，青铜包角，皮绳提把，箱盖紧闭，箱面嵌带简洁刻线的铜质天象盘和竹木算筹槽。写实PBR游戏道具，磨损木纹与锈绿铜，轮廓清楚，三分之四视角，完整居中，纯浅灰背景。无文字人物，无地台。",
+      "state": "textured_static_library_prefab_verified",
+      "targetTriangles": 50000,
+      "files": {
+        "concept": {
+          "stage": "concept",
+          "sourceDownload": "/Users/happys/Downloads/20261028095542_632bd639.png",
+          "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/CalendarChest/CalendarChest_Concept.png",
+          "projectFile": "Documentation/CharacterProduction/Concepts/Expansion_CalendarChest.png",
+          "sha256": "315ab9e61fafe6740a421abfd993cbd6d4728b03434e2a25a329415f9ac2c0c4",
+          "bytes": 800463
+        },
+        "textured": {
+          "stage": "textured",
+          "sourceDownload": "/Users/happys/Downloads/20261028103800_cb8d9c20.fbx",
+          "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/CalendarChest/CalendarChest_Textured.fbx",
+          "projectFile": "Assets/_Project/Art/HunyuanExpansion/CalendarChest/CalendarChest_Textured.fbx",
+          "sha256": "0e0ff8d38cac6d90de8041ce17ff2d81a5d1d102e72722342c764c4df703aa20",
+          "bytes": 49282652
+        }
+      },
+      "unityValidation": {
+        "id": "CalendarChest",
+        "kind": "prop",
+        "source": "Assets/_Project/Art/HunyuanExpansion/CalendarChest/CalendarChest_Textured.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanExpansion/Prefabs/CalendarChest.prefab",
+        "passed": true,
+        "validHumanAvatar": false,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "triangles": 50000,
+        "vertices": 36281,
+        "skinBones": 0,
+        "heightMetres": 0.6454610228538513,
+        "textures": [
+          "Assets/_Project/Art/HunyuanExpansion/CalendarChest/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanExpansion/CalendarChest/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanExpansion/CalendarChest/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanExpansion/CalendarChest/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      },
+      "sceneIntegrated": false
+    },
+    {
+      "id": "BronzeHourglass",
+      "name": "旅行沙漏",
+      "conceptPrompt": "单个青铜时代旅行沙漏，双锥形透明玻璃容器夹在深棕木质上下圆盘之间，四根细青铜支柱，底座少量兽面纹和锈绿磨损，上部装细沙。写实PBR游戏道具，结构结实，三分之四视角，完整居中，纯浅灰背景。无人物文字，无发光效果。",
+      "state": "textured_static_library_prefab_verified",
+      "targetTriangles": 50000,
+      "files": {
+        "concept": {
+          "stage": "concept",
+          "sourceDownload": "/Users/happys/Downloads/20261028095725_98aa9b3c.png",
+          "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/BronzeHourglass/BronzeHourglass_Concept.png",
+          "projectFile": "Documentation/CharacterProduction/Concepts/Expansion_BronzeHourglass.png",
+          "sha256": "e2e14d58c27f1645d009d2aa8dbc6b3b451b6f64894d8bb3058a1e03c1bb9ac8",
+          "bytes": 445985
+        },
+        "textured": {
+          "stage": "textured",
+          "sourceDownload": "/Users/happys/Downloads/20261028104354_3d77543b.fbx",
+          "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/BronzeHourglass/BronzeHourglass_Textured.fbx",
+          "projectFile": "Assets/_Project/Art/HunyuanExpansion/BronzeHourglass/BronzeHourglass_Textured.fbx",
+          "sha256": "8df9908254df7ab450f1f1294987a07d3d0393b8d7fcaeb7e7b4851b217401fa",
+          "bytes": 38833980
+        }
+      },
+      "unityValidation": {
+        "id": "BronzeHourglass",
+        "kind": "prop",
+        "source": "Assets/_Project/Art/HunyuanExpansion/BronzeHourglass/BronzeHourglass_Textured.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanExpansion/Prefabs/BronzeHourglass.prefab",
+        "passed": true,
+        "validHumanAvatar": false,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "triangles": 50000,
+        "vertices": 31451,
+        "skinBones": 0,
+        "heightMetres": 0.45000001788139343,
+        "textures": [
+          "Assets/_Project/Art/HunyuanExpansion/BronzeHourglass/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanExpansion/BronzeHourglass/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanExpansion/BronzeHourglass/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanExpansion/BronzeHourglass/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      },
+      "sceneIntegrated": false
+    },
+    {
+      "id": "ScholarlyBook",
+      "name": "学者皮面书",
+      "conceptPrompt": "单本中世纪学者用旧皮面大书，合上的厚棕皮封面，脊背凸起书筋，磨旧黄铜扣和包角，泛黄纸页边缘，封面压简单几何花纹。写实PBR游戏道具，皮革木纸金属真实粗糙纹理，三分之四视角，完整居中，浅灰纯背景。无文字符号人物，无桌面。",
+      "state": "textured_static_library_prefab_verified",
+      "targetTriangles": 50000,
+      "files": {
+        "concept": {
+          "stage": "concept",
+          "sourceDownload": "/Users/happys/Downloads/20261028095825_eabf77fe.png",
+          "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/ScholarlyBook/ScholarlyBook_Concept.png",
+          "projectFile": "Documentation/CharacterProduction/Concepts/Expansion_ScholarlyBook.png",
+          "sha256": "fd007d7a57f1d4863f56b588b67a9b9fe1c285a563193a0e904ab306412def8e",
+          "bytes": 646481
+        },
+        "textured": {
+          "stage": "textured",
+          "sourceDownload": "/Users/happys/Downloads/20261028104426_9e13b7d2.fbx",
+          "rawFile": "ArtSource/HunyuanExpansion/2026-10-28/ScholarlyBook/ScholarlyBook_Textured.fbx",
+          "projectFile": "Assets/_Project/Art/HunyuanExpansion/ScholarlyBook/ScholarlyBook_Textured.fbx",
+          "sha256": "4d4a378614a3e6466fb3da9af04bf99bbcc885ad4921e1cb57e92d6479efe02f",
+          "bytes": 41922972
+        }
+      },
+      "unityValidation": {
+        "id": "ScholarlyBook",
+        "kind": "prop",
+        "source": "Assets/_Project/Art/HunyuanExpansion/ScholarlyBook/ScholarlyBook_Textured.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanExpansion/Prefabs/ScholarlyBook.prefab",
+        "passed": true,
+        "validHumanAvatar": false,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "triangles": 50000,
+        "vertices": 34534,
+        "skinBones": 0,
+        "heightMetres": 0.320000022649765,
+        "textures": [
+          "Assets/_Project/Art/HunyuanExpansion/ScholarlyBook/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanExpansion/ScholarlyBook/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanExpansion/ScholarlyBook/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanExpansion/ScholarlyBook/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      },
+      "sceneIntegrated": false
+    }
+  ],
+  "budgetPlan": {
+    "characters": 5,
+    "characterStagesEach": 4,
+    "props": 3,
+    "propStagesEach": 3,
+    "expectedGenerations": 30,
+    "reserve": 0,
+    "animationNote": "Studio currently exposes preset animation templates. Existing 99 clips already cover those general motions; prioritize missing bodies and props instead of duplicate presets.",
+    "conceptRetry": 1,
+    "rigRetry": 1,
+    "riggedCharacters": 4,
+    "unriggedCharacterCandidates": 1,
+    "omittedPopeRig": 1
+  },
+  "observedDailyRemainingLatest": 0,
+  "budgetActual": {
+    "concept": 9,
+    "geometry": 8,
+    "texture": 8,
+    "rig": 5,
+    "total": 30,
+    "paidGenerations": 0,
+    "rejectedConcepts": 1,
+    "rejectedRigExports": 1,
+    "note": "The final rig generation corrected CitizenFemale. PopeV3 remains an unrigged costume candidate; the existing rigged story Pope is unchanged."
+  },
+  "delivery": {
+    "riggedCharacters": 4,
+    "staticProps": 3,
+    "unriggedCharacterCandidates": 1,
+    "prefabFolder": "Assets/_Project/Art/HunyuanExpansion/Prefabs",
+    "sceneIntegration": "library_only_not_applied_to_story_scenes",
+    "firstPersonPlayerUnchanged": true,
+    "guide": "Documentation/CharacterProduction/HUNYUAN_EXPANSION_20261028.md"
+  },
+  "validation": {
+    "unityImportReport": "Documentation/CharacterProduction/hunyuan-expansion-unity-validation.json",
+    "motionReport": "Documentation/CharacterProduction/hunyuan-expansion-motion-validation.json",
+    "motionPairsPassed": 20,
+    "posesPerPair": 5,
+    "selectedClips": [
+      "MX_Idle",
+      "MX_WeightShift",
+      "MX_Walking",
+      "MX_Shiver",
+      "MX_InjuredHurtingIdle"
+    ],
+    "editModeReport": "Documentation/CharacterProduction/hunyuan-expansion-editmode-validation.json",
+    "editModeJob": "b620d6e3b36d42919e4a382b8d473843",
+    "editMode": {
+      "total": 36,
+      "passed": 36,
+      "failed": 0,
+      "skipped": 0,
+      "durationSeconds": 44.9931771,
+      "resultState": "Passed"
+    },
+    "sourceFilesReport": "Documentation/CharacterProduction/hunyuan-expansion-files-validation.json",
+    "sourceFileChecks": 35,
+    "sceneFilesUnchanged": true,
+    "sceneSHA256": {
+      "03_MedievalTribunal.unity": "1238bd663d25c21a268bd218c4c68df4b222f7a109215d50e8895dc3a0c9ac88",
+      "02_ChaogeCourt.unity": "7507bcd0a927e5c1d174e91ebbe35af7eb96f5c2f32e7a6d36ff1a8b449d3dc2",
+      "01_GobiJourney.unity": "30b86b32a693ab2eedbd1ac1c50d1ce02e8c47f5abf4a5b2533a6078685327b8"
+    },
+    "nativeBuildRetested": false,
+    "performanceRetested": false,
+    "scope": "Four new humanoid bodies, three static props, one unrigged costume candidate. The 20 sampled motion pairs do not certify all 99 shared clips, cloth intersections, fingers, face or prop contacts."
+  },
+  "visualReview": {
+    "status": "reviewed_in_unity",
+    "identity": "Female source verified as the blue-clothed woman after the rejected guard binding; final Unity idle and walking renders checked.",
+    "importCorrections": [
+      "Reset stale female HumanDescription after replacing the FBX.",
+      "Refresh remapped PBR materials including metallic/smoothness on repeated import.",
+      "Measure evaluated skin with inherited scale applied once; final idle heights: 1.83, 1.85, 1.73, 1.65 metres."
+    ],
+    "evidence": [
+      "Documentation/CharacterProduction/Previews/Expansion_Characters_Unity.jpg",
+      "Documentation/CharacterProduction/Previews/Expansion_Walking_Unity.jpg",
+      "Documentation/CharacterProduction/Previews/Expansion_Props_Unity.jpg",
+      "Documentation/CharacterProduction/Previews/Expansion_Hunyuan_Completed.png"
+    ]
+  },
+  "remainingWork": [
+    "PopeV3 rig and motion validation are unfinished; the free Studio quota is now zero.",
+    "Scene placement/replacement of these library assets has not been performed in this batch.",
+    "The 23-bone bodies have no finger or facial rig; fine prop contact and cloth work remain.",
+    "The hourglass needs separate transparent glass and moving sand; the chest and book have no opening/page animations.",
+    "The new library was not included in a fresh native build or performance benchmark."
+  ]
+}

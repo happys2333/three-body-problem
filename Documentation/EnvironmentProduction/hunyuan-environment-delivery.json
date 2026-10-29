@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-28",
+  "scope": "Generated asset library; no story-scene replacement or new native benchmark.",
+  "generationGroupsSubmitted": 20,
+  "downloadedPbrModels": 20,
+  "unityPreparedModels": 20,
+  "unityTechnicalChecksPassed": 20,
+  "visuallyReviewedModels": 20,
+  "modelsRequiringArtRework": [
+    "GobiMountainPeak",
+    "GobiRidge",
+    "WindErodedCliff",
+    "YardangMesa",
+    "GobiRockCluster",
+    "RockOverhang",
+    "DeadTamarisk",
+    "DesertThornBush",
+    "GobiWaystone",
+    "CaravanSupplies",
+    "ShangDwelling",
+    "ShangWorkshop",
+    "ShangGranary",
+    "ShangMarketStall",
+    "RammedEarthGatehouse",
+    "PyramidPortal",
+    "PyramidStonePanel",
+    "MedievalTownhouse",
+    "GothicWindowWall",
+    "MedievalButtress"
+  ],
+  "pendingBrowserExports": [],
+  "sourceFileChecks": 40,
+  "sourceBytes": 958856080,
+  "unityAssetFiles": 160,
+  "missingUnityMetadata": [],
+  "sceneSHA256": {
+    "03_MedievalTribunal.unity": "1238bd663d25c21a268bd218c4c68df4b222f7a109215d50e8895dc3a0c9ac88",
+    "02_ChaogeCourt.unity": "7507bcd0a927e5c1d174e91ebbe35af7eb96f5c2f32e7a6d36ff1a8b449d3dc2",
+    "01_GobiJourney.unity": "30b86b32a693ab2eedbd1ac1c50d1ce02e8c47f5abf4a5b2533a6078685327b8"
+  },
+  "sceneFilesUnchanged": true,
+  "errors": [],
+  "previews": [
+    {
+      "image": "Documentation/EnvironmentProduction/Previews/Environment_Unity_01.jpg",
+      "leftToRight": [
+        "YardangMesa",
+        "WindErodedCliff",
+        "GobiRidge",
+        "GobiMountainPeak"
+      ]
+    },
+    {
+      "image": "Documentation/EnvironmentProduction/Previews/Environment_Unity_02.jpg",
+      "leftToRight": [
+        "DesertThornBush",
+        "DeadTamarisk",
+        "RockOverhang",
+        "GobiRockCluster"
+      ]
+    },
+    {
+      "image": "Documentation/EnvironmentProduction/Previews/Environment_Unity_03.jpg",
+      "leftToRight": [
+        "ShangWorkshop",
+        "ShangDwelling",
+        "CaravanSupplies",
+        "GobiWaystone"
+      ]
+    },
+    {
+      "image": "Documentation/EnvironmentProduction/Previews/Environment_Unity_04.jpg",
+      "leftToRight": [
+        "PyramidPortal",
+        "RammedEarthGatehouse",
+        "ShangMarketStall",
+        "ShangGranary"
+      ]
+    },
+    {
+      "image": "Documentation/EnvironmentProduction/Previews/Environment_Unity_05.jpg",
+      "leftToRight": [
+        "MedievalButtress",
+        "GothicWindowWall",
+        "MedievalTownhouse",
+        "PyramidStonePanel"
+      ]
+    }
+  ],
+  "limitations": [
+    "Technical import checks do not certify artistic style, historical fidelity, seamless tiling, open portals or gameplay collisions.",
+    "These library assets have not been placed in the story scenes or tested in a new native performance run."
+  ],
+  "editModeRegression": {
+    "jobId": "b410067a64ab4754b7f050fe7d557297",
+    "total": 36,
+    "passed": 36,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 35.993949,
+    "resultState": "Passed",
+    "report": "Documentation/EnvironmentProduction/editmode-20261028.json"
+  },
+  "savedPrefabAudit": {
+    "prefabsChecked": 20,
+    "failures": [],
+    "activeScene": "01_GobiJourney",
+    "sceneDirty": false,
+    "isPlaying": false,
+    "isCompiling": false
+  }
+}

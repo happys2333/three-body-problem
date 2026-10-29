@@ -1,0 +1,581 @@
+{
+  "created": "2026-10-27",
+  "service": "Mixamo",
+  "authorization": "User explicitly approved using logged-in Chrome Mixamo free animation library to supplement main character actions.",
+  "state": "collection_completed_with_documented_custom_gaps",
+  "observedUI": "User completed Adobe login; Mixamo showed a signed-in account. Downloaded through Chrome UI.",
+  "targets": [
+    {
+      "id": "WalkBackward",
+      "category": "locomotion",
+      "searchText": "walking backwards",
+      "state": "body_motion_retarget_verified",
+      "priority": 2,
+      "actualClips": [
+        "MX_WalkBackward"
+      ],
+      "note": "由前向行走反向派生；需要移动逻辑匹配。"
+    },
+    {
+      "id": "StrafeLeft",
+      "category": "locomotion",
+      "searchText": "left strafe",
+      "state": "body_motion_retarget_verified",
+      "priority": 2,
+      "actualClips": [
+        "MX_LeftStrafeWalking",
+        "MX_LeftStrafe"
+      ],
+      "note": ""
+    },
+    {
+      "id": "StrafeRight",
+      "category": "locomotion",
+      "searchText": "right strafe",
+      "state": "body_motion_retarget_verified",
+      "priority": 2,
+      "actualClips": [
+        "MX_RightStrafeWalking",
+        "MX_RightStrafe"
+      ],
+      "note": ""
+    },
+    {
+      "id": "TurnLeft90",
+      "category": "locomotion",
+      "searchText": "left turn",
+      "state": "body_motion_retarget_verified",
+      "priority": 2,
+      "actualClips": [
+        "MX_LeftTurn90"
+      ],
+      "note": "玩家骨盆转角实测约 -89.9°；仍需角色朝向控制。"
+    },
+    {
+      "id": "TurnRight90",
+      "category": "locomotion",
+      "searchText": "right turn",
+      "state": "partial_body_template_custom_work_pending",
+      "priority": 2,
+      "actualClips": [
+        "MX_RightTurn90"
+      ],
+      "note": "玩家骨盆转角实测约 +103.2°，须调校后才能用于精确 90° 转向。"
+    },
+    {
+      "id": "Turn180",
+      "category": "locomotion",
+      "searchText": "turn around",
+      "state": "body_motion_retarget_verified",
+      "priority": 2,
+      "actualClips": [
+        "MX_LeftTurn",
+        "MX_RightTurn"
+      ],
+      "note": "玩家骨盆实测约 -174.5° / +173.5°；需逻辑校准方向。"
+    },
+    {
+      "id": "Jog",
+      "category": "locomotion",
+      "searchText": "jogging",
+      "state": "partial_body_template_custom_work_pending",
+      "priority": 2,
+      "actualClips": [
+        "MX_Running"
+      ],
+      "note": "只有奔跑模板；慢跑节奏与步幅仍需另调。"
+    },
+    {
+      "id": "StartWalk",
+      "category": "locomotion",
+      "searchText": "start walking",
+      "state": "custom_motion_pending",
+      "priority": 2,
+      "actualClips": [],
+      "note": "缺专用起步过渡；可用行走循环淡入，但尚未制作独立片段。"
+    },
+    {
+      "id": "StopWalk",
+      "category": "locomotion",
+      "searchText": "stop walking",
+      "state": "partial_body_template_custom_work_pending",
+      "priority": 2,
+      "actualClips": [
+        "MX_AdventureRunToStop"
+      ],
+      "note": "这是奔跑急停，专用行走停止过渡仍未制作。"
+    },
+    {
+      "id": "CrouchStart",
+      "category": "locomotion",
+      "searchText": "crouch",
+      "state": "partial_body_template_custom_work_pending",
+      "priority": 2,
+      "actualClips": [
+        "MX_AdventureStandToCover",
+        "MX_AdventureCrouchedSneakingLeft",
+        "MX_AdventureCrouchedSneakingRight",
+        "MX_AdventureCoverToStand"
+      ],
+      "note": "掩体进入/退出及侧向蹲行；不能代表完整自由蹲伏移动组。"
+    },
+    {
+      "id": "CrouchIdle",
+      "category": "locomotion",
+      "searchText": "crouching idle",
+      "state": "partial_body_template_custom_work_pending",
+      "priority": 2,
+      "actualClips": [
+        "MX_AdventureStandToCover",
+        "MX_AdventureCrouchedSneakingLeft",
+        "MX_AdventureCrouchedSneakingRight",
+        "MX_AdventureCoverToStand"
+      ],
+      "note": "掩体进入/退出及侧向蹲行；不能代表完整自由蹲伏移动组。"
+    },
+    {
+      "id": "CrouchWalk",
+      "category": "locomotion",
+      "searchText": "crouch walk",
+      "state": "partial_body_template_custom_work_pending",
+      "priority": 2,
+      "actualClips": [
+        "MX_AdventureStandToCover",
+        "MX_AdventureCrouchedSneakingLeft",
+        "MX_AdventureCrouchedSneakingRight",
+        "MX_AdventureCoverToStand"
+      ],
+      "note": "掩体进入/退出及侧向蹲行；不能代表完整自由蹲伏移动组。"
+    },
+    {
+      "id": "StandFromCrouch",
+      "category": "locomotion",
+      "searchText": "stand up",
+      "state": "partial_body_template_custom_work_pending",
+      "priority": 2,
+      "actualClips": [
+        "MX_AdventureStandToCover",
+        "MX_AdventureCrouchedSneakingLeft",
+        "MX_AdventureCrouchedSneakingRight",
+        "MX_AdventureCoverToStand"
+      ],
+      "note": "掩体进入/退出及侧向蹲行；不能代表完整自由蹲伏移动组。"
+    },
+    {
+      "id": "Jump",
+      "category": "locomotion",
+      "searchText": "jump",
+      "state": "body_motion_retarget_verified",
+      "priority": 2,
+      "actualClips": [
+        "MX_Jump"
+      ],
+      "note": ""
+    },
+    {
+      "id": "Land",
+      "category": "locomotion",
+      "searchText": "landing",
+      "state": "body_motion_retarget_verified",
+      "priority": 2,
+      "actualClips": [
+        "MX_AdventureHardLanding",
+        "MX_AdventureFallingToRoll"
+      ],
+      "note": "重落地与翻滚；起跳和碰地时机由游戏控制。"
+    },
+    {
+      "id": "TalkCalm",
+      "category": "dialogue",
+      "searchText": "talking",
+      "state": "body_motion_retarget_verified",
+      "priority": 1,
+      "actualClips": [
+        "MX_TalkCalm"
+      ],
+      "note": ""
+    },
+    {
+      "id": "TalkExplain",
+      "category": "dialogue",
+      "searchText": "explaining",
+      "state": "partial_body_template_custom_work_pending",
+      "priority": 1,
+      "actualClips": [
+        "MX_TalkCalm",
+        "MX_HappyHandGesture"
+      ],
+      "note": "通用交谈和手势；尚非按台词制作的讲解。"
+    },
+    {
+      "id": "TalkAngry",
+      "category": "dialogue",
+      "searchText": "angry",
+      "state": "body_motion_retarget_verified",
+      "priority": 1,
+      "actualClips": [
+        "MX_TalkArgue",
+        "MX_AngryGesture"
+      ],
+      "note": ""
+    },
+    {
+      "id": "Listen",
+      "category": "dialogue",
+      "searchText": "listening",
+      "state": "partial_body_template_custom_work_pending",
+      "priority": 1,
+      "actualClips": [
+        "MX_WeightShift",
+        "MX_HeadNodYes"
+      ],
+      "note": "中性站姿和点头可作倾听基础；专用倾听表演仍需调整。"
+    },
+    {
+      "id": "Nod",
+      "category": "dialogue",
+      "searchText": "head nod",
+      "state": "body_motion_retarget_verified",
+      "priority": 1,
+      "actualClips": [
+        "MX_HeadNodYes",
+        "MX_LengthyHeadNod"
+      ],
+      "note": ""
+    },
+    {
+      "id": "ShakeHead",
+      "category": "dialogue",
+      "searchText": "head shake",
+      "state": "body_motion_retarget_verified",
+      "priority": 1,
+      "actualClips": [
+        "MX_ShakingHeadNo",
+        "MX_AnnoyedHeadShake"
+      ],
+      "note": ""
+    },
+    {
+      "id": "PointForward",
+      "category": "dialogue",
+      "searchText": "pointing",
+      "state": "body_motion_retarget_verified",
+      "priority": 1,
+      "actualClips": [
+        "MX_PointForward"
+      ],
+      "note": "无实际路线目标约束；接入时需定位指向。"
+    },
+    {
+      "id": "PointSky",
+      "category": "dialogue",
+      "searchText": "pointing up",
+      "state": "custom_motion_pending",
+      "priority": 1,
+      "actualClips": [],
+      "note": "缺空手举臂指天；空手观天仅含头颈动作，不能代替指天。"
+    },
+    {
+      "id": "LookSky",
+      "category": "dialogue",
+      "searchText": "looking up",
+      "state": "body_motion_retarget_verified",
+      "priority": 1,
+      "actualClips": [
+        "MX_LookSky"
+      ],
+      "note": "只保留头颈观天，身体与手臂替换为自然待机；无持火把姿势。"
+    },
+    {
+      "id": "Think",
+      "category": "dialogue",
+      "searchText": "thinking",
+      "state": "body_motion_retarget_verified",
+      "priority": 1,
+      "actualClips": [
+        "MX_Think",
+        "MX_ThoughtfulHeadShake"
+      ],
+      "note": ""
+    },
+    {
+      "id": "Question",
+      "category": "dialogue",
+      "searchText": "arguing",
+      "state": "partial_body_template_custom_work_pending",
+      "priority": 1,
+      "actualClips": [
+        "MX_TalkArgue"
+      ],
+      "note": "争辩模板；需按台词剪辑与调整强度。"
+    },
+    {
+      "id": "Command",
+      "category": "dialogue",
+      "searchText": "command",
+      "state": "partial_body_template_custom_work_pending",
+      "priority": 1,
+      "actualClips": [
+        "MX_PointForward",
+        "MX_AngryGesture"
+      ],
+      "note": "指引/愤怒手势可作基础；专用命令或指控表演仍需制作。"
+    },
+    {
+      "id": "Dismiss",
+      "category": "dialogue",
+      "searchText": "dismissing",
+      "state": "body_motion_retarget_verified",
+      "priority": 1,
+      "actualClips": [
+        "MX_DismissingGesture"
+      ],
+      "note": ""
+    },
+    {
+      "id": "Bow",
+      "category": "dialogue",
+      "searchText": "bow",
+      "state": "partial_body_template_custom_work_pending",
+      "priority": 1,
+      "actualClips": [
+        "MX_Bow"
+      ],
+      "note": "通用正式鞠躬；尚未制作商朝或中世纪特定礼仪。"
+    },
+    {
+      "id": "Kneel",
+      "category": "dialogue",
+      "searchText": "kneeling",
+      "state": "body_motion_retarget_verified",
+      "priority": 1,
+      "actualClips": [
+        "MX_KneelDown"
+      ],
+      "note": "站立至下跪；地面高度需要在场景中对齐。"
+    },
+    {
+      "id": "Pray",
+      "category": "dialogue",
+      "searchText": "praying",
+      "state": "body_motion_retarget_verified",
+      "priority": 1,
+      "actualClips": [
+        "MX_PrayStanding"
+      ],
+      "note": "站姿祈祷，不是跪姿祈祷。"
+    },
+    {
+      "id": "ReachInteract",
+      "category": "interaction",
+      "searchText": "reaching",
+      "state": "partial_body_template_custom_work_pending",
+      "priority": 2,
+      "actualClips": [
+        "MX_PickUp"
+      ],
+      "note": "只有拾取身体模板；实际交互目标和手指接触未完成。"
+    },
+    {
+      "id": "PickUp",
+      "category": "interaction",
+      "searchText": "picking up",
+      "state": "partial_body_template_custom_work_pending",
+      "priority": 2,
+      "actualClips": [
+        "MX_PickUp"
+      ],
+      "note": "身体动作已验证，道具位置与手指接触待制作。"
+    },
+    {
+      "id": "PutDown",
+      "category": "interaction",
+      "searchText": "putting down",
+      "state": "partial_body_template_custom_work_pending",
+      "priority": 2,
+      "actualClips": [
+        "MX_PutDown"
+      ],
+      "note": "由单手拾取反向派生；双手放箱及物体接触需另做。"
+    },
+    {
+      "id": "SitDown",
+      "category": "interaction",
+      "searchText": "sitting down",
+      "state": "body_motion_retarget_verified",
+      "priority": 2,
+      "actualClips": [
+        "MX_SitDown"
+      ],
+      "note": "需要座椅高度与位置对齐。"
+    },
+    {
+      "id": "SitIdle",
+      "category": "interaction",
+      "searchText": "sitting idle",
+      "state": "body_motion_retarget_verified",
+      "priority": 2,
+      "actualClips": [
+        "MX_SitIdle"
+      ],
+      "note": "需要座椅高度与位置对齐。"
+    },
+    {
+      "id": "StandFromSeat",
+      "category": "interaction",
+      "searchText": "standing up",
+      "state": "body_motion_retarget_verified",
+      "priority": 2,
+      "actualClips": [
+        "MX_StandFromSeat"
+      ],
+      "note": "坐姿至站起，需要座椅对齐。"
+    },
+    {
+      "id": "ReadBook",
+      "category": "interaction",
+      "searchText": "reading",
+      "state": "custom_motion_pending",
+      "priority": 2,
+      "actualClips": [],
+      "note": "未取得直接读书片段；持书、翻页与手指接触待制作。"
+    },
+    {
+      "id": "Write",
+      "category": "interaction",
+      "searchText": "writing",
+      "state": "partial_body_template_custom_work_pending",
+      "priority": 2,
+      "actualClips": [
+        "MX_WriteSeated"
+      ],
+      "note": "坐姿书写身体模板；笔、纸、指骨和笔尖轨迹仍需制作。"
+    },
+    {
+      "id": "Shiver",
+      "category": "environment_reactions",
+      "searchText": "shivering",
+      "state": "body_motion_retarget_verified",
+      "priority": 1,
+      "actualClips": [
+        "MX_Shiver"
+      ],
+      "note": "项目以待机叠加胸肩头颈微振动制作的 3 秒循环，并非 Mixamo 下载的发抖。"
+    },
+    {
+      "id": "ShieldEyes",
+      "category": "environment_reactions",
+      "searchText": "looking into distance",
+      "state": "body_motion_retarget_verified",
+      "priority": 1,
+      "actualClips": [
+        "MX_ShieldEyes"
+      ],
+      "note": ""
+    },
+    {
+      "id": "HeatExhaustion",
+      "category": "environment_reactions",
+      "searchText": "exhausted",
+      "state": "partial_body_template_custom_work_pending",
+      "priority": 1,
+      "actualClips": [
+        "MX_RunToExhaustion",
+        "MX_InjuredHurtingIdle"
+      ],
+      "note": "奔跑疲惫/疼痛模板；专门高温中暑表演仍需制作。"
+    },
+    {
+      "id": "Stagger",
+      "category": "environment_reactions",
+      "searchText": "staggering",
+      "state": "body_motion_retarget_verified",
+      "priority": 1,
+      "actualClips": [
+        "MX_InjuredStumbleIdle",
+        "MX_InjuredWalk"
+      ],
+      "note": "受伤踉跄模板，可作身体失衡基础。"
+    },
+    {
+      "id": "Collapse",
+      "category": "environment_reactions",
+      "searchText": "falling down",
+      "state": "partial_body_template_custom_work_pending",
+      "priority": 1,
+      "actualClips": [
+        "FallForward"
+      ],
+      "note": "只有向前跌倒校正版；不能代表全部昏厥和倒地方向。"
+    },
+    {
+      "id": "GetUp",
+      "category": "environment_reactions",
+      "searchText": "getting up",
+      "state": "body_motion_retarget_verified",
+      "priority": 1,
+      "actualClips": [
+        "MX_GetUpProne"
+      ],
+      "note": "只含趴倒后起身，尚无仰面起身。"
+    },
+    {
+      "id": "Shock",
+      "category": "environment_reactions",
+      "searchText": "surprised",
+      "state": "partial_body_template_custom_work_pending",
+      "priority": 1,
+      "actualClips": [
+        "MX_Fear"
+      ],
+      "note": "恐惧模板，惊讶/忧虑的表演强度需调整。"
+    },
+    {
+      "id": "Retreat",
+      "category": "environment_reactions",
+      "searchText": "walking backwards",
+      "state": "body_motion_retarget_verified",
+      "priority": 1,
+      "actualClips": [
+        "MX_WalkBackward"
+      ],
+      "note": "由前向行走反向派生；需要移动逻辑匹配。"
+    },
+    {
+      "id": "Fear",
+      "category": "environment_reactions",
+      "searchText": "terrified",
+      "state": "body_motion_retarget_verified",
+      "priority": 1,
+      "actualClips": [
+        "MX_Fear"
+      ],
+      "note": ""
+    }
+  ],
+  "customActionsStillRequired": [
+    "FlipHourglass",
+    "OpenCalendarBox",
+    "PresentCalendar",
+    "CarryCalendarBox",
+    "WriteJournalWithPenContact",
+    "CountThreeSunsWithIndividualFingers"
+  ],
+  "notes": [
+    "These are acquisition targets, not downloaded animations. Search results and actual downloaded clips must be verified before marking any item complete.",
+    "Prefer one common Mixamo humanoid source skeleton and retarget to all six Hunyuan characters in Unity.",
+    "Fine prop contact and finger/facial performance need custom rig and animation work.",
+    "No purchase, subscription, new account, or legal agreement acceptance authorized by this plan."
+  ],
+  "referenceSkeleton": {
+    "character": "Y Bot",
+    "pose": "T-pose",
+    "format": "FBX for Unity(.fbx)",
+    "sourceDownload": "/Users/happys/Downloads/Y Bot.fbx",
+    "sha256": "caba6df7ed7059c762f92cdcfdf717150307a910d6fc3779e53be6779b5bd881",
+    "unityFile": "Assets/_Project/Characters/Mixamo/YBot_TPose.fbx"
+  },
+  "deliveredSourceClips": 89,
+  "deliveredDerivedClips": 4,
+  "sourceManifest": "Documentation/CharacterProduction/mixamo-assets.json"
+}

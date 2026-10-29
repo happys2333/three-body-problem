@@ -1,0 +1,54 @@
+{
+    "scenes": [
+        {
+            "scene": "01_GobiJourney",
+            "replaced": 0,
+            "humanoidActors": 2,
+            "remainingStandIns": 0,
+            "placements": []
+        },
+        {
+            "scene": "02_ChaogeCourt",
+            "replaced": 25,
+            "humanoidActors": 28,
+            "remainingStandIns": 0,
+            "placements": [
+                "入口卫兵 [Humanoid] = ShangGuard_Bronze at (-4.60, 4.01, -50.00)",
+                "入口卫兵 [Humanoid] = ShangGuard_Bronze at (4.60, 4.01, -50.00)",
+                "城门卫兵 [Humanoid] = ShangGuard_Dark at (-8.50, 0.01, -217.00)",
+                "城门卫兵 [Humanoid] = ShangGuard_Dark at (8.50, 0.01, -217.00)",
+                "复苏者 [Humanoid] = CitizenMale_Hemp at (92.00, 0.01, -13.00)",
+                "复苏者 [Humanoid] = CitizenFemale_Ochre at (101.00, 0.01, -13.00)",
+                "复苏者 [Humanoid] = CitizenMale_Indigo at (110.00, 0.01, -13.00)",
+                "复苏者 [Humanoid] = CitizenMale_Indigo at (92.00, 0.01, 1.00)",
+                "复苏者 [Humanoid] = CitizenFemale_Ochre at (101.00, 0.01, 1.00)",
+                "复苏者 [Humanoid] = CitizenMale_Worker at (110.00, 0.01, 1.00)",
+                "复苏者 [Humanoid] = CitizenMale_Slate at (92.00, 0.01, 15.00)",
+                "王都居民 [Humanoid] = CitizenFemale_Indigo at (-25.00, 0.01, -184.00)",
+                "王都居民 [Humanoid] = CitizenMale_Hemp at (29.00, 0.01, -175.00)",
+                "王都居民 [Humanoid] = CitizenMale_Hemp at (-29.40, 0.01, -166.00)",
+                "王都居民 [Humanoid] = CitizenFemale_Indigo at (25.00, 0.01, -157.00)",
+                "王都居民 [Humanoid] = CitizenMale_Indigo at (-29.00, 0.01, -148.00)",
+                "王都居民 [Humanoid] = CitizenMale_Worker at (29.40, 0.01, -139.00)",
+                "王都居民 [Humanoid] = CitizenFemale_Ochre at (-25.00, 0.01, -130.00)",
+                "王都居民 [Humanoid] = CitizenMale_Slate at (29.00, 0.01, -121.00)",
+                "王都居民 [Humanoid] = CitizenMale_Slate at (-33.00, 0.01, -112.00)",
+                "王都居民 [Humanoid] = CitizenFemale_Ochre at (25.00, 0.01, -103.00)",
+                "王都居民 [Humanoid] = CitizenMale_Hemp at (-29.00, 0.01, -94.00)",
+                "王都居民 [Humanoid] = CitizenMale_Indigo at (29.40, 0.01, -85.00)",
+                "石殿卫兵 [Humanoid] = ShangGuard_Bronze at (-7.00, 4.01, 26.00)",
+                "石殿卫兵 [Humanoid] = ShangGuard_Bronze at (7.00, 4.01, 26.00)"
+            ]
+        },
+        {
+            "scene": "03_MedievalTribunal",
+            "replaced": 2,
+            "humanoidActors": 6,
+            "remainingStandIns": 0,
+            "placements": [
+                "教廷卫兵 [Humanoid] = ChurchGuard_Steel at (-7.20, 0.01, 6.00)",
+                "教廷卫兵 [Humanoid] = ChurchGuard_Steel at (7.20, 0.01, 6.00)"
+            ]
+        }
+    ]
+}

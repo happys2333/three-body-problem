@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-28",
+  "skills": [
+    "/Users/happys/.agents/skills/unity-asset-production",
+    "/Users/happys/.agents/skills/unity-cli"
+  ],
+  "passed": true,
+  "scenarios": [
+    {
+      "scenario": "Current project from unrelated cwd; process path verified",
+      "passed": true,
+      "state": "running_without_pipeline",
+      "editor": "6000.3.26f1",
+      "cli": "1.0.0-beta.13"
+    },
+    {
+      "scenario": "Non-Unity directory rejected",
+      "passed": true,
+      "exitCode": 2
+    },
+    {
+      "scenario": "Missing CLI reported without changing project",
+      "passed": true
+    },
+    {
+      "scenario": "Same-name separate checkout cannot borrow running Editor",
+      "passed": true,
+      "state": "unverified_instance"
+    }
+  ],
+  "protectedProjectFilesUnchanged": 26,
+  "scope": "Skill format/discovery-location and read-only probe checks; no claim of a separate conversation run or Pipeline command execution.",
+  "formatValidation": {
+    "unity-cli": "passed",
+    "unity-asset-production": "passed"
+  },
+  "userSkillRoot": "/Users/happys/.agents/skills"
+}

@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-26",
+  "unity": "6000.3.26f1",
+  "editMode": {
+    "passed": 19,
+    "total": 19,
+    "jobId": "92edb76e731a425da4547a4a3f0f9354"
+  },
+  "journey": {
+    "passed": true,
+    "checks": 47,
+    "errors": [],
+    "resolutions": [
+      "960x540",
+      "1280x720",
+      "1920x1080",
+      "1024x768"
+    ]
+  },
+  "physicalWalking": {
+    "passed": true,
+    "checks": 30,
+    "metresWalked": 361.7454833984375,
+    "errors": []
+  },
+  "profiling": {
+    "gpu": "Apple M5",
+    "passed": true,
+    "errors": [],
+    "metrics": [
+      {
+        "scene": "01_GobiJourney",
+        "moment": "巨日 · 岩下避险",
+        "meanFrameMs": 3.9220736026763916,
+        "p95FrameMs": 13.719253540039062,
+        "meanMainThreadMs": 3.924431085586548,
+        "batches": 117,
+        "triangles": 872608,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "scene": "02_ChaogeCourt",
+        "moment": "朝歌 · 殷商王都",
+        "meanFrameMs": 4.401586532592773,
+        "p95FrameMs": 6.300545692443848,
+        "meanMainThreadMs": 4.393121242523193,
+        "batches": 479,
+        "triangles": 290900,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "scene": "02_ChaogeCourt",
+        "moment": "王庭前广场",
+        "meanFrameMs": 4.280893325805664,
+        "p95FrameMs": 5.4232497215271,
+        "meanMainThreadMs": 4.276943683624268,
+        "batches": 332,
+        "triangles": 145424,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "scene": "02_ChaogeCourt",
+        "moment": "王都全景与城邑密度",
+        "meanFrameMs": 4.282674312591553,
+        "p95FrameMs": 7.2441253662109375,
+        "meanMainThreadMs": 4.281549453735352,
+        "batches": 292,
+        "triangles": 251894,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "scene": "02_ChaogeCourt",
+        "moment": "长夜 · 没有到来的日出",
+        "meanFrameMs": 3.580413341522217,
+        "p95FrameMs": 4.924128532409668,
+        "meanMainThreadMs": 3.5790183544158936,
+        "batches": 284,
+        "triangles": 124620,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "scene": "03_MedievalTribunal",
+        "moment": "三日凌空 · 文明崩溃",
+        "meanFrameMs": 3.2750473022460938,
+        "p95FrameMs": 9.149213790893555,
+        "meanMainThreadMs": 3.274235486984253,
+        "batches": 54,
+        "triangles": 38864,
+        "width": 1920,
+        "height": 1080
+      }
+    ]
+  },
+  "build": {
+    "jobId": "build-bbffcdaf15",
+    "platform": "StandaloneOSX",
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 0,
+    "sizeMiB": 338.52,
+    "output": "Builds/macOS/ThreeBodyTraveller.app"
+  },
+  "profilingAndWalkingBuildJobId": "build-d7c631b032",
+  "finalBuildDifference": "Final build also updates the court daylight wording and verifies the departure direction helper.",
+  "runtimeShadowDistanceMetres": 100,
+  "nativeReports": "Logs/ShangCapitalQA/native",
+  "sceneHashes": {
+    "Assets/_Project/Scenes/Traveller/03_MedievalTribunal.unity": "6b3f3b8219b102d815e5834181a8b854c69769ab4c99c08299724260110ea3a7",
+    "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity": "b1ba9975571cd4ff7b302a8d7ae79f71d0f8090099633e8a79a6a0e1c38ade3a",
+    "Assets/_Project/Scenes/Traveller/01_GobiJourney.unity": "256e7c16a6bec61e1fc99f43e8c719ae65a853fea2309dadb7cce5a563bb1865"
+  }
+}

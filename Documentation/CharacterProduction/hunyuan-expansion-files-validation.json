@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-28",
+  "sourceFileChecks": 35,
+  "errors": [],
+  "sceneSHA256": {
+    "03_MedievalTribunal.unity": "1238bd663d25c21a268bd218c4c68df4b222f7a109215d50e8895dc3a0c9ac88",
+    "02_ChaogeCourt.unity": "7507bcd0a927e5c1d174e91ebbe35af7eb96f5c2f32e7a6d36ff1a8b449d3dc2",
+    "01_GobiJourney.unity": "30b86b32a693ab2eedbd1ac1c50d1ce02e8c47f5abf4a5b2533a6078685327b8"
+  },
+  "missingExpansionMeta": []
+}

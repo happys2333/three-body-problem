@@ -1,0 +1,23 @@
+{
+  "scene": "Assets/_Project/Scenes/Traveller/01_GobiJourney.unity",
+  "sceneCount": 1,
+  "dirty": false,
+  "playing": false,
+  "instances": 103,
+  "lodGroups": 103,
+  "completeLods": true,
+  "completeMaterials": true,
+  "activeColliders": 92,
+  "firstPersonCamera": true,
+  "terrain": "Assets/_Project/Art/EnvironmentReady/GobiDressing/GobiDressedTerrain.asset",
+  "canopy": [
+    {
+      "lodTriangles": [
+        52394,
+        11798,
+        2690
+      ],
+      "collision": 11798
+    }
+  ]
+}

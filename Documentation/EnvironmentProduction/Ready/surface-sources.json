@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-28",
+  "assets": [
+    {
+      "id": "rock_face",
+      "source": "https://polyhaven.com/a/rock_face",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "kind": "diff",
+          "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/rock_face/rock_face_diff_2k.jpg",
+          "sha256": "b989c832327538a9e546cca359417acb9a657d041f300407e8398daaf743f5bc",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rock_face/rock_face_diff_2k.jpg"
+        },
+        {
+          "kind": "nor_gl",
+          "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/rock_face/rock_face_nor_gl_2k.jpg",
+          "sha256": "352b87db2502d54487b0ed8abdfb621fae2abf7d360a281b419f567346178cf0",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rock_face/rock_face_nor_gl_2k.jpg"
+        },
+        {
+          "kind": "rough",
+          "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/rock_face/rock_face_rough_2k.jpg",
+          "sha256": "91517cdc191bf60fdb135929e12041e2ad50dd7343b33f25dae75d87ba61b226",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rock_face/rock_face_rough_2k.jpg"
+        },
+        {
+          "kind": "ao",
+          "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/rock_face/rock_face_ao_2k.jpg",
+          "sha256": "a1307b27bb712faa3569ec6bfbd74e867c30f66a815df3fc88f86b6158551d5d",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rock_face/rock_face_ao_2k.jpg"
+        }
+      ]
+    },
+    {
+      "id": "thatch_roof_angled",
+      "source": "https://polyhaven.com/a/thatch_roof_angled",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "kind": "diff",
+          "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/thatch_roof_angled/thatch_roof_angled_diff_2k.jpg",
+          "sha256": "dd544436986e9be6ae80996fbd132c67b38c81e8ed1b7c4384a961efe87460b7",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/thatch_roof_angled/thatch_roof_angled_diff_2k.jpg"
+        },
+        {
+          "kind": "nor_gl",
+          "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/thatch_roof_angled/thatch_roof_angled_nor_gl_2k.jpg",
+          "sha256": "e7b71772b830fb1a45f82cb796ace9233e5c331f4c3410aba142d8c69a8710e0",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/thatch_roof_angled/thatch_roof_angled_nor_gl_2k.jpg"
+        },
+        {
+          "kind": "rough",
+          "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/thatch_roof_angled/thatch_roof_angled_rough_2k.jpg",
+          "sha256": "511d4d0369fe1676bc31587390a3d5823664ef516efd5bef7d9a4f809bd55382",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/thatch_roof_angled/thatch_roof_angled_rough_2k.jpg"
+        },
+        {
+          "kind": "ao",
+          "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/thatch_roof_angled/thatch_roof_angled_ao_2k.jpg",
+          "sha256": "b2c2694a10403a9f1508d28cf44f4e65c11da2430e48cb76bee4c99e7ba1ea42",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/thatch_roof_angled/thatch_roof_angled_ao_2k.jpg"
+        }
+      ]
+    },
+    {
+      "id": "pine_bark",
+      "source": "https://polyhaven.com/a/pine_bark",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "kind": "diff",
+          "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/pine_bark/pine_bark_diff_2k.jpg",
+          "sha256": "741f333ab9f8a0996d8a53905b5ac792fab77d7ccb8cac5fbaed8c99b9f6abd5",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/pine_bark/pine_bark_diff_2k.jpg"
+        },
+        {
+          "kind": "nor_gl",
+          "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/pine_bark/pine_bark_nor_gl_2k.jpg",
+          "sha256": "e91d024441a698523472ef2001be2eade2f73005d798466c7acd3ec5d585667f",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/pine_bark/pine_bark_nor_gl_2k.jpg"
+        },
+        {
+          "kind": "rough",
+          "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/pine_bark/pine_bark_rough_2k.jpg",
+          "sha256": "a86618f6358a97410b15d226d0b3d52bb203aed8d9a29cfa355769b95df94d03",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/pine_bark/pine_bark_rough_2k.jpg"
+        },
+        {
+          "kind": "ao",
+          "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/pine_bark/pine_bark_ao_2k.jpg",
+          "sha256": "c76f03e24de9f5bb826676b0c34bfa49e5d1ca240166a2811d2d3874d47d21bd",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/pine_bark/pine_bark_ao_2k.jpg"
+        }
+      ]
+    }
+  ]
+}

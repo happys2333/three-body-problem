@@ -1,0 +1,75 @@
+{
+    "passed": true,
+    "checks": 48,
+    "metresWalked": 168.8568115234375,
+    "gpu": "Apple M5",
+    "errors": [],
+    "metrics": [
+        {
+            "moment": 0,
+            "width": 1920,
+            "height": 1080,
+            "meanMs": 8.378992080688477,
+            "p95Ms": 8.612585067749024,
+            "gpuMeanMs": 7.595770835876465,
+            "gpuSamples": 360,
+            "batches": 401,
+            "triangles": 6486161
+        },
+        {
+            "moment": 1,
+            "width": 1920,
+            "height": 1080,
+            "meanMs": 8.333598136901856,
+            "p95Ms": 8.334999084472657,
+            "gpuMeanMs": 7.0247273445129398,
+            "gpuSamples": 360,
+            "batches": 346,
+            "triangles": 6310567
+        },
+        {
+            "moment": 2,
+            "width": 1920,
+            "height": 1080,
+            "meanMs": 8.357950210571289,
+            "p95Ms": 8.4456205368042,
+            "gpuMeanMs": 6.354245185852051,
+            "gpuSamples": 360,
+            "batches": 256,
+            "triangles": 4913648
+        },
+        {
+            "moment": 3,
+            "width": 1920,
+            "height": 1080,
+            "meanMs": 8.333451271057129,
+            "p95Ms": 8.33496379852295,
+            "gpuMeanMs": 6.873198986053467,
+            "gpuSamples": 360,
+            "batches": 264,
+            "triangles": 4364039
+        },
+        {
+            "moment": 4,
+            "width": 1920,
+            "height": 1080,
+            "meanMs": 8.335342407226563,
+            "p95Ms": 8.3496675491333,
+            "gpuMeanMs": 6.212404251098633,
+            "gpuSamples": 360,
+            "batches": 195,
+            "triangles": 3349325
+        },
+        {
+            "moment": 5,
+            "width": 1920,
+            "height": 1080,
+            "meanMs": 8.35679817199707,
+            "p95Ms": 8.42312240600586,
+            "gpuMeanMs": 6.355483531951904,
+            "gpuSamples": 360,
+            "batches": 172,
+            "triangles": 3467515
+        }
+    ]
+}

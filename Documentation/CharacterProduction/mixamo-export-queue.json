@@ -1,0 +1,143 @@
+[
+  {
+    "title": "Running Tired",
+    "id": "MX_RunToExhaustion",
+    "expectedDownload": "/Users/happys/Downloads/Y Bot@Running Tired.fbx",
+    "state": "archived",
+    "sourcePage": "https://www.mixamo.com/#/?page=1&query=tired&type=Motion%2CMotionPack"
+  },
+  {
+    "title": "Pointing Forward",
+    "id": "MX_PointForward",
+    "expectedDownload": "/Users/happys/Downloads/Y Bot@Pointing Forward.fbx",
+    "state": "archived",
+    "sourcePage": "https://www.mixamo.com/#/?page=1&query=pointing&type=Motion%2CMotionPack"
+  },
+  {
+    "title": "Standing Torch Inspect Upward",
+    "id": "MX_LookUpTorchBase",
+    "expectedDownload": "/Users/happys/Downloads/Y Bot@Standing Torch Inspect Upward.fbx",
+    "state": "archived",
+    "sourcePage": "https://www.mixamo.com/#/?page=1&query=looking+up&type=Motion%2CMotionPack"
+  },
+  {
+    "title": "Terrified",
+    "id": "MX_Fear",
+    "expectedDownload": "/Users/happys/Downloads/Y Bot@Terrified.fbx",
+    "state": "archived",
+    "sourcePage": "https://www.mixamo.com/#/?page=1&query=terrified&type=Motion%2CMotionPack",
+    "sourceName": "Terrified — Being Terrified While Standing"
+  },
+  {
+    "title": "Praying",
+    "id": "MX_PrayStanding",
+    "expectedDownload": "/Users/happys/Downloads/Y Bot@Praying.fbx",
+    "state": "archived",
+    "sourcePage": "https://www.mixamo.com/#/?page=1&query=praying&type=Motion%2CMotionPack",
+    "sourceName": "Praying — Standing Praying While Swaying"
+  },
+  {
+    "title": "Sitting",
+    "id": "MX_SitDown",
+    "expectedDownload": "/Users/happys/Downloads/Y Bot@Sitting.fbx",
+    "state": "archived",
+    "sourcePage": "https://www.mixamo.com/#/?page=1&query=sitting+down&type=Motion%2CMotionPack",
+    "sourceName": "Sitting — Sitting Down Arms Outside Armrests"
+  },
+  {
+    "title": "Sitting Idle",
+    "id": "MX_SitIdle",
+    "expectedDownload": "/Users/happys/Downloads/Y Bot@Sitting Idle.fbx",
+    "state": "archived",
+    "sourcePage": "https://www.mixamo.com/#/?page=1&query=sitting+idle&type=Motion%2CMotionPack",
+    "sourceName": "Sitting Idle — Sitting With Breathing Idle"
+  },
+  {
+    "title": "Standing Up",
+    "id": "MX_StandFromSeat",
+    "expectedDownload": "/Users/happys/Downloads/Y Bot@Standing Up.fbx",
+    "state": "archived",
+    "sourcePage": "https://www.mixamo.com/#/?page=1&query=standing+up&type=Motion%2CMotionPack",
+    "sourceName": "Standing Up — Sitting To Standing"
+  },
+  {
+    "title": "Picking Up Object",
+    "id": "MX_PickUp",
+    "expectedDownload": "/Users/happys/Downloads/Y Bot@Picking Up Object.fbx",
+    "state": "archived",
+    "sourcePage": "https://www.mixamo.com/#/?page=1&query=picking+up&type=Motion%2CMotionPack",
+    "sourceName": "Picking Up Object — Picking Up An Object With One Hand"
+  },
+  {
+    "title": "Writing",
+    "id": "MX_WriteSeated",
+    "expectedDownload": "/Users/happys/Downloads/Y Bot@Writing.fbx",
+    "state": "archived",
+    "sourcePage": "https://www.mixamo.com/#/?page=1&query=writing&type=Motion%2CMotionPack",
+    "sourceName": "Writing — Male Writing While Seated"
+  },
+  {
+    "title": "Opening A Lid",
+    "id": "MX_OpenBox",
+    "expectedDownload": "/Users/happys/Downloads/Y Bot@Opening A Lid.fbx",
+    "state": "archived",
+    "sourcePage": "https://www.mixamo.com/#/?page=1&query=opening+a+lid&type=Motion%2CMotionPack",
+    "sourceName": "Opening A Lid — Opening The Lid On A Chest Or Box"
+  },
+  {
+    "title": "Thinking",
+    "id": "MX_Think",
+    "expectedDownload": "/Users/happys/Downloads/Y Bot@Thinking.fbx",
+    "state": "archived",
+    "sourcePage": "https://www.mixamo.com/#/?page=1&query=thinking&type=Motion%2CMotionPack",
+    "sourceName": "Thinking — Thinking While Standing"
+  },
+  {
+    "title": "Looking",
+    "id": "MX_ShieldEyes",
+    "expectedDownload": "/Users/happys/Downloads/Y Bot@Looking.fbx",
+    "state": "archived",
+    "sourcePage": "https://www.mixamo.com/#/?page=1&query=book&type=Motion%2CMotionPack",
+    "sourceName": "Looking — Looking With Hand Shading Eyes"
+  },
+  {
+    "title": "Kneeling Down",
+    "id": "MX_KneelDown",
+    "expectedDownload": "/Users/happys/Downloads/Y Bot@Kneeling Down.fbx",
+    "state": "archived",
+    "sourcePage": "https://www.mixamo.com/#/?page=1&query=kneeling+down&type=Motion%2CMotionPack",
+    "sourceName": "Kneeling Down — Standing To Kneeling Down"
+  },
+  {
+    "title": "Standing Arguing",
+    "id": "MX_TalkArgue",
+    "expectedDownload": "/Users/happys/Downloads/Y Bot@Standing Arguing.fbx",
+    "state": "archived",
+    "sourcePage": "https://www.mixamo.com/#/?page=1&query=standing+arguing&type=Motion%2CMotionPack",
+    "sourceName": "Standing Arguing — Standing And Arguing With Another Person"
+  },
+  {
+    "title": "Box Idle",
+    "id": "MX_CarryBoxIdle",
+    "expectedDownload": "/Users/happys/Downloads/Y Bot@Box Idle.fbx",
+    "state": "archived",
+    "sourcePage": "https://www.mixamo.com/#/?page=1&query=holding+idle&type=Motion%2CMotionPack",
+    "sourceName": "Box Idle — Carrying A Box"
+  },
+  {
+    "title": "Holding Walk",
+    "id": "MX_CarryBoxWalk",
+    "expectedDownload": "/Users/happys/Downloads/Y Bot@Holding Walk.fbx",
+    "state": "archived",
+    "sourcePage": "https://www.mixamo.com/#/?page=1&query=holding+walk&type=Motion%2CMotionPack",
+    "sourceName": "Holding Walk — Holding An Object While Walking"
+  },
+  {
+    "title": "Quick Formal Bow",
+    "id": "MX_Bow",
+    "expectedDownload": "/Users/happys/Downloads/Y Bot@Quick Formal Bow.fbx",
+    "state": "archived",
+    "sourcePage": "https://www.mixamo.com/#/?page=1&query=bow&type=Motion%2CMotionPack",
+    "sourceName": "Quick Formal Bow — Quick Formal Bow"
+  }
+]

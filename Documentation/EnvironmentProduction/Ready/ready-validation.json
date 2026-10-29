@@ -1,0 +1,466 @@
+{
+    "assets": [
+        {
+            "id": "GobiMountainPeak",
+            "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/GobiMountainPeak.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/GobiMountainPeak.prefab",
+            "usage": "Static environment dressing.",
+            "modifications": [
+                "Display plinth cropped and capped",
+                "Smoothed and displaced geological surface"
+            ],
+            "materialsUsed": [
+                "Rock"
+            ],
+            "trianglesByLod": [
+                110000,
+                25000,
+                5000
+            ],
+            "collisionTriangles": 5000,
+            "width": 113.88166809082031,
+            "height": 120.09989166259766,
+            "depth": 128.61016845703126,
+            "passed": true
+        },
+        {
+            "id": "GobiRidge",
+            "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/GobiRidge.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/GobiRidge.prefab",
+            "usage": "Static environment dressing.",
+            "modifications": [
+                "Reconstructed three-peak ridge from repaired mountain; hallucinated gate source excluded"
+            ],
+            "materialsUsed": [
+                "Rock"
+            ],
+            "trianglesByLod": [
+                90680,
+                27204,
+                6000
+            ],
+            "collisionTriangles": 6000,
+            "width": 178.466796875,
+            "height": 90.0,
+            "depth": 101.5171127319336,
+            "passed": true
+        },
+        {
+            "id": "WindErodedCliff",
+            "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/WindErodedCliff.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/WindErodedCliff.prefab",
+            "usage": "Static environment dressing.",
+            "modifications": [
+                "Display plinth cropped and capped",
+                "Smoothed and displaced geological surface"
+            ],
+            "materialsUsed": [
+                "Rock"
+            ],
+            "trianglesByLod": [
+                85000,
+                20000,
+                4500
+            ],
+            "collisionTriangles": 4500,
+            "width": 18.640012741088868,
+            "height": 26.15432357788086,
+            "depth": 18.022994995117189,
+            "passed": true
+        },
+        {
+            "id": "YardangMesa",
+            "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/YardangMesa.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/YardangMesa.prefab",
+            "usage": "Static environment dressing.",
+            "modifications": [
+                "Display plinth cropped and capped",
+                "Smoothed and displaced geological surface"
+            ],
+            "materialsUsed": [
+                "Rock"
+            ],
+            "trianglesByLod": [
+                75000,
+                18000,
+                4000
+            ],
+            "collisionTriangles": 4000,
+            "width": 46.708099365234378,
+            "height": 28.134183883666993,
+            "depth": 71.42147827148438,
+            "passed": true
+        },
+        {
+            "id": "GobiRockCluster",
+            "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/GobiRockCluster.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/GobiRockCluster.prefab",
+            "usage": "Static environment dressing.",
+            "modifications": [
+                "Display plinth cropped and capped",
+                "Smoothed and displaced geological surface"
+            ],
+            "materialsUsed": [
+                "Rock"
+            ],
+            "trianglesByLod": [
+                29366,
+                8000,
+                1800
+            ],
+            "collisionTriangles": 8000,
+            "width": 4.909500598907471,
+            "height": 4.010576248168945,
+            "depth": 3.8894081115722658,
+            "passed": true
+        },
+        {
+            "id": "RockOverhang",
+            "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/RockOverhang.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/RockOverhang.prefab",
+            "usage": "Static environment dressing.",
+            "modifications": [
+                "Display plinth cropped and capped",
+                "Smoothed and displaced geological surface"
+            ],
+            "materialsUsed": [
+                "Rock"
+            ],
+            "trianglesByLod": [
+                80000,
+                18000,
+                4000
+            ],
+            "collisionTriangles": 18000,
+            "width": 28.15554428100586,
+            "height": 15.739203453063965,
+            "depth": 24.736557006835939,
+            "passed": true
+        },
+        {
+            "id": "DeadTamarisk",
+            "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/DeadTamarisk.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/DeadTamarisk.prefab",
+            "usage": "Static environment dressing.",
+            "modifications": [
+                "Display soil base trimmed; vegetation surface rebuilt"
+            ],
+            "materialsUsed": [
+                "Bark"
+            ],
+            "trianglesByLod": [
+                29208,
+                8000,
+                1800
+            ],
+            "collisionTriangles": 8000,
+            "width": 1.6796777248382569,
+            "height": 2.200000047683716,
+            "depth": 0.953482985496521,
+            "passed": true
+        },
+        {
+            "id": "DesertThornBush",
+            "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/DesertThornBush.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/DesertThornBush.prefab",
+            "usage": "Static environment dressing.",
+            "modifications": [
+                "Display soil base trimmed; vegetation surface rebuilt"
+            ],
+            "materialsUsed": [
+                "Bark"
+            ],
+            "trianglesByLod": [
+                18000,
+                5000,
+                1200
+            ],
+            "collisionTriangles": 5000,
+            "width": 0.867577850818634,
+            "height": 1.0000083446502686,
+            "depth": 0.8077391386032105,
+            "passed": true
+        },
+        {
+            "id": "GobiWaystone",
+            "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/GobiWaystone.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/GobiWaystone.prefab",
+            "usage": "Static environment dressing.",
+            "modifications": [
+                "Pedestal cropped; protruding front hardware flattened into stone"
+            ],
+            "materialsUsed": [
+                "Rock"
+            ],
+            "trianglesByLod": [
+                6500,
+                1800,
+                450
+            ],
+            "collisionTriangles": 1800,
+            "width": 0.6487563848495483,
+            "height": 1.6998162269592286,
+            "depth": 0.5035039186477661,
+            "passed": true
+        },
+        {
+            "id": "CaravanSupplies",
+            "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/CaravanSupplies.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/CaravanSupplies.prefab",
+            "usage": "Static environment dressing.",
+            "modifications": [
+                "Original atlas-sensitive geometry and validated UV-preserving LODs retained; leather tint and roughness adjusted; small fasteners retained."
+            ],
+            "materialsUsed": [
+                "OriginalSupplies"
+            ],
+            "trianglesByLod": [
+                50094,
+                20688,
+                6780
+            ],
+            "collisionTriangles": 20688,
+            "width": 0.9938220381736755,
+            "height": 0.7999999523162842,
+            "depth": 0.5613069534301758,
+            "passed": true
+        },
+        {
+            "id": "ShangDwelling",
+            "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/ShangDwelling.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/ShangDwelling.prefab",
+            "usage": "Static exterior shell; door is intentionally closed.",
+            "modifications": [
+                "Curved jade-trim roof removed; straight pitched timber and thick thatch roof rebuilt"
+            ],
+            "materialsUsed": [
+                "Earth",
+                "Masonry",
+                "Thatch",
+                "Wood"
+            ],
+            "trianglesByLod": [
+                65000,
+                16000,
+                3600
+            ],
+            "collisionTriangles": 16000,
+            "width": 7.292525291442871,
+            "height": 4.251954078674316,
+            "depth": 5.508171081542969,
+            "passed": true
+        },
+        {
+            "id": "ShangWorkshop",
+            "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/ShangWorkshop.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/ShangWorkshop.prefab",
+            "usage": "Static exterior shell; door is intentionally closed.",
+            "modifications": [
+                "Curved jade-trim roof removed; straight pitched timber and thick thatch roof rebuilt",
+                "High chimney plume region removed: 3537 faces"
+            ],
+            "materialsUsed": [
+                "Earth",
+                "Masonry",
+                "Thatch",
+                "Wood"
+            ],
+            "trianglesByLod": [
+                70000,
+                18000,
+                4000
+            ],
+            "collisionTriangles": 18000,
+            "width": 7.153454780578613,
+            "height": 5.0527729988098148,
+            "depth": 6.8542256355285648,
+            "passed": true
+        },
+        {
+            "id": "ShangGranary",
+            "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/ShangGranary.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/ShangGranary.prefab",
+            "usage": "Static exterior shell; door is intentionally closed.",
+            "modifications": [
+                "Curved jade-trim roof removed; straight pitched timber and thick thatch roof rebuilt"
+            ],
+            "materialsUsed": [
+                "Earth",
+                "Thatch",
+                "Wood"
+            ],
+            "trianglesByLod": [
+                30000,
+                8000,
+                1800
+            ],
+            "collisionTriangles": 8000,
+            "width": 5.464241027832031,
+            "height": 4.8520002365112309,
+            "depth": 5.627933502197266,
+            "passed": true
+        },
+        {
+            "id": "ShangMarketStall",
+            "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/ShangMarketStall.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/ShangMarketStall.prefab",
+            "usage": "Static environment dressing.",
+            "modifications": [
+                "Curved jade-trim roof removed; straight pitched timber and thick thatch roof rebuilt"
+            ],
+            "materialsUsed": [
+                "Earth",
+                "Masonry",
+                "Thatch",
+                "Wood"
+            ],
+            "trianglesByLod": [
+                26000,
+                7000,
+                1600
+            ],
+            "collisionTriangles": 7000,
+            "width": 3.031698703765869,
+            "height": 3.052000045776367,
+            "depth": 2.1978185176849367,
+            "passed": true
+        },
+        {
+            "id": "RammedEarthGatehouse",
+            "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/RammedEarthGatehouse.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/RammedEarthGatehouse.prefab",
+            "usage": "Static architecture with a through aperture.",
+            "modifications": [
+                "Curved jade-trim roof removed; straight pitched timber and thick thatch roof rebuilt",
+                "Through aperture carved for first-person capsule clearance"
+            ],
+            "materialsUsed": [
+                "Earth",
+                "Masonry",
+                "Thatch",
+                "Wood"
+            ],
+            "trianglesByLod": [
+                79999,
+                20000,
+                4500
+            ],
+            "collisionTriangles": 20000,
+            "width": 14.307140350341797,
+            "height": 13.08250617980957,
+            "depth": 12.31784439086914,
+            "passed": true
+        },
+        {
+            "id": "PyramidPortal",
+            "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/PyramidPortal.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/PyramidPortal.prefab",
+            "usage": "Static architecture with a through aperture.",
+            "modifications": [
+                "Through aperture carved for first-person capsule clearance"
+            ],
+            "materialsUsed": [
+                "Masonry"
+            ],
+            "trianglesByLod": [
+                29999,
+                8000,
+                1800
+            ],
+            "collisionTriangles": 8000,
+            "width": 5.0778350830078129,
+            "height": 3.500234842300415,
+            "depth": 3.498621940612793,
+            "passed": true
+        },
+        {
+            "id": "PyramidStonePanel",
+            "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/PyramidStonePanel.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/PyramidStonePanel.prefab",
+            "usage": "Static environment dressing.",
+            "modifications": [
+                "Wall depth reduced to 0.65 m"
+            ],
+            "materialsUsed": [
+                "Masonry"
+            ],
+            "trianglesByLod": [
+                20000,
+                5500,
+                1200
+            ],
+            "collisionTriangles": 5500,
+            "width": 6.000638484954834,
+            "height": 3.842602014541626,
+            "depth": 0.6499571204185486,
+            "passed": true
+        },
+        {
+            "id": "MedievalTownhouse",
+            "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/MedievalTownhouse.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/MedievalTownhouse.prefab",
+            "usage": "Static exterior shell; door is intentionally closed.",
+            "modifications": [],
+            "materialsUsed": [
+                "Earth",
+                "Masonry",
+                "RoofTile",
+                "Wood"
+            ],
+            "trianglesByLod": [
+                75000,
+                18000,
+                4000
+            ],
+            "collisionTriangles": 18000,
+            "width": 6.248376846313477,
+            "height": 8.999029159545899,
+            "depth": 5.854247093200684,
+            "passed": true
+        },
+        {
+            "id": "GothicWindowWall",
+            "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/GothicWindowWall.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/GothicWindowWall.prefab",
+            "usage": "Static environment dressing.",
+            "modifications": [
+                "Decorative apex removed and solid plain gable coping reconstructed; window opening retained"
+            ],
+            "materialsUsed": [
+                "Masonry"
+            ],
+            "trianglesByLod": [
+                32000,
+                8000,
+                1800
+            ],
+            "collisionTriangles": 8000,
+            "width": 5.439484596252441,
+            "height": 7.999999523162842,
+            "depth": 4.059751510620117,
+            "passed": true
+        },
+        {
+            "id": "MedievalButtress",
+            "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/MedievalButtress.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/MedievalButtress.prefab",
+            "usage": "Static environment dressing.",
+            "modifications": [
+                "Rebuilt structural stepped buttress; shrine and statue excluded"
+            ],
+            "materialsUsed": [
+                "Masonry"
+            ],
+            "trianglesByLod": [
+                23998,
+                6500,
+                1500
+            ],
+            "collisionTriangles": 6500,
+            "width": 2.2062017917633058,
+            "height": 11.999999046325684,
+            "depth": 3.9919917583465578,
+            "passed": true
+        }
+    ]
+}

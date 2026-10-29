@@ -1,0 +1,147 @@
+{
+  "readyForGameplayReview": true,
+  "build": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 0
+  },
+  "editMode": {
+    "total": 44,
+    "passed": 44,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 20.9406306,
+    "resultState": "Passed"
+  },
+  "nativeChecks": 49,
+  "journeyChecks": 50,
+  "characterChecks": 55,
+  "fullRealWaitTiming": {
+    "passed": true,
+    "shelterSeconds": 600.5211181640625,
+    "sunsetSeconds": 2.016845703125,
+    "originalCombinedSoakPassed": false,
+    "note": "Timing from the real 600-second run; later service/render-only fixes passed the final native run. The combined soak was not repeated."
+  },
+  "performance": {
+    "gpu": "Apple M5",
+    "resolution": "1920x1080",
+    "msaa": 2,
+    "frameRateLimit": 90,
+    "warmupFramesPerView": 180,
+    "samplesPerView": 360,
+    "worstFrameP95Ms": 14.677501678466797,
+    "passed": true,
+    "scope": "Six first-scene preview views on this machine; not a whole-game or other-hardware guarantee."
+  },
+  "vegetation": {
+    "ignited": 85,
+    "ash": 85,
+    "shadedSurvived": 53
+  },
+  "savedResources": {
+    "scenes": [
+      {
+        "scene": "01_GobiJourney",
+        "actors": 2,
+        "torchBearers": 2,
+        "identities": 1,
+        "validHumanoids": 2,
+        "fuel": 138,
+        "missingScripts": 0,
+        "microphone": true,
+        "dialogue": true
+      },
+      {
+        "scene": "02_ChaogeCourt",
+        "actors": 28,
+        "torchBearers": 28,
+        "identities": 27,
+        "validHumanoids": 28,
+        "fuel": 0,
+        "missingScripts": 0,
+        "microphone": true,
+        "dialogue": true
+      },
+      {
+        "scene": "03_MedievalTribunal",
+        "actors": 6,
+        "torchBearers": 6,
+        "identities": 5,
+        "validHumanoids": 6,
+        "fuel": 0,
+        "missingScripts": 0,
+        "microphone": true,
+        "dialogue": true
+      }
+    ],
+    "props": [
+      {
+        "name": "Torch",
+        "triangles": [
+          4212,
+          1262,
+          314
+        ],
+        "missingMaterials": 0
+      },
+      {
+        "name": "Ash",
+        "triangles": [
+          500,
+          200,
+          60
+        ],
+        "missingMaterials": 0
+      }
+    ],
+    "personas": 8,
+    "voiceLines": 6,
+    "microphoneUsage": "按住说话时，用麦克风把你的话转为可编辑文字，与旅人交流。"
+  },
+  "missingMetadata": [],
+  "protectedFilesUnchanged": {
+    "Assets/_Project/Scripts/TravellerCastSettings.cs": true,
+    "Assets/_Project/Scripts/PalaceSkylight.cs": true,
+    "Assets/_Project/Scripts/PendulumMotion.cs": true,
+    "Assets/_Project/Scripts/TravellerActor.cs": true,
+    "Assets/_Project/Scripts/ObservationJournal.cs": true,
+    "Assets/_Project/Scripts/TravellerCastDirector.cs": true,
+    "Assets/_Project/Scripts/TravellerCrowdMember.cs": true,
+    "Assets/_Project/Scripts/TravellerPlayer.cs": true,
+    "Assets/_Project/Scripts/HeatDistortion.cs": true,
+    "Assets/_Project/Scripts/CharacterMotionGallery.cs": true,
+    "Assets/_Project/Settings/Traveller/03_MedievalTribunal.asset": true,
+    "Assets/_Project/Settings/Traveller/02_ChaogeCourt.asset": true,
+    "Assets/_Project/Settings/Traveller/FieldNotesPanel.asset": true
+  },
+  "laterSceneLayouts": {
+    "02_ChaogeCourt": {
+      "transforms": 3316,
+      "unchanged": true
+    },
+    "03_MedievalTribunal": {
+      "transforms": 323,
+      "unchanged": true
+    }
+  },
+  "scopeChanges": [
+    "Assets/_Project/Scripts/TravellerSceneProfile.cs",
+    "Assets/_Project/Scripts/TravellerJourney.cs",
+    "Assets/_Project/Scripts/TravellerStage.cs",
+    "Assets/_Project/Scripts/JourneyProgress.cs",
+    "Assets/_Project/Scripts/TravellerHud.cs",
+    "Assets/_Project/Settings/Traveller/01_GobiJourney.asset",
+    "Assets/_Project/Scenes/Traveller/03_MedievalTribunal.unity",
+    "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity",
+    "Assets/_Project/Scenes/Traveller/01_GobiJourney.unity",
+    "Assets/_Project/UI/TravellerHud.uss"
+  ],
+  "limits": [
+    "Real DeepSeek generation not validated without a server key.",
+    "Hardware microphone and permission UI not activated by automated QA.",
+    "Speech recognition requires editable confirmation, especially for names.",
+    "Local ASR/TTS gateway must be running; packaged standalone voice service is not included.",
+    "Temporary macOS synthetic voice and procedural flame need final audio/art direction."
+  ]
+}

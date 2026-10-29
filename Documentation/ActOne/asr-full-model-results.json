@@ -1,0 +1,16 @@
+{
+  "model": "vosk-model-cn-0.22",
+  "syntheticSamples": [
+    {
+      "text": "他要不说别停在恋爱处跟我见识下",
+      "sample": "Warning",
+      "seconds": 3.8385144579951884
+    },
+    {
+      "text": "我是第一场我要去照着爸说演个李娃传哪个王",
+      "sample": "Identity",
+      "seconds": 2.8034629579997272
+    }
+  ],
+  "hardwareMicrophoneUsed": false
+}

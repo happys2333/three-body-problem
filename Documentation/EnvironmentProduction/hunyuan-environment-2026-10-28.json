@@ -1,0 +1,975 @@
+{
+  "date": "2026-10-28",
+  "platform": "Tencent Hunyuan 3D web V3.1 text-to-3D, user Chrome UI",
+  "entry": "https://3d.hunyuan.tencent.com/creation",
+  "quotaPool": "Home text/image-to-3D; separate from the exhausted 30-generation Studio pool. Tooltip explicitly showed daily remaining 20.",
+  "observedRemainingAtStart": 20,
+  "observedRemainingAfterSubmission": 0,
+  "submissions": 20,
+  "purchaseOrSubscription": false,
+  "status": "library_delivery_art_rework_required",
+  "scope": "Generate game environment resources. Validate and prepare library assets before any story scene replacement. No generated building is assumed to have functional doorways or correct historical style.",
+  "assets": [
+    {
+      "id": "GobiMountainPeak",
+      "name": "荒漠高山",
+      "order": 1,
+      "prompt": "单座高耸荒漠岩山，尖锐不对称主峰与破碎山脊，灰褐砂岩层理、风蚀凹槽、碎石坡脚，山体底部宽厚可埋入地形，完整独立三维体块。电影写实游戏环境，真实粗糙石材，均匀漫射光，浅灰纯背景。无雪无树无建筑无人，无天空地台，无卡通低多边形风格。",
+      "requestedTriangles": 500000,
+      "targetSizeMetres": 120,
+      "sizeAxis": "height",
+      "category": "gobi",
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/05d4f7a049b4d32302df57b861faed77.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-28/GobiMountainPeak/GobiMountainPeak_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment/GobiMountainPeak/GobiMountainPeak_PBR.fbx",
+        "sha256": "36207c96096805bd39d0ab1c5be172473f6c8626ababd6b7fc4084c9602bdd4e",
+        "bytes": 63312700
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Unity LOD0 isolated preview, 2026-10-28",
+        "note": "尖峰、裂面和宽底形体完整，但三角块面与绘制裂纹明显，保留为山势参考；需要重做写实岩面、轮廓细节与地形接缝。"
+      },
+      "unityValidation": {
+        "id": "GobiMountainPeak",
+        "source": "Assets/_Project/Art/HunyuanEnvironment/GobiMountainPeak/GobiMountainPeak_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/GobiMountainPeak.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          499716,
+          29942,
+          6557
+        ],
+        "widthMetres": 134.89508056640625,
+        "heightMetres": 120.0,
+        "depthMetres": 155.97889709472656,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment/GobiMountainPeak/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment/GobiMountainPeak/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment/GobiMountainPeak/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment/GobiMountainPeak/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      }
+    },
+    {
+      "id": "GobiRidge",
+      "name": "破碎岩脊",
+      "order": 2,
+      "prompt": "单段狭长荒漠山脊，三个高低错落的尖峰，灰褐色岩层断面、沟壑和崩落碎石，左右两端自然收低，宽厚底部便于埋入地形，独立完整体块。电影写实游戏环境，粗糙石材，均匀漫射光，浅灰纯背景。无植被建筑人物，无天空地台，无卡通低多边形。",
+      "requestedTriangles": 500000,
+      "targetSizeMetres": 90,
+      "sizeAxis": "height",
+      "category": "gobi",
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/c9e2e4c267eeff1f8ef00b53cc367bb7.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-28/GobiRidge/GobiRidge_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment/GobiRidge/GobiRidge_PBR.fbx",
+        "sha256": "85584fb523d570366339289ee3fe2e77fcd922e517d55b2e45215e0b6f0e8f72",
+        "bytes": 60933884
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Unity LOD0 isolated preview, 2026-10-28",
+        "note": "生成结果混入类似门洞、栅格的人工结构，且不是要求的三个高低错落的自然尖峰；本轮不作为纯自然山脊直接采用。需使用明确自然山脊参考图重生成，或拆除人工结构后再复核。",
+        "roleDecision": "rejected_for_direct_use_as_natural_ridge"
+      },
+      "unityValidation": {
+        "id": "GobiRidge",
+        "source": "Assets/_Project/Art/HunyuanEnvironment/GobiRidge/GobiRidge_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/GobiRidge.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          499698,
+          23589,
+          5266
+        ],
+        "widthMetres": 77.73506927490234,
+        "heightMetres": 90.00000762939453,
+        "depthMetres": 186.283935546875,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment/GobiRidge/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment/GobiRidge/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment/GobiRidge/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment/GobiRidge/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      }
+    },
+    {
+      "id": "WindErodedCliff",
+      "name": "风蚀断崖",
+      "order": 3,
+      "prompt": "单块戈壁风蚀断崖，顶部厚重不规则，垂直层状砂岩、风蚀孔洞和深凹槽，底部少量自然崩石，灰褐与赭黄色，背面完整，厚底可埋地。电影写实游戏环境，高细节岩石表面，均匀漫射光，浅灰纯背景。无植被建筑人物，无天空与地台，无卡通风格。",
+      "requestedTriangles": 500000,
+      "targetSizeMetres": 26,
+      "sizeAxis": "height",
+      "category": "gobi",
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/93430d55ef7c6e7d7717ced5e45e6b0f.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-28/WindErodedCliff/WindErodedCliff_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment/WindErodedCliff/WindErodedCliff_PBR.fbx",
+        "sha256": "58ca585e9dd0ba81a20c8bfe455ad1f8376996e8dc453bd60434d90ed884b395",
+        "bytes": 58702284
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Unity LOD0 isolated preview, 2026-10-28",
+        "note": "竖直层状岩柱与凹槽可读，但表面光滑、存在规则展示底座；需要重做写实岩面并处理底部地形过渡，不认定为最终写实断崖。"
+      },
+      "unityValidation": {
+        "id": "WindErodedCliff",
+        "source": "Assets/_Project/Art/HunyuanEnvironment/WindErodedCliff/WindErodedCliff_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/WindErodedCliff.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          499998,
+          34932,
+          7634
+        ],
+        "widthMetres": 24.028118133544922,
+        "heightMetres": 25.999998092651367,
+        "depthMetres": 23.06083869934082,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment/WindErodedCliff/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment/WindErodedCliff/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment/WindErodedCliff/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment/WindErodedCliff/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      }
+    },
+    {
+      "id": "YardangMesa",
+      "name": "雅丹孤丘",
+      "order": 4,
+      "prompt": "单座戈壁雅丹孤丘，扁平破碎顶部，明显水平岩层，腰部风蚀内收，底部坚实外扩，红褐灰黄砂岩，轮廓不对称，完整独立山体可埋入地面。电影写实游戏环境，细节丰富的自然石质，均匀漫射光，浅灰纯背景。无植被建筑人物，无天空地台，无卡通。",
+      "requestedTriangles": 500000,
+      "targetSizeMetres": 28,
+      "sizeAxis": "height",
+      "category": "gobi",
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/e1ff3c86f0e6d59eb3d4223de5245c35.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-28/YardangMesa/YardangMesa_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment/YardangMesa/YardangMesa_PBR.fbx",
+        "sha256": "fe6787226c4664eef8a121edd6896b5b2e05b8a00686d88c15870191a6bc00fe",
+        "bytes": 58295020
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Unity LOD0 isolated preview, 2026-10-28",
+        "note": "层状砂岩轮廓可作雅丹形体参考；表面带绘制色带，底座明显，需写实材质与地形过渡处理。"
+      },
+      "unityValidation": {
+        "id": "YardangMesa",
+        "source": "Assets/_Project/Art/HunyuanEnvironment/YardangMesa/YardangMesa_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/YardangMesa.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          500000,
+          31536,
+          6691
+        ],
+        "widthMetres": 52.75627517700195,
+        "heightMetres": 27.999998092651367,
+        "depthMetres": 76.06024169921875,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment/YardangMesa/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment/YardangMesa/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment/YardangMesa/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment/YardangMesa/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      }
+    },
+    {
+      "id": "GobiRockCluster",
+      "name": "戈壁岩群",
+      "order": 5,
+      "prompt": "单组紧密相连的戈壁风化岩群，三块高低不同的灰褐色巨石，夹少量碎石，真实裂纹与层理，轮廓不对称，底部闭合可埋入地面，完整独立物体。写实PBR游戏环境素材，均匀漫射光，浅灰背景。无植物人物建筑，无圆形展示底座，无卡通低多边形。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 4,
+      "sizeAxis": "height",
+      "category": "gobi",
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/d8697933bb893e08057f54cd65cef289.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-28/GobiRockCluster/GobiRockCluster_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment/GobiRockCluster/GobiRockCluster_PBR.fbx",
+        "sha256": "ed11af797b7e019279857c844af7f8f7b851a7b46e4e01232008d6a50aaa3d8d",
+        "bytes": 32598924
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Unity LOD0 isolated preview, 2026-10-28",
+        "note": "岩群轮廓清晰，但表面裂缝与规则圆形展示底座偏风格化；需处理底座、替换岩石表面并复核近景轮廓。"
+      },
+      "unityValidation": {
+        "id": "GobiRockCluster",
+        "source": "Assets/_Project/Art/HunyuanEnvironment/GobiRockCluster/GobiRockCluster_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/GobiRockCluster.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          49982,
+          16933,
+          5259
+        ],
+        "widthMetres": 5.584856986999512,
+        "heightMetres": 4.0,
+        "depthMetres": 5.584995269775391,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment/GobiRockCluster/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment/GobiRockCluster/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment/GobiRockCluster/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment/GobiRockCluster/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      }
+    },
+    {
+      "id": "RockOverhang",
+      "name": "巨岩悬挑构件",
+      "order": 6,
+      "prompt": "单块巨大的戈壁悬挑岩盖，宽扁厚实岩体，前缘不规则向外伸出，清晰水平层理，顶面与底面都有完整真实石质，灰褐砂岩带风化凹槽，底部闭合。写实游戏环境模型，均匀漫射光，浅灰纯背景。仅一块岩盖，无支柱地台植物人物，无天空无卡通。",
+      "requestedTriangles": 500000,
+      "targetSizeMetres": 28,
+      "sizeAxis": "width",
+      "category": "gobi",
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/e0a49e4d6eef03b06e5f2fd3dc4d3baf.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-28/RockOverhang/RockOverhang_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment/RockOverhang/RockOverhang_PBR.fbx",
+        "sha256": "76db34106228516140926f8df8c5e4438984448d528be6fce705cec926252d02",
+        "bytes": 59469436
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Unity LOD0 isolated preview, 2026-10-28",
+        "note": "悬挑轮廓可作布景参考；块面光滑、带展示底座，不能据此判定岩下玩家空间与碰撞可用。"
+      },
+      "unityValidation": {
+        "id": "RockOverhang",
+        "source": "Assets/_Project/Art/HunyuanEnvironment/RockOverhang/RockOverhang_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/RockOverhang.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          499796,
+          32318,
+          6749
+        ],
+        "widthMetres": 28.000001907348633,
+        "heightMetres": 16.692153930664062,
+        "depthMetres": 24.47655487060547,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment/RockOverhang/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment/RockOverhang/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment/RockOverhang/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment/RockOverhang/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      }
+    },
+    {
+      "id": "DeadTamarisk",
+      "name": "枯死柽柳",
+      "order": 7,
+      "prompt": "单株戈壁枯死柽柳，低矮扭曲粗树干，少量结实分叉向侧面伸展，无叶，干裂灰褐树皮，根部粗壮完整可埋入沙土，完整独立物体。电影写实游戏环境素材，真实木质，均匀漫射光，浅灰纯背景。无地台泥土石头人物，无盆栽，无卡通风格。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 2.2,
+      "sizeAxis": "height",
+      "category": "gobi",
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/cf096feb93c85662afba66fb044db0a6.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-28/DeadTamarisk/DeadTamarisk_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment/DeadTamarisk/DeadTamarisk_PBR.fbx",
+        "sha256": "94684566e439b6f611437bc6c28e61b81ca75e48b6e4c0ec3cb04ad898375a8b",
+        "bytes": 32727276
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Unity LOD0 isolated preview, 2026-10-28",
+        "note": "树干与枝条完整，带沙地展示底座；需要去底座、统一树皮质感，并复核细枝远景 LOD。"
+      },
+      "unityValidation": {
+        "id": "DeadTamarisk",
+        "source": "Assets/_Project/Art/HunyuanEnvironment/DeadTamarisk/DeadTamarisk_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/DeadTamarisk.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          49978,
+          13475,
+          3985
+        ],
+        "widthMetres": 1.7823659181594849,
+        "heightMetres": 2.200000047683716,
+        "depthMetres": 1.8025708198547363,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment/DeadTamarisk/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment/DeadTamarisk/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment/DeadTamarisk/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment/DeadTamarisk/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      }
+    },
+    {
+      "id": "DesertThornBush",
+      "name": "荒漠荆棘灌木",
+      "order": 8,
+      "prompt": "单丛荒漠干枯荆棘灌木，低矮不规则轮廓，灰褐色纤维状木枝，枝干粗细层次清楚，少量黄褐干叶，根部紧密，完整独立植物。电影写实游戏环境素材，均匀漫射光，浅灰纯背景。无盆栽地台人物，无鲜绿色，无卡通低多边形。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 1,
+      "sizeAxis": "height",
+      "category": "gobi",
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/9e296eb3ca32b5470fc85a5026ac5b48.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-28/DesertThornBush/DesertThornBush_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment/DesertThornBush/DesertThornBush_PBR.fbx",
+        "sha256": "18e2f4edadb90a37592ff5bde1162696e09577d0ac4860eb34d2ca48a982afd3",
+        "bytes": 29614236
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Unity LOD0 isolated preview, 2026-10-28",
+        "note": "结果更接近有黄叶的荆棘小树；需要调整到荒漠灌木密度与枝叶质感。"
+      },
+      "unityValidation": {
+        "id": "DesertThornBush",
+        "source": "Assets/_Project/Art/HunyuanEnvironment/DesertThornBush/DesertThornBush_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/DesertThornBush.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          50000,
+          14030,
+          3971
+        ],
+        "widthMetres": 0.8253466486930847,
+        "heightMetres": 1.0,
+        "depthMetres": 0.6178191900253296,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment/DesertThornBush/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment/DesertThornBush/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment/DesertThornBush/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment/DesertThornBush/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      }
+    },
+    {
+      "id": "GobiWaystone",
+      "name": "风化驿路石标",
+      "order": 9,
+      "prompt": "单根古代戈壁驿路石标，天然长方形灰褐砂岩石柱，顶部斜裂，边角磨圆崩缺，粗糙层理与沙蚀表面，正面嵌两枚朴素青铜圆钉，底部平整完整。电影写实游戏道具，均匀漫射光，浅灰背景。无文字图案、人物植物和地台，无卡通风格。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 1.7,
+      "sizeAxis": "height",
+      "category": "gobi",
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/76748215259cab8030ea03e8333c1965.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-28/GobiWaystone/GobiWaystone_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment/GobiWaystone/GobiWaystone_PBR.fbx",
+        "sha256": "c4bf832c70765ce37edea181068f2e1c9a1c1758acd8f4a805bfaae81a3ddbeb",
+        "bytes": 25793356
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Unity LOD0 isolated preview, 2026-10-28",
+        "note": "石标加了四个金色圆钉，带台座，偏装饰碑；去除不合设定装饰后再做驿路石标。"
+      },
+      "unityValidation": {
+        "id": "GobiWaystone",
+        "source": "Assets/_Project/Art/HunyuanEnvironment/GobiWaystone/GobiWaystone_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/GobiWaystone.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          50020,
+          16649,
+          5390
+        ],
+        "widthMetres": 1.3562674522399902,
+        "heightMetres": 1.7000001668930054,
+        "depthMetres": 1.3204395771026611,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment/GobiWaystone/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment/GobiWaystone/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment/GobiWaystone/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment/GobiWaystone/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      }
+    },
+    {
+      "id": "CaravanSupplies",
+      "name": "驿路行囊",
+      "order": 10,
+      "prompt": "单组古代旅人露营行囊，一个旧棕色皮革旅行包，搭一卷粗麻毯，以麻绳扎紧，侧边固定朴素皮水囊，紧密连成一个完整物体，磨损皮革和纤维细节。电影写实游戏道具，均匀漫射光，浅灰背景。无金属拉链现代装备人物文字，无地台，无卡通。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 0.8,
+      "sizeAxis": "height",
+      "category": "gobi",
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/3f9d4374188a51c4f513a6fdb242170b.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-28/CaravanSupplies/CaravanSupplies_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment/CaravanSupplies/CaravanSupplies_PBR.fbx",
+        "sha256": "599bc0bee3e2a8654100735535dfaba5de31706bad00d0e43b761eab03603ab4",
+        "bytes": 45029644
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Unity LOD0 isolated preview, 2026-10-28",
+        "note": "皮革、绳索和铺盖细节可读；现代式皮带扣与整齐皮包造型需按剧情年代复核。"
+      },
+      "unityValidation": {
+        "id": "CaravanSupplies",
+        "source": "Assets/_Project/Art/HunyuanEnvironment/CaravanSupplies/CaravanSupplies_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/CaravanSupplies.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          50094,
+          20688,
+          6780
+        ],
+        "widthMetres": 0.9938220381736755,
+        "heightMetres": 0.800000011920929,
+        "depthMetres": 0.5613070726394653,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment/CaravanSupplies/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment/CaravanSupplies/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment/CaravanSupplies/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment/CaravanSupplies/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      }
+    },
+    {
+      "id": "ShangDwelling",
+      "name": "殷商民居候选",
+      "order": 11,
+      "prompt": "单栋青铜时代中国民居，低矮长方形夯土墙体，外露深色木柱梁，厚茅草双坡屋顶，短直屋檐，正面木门和小窗，低石基，真实旧土木与茅草。电影写实游戏建筑，完整四面，三分之四视角，灰背景均匀光。无人物庭院地台，无琉璃瓦飞檐斗拱，无卡通。",
+      "requestedTriangles": 500000,
+      "targetSizeMetres": 4.2,
+      "sizeAxis": "height",
+      "category": "shang",
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/f6e91296ca23e74e782acafc237d899b.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-28/ShangDwelling/ShangDwelling_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment/ShangDwelling/ShangDwelling_PBR.fbx",
+        "sha256": "c89a0663f8bceb45f173c67de505c244bc1c7950b7ebfc2892ecc2b7bbddb9b7",
+        "bytes": 70068268
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Unity LOD0 isolated preview, 2026-10-28",
+        "note": "土墙、木门与草顶可作形体候选；弯檐、绿色饰边及规则石台偏后世建筑，需要重做檐口和表面。"
+      },
+      "unityValidation": {
+        "id": "ShangDwelling",
+        "source": "Assets/_Project/Art/HunyuanEnvironment/ShangDwelling/ShangDwelling_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/ShangDwelling.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          498862,
+          35078,
+          9955
+        ],
+        "widthMetres": 6.733553409576416,
+        "heightMetres": 4.1999993324279785,
+        "depthMetres": 4.952416896820068,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment/ShangDwelling/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment/ShangDwelling/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment/ShangDwelling/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment/ShangDwelling/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      }
+    },
+    {
+      "id": "ShangWorkshop",
+      "name": "铸铜作坊候选",
+      "order": 12,
+      "prompt": "单栋青铜时代中国铸铜作坊，夯土矮墙，粗木柱和横梁，厚茅草双坡顶，正面宽大开放工作入口，侧墙泥砌烟道，朴素石基，真实烟熏泥土木纹。电影写实游戏建筑，完整四面，灰背景均匀光。无人物火焰工具散件庭院地台，无唐宋飞檐琉璃瓦，无卡通。",
+      "requestedTriangles": 500000,
+      "targetSizeMetres": 5,
+      "sizeAxis": "height",
+      "category": "shang",
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/27db0dda1344e449478a9c0a39da1c18.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-28/ShangWorkshop/ShangWorkshop_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment/ShangWorkshop/ShangWorkshop_PBR.fbx",
+        "sha256": "34d9e54d865a1ba4851d7f36306ce16dcdb3aee2db24d34046865598bd9c6714",
+        "bytes": 68261692
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Unity LOD0 isolated preview, 2026-10-28",
+        "note": "作坊入口、工具与炉火细节可读；绿色弯檐、石台及静态火焰/烟团需要重做，不能视为功能性熔炉。"
+      },
+      "unityValidation": {
+        "id": "ShangWorkshop",
+        "source": "Assets/_Project/Art/HunyuanEnvironment/ShangWorkshop/ShangWorkshop_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/ShangWorkshop.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          499998,
+          41870,
+          9266
+        ],
+        "widthMetres": 6.615934371948242,
+        "heightMetres": 5.000000476837158,
+        "depthMetres": 6.058314800262451,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment/ShangWorkshop/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment/ShangWorkshop/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment/ShangWorkshop/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment/ShangWorkshop/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      }
+    },
+    {
+      "id": "ShangGranary",
+      "name": "木土粮仓候选",
+      "order": 13,
+      "prompt": "单栋青铜时代木土粮仓，厚夯土墙与粗木立柱，小型高脚石木基座，窄木门，简朴厚茅草双坡屋顶，短直檐口，真实旧木纹和黄褐泥土。写实游戏建筑，完整四面，三分之四视角，浅灰背景均匀光。无人物庭院地台，无飞檐斗拱琉璃瓦，无卡通。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 4.8,
+      "sizeAxis": "height",
+      "category": "shang",
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/b58fd96e8e5d95f174816737e71d318a.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-28/ShangGranary/ShangGranary_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment/ShangGranary/ShangGranary_PBR.fbx",
+        "sha256": "b5e0dc7538969a74cdba22fbe9ee17028303ab60af35ffba5510afa6b4316858",
+        "bytes": 44040764
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Unity LOD0 isolated preview, 2026-10-28",
+        "note": "架高粮仓轮廓可用作参考；屋檐上翘、绿色饰边需要改为项目统一的殷商木土建筑语言。"
+      },
+      "unityValidation": {
+        "id": "ShangGranary",
+        "source": "Assets/_Project/Art/HunyuanEnvironment/ShangGranary/ShangGranary_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/ShangGranary.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          50002,
+          19022,
+          7779
+        ],
+        "widthMetres": 5.0396246910095215,
+        "heightMetres": 4.800000190734863,
+        "depthMetres": 4.953093528747559,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment/ShangGranary/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment/ShangGranary/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment/ShangGranary/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment/ShangGranary/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      }
+    },
+    {
+      "id": "ShangMarketStall",
+      "name": "王都市集摊位",
+      "order": 14,
+      "prompt": "单个古代中国市集木棚摊位，四根粗木柱、低矮茅草棚顶、厚实木柜台，下方整齐堆两个竹编筐和三个朴素陶罐，组件紧密，真实旧木草绳陶土材质。电影写实游戏道具，完整独立，浅灰背景均匀光。无人物文字钱币，无地台，无夸张飞檐，无卡通。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 3,
+      "sizeAxis": "height",
+      "category": "shang",
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/2132019bb9b17b9e234e1aa3a16c33a6.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-28/ShangMarketStall/ShangMarketStall_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment/ShangMarketStall/ShangMarketStall_PBR.fbx",
+        "sha256": "5dba8eb5d338ca8bb805b35fa1883d77cd4621bd05d954c74ee690551071d349",
+        "bytes": 35786604
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Unity LOD0 isolated preview, 2026-10-28",
+        "note": "开放摊位、器皿与筐篮可读；上翘檐头和绘制表面需要统一，器皿当前是组合网格的一部分。"
+      },
+      "unityValidation": {
+        "id": "ShangMarketStall",
+        "source": "Assets/_Project/Art/HunyuanEnvironment/ShangMarketStall/ShangMarketStall_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/ShangMarketStall.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          50542,
+          21480,
+          8063
+        ],
+        "widthMetres": 3.2540764808654785,
+        "heightMetres": 3.0,
+        "depthMetres": 2.545118570327759,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment/ShangMarketStall/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment/ShangMarketStall/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment/ShangMarketStall/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment/ShangMarketStall/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      }
+    },
+    {
+      "id": "RammedEarthGatehouse",
+      "name": "夯土城门楼候选",
+      "order": 15,
+      "prompt": "单座青铜时代中国城门楼，厚重黄褐夯土墩台，中央矩形敞开通道，顶部粗木柱门屋与厚茅草双坡屋顶，短直檐口，巨大木门打开，真实风化土木石基。电影写实游戏建筑，完整四面，灰背景均匀光。无围城庭院人物地台，无飞檐琉璃瓦，无卡通。",
+      "requestedTriangles": 500000,
+      "targetSizeMetres": 13,
+      "sizeAxis": "height",
+      "category": "shang",
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/bb51e1b6965176421fbb4a725db3ca9b.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-28/RammedEarthGatehouse/RammedEarthGatehouse_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment/RammedEarthGatehouse/RammedEarthGatehouse_PBR.fbx",
+        "sha256": "b0205d71b730b4938a621c516645eca5740d5860e1b86b5156728df43954e6b5",
+        "bytes": 65711180
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Unity LOD0 isolated preview, 2026-10-28",
+        "note": "门洞和上层房体可读；上翘檐口、绿色饰边与砖石基座需要调整，当前不认定为符合殷商设定的最终门楼。"
+      },
+      "unityValidation": {
+        "id": "RammedEarthGatehouse",
+        "source": "Assets/_Project/Art/HunyuanEnvironment/RammedEarthGatehouse/RammedEarthGatehouse_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/RammedEarthGatehouse.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          500004,
+          49556,
+          10616
+        ],
+        "widthMetres": 13.233782768249512,
+        "heightMetres": 12.999999046325684,
+        "depthMetres": 10.898959159851074,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment/RammedEarthGatehouse/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment/RammedEarthGatehouse/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment/RammedEarthGatehouse/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment/RammedEarthGatehouse/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      }
+    },
+    {
+      "id": "PyramidPortal",
+      "name": "金字塔石质入口",
+      "order": 16,
+      "prompt": "单个巨型石砌金字塔王宫入口门框，低矮宽厚矩形石门洞，巨石过梁与倾斜侧壁，灰黄粗糙岩石大块砌筑，边角磨损，朴素浅浮雕几何凹纹，前后洞口贯通。电影写实游戏建筑构件，完整独立，灰背景均匀光。无门板人物文字金饰，无整座金字塔和地台，无卡通。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 3.5,
+      "sizeAxis": "height",
+      "category": "shang",
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/cf991c2445444f8988ca82bbfa3d9ec9.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-28/PyramidPortal/PyramidPortal_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment/PyramidPortal/PyramidPortal_PBR.fbx",
+        "sha256": "21bc411c559f4b9f42b4ee16062f702a1ca8c2a99968056ec25ea29224ff2423",
+        "bytes": 35016780
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Unity LOD0 isolated preview, 2026-10-28",
+        "note": "厚石入口形体可供宫殿门面参考；有模板化连续装饰，门洞深度、背面与通行碰撞需单独检查。"
+      },
+      "unityValidation": {
+        "id": "PyramidPortal",
+        "source": "Assets/_Project/Art/HunyuanEnvironment/PyramidPortal/PyramidPortal_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/PyramidPortal.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          50000,
+          15804,
+          5451
+        ],
+        "widthMetres": 5.078215599060059,
+        "heightMetres": 3.499999761581421,
+        "depthMetres": 3.4983508586883545,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment/PyramidPortal/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment/PyramidPortal/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment/PyramidPortal/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment/PyramidPortal/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      }
+    },
+    {
+      "id": "PyramidStonePanel",
+      "name": "厚墙石砌饰面",
+      "order": 17,
+      "prompt": "单块厚重古代王宫石砌墙面模块，长方形，灰黄大块石材错缝排列，真实粗糙凿痕、接缝与磨损，表面略不平，四边平直便于拼接，背面平整。电影写实PBR游戏建筑构件，三分之四视角，灰背景均匀光。无人物门窗文字浮雕，无地台，无卡通低多边形。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 6,
+      "sizeAxis": "width",
+      "category": "shang",
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/c5264083eb27e45fac74e55dff2e6f80.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-28/PyramidStonePanel/PyramidStonePanel_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment/PyramidStonePanel/PyramidStonePanel_PBR.fbx",
+        "sha256": "bd2cf46ce9da80f818fed4453537a2d1e8eaf2d21ef4e35c562418ecbc9ba942",
+        "bytes": 34921036
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Unity LOD0 isolated preview, 2026-10-28",
+        "note": "已绕 Y 轴转 90°，改按正立面宽 6 m 归一化；高约 3.84 m、厚约 2.66 m，仍带突出檐口与底座，不能当作无缝墙片。"
+      },
+      "yawDegrees": 90,
+      "normalizationNote": "Unity visual rotated 90 degrees about Y before width normalization: original FBX local X measured thickness rather than facade width.",
+      "unityValidation": {
+        "id": "PyramidStonePanel",
+        "source": "Assets/_Project/Art/HunyuanEnvironment/PyramidStonePanel/PyramidStonePanel_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/PyramidStonePanel.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          50002,
+          15410,
+          5065
+        ],
+        "widthMetres": 6.0,
+        "heightMetres": 3.8430979251861572,
+        "depthMetres": 2.6617987155914307,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment/PyramidStonePanel/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment/PyramidStonePanel/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment/PyramidStonePanel/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment/PyramidStonePanel/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      }
+    },
+    {
+      "id": "MedievalTownhouse",
+      "name": "中世纪城市民居",
+      "order": 18,
+      "prompt": "单栋欧洲中世纪石木联排民居，两层窄面宽，底层灰色毛石、上层旧木框浅灰抹灰，深褐陡坡木瓦屋顶，正面拱形木门和小铅框窗，真实旧材质。电影写实游戏建筑，完整四面，三分之四视角，灰背景均匀光。无街道人物文字地台，无现代物件，无卡通。",
+      "requestedTriangles": 500000,
+      "targetSizeMetres": 9,
+      "sizeAxis": "height",
+      "category": "medieval",
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/179900c00e8030aca71e0a8c902a50bb.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-28/MedievalTownhouse/MedievalTownhouse_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment/MedievalTownhouse/MedievalTownhouse_PBR.fbx",
+        "sha256": "f6a1077b20fe0a20ba4a4b49310e239b6c42225ab6fcd42904e850dd8a1c6db8",
+        "bytes": 72417260
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Unity LOD0 isolated preview, 2026-10-28",
+        "note": "石木民居层次完整；表面和砖块仍偏风格化，需要与写实角色统一；门为闭合外观，没有完成室内与开门功能。"
+      },
+      "unityValidation": {
+        "id": "MedievalTownhouse",
+        "source": "Assets/_Project/Art/HunyuanEnvironment/MedievalTownhouse/MedievalTownhouse_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/MedievalTownhouse.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          500000,
+          34885,
+          6903
+        ],
+        "widthMetres": 6.249485015869141,
+        "heightMetres": 8.999999046325684,
+        "depthMetres": 5.854735374450684,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment/MedievalTownhouse/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment/MedievalTownhouse/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment/MedievalTownhouse/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment/MedievalTownhouse/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      }
+    },
+    {
+      "id": "GothicWindowWall",
+      "name": "哥特石窗墙段",
+      "order": 19,
+      "prompt": "单段中世纪教堂石质窗墙，窄长尖拱窗洞，精细石窗棂与厚重灰色石框，下方朴素石墙，左右边缘平直可拼接，真实风化石材与凿痕，窗洞贯通。电影写实游戏建筑构件，完整独立，灰背景均匀光。无玻璃屋顶人物雕像文字，无地台，无卡通。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 8,
+      "sizeAxis": "height",
+      "category": "medieval",
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/c966cf9984251b5d528074fe0b0e99db.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-28/GothicWindowWall/GothicWindowWall_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment/GothicWindowWall/GothicWindowWall_PBR.fbx",
+        "sha256": "1b222fa42798eacc3d328bdff0f69197dbb2d4c7d02d8104ac8f3ff52d1c35c9",
+        "bytes": 34885308
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Unity LOD0 isolated preview, 2026-10-28",
+        "note": "哥特拱窗与墙体结构可读；额外山墙、雕像和底座需要按组合建筑需求筛选。"
+      },
+      "unityValidation": {
+        "id": "GothicWindowWall",
+        "source": "Assets/_Project/Art/HunyuanEnvironment/GothicWindowWall/GothicWindowWall_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/GothicWindowWall.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          49984,
+          16106,
+          5467
+        ],
+        "widthMetres": 5.441086292266846,
+        "heightMetres": 7.999999523162842,
+        "depthMetres": 4.059936046600342,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment/GothicWindowWall/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment/GothicWindowWall/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment/GothicWindowWall/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment/GothicWindowWall/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      }
+    },
+    {
+      "id": "MedievalButtress",
+      "name": "教堂扶壁候选",
+      "order": 20,
+      "prompt": "单个中世纪教堂外墙石扶壁，厚实竖直基座、阶梯式收分与斜向石撑，顶端小型尖顶，灰褐风化毛石砌筑，石缝和磨损细节清楚，底部平整可落地。电影写实游戏建筑构件，完整独立，灰背景均匀光。无教堂主体玻璃雕像人物文字，无地台，无卡通。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 12,
+      "sizeAxis": "height",
+      "category": "medieval",
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/5be3b1128a9b6fdbe28cb2cf4446f3dc.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-28/MedievalButtress/MedievalButtress_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment/MedievalButtress/MedievalButtress_PBR.fbx",
+        "sha256": "56949413590b1e12b07c79c7fd7621ed839ff2a0d83bb43b710d2bf696c46e9c",
+        "bytes": 31270428
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Unity LOD0 isolated preview, 2026-10-28",
+        "note": "生成结果是带雕像的尖顶小塔/神龛，并非普通承重扶壁；保留为教堂装饰候选，不能用于结构扶壁验收。"
+      },
+      "unityValidation": {
+        "id": "MedievalButtress",
+        "source": "Assets/_Project/Art/HunyuanEnvironment/MedievalButtress/MedievalButtress_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment/Prefabs/MedievalButtress.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          49997,
+          11104,
+          3433
+        ],
+        "widthMetres": 3.996800184249878,
+        "heightMetres": 12.0,
+        "depthMetres": 4.38134241104126,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment/MedievalButtress/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment/MedievalButtress/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment/MedievalButtress/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment/MedievalButtress/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      }
+    }
+  ],
+  "browserContinuation": {
+    "state": "all_exports_completed",
+    "resolvedBy": "User brought Chrome to foreground; native downloads resumed.",
+    "pendingExports": [],
+    "generationComplete": true,
+    "moreQuotaRequired": false
+  },
+  "deliveryReport": "Documentation/EnvironmentProduction/hunyuan-environment-delivery.json",
+  "browserEvidence": {
+    "generationPreview": "Documentation/EnvironmentProduction/Previews/Hunyuan_Environment_Browser.jpg",
+    "lastThreeDownloads": "Documentation/EnvironmentProduction/Previews/Hunyuan_Environment_Downloads.jpg"
+  },
+  "derivedReadyLibrary": {
+    "guide": "Documentation/EnvironmentProduction/Ready/README.md",
+    "prefabRoot": "Assets/_Project/Art/EnvironmentReady/Prefabs",
+    "deliveryAudit": "Documentation/EnvironmentProduction/Ready/delivery.json",
+    "sourceReviewRetained": true
+  }
+}

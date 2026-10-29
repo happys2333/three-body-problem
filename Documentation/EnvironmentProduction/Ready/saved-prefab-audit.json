@@ -1,0 +1,282 @@
+{
+  "passed": true,
+  "assets": [
+    {
+      "id": "CaravanSupplies",
+      "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/CaravanSupplies.prefab",
+      "triangles": [
+        50094,
+        20688,
+        6780
+      ],
+      "collisionTriangles": 20688,
+      "passed": true
+    },
+    {
+      "id": "DeadTamarisk",
+      "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/DeadTamarisk.prefab",
+      "triangles": [
+        29208,
+        8000,
+        1800
+      ],
+      "collisionTriangles": 8000,
+      "passed": true
+    },
+    {
+      "id": "DesertThornBush",
+      "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/DesertThornBush.prefab",
+      "triangles": [
+        18000,
+        5000,
+        1200
+      ],
+      "collisionTriangles": 5000,
+      "passed": true
+    },
+    {
+      "id": "GobiMountainPeak",
+      "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/GobiMountainPeak.prefab",
+      "triangles": [
+        110000,
+        25000,
+        5000
+      ],
+      "collisionTriangles": 5000,
+      "passed": true
+    },
+    {
+      "id": "GobiRidge",
+      "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/GobiRidge.prefab",
+      "triangles": [
+        90680,
+        27204,
+        6000
+      ],
+      "collisionTriangles": 6000,
+      "passed": true
+    },
+    {
+      "id": "GobiRockCluster",
+      "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/GobiRockCluster.prefab",
+      "triangles": [
+        29366,
+        8000,
+        1800
+      ],
+      "collisionTriangles": 8000,
+      "passed": true
+    },
+    {
+      "id": "GobiWaystone",
+      "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/GobiWaystone.prefab",
+      "triangles": [
+        6500,
+        1800,
+        450
+      ],
+      "collisionTriangles": 1800,
+      "passed": true
+    },
+    {
+      "id": "GothicWindowWall",
+      "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/GothicWindowWall.prefab",
+      "triangles": [
+        32000,
+        8000,
+        1800
+      ],
+      "collisionTriangles": 8000,
+      "passed": true
+    },
+    {
+      "id": "MedievalButtress",
+      "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/MedievalButtress.prefab",
+      "triangles": [
+        23998,
+        6500,
+        1500
+      ],
+      "collisionTriangles": 6500,
+      "passed": true
+    },
+    {
+      "id": "MedievalTownhouse",
+      "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/MedievalTownhouse.prefab",
+      "triangles": [
+        75000,
+        18000,
+        4000
+      ],
+      "collisionTriangles": 18000,
+      "passed": true
+    },
+    {
+      "id": "PyramidPortal",
+      "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/PyramidPortal.prefab",
+      "triangles": [
+        29999,
+        8000,
+        1800
+      ],
+      "collisionTriangles": 8000,
+      "passed": true
+    },
+    {
+      "id": "PyramidStonePanel",
+      "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/PyramidStonePanel.prefab",
+      "triangles": [
+        20000,
+        5500,
+        1200
+      ],
+      "collisionTriangles": 5500,
+      "passed": true
+    },
+    {
+      "id": "RammedEarthGatehouse",
+      "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/RammedEarthGatehouse.prefab",
+      "triangles": [
+        79999,
+        20000,
+        4500
+      ],
+      "collisionTriangles": 20000,
+      "passed": true
+    },
+    {
+      "id": "RockOverhang",
+      "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/RockOverhang.prefab",
+      "triangles": [
+        80000,
+        18000,
+        4000
+      ],
+      "collisionTriangles": 18000,
+      "passed": true
+    },
+    {
+      "id": "ShangDwelling",
+      "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/ShangDwelling.prefab",
+      "triangles": [
+        65000,
+        16000,
+        3600
+      ],
+      "collisionTriangles": 16000,
+      "passed": true
+    },
+    {
+      "id": "ShangGranary",
+      "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/ShangGranary.prefab",
+      "triangles": [
+        30000,
+        8000,
+        1800
+      ],
+      "collisionTriangles": 8000,
+      "passed": true
+    },
+    {
+      "id": "ShangMarketStall",
+      "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/ShangMarketStall.prefab",
+      "triangles": [
+        26000,
+        7000,
+        1600
+      ],
+      "collisionTriangles": 7000,
+      "passed": true
+    },
+    {
+      "id": "ShangWorkshop",
+      "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/ShangWorkshop.prefab",
+      "triangles": [
+        70000,
+        18000,
+        4000
+      ],
+      "collisionTriangles": 18000,
+      "passed": true
+    },
+    {
+      "id": "WindErodedCliff",
+      "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/WindErodedCliff.prefab",
+      "triangles": [
+        85000,
+        20000,
+        4500
+      ],
+      "collisionTriangles": 4500,
+      "passed": true
+    },
+    {
+      "id": "YardangMesa",
+      "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/YardangMesa.prefab",
+      "triangles": [
+        75000,
+        18000,
+        4000
+      ],
+      "collisionTriangles": 4000,
+      "passed": true
+    }
+  ],
+  "buildScenes": [
+    {
+      "path": "Assets/_Project/Scenes/Traveller/01_GobiJourney.unity",
+      "enabled": true
+    },
+    {
+      "path": "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity",
+      "enabled": true
+    },
+    {
+      "path": "Assets/_Project/Scenes/Traveller/03_MedievalTribunal.unity",
+      "enabled": true
+    }
+  ],
+  "errors": [],
+  "surfaceMaterials": [
+    {
+      "material": "Assets/_Project/Art/EnvironmentReady/Materials/Bark.mat",
+      "supported": true,
+      "surface": "Assets/_Project/Art/EnvironmentReady/Textures/Bark_Surface.png"
+    },
+    {
+      "material": "Assets/_Project/Art/EnvironmentReady/Materials/Earth.mat",
+      "supported": true,
+      "surface": "Assets/_Project/Art/EnvironmentReady/Textures/Earth_Surface.png"
+    },
+    {
+      "material": "Assets/_Project/Art/EnvironmentReady/Materials/Masonry.mat",
+      "supported": true,
+      "surface": "Assets/_Project/Art/EnvironmentReady/Textures/Masonry_Surface.png"
+    },
+    {
+      "material": "Assets/_Project/Art/EnvironmentReady/Materials/Rock.mat",
+      "supported": true,
+      "surface": "Assets/_Project/Art/EnvironmentReady/Textures/Rock_Surface.png"
+    },
+    {
+      "material": "Assets/_Project/Art/EnvironmentReady/Materials/RoofTile.mat",
+      "supported": true,
+      "surface": "Assets/_Project/Art/EnvironmentReady/Textures/RoofTile_Surface.png"
+    },
+    {
+      "material": "Assets/_Project/Art/EnvironmentReady/Materials/Thatch.mat",
+      "supported": true,
+      "surface": "Assets/_Project/Art/EnvironmentReady/Textures/Thatch_Surface.png"
+    },
+    {
+      "material": "Assets/_Project/Art/EnvironmentReady/Materials/Wood.mat",
+      "supported": true,
+      "surface": "Assets/_Project/Art/EnvironmentReady/Textures/Wood_Surface.png"
+    },
+    {
+      "material": "Assets/_Project/Art/EnvironmentReady/Materials/YardGround.mat",
+      "supported": true,
+      "surface": "Assets/_Project/Art/EnvironmentReady/Textures/YardGround_Surface.png"
+    }
+  ]
+}

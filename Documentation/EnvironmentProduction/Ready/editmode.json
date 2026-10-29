@@ -1,0 +1,359 @@
+{
+  "job_id": "071dd575ea27432b8bb2990a653000f2",
+  "status": "succeeded",
+  "mode": "EditMode",
+  "started_unix_ms": 1793181229541,
+  "finished_unix_ms": 1793181291869,
+  "last_update_unix_ms": 1793181291869,
+  "progress": {
+    "completed": 36,
+    "total": 36,
+    "current_test_full_name": null,
+    "current_test_started_unix_ms": 1793181289273,
+    "last_finished_test_full_name": "ThreeBodyProblem.Tests.TravellerSceneTests.SceneHasCompleteRuntimeAndRenderingReferences(\"03_MedievalTribunal\")",
+    "last_finished_unix_ms": 1793181290973,
+    "stuck_suspected": false,
+    "editor_is_focused": false,
+    "blocked_reason": null,
+    "failures_so_far": [],
+    "failures_capped": false
+  },
+  "error": null,
+  "result": {
+    "mode": "EditMode",
+    "summary": {
+      "total": 36,
+      "passed": 36,
+      "failed": 0,
+      "skipped": 0,
+      "durationSeconds": 51.4777136,
+      "resultState": "Passed"
+    },
+    "results": [
+      {
+        "name": "CapitalArrivalCourtAndGardenRoutesHaveClearWalkingSpace",
+        "fullName": "ThreeBodyProblem.Tests.CapitalSeparationTests.CapitalArrivalCourtAndGardenRoutesHaveClearWalkingSpace",
+        "state": "Passed",
+        "durationSeconds": 3.3582705,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "CapitalStartsOutsideItsGateAndContainsDistinctCityPrecincts",
+        "fullName": "ThreeBodyProblem.Tests.CapitalSeparationTests.CapitalStartsOutsideItsGateAndContainsDistinctCityPrecincts",
+        "state": "Passed",
+        "durationSeconds": 1.2580505,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "GobiContainsTravelAndShelterWithoutCapitalArchitecture",
+        "fullName": "ThreeBodyProblem.Tests.CapitalSeparationTests.GobiContainsTravelAndShelterWithoutCapitalArchitecture",
+        "state": "Passed",
+        "durationSeconds": 1.7840823,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "PyramidHasAnEnclosedHallAndAnOperableSkyAperture",
+        "fullName": "ThreeBodyProblem.Tests.CapitalSeparationTests.PyramidHasAnEnclosedHallAndAnOperableSkyAperture",
+        "state": "Passed",
+        "durationSeconds": 1.0070924,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "PyramidLeavesAllThreeLongNightStarsInView",
+        "fullName": "ThreeBodyProblem.Tests.CapitalSeparationTests.PyramidLeavesAllThreeLongNightStarsInView",
+        "state": "Passed",
+        "durationSeconds": 0.8862128,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "BothFlyingStarObservationsAreRequiredInThisRun",
+        "fullName": "ThreeBodyProblem.Tests.JourneyProgressTests.BothFlyingStarObservationsAreRequiredInThisRun",
+        "state": "Passed",
+        "durationSeconds": 0.01627,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "CompanionWaitsWhenPlayerLagsButCatchesUpWhenPlayerRunsAhead",
+        "fullName": "ThreeBodyProblem.Tests.JourneyProgressTests.CompanionWaitsWhenPlayerLagsButCatchesUpWhenPlayerRunsAhead",
+        "state": "Passed",
+        "durationSeconds": 0.0020362,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "LeavingGobiRequiresExplicitDepartureBeforeTheCapitalCanLoad",
+        "fullName": "ThreeBodyProblem.Tests.JourneyProgressTests.LeavingGobiRequiresExplicitDepartureBeforeTheCapitalCanLoad",
+        "state": "Passed",
+        "durationSeconds": 0.0014888,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "LeavingShelterNeedsIdentityAndAnExplicitWaitChoice",
+        "fullName": "ThreeBodyProblem.Tests.JourneyProgressTests.LeavingShelterNeedsIdentityAndAnExplicitWaitChoice",
+        "state": "Passed",
+        "durationSeconds": 0.0006641,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "MainRouteReachesSummaryAfterExplicitActionsAndThreeSunWindow(True)",
+        "fullName": "ThreeBodyProblem.Tests.JourneyProgressTests.MainRouteReachesSummaryAfterExplicitActionsAndThreeSunWindow(True)",
+        "state": "Passed",
+        "durationSeconds": 0.0040112,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "MainRouteReachesSummaryAfterExplicitActionsAndThreeSunWindow(False)",
+        "fullName": "ThreeBodyProblem.Tests.JourneyProgressTests.MainRouteReachesSummaryAfterExplicitActionsAndThreeSunWindow(False)",
+        "state": "Passed",
+        "durationSeconds": 0.00044,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "NewGameWaitsAtTitleAndTimeCannotSkipTheOpening",
+        "fullName": "ThreeBodyProblem.Tests.JourneyProgressTests.NewGameWaitsAtTitleAndTimeCannotSkipTheOpening",
+        "state": "Passed",
+        "durationSeconds": 0.0003902,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "PlayerCameraIsIndependentOfAnimationAndTheVisibleMeshHasNoHead(0)",
+        "fullName": "ThreeBodyProblem.Tests.TravellerCharacterIntegrationTests.PlayerCameraIsIndependentOfAnimationAndTheVisibleMeshHasNoHead(0)",
+        "state": "Passed",
+        "durationSeconds": 2.6883869,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "PlayerCameraIsIndependentOfAnimationAndTheVisibleMeshHasNoHead(1)",
+        "fullName": "ThreeBodyProblem.Tests.TravellerCharacterIntegrationTests.PlayerCameraIsIndependentOfAnimationAndTheVisibleMeshHasNoHead(1)",
+        "state": "Passed",
+        "durationSeconds": 1.6040534,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "PlayerCameraIsIndependentOfAnimationAndTheVisibleMeshHasNoHead(2)",
+        "fullName": "ThreeBodyProblem.Tests.TravellerCharacterIntegrationTests.PlayerCameraIsIndependentOfAnimationAndTheVisibleMeshHasNoHead(2)",
+        "state": "Passed",
+        "durationSeconds": 2.0877559,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "SeatedGesturesCannotOverrideTheLegsOrRoot(1,KingZhou)",
+        "fullName": "ThreeBodyProblem.Tests.TravellerCharacterIntegrationTests.SeatedGesturesCannotOverrideTheLegsOrRoot(1,KingZhou)",
+        "state": "Passed",
+        "durationSeconds": 1.107037,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "SeatedGesturesCannotOverrideTheLegsOrRoot(2,Pope)",
+        "fullName": "ThreeBodyProblem.Tests.TravellerCharacterIntegrationTests.SeatedGesturesCannotOverrideTheLegsOrRoot(2,Pope)",
+        "state": "Passed",
+        "durationSeconds": 1.3077159,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "StoryUsesTheExpectedHumanoidCast(0,ThreeBodyProblem.TravellerRole[])",
+        "fullName": "ThreeBodyProblem.Tests.TravellerCharacterIntegrationTests.StoryUsesTheExpectedHumanoidCast(0,ThreeBodyProblem.TravellerRole[])",
+        "state": "Passed",
+        "durationSeconds": 1.745138,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "StoryUsesTheExpectedHumanoidCast(1,ThreeBodyProblem.TravellerRole[])",
+        "fullName": "ThreeBodyProblem.Tests.TravellerCharacterIntegrationTests.StoryUsesTheExpectedHumanoidCast(1,ThreeBodyProblem.TravellerRole[])",
+        "state": "Passed",
+        "durationSeconds": 0.7519857,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "StoryUsesTheExpectedHumanoidCast(2,ThreeBodyProblem.TravellerRole[])",
+        "fullName": "ThreeBodyProblem.Tests.TravellerCharacterIntegrationTests.StoryUsesTheExpectedHumanoidCast(2,ThreeBodyProblem.TravellerRole[])",
+        "state": "Passed",
+        "durationSeconds": 1.593761,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "CrowdCapsulesArePlacedAboveGroundAndOutsideArchitecture(1)",
+        "fullName": "ThreeBodyProblem.Tests.TravellerCrowdTests.CrowdCapsulesArePlacedAboveGroundAndOutsideArchitecture(1)",
+        "state": "Passed",
+        "durationSeconds": 0.8588861,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "CrowdCapsulesArePlacedAboveGroundAndOutsideArchitecture(2)",
+        "fullName": "ThreeBodyProblem.Tests.TravellerCrowdTests.CrowdCapsulesArePlacedAboveGroundAndOutsideArchitecture(2)",
+        "state": "Passed",
+        "durationSeconds": 1.4443696,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "EverySceneCharacterHasARealSkinnedHumanoid(0,2,0)",
+        "fullName": "ThreeBodyProblem.Tests.TravellerCrowdTests.EverySceneCharacterHasARealSkinnedHumanoid(0,2,0)",
+        "state": "Passed",
+        "durationSeconds": 3.145028,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "EverySceneCharacterHasARealSkinnedHumanoid(1,28,25)",
+        "fullName": "ThreeBodyProblem.Tests.TravellerCrowdTests.EverySceneCharacterHasARealSkinnedHumanoid(1,28,25)",
+        "state": "Passed",
+        "durationSeconds": 2.4716835,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "EverySceneCharacterHasARealSkinnedHumanoid(2,6,2)",
+        "fullName": "ThreeBodyProblem.Tests.TravellerCrowdTests.EverySceneCharacterHasARealSkinnedHumanoid(2,6,2)",
+        "state": "Passed",
+        "durationSeconds": 1.9212155,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "GuardEquipmentKeepsItsOrientationAfterRetargeting",
+        "fullName": "ThreeBodyProblem.Tests.TravellerCrowdTests.GuardEquipmentKeepsItsOrientationAfterRetargeting",
+        "state": "Passed",
+        "durationSeconds": 0.9106756,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "TheCapitalHasWomenMenAndAnArmouredGuardRoster",
+        "fullName": "ThreeBodyProblem.Tests.TravellerCrowdTests.TheCapitalHasWomenMenAndAnArmouredGuardRoster",
+        "state": "Passed",
+        "durationSeconds": 1.6690602,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "SavedHudPanelUsesResolutionScalingRatherThanMonitorDpi",
+        "fullName": "ThreeBodyProblem.Tests.TravellerEntryRegressionTests.SavedHudPanelUsesResolutionScalingRatherThanMonitorDpi",
+        "state": "Passed",
+        "durationSeconds": 0.0106881,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "AllThreeScenesAreEnabledInJourneyOrder",
+        "fullName": "ThreeBodyProblem.Tests.TravellerSceneTests.AllThreeScenesAreEnabledInJourneyOrder",
+        "state": "Passed",
+        "durationSeconds": 0.5863461,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "EveryAuthoredViewHasGroundAndAnUnobstructedPlayerCapsule(\"01_GobiJourney\")",
+        "fullName": "ThreeBodyProblem.Tests.TravellerSceneTests.EveryAuthoredViewHasGroundAndAnUnobstructedPlayerCapsule(\"01_GobiJourney\")",
+        "state": "Passed",
+        "durationSeconds": 1.6764929,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "EveryAuthoredViewHasGroundAndAnUnobstructedPlayerCapsule(\"02_ChaogeCourt\")",
+        "fullName": "ThreeBodyProblem.Tests.TravellerSceneTests.EveryAuthoredViewHasGroundAndAnUnobstructedPlayerCapsule(\"02_ChaogeCourt\")",
+        "state": "Passed",
+        "durationSeconds": 1.1689639,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "EveryAuthoredViewHasGroundAndAnUnobstructedPlayerCapsule(\"03_MedievalTribunal\")",
+        "fullName": "ThreeBodyProblem.Tests.TravellerSceneTests.EveryAuthoredViewHasGroundAndAnUnobstructedPlayerCapsule(\"03_MedievalTribunal\")",
+        "state": "Passed",
+        "durationSeconds": 1.7454955,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "FlyingStarsAndThreeSunsRemainDistinctPhenomena",
+        "fullName": "ThreeBodyProblem.Tests.TravellerSceneTests.FlyingStarsAndThreeSunsRemainDistinctPhenomena",
+        "state": "Passed",
+        "durationSeconds": 0.4843638,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "SceneHasCompleteRuntimeAndRenderingReferences(\"01_GobiJourney\")",
+        "fullName": "ThreeBodyProblem.Tests.TravellerSceneTests.SceneHasCompleteRuntimeAndRenderingReferences(\"01_GobiJourney\")",
+        "state": "Passed",
+        "durationSeconds": 1.6290535,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "SceneHasCompleteRuntimeAndRenderingReferences(\"02_ChaogeCourt\")",
+        "fullName": "ThreeBodyProblem.Tests.TravellerSceneTests.SceneHasCompleteRuntimeAndRenderingReferences(\"02_ChaogeCourt\")",
+        "state": "Passed",
+        "durationSeconds": 1.017537,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "SceneHasCompleteRuntimeAndRenderingReferences(\"03_MedievalTribunal\")",
+        "fullName": "ThreeBodyProblem.Tests.TravellerSceneTests.SceneHasCompleteRuntimeAndRenderingReferences(\"03_MedievalTribunal\")",
+        "state": "Passed",
+        "durationSeconds": 1.6956891,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "channels": {
+    "R": "roughness",
+    "G": "occlusion"
+  },
+  "textures": [
+    {
+      "material": "Rock",
+      "width": 2048,
+      "height": 2048,
+      "maxLinearError": 0.0,
+      "path": "Assets/_Project/Art/EnvironmentReady/Textures/Rock_Surface.png",
+      "sha256": "687425814578b092437d83cac36f81b5c99dbddab5c21ac991b127a55191f186"
+    },
+    {
+      "material": "Thatch",
+      "width": 2048,
+      "height": 2048,
+      "maxLinearError": 0.0,
+      "path": "Assets/_Project/Art/EnvironmentReady/Textures/Thatch_Surface.png",
+      "sha256": "1634711c07db0930b885b364cc28a71ab0de93d99ece6a8118558893a520d2bf"
+    },
+    {
+      "material": "Bark",
+      "width": 2048,
+      "height": 2048,
+      "maxLinearError": 0.0,
+      "path": "Assets/_Project/Art/EnvironmentReady/Textures/Bark_Surface.png",
+      "sha256": "2c7b6a2c4e8a6a54d42467d7a0f37862373154dedce844c8a54c489f0c98bf0f"
+    },
+    {
+      "material": "Masonry",
+      "width": 1024,
+      "height": 1024,
+      "maxLinearError": 0.0,
+      "path": "Assets/_Project/Art/EnvironmentReady/Textures/Masonry_Surface.png",
+      "sha256": "27085bdce1273cd2269028158a72091302cf4031ad24440be14531381dcf500c"
+    },
+    {
+      "material": "Earth",
+      "width": 1024,
+      "height": 1024,
+      "maxLinearError": 0.0,
+      "path": "Assets/_Project/Art/EnvironmentReady/Textures/Earth_Surface.png",
+      "sha256": "836442e7a47b5264543d1108acb1a2596efd1c4346e22fb2214ebcbc53028bc4"
+    },
+    {
+      "material": "Wood",
+      "width": 1024,
+      "height": 1024,
+      "maxLinearError": 0.0,
+      "path": "Assets/_Project/Art/EnvironmentReady/Textures/Wood_Surface.png",
+      "sha256": "150f0109facb7782e0100ea9b38f874f7768dc9a0906b8bf227988efa123365a"
+    },
+    {
+      "material": "RoofTile",
+      "width": 1024,
+      "height": 1024,
+      "maxLinearError": 0.0,
+      "path": "Assets/_Project/Art/EnvironmentReady/Textures/RoofTile_Surface.png",
+      "sha256": "b7de5d3c4cb9713bef3c4a212ff9dc401417b334debc5ac30b075ffc931fa500"
+    },
+    {
+      "material": "YardGround",
+      "width": 2048,
+      "height": 2048,
+      "maxLinearError": 0.0,
+      "path": "Assets/_Project/Art/EnvironmentReady/Textures/YardGround_Surface.png",
+      "sha256": "4c540306d3083c0be082136a2d01e10ea77c9593054075238231664c3ad33eab"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+    "passed": false,
+    "realTenMinuteWait": false,
+    "hardwareMicrophoneUsed": false,
+    "checks": 47,
+    "ignited": 85,
+    "burned": 85,
+    "shaded": 53,
+    "frameRateLimit": 90,
+    "phase": "complete",
+    "gpu": "Apple M5",
+    "walkedMetres": 83.10420227050781,
+    "shelterWallSeconds": 35.454280853271487,
+    "sunsetWallSeconds": 2.0079994201660158,
+    "errors": [
+        "Act one view 0 exceeded 60 FPS budget: 18.57779",
+        "Act one view 1 exceeded 60 FPS budget: 18.62263"
+    ],
+    "metrics": [
+        {
+            "moment": 0,
+            "meanMs": 16.1820011138916,
+            "p95Ms": 18.577791213989259,
+            "gpuMeanMs": 38.37947082519531,
+            "mainThreadMeanMs": 16.18063735961914,
+            "triangles": 6216668,
+            "batches": 410
+        },
+        {
+            "moment": 1,
+            "meanMs": 13.685383796691895,
+            "p95Ms": 18.62262535095215,
+            "gpuMeanMs": 31.44121551513672,
+            "mainThreadMeanMs": 13.66840648651123,
+            "triangles": 6290864,
+            "batches": 337
+        },
+        {
+            "moment": 2,
+            "meanMs": 14.302153587341309,
+            "p95Ms": 16.095916748046876,
+            "gpuMeanMs": 34.74415588378906,
+            "mainThreadMeanMs": 14.287769317626954,
+            "triangles": 6318752,
+            "batches": 331
+        },
+        {
+            "moment": 3,
+            "meanMs": 12.28392219543457,
+            "p95Ms": 15.723001480102539,
+            "gpuMeanMs": 26.042022705078126,
+            "mainThreadMeanMs": 12.280902862548829,
+            "triangles": 4272673,
+            "batches": 303
+        },
+        {
+            "moment": 4,
+            "meanMs": 12.746527671813965,
+            "p95Ms": 16.19304084777832,
+            "gpuMeanMs": 25.99757957458496,
+            "mainThreadMeanMs": 12.745044708251954,
+            "triangles": 3823043,
+            "batches": 251
+        },
+        {
+            "moment": 5,
+            "meanMs": 13.565629959106446,
+            "p95Ms": 16.28583526611328,
+            "gpuMeanMs": 28.588897705078126,
+            "mainThreadMeanMs": 13.54951000213623,
+            "triangles": 4147976,
+            "batches": 241
+        }
+    ],
+    "asrTranscript": "{\"text\": \"还要多对别停在亮出跟我建设下\"}",
+    "playerTorchViewport": "(0.32, 0.50, 0.56)"
+}

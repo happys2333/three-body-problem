@@ -1,0 +1,67 @@
+{
+    "provider": "Adobe Mixamo",
+    "acquisition": "User-authorized Chrome UI downloads; complete T-pose characters with skin and textures.",
+    "license": "Adobe/Mixamo content terms; not CC0.",
+    "models": [
+        {
+            "id": "PeasantGirl",
+            "sourceTitle": "Peasant Girl",
+            "sourcePage": "https://www.mixamo.com/#/?page=1&type=Character",
+            "downloadFilename": "Peasant Girl.fbx",
+            "format": "FBX for Unity, T-pose",
+            "rawFile": "ArtSource/Characters/Crowd/Mixamo/PeasantGirl.fbx",
+            "unityFile": "Assets/_Project/Characters/Crowd/Sources/PeasantGirl/PeasantGirl.fbx",
+            "sha256": "6ebfe9b82453cdd85bba233c6d681dee2d3ba54ee6984e5ba0c9cb940bdd7e38",
+            "state": "unity_humanoid_import_verified",
+            "bytes": 4962784,
+            "triangles": 5036,
+            "skinBones": 69,
+            "validHumanAvatar": true,
+            "textures": [
+                "Assets/_Project/Characters/Crowd/Sources/PeasantGirl/Textures/Peasant_Girl_diffuse.png",
+                "Assets/_Project/Characters/Crowd/Sources/PeasantGirl/Textures/Peasant_Girl_normal.png",
+                "Assets/_Project/Characters/Crowd/Sources/PeasantGirl/Textures/Peasant_Girl_specular.png"
+            ]
+        },
+        {
+            "id": "PeasantMan",
+            "sourceTitle": "Peasant Man",
+            "sourcePage": "https://www.mixamo.com/#/?page=1&type=Character",
+            "downloadFilename": "Peasant Man.fbx",
+            "format": "FBX for Unity, T-pose",
+            "rawFile": "ArtSource/Characters/Crowd/Mixamo/PeasantMan.fbx",
+            "unityFile": "Assets/_Project/Characters/Crowd/Sources/PeasantMan/PeasantMan.fbx",
+            "sha256": "973a7500c82fc96680c3d0e6313ba672086ea7ddc5049dc8833a7b1061136fea",
+            "state": "unity_humanoid_import_verified",
+            "bytes": 3624400,
+            "triangles": 4625,
+            "skinBones": 43,
+            "validHumanAvatar": true,
+            "textures": [
+                "Assets/_Project/Characters/Crowd/Sources/PeasantMan/Textures/Peasant_Man_diffuse.png",
+                "Assets/_Project/Characters/Crowd/Sources/PeasantMan/Textures/Peasant_Man_normal.png",
+                "Assets/_Project/Characters/Crowd/Sources/PeasantMan/Textures/Peasant_Man_specular.png"
+            ]
+        },
+        {
+            "id": "KnightD",
+            "sourceTitle": "Knight D Pelegrini",
+            "sourcePage": "https://www.mixamo.com/#/?page=1&type=Character",
+            "downloadFilename": "Knight D Pelegrini.fbx",
+            "format": "FBX for Unity, T-pose",
+            "rawFile": "ArtSource/Characters/Crowd/Mixamo/KnightD.fbx",
+            "unityFile": "Assets/_Project/Characters/Crowd/Sources/KnightD/KnightD.fbx",
+            "sha256": "b3acca98c65cd7d632df09edaeee60e363e5e1883dc78c54ac3dbdac196e9907",
+            "state": "unity_humanoid_import_verified",
+            "bytes": 10861488,
+            "triangles": 13124,
+            "skinBones": 66,
+            "validHumanAvatar": true,
+            "textures": [
+                "Assets/_Project/Characters/Crowd/Sources/KnightD/Textures/Knight_diffuse.png",
+                "Assets/_Project/Characters/Crowd/Sources/KnightD/Textures/Knight_normal.png",
+                "Assets/_Project/Characters/Crowd/Sources/KnightD/Textures/Knight_specular.png"
+            ]
+        }
+    ]
+}

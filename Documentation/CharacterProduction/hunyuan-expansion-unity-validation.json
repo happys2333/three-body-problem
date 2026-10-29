@@ -1,0 +1,172 @@
+{
+    "assets": [
+        {
+            "id": "ShangGuard",
+            "kind": "character",
+            "source": "Assets/_Project/Art/HunyuanExpansion/ShangGuard/ShangGuard_Rig.fbx",
+            "prefab": "Assets/_Project/Art/HunyuanExpansion/Prefabs/ShangGuard.prefab",
+            "passed": true,
+            "validHumanAvatar": true,
+            "albedo": true,
+            "normal": true,
+            "metallicSmoothness": true,
+            "triangles": 49988,
+            "vertices": 37306,
+            "skinBones": 23,
+            "heightMetres": 1.8299999237060547,
+            "textures": [
+                "Assets/_Project/Art/HunyuanExpansion/ShangGuard/Textures/texture_pbr_20250901.png",
+                "Assets/_Project/Art/HunyuanExpansion/ShangGuard/Textures/texture_pbr_20250901_metallic.png",
+                "Assets/_Project/Art/HunyuanExpansion/ShangGuard/Textures/texture_pbr_20250901_normal.png",
+                "Assets/_Project/Art/HunyuanExpansion/ShangGuard/Textures/texture_pbr_20250901_roughness.png"
+            ]
+        },
+        {
+            "id": "ChurchGuard",
+            "kind": "character",
+            "source": "Assets/_Project/Art/HunyuanExpansion/ChurchGuard/ChurchGuard_Rig.fbx",
+            "prefab": "Assets/_Project/Art/HunyuanExpansion/Prefabs/ChurchGuard.prefab",
+            "passed": true,
+            "validHumanAvatar": true,
+            "albedo": true,
+            "normal": true,
+            "metallicSmoothness": true,
+            "triangles": 49988,
+            "vertices": 37070,
+            "skinBones": 23,
+            "heightMetres": 1.8499999046325684,
+            "textures": [
+                "Assets/_Project/Art/HunyuanExpansion/ChurchGuard/Textures/texture_pbr_20250901.png",
+                "Assets/_Project/Art/HunyuanExpansion/ChurchGuard/Textures/texture_pbr_20250901_metallic.png",
+                "Assets/_Project/Art/HunyuanExpansion/ChurchGuard/Textures/texture_pbr_20250901_normal.png",
+                "Assets/_Project/Art/HunyuanExpansion/ChurchGuard/Textures/texture_pbr_20250901_roughness.png"
+            ]
+        },
+        {
+            "id": "CitizenMale",
+            "kind": "character",
+            "source": "Assets/_Project/Art/HunyuanExpansion/CitizenMale/CitizenMale_Rig.fbx",
+            "prefab": "Assets/_Project/Art/HunyuanExpansion/Prefabs/CitizenMale.prefab",
+            "passed": true,
+            "validHumanAvatar": true,
+            "albedo": true,
+            "normal": true,
+            "metallicSmoothness": true,
+            "triangles": 50000,
+            "vertices": 36150,
+            "skinBones": 23,
+            "heightMetres": 1.7300002574920655,
+            "textures": [
+                "Assets/_Project/Art/HunyuanExpansion/CitizenMale/Textures/texture_pbr_20250901.png",
+                "Assets/_Project/Art/HunyuanExpansion/CitizenMale/Textures/texture_pbr_20250901_metallic.png",
+                "Assets/_Project/Art/HunyuanExpansion/CitizenMale/Textures/texture_pbr_20250901_normal.png",
+                "Assets/_Project/Art/HunyuanExpansion/CitizenMale/Textures/texture_pbr_20250901_roughness.png"
+            ]
+        },
+        {
+            "id": "CitizenFemale",
+            "kind": "character",
+            "source": "Assets/_Project/Art/HunyuanExpansion/CitizenFemale/CitizenFemale_Rig.fbx",
+            "prefab": "Assets/_Project/Art/HunyuanExpansion/Prefabs/CitizenFemale.prefab",
+            "passed": true,
+            "validHumanAvatar": true,
+            "albedo": true,
+            "normal": true,
+            "metallicSmoothness": true,
+            "triangles": 50000,
+            "vertices": 34355,
+            "skinBones": 23,
+            "heightMetres": 1.649999976158142,
+            "textures": [
+                "Assets/_Project/Art/HunyuanExpansion/CitizenFemale/Textures/texture_pbr_20250901.png",
+                "Assets/_Project/Art/HunyuanExpansion/CitizenFemale/Textures/texture_pbr_20250901_metallic.png",
+                "Assets/_Project/Art/HunyuanExpansion/CitizenFemale/Textures/texture_pbr_20250901_normal.png",
+                "Assets/_Project/Art/HunyuanExpansion/CitizenFemale/Textures/texture_pbr_20250901_roughness.png"
+            ]
+        },
+        {
+            "id": "PopeV3",
+            "kind": "character_unrigged_candidate",
+            "source": "Assets/_Project/Art/HunyuanExpansion/PopeV3/PopeV3_Textured.fbx",
+            "prefab": "Assets/_Project/Art/HunyuanExpansion/Prefabs/PopeV3.prefab",
+            "passed": true,
+            "validHumanAvatar": false,
+            "albedo": true,
+            "normal": true,
+            "metallicSmoothness": true,
+            "triangles": 50000,
+            "vertices": 31833,
+            "skinBones": 0,
+            "heightMetres": 1.7999999523162842,
+            "textures": [
+                "Assets/_Project/Art/HunyuanExpansion/PopeV3/Textures/texture_pbr_20250901.png",
+                "Assets/_Project/Art/HunyuanExpansion/PopeV3/Textures/texture_pbr_20250901_metallic.png",
+                "Assets/_Project/Art/HunyuanExpansion/PopeV3/Textures/texture_pbr_20250901_normal.png",
+                "Assets/_Project/Art/HunyuanExpansion/PopeV3/Textures/texture_pbr_20250901_roughness.png"
+            ]
+        },
+        {
+            "id": "CalendarChest",
+            "kind": "prop",
+            "source": "Assets/_Project/Art/HunyuanExpansion/CalendarChest/CalendarChest_Textured.fbx",
+            "prefab": "Assets/_Project/Art/HunyuanExpansion/Prefabs/CalendarChest.prefab",
+            "passed": true,
+            "validHumanAvatar": false,
+            "albedo": true,
+            "normal": true,
+            "metallicSmoothness": true,
+            "triangles": 50000,
+            "vertices": 36281,
+            "skinBones": 0,
+            "heightMetres": 0.6454610228538513,
+            "textures": [
+                "Assets/_Project/Art/HunyuanExpansion/CalendarChest/Textures/texture_pbr_20250901.png",
+                "Assets/_Project/Art/HunyuanExpansion/CalendarChest/Textures/texture_pbr_20250901_metallic.png",
+                "Assets/_Project/Art/HunyuanExpansion/CalendarChest/Textures/texture_pbr_20250901_normal.png",
+                "Assets/_Project/Art/HunyuanExpansion/CalendarChest/Textures/texture_pbr_20250901_roughness.png"
+            ]
+        },
+        {
+            "id": "BronzeHourglass",
+            "kind": "prop",
+            "source": "Assets/_Project/Art/HunyuanExpansion/BronzeHourglass/BronzeHourglass_Textured.fbx",
+            "prefab": "Assets/_Project/Art/HunyuanExpansion/Prefabs/BronzeHourglass.prefab",
+            "passed": true,
+            "validHumanAvatar": false,
+            "albedo": true,
+            "normal": true,
+            "metallicSmoothness": true,
+            "triangles": 50000,
+            "vertices": 31451,
+            "skinBones": 0,
+            "heightMetres": 0.45000001788139346,
+            "textures": [
+                "Assets/_Project/Art/HunyuanExpansion/BronzeHourglass/Textures/texture_pbr_20250901.png",
+                "Assets/_Project/Art/HunyuanExpansion/BronzeHourglass/Textures/texture_pbr_20250901_metallic.png",
+                "Assets/_Project/Art/HunyuanExpansion/BronzeHourglass/Textures/texture_pbr_20250901_normal.png",
+                "Assets/_Project/Art/HunyuanExpansion/BronzeHourglass/Textures/texture_pbr_20250901_roughness.png"
+            ]
+        },
+        {
+            "id": "ScholarlyBook",
+            "kind": "prop",
+            "source": "Assets/_Project/Art/HunyuanExpansion/ScholarlyBook/ScholarlyBook_Textured.fbx",
+            "prefab": "Assets/_Project/Art/HunyuanExpansion/Prefabs/ScholarlyBook.prefab",
+            "passed": true,
+            "validHumanAvatar": false,
+            "albedo": true,
+            "normal": true,
+            "metallicSmoothness": true,
+            "triangles": 50000,
+            "vertices": 34534,
+            "skinBones": 0,
+            "heightMetres": 0.320000022649765,
+            "textures": [
+                "Assets/_Project/Art/HunyuanExpansion/ScholarlyBook/Textures/texture_pbr_20250901.png",
+                "Assets/_Project/Art/HunyuanExpansion/ScholarlyBook/Textures/texture_pbr_20250901_metallic.png",
+                "Assets/_Project/Art/HunyuanExpansion/ScholarlyBook/Textures/texture_pbr_20250901_normal.png",
+                "Assets/_Project/Art/HunyuanExpansion/ScholarlyBook/Textures/texture_pbr_20250901_roughness.png"
+            ]
+        }
+    ]
+}

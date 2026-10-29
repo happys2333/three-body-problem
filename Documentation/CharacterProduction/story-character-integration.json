@@ -1,0 +1,451 @@
+{
+  "date": "2026-10-28",
+  "status": "integrated_runtime_verified",
+  "userDirection": "Replace all major and supporting characters; keep player first person.",
+  "scenes": {
+    "01_GobiJourney": [
+      "PlayerTraveller",
+      "WenWang"
+    ],
+    "02_ChaogeCourt": [
+      "PlayerTraveller",
+      "WenWang",
+      "KingZhou"
+    ],
+    "03_MedievalTribunal": [
+      "PlayerTraveller",
+      "Pope",
+      "Scholar",
+      "DaVinci"
+    ]
+  },
+  "firstPerson": {
+    "eyeHeightMetres": 1.65,
+    "cameraParent": "Traveller CharacterController root",
+    "cameraFollowsHeadBone": false,
+    "visibleBodyHeadAndNeckRemoved": true,
+    "visibleBodyOffsetBehindEyeMetres": 0.27,
+    "fullOriginalModelCastsShadowsOnly": true,
+    "walkMetresPerSecond": 3,
+    "fastWalkMetresPerSecond": 5.4,
+    "lookControl": "Hold right mouse button",
+    "screenshot": "Documentation/CharacterProduction/Previews/Story_FirstPerson_LookDown_Body.png"
+  },
+  "controller": "Assets/_Project/Characters/Story/StoryActors.controller",
+  "settings": "Assets/_Project/Characters/Story/StoryCast.asset",
+  "triggeredClipsByRole": {
+    "PlayerTraveller": [
+      "MX_Idle",
+      "MX_Walking",
+      "MX_Running",
+      "MX_WalkBackward",
+      "MX_LeftStrafeWalking",
+      "MX_RightStrafeWalking"
+    ],
+    "WenWang": [
+      "MX_Idle",
+      "MX_Walking",
+      "MX_Shiver",
+      "MX_TalkCalm",
+      "MX_ShieldEyes",
+      "MX_LookSky",
+      "MX_Bow",
+      "MX_Think",
+      "MX_HappyHandGesture",
+      "Despair"
+    ],
+    "KingZhou": [
+      "MX_SitIdle",
+      "MX_TalkCalm",
+      "MX_HeadNodYes"
+    ],
+    "Pope": [
+      "MX_SitIdle",
+      "MX_AnnoyedHeadShake",
+      "MX_ShakingHeadNo"
+    ],
+    "Scholar": [
+      "MX_Idle",
+      "MX_Running",
+      "MX_TalkArgue",
+      "MX_LookSky",
+      "MX_Fear",
+      "MX_InjuredHurtingIdle",
+      "MX_Think"
+    ],
+    "DaVinci": [
+      "MX_Idle",
+      "MX_Running",
+      "MX_Think",
+      "MX_HeadNodYes",
+      "MX_LookSky",
+      "MX_Fear",
+      "MX_InjuredHurtingIdle"
+    ],
+    "ShangGuard": [
+      "MX_WeightShift"
+    ],
+    "ChurchGuard": [
+      "MX_WeightShift"
+    ],
+    "CitizenMale": [
+      "MX_Idle",
+      "MX_WeightShift",
+      "MX_Walking",
+      "MX_Shiver",
+      "MX_InjuredHurtingIdle"
+    ],
+    "CitizenFemale": [
+      "MX_Idle",
+      "MX_WeightShift",
+      "MX_Walking",
+      "MX_Shiver",
+      "MX_InjuredHurtingIdle"
+    ]
+  },
+  "behaviour": [
+    "Companion gait follows authored route movement and stops while waiting.",
+    "Conversation gestures and nearby facing use the current story/dialogue state.",
+    "Seated king and pope use a torso/head/arms mask that preserves root and legs.",
+    "Scholar and Da Vinci traverse the cathedral aisle to outdoor observation points.",
+    "Gestures received during travel are queued until arrival.",
+    "Title, pause and journal pause actors; dialogue allows NPC performance while blocking player movement."
+  ],
+  "limitations": [
+    "No finger or face rig: precise page turning, hourglass manipulation, pen contact and lip sync remain unfinished.",
+    "Pope robe and cape still require further skin-weight/cloth cleanup; broad locomotion is avoided in the story.",
+    "Only authored cues are wired to the story. The 99-clip library remains independently previewable.",
+    "The Peasant Girl and Peasant Man source models retain stylized proportions and European-style costume. Further costume and visual-style unification is needed for the Shang capital.",
+    "Performance gate remains failed. Latest nine-view P95 frame times range from 13.73 to 27.82 ms; eight exceed 16.67 ms. Other running applications varied during measurements; no controlled causal attribution is asserted."
+  ],
+  "validation": {
+    "editMode": {
+      "job": "eb191862ae084909bfb372ea40de3c86",
+      "passed": 36,
+      "total": 36
+    },
+    "characters": {
+      "passed": true,
+      "checks": 19,
+      "errors": [],
+      "verified": [
+        "Companion moves along the authored route.",
+        "Companion movement selects the walking clip.",
+        "First-person body matches movement (0.00, 1.00)",
+        "First-person body matches movement (0.00, -1.00)",
+        "First-person body matches movement (1.00, 0.00)",
+        "Fast movement selects the running clip.",
+        "Body animation leaves first-person eye position and aim unchanged.",
+        "Looking around while stationary does not animate a walking body.",
+        "The companion waits for a distant player.",
+        "Waiting companion stops walking in place.",
+        "Dialogue selects a talking performance.",
+        "Title/menu pauses character animation.",
+        "Capital contains the new king and companion.",
+        "Seated talking keeps the throne root and pelvis in place.",
+        "King talks through the upper-body layer.",
+        "Tribunal contains the new pope, scholar and Da Vinci.",
+        "Papal head gesture preserves the seated pose.",
+        "Scholars traverse the aisle and exit to the outdoor observation points.",
+        "A sky-observation cue received while travelling plays after arrival."
+      ]
+    },
+    "journey": {
+      "passed": true,
+      "checks": 51,
+      "errors": [],
+      "resolutions": [
+        "960x540",
+        "1280x720",
+        "1920x1080",
+        "1024x768"
+      ]
+    },
+    "capitalWalk": {
+      "passed": true,
+      "checks": 36,
+      "metresWalked": 369.20556640625,
+      "errors": []
+    },
+    "performance": {
+      "gpu": "Apple M5",
+      "shadowDistance": 180.0,
+      "frameRateCap": 120,
+      "passed": false,
+      "errors": [
+        "巨日 · 岩下避险: P95 exceeds 60 FPS frame budget.",
+        "朝歌 · 殷商王都: P95 exceeds 60 FPS frame budget.",
+        "巨摆与金字塔外观: P95 exceeds 60 FPS frame budget.",
+        "王都全景与城邑密度: P95 exceeds 60 FPS frame budget.",
+        "厚墙石殿与天窗: P95 exceeds 60 FPS frame budget.",
+        "恒纪元 · 王都复苏池: P95 exceeds 60 FPS frame budget.",
+        "长夜 · 没有到来的日出: P95 exceeds 60 FPS frame budget.",
+        "居民街道近景与完整人群动画: P95 exceeds 60 FPS frame budget."
+      ],
+      "metrics": [
+        {
+          "scene": "01_GobiJourney",
+          "moment": "巨日 · 岩下避险",
+          "meanFrameMs": 9.694540023803711,
+          "p95FrameMs": 16.71812629699707,
+          "meanMainThreadMs": 9.667189598083496,
+          "meanPresentWaitMs": 0.0510074645280838,
+          "meanGpuMs": 7.796724319458008,
+          "p95GpuMs": 10.52400016784668,
+          "gpuSamples": 300,
+          "batches": 267,
+          "triangles": 5864177,
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "scene": "02_ChaogeCourt",
+          "moment": "朝歌 · 殷商王都",
+          "meanFrameMs": 17.22015380859375,
+          "p95FrameMs": 27.82437515258789,
+          "meanMainThreadMs": 17.07917022705078,
+          "meanPresentWaitMs": 1.7167611122131348,
+          "meanGpuMs": 7.822882175445557,
+          "p95GpuMs": 12.182125091552734,
+          "gpuSamples": 299,
+          "batches": 902,
+          "triangles": 5969044,
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "scene": "02_ChaogeCourt",
+          "moment": "巨摆与金字塔外观",
+          "meanFrameMs": 15.8085355758667,
+          "p95FrameMs": 25.255958557128906,
+          "meanMainThreadMs": 15.828088760375977,
+          "meanPresentWaitMs": 0.8460350036621094,
+          "meanGpuMs": 7.570825099945068,
+          "p95GpuMs": 11.14916706085205,
+          "gpuSamples": 300,
+          "batches": 717,
+          "triangles": 4149018,
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "scene": "02_ChaogeCourt",
+          "moment": "王都全景与城邑密度",
+          "meanFrameMs": 10.859319686889648,
+          "p95FrameMs": 16.859416961669922,
+          "meanMainThreadMs": 10.86333179473877,
+          "meanPresentWaitMs": 0.12178834527730942,
+          "meanGpuMs": 9.14471435546875,
+          "p95GpuMs": 13.131166458129883,
+          "gpuSamples": 300,
+          "batches": 686,
+          "triangles": 4004813,
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "scene": "02_ChaogeCourt",
+          "moment": "厚墙石殿与天窗",
+          "meanFrameMs": 13.94287395477295,
+          "p95FrameMs": 23.437458038330078,
+          "meanMainThreadMs": 13.927791595458984,
+          "meanPresentWaitMs": 0.44096022844314575,
+          "meanGpuMs": 6.872786521911621,
+          "p95GpuMs": 10.690166473388672,
+          "gpuSamples": 300,
+          "batches": 421,
+          "triangles": 2168062,
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "scene": "02_ChaogeCourt",
+          "moment": "恒纪元 · 王都复苏池",
+          "meanFrameMs": 12.021499633789062,
+          "p95FrameMs": 18.285245895385742,
+          "meanMainThreadMs": 12.006315231323242,
+          "meanPresentWaitMs": 0.5975484251976013,
+          "meanGpuMs": 7.779142379760742,
+          "p95GpuMs": 11.923542022705078,
+          "gpuSamples": 300,
+          "batches": 293,
+          "triangles": 3590662,
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "scene": "02_ChaogeCourt",
+          "moment": "长夜 · 没有到来的日出",
+          "meanFrameMs": 11.38840103149414,
+          "p95FrameMs": 24.566957473754883,
+          "meanMainThreadMs": 11.390023231506348,
+          "meanPresentWaitMs": 0.4270876944065094,
+          "meanGpuMs": 9.213906288146973,
+          "p95GpuMs": 16.6981258392334,
+          "gpuSamples": 300,
+          "batches": 330,
+          "triangles": 2929781,
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "scene": "02_ChaogeCourt",
+          "moment": "居民街道近景与完整人群动画",
+          "meanFrameMs": 9.750652313232422,
+          "p95FrameMs": 16.87767219543457,
+          "meanMainThreadMs": 9.747823715209961,
+          "meanPresentWaitMs": 0.29169008135795593,
+          "meanGpuMs": 6.732095718383789,
+          "p95GpuMs": 9.682499885559082,
+          "gpuSamples": 300,
+          "batches": 666,
+          "triangles": 2777718,
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "scene": "03_MedievalTribunal",
+          "moment": "三日凌空 · 文明崩溃",
+          "meanFrameMs": 9.999906539916992,
+          "p95FrameMs": 13.730584144592285,
+          "meanMainThreadMs": 9.859699249267578,
+          "meanPresentWaitMs": 0.5578537583351135,
+          "meanGpuMs": 4.477216720581055,
+          "p95GpuMs": 7.723583221435547,
+          "gpuSamples": 300,
+          "batches": 57,
+          "triangles": 187224,
+          "width": 1920,
+          "height": 1080
+        }
+      ]
+    },
+    "crowd": {
+      "passed": true,
+      "checks": 41,
+      "errors": [],
+      "verified": [
+        "Complete real-character roster in 01_GobiJourney",
+        "No primitive character anchors in 01_GobiJourney",
+        "Complete real-character roster in 02_ChaogeCourt",
+        "No primitive character anchors in 02_ChaogeCourt",
+        "Valid textured Humanoid: 城门卫兵 [Humanoid] #2",
+        "Valid textured Humanoid: 城门卫兵 [Humanoid] #3",
+        "Valid textured Humanoid: 王都居民 [Humanoid] #7",
+        "Valid textured Humanoid: 王都居民 [Humanoid] #8",
+        "Valid textured Humanoid: 王都居民 [Humanoid] #9",
+        "Valid textured Humanoid: 王都居民 [Humanoid] #10",
+        "Valid textured Humanoid: 王都居民 [Humanoid] #11",
+        "Valid textured Humanoid: 王都居民 [Humanoid] #12",
+        "Valid textured Humanoid: 王都居民 [Humanoid] #13",
+        "Valid textured Humanoid: 王都居民 [Humanoid] #14",
+        "Valid textured Humanoid: 王都居民 [Humanoid] #15",
+        "Valid textured Humanoid: 王都居民 [Humanoid] #16",
+        "Valid textured Humanoid: 王都居民 [Humanoid] #17",
+        "Valid textured Humanoid: 王都居民 [Humanoid] #18",
+        "Valid textured Humanoid: 石殿卫兵 [Humanoid] #4",
+        "Valid textured Humanoid: 入口卫兵 [Humanoid] #0",
+        "Valid textured Humanoid: 石殿卫兵 [Humanoid] #5",
+        "Valid textured Humanoid: 入口卫兵 [Humanoid] #1",
+        "Valid textured Humanoid: 复苏者 [Humanoid] #0",
+        "Valid textured Humanoid: 复苏者 [Humanoid] #1",
+        "Valid textured Humanoid: 复苏者 [Humanoid] #2",
+        "Valid textured Humanoid: 复苏者 [Humanoid] #3",
+        "Valid textured Humanoid: 复苏者 [Humanoid] #4",
+        "Valid textured Humanoid: 复苏者 [Humanoid] #5",
+        "Valid textured Humanoid: 复苏者 [Humanoid] #6",
+        "Guard idle keeps the authored watch direction in scene 1",
+        "Guard carries attached spear in scene 1",
+        "Resident stroll moves the real body and selects a matching walking clip.",
+        "Title pauses all supporting-character movement and animation.",
+        "Capital exposes its authored cold moment.",
+        "All residents and revivers respond to cold and stop strolling.",
+        "Complete real-character roster in 03_MedievalTribunal",
+        "No primitive character anchors in 03_MedievalTribunal",
+        "Valid textured Humanoid: 教廷卫兵 [Humanoid] #1",
+        "Valid textured Humanoid: 教廷卫兵 [Humanoid] #0",
+        "Guard idle keeps the authored watch direction in scene 2",
+        "Guard carries attached spear in scene 2"
+      ]
+    },
+    "performanceRuns": [
+      {
+        "report": "Logs/FullCrowdQA/final-native/performance.json",
+        "passed": false,
+        "p95MinMs": 8.569578170776367,
+        "p95MaxMs": 32.93504333496094,
+        "failedViews": 6
+      },
+      {
+        "report": "Logs/FullCrowdQA/performance-isolated/performance.json",
+        "passed": false,
+        "p95MinMs": 8.66588020324707,
+        "p95MaxMs": 32.710960388183594,
+        "failedViews": 5
+      },
+      {
+        "report": "Logs/FullCrowdQA/performance-single-player/performance.json",
+        "passed": false,
+        "p95MinMs": 13.730584144592285,
+        "p95MaxMs": 27.82437515258789,
+        "failedViews": 8
+      }
+    ]
+  },
+  "build": {
+    "job": "build-802ef60ae5",
+    "target": "StandaloneOSX Development Player",
+    "output": "Builds/macOS/ThreeBodyTraveller.app",
+    "sizeMiB": 578.85,
+    "errors": 0,
+    "warnings": 0
+  },
+  "nativeArtifacts": "Logs/FullCrowdQA/final-native",
+  "evidence": [
+    "Documentation/CharacterProduction/Previews/Story_Gobi_FirstPerson_Conversation.png",
+    "Documentation/CharacterProduction/Previews/Story_FirstPerson_LookDown_Body.png",
+    "Documentation/CharacterProduction/Previews/Story_Chaoge_King_Seated.png",
+    "Documentation/CharacterProduction/Previews/Story_Chaoge_Companion_Calendar.png",
+    "Documentation/CharacterProduction/Previews/Story_Medieval_Pope_Seated.png",
+    "Documentation/CharacterProduction/Previews/Story_Medieval_Scholar_Dialogue.png",
+    "Documentation/CharacterProduction/Previews/Story_Medieval_ThreeSuns_Reaction.png",
+    "Documentation/CharacterProduction/Previews/Crowd_walk_court.png",
+    "Documentation/CharacterProduction/Previews/Crowd_Chaoge_King_Seated.png",
+    "Documentation/CharacterProduction/Previews/Crowd_title_1280x720.png",
+    "Documentation/CharacterProduction/Previews/Crowd_title_1024x768.png",
+    "Documentation/CharacterProduction/Previews/Crowd_Medieval_Pope_Seated.png",
+    "Documentation/CharacterProduction/Previews/Crowd_title_1920x1080.png",
+    "Documentation/CharacterProduction/Previews/Crowd_FirstPerson_LookDown_Body.png",
+    "Documentation/CharacterProduction/Previews/Crowd_Medieval_ThreeSuns_Reaction.png",
+    "Documentation/CharacterProduction/Previews/Crowd_Medieval_Scholar_Dialogue.png",
+    "Documentation/CharacterProduction/Previews/Crowd_walk_arrival.png",
+    "Documentation/CharacterProduction/Previews/Crowd_title_960x540.png",
+    "Documentation/CharacterProduction/Previews/Crowd_Chaoge_Citizen_Street.png",
+    "Documentation/CharacterProduction/Previews/Crowd_opening.png",
+    "Documentation/CharacterProduction/Previews/Crowd_Gobi_FirstPerson_Conversation.png",
+    "Documentation/CharacterProduction/Previews/Crowd_Chaoge_Companion_Calendar.png",
+    "Documentation/CharacterProduction/Previews/Crowd_Medieval_ChurchGuard.png",
+    "Documentation/CharacterProduction/Previews/Crowd_calendar_skylight.png",
+    "Documentation/CharacterProduction/Previews/Crowd_walk_water.png",
+    "Documentation/CharacterProduction/Previews/Crowd_conversation.png",
+    "Documentation/CharacterProduction/Previews/Crowd_Chaoge_ShangeGuard.png",
+    "Documentation/CharacterProduction/Previews/Crowd_summary.png",
+    "Documentation/CharacterProduction/Previews/Crowd_capital_arrival.png",
+    "Documentation/CharacterProduction/Previews/Crowd_Chaoge_Reviving_Citizens_Cold.png",
+    "Documentation/CharacterProduction/Previews/Unity_Crowd_Guards.jpg",
+    "Documentation/CharacterProduction/Previews/Unity_Crowd_Citizens.jpg"
+  ],
+  "sceneSHA256": {
+    "03_MedievalTribunal.unity": "1238bd663d25c21a268bd218c4c68df4b222f7a109215d50e8895dc3a0c9ac88",
+    "02_ChaogeCourt.unity": "7507bcd0a927e5c1d174e91ebbe35af7eb96f5c2f32e7a6d36ff1a8b449d3dc2",
+    "01_GobiJourney.unity": "30b86b32a693ab2eedbd1ac1c50d1ce02e8c47f5abf4a5b2533a6078685327b8"
+  },
+  "supportingCast": {
+    "report": "Documentation/CharacterProduction/full-cast-integration.json",
+    "instances": 27,
+    "variants": 9,
+    "sourceBodies": 4,
+    "allSceneInstances": 36,
+    "remainingStandIns": 0
+  }
+}

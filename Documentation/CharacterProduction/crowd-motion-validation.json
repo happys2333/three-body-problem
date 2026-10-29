@@ -1,0 +1,455 @@
+{
+    "scope": "Nine supporting-character variants, five runtime motions, five CPU-baked poses each. Finite skin, deformation and gross bounds only; visual inspection is separate.",
+    "combinations": [
+        {
+            "variant": "ShangGuard_Bronze",
+            "clip": "MX_Idle",
+            "poses": 5,
+            "vertices": 175975,
+            "boneRotation": 1.4439849853515626,
+            "vertexDisplacement": 0.018693048506975175,
+            "radius": 1.9615365266799927,
+            "passed": true
+        },
+        {
+            "variant": "ShangGuard_Bronze",
+            "clip": "MX_WeightShift",
+            "poses": 5,
+            "vertices": 175975,
+            "boneRotation": 14.721480369567871,
+            "vertexDisplacement": 0.11163313686847687,
+            "radius": 1.9609624147415162,
+            "passed": true
+        },
+        {
+            "variant": "ShangGuard_Bronze",
+            "clip": "MX_Walking",
+            "poses": 5,
+            "vertices": 175975,
+            "boneRotation": 50.78512954711914,
+            "vertexDisplacement": 0.6064137816429138,
+            "radius": 1.9538514614105225,
+            "passed": true
+        },
+        {
+            "variant": "ShangGuard_Bronze",
+            "clip": "MX_Shiver",
+            "poses": 5,
+            "vertices": 175975,
+            "boneRotation": 0.7661682367324829,
+            "vertexDisplacement": 0.010606702417135239,
+            "radius": 1.961639404296875,
+            "passed": true
+        },
+        {
+            "variant": "ShangGuard_Bronze",
+            "clip": "MX_InjuredHurtingIdle",
+            "poses": 5,
+            "vertices": 175975,
+            "boneRotation": 59.53753662109375,
+            "vertexDisplacement": 0.8654608130455017,
+            "radius": 1.8889060020446778,
+            "passed": true
+        },
+        {
+            "variant": "ShangGuard_Dark",
+            "clip": "MX_Idle",
+            "poses": 5,
+            "vertices": 175975,
+            "boneRotation": 1.4439849853515626,
+            "vertexDisplacement": 0.019110817462205888,
+            "radius": 2.005145788192749,
+            "passed": true
+        },
+        {
+            "variant": "ShangGuard_Dark",
+            "clip": "MX_WeightShift",
+            "poses": 5,
+            "vertices": 175975,
+            "boneRotation": 14.72137451171875,
+            "vertexDisplacement": 0.11412756890058518,
+            "radius": 2.004558563232422,
+            "passed": true
+        },
+        {
+            "variant": "ShangGuard_Dark",
+            "clip": "MX_Walking",
+            "poses": 5,
+            "vertices": 175975,
+            "boneRotation": 50.78505325317383,
+            "vertexDisplacement": 0.6199647188186646,
+            "radius": 1.9972891807556153,
+            "passed": true
+        },
+        {
+            "variant": "ShangGuard_Dark",
+            "clip": "MX_Shiver",
+            "poses": 5,
+            "vertices": 175975,
+            "boneRotation": 0.7661682367324829,
+            "vertexDisplacement": 0.010843716561794281,
+            "radius": 2.0052504539489748,
+            "passed": true
+        },
+        {
+            "variant": "ShangGuard_Dark",
+            "clip": "MX_InjuredHurtingIdle",
+            "poses": 5,
+            "vertices": 175975,
+            "boneRotation": 59.53753662109375,
+            "vertexDisplacement": 0.8848009705543518,
+            "radius": 1.9308923482894898,
+            "passed": true
+        },
+        {
+            "variant": "ChurchGuard_Steel",
+            "clip": "MX_Idle",
+            "poses": 5,
+            "vertices": 44590,
+            "boneRotation": 1.3648463487625123,
+            "vertexDisplacement": 0.013058122247457505,
+            "radius": 1.6854859590530396,
+            "passed": true
+        },
+        {
+            "variant": "ChurchGuard_Steel",
+            "clip": "MX_WeightShift",
+            "poses": 5,
+            "vertices": 44590,
+            "boneRotation": 14.053990364074707,
+            "vertexDisplacement": 0.1068810373544693,
+            "radius": 1.6851716041564942,
+            "passed": true
+        },
+        {
+            "variant": "ChurchGuard_Steel",
+            "clip": "MX_Walking",
+            "poses": 5,
+            "vertices": 44590,
+            "boneRotation": 48.705081939697269,
+            "vertexDisplacement": 0.568367063999176,
+            "radius": 1.674561619758606,
+            "passed": true
+        },
+        {
+            "variant": "ChurchGuard_Steel",
+            "clip": "MX_Shiver",
+            "poses": 5,
+            "vertices": 44590,
+            "boneRotation": 0.7702435851097107,
+            "vertexDisplacement": 0.010415400378406048,
+            "radius": 1.6856435537338257,
+            "passed": true
+        },
+        {
+            "variant": "ChurchGuard_Steel",
+            "clip": "MX_InjuredHurtingIdle",
+            "poses": 5,
+            "vertices": 44590,
+            "boneRotation": 58.71160888671875,
+            "vertexDisplacement": 0.6263706088066101,
+            "radius": 1.603710412979126,
+            "passed": true
+        },
+        {
+            "variant": "CitizenMale_Hemp",
+            "clip": "MX_Idle",
+            "poses": 5,
+            "vertices": 175975,
+            "boneRotation": 1.4434428215026856,
+            "vertexDisplacement": 0.017267365008592607,
+            "radius": 1.8127021789550782,
+            "passed": true
+        },
+        {
+            "variant": "CitizenMale_Hemp",
+            "clip": "MX_WeightShift",
+            "poses": 5,
+            "vertices": 175975,
+            "boneRotation": 14.721427917480469,
+            "vertexDisplacement": 0.10311926901340485,
+            "radius": 1.812172293663025,
+            "passed": true
+        },
+        {
+            "variant": "CitizenMale_Hemp",
+            "clip": "MX_Walking",
+            "poses": 5,
+            "vertices": 175975,
+            "boneRotation": 50.78495788574219,
+            "vertexDisplacement": 0.5601655840873718,
+            "radius": 1.8056031465530396,
+            "passed": true
+        },
+        {
+            "variant": "CitizenMale_Hemp",
+            "clip": "MX_Shiver",
+            "poses": 5,
+            "vertices": 175975,
+            "boneRotation": 0.7661682367324829,
+            "vertexDisplacement": 0.009797734208405018,
+            "radius": 1.8127974271774293,
+            "passed": true
+        },
+        {
+            "variant": "CitizenMale_Hemp",
+            "clip": "MX_InjuredHurtingIdle",
+            "poses": 5,
+            "vertices": 175975,
+            "boneRotation": 59.53753662109375,
+            "vertexDisplacement": 0.7994565367698669,
+            "radius": 1.7456090450286866,
+            "passed": true
+        },
+        {
+            "variant": "CitizenMale_Indigo",
+            "clip": "MX_Idle",
+            "poses": 5,
+            "vertices": 175975,
+            "boneRotation": 1.4445269107818604,
+            "vertexDisplacement": 0.01667371764779091,
+            "radius": 1.7507226467132569,
+            "passed": true
+        },
+        {
+            "variant": "CitizenMale_Indigo",
+            "clip": "MX_WeightShift",
+            "poses": 5,
+            "vertices": 175975,
+            "boneRotation": 14.721427917480469,
+            "vertexDisplacement": 0.09957385808229447,
+            "radius": 1.7502106428146363,
+            "passed": true
+        },
+        {
+            "variant": "CitizenMale_Indigo",
+            "clip": "MX_Walking",
+            "poses": 5,
+            "vertices": 175975,
+            "boneRotation": 50.78498840332031,
+            "vertexDisplacement": 0.5409062504768372,
+            "radius": 1.7438675165176392,
+            "passed": true
+        },
+        {
+            "variant": "CitizenMale_Indigo",
+            "clip": "MX_Shiver",
+            "poses": 5,
+            "vertices": 175975,
+            "boneRotation": 0.7661682367324829,
+            "vertexDisplacement": 0.009460840374231339,
+            "radius": 1.7508145570755005,
+            "passed": true
+        },
+        {
+            "variant": "CitizenMale_Indigo",
+            "clip": "MX_InjuredHurtingIdle",
+            "poses": 5,
+            "vertices": 175975,
+            "boneRotation": 59.53753662109375,
+            "vertexDisplacement": 0.7719698548316956,
+            "radius": 1.685935616493225,
+            "passed": true
+        },
+        {
+            "variant": "CitizenMale_Worker",
+            "clip": "MX_Idle",
+            "poses": 5,
+            "vertices": 14260,
+            "boneRotation": 1.5164278745651246,
+            "vertexDisplacement": 0.015809806063771249,
+            "radius": 1.463241696357727,
+            "passed": true
+        },
+        {
+            "variant": "CitizenMale_Worker",
+            "clip": "MX_WeightShift",
+            "poses": 5,
+            "vertices": 14260,
+            "boneRotation": 17.231687545776368,
+            "vertexDisplacement": 0.07601100951433182,
+            "radius": 1.4629838466644288,
+            "passed": true
+        },
+        {
+            "variant": "CitizenMale_Worker",
+            "clip": "MX_Walking",
+            "poses": 5,
+            "vertices": 14260,
+            "boneRotation": 59.57752227783203,
+            "vertexDisplacement": 0.5170528292655945,
+            "radius": 1.4525738954544068,
+            "passed": true
+        },
+        {
+            "variant": "CitizenMale_Worker",
+            "clip": "MX_Shiver",
+            "poses": 5,
+            "vertices": 14260,
+            "boneRotation": 0.7793353796005249,
+            "vertexDisplacement": 0.009268218651413918,
+            "radius": 1.4633393287658692,
+            "passed": true
+        },
+        {
+            "variant": "CitizenMale_Worker",
+            "clip": "MX_InjuredHurtingIdle",
+            "poses": 5,
+            "vertices": 14260,
+            "boneRotation": 59.28458786010742,
+            "vertexDisplacement": 0.7037778496742249,
+            "radius": 1.4068424701690674,
+            "passed": true
+        },
+        {
+            "variant": "CitizenMale_Slate",
+            "clip": "MX_Idle",
+            "poses": 5,
+            "vertices": 14260,
+            "boneRotation": 1.5164278745651246,
+            "vertexDisplacement": 0.01674233376979828,
+            "radius": 1.5489603281021119,
+            "passed": true
+        },
+        {
+            "variant": "CitizenMale_Slate",
+            "clip": "MX_WeightShift",
+            "poses": 5,
+            "vertices": 14260,
+            "boneRotation": 17.231733322143556,
+            "vertexDisplacement": 0.08049449324607849,
+            "radius": 1.548687219619751,
+            "passed": true
+        },
+        {
+            "variant": "CitizenMale_Slate",
+            "clip": "MX_Walking",
+            "poses": 5,
+            "vertices": 14260,
+            "boneRotation": 59.57757568359375,
+            "vertexDisplacement": 0.5475509166717529,
+            "radius": 1.5376646518707276,
+            "passed": true
+        },
+        {
+            "variant": "CitizenMale_Slate",
+            "clip": "MX_Shiver",
+            "poses": 5,
+            "vertices": 14260,
+            "boneRotation": 0.7793353796005249,
+            "vertexDisplacement": 0.009815002791583538,
+            "radius": 1.5490636825561524,
+            "passed": true
+        },
+        {
+            "variant": "CitizenMale_Slate",
+            "clip": "MX_InjuredHurtingIdle",
+            "poses": 5,
+            "vertices": 14260,
+            "boneRotation": 59.28458786010742,
+            "vertexDisplacement": 0.7452896237373352,
+            "radius": 1.48923659324646,
+            "passed": true
+        },
+        {
+            "variant": "CitizenFemale_Ochre",
+            "clip": "MX_Idle",
+            "poses": 5,
+            "vertices": 16575,
+            "boneRotation": 1.2935965061187745,
+            "vertexDisplacement": 0.013134737499058247,
+            "radius": 1.3839733600616456,
+            "passed": true
+        },
+        {
+            "variant": "CitizenFemale_Ochre",
+            "clip": "MX_WeightShift",
+            "poses": 5,
+            "vertices": 16575,
+            "boneRotation": 12.965299606323243,
+            "vertexDisplacement": 0.09130202233791352,
+            "radius": 1.3833599090576172,
+            "passed": true
+        },
+        {
+            "variant": "CitizenFemale_Ochre",
+            "clip": "MX_Walking",
+            "poses": 5,
+            "vertices": 16575,
+            "boneRotation": 51.9929084777832,
+            "vertexDisplacement": 0.4427034556865692,
+            "radius": 1.377341866493225,
+            "passed": true
+        },
+        {
+            "variant": "CitizenFemale_Ochre",
+            "clip": "MX_Shiver",
+            "poses": 5,
+            "vertices": 16575,
+            "boneRotation": 0.740188717842102,
+            "vertexDisplacement": 0.006664571352303028,
+            "radius": 1.3838005065917969,
+            "passed": true
+        },
+        {
+            "variant": "CitizenFemale_Ochre",
+            "clip": "MX_InjuredHurtingIdle",
+            "poses": 5,
+            "vertices": 16575,
+            "boneRotation": 59.26749038696289,
+            "vertexDisplacement": 0.6584892868995667,
+            "radius": 1.3292148113250733,
+            "passed": true
+        },
+        {
+            "variant": "CitizenFemale_Indigo",
+            "clip": "MX_Idle",
+            "poses": 5,
+            "vertices": 16575,
+            "boneRotation": 1.2942014932632447,
+            "vertexDisplacement": 0.01250937208533287,
+            "radius": 1.3185553550720215,
+            "passed": true
+        },
+        {
+            "variant": "CitizenFemale_Indigo",
+            "clip": "MX_WeightShift",
+            "poses": 5,
+            "vertices": 16575,
+            "boneRotation": 12.965238571166993,
+            "vertexDisplacement": 0.08695493638515473,
+            "radius": 1.3179709911346436,
+            "passed": true
+        },
+        {
+            "variant": "CitizenFemale_Indigo",
+            "clip": "MX_Walking",
+            "poses": 5,
+            "vertices": 16575,
+            "boneRotation": 51.9929084777832,
+            "vertexDisplacement": 0.42162540555000307,
+            "radius": 1.3122395277023316,
+            "passed": true
+        },
+        {
+            "variant": "CitizenFemale_Indigo",
+            "clip": "MX_Shiver",
+            "poses": 5,
+            "vertices": 16575,
+            "boneRotation": 0.740188717842102,
+            "vertexDisplacement": 0.006347254384309053,
+            "radius": 1.3183908462524415,
+            "passed": true
+        },
+        {
+            "variant": "CitizenFemale_Indigo",
+            "clip": "MX_InjuredHurtingIdle",
+            "poses": 5,
+            "vertices": 16575,
+            "boneRotation": 59.26749038696289,
+            "vertexDisplacement": 0.6271370649337769,
+            "radius": 1.266402244567871,
+            "passed": true
+        }
+    ]
+}

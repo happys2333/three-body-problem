@@ -1,0 +1,76 @@
+{
+    "variants": [
+        {
+            "id": "ShangGuard_Bronze",
+            "source": "PlayerTraveller",
+            "role": "ShangGuard",
+            "prefab": "Assets/_Project/Characters/Crowd/Prefabs/ShangGuard_Bronze.prefab",
+            "skinnedTriangles": 50000,
+            "standingHeight": 1.7999999523162842
+        },
+        {
+            "id": "ShangGuard_Dark",
+            "source": "PlayerTraveller",
+            "role": "ShangGuard",
+            "prefab": "Assets/_Project/Characters/Crowd/Prefabs/ShangGuard_Dark.prefab",
+            "skinnedTriangles": 50000,
+            "standingHeight": 1.8200000524520875
+        },
+        {
+            "id": "ChurchGuard_Steel",
+            "source": "KnightD",
+            "role": "ChurchGuard",
+            "prefab": "Assets/_Project/Characters/Crowd/Prefabs/ChurchGuard_Steel.prefab",
+            "skinnedTriangles": 13124,
+            "standingHeight": 1.850000023841858
+        },
+        {
+            "id": "CitizenMale_Hemp",
+            "source": "PlayerTraveller",
+            "role": "CitizenMale",
+            "prefab": "Assets/_Project/Characters/Crowd/Prefabs/CitizenMale_Hemp.prefab",
+            "skinnedTriangles": 50000,
+            "standingHeight": 1.7300000190734864
+        },
+        {
+            "id": "CitizenMale_Indigo",
+            "source": "PlayerTraveller",
+            "role": "CitizenMale",
+            "prefab": "Assets/_Project/Characters/Crowd/Prefabs/CitizenMale_Indigo.prefab",
+            "skinnedTriangles": 50000,
+            "standingHeight": 1.7000000476837159
+        },
+        {
+            "id": "CitizenMale_Worker",
+            "source": "PeasantMan",
+            "role": "CitizenMale",
+            "prefab": "Assets/_Project/Characters/Crowd/Prefabs/CitizenMale_Worker.prefab",
+            "skinnedTriangles": 4625,
+            "standingHeight": 1.7200000286102296
+        },
+        {
+            "id": "CitizenMale_Slate",
+            "source": "PeasantMan",
+            "role": "CitizenMale",
+            "prefab": "Assets/_Project/Characters/Crowd/Prefabs/CitizenMale_Slate.prefab",
+            "skinnedTriangles": 4625,
+            "standingHeight": 1.7699999809265137
+        },
+        {
+            "id": "CitizenFemale_Ochre",
+            "source": "PeasantGirl",
+            "role": "CitizenFemale",
+            "prefab": "Assets/_Project/Characters/Crowd/Prefabs/CitizenFemale_Ochre.prefab",
+            "skinnedTriangles": 5036,
+            "standingHeight": 1.659999966621399
+        },
+        {
+            "id": "CitizenFemale_Indigo",
+            "source": "PeasantGirl",
+            "role": "CitizenFemale",
+            "prefab": "Assets/_Project/Characters/Crowd/Prefabs/CitizenFemale_Indigo.prefab",
+            "skinnedTriangles": 5036,
+            "standingHeight": 1.6200000047683716
+        }
+    ]
+}

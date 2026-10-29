@@ -1,0 +1,737 @@
+{
+  "date": "2026-10-28",
+  "readyPrefabs": 20,
+  "scope": "Static environment dressing and exterior architecture; independent first-person art yard.",
+  "status": "verified_for_static_scene_dressing",
+  "trianglesByLodTotal": [
+    1025844,
+    266692,
+    61330
+  ],
+  "immutableSourceChecks": 40,
+  "storyScenesUnchanged": true,
+  "sceneSHA256": {
+    "03_MedievalTribunal.unity": "1238bd663d25c21a268bd218c4c68df4b222f7a109215d50e8895dc3a0c9ac88",
+    "02_ChaogeCourt.unity": "7507bcd0a927e5c1d174e91ebbe35af7eb96f5c2f32e7a6d36ff1a8b449d3dc2",
+    "01_GobiJourney.unity": "30b86b32a693ab2eedbd1ac1c50d1ce02e8c47f5abf4a5b2533a6078685327b8"
+  },
+  "unityAssetFiles": 99,
+  "missingMetadata": [],
+  "editorRegression": {
+    "total": 36,
+    "passed": 36,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 51.4777136,
+    "resultState": "Passed"
+  },
+  "native": {
+    "gpu": "Apple M5",
+    "width": 1920,
+    "height": 1080,
+    "frameRateCap": 120,
+    "shadowDistance": 60.0,
+    "passed": true,
+    "metrics": [
+      {
+        "asset": "GobiMountainPeak",
+        "viewClear": true,
+        "meanFrameMs": 8.379775047302246,
+        "p95FrameMs": 8.652833938598633,
+        "meanMainThreadMs": 8.377240180969238,
+        "meanPresentWaitMs": 0.00014883872063364834,
+        "meanGpuMs": 4.928066730499268,
+        "p95GpuMs": 6.9557085037231445,
+        "gpuSamples": 360,
+        "batches": 86,
+        "triangles": 400337,
+        "visibleLods": [
+          0
+        ]
+      },
+      {
+        "asset": "GobiRidge",
+        "viewClear": true,
+        "meanFrameMs": 8.49438190460205,
+        "p95FrameMs": 8.73988151550293,
+        "meanMainThreadMs": 8.491150856018066,
+        "meanPresentWaitMs": 0.0001606442965567112,
+        "meanGpuMs": 4.703201770782471,
+        "p95GpuMs": 5.078000068664551,
+        "gpuSamples": 360,
+        "batches": 85,
+        "triangles": 422039,
+        "visibleLods": [
+          0
+        ]
+      },
+      {
+        "asset": "WindErodedCliff",
+        "viewClear": true,
+        "meanFrameMs": 8.379761695861816,
+        "p95FrameMs": 8.603372573852539,
+        "meanMainThreadMs": 8.376879692077637,
+        "meanPresentWaitMs": 0.00015808324678801,
+        "meanGpuMs": 6.787976264953613,
+        "p95GpuMs": 7.229958534240723,
+        "gpuSamples": 360,
+        "batches": 53,
+        "triangles": 740846,
+        "visibleLods": [
+          0
+        ]
+      },
+      {
+        "asset": "YardangMesa",
+        "viewClear": true,
+        "meanFrameMs": 8.380900382995605,
+        "p95FrameMs": 8.634870529174805,
+        "meanMainThreadMs": 8.377670288085938,
+        "meanPresentWaitMs": 0.00017000258958432823,
+        "meanGpuMs": 6.764840602874756,
+        "p95GpuMs": 7.509833335876465,
+        "gpuSamples": 360,
+        "batches": 51,
+        "triangles": 603832,
+        "visibleLods": [
+          0
+        ]
+      },
+      {
+        "asset": "GobiRockCluster",
+        "viewClear": true,
+        "meanFrameMs": 8.377508163452148,
+        "p95FrameMs": 8.617247581481934,
+        "meanMainThreadMs": 8.373635292053223,
+        "meanPresentWaitMs": 0.0001892804284580052,
+        "meanGpuMs": 6.843102931976318,
+        "p95GpuMs": 7.629749774932861,
+        "gpuSamples": 360,
+        "batches": 18,
+        "triangles": 148983,
+        "visibleLods": [
+          0
+        ]
+      },
+      {
+        "asset": "RockOverhang",
+        "viewClear": true,
+        "meanFrameMs": 8.357193946838379,
+        "p95FrameMs": 8.472916603088379,
+        "meanMainThreadMs": 8.354072570800781,
+        "meanPresentWaitMs": 0.00018538028234615922,
+        "meanGpuMs": 6.7446393966674805,
+        "p95GpuMs": 7.880958557128906,
+        "gpuSamples": 360,
+        "batches": 96,
+        "triangles": 1007236,
+        "visibleLods": [
+          0
+        ]
+      },
+      {
+        "asset": "DeadTamarisk",
+        "viewClear": true,
+        "meanFrameMs": 8.384337425231934,
+        "p95FrameMs": 8.655832290649414,
+        "meanMainThreadMs": 8.381091117858887,
+        "meanPresentWaitMs": 0.00018839693802874535,
+        "meanGpuMs": 6.429040431976318,
+        "p95GpuMs": 7.950083255767822,
+        "gpuSamples": 360,
+        "batches": 23,
+        "triangles": 135624,
+        "visibleLods": [
+          0
+        ]
+      },
+      {
+        "asset": "DesertThornBush",
+        "viewClear": true,
+        "meanFrameMs": 8.401481628417969,
+        "p95FrameMs": 8.779542922973633,
+        "meanMainThreadMs": 8.399413108825684,
+        "meanPresentWaitMs": 0.00013505543756764382,
+        "meanGpuMs": 6.596612930297852,
+        "p95GpuMs": 8.071457862854004,
+        "gpuSamples": 360,
+        "batches": 16,
+        "triangles": 63226,
+        "visibleLods": [
+          0
+        ]
+      },
+      {
+        "asset": "GobiWaystone",
+        "viewClear": true,
+        "meanFrameMs": 8.381318092346191,
+        "p95FrameMs": 8.643041610717773,
+        "meanMainThreadMs": 8.378026008605957,
+        "meanPresentWaitMs": 0.00017266925715375692,
+        "meanGpuMs": 6.8834099769592285,
+        "p95GpuMs": 8.149999618530273,
+        "gpuSamples": 360,
+        "batches": 19,
+        "triangles": 45177,
+        "visibleLods": [
+          0
+        ]
+      },
+      {
+        "asset": "CaravanSupplies",
+        "viewClear": true,
+        "meanFrameMs": 8.3788480758667,
+        "p95FrameMs": 8.61420726776123,
+        "meanMainThreadMs": 8.374615669250488,
+        "meanPresentWaitMs": 0.00019938855257350951,
+        "meanGpuMs": 6.642979145050049,
+        "p95GpuMs": 7.628291606903076,
+        "gpuSamples": 360,
+        "batches": 16,
+        "triangles": 175942,
+        "visibleLods": [
+          0
+        ]
+      },
+      {
+        "asset": "ShangDwelling",
+        "viewClear": true,
+        "meanFrameMs": 8.378877639770508,
+        "p95FrameMs": 8.629839897155762,
+        "meanMainThreadMs": 8.375531196594238,
+        "meanPresentWaitMs": 0.00020046364807058126,
+        "meanGpuMs": 6.5792012214660645,
+        "p95GpuMs": 7.580916881561279,
+        "gpuSamples": 360,
+        "batches": 47,
+        "triangles": 399819,
+        "visibleLods": [
+          0
+        ]
+      },
+      {
+        "asset": "ShangWorkshop",
+        "viewClear": true,
+        "meanFrameMs": 8.380687713623047,
+        "p95FrameMs": 8.671286582946777,
+        "meanMainThreadMs": 8.377513885498047,
+        "meanPresentWaitMs": 0.0001878525799838826,
+        "meanGpuMs": 6.823385238647461,
+        "p95GpuMs": 7.623791694641113,
+        "gpuSamples": 360,
+        "batches": 60,
+        "triangles": 461729,
+        "visibleLods": [
+          0
+        ]
+      },
+      {
+        "asset": "ShangGranary",
+        "viewClear": true,
+        "meanFrameMs": 8.39958667755127,
+        "p95FrameMs": 8.76974868774414,
+        "meanMainThreadMs": 8.395885467529297,
+        "meanPresentWaitMs": 0.00021433840447571129,
+        "meanGpuMs": 6.742974281311035,
+        "p95GpuMs": 7.4876251220703125,
+        "gpuSamples": 360,
+        "batches": 64,
+        "triangles": 553879,
+        "visibleLods": [
+          0
+        ]
+      },
+      {
+        "asset": "ShangMarketStall",
+        "viewClear": true,
+        "meanFrameMs": 8.379474639892578,
+        "p95FrameMs": 8.612585067749023,
+        "meanMainThreadMs": 8.377124786376953,
+        "meanPresentWaitMs": 0.00017207759083248675,
+        "meanGpuMs": 6.603641033172607,
+        "p95GpuMs": 7.819458484649658,
+        "gpuSamples": 360,
+        "batches": 69,
+        "triangles": 559324,
+        "visibleLods": [
+          0
+        ]
+      },
+      {
+        "asset": "RammedEarthGatehouse",
+        "viewClear": true,
+        "meanFrameMs": 8.404136657714844,
+        "p95FrameMs": 8.683871269226074,
+        "meanMainThreadMs": 8.39915943145752,
+        "meanPresentWaitMs": 0.00018599153554532677,
+        "meanGpuMs": 6.779806137084961,
+        "p95GpuMs": 7.565041542053223,
+        "gpuSamples": 360,
+        "batches": 98,
+        "triangles": 779507,
+        "visibleLods": [
+          0
+        ]
+      },
+      {
+        "asset": "PyramidPortal",
+        "viewClear": true,
+        "meanFrameMs": 8.356281280517578,
+        "p95FrameMs": 8.46937370300293,
+        "meanMainThreadMs": 8.352344512939453,
+        "meanPresentWaitMs": 0.0001887776015792042,
+        "meanGpuMs": 6.78769588470459,
+        "p95GpuMs": 8.157750129699707,
+        "gpuSamples": 360,
+        "batches": 27,
+        "triangles": 159403,
+        "visibleLods": [
+          0
+        ]
+      },
+      {
+        "asset": "PyramidStonePanel",
+        "viewClear": true,
+        "meanFrameMs": 8.380459785461426,
+        "p95FrameMs": 8.654330253601074,
+        "meanMainThreadMs": 8.377278327941895,
+        "meanPresentWaitMs": 0.00017223594477400184,
+        "meanGpuMs": 6.379621505737305,
+        "p95GpuMs": 8.126791954040527,
+        "gpuSamples": 360,
+        "batches": 50,
+        "triangles": 254930,
+        "visibleLods": [
+          0
+        ]
+      },
+      {
+        "asset": "MedievalTownhouse",
+        "viewClear": true,
+        "meanFrameMs": 8.401809692382812,
+        "p95FrameMs": 8.778918266296387,
+        "meanMainThreadMs": 8.398541450500488,
+        "meanPresentWaitMs": 0.00020601369033101946,
+        "meanGpuMs": 6.828203201293945,
+        "p95GpuMs": 7.707250118255615,
+        "gpuSamples": 360,
+        "batches": 89,
+        "triangles": 644928,
+        "visibleLods": [
+          0
+        ]
+      },
+      {
+        "asset": "GothicWindowWall",
+        "viewClear": true,
+        "meanFrameMs": 8.386574745178223,
+        "p95FrameMs": 8.614285469055176,
+        "meanMainThreadMs": 8.383481979370117,
+        "meanPresentWaitMs": 0.0001847359526436776,
+        "meanGpuMs": 6.830836296081543,
+        "p95GpuMs": 7.515999794006348,
+        "gpuSamples": 360,
+        "batches": 80,
+        "triangles": 742304,
+        "visibleLods": [
+          0
+        ]
+      },
+      {
+        "asset": "MedievalButtress",
+        "viewClear": true,
+        "meanFrameMs": 8.402894973754883,
+        "p95FrameMs": 8.790582656860352,
+        "meanMainThreadMs": 8.39964771270752,
+        "meanPresentWaitMs": 0.00021188582468312234,
+        "meanGpuMs": 6.934810638427734,
+        "p95GpuMs": 7.676666736602783,
+        "gpuSamples": 360,
+        "batches": 105,
+        "triangles": 820868,
+        "visibleLods": [
+          0
+        ]
+      }
+    ],
+    "errors": [],
+    "gateClear": true,
+    "portalClear": true,
+    "gateWallSolid": true,
+    "portalWallSolid": true,
+    "gateWalkThrough": true,
+    "portalWalkThrough": true
+  },
+  "nativeBuild": {
+    "result": "Succeeded",
+    "outputPath": "/Users/happys/Documents/GitHub/three-body-problem/Builds/EnvironmentArtYard.app",
+    "seconds": 8.270833,
+    "errors": 0,
+    "warnings": 0,
+    "bytes": 486669511
+  },
+  "savedPrefabReferences": {
+    "passed": true,
+    "assets": [
+      {
+        "id": "CaravanSupplies",
+        "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/CaravanSupplies.prefab",
+        "triangles": [
+          50094,
+          20688,
+          6780
+        ],
+        "collisionTriangles": 20688,
+        "passed": true
+      },
+      {
+        "id": "DeadTamarisk",
+        "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/DeadTamarisk.prefab",
+        "triangles": [
+          29208,
+          8000,
+          1800
+        ],
+        "collisionTriangles": 8000,
+        "passed": true
+      },
+      {
+        "id": "DesertThornBush",
+        "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/DesertThornBush.prefab",
+        "triangles": [
+          18000,
+          5000,
+          1200
+        ],
+        "collisionTriangles": 5000,
+        "passed": true
+      },
+      {
+        "id": "GobiMountainPeak",
+        "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/GobiMountainPeak.prefab",
+        "triangles": [
+          110000,
+          25000,
+          5000
+        ],
+        "collisionTriangles": 5000,
+        "passed": true
+      },
+      {
+        "id": "GobiRidge",
+        "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/GobiRidge.prefab",
+        "triangles": [
+          90680,
+          27204,
+          6000
+        ],
+        "collisionTriangles": 6000,
+        "passed": true
+      },
+      {
+        "id": "GobiRockCluster",
+        "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/GobiRockCluster.prefab",
+        "triangles": [
+          29366,
+          8000,
+          1800
+        ],
+        "collisionTriangles": 8000,
+        "passed": true
+      },
+      {
+        "id": "GobiWaystone",
+        "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/GobiWaystone.prefab",
+        "triangles": [
+          6500,
+          1800,
+          450
+        ],
+        "collisionTriangles": 1800,
+        "passed": true
+      },
+      {
+        "id": "GothicWindowWall",
+        "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/GothicWindowWall.prefab",
+        "triangles": [
+          32000,
+          8000,
+          1800
+        ],
+        "collisionTriangles": 8000,
+        "passed": true
+      },
+      {
+        "id": "MedievalButtress",
+        "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/MedievalButtress.prefab",
+        "triangles": [
+          23998,
+          6500,
+          1500
+        ],
+        "collisionTriangles": 6500,
+        "passed": true
+      },
+      {
+        "id": "MedievalTownhouse",
+        "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/MedievalTownhouse.prefab",
+        "triangles": [
+          75000,
+          18000,
+          4000
+        ],
+        "collisionTriangles": 18000,
+        "passed": true
+      },
+      {
+        "id": "PyramidPortal",
+        "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/PyramidPortal.prefab",
+        "triangles": [
+          29999,
+          8000,
+          1800
+        ],
+        "collisionTriangles": 8000,
+        "passed": true
+      },
+      {
+        "id": "PyramidStonePanel",
+        "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/PyramidStonePanel.prefab",
+        "triangles": [
+          20000,
+          5500,
+          1200
+        ],
+        "collisionTriangles": 5500,
+        "passed": true
+      },
+      {
+        "id": "RammedEarthGatehouse",
+        "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/RammedEarthGatehouse.prefab",
+        "triangles": [
+          79999,
+          20000,
+          4500
+        ],
+        "collisionTriangles": 20000,
+        "passed": true
+      },
+      {
+        "id": "RockOverhang",
+        "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/RockOverhang.prefab",
+        "triangles": [
+          80000,
+          18000,
+          4000
+        ],
+        "collisionTriangles": 18000,
+        "passed": true
+      },
+      {
+        "id": "ShangDwelling",
+        "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/ShangDwelling.prefab",
+        "triangles": [
+          65000,
+          16000,
+          3600
+        ],
+        "collisionTriangles": 16000,
+        "passed": true
+      },
+      {
+        "id": "ShangGranary",
+        "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/ShangGranary.prefab",
+        "triangles": [
+          30000,
+          8000,
+          1800
+        ],
+        "collisionTriangles": 8000,
+        "passed": true
+      },
+      {
+        "id": "ShangMarketStall",
+        "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/ShangMarketStall.prefab",
+        "triangles": [
+          26000,
+          7000,
+          1600
+        ],
+        "collisionTriangles": 7000,
+        "passed": true
+      },
+      {
+        "id": "ShangWorkshop",
+        "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/ShangWorkshop.prefab",
+        "triangles": [
+          70000,
+          18000,
+          4000
+        ],
+        "collisionTriangles": 18000,
+        "passed": true
+      },
+      {
+        "id": "WindErodedCliff",
+        "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/WindErodedCliff.prefab",
+        "triangles": [
+          85000,
+          20000,
+          4500
+        ],
+        "collisionTriangles": 4500,
+        "passed": true
+      },
+      {
+        "id": "YardangMesa",
+        "prefab": "Assets/_Project/Art/EnvironmentReady/Prefabs/YardangMesa.prefab",
+        "triangles": [
+          75000,
+          18000,
+          4000
+        ],
+        "collisionTriangles": 4000,
+        "passed": true
+      }
+    ],
+    "buildScenes": [
+      {
+        "path": "Assets/_Project/Scenes/Traveller/01_GobiJourney.unity",
+        "enabled": true
+      },
+      {
+        "path": "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity",
+        "enabled": true
+      },
+      {
+        "path": "Assets/_Project/Scenes/Traveller/03_MedievalTribunal.unity",
+        "enabled": true
+      }
+    ],
+    "errors": [],
+    "surfaceMaterials": [
+      {
+        "material": "Assets/_Project/Art/EnvironmentReady/Materials/Bark.mat",
+        "supported": true,
+        "surface": "Assets/_Project/Art/EnvironmentReady/Textures/Bark_Surface.png"
+      },
+      {
+        "material": "Assets/_Project/Art/EnvironmentReady/Materials/Earth.mat",
+        "supported": true,
+        "surface": "Assets/_Project/Art/EnvironmentReady/Textures/Earth_Surface.png"
+      },
+      {
+        "material": "Assets/_Project/Art/EnvironmentReady/Materials/Masonry.mat",
+        "supported": true,
+        "surface": "Assets/_Project/Art/EnvironmentReady/Textures/Masonry_Surface.png"
+      },
+      {
+        "material": "Assets/_Project/Art/EnvironmentReady/Materials/Rock.mat",
+        "supported": true,
+        "surface": "Assets/_Project/Art/EnvironmentReady/Textures/Rock_Surface.png"
+      },
+      {
+        "material": "Assets/_Project/Art/EnvironmentReady/Materials/RoofTile.mat",
+        "supported": true,
+        "surface": "Assets/_Project/Art/EnvironmentReady/Textures/RoofTile_Surface.png"
+      },
+      {
+        "material": "Assets/_Project/Art/EnvironmentReady/Materials/Thatch.mat",
+        "supported": true,
+        "surface": "Assets/_Project/Art/EnvironmentReady/Textures/Thatch_Surface.png"
+      },
+      {
+        "material": "Assets/_Project/Art/EnvironmentReady/Materials/Wood.mat",
+        "supported": true,
+        "surface": "Assets/_Project/Art/EnvironmentReady/Textures/Wood_Surface.png"
+      },
+      {
+        "material": "Assets/_Project/Art/EnvironmentReady/Materials/YardGround.mat",
+        "supported": true,
+        "surface": "Assets/_Project/Art/EnvironmentReady/Textures/YardGround_Surface.png"
+      }
+    ]
+  },
+  "photoSurfaceChecks": 12,
+  "packedSurfaceChecks": {
+    "passed": true,
+    "channels": {
+      "R": "roughness",
+      "G": "occlusion"
+    },
+    "textures": [
+      {
+        "material": "Rock",
+        "width": 2048,
+        "height": 2048,
+        "maxLinearError": 0.0,
+        "path": "Assets/_Project/Art/EnvironmentReady/Textures/Rock_Surface.png",
+        "sha256": "687425814578b092437d83cac36f81b5c99dbddab5c21ac991b127a55191f186"
+      },
+      {
+        "material": "Thatch",
+        "width": 2048,
+        "height": 2048,
+        "maxLinearError": 0.0,
+        "path": "Assets/_Project/Art/EnvironmentReady/Textures/Thatch_Surface.png",
+        "sha256": "1634711c07db0930b885b364cc28a71ab0de93d99ece6a8118558893a520d2bf"
+      },
+      {
+        "material": "Bark",
+        "width": 2048,
+        "height": 2048,
+        "maxLinearError": 0.0,
+        "path": "Assets/_Project/Art/EnvironmentReady/Textures/Bark_Surface.png",
+        "sha256": "2c7b6a2c4e8a6a54d42467d7a0f37862373154dedce844c8a54c489f0c98bf0f"
+      },
+      {
+        "material": "Masonry",
+        "width": 1024,
+        "height": 1024,
+        "maxLinearError": 0.0,
+        "path": "Assets/_Project/Art/EnvironmentReady/Textures/Masonry_Surface.png",
+        "sha256": "27085bdce1273cd2269028158a72091302cf4031ad24440be14531381dcf500c"
+      },
+      {
+        "material": "Earth",
+        "width": 1024,
+        "height": 1024,
+        "maxLinearError": 0.0,
+        "path": "Assets/_Project/Art/EnvironmentReady/Textures/Earth_Surface.png",
+        "sha256": "836442e7a47b5264543d1108acb1a2596efd1c4346e22fb2214ebcbc53028bc4"
+      },
+      {
+        "material": "Wood",
+        "width": 1024,
+        "height": 1024,
+        "maxLinearError": 0.0,
+        "path": "Assets/_Project/Art/EnvironmentReady/Textures/Wood_Surface.png",
+        "sha256": "150f0109facb7782e0100ea9b38f874f7768dc9a0906b8bf227988efa123365a"
+      },
+      {
+        "material": "RoofTile",
+        "width": 1024,
+        "height": 1024,
+        "maxLinearError": 0.0,
+        "path": "Assets/_Project/Art/EnvironmentReady/Textures/RoofTile_Surface.png",
+        "sha256": "b7de5d3c4cb9713bef3c4a212ff9dc401417b334debc5ac30b075ffc931fa500"
+      },
+      {
+        "material": "YardGround",
+        "width": 2048,
+        "height": 2048,
+        "maxLinearError": 0.0,
+        "path": "Assets/_Project/Art/EnvironmentReady/Textures/YardGround_Surface.png",
+        "sha256": "4c540306d3083c0be082136a2d01e10ea77c9593054075238231664c3ad33eab"
+      }
+    ]
+  },
+  "gallery": "Assets/_Project/Scenes/Environment/Environment_ArtYard.unity",
+  "prefabRoot": "Assets/_Project/Art/EnvironmentReady/Prefabs",
+  "errors": [],
+  "limitations": [
+    "Closed houses are static exterior shells; interiors and operable doors are not included.",
+    "Native performance evidence is for the art yard and this machine, not the unchanged story scenes.",
+    "Caravan supplies retain their original atlas-sensitive mesh and small decorative fasteners."
+  ]
+}

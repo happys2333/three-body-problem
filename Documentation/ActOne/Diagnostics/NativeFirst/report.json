@@ -1,0 +1,55 @@
+{
+    "passed": false,
+    "realTenMinuteWait": false,
+    "hardwareMicrophoneUsed": false,
+    "checks": 46,
+    "ignited": 85,
+    "burned": 85,
+    "shaded": 53,
+    "phase": "complete",
+    "gpu": "Apple M5",
+    "walkedMetres": 83.12276458740235,
+    "shelterWallSeconds": 35.822635650634769,
+    "errors": [
+        "Plants were not ignited after both actors entered cover.",
+        "Synthetic Chinese speech transcription failed.",
+        "Act one view 0 exceeded 60 FPS budget: 23.8855",
+        "Act one view 1 exceeded 60 FPS budget: 27.30546",
+        "Act one view 2 exceeded 60 FPS budget: 21.72795",
+        "Act one view 3 exceeded 60 FPS budget: 21.46633",
+        "Act one view 4 exceeded 60 FPS budget: 19.29909",
+        "Act one view 5 exceeded 60 FPS budget: 24.99741"
+    ],
+    "metrics": [
+        {
+            "moment": 0,
+            "meanMs": 17.28522300720215,
+            "p95Ms": 23.885501861572267
+        },
+        {
+            "moment": 1,
+            "meanMs": 15.095354080200196,
+            "p95Ms": 27.305463790893556
+        },
+        {
+            "moment": 2,
+            "meanMs": 16.404022216796876,
+            "p95Ms": 21.727954864501954
+        },
+        {
+            "moment": 3,
+            "meanMs": 15.568353652954102,
+            "p95Ms": 21.466333389282228
+        },
+        {
+            "moment": 4,
+            "meanMs": 16.14225196838379,
+            "p95Ms": 19.29908561706543
+        },
+        {
+            "moment": 5,
+            "meanMs": 16.430217742919923,
+            "p95Ms": 24.997413635253908
+        }
+    ]
+}

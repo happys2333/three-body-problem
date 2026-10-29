@@ -1,0 +1,34 @@
+{
+  "job_id": "b410067a64ab4754b7f050fe7d557297",
+  "status": "succeeded",
+  "mode": "EditMode",
+  "started_unix_ms": 1793166389606,
+  "finished_unix_ms": 1793166434000,
+  "last_update_unix_ms": 1793166434000,
+  "progress": {
+    "completed": 36,
+    "total": 36,
+    "current_test_full_name": null,
+    "current_test_started_unix_ms": 1793166432366,
+    "last_finished_test_full_name": "ThreeBodyProblem.Tests.TravellerSceneTests.SceneHasCompleteRuntimeAndRenderingReferences(\"03_MedievalTribunal\")",
+    "last_finished_unix_ms": 1793166433569,
+    "stuck_suspected": false,
+    "editor_is_focused": false,
+    "blocked_reason": null,
+    "failures_so_far": [],
+    "failures_capped": false
+  },
+  "error": null,
+  "result": {
+    "mode": "EditMode",
+    "summary": {
+      "total": 36,
+      "passed": 36,
+      "failed": 0,
+      "skipped": 0,
+      "durationSeconds": 35.993949,
+      "resultState": "Passed"
+    },
+    "results": []
+  }
+}
