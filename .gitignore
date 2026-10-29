@@ -6,6 +6,13 @@
 # See: https://github.com/github/gitignore/tree/main/Global
 #
 .utmp/
+.DS_Store
+__pycache__/
+*.py[cod]
+.idea/
+# Locally licensed assets which may be used in the game but not redistributed.
+/Assets/ThirdParty/LocalOnly/
+/Assets/ThirdParty/LocalOnly.meta
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
