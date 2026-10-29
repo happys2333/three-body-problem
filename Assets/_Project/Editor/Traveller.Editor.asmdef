@@ -1,0 +1,7 @@
+{
+  "name": "ThreeBodyProblem.Editor",
+  "rootNamespace": "ThreeBodyProblem.Editor",
+  "references": ["ThreeBodyProblem.Runtime"],
+  "includePlatforms": ["Editor"],
+  "autoReferenced": true
+}
