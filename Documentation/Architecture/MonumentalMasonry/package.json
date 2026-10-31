@@ -1,0 +1,10 @@
+{
+  "packageSha256": "3fad4e08e6f2935cad6e4354fd31dca914e240fadc6a3c78ec19f441cfc8a087",
+  "packageBytes": 33416089,
+  "dependencyClosure": true,
+  "entries": 1218,
+  "matchesWorkspace": true,
+  "mismatchedPaths": [],
+  "unexpectedDependencies": [],
+  "prefabs": 8
+}

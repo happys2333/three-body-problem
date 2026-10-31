@@ -117,6 +117,7 @@ namespace ThreeBodyProblem
             for(int i=0;i<bearers.Length;i++)
             {
                 var actor=bearers[i].GetComponent<TravellerActor>();var hand=actor.animator.GetBoneTransform(HumanBodyBones.LeftHand);
+                if(!bearers[i].IsCarried)continue;
                 Check(bearers[i].Grip!=null&&Vector3.Distance(hand.position,bearers[i].HandTarget)<.12f,"Torch follows reachable hand IK: "+actor.name);
                 actor.animator.cullingMode=modes[i];
             }

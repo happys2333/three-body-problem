@@ -1,0 +1,14 @@
+{
+    "passed": false,
+    "checks": 30,
+    "metresWalked": 286.8421630859375,
+    "errors": [
+        "Controller blocked en route to (8.00, 4.00, -9.00) at (1.72, 4.08, -8.98)",
+        "Controller blocked en route to (40.00, 4.00, -9.00) at (1.72, 4.08, -8.98)",
+        "Controller blocked en route to (64.00, 4.00, -9.00) at (1.72, 4.08, -8.98)",
+        "Controller blocked en route to (82.00, 0.00, -9.00) at (1.72, 4.08, -8.98)",
+        "Controller blocked en route to (82.00, 0.00, -20.00) at (1.72, 4.08, -17.85)",
+        "Controller blocked en route to (82.00, 0.00, -20.00) at (1.72, 4.08, -18.53)",
+        "The player failed to descend to the revival pool."
+    ]
+}

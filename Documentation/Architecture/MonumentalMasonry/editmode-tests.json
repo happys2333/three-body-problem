@@ -1,0 +1,80 @@
+{
+  "job_id": "c61579e333e448fb92734ecce1ec2d35",
+  "status": "succeeded",
+  "mode": "EditMode",
+  "started_unix_ms": 1793434298114,
+  "finished_unix_ms": 1793434324039,
+  "last_update_unix_ms": 1793434324039,
+  "progress": {
+    "completed": 5,
+    "total": 5,
+    "current_test_full_name": null,
+    "current_test_started_unix_ms": 1793434320613,
+    "last_finished_test_full_name": "ThreeBodyProblem.Tests.CapitalSeparationTests.PyramidLeavesAllThreeLongNightStarsInView",
+    "last_finished_unix_ms": 1793434322027,
+    "stuck_suspected": false,
+    "editor_is_focused": false,
+    "blocked_reason": null,
+    "failures_so_far": [],
+    "failures_capped": false
+  },
+  "error": null,
+  "result": {
+    "mode": "EditMode",
+    "summary": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "durationSeconds": 17.4405883,
+      "resultState": "Passed"
+    },
+    "results": [
+      {
+        "name": "CapitalArrivalCourtAndGardenRoutesHaveClearWalkingSpace",
+        "fullName": "ThreeBodyProblem.Tests.CapitalSeparationTests.CapitalArrivalCourtAndGardenRoutesHaveClearWalkingSpace",
+        "state": "Passed",
+        "durationSeconds": 6.225617,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "CapitalStartsOutsideItsGateAndContainsDistinctCityPrecincts",
+        "fullName": "ThreeBodyProblem.Tests.CapitalSeparationTests.CapitalStartsOutsideItsGateAndContainsDistinctCityPrecincts",
+        "state": "Passed",
+        "durationSeconds": 1.7555938,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "GobiContainsTravelAndShelterWithoutCapitalArchitecture",
+        "fullName": "ThreeBodyProblem.Tests.CapitalSeparationTests.GobiContainsTravelAndShelterWithoutCapitalArchitecture",
+        "state": "Passed",
+        "durationSeconds": 5.9913733,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "PyramidHasAnEnclosedHallAndAnOperableSkyAperture",
+        "fullName": "ThreeBodyProblem.Tests.CapitalSeparationTests.PyramidHasAnEnclosedHallAndAnOperableSkyAperture",
+        "state": "Passed",
+        "durationSeconds": 1.3020413,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "PyramidLeavesAllThreeLongNightStarsInView",
+        "fullName": "ThreeBodyProblem.Tests.CapitalSeparationTests.PyramidLeavesAllThreeLongNightStarsInView",
+        "state": "Passed",
+        "durationSeconds": 1.4134863,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      }
+    ]
+  }
+}

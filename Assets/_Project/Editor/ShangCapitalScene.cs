@@ -65,6 +65,9 @@ namespace ThreeBodyProblem.Editor
             CapitalMaterial("PyramidStone", "sandstone_blocks_05", new Color(0.57f,0.55f,0.49f));
             CapitalMaterial("PyramidInterior", "sandstone_blocks_05", new Color(0.32f,0.31f,0.28f));
             CapitalMaterial("PyramidFloor", "stone_wall", new Color(0.40f,0.39f,0.34f));
+            MasonryArchitectureLibrary.EnsureMaterials();
+            Materials["PyramidStone"] = MasonryArchitectureLibrary.Stone;
+            Materials["PyramidInterior"] = MasonryArchitectureLibrary.Interior;
             Material("CapitalMeadow", new Color(0.30f, 0.35f, 0.20f));
             Material("CapitalFoliage", new Color(0.21f, 0.31f, 0.14f));
             Material("CapitalField", new Color(0.51f, 0.48f, 0.25f));
@@ -265,7 +268,7 @@ namespace ThreeBodyProblem.Editor
 
         private static Renderer[] CombineCapitalBuilding(GameObject detail,string key,float cellSize=0)
         {
-            var filters=detail.GetComponentsInChildren<MeshFilter>();var renderers=new List<Renderer>();
+            var filters=detail.GetComponentsInChildren<MeshFilter>().Where(f=>f.GetComponentInParent<LODGroup>()==null).ToArray();var renderers=new List<Renderer>();
             // Spatial batches keep an entire palace from being submitted again
             // for a small brazier or a sliver of the camera frustum.
             var groups=filters.GroupBy(f=>
@@ -321,16 +324,6 @@ namespace ThreeBodyProblem.Editor
             Cone("Bronze ritual vessel",position+Vector3.up*scale*0.75f,scale*0.64f,scale*0.85f,scale*0.9f,"CapitalBronze",parent,16);
             for(int i=0;i<3;i++){float a=i*Mathf.PI*2/3;Shape("Ding tripod leg",PrimitiveType.Cylinder,position+new Vector3(Mathf.Cos(a)*scale*0.48f,scale*0.43f,Mathf.Sin(a)*scale*0.48f),new Vector3(scale*0.18f,scale*0.43f,scale*0.18f),"CapitalBronze",parent,false);}
             foreach(float side in new[]{-1f,1f}){Box("Ding upright handle",position+new Vector3(side*scale*0.65f,scale*1.78f,0),new Vector3(scale*0.18f,scale*0.48f,scale*0.46f),"CapitalBronze",parent,false);}
-        }
-
-        private static void BronzeMotif(Vector3 position,float width,Transform parent)
-        {
-            foreach(float side in new[]{-1f,1f})
-            {
-                Box("Abstract bronze eye",position+new Vector3(side*width*0.23f,0,0),new Vector3(width*0.22f,0.22f,0.09f),"CapitalBronze",parent,false);
-                Box("Abstract bronze brow",position+new Vector3(side*width*0.31f,0.45f,0),new Vector3(width*0.32f,0.13f,0.09f),"CapitalBronze",parent,false);
-            }
-            Box("Abstract bronze central ridge",position,new Vector3(0.13f,1.25f,0.1f),"CapitalBronze",parent,false);
         }
 
         private static void CapitalHippedRoof(string name,Vector3 position,float width,float depth,float height,string material,Transform parent,bool trim=true)

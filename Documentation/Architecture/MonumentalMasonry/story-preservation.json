@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "scope": "Compared with task-start snapshot, not git HEAD. Unity Hub separately updated ProjectVersion to 6000.3.27f2.",
+  "files": [
+    {
+      "path": "Assets/_Project/Scenes/Traveller/03_MedievalTribunal.unity",
+      "before": "d6272715bef30cef2ac427cd4b0568d4981d49180b1c4c0ca91a0eb43152ab62",
+      "after": "d6272715bef30cef2ac427cd4b0568d4981d49180b1c4c0ca91a0eb43152ab62",
+      "unchanged": true,
+      "expectedToChange": false
+    },
+    {
+      "path": "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity",
+      "before": "b78a2367c1889ed75c580c7e20f51aefa6144758bcde8bfe957cde5f94a54d4a",
+      "after": "088b73f6ac59209b2f1290f8ada2a3ea0a884a803e9705b913cb69436ed225e2",
+      "unchanged": false,
+      "expectedToChange": true
+    },
+    {
+      "path": "Assets/_Project/Scenes/Traveller/01_GobiJourney.unity",
+      "before": "46a0ba5799afdd11a8acabc2cde5646afbf7b3c226712660b6b9417a5a3b12e0",
+      "after": "46a0ba5799afdd11a8acabc2cde5646afbf7b3c226712660b6b9417a5a3b12e0",
+      "unchanged": true,
+      "expectedToChange": false
+    },
+    {
+      "path": "Assets/_Project/Settings/Traveller/03_MedievalTribunal.asset",
+      "before": "0cf69217b2377c78c83c8ceca039ff1c2a400d0822c9ed35aa128374cfcf75e4",
+      "after": "0cf69217b2377c78c83c8ceca039ff1c2a400d0822c9ed35aa128374cfcf75e4",
+      "unchanged": true,
+      "expectedToChange": false
+    },
+    {
+      "path": "Assets/_Project/Settings/Traveller/02_ChaogeCourt.asset",
+      "before": "2f84c58b5ea31e1965cf3f7113833985d04e872ed81a538c6e27511f003c2a54",
+      "after": "2f84c58b5ea31e1965cf3f7113833985d04e872ed81a538c6e27511f003c2a54",
+      "unchanged": true,
+      "expectedToChange": false
+    },
+    {
+      "path": "Assets/_Project/Settings/Traveller/01_GobiJourney.asset",
+      "before": "14fa0c56c8d244d8ab79eaff86d9d1df7ed441e2d31908e1d54879b21dc5642c",
+      "after": "14fa0c56c8d244d8ab79eaff86d9d1df7ed441e2d31908e1d54879b21dc5642c",
+      "unchanged": true,
+      "expectedToChange": false
+    },
+    {
+      "path": "Assets/_Project/Settings/Traveller/FieldNotesPanel.asset",
+      "before": "9369270043bfc67f566ae43d4c180b38e73010f4854665f8b879abdd6a910185",
+      "after": "9369270043bfc67f566ae43d4c180b38e73010f4854665f8b879abdd6a910185",
+      "unchanged": true,
+      "expectedToChange": false
+    },
+    {
+      "path": "ProjectSettings/EditorBuildSettings.asset",
+      "before": "2ba55d958a3cfa90b1018b036772d97350a84092c86c193eaa93a430a4706ee8",
+      "after": "2ba55d958a3cfa90b1018b036772d97350a84092c86c193eaa93a430a4706ee8",
+      "unchanged": true,
+      "expectedToChange": false
+    }
+  ]
+}

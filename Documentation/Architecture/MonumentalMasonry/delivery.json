@@ -1,0 +1,96 @@
+{
+  "status": "architecture_integrated_functional_checks_passed_performance_budget_not_met",
+  "date": "2026-10-31",
+  "unityVersion": "6000.3.27f2",
+  "renderPipeline": "Built-in",
+  "scene": "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity",
+  "prefabDirectory": "Assets/_Project/Art/MonumentalMasonry/Prefabs",
+  "prefabs": 8,
+  "kitAuditPassed": true,
+  "palaceBaseMetres": [
+    120,
+    156
+  ],
+  "towerAboveFoundationMetres": 78,
+  "foundationHeightMetres": 4,
+  "integration": {
+    "capitalScene": "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity",
+    "palacePrefab": "Assets/_Project/Art/MonumentalMasonry/Prefabs/RoyalPalace_120x156x78.prefab",
+    "preservedObjectsOutsideGeometry": 4554,
+    "originAlignedBatchedRenderers": 870,
+    "backup": "Logs/masonry-backups/20261031-162227"
+  },
+  "build": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 1
+  },
+  "nativeApp": "Builds/MonumentalCapitalPreview.app",
+  "walk": {
+    "passed": true,
+    "checks": 36,
+    "metresWalked": 369.01171875,
+    "errors": []
+  },
+  "editMode": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 17.4405883,
+    "resultState": "Passed"
+  },
+  "package": {
+    "packageSha256": "3fad4e08e6f2935cad6e4354fd31dca914e240fadc6a3c78ec19f441cfc8a087",
+    "packageBytes": 33416089,
+    "dependencyClosure": true,
+    "entries": 1218,
+    "matchesWorkspace": true,
+    "mismatchedPaths": [],
+    "unexpectedDependencies": [],
+    "prefabs": 8
+  },
+  "performance": {
+    "passed": false,
+    "evidence": "Native/benchmark.json",
+    "gpu": "Apple M5",
+    "resolution": [
+      1600,
+      900
+    ],
+    "initialShadowDistance": 70.0,
+    "frameRateCap": 120,
+    "warmupFramesPerView": 120,
+    "sampleFramesPerView": 300,
+    "views": 9,
+    "worstP95FrameMs": 62.9457893371582,
+    "errors": [
+      "巨日 · 岩下避险: P95 exceeds 60 FPS frame budget.",
+      "朝歌 · 殷商王都: P95 exceeds 60 FPS frame budget.",
+      "巨摆与金字塔外观: P95 exceeds 60 FPS frame budget.",
+      "王都全景与城邑密度: P95 exceeds 60 FPS frame budget.",
+      "厚墙石殿与天窗: P95 exceeds 60 FPS frame budget.",
+      "恒纪元 · 王都复苏池: P95 exceeds 60 FPS frame budget.",
+      "长夜 · 没有到来的日出: P95 exceeds 60 FPS frame budget.",
+      "居民街道近景与完整人群动画: P95 exceeds 60 FPS frame budget.",
+      "三日凌空 · 文明崩溃: P95 exceeds 60 FPS frame budget."
+    ],
+    "fixedCameraCoverageVerified": false
+  },
+  "limits": [
+    "Main-game performance budget failed. Do not substitute the passing independent environment-yard benchmark.",
+    "A separate empty-project import was not performed; package payloads, saved prefabs, GUID closure and exact workspace hashes were checked.",
+    "Standalone palace prefab contains architecture and fixed props. Story actors, moving skylight cover and controllers remain separate in the actual capital scene.",
+    "Existing benchmark high viewpoints are affected by player gravity; aerial labels do not establish fixed aerial coverage. Performance remains failed, not accepted as stable 60 FPS."
+  ],
+  "prefabSha256": {
+    "Buttress_8p4_High": "34d421b208e1d75b5e44261fa108e170929472c7ad76e70ca714ef38fe74f226",
+    "Doorway_5p6_Clear": "b77189490e617786c783a53e3109f702cda7b865d0f525d5a52375b6d43c54b7",
+    "GiantStone_2p8x1p4x1p8": "de0d59c146aa2b76b87855badafd9460ed0ad3e8a6ac1f111cafef32507951dc",
+    "Lintel_8p4": "37c3ebb86bbf2ecef4e28ec1b184f202a9591e46896d77cfd6ef3d747e303763",
+    "RoyalPalace_120x156x78": "350364bcc0b4f8c1e46d94113250bc69fe530ca7384fdd355002f6709fcf230b",
+    "StoneFloor_8p4": "512c08530bf3f4b12395dbb3a7eeb51155c189591073783f8ab3cea2e055130e",
+    "ThickCorner_8p4": "5e73abf52585010947c31d8204880e2b573ed692bf3c3dfc1aa3b2bcec484303",
+    "ThickWall_8p4x4p2x4p2": "3837381ad7c0a7b8b19bf8e2e5c77a686f925fd5f1358915d9f097c350ce4c3d"
+  }
+}

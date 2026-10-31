@@ -23,7 +23,7 @@ namespace ThreeBodyProblem
             journey.DialogueSelected += OnDialogue;
             stage.Changed += Refresh;
             foreach (var actor in actors)
-                if (actor != playerActor && actor.role != TravellerRole.ShangGuard && actor.role != TravellerRole.ChurchGuard)
+                if (actor != playerActor && (int)actor.role <= (int)TravellerRole.DaVinci)
                     actor.FaceTarget = stage.player.transform;
             Refresh();
         }
@@ -50,7 +50,8 @@ namespace ThreeBodyProblem
                 case JourneyStep.CourtTalk:
                     Cue(companion, "MX_Bow"); Cue(king, "MX_TalkCalm"); break;
                 case JourneyStep.CalendarWait: Cue(companion, "MX_Think"); Cue(king, "MX_HeadNodYes"); break;
-                case JourneyStep.ObserveRevival: Cue(companion, "MX_HappyHandGesture"); break;
+                case JourneyStep.ObserveRevival: Cue(companion, "MX_PointForward"); break;
+                case JourneyStep.AfterRevival: Cue(companion, "MX_HappyHandGesture"); break;
                 case JourneyStep.ObserveLongNight: Cue(companion, "Despair"); break;
                 case JourneyStep.TribunalTalk: Cue(scholar, "MX_TalkArgue", 6f); Cue(daVinci, "MX_Think"); break;
                 case JourneyStep.WalkOutside:

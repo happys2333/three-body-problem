@@ -17,6 +17,7 @@ namespace ThreeBodyProblem
         public bool IsMoving { get; private set; }
         public bool IsTravelling => route != null && waypoint < route.Length;
         public bool Paused { get; set; }
+        public bool PresentationControlled { get; private set; }
         public Transform FaceTarget { get; set; }
         private readonly Dictionary<string, AnimationClip> clips = new Dictionary<string, AnimationClip>();
         private readonly Dictionary<string, int> baseHashes = new Dictionary<string, int>();
@@ -24,7 +25,7 @@ namespace ThreeBodyProblem
         private Vector3 previousPosition;
         private Vector3[] route;
         private int waypoint;
-        private float travelSpeed, gestureRemaining, playbackSpeed = 1f;
+        private float travelSpeed, currentTravelSpeed, gestureRemaining, playbackSpeed = 1f, presentationSpeed = 1f;
         private string restMotion = "MX_Idle";
         private string queuedGesture;
         private float queuedSeconds;
@@ -49,19 +50,45 @@ namespace ThreeBodyProblem
         public void ResetMotionTracking()
         {
             previousPosition = TrackedPosition;
-            route = null; queuedGesture = null; IsMoving = false; CancelGesture(); ChangeBase(restMotion, true);
+            route = null; queuedGesture = null; IsMoving = false; CancelGesture(); if (!PresentationControlled) ChangeBase(restMotion, true);
         }
 
         public void SetRestMotion(string id)
         {
             restMotion = seated ? "MX_SitIdle" : id;
-            if (!IsMoving && gestureRemaining <= 0) ChangeBase(restMotion);
+            if (!PresentationControlled && !IsMoving && gestureRemaining <= 0) ChangeBase(restMotion);
+        }
+
+        public float MotionDuration(string id)
+        {
+            foreach (var clip in settings.clips) if (clip.name == id) return clip.length;
+            return 0;
+        }
+
+        public void SetPresentationControl(bool value, float speed)
+        {
+            PresentationControlled = value; presentationSpeed = speed;
+            if (value) { route = null; IsMoving = false; CancelGesture(); }
+        }
+
+        public void BeginPresentation(string id, float normalizedTime)
+        {
+            SetPresentationControl(true, 1);
+            animator.Play(baseHashes[id], 0, normalizedTime);
+            CurrentMotion = id;
+            previousPosition = TrackedPosition;
+        }
+
+        public void EndPresentation(string rest)
+        {
+            PresentationControlled = false; restMotion = rest; playbackSpeed = 1;
+            previousPosition = TrackedPosition; ChangeBase(restMotion);
         }
 
         public void Gesture(string id, float seconds = 0)
         {
             AnimationClip clip;
-            if (!clips.TryGetValue(id, out clip) || role == TravellerRole.PlayerTraveller) return;
+            if (PresentationControlled || !clips.TryGetValue(id, out clip) || role == TravellerRole.PlayerTraveller) return;
             // A travelling companion keeps a matching gait instead of sliding in a talking pose.
             if ((IsMoving || IsTravelling) && !seated) { queuedGesture = id; queuedSeconds = seconds; return; }
             CurrentGesture = id;
@@ -80,23 +107,26 @@ namespace ThreeBodyProblem
 
         public void FollowRoute(Vector3[] points, float metresPerSecond)
         {
-            route = points; waypoint = 0; travelSpeed = metresPerSecond; queuedGesture = null; CancelGesture();
+            route = points; waypoint = 0; travelSpeed = metresPerSecond; currentTravelSpeed = 0; queuedGesture = null; CancelGesture();
         }
 
         public void StopTravelling() { route = null; }
 
         private void Update()
         {
-            animator.speed = Paused ? 0 : playbackSpeed;
+            animator.speed = Paused ? 0 : PresentationControlled ? presentationSpeed : playbackSpeed;
             if (Paused) { previousPosition = TrackedPosition; return; }
+            if (PresentationControlled) return;
             if (IsTravelling)
             {
                 var delta = route[waypoint] - transform.position;
                 if (delta.sqrMagnitude < 0.09f) waypoint++;
                 else
                 {
-                    transform.position = Vector3.MoveTowards(transform.position, route[waypoint], travelSpeed * Time.deltaTime);
                     FaceDirection(delta);
+                    float facing = Mathf.Clamp01(1 - Vector3.Angle(transform.forward, delta) / 120f);
+                    currentTravelSpeed = Mathf.MoveTowards(currentTravelSpeed, travelSpeed * facing, travelSpeed * 3f * Time.deltaTime);
+                    transform.position = Vector3.MoveTowards(transform.position, route[waypoint], currentTravelSpeed * Time.deltaTime);
                 }
             }
             if (gestureRemaining > 0)
@@ -108,7 +138,7 @@ namespace ThreeBodyProblem
 
         private void LateUpdate()
         {
-            if (Paused || Time.deltaTime <= 0) return;
+            if (Paused || PresentationControlled || Time.deltaTime <= 0) return;
             var displacement = TrackedPosition - previousPosition;
             previousPosition = TrackedPosition;
             var velocity = Vector3.ProjectOnPlane(displacement, Vector3.up) / Time.deltaTime;

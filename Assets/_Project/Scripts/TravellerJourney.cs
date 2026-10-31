@@ -28,7 +28,7 @@ namespace ThreeBodyProblem
         public string Speech => speech;
         public bool IsTitle => !previewMode && Progress.Step == JourneyStep.Title;
         public bool IsSummary => !previewMode && Progress.Step == JourneyStep.Summary;
-        public bool CanObserve => !previewMode && ((Progress.Step==JourneyStep.WalkToChaoge&&stage.profile.sceneIndex==0&&(stage.MomentIndex==3||stage.MomentIndex==4))||Progress.Step == JourneyStep.ObserveFirstStar || Progress.Step == JourneyStep.ObserveTwoStars || Progress.Step == JourneyStep.ObserveRevival || Progress.Step == JourneyStep.ObserveLongNight || Progress.Step == JourneyStep.ObserveThreeSuns);
+        public bool CanObserve => !previewMode && (Progress.Step != JourneyStep.ObserveRevival || stage.IsRevivalComplete) && ((Progress.Step==JourneyStep.WalkToChaoge&&stage.profile.sceneIndex==0&&(stage.MomentIndex==3||stage.MomentIndex==4))||Progress.Step == JourneyStep.ObserveFirstStar || Progress.Step == JourneyStep.ObserveTwoStars || Progress.Step == JourneyStep.ObserveRevival || Progress.Step == JourneyStep.ObserveLongNight || Progress.Step == JourneyStep.ObserveThreeSuns);
         public bool IsWalking => Progress.Step == JourneyStep.SeekShelter || Progress.Step == JourneyStep.WalkToFirstStar || Progress.Step == JourneyStep.WalkToTwoStars || Progress.Step == JourneyStep.WalkToChaoge || Progress.Step == JourneyStep.CourtApproach || Progress.Step == JourneyStep.WalkToWater || Progress.Step == JourneyStep.TribunalApproach || Progress.Step == JourneyStep.WalkOutside;
         public bool HasNavigation => IsWalking || Progress.Step==JourneyStep.ExploreDesert || Progress.Step==JourneyStep.ApproachTraveller;
         public Vector3 Goal
@@ -76,7 +76,7 @@ namespace ThreeBodyProblem
                     case JourneyStep.CourtTalk: return "看向人物，按住 F 参与质询";
                     case JourneyStep.CalendarWait: return "观察沙漏与天窗光斑，等待短期验证";
                     case JourneyStep.WalkToWater: return "从侧门出殿，前往复苏水边";
-                    case JourneyStep.ObserveRevival: return "见证文明复苏，按 E 记录应验的结果";
+                    case JourneyStep.ObserveRevival: return stage.IsRevivalComplete ? "见证文明复苏，按 E 记录应验的结果" : "观察纸片浸水、恢复形体并重新站起";
                     case JourneyStep.AfterRevival: return "等待下一次日出；按住 F 可随时提问";
                     case JourneyStep.WaitForDawn: return "日出应当到了……继续观察天空";
                     case JourneyStep.ObserveLongNight: return "记录没有出现的日出，按 E 留下反例";
@@ -219,6 +219,7 @@ namespace ThreeBodyProblem
                     case JourneyStep.CourtTalk: Say("纣王：下一次稳定时期何时到来？把能让寡人查验的事说清楚。"); break;
                     case JourneyStep.CalendarWait: Say("石板缓缓移开，日光从竖井落入内殿。沙漏继续流下……这一次，天窗光斑接近了推演。", 7f); break;
                     case JourneyStep.WalkToWater: SetMoment(1); SetPath(stage.profile.hasCapitalRoute ? stage.profile.waterWaypoints : new[] { new Vector3(-6f,0f,-9f),new Vector3(13f,0f,-9f),new Vector3(15f,0f,-6f),new Vector3(19f,0f,-6f),new Vector3(28f,0f,-9f) }); Say("周文王：这一次，它与推演相合。沿侧面甬道出殿，去复苏池边看看。"); break;
+                    case JourneyStep.ObserveRevival: Say("周文王：看，这些脱水的人正在吸水。等他们恢复形体，重新站起来。", 8f); break;
                     case JourneyStep.WaitForDawn: Say("人们等待着下一次日出。沙漏继续流下，晨光却没有到来。", 6f); break;
                     case JourneyStep.ObserveLongNight: SetMoment(2); Say("周文王：不该是这样……再等一会儿。", 7f); break;
                     case JourneyStep.TribunalApproach: SetMoment(0); Say("文明已经更替。你保留着自己的记录，以哥白尼之名进入新的大厅。", 7f); break;

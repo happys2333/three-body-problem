@@ -1,0 +1,20 @@
+{
+    "passed": true,
+    "checks": 36,
+    "participants": 7,
+    "gpu": "Apple M5",
+    "width": 1600,
+    "height": 900,
+    "frameCap": -1,
+    "meanFrameMs": 2.6330816745758058,
+    "p95FrameMs": 6.416043281555176,
+    "performanceBudgetPassed": true,
+    "errors": [],
+    "states": [
+        "01_DryPaper: DryPaper hydration=0.000",
+        "02_Wetting: Wetting hydration=0.000",
+        "03_RegainingVolume: Inflating hydration=0.480",
+        "04_GettingUp: GettingUp hydration=1.000",
+        "05_Recovered: Recovered hydration=1.000"
+    ]
+}

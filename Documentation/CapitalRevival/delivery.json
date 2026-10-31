@@ -1,0 +1,80 @@
+{
+  "status": "integrated_and_native_verified",
+  "date": "2026-10-31",
+  "scene": "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity",
+  "participants": 7,
+  "settings": "Assets/_Project/Art/CapitalRevival/Revival.asset",
+  "build": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 0
+  },
+  "nativeApp": "Builds/CapitalRevivalPreview.app",
+  "native": {
+    "passed": true,
+    "checks": 38,
+    "participants": 7,
+    "gpu": "Apple M5",
+    "width": 1600,
+    "height": 900,
+    "frameCap": 120,
+    "meanFrameMs": 8.353879928588867,
+    "p95FrameMs": 8.384374618530273,
+    "performanceBudgetPassed": true,
+    "errors": [],
+    "states": [
+      "01_DryPaper: DryPaper hydration=0.000",
+      "02_Wetting: Wetting hydration=0.000",
+      "03_RegainingVolume: Inflating hydration=0.481",
+      "04_GettingUp: GettingUp hydration=1.000",
+      "05_Recovered: Recovered hydration=1.000"
+    ]
+  },
+  "nativeEvidence": "Native/final/qa.json",
+  "editMode": {
+    "total": 22,
+    "passed": 22,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 11.9097361,
+    "resultState": "Passed"
+  },
+  "preservation": [
+    {
+      "path": "Assets/_Project/Scenes/Traveller/01_GobiJourney.unity",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity",
+      "unchanged": false
+    },
+    {
+      "path": "Assets/_Project/Scenes/Traveller/03_MedievalTribunal.unity",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/_Project/Settings/Traveller/01_GobiJourney.asset",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/_Project/Settings/Traveller/02_ChaogeCourt.asset",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/_Project/Settings/Traveller/03_MedievalTribunal.asset",
+      "unchanged": true
+    },
+    {
+      "path": "ProjectSettings/EditorBuildSettings.asset",
+      "unchanged": true
+    }
+  ],
+  "limits": [
+    "Performance is a short local sample of the revival/torch sequence with a fixed camera, not a whole-game or cross-platform guarantee.",
+    "The inherited get-up motion is retargeted; per-character sampled floor correction keeps it on the water surface. Re-bake when changing the get-up clip or start phase.",
+    "A full capital/crowd replacement requires re-running Prepare Capital Rehydration.",
+    "Native attempt01 screenshots had delayed-frame labels; final evidence is attempt03 after the capture fix."
+  ],
+  "finalNativeAttempt": "attempt03",
+  "manualPlayerTorchDaylightVerified": true
+}

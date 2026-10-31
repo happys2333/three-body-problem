@@ -1,0 +1,9 @@
+id,prefab,width_m,height_m,depth_m,lod_groups,colliders,high_triangles
+Buttress_8p4_High,Assets/_Project/Art/MonumentalMasonry/Prefabs/Buttress_8p4_High.prefab,4.200,8.400,4.200,2,2,552
+Doorway_5p6_Clear,Assets/_Project/Art/MonumentalMasonry/Prefabs/Doorway_5p6_Clear.prefab,11.200,6.300,4.200,4,4,1016
+GiantStone_2p8x1p4x1p8,Assets/_Project/Art/MonumentalMasonry/Prefabs/GiantStone_2p8x1p4x1p8.prefab,2.800,1.400,1.800,1,1,44
+Lintel_8p4,Assets/_Project/Art/MonumentalMasonry/Prefabs/Lintel_8p4.prefab,8.400,2.100,4.200,1,1,320
+RoyalPalace_120x156x78,Assets/_Project/Art/MonumentalMasonry/Prefabs/RoyalPalace_120x156x78.prefab,142.098,82.063,202.074,290,318,75048
+StoneFloor_8p4,Assets/_Project/Art/MonumentalMasonry/Prefabs/StoneFloor_8p4.prefab,8.400,1.400,8.400,1,1,144
+ThickCorner_8p4,Assets/_Project/Art/MonumentalMasonry/Prefabs/ThickCorner_8p4.prefab,8.400,4.200,8.400,2,2,728
+ThickWall_8p4x4p2x4p2,Assets/_Project/Art/MonumentalMasonry/Prefabs/ThickWall_8p4x4p2x4p2.prefab,8.400,4.200,4.200,1,1,452

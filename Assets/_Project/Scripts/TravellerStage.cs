@@ -31,6 +31,7 @@ namespace ThreeBodyProblem
         private float motionTime;
         private Vector3[] starPositions;
         private TorchBearer playerTorch;
+        private CapitalRevivalDirector revival;
         public event Action Changed;
         public event Action<string> Notice;
         public event Action<int> ObservationRecorded;
@@ -38,11 +39,13 @@ namespace ThreeBodyProblem
         public ObservationJournal Journal { get; private set; }
         public int MomentIndex => momentIndex;
         public SceneMoment Current => profile.moments[momentIndex];
+        public bool IsRevivalComplete => revival == null || revival.IsComplete;
         public bool IsInShelter => shelterCenter != null && Vector3.Distance(player.transform.position, shelterCenter.position) < shelterRadius;
 
         private void Awake()
         {
             Journal = ObservationJournal.Load();
+            revival = GetComponent<CapitalRevivalDirector>();
             liveSky = new Material(skyMaterial);
             RenderSettings.skybox = liveSky;
             starPositions = new Vector3[flyingStars.Length];
@@ -145,9 +148,15 @@ namespace ThreeBodyProblem
         }
 
         public void ResetView() => player.Teleport(Current.viewPosition, Current.viewTarget);
+        public void NotifyWorldPresentationChanged() { Changed?.Invoke(); }
 
         public bool RecordObservation()
         {
+            if (profile.sceneIndex == 1 && momentIndex == 1 && !IsRevivalComplete)
+            {
+                Notice?.Invoke("先观察他们浸水、恢复形体并重新站稳，再记录复苏的结果。");
+                return false;
+            }
             if (string.IsNullOrEmpty(Current.observation))
             {
                 Notice?.Invoke("先观察环境；这一时刻没有待记录的天象。");
@@ -194,7 +203,7 @@ namespace ThreeBodyProblem
             }
             if (ambience != null) ambience.pitch = Mathf.Lerp(0.75f, 1.1f, Current.heat);
             if (player.InputBlocked) return;
-            if(Input.GetKeyDown(KeyCode.T)&&playerTorch!=null)playerTorch.equipped=!playerTorch.equipped;
+            if(Input.GetKeyDown(KeyCode.T)&&playerTorch!=null)playerTorch.ToggleCarrying();
             if (Journey != null && !Journey.IsPreviewing)
             {
                 if (Input.GetKeyDown(KeyCode.R)) Journey.FaceGoal();

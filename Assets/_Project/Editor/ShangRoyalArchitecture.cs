@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace ThreeBodyProblem.Editor
@@ -8,7 +9,7 @@ namespace ThreeBodyProblem.Editor
     {
         // Novel-inspired proportions, not dimensions specified by the novel.
         // The 120 x 156 m stone mass encloses a deliberately much smaller hall.
-        private static void BuildRoyalCourt(Transform parent)
+        private static GameObject BuildRoyalStructure(Transform parent)
         {
             var structure = new GameObject("Pyramid masonry and enclosed palace");
             structure.transform.SetParent(parent); var a = structure.transform;
@@ -19,23 +20,23 @@ namespace ThreeBodyProblem.Editor
             foreach (float side in new[] { -1f, 1f })
             {
                 // The sloping ends meet the pyramid face; the doorway remains genuinely open.
-                StonePrism("Thick entrance tunnel wall", new[] { new Vector2(-48,4), new Vector2(5,4), new Vector2(5,7.4f), new Vector2(-44.6f,7.4f) }, side < 0 ? -4.3f : 2.3f, side < 0 ? -2.3f : 4.3f, false, "PyramidInterior", a);
-                Box("Audience chamber front wall", new Vector3(side * 8.15f,8.2f,4), new Vector3(11.7f,8.4f,2), "PyramidInterior", a);
-                Box("Audience chamber side wall", new Vector3(side * 15.5f,8.2f,24), new Vector3(3,8.4f,40), "PyramidInterior", a);
+                // The east wall is built as two leaves below, leaving the garden junction open.
+                // Building it whole and deleting only its core would leave dressed stone across the exit.
+                if (side < 0)
+                    StonePrism("Thick entrance tunnel wall", new[] { new Vector2(-48,4), new Vector2(5,4), new Vector2(5,7.4f), new Vector2(-44.6f,7.4f) }, -4.3f, -2.3f, false, "PyramidInterior", a);
+                MasonryArchitectureLibrary.Wall("Audience chamber front wall", new Vector3(side * 8.15f,8.2f,4), new Vector3(11.7f,8.4f,2), Materials["PyramidInterior"], a);
+                MasonryArchitectureLibrary.Wall("Audience chamber side wall", new Vector3(side * 15.5f,8.2f,24), new Vector3(3,8.4f,40), Materials["PyramidInterior"], a);
                 foreach (float z in new[] { 12f, 37f })
                 {
-                    Box("Monolithic hall buttress", new Vector3(side * 12.7f,8.2f,z), new Vector3(2.2f,8.4f,2.6f), "PyramidStone", a);
+                    MasonryArchitectureLibrary.Wall("Monolithic hall buttress", new Vector3(side * 12.7f,8.2f,z), new Vector3(2.2f,8.4f,2.6f), Materials["PyramidStone"], a);
                     Box("Buttress dressed stone capital", new Vector3(side * 12.7f,11.85f,z), new Vector3(2.8f,1.1f,3.2f), "PyramidStone", a,false);
                 }
-                // Small variations and real stone courses break up the close-range interior.
-                for (int row=0;row<5;row++) for(int block=0;block<8;block++)
-                    Box("Weathered inner stone course", new Vector3(side*13.96f,4.84f+row*1.5f,6.8f+block*4.65f+(row%2)*0.32f), new Vector3(0.11f,1.42f,4.52f), "PyramidInterior",a,false);
                 Box("Throne backdrop stone slab", new Vector3(side*5.7f,8.5f,42.2f), new Vector3(4.6f,6.2f,0.5f), "PyramidStone",a,false);
                 RitualRelief(new Vector3(side*5.7f,8.5f,41.86f),1.1f,a);
                 BronzeDing(new Vector3(side*9.4f,4,30),1.7f,a);
             }
             StonePrism("Tunnel roof several metres thick", new[] {new Vector2(-44.6f,7.4f),new Vector2(5,7.4f),new Vector2(5,10.6f),new Vector2(-41.4f,10.6f)},-4.3f,4.3f,false,"PyramidInterior",a);
-            Box("Audience chamber rear wall", new Vector3(0,8.2f,45), new Vector3(34,8.4f,4), "PyramidInterior", a);
+            MasonryArchitectureLibrary.Wall("Audience chamber rear wall", new Vector3(0,8.2f,45), new Vector3(34,8.4f,4), Materials["PyramidInterior"], a);
             Box("Enclosed palace stone floor", new Vector3(0,3.85f,24), new Vector3(34,0.3f,42), "PyramidFloor", a);
             Box("Tunnel stone floor",new Vector3(0,3.88f,-22),new Vector3(8.6f,0.24f,52),"PyramidFloor",a);
             // The ceiling surrounds a 4 x 4 m shaft. No hidden solid roof blocks the opening.
@@ -53,12 +54,9 @@ namespace ThreeBodyProblem.Editor
             foreach(float z in new[]{-11.8f,-6.2f})
                 StonePrism("Thick east passage wall",new[]{new Vector2(4.3f,4),new Vector2(60,4),new Vector2(57.3846f,7.4f),new Vector2(4.3f,7.4f)},z-0.8f,z+0.8f,true,"PyramidInterior",a);
             StonePrism("East passage stone roof",new[]{new Vector2(2.3f,7.4f),new Vector2(57.3846f,7.4f),new Vector2(54.923f,10.6f),new Vector2(2.3f,10.6f)},-12.6f,-5.4f,true,"PyramidInterior",a);
-            // Cut out the tunnel's east wall at the junction; individual leaves retain collision.
-            foreach(var t in a.GetComponentsInChildren<Transform>())
-                if(t.name=="Thick entrance tunnel wall"&&t.GetComponent<Collider>()!=null&&t.GetComponent<Collider>().bounds.center.x>0)
-                { UnityEngine.Object.DestroyImmediate(t.gameObject); break; }
+            // Separate cores and dressed faces both stop at the open junction.
             StonePrism("Tunnel east wall south of junction",new[]{new Vector2(-48,4),new Vector2(-11,4),new Vector2(-11,7.4f),new Vector2(-44.6f,7.4f)},2.3f,4.3f,false,"PyramidInterior",a);
-            Box("Tunnel east wall north of junction",new Vector3(3.3f,5.7f,-1),new Vector3(2,3.4f,12),"PyramidInterior",a);
+            MasonryArchitectureLibrary.Wall("Tunnel east wall north of junction",new Vector3(3.3f,5.7f,-1),new Vector3(2,3.4f,12),Materials["PyramidInterior"],a);
             Box("East passage stone floor",new Vector3(32.2f,3.85f,-9),new Vector3(64.4f,0.3f,7.2f),"PyramidFloor",a);
             CapitalRamp("Pyramid east garden descent",new Vector3(64,4,-13),new Vector3(82,0,-5),"CapitalRoad",a,true);
             for(int i=0;i<4;i++)
@@ -72,7 +70,13 @@ namespace ThreeBodyProblem.Editor
             for(int i=0;i<7;i++)Box("Bamboo calendar slat",new Vector3(-5.05f+i*0.21f,5.33f,17),new Vector3(0.17f,0.03f,0.85f),"Ivory",a,false);
             foreach(float side in new[]{-1f,1f})
                 Box("Sunlight measuring floor inlay",new Vector3(side*2.2f,4.018f,23.5f),new Vector3(0.055f,0.03f,5),"CapitalBronze",a,false);
-            CombineCapitalBuilding(structure,"NovelPyramidPalaceV1",24f);
+            CombineCapitalBuilding(structure,"DressedPyramidPalaceV2",24f);
+            return structure;
+        }
+
+        private static void BuildRoyalCourt(Transform parent)
+        {
+            BuildRoyalStructure(parent);
             // This collider moves with the roof plate and must not join a static batch.
             var cover=Box("Movable stone skylight cover",new Vector3(0,12.03f,23.5f),new Vector3(4.65f,0.72f,4.65f),"PyramidStone",parent);
             UnityEditor.GameObjectUtility.SetStaticEditorFlags(cover,0);
@@ -110,6 +114,30 @@ namespace ThreeBodyProblem.Editor
             for(int i=0;i<profile.Length;i++){int j=(i+1)%profile.Length;face(new[]{low[i],low[j],high[j],high[i]});}
             string key="Pyramid_"+name.Replace(" ","_")+"_"+from+"_"+to+"_"+profile[0]+"_"+profile[1];
             MeshObject(name,SaveMesh(key,vertices,triangles,uv),Vector3.zero,material,parent,true);
+            if(material=="PyramidInterior" && !name.Contains("roof"))
+                DressStoneProfile(name,profile,from,to,alongX,material,parent);
+        }
+
+        private static void DressStoneProfile(string name,Vector2[] profile,float from,float to,bool alongX,string material,Transform parent)
+        {
+            var chunks=new Dictionary<string,MasonryArchitectureLibrary.Chunk>();
+            float min=profile.Min(p=>p.x),max=profile.Max(p=>p.x),low=profile.Min(p=>p.y),high=profile.Max(p=>p.y);
+            for(int side=0;side<2;side++)
+            {
+                float plane=side==0?from:to;Vector3 normal=(alongX?Vector3.back:Vector3.left)*(side==0?1:-1);
+                Func<Vector2,Vector3> map=p=>alongX?new Vector3(p.x,p.y,plane):new Vector3(plane,p.y,p.x);
+                int row=0;
+                for(float y=low;y<high-.001f;y+=1.4f,row++)for(float x=min-(row%2)*1.4f;x<max-.001f;x+=2.8f)
+                {
+                    var poly=new List<Vector2>(profile);poly=ClipStonePolygon(poly,0,Mathf.Max(x,min),true);poly=ClipStonePolygon(poly,0,Mathf.Min(x+2.8f,max),false);
+                    poly=ClipStonePolygon(poly,1,y,true);poly=ClipStonePolygon(poly,1,Mathf.Min(y+1.4f,high),false);if(poly.Count<3)continue;
+                    float area=0;for(int i=0;i<poly.Count;i++){var n=poly[(i+1)%poly.Count];area+=poly[i].x*n.y-n.x*poly[i].y;}if(Mathf.Abs(area)<.002f)continue;
+                    string key="Dressed_"+name.Replace(" ","_")+"_"+from+"_"+to+"_S"+side+"_X"+Mathf.FloorToInt(x/12)+"_Y"+Mathf.FloorToInt(y/12);
+                    MasonryArchitectureLibrary.Chunk chunk;if(!chunks.TryGetValue(key,out chunk)){chunk=new MasonryArchitectureLibrary.Chunk();chunks.Add(key,chunk);}
+                    chunk.SlopingStone(poly.Select(map).ToArray(),normal,(to-from)*.5f);
+                }
+            }
+            foreach(var pair in chunks)pair.Value.Save(pair.Key,parent,Materials[material]);
         }
 
         private static void BuildPyramidSkin(Transform parent)
@@ -119,46 +147,34 @@ namespace ThreeBodyProblem.Editor
                 float half=face<2?60:78;
                 Vector3 normal=(face==0?new Vector3(0,1,-1):face==1?new Vector3(0,1,1):face==2?new Vector3(1,60f/78,0):new Vector3(-1,60f/78,0)).normalized;
                 Func<Vector2,Vector3> map=p=>face==0?new Vector3(p.x,4+p.y,-48+p.y):face==1?new Vector3(-p.x,4+p.y,108-p.y):face==2?new Vector3(60*(1-p.y/78),4+p.y,30+p.x):new Vector3(-60*(1-p.y/78),4+p.y,30-p.x);
-                var cuts=new SortedSet<float>{0,3.4f,69.5f,73.5f,78};for(float y=2.6f;y<78;y+=2.6f)cuts.Add(y);
-                var heights=new List<float>(cuts);var random=new System.Random(1803+face);
-                var vertices=new List<Vector3>();var triangles=new List<int>();var uv=new List<Vector2>();
-                for(int row=1;row<heights.Count;row++)
+                var chunks=new Dictionary<string,MasonryArchitectureLibrary.Chunk>();
+                var heights=new SortedSet<float>{0,3.4f,69.5f,73.5f,78};for(float y=2.6f;y<78;y+=2.6f)heights.Add(y);
+                var rows=new List<float>(heights);
+                for(int row=1;row<rows.Count;row++)
                 {
-                    float bottom=heights[row-1],top=heights[row];
-                    var edges=new SortedSet<float>{-half,half};
-                    for(float x=-half+(row%2)*2.75f;x<half;x+=5.5f)edges.Add(x);
-                    if(face==0&&bottom<3.4f){edges.Add(-2.3f);edges.Add(2.3f);}
-                    if(face==0&&bottom>=69.5f&&top<=73.5f){edges.Add(-2);edges.Add(2);}
-                    if(face==2&&bottom<3.4f){edges.Add(-41);edges.Add(-37);}
-                    var spans=new List<float>(edges);
-                    for(int col=1;col<spans.Count;col++)
+                    float bottom=rows[row-1],top=rows[row];var spans=new SortedSet<float>{-half,half};
+                    for(float x=-half+(row%2)*2.75f;x<half;x+=5.5f)spans.Add(x);
+                    if(face==0&&bottom<3.4f){spans.Add(-2.3f);spans.Add(2.3f);}
+                    if(face==0&&bottom>=69.5f&&top<=73.5f){spans.Add(-2);spans.Add(2);}
+                    if(face==2&&bottom<3.4f){spans.Add(-41);spans.Add(-37);}
+                    var columns=new List<float>(spans);
+                    for(int col=1;col<columns.Count;col++)
                     {
-                        float left=spans[col-1],right=spans[col],middle=(left+right)*0.5f;
+                        float left=columns[col-1],right=columns[col],middle=(left+right)*.5f;
                         if(face==0&&bottom<3.4f&&middle>-2.3f&&middle<2.3f)continue;
                         if(face==0&&bottom>=69.5f&&top<=73.5f&&middle>-2&&middle<2)continue;
                         if(face==2&&bottom<3.4f&&middle>-41&&middle<-37)continue;
                         var poly=new List<Vector2>{new Vector2(-half,0),new Vector2(half,0),new Vector2(0,78)};
-                        poly=ClipStonePolygon(poly,0,left,true);poly=ClipStonePolygon(poly,0,right,false);
-                        poly=ClipStonePolygon(poly,1,bottom,true);poly=ClipStonePolygon(poly,1,top,false);
+                        poly=ClipStonePolygon(poly,0,left,true);poly=ClipStonePolygon(poly,0,right,false);poly=ClipStonePolygon(poly,1,bottom,true);poly=ClipStonePolygon(poly,1,top,false);
                         if(poly.Count<3)continue;
-                        float area=0;for(int i=0;i<poly.Count;i++){var b=poly[(i+1)%poly.Count];area+=poly[i].x*b.y-b.x*poly[i].y;}
-                        if(Mathf.Abs(area)<0.002f)continue;
-                        Vector2 center=Vector2.zero;foreach(var p in poly)center+=p;center/=poly.Count;
-                        var outer=new Vector3[poly.Count];var inner=new Vector3[poly.Count];var backing=new Vector3[poly.Count];
-                        float relief=0.045f+(float)random.NextDouble()*0.045f;
-                        for(int i=0;i<poly.Count;i++)
-                        {
-                            backing[i]=map(poly[i])-normal*0.035f;
-                            Vector2 direction=(center-poly[i]).normalized;
-                            outer[i]=map(poly[i]+direction*0.018f);
-                            inner[i]=map(poly[i]+direction*0.065f)+normal*relief;
-                        }
-                        AddStonePolygon(vertices,triangles,uv,backing,normal);
-                        AddStonePolygon(vertices,triangles,uv,inner,normal);
-                        for(int i=0;i<poly.Count;i++){int j=(i+1)%poly.Count;AddStonePolygon(vertices,triangles,uv,new[]{outer[i],outer[j],inner[j],inner[i]},normal);}
+                        float area=0;for(int i=0;i<poly.Count;i++){var next=poly[(i+1)%poly.Count];area+=poly[i].x*next.y-next.x*poly[i].y;}
+                        if(Mathf.Abs(area)<.002f)continue;
+                        string key="PalaceExterior_F"+face+"_X"+Mathf.FloorToInt(middle/16)+"_Y"+Mathf.FloorToInt(bottom/12);
+                        MasonryArchitectureLibrary.Chunk chunk;if(!chunks.TryGetValue(key,out chunk)){chunk=new MasonryArchitectureLibrary.Chunk();chunks.Add(key,chunk);}
+                        chunk.SlopingStone(poly.Select(map).ToArray(),normal,1.8f);
                     }
                 }
-                MeshObject(new[]{"South pyramid face with low entrance and sky aperture","North pyramid stone face","East pyramid face with passage exit","West pyramid stone face"}[face],SaveMesh("NovelPyramidFaceV1_"+face,vertices,triangles,uv),Vector3.zero,"PyramidStone",parent,true);
+                foreach(var pair in chunks)pair.Value.Save(pair.Key,parent,Materials["PyramidStone"]);
             }
         }
 

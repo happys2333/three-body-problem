@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e79a356f9b1644cea7c4067a014feba, type: 3}
+  m_Name: Revival
+  m_EditorClassIdentifier: ThreeBodyProblem.Runtime::ThreeBodyProblem.CapitalRevivalSettings
+  wettingSeconds: 1.6
+  inflationSeconds: 8
+  staggerSeconds: 0.55
+  settleSeconds: 1.4
+  activationDistance: 24
+  waterSurfaceY: 0.055
+  paperThickness: 0.012
+  getUpStartPhase: 0.02
+  getUpMotion: MX_GetUpProne

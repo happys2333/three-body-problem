@@ -12,10 +12,12 @@ namespace ThreeBodyProblem
         private TravellerActor actor;
         private TravellerStage stage;
         private float elapsed, nextStroll;
+        private RehydratingCitizen rehydration;
 
         private void Start()
         {
             actor = GetComponent<TravellerActor>(); stage = GetComponentInParent<TravellerStage>();
+            rehydration = GetComponent<RehydratingCitizen>();
             stage.Changed += Refresh;
             nextStroll = 6f + variation * 0.71f;
             Refresh();
@@ -23,12 +25,14 @@ namespace ThreeBodyProblem
 
         private void Refresh()
         {
-            if (actor == null) return;
+            if (actor == null || rehydration != null && !rehydration.IsRecovered) return;
             bool cold = stage.Current.frost > 0.5f;
             bool hot = stage.Current.heat > 0.7f;
-            actor.SetRestMotion(isGuard ? "MX_WeightShift" : cold ? "MX_Shiver" : hot || isReviving ? "MX_InjuredHurtingIdle" : variation % 3 == 0 ? "MX_WeightShift" : "MX_Idle");
+            actor.SetRestMotion(isGuard ? "MX_WeightShift" : cold ? "MX_Shiver" : hot ? "MX_InjuredHurtingIdle" : variation % 3 == 0 ? "MX_WeightShift" : "MX_Idle");
             if (cold || hot) actor.StopTravelling();
         }
+
+        public void RefreshCondition() { Refresh(); }
 
         private void Update()
         {
