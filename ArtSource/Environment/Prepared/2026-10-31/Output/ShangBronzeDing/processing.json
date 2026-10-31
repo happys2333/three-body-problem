@@ -1,0 +1,32 @@
+{
+  "id": "ShangBronzeDing",
+  "sourceId": "ShangBronzeDing",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShangBronzeDing.prefab",
+  "modifications": [
+    "Original PBR atlas retained; UV-preserving QEM LODs."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    34000,
+    9000,
+    2000
+  ],
+  "sizeBlender": [
+    1.2592908143997192,
+    0.9594905376434326,
+    1.3002324104309082
+  ],
+  "usage": "Static environment prop",
+  "charred": false,
+  "openingWidth": 0,
+  "openingHeight": 0
+}

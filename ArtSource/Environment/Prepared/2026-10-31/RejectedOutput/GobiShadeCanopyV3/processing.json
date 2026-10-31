@@ -1,0 +1,33 @@
+{
+  "id": "GobiShadeCanopyV3",
+  "sourceId": "GobiShadeCanopyV3",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261031/Prefabs/GobiShadeCanopyV3.prefab",
+  "modifications": [
+    "Complete lower staging band, person and sphere removed; back wall cut capped and regrounded."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    85000,
+    20000,
+    4500
+  ],
+  "sizeBlender": [
+    11.999100685119629,
+    11.769716262817383,
+    7.8977508544921875
+  ],
+  "usage": "Natural shelter with open front; verify capsule clearance in the yard",
+  "charred": false,
+  "openingWidth": 0,
+  "openingHeight": 0,
+  "hasInterior": false
+}

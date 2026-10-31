@@ -1,0 +1,32 @@
+{
+  "id": "MedievalPew",
+  "sourceId": "MedievalPew",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/MedievalPew.prefab",
+  "modifications": [
+    "Original PBR atlas retained; UV-preserving QEM LODs."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    28000,
+    7000,
+    1500
+  ],
+  "sizeBlender": [
+    2.1999692916870117,
+    0.702589750289917,
+    1.1601228713989258
+  ],
+  "usage": "Static environment prop",
+  "charred": false,
+  "openingWidth": 0,
+  "openingHeight": 0
+}

@@ -20,9 +20,14 @@ namespace ThreeBodyProblem.Editor
         [MenuItem("Tools/Three Body Traveller/Assets/Export Environment Working Meshes")]
         public static int ExportWorkingMeshes()
         {
+            return ExportWorkingMeshes("Documentation/EnvironmentProduction/hunyuan-environment-unity-validation.json", Work);
+        }
+
+        public static int ExportWorkingMeshes(string reportPath, string workDirectory)
+        {
             if (EditorApplication.isPlaying) throw new InvalidOperationException("Stop Play mode first.");
-            Directory.CreateDirectory(Work + "/Input"); Directory.CreateDirectory(Docs);
-            var source = JsonUtility.FromJson<HunyuanEnvironmentLibrary.Report>(File.ReadAllText("Documentation/EnvironmentProduction/hunyuan-environment-unity-validation.json"));
+            Directory.CreateDirectory(workDirectory + "/Input");
+            var source = JsonUtility.FromJson<HunyuanEnvironmentLibrary.Report>(File.ReadAllText(reportPath));
             var manifest = new SourceManifest();
             foreach (var entry in source.assets)
             {
@@ -32,7 +37,7 @@ namespace ThreeBodyProblem.Editor
                 var renderer = high[0]; var mesh = renderer.GetComponent<MeshFilter>().sharedMesh;
                 var vertices = mesh.vertices; var normals = mesh.normals; var uv = mesh.uv;
                 var indices = mesh.triangles;
-                using (var writer = new BinaryWriter(File.Create(Work + "/Input/" + entry.id + ".meshbin")))
+                using (var writer = new BinaryWriter(File.Create(workDirectory + "/Input/" + entry.id + ".meshbin")))
                 {
                     writer.Write(new byte[] { 84, 66, 77, 49 });
                     writer.Write(vertices.Length); writer.Write(indices.Length); writer.Write(mesh.subMeshCount);
@@ -46,7 +51,7 @@ namespace ThreeBodyProblem.Editor
                     albedo = Path.GetFullPath(AssetDatabase.GetAssetPath(renderer.sharedMaterial.mainTexture)),
                     width = entry.widthMetres, height = entry.heightMetres, depth = entry.depthMetres });
             }
-            File.WriteAllText(Work + "/sources.json", JsonUtility.ToJson(manifest, true));
+            File.WriteAllText(workDirectory + "/sources.json", JsonUtility.ToJson(manifest, true));
             return manifest.assets.Count;
         }
     }

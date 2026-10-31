@@ -1,0 +1,507 @@
+{
+    "gpu": "Apple M5",
+    "width": 1600,
+    "height": 900,
+    "frameRateCap": 120,
+    "shadowDistance": 60.0,
+    "passed": true,
+    "metrics": [
+        {
+            "asset": "BronzeWallTorchBracket",
+            "obstruction": "",
+            "viewClear": true,
+            "ignoredPlayerCollider": true,
+            "meanFrameMs": 9.21943187713623,
+            "p95FrameMs": 14.362791061401368,
+            "meanMainThreadMs": 9.093111038208008,
+            "meanPresentWaitMs": 0.07378654181957245,
+            "meanGpuMs": 11.749211311340332,
+            "p95GpuMs": 27.575416564941408,
+            "gpuSamples": 360,
+            "batches": 20,
+            "triangles": 27848,
+            "visibleLods": [
+                1
+            ]
+        },
+        {
+            "asset": "CharredBush",
+            "obstruction": "",
+            "viewClear": true,
+            "ignoredPlayerCollider": true,
+            "meanFrameMs": 9.098453521728516,
+            "p95FrameMs": 13.98303508758545,
+            "meanMainThreadMs": 9.092637062072754,
+            "meanPresentWaitMs": 0.0006249948055483401,
+            "meanGpuMs": 14.134456634521485,
+            "p95GpuMs": 30.0449161529541,
+            "gpuSamples": 360,
+            "batches": 17,
+            "triangles": 70791,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "DeadTamariskV2",
+            "obstruction": "",
+            "viewClear": true,
+            "ignoredPlayerCollider": false,
+            "meanFrameMs": 8.845113754272461,
+            "p95FrameMs": 11.998539924621582,
+            "meanMainThreadMs": 8.835176467895508,
+            "meanPresentWaitMs": 0.00033127490314655006,
+            "meanGpuMs": 13.682738304138184,
+            "p95GpuMs": 30.273500442504884,
+            "gpuSamples": 360,
+            "batches": 17,
+            "triangles": 108271,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "DesertDryScrubV2",
+            "obstruction": "",
+            "viewClear": true,
+            "ignoredPlayerCollider": true,
+            "meanFrameMs": 8.867076873779297,
+            "p95FrameMs": 12.765207290649414,
+            "meanMainThreadMs": 8.862704277038575,
+            "meanPresentWaitMs": 0.0011278782039880753,
+            "meanGpuMs": 13.3746337890625,
+            "p95GpuMs": 31.302125930786134,
+            "gpuSamples": 360,
+            "batches": 17,
+            "triangles": 78923,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "GobiShadeCanopyV3",
+            "obstruction": "Collision",
+            "viewClear": true,
+            "ignoredPlayerCollider": false,
+            "meanFrameMs": 9.164602279663086,
+            "p95FrameMs": 15.469253540039063,
+            "meanMainThreadMs": 9.161551475524903,
+            "meanPresentWaitMs": 0.007933862507343293,
+            "meanGpuMs": 14.73850154876709,
+            "p95GpuMs": 32.663333892822269,
+            "gpuSamples": 360,
+            "batches": 19,
+            "triangles": 443975,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "MedievalIronBrazier",
+            "obstruction": "Collision",
+            "viewClear": true,
+            "ignoredPlayerCollider": true,
+            "meanFrameMs": 9.3292875289917,
+            "p95FrameMs": 15.736620903015137,
+            "meanMainThreadMs": 9.325746536254883,
+            "meanPresentWaitMs": 0.0003834470990113914,
+            "meanGpuMs": 18.20249366760254,
+            "p95GpuMs": 36.32470703125,
+            "gpuSamples": 360,
+            "batches": 22,
+            "triangles": 151809,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "MedievalLectern",
+            "obstruction": "Collision",
+            "viewClear": true,
+            "ignoredPlayerCollider": false,
+            "meanFrameMs": 9.07361125946045,
+            "p95FrameMs": 14.013379096984864,
+            "meanMainThreadMs": 9.023604393005371,
+            "meanPresentWaitMs": 0.0007528890273533762,
+            "meanGpuMs": 9.150089263916016,
+            "p95GpuMs": 18.645124435424806,
+            "gpuSamples": 360,
+            "batches": 21,
+            "triangles": 90888,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "MedievalPew",
+            "obstruction": "",
+            "viewClear": true,
+            "ignoredPlayerCollider": false,
+            "meanFrameMs": 9.258926391601563,
+            "p95FrameMs": 12.888711929321289,
+            "meanMainThreadMs": 9.255221366882325,
+            "meanPresentWaitMs": 0.01058464590460062,
+            "meanGpuMs": 8.288496971130371,
+            "p95GpuMs": 16.75554084777832,
+            "gpuSamples": 360,
+            "batches": 24,
+            "triangles": 112600,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "MedievalStoneArch",
+            "obstruction": "",
+            "viewClear": true,
+            "ignoredPlayerCollider": false,
+            "meanFrameMs": 9.349839210510254,
+            "p95FrameMs": 16.01483154296875,
+            "meanMainThreadMs": 9.344013214111329,
+            "meanPresentWaitMs": 0.0003280027594882995,
+            "meanGpuMs": 16.172204971313478,
+            "p95GpuMs": 35.86595916748047,
+            "gpuSamples": 360,
+            "batches": 25,
+            "triangles": 398213,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "NaturalRidgeV2",
+            "obstruction": "",
+            "viewClear": true,
+            "ignoredPlayerCollider": false,
+            "meanFrameMs": 8.941981315612793,
+            "p95FrameMs": 12.4557466506958,
+            "meanMainThreadMs": 8.937601089477539,
+            "meanPresentWaitMs": 0.0075181457214057449,
+            "meanGpuMs": 11.946195602416993,
+            "p95GpuMs": 30.702999114990236,
+            "gpuSamples": 360,
+            "batches": 28,
+            "triangles": 284427,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "PalaceStoneColumn",
+            "obstruction": "Collision",
+            "viewClear": true,
+            "ignoredPlayerCollider": false,
+            "meanFrameMs": 10.38569164276123,
+            "p95FrameMs": 16.351118087768556,
+            "meanMainThreadMs": 10.373958587646485,
+            "meanPresentWaitMs": 0.021715261042118074,
+            "meanGpuMs": 10.636960983276368,
+            "p95GpuMs": 21.959125518798829,
+            "gpuSamples": 360,
+            "batches": 24,
+            "triangles": 247814,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "PalaceStoneStairs",
+            "obstruction": "Collision",
+            "viewClear": true,
+            "ignoredPlayerCollider": false,
+            "meanFrameMs": 9.80512809753418,
+            "p95FrameMs": 15.083170890808106,
+            "meanMainThreadMs": 9.803478240966797,
+            "meanPresentWaitMs": 0.002424654783681035,
+            "meanGpuMs": 18.804914474487306,
+            "p95GpuMs": 32.37291717529297,
+            "gpuSamples": 360,
+            "batches": 28,
+            "triangles": 337387,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "PyramidEntryPassage",
+            "obstruction": "Collision",
+            "viewClear": true,
+            "ignoredPlayerCollider": false,
+            "meanFrameMs": 8.658374786376954,
+            "p95FrameMs": 11.115044593811036,
+            "meanMainThreadMs": 8.647119522094727,
+            "meanPresentWaitMs": 0.0004708388587459922,
+            "meanGpuMs": 16.52764892578125,
+            "p95GpuMs": 28.219499588012697,
+            "gpuSamples": 360,
+            "batches": 32,
+            "triangles": 356104,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "ScorchedTree",
+            "obstruction": "",
+            "viewClear": true,
+            "ignoredPlayerCollider": false,
+            "meanFrameMs": 8.426908493041993,
+            "p95FrameMs": 9.128210067749024,
+            "meanMainThreadMs": 8.423096656799317,
+            "meanPresentWaitMs": 0.0002104108571074903,
+            "meanGpuMs": 11.508432388305664,
+            "p95GpuMs": 24.203332901000978,
+            "gpuSamples": 360,
+            "batches": 30,
+            "triangles": 119858,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "ScreePatch",
+            "obstruction": "Collision",
+            "viewClear": true,
+            "ignoredPlayerCollider": false,
+            "meanFrameMs": 8.65715503692627,
+            "p95FrameMs": 9.314831733703614,
+            "meanMainThreadMs": 8.653055191040039,
+            "meanPresentWaitMs": 0.00029706384520977736,
+            "meanGpuMs": 7.777365207672119,
+            "p95GpuMs": 24.135833740234376,
+            "gpuSamples": 360,
+            "batches": 34,
+            "triangles": 413116,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "ShadeOverhangV2",
+            "obstruction": "",
+            "viewClear": true,
+            "ignoredPlayerCollider": false,
+            "meanFrameMs": 8.403145790100098,
+            "p95FrameMs": 8.779874801635743,
+            "meanMainThreadMs": 8.399879455566407,
+            "meanPresentWaitMs": 0.00030994164990261197,
+            "meanGpuMs": 6.8571248054504398,
+            "p95GpuMs": 12.329874992370606,
+            "gpuSamples": 360,
+            "batches": 28,
+            "triangles": 388437,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "ShangBronzeBrazier",
+            "obstruction": "Collision",
+            "viewClear": true,
+            "ignoredPlayerCollider": false,
+            "meanFrameMs": 8.449403762817383,
+            "p95FrameMs": 9.896626472473145,
+            "meanMainThreadMs": 8.446321487426758,
+            "meanPresentWaitMs": 0.00028184999246150255,
+            "meanGpuMs": 9.869510650634766,
+            "p95GpuMs": 26.21208381652832,
+            "gpuSamples": 360,
+            "batches": 35,
+            "triangles": 191226,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "ShangBronzeDing",
+            "obstruction": "Collision",
+            "viewClear": true,
+            "ignoredPlayerCollider": false,
+            "meanFrameMs": 8.375646591186524,
+            "p95FrameMs": 8.597746849060059,
+            "meanMainThreadMs": 8.37204647064209,
+            "meanPresentWaitMs": 0.0002458220405969769,
+            "meanGpuMs": 7.351383686065674,
+            "p95GpuMs": 14.10474967956543,
+            "gpuSamples": 360,
+            "batches": 35,
+            "triangles": 358923,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "ShangMarketGoods",
+            "obstruction": "",
+            "viewClear": true,
+            "ignoredPlayerCollider": false,
+            "meanFrameMs": 8.378761291503907,
+            "p95FrameMs": 8.657171249389649,
+            "meanMainThreadMs": 8.376112937927246,
+            "meanPresentWaitMs": 0.00026448877179063857,
+            "meanGpuMs": 6.924968242645264,
+            "p95GpuMs": 11.848958015441895,
+            "gpuSamples": 360,
+            "batches": 40,
+            "triangles": 477617,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "ShangOracleBone",
+            "obstruction": "Collision",
+            "viewClear": true,
+            "ignoredPlayerCollider": true,
+            "meanFrameMs": 8.379009246826172,
+            "p95FrameMs": 8.662620544433594,
+            "meanMainThreadMs": 8.376270294189454,
+            "meanPresentWaitMs": 0.00025070825358852744,
+            "meanGpuMs": 4.954934597015381,
+            "p95GpuMs": 11.494750022888184,
+            "gpuSamples": 360,
+            "batches": 16,
+            "triangles": 18924,
+            "visibleLods": [
+                1
+            ]
+        },
+        {
+            "asset": "ShangStraightEarthWall",
+            "obstruction": "Collision",
+            "viewClear": true,
+            "ignoredPlayerCollider": false,
+            "meanFrameMs": 8.472844123840332,
+            "p95FrameMs": 9.917956352233887,
+            "meanMainThreadMs": 8.468038558959961,
+            "meanPresentWaitMs": 0.00034341408172622323,
+            "meanGpuMs": 13.152947425842286,
+            "p95GpuMs": 25.801250457763673,
+            "gpuSamples": 360,
+            "batches": 28,
+            "triangles": 257728,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "ShangTimberGate",
+            "obstruction": "",
+            "viewClear": true,
+            "ignoredPlayerCollider": false,
+            "meanFrameMs": 8.427833557128907,
+            "p95FrameMs": 8.794083595275879,
+            "meanMainThreadMs": 8.422700881958008,
+            "meanPresentWaitMs": 0.00037370555219240487,
+            "meanGpuMs": 11.80451774597168,
+            "p95GpuMs": 21.000791549682618,
+            "gpuSamples": 360,
+            "batches": 40,
+            "triangles": 88132,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "SplitBoulder",
+            "obstruction": "Collision",
+            "viewClear": true,
+            "ignoredPlayerCollider": false,
+            "meanFrameMs": 8.397995948791504,
+            "p95FrameMs": 8.806711196899414,
+            "meanMainThreadMs": 8.395004272460938,
+            "meanPresentWaitMs": 0.00029284460470080376,
+            "meanGpuMs": 6.8964433670043949,
+            "p95GpuMs": 15.109208106994629,
+            "gpuSamples": 360,
+            "batches": 37,
+            "triangles": 200725,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "TravellerLeatherFlask",
+            "obstruction": "Collision",
+            "viewClear": true,
+            "ignoredPlayerCollider": true,
+            "meanFrameMs": 8.494203567504883,
+            "p95FrameMs": 8.921534538269043,
+            "meanMainThreadMs": 8.490548133850098,
+            "meanPresentWaitMs": 0.00047258049016818404,
+            "meanGpuMs": 6.487945079803467,
+            "p95GpuMs": 14.004375457763672,
+            "gpuSamples": 360,
+            "batches": 20,
+            "triangles": 26592,
+            "visibleLods": [
+                1
+            ]
+        },
+        {
+            "asset": "WindCarvedPillar",
+            "obstruction": "Collision",
+            "viewClear": true,
+            "ignoredPlayerCollider": false,
+            "meanFrameMs": 8.404191017150879,
+            "p95FrameMs": 8.639753341674805,
+            "meanMainThreadMs": 8.40119743347168,
+            "meanPresentWaitMs": 0.00027489985222928226,
+            "meanGpuMs": 7.420228481292725,
+            "p95GpuMs": 12.823749542236329,
+            "gpuSamples": 360,
+            "batches": 45,
+            "triangles": 395666,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "PyramidPalace_Interior",
+            "obstruction": "",
+            "viewClear": true,
+            "ignoredPlayerCollider": false,
+            "meanFrameMs": 8.432929039001465,
+            "p95FrameMs": 9.427501678466797,
+            "meanMainThreadMs": 8.427931785583496,
+            "meanPresentWaitMs": 0.00026365811936557293,
+            "meanGpuMs": 11.69384479522705,
+            "p95GpuMs": 24.47533416748047,
+            "gpuSamples": 360,
+            "batches": 33,
+            "triangles": 456883,
+            "visibleLods": [
+                0
+            ]
+        }
+    ],
+    "errors": [],
+    "gateClear": true,
+    "portalClear": true,
+    "gateWallSolid": true,
+    "portalWallSolid": true,
+    "gateWalkThrough": true,
+    "portalWalkThrough": true,
+    "structures": [
+        {
+            "asset": "GobiShadeCanopyV3",
+            "clear": true,
+            "wallSolid": false,
+            "walked": true
+        },
+        {
+            "asset": "ShadeOverhangV2",
+            "clear": true,
+            "wallSolid": false,
+            "walked": true
+        },
+        {
+            "asset": "PyramidPalace_Interior",
+            "clear": true,
+            "wallSolid": true,
+            "walked": true
+        }
+    ],
+    "stairsClimbed": true,
+    "stairsPeakHeight": 2.6307623386383058
+}

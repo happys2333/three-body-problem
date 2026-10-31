@@ -1,0 +1,21 @@
+{
+  "entry": {
+    "hit": false,
+    "distance": null,
+    "point": null
+  },
+  "headroom": {
+    "hit": true,
+    "distance": 5.999847412109375,
+    "point": [
+      0.0,
+      0.0,
+      7.999847412109375
+    ]
+  },
+  "side": {
+    "hit": false,
+    "distance": null,
+    "point": null
+  }
+}

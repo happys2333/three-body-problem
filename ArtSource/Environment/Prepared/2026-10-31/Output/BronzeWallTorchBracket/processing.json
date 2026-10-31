@@ -1,0 +1,33 @@
+{
+  "id": "BronzeWallTorchBracket",
+  "sourceId": "BronzeWallTorchBracket",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261031/Prefabs/BronzeWallTorchBracket.prefab",
+  "modifications": [
+    "Generated flame geometry cropped; live torch is supplied as a separate Unity attachment."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    18000,
+    5000,
+    1000
+  ],
+  "sizeBlender": [
+    0.22264644503593445,
+    0.15527576208114624,
+    0.3509877324104309
+  ],
+  "usage": "Wall-mounted torch holder",
+  "charred": false,
+  "openingWidth": 0,
+  "openingHeight": 0,
+  "hasInterior": false
+}

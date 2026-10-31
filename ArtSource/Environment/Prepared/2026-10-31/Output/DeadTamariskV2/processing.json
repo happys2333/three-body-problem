@@ -1,0 +1,33 @@
+{
+  "id": "DeadTamariskV2",
+  "sourceId": "DeadTamariskV2",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/DeadTamariskV2.prefab",
+  "modifications": [
+    "Removed display ground; vegetation uses photographic bark.",
+    "Removed bird-like central object and its perch."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    27999,
+    7000,
+    1600
+  ],
+  "sizeBlender": [
+    1.6769545078277588,
+    1.3321278095245361,
+    1.862535834312439
+  ],
+  "usage": "Static environment prop",
+  "charred": false,
+  "openingWidth": 0,
+  "openingHeight": 0
+}

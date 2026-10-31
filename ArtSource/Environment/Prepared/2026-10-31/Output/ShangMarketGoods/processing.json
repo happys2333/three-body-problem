@@ -1,0 +1,32 @@
+{
+  "id": "ShangMarketGoods",
+  "sourceId": "ShangMarketGoods",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShangMarketGoods.prefab",
+  "modifications": [
+    "Original PBR atlas retained; UV-preserving QEM LODs."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    38000,
+    10000,
+    2400
+  ],
+  "sizeBlender": [
+    1.99974524974823,
+    0.6482484340667725,
+    0.8323844075202942
+  ],
+  "usage": "Static environment prop",
+  "charred": false,
+  "openingWidth": 0,
+  "openingHeight": 0
+}

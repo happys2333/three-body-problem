@@ -1,0 +1,33 @@
+{
+  "id": "CharredBush",
+  "sourceId": "DesertDryScrubV2",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/DesertDryScrubV2.prefab",
+  "modifications": [
+    "Removed display ground; vegetation uses photographic bark.",
+    "Derived from the cleaned matching unburnt plant; rejected baked fire/person source is not used."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    18000,
+    5000,
+    1100
+  ],
+  "sizeBlender": [
+    0.877345085144043,
+    1.1140096187591553,
+    0.7239680290222168
+  ],
+  "usage": "Charred vegetation state; no baked flames or people",
+  "charred": true,
+  "openingWidth": 0,
+  "openingHeight": 0
+}

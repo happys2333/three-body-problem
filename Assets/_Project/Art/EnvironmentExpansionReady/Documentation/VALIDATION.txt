@@ -1,0 +1,9 @@
+Environment Expansion Ready: validation scope — 2026-10-31
+
+24 approved static prefabs. Reloaded saved-prefab checks passed. The current macOS inspection app completed 25 views (24 assets plus a palace interior), real first-person doorway/sidewall tests, shelter entry, stair climbing and room checks without a functional/runtime exception.
+
+PERFORMANCE BUDGET NOT MET in the latest run (Native/attempt10): Apple M5, 1600 x 900, vSync off, frame cap 120, shadow distance 60 m, 240 warm-up and 360 sampled frames per view. Four views exceeded the P95 16.67 ms budget; worst P95 38.11 ms. Model import/function readiness does not promise stable 60 FPS. Main-game performance also needs separate optimization; it is not covered by this inspection yard.
+
+Generated GobiShadeCanopyV3 is excluded: reverse-side art review revealed folded thin surfaces and major holes. Generated TravellerWaterskinV2 is excluded for a modern zipper. Source archives and rejected attempts remain separate from this usable package. Use ShadeOverhangV2 and the locally authored TravellerLeatherFlask.
+
+Package payloads, saved references and GUID closure are checked. A separate empty-project import and URP/HDRP conversion were not performed. Full evidence and method: Documentation/EnvironmentProduction/ExpansionReady/ in the source repository.

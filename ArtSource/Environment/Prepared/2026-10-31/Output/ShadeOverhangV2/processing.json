@@ -1,0 +1,32 @@
+{
+  "id": "ShadeOverhangV2",
+  "sourceId": "ShadeOverhangV2",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShadeOverhangV2.prefab",
+  "modifications": [
+    "Complete lower staging band, person and sphere removed; back wall cut capped and regrounded."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    75000,
+    18000,
+    4000
+  ],
+  "sizeBlender": [
+    10.652764320373535,
+    8.105266571044922,
+    6.917987823486328
+  ],
+  "usage": "Natural shelter with open front; verify capsule clearance in the yard",
+  "charred": false,
+  "openingWidth": 0,
+  "openingHeight": 0
+}

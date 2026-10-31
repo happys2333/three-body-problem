@@ -1,0 +1,319 @@
+{
+    "gpu": "Apple M5",
+    "width": 1600,
+    "height": 900,
+    "frameRateCap": 120,
+    "shadowDistance": 60.0,
+    "passed": false,
+    "metrics": [
+        {
+            "asset": "CharredBush",
+            "viewClear": false,
+            "meanFrameMs": 8.448463439941407,
+            "p95FrameMs": 8.824546813964844,
+            "meanMainThreadMs": 8.445271492004395,
+            "meanPresentWaitMs": 0.0003088748489972204,
+            "meanGpuMs": 4.975673198699951,
+            "p95GpuMs": 6.188541412353516,
+            "gpuSamples": 360,
+            "batches": 18,
+            "triangles": 73333,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "DeadTamariskV2",
+            "viewClear": true,
+            "meanFrameMs": 8.426301956176758,
+            "p95FrameMs": 8.730123519897461,
+            "meanMainThreadMs": 8.420923233032227,
+            "meanPresentWaitMs": 0.0003248802968300879,
+            "meanGpuMs": 5.078911304473877,
+            "p95GpuMs": 5.9354166984558109,
+            "gpuSamples": 360,
+            "batches": 17,
+            "triangles": 108501,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "DesertDryScrubV2",
+            "viewClear": false,
+            "meanFrameMs": 8.423633575439454,
+            "p95FrameMs": 8.71750259399414,
+            "meanMainThreadMs": 8.419562339782715,
+            "meanPresentWaitMs": 0.0002470942272339016,
+            "meanGpuMs": 4.985114097595215,
+            "p95GpuMs": 5.801875114440918,
+            "gpuSamples": 360,
+            "batches": 18,
+            "triangles": 79955,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "MedievalIronBrazier",
+            "viewClear": false,
+            "meanFrameMs": 8.447163581848145,
+            "p95FrameMs": 8.826332092285157,
+            "meanMainThreadMs": 8.443583488464356,
+            "meanPresentWaitMs": 0.0002535860694479197,
+            "meanGpuMs": 5.437866687774658,
+            "p95GpuMs": 5.991291522979736,
+            "gpuSamples": 360,
+            "batches": 23,
+            "triangles": 166518,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "MedievalLectern",
+            "viewClear": true,
+            "meanFrameMs": 8.4491548538208,
+            "p95FrameMs": 8.858623504638672,
+            "meanMainThreadMs": 8.445661544799805,
+            "meanPresentWaitMs": 0.0002636831486597657,
+            "meanGpuMs": 4.995804786682129,
+            "p95GpuMs": 5.687041759490967,
+            "gpuSamples": 360,
+            "batches": 18,
+            "triangles": 95332,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "MedievalPew",
+            "viewClear": true,
+            "meanFrameMs": 8.421252250671387,
+            "p95FrameMs": 8.71016788482666,
+            "meanMainThreadMs": 8.416524887084961,
+            "meanPresentWaitMs": 0.000413888948969543,
+            "meanGpuMs": 5.030946731567383,
+            "p95GpuMs": 5.932250022888184,
+            "gpuSamples": 360,
+            "batches": 21,
+            "triangles": 116815,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "MedievalStoneArch",
+            "viewClear": true,
+            "meanFrameMs": 8.408525466918946,
+            "p95FrameMs": 8.783914566040039,
+            "meanMainThreadMs": 8.40166187286377,
+            "meanPresentWaitMs": 0.0002694499271456152,
+            "meanGpuMs": 5.0597357749938969,
+            "p95GpuMs": 6.106916904449463,
+            "gpuSamples": 360,
+            "batches": 25,
+            "triangles": 402287,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "NaturalRidgeV2",
+            "viewClear": true,
+            "meanFrameMs": 8.424272537231446,
+            "p95FrameMs": 8.73295783996582,
+            "meanMainThreadMs": 8.420186996459961,
+            "meanPresentWaitMs": 0.00024928594939410686,
+            "meanGpuMs": 5.220330238342285,
+            "p95GpuMs": 6.006916522979736,
+            "gpuSamples": 360,
+            "batches": 35,
+            "triangles": 302981,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "PalaceStoneColumn",
+            "viewClear": true,
+            "meanFrameMs": 8.403501510620118,
+            "p95FrameMs": 8.65829086303711,
+            "meanMainThreadMs": 8.399519920349121,
+            "meanPresentWaitMs": 0.0002520692942198366,
+            "meanGpuMs": 5.0998759269714359,
+            "p95GpuMs": 5.730999946594238,
+            "gpuSamples": 360,
+            "batches": 29,
+            "triangles": 265459,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "ScorchedTree",
+            "viewClear": true,
+            "meanFrameMs": 8.425873756408692,
+            "p95FrameMs": 8.855456352233887,
+            "meanMainThreadMs": 8.421748161315918,
+            "meanPresentWaitMs": 0.0003091526450589299,
+            "meanGpuMs": 4.992864608764648,
+            "p95GpuMs": 5.5758748054504398,
+            "gpuSamples": 360,
+            "batches": 27,
+            "triangles": 111341,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "ScreePatch",
+            "viewClear": true,
+            "meanFrameMs": 8.425926208496094,
+            "p95FrameMs": 8.686671257019043,
+            "meanMainThreadMs": 8.421792030334473,
+            "meanPresentWaitMs": 0.0002693167480174452,
+            "meanGpuMs": 4.938271999359131,
+            "p95GpuMs": 6.1722917556762699,
+            "gpuSamples": 360,
+            "batches": 22,
+            "triangles": 132314,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "ShadeOverhangV2",
+            "viewClear": true,
+            "meanFrameMs": 8.431928634643555,
+            "p95FrameMs": 8.779669761657715,
+            "meanMainThreadMs": 8.427838325500489,
+            "meanPresentWaitMs": 0.00027951112133450806,
+            "meanGpuMs": 5.059292316436768,
+            "p95GpuMs": 5.903458118438721,
+            "gpuSamples": 360,
+            "batches": 29,
+            "triangles": 436156,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "ShangBronzeBrazier",
+            "viewClear": true,
+            "meanFrameMs": 8.402387619018555,
+            "p95FrameMs": 8.710125923156739,
+            "meanMainThreadMs": 8.399871826171875,
+            "meanPresentWaitMs": 0.00019353319657966495,
+            "meanGpuMs": 5.5488200187683109,
+            "p95GpuMs": 6.072791576385498,
+            "gpuSamples": 360,
+            "batches": 33,
+            "triangles": 463880,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "ShangBronzeDing",
+            "viewClear": true,
+            "meanFrameMs": 8.40423583984375,
+            "p95FrameMs": 8.7220458984375,
+            "meanMainThreadMs": 8.400392532348633,
+            "meanPresentWaitMs": 0.00026631358196027577,
+            "meanGpuMs": 5.27616548538208,
+            "p95GpuMs": 5.952791690826416,
+            "gpuSamples": 360,
+            "batches": 35,
+            "triangles": 427330,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "ShangMarketGoods",
+            "viewClear": true,
+            "meanFrameMs": 8.412363052368164,
+            "p95FrameMs": 8.677997589111329,
+            "meanMainThreadMs": 8.406840324401856,
+            "meanPresentWaitMs": 0.000262860965449363,
+            "meanGpuMs": 5.070822715759277,
+            "p95GpuMs": 5.854166507720947,
+            "gpuSamples": 360,
+            "batches": 36,
+            "triangles": 445952,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "ShangTimberGate",
+            "viewClear": true,
+            "meanFrameMs": 8.425189018249512,
+            "p95FrameMs": 8.76775074005127,
+            "meanMainThreadMs": 8.420523643493653,
+            "meanPresentWaitMs": 0.0002546109026297927,
+            "meanGpuMs": 5.1823039054870609,
+            "p95GpuMs": 6.097750186920166,
+            "gpuSamples": 360,
+            "batches": 32,
+            "triangles": 62833,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "SplitBoulder",
+            "viewClear": true,
+            "meanFrameMs": 8.403177261352539,
+            "p95FrameMs": 8.702706336975098,
+            "meanMainThreadMs": 8.398667335510254,
+            "meanPresentWaitMs": 0.0002834692713804543,
+            "meanGpuMs": 4.901397705078125,
+            "p95GpuMs": 5.993791580200195,
+            "gpuSamples": 360,
+            "batches": 34,
+            "triangles": 427428,
+            "visibleLods": [
+                0
+            ]
+        },
+        {
+            "asset": "WindCarvedPillar",
+            "viewClear": true,
+            "meanFrameMs": 8.401823997497559,
+            "p95FrameMs": 8.664541244506836,
+            "meanMainThreadMs": 8.397665023803711,
+            "meanPresentWaitMs": 0.00024734140606597066,
+            "meanGpuMs": 5.136898994445801,
+            "p95GpuMs": 6.0954999923706059,
+            "gpuSamples": 360,
+            "batches": 44,
+            "triangles": 562257,
+            "visibleLods": [
+                0
+            ]
+        }
+    ],
+    "errors": [
+        "CharredBush: inspection camera is obstructed by another station.",
+        "DesertDryScrubV2: inspection camera is obstructed by another station.",
+        "MedievalIronBrazier: inspection camera is obstructed by another station."
+    ],
+    "gateClear": true,
+    "portalClear": true,
+    "gateWallSolid": true,
+    "portalWallSolid": true,
+    "gateWalkThrough": true,
+    "portalWalkThrough": true,
+    "structures": [
+        {
+            "asset": "ShadeOverhangV2",
+            "clear": true,
+            "wallSolid": false,
+            "walked": true
+        }
+    ],
+    "stairsClimbed": false,
+    "stairsPeakHeight": 0.0
+}

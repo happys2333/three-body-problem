@@ -1,0 +1,32 @@
+{
+  "id": "ScreePatch",
+  "sourceId": "ScreePatch",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ScreePatch.prefab",
+  "modifications": [
+    "Display plinth cropped and capped; silhouette weathered; photographic rock surface."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    24000,
+    6000,
+    1400
+  ],
+  "sizeBlender": [
+    6.1726531982421875,
+    5.939835548400879,
+    1.900139331817627
+  ],
+  "usage": "Low rock pile; combine with existing scattered-stone assets",
+  "charred": false,
+  "openingWidth": 0,
+  "openingHeight": 0
+}

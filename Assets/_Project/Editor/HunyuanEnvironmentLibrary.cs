@@ -34,15 +34,20 @@ namespace ThreeBodyProblem.Editor
 
         public static Report PrepareBatch(int skip, int take)
         {
+            return PrepareManifest(Docs + "/hunyuan-environment-2026-10-28.json", Root,
+                Docs + "/hunyuan-environment-unity-validation.json", skip, take, false);
+        }
+
+        public static Report PrepareManifest(string manifestPath, string libraryRoot, string reportPath, int skip, int take, bool addCollision)
+        {
             if (EditorApplication.isPlaying) throw new InvalidOperationException("Stop Play before preparing the environment library.");
-            var manifest = JsonUtility.FromJson<Manifest>(File.ReadAllText(Docs + "/hunyuan-environment-2026-10-28.json"));
-            Directory.CreateDirectory(Root + "/Prefabs"); Directory.CreateDirectory(Docs + "/Previews");
+            var manifest = JsonUtility.FromJson<Manifest>(File.ReadAllText(manifestPath));
+            Directory.CreateDirectory(libraryRoot + "/Prefabs"); Directory.CreateDirectory(Path.GetDirectoryName(reportPath));
             AssetDatabase.Refresh();
-            string reportPath = Docs + "/hunyuan-environment-unity-validation.json";
             var report = File.Exists(reportPath) ? JsonUtility.FromJson<Report>(File.ReadAllText(reportPath)) : new Report();
             foreach (var entry in manifest.assets.Where(a => a.files != null && File.Exists(a.files.projectFile)).Skip(skip).Take(take))
             {
-                var check = Prepare(entry); report.assets.RemoveAll(a => a.id == entry.id); report.assets.Add(check);
+                var check = Prepare(entry, libraryRoot, addCollision); report.assets.RemoveAll(a => a.id == entry.id); report.assets.Add(check);
                 // Persist progress so a domain reload never loses a completed import.
                 report.assets = report.assets.OrderBy(a => manifest.assets.FindIndex(e => e.id == a.id)).ToList();
                 File.WriteAllText(reportPath, JsonUtility.ToJson(report, true));
@@ -52,7 +57,7 @@ namespace ThreeBodyProblem.Editor
             return report;
         }
 
-        private static Check Prepare(Entry entry)
+        private static Check Prepare(Entry entry, string libraryRoot, bool addCollision)
         {
             string source = entry.files.projectFile, folder = Path.GetDirectoryName(source), maps = folder + "/Textures";
             var importer = (ModelImporter)AssetImporter.GetAtPath(source);
@@ -124,11 +129,16 @@ namespace ThreeBodyProblem.Editor
                         var output = child.AddComponent<MeshRenderer>(); output.sharedMaterials = renderer.sharedMaterials;
                         output.shadowCastingMode = level == 1 ? ShadowCastingMode.On : ShadowCastingMode.Off;
                         triangles[level] += mesh.triangles.Length / 3; lower.Add(output);
+                        if (addCollision && level == 1)
+                        {
+                            var collider = renderer.gameObject.AddComponent<MeshCollider>();
+                            collider.sharedMesh = mesh; collider.convex = false;
+                        }
                     }
                     lods[level] = new LOD(level == 1 ? .075f : .009f, lower.ToArray());
                 }
                 var group = root.AddComponent<LODGroup>(); group.SetLODs(lods); group.RecalculateBounds();
-                string prefab = Root + "/Prefabs/" + entry.id + ".prefab";
+                string prefab = libraryRoot + "/Prefabs/" + entry.id + ".prefab";
                 if (PrefabUtility.SaveAsPrefabAsset(root, prefab) == null) throw new IOException(prefab);
                 bounds = Bounds(high); var materials = high.SelectMany(r => r.sharedMaterials).Distinct().ToArray();
                 var check = new Check { id = entry.id, source = source, prefab = prefab, trianglesByLod = triangles,
@@ -146,7 +156,13 @@ namespace ThreeBodyProblem.Editor
 
         public static string[] CaptureLibrary()
         {
-            var report = JsonUtility.FromJson<Report>(File.ReadAllText(Docs + "/hunyuan-environment-unity-validation.json"));
+            return CaptureManifest(Docs + "/hunyuan-environment-unity-validation.json", Docs + "/Previews");
+        }
+
+        public static string[] CaptureManifest(string reportPath, string previewFolder)
+        {
+            var report = JsonUtility.FromJson<Report>(File.ReadAllText(reportPath));
+            Directory.CreateDirectory(previewFolder);
             var images = new List<string>();
             for (int start = 0; start < report.assets.Count; start += 4)
             {
@@ -157,6 +173,9 @@ namespace ThreeBodyProblem.Editor
                     for (int i = 0; i < entries.Length; i++)
                     {
                         var root = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(entries[i].prefab), scene);
+                        // Shelf photographs normalize mesh sizes; world-space point light ranges
+                        // cannot be normalized in the same way. Use the review lights here.
+                        foreach (var embeddedLight in root.GetComponentsInChildren<Light>()) embeddedLight.enabled = false;
                         var group = root.GetComponent<LODGroup>(); group.ForceLOD(0);
                         var high = group.GetLODs()[0].renderers; var bounds = Bounds(high);
                         root.transform.localScale *= 2.8f / Mathf.Max(bounds.size.x, bounds.size.y, bounds.size.z);
@@ -171,7 +190,7 @@ namespace ThreeBodyProblem.Editor
                     camera.orthographic = true; camera.orthographicSize = 4.1f; camera.nearClipPlane = .05f; camera.farClipPlane = 50;
                     camera.transform.position = new Vector3(0, 3.4f, 16); camera.transform.LookAt(new Vector3(0, 1.3f, 0));
                     camera.clearFlags = CameraClearFlags.SolidColor; camera.backgroundColor = new Color(.06f, .065f, .08f);
-                    string path = Docs + "/Previews/Environment_Unity_" + (start / 4 + 1).ToString("00") + ".jpg";
+                    string path = previewFolder + "/Environment_Unity_" + (start / 4 + 1).ToString("00") + ".jpg";
                     TravellerSceneChecks.Capture(camera, path); images.Add(path);
                 }
                 finally { EditorSceneManager.ClosePreviewScene(scene); }

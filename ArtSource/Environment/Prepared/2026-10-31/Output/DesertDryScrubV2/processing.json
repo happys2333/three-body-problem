@@ -1,0 +1,32 @@
+{
+  "id": "DesertDryScrubV2",
+  "sourceId": "DesertDryScrubV2",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/DesertDryScrubV2.prefab",
+  "modifications": [
+    "Removed display ground; vegetation uses photographic bark."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    20000,
+    5500,
+    1200
+  ],
+  "sizeBlender": [
+    0.877345085144043,
+    1.1140096187591553,
+    0.7239155769348145
+  ],
+  "usage": "Static environment prop",
+  "charred": false,
+  "openingWidth": 0,
+  "openingHeight": 0
+}

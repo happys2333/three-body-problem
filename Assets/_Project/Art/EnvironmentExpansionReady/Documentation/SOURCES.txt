@@ -1,0 +1,11 @@
+Generated geometry: Tencent Hunyuan 3D, user-authorized web generation 2026-10-30 and 2026-10-31. Applicable platform content conditions: https://rule.tencent.com/rule/202501080004 . Not CC0. No transfer of ownership or redistribution permission is implied by packaging.
+
+Photographic PBR surfaces: Poly Haven contributors, CC0 1.0 — https://polyhaven.com/license
+https://polyhaven.com/a/rock_face
+https://polyhaven.com/a/pine_bark
+https://polyhaven.com/a/thatch_roof_angled
+https://polyhaven.com/a/sandstone_blocks_05
+https://polyhaven.com/a/clay_plaster
+https://polyhaven.com/a/wood_planks
+
+Flame mesh, shaders, light setup, repaired/derived geometry and editor production tools: this project. See the project LICENSE for its own code and authored content; it does not replace third-party terms.

@@ -1,0 +1,7 @@
+Observed in native Chrome recent downloads:
+f55c861c349fb712765a028a8ed3f96d.fbx — 请检查互联网连接状况
+Control: 继续下载 f55c861c349fb712765a028a8ed3f96d.fbx
+After clicking Continue: 2.6/32.9 MB • 继续下载中…
+Final archived size: 34508108 bytes
+Final SHA-256: 6638f7fb99bf58bdda52222ee3c3b42c4a7102e43016ebf9b3cd62979966fde2
+No unsafe-file or certificate warning was bypassed.

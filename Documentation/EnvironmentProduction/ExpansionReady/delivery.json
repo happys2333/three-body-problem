@@ -1,0 +1,98 @@
+{
+  "status": "assets_ready_for_import_performance_budget_not_met",
+  "date": "2026-10-31",
+  "readyPrefabs": 24,
+  "generatedGroupsToday": 7,
+  "downloadedSourceModelsToday": 7,
+  "remainingQuotaObserved": 13,
+  "pendingGeneratedExports": [],
+  "localRebuiltReplacement": "TravellerLeatherFlask",
+  "package": "Builds/EnvironmentExpansionReady_20261031.unitypackage",
+  "packageBytes": 376736676,
+  "packageSha256": "1e5f2bf841c02907c411c437cb86bca38747a27a2cb9df37e3f64e5de968a9cd",
+  "packageReferencesClosed": true,
+  "packageMatchesCurrentWorkspace": true,
+  "savedPrefabChecksPassed": true,
+  "nativeBuild": "Builds/EnvironmentExpansionYard.app",
+  "inspectionScene": "Assets/_Project/Scenes/Environment/Environment_ExpansionYard.unity",
+  "runtime": {
+    "passed": false,
+    "functionalPassed": true,
+    "performanceBudgetPassed": false,
+    "evidence": "Native/final/qa.json",
+    "finalAttempt": "attempt10",
+    "views": 25,
+    "gpu": "Apple M5",
+    "resolution": [
+      1600,
+      900
+    ],
+    "frameCap": 120,
+    "shadowDistance": 60.0,
+    "warmupFramesPerView": 240,
+    "sampleFramesPerView": 360,
+    "worstP95FrameMs": 38.10874938964844,
+    "errors": [
+      "DeadTamariskV2: P95 frame time exceeds 16.67 ms.",
+      "MedievalIronBrazier: P95 frame time exceeds 16.67 ms.",
+      "MedievalPew: P95 frame time exceeds 16.67 ms.",
+      "TravellerLeatherFlask: P95 frame time exceeds 16.67 ms."
+    ],
+    "structures": [
+      {
+        "asset": "ShadeOverhangV2",
+        "clear": true,
+        "wallSolid": false,
+        "walked": true
+      },
+      {
+        "asset": "PyramidPalace_Interior",
+        "clear": true,
+        "wallSolid": true,
+        "walked": true
+      }
+    ],
+    "doorwaysWalked": true,
+    "stairsClimbed": true
+  },
+  "prefabSha256": {
+    "BronzeWallTorchBracket": "3117af2d9f70713988e8eea4d6bff438f460309271faf8aa497e93e1f51f59f6",
+    "CharredBush": "7783ffc16717622f763e77b6c93f0a29b5463caa7f97674eb03b85bba58af83c",
+    "DeadTamariskV2": "612047dbbaa1eb6c8dbf0aaf73124fd492bd958a872160f9a4962ac5e4f222a2",
+    "DesertDryScrubV2": "81bfa671fb5511d240e5dfb1c5265f246e40882985e6c275ff0cb356319397a8",
+    "MedievalIronBrazier": "864c3cb2342f2378bb916d0d0033380571092088def3de561055043941127a32",
+    "MedievalLectern": "6df658358df29e85f9f402cfb0160f042059ef3acd6267cf81de48aea8e57a5e",
+    "MedievalPew": "6ac2780df9ccdd15fb9d158e59b57c62b7a958db98e833058768e9002cc92801",
+    "MedievalStoneArch": "64f679a615f877567f9b0811d4c1b9d7ed0a5293c08d1783f3962f24bb734994",
+    "NaturalRidgeV2": "87ef8f337b09497207428917305b7d347c7981290ed152998a6e88677c95721d",
+    "PalaceStoneColumn": "17a63b5aef37fd38ec9c5fa190ebad60e7ebe882fb90bd3ebf9f56adacce8e3a",
+    "PalaceStoneStairs": "8b1465176225b29240085972c417a46ef7b78bdbea7fceecf102adc9757a6612",
+    "PyramidEntryPassage": "c6710c222510b7a1848d80d659d650f70bb2985ad40e8b561bb62f5ab40fb8aa",
+    "ScorchedTree": "e79c97adcf2bc08f930b4bfd31e14e07c4b27d573201c9ad0dfd656b18fc3f96",
+    "ScreePatch": "3149a40ca220d99eaa354795311af291a755a37d6286b069d4d6fc6247eca1f9",
+    "ShadeOverhangV2": "06163ce702f37ba20f02c8db38a51c82fbe4f0b189f66dac836f5c7365b14479",
+    "ShangBronzeBrazier": "9ff7dd6120989f216eee12e3b6cb5f179fb5e358920edb355b9486605e7d4376",
+    "ShangBronzeDing": "514731753d49e87c432487006ac66dcf1f20ad56300710550a796b2fb17019cd",
+    "ShangMarketGoods": "db963bc78182289134ee1d35a70f9ad7c9345bae3afc32b72adc7707080f37f4",
+    "ShangOracleBone": "f3af53665c52ec92ca4a3f36f146ffa605ca572ae92f441490ead94d77bf957f",
+    "ShangStraightEarthWall": "83125729512fbf663f7fa601c6321ca1f36e000ccc7e9fe94f5cd8323fcfbd38",
+    "ShangTimberGate": "570920812b9091592d72126cc68ec3d036cc7648ab3590489c709dc19837c8a9",
+    "SplitBoulder": "5914f9569bb6b779eae9620a393c0f588e7bb878565a221bf4f6ef06407b3185",
+    "TravellerLeatherFlask": "e6982cf296e013aa795648c4c0e95d4efd2941d228d3b7d6f4449df9d84d80c6",
+    "WindCarvedPillar": "0e94ead630568a2ce9e9c3142499073fd1de60f35e724284ad4b2b6642a2fff0"
+  },
+  "limits": [
+    "Latest native performance budget failed in four views; asset/function readiness does not guarantee stable 60 FPS.",
+    "GobiShadeCanopyV3 is archived but rejected for folded thin surfaces and major roof holes; it is excluded from this package.",
+    "TravellerWaterskinV2 is archived but rejected for a modern zipper; TravellerLeatherFlask is a local reconstruction.",
+    "NaturalRidgeV2 is a distant backdrop, not a detailed climbable mountain.",
+    "PyramidEntryPassage is a 48 m study model; the main capital uses the authored 120 x 156 m masonry palace.",
+    "An independent empty-project import was not performed; archive payloads, workspace hashes and GUID closure were checked."
+  ],
+  "browserProtectionsWeakened": false,
+  "purchasesOrSubscriptions": false,
+  "storyPreservation": "See Documentation/Architecture/MonumentalMasonry/story-preservation.json. Only the authorized main-capital palace geometry was replaced; Gobi, medieval, route settings and build settings remain unchanged from task start.",
+  "sourceHashChecks": 27,
+  "packageUnexpectedDependencies": [],
+  "packagePayloadMismatches": []
+}

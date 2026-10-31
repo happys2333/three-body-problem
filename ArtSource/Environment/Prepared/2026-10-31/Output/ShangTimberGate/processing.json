@@ -1,0 +1,33 @@
+{
+  "id": "ShangTimberGate",
+  "sourceId": "ShangTimberGate",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShangTimberGate.prefab",
+  "modifications": [
+    "Rebuilt symmetrical mortised timber frame, dressed stone feet and straight thatch roof; broken wall and late-style trim excluded.",
+    "Clear through aperture carved: 2.1 m wide by 2.65 m high."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    11708,
+    4096,
+    1434
+  ],
+  "sizeBlender": [
+    5.207953453063965,
+    2.4055001735687256,
+    4.702000141143799
+  ],
+  "usage": "Traversable architectural opening",
+  "charred": false,
+  "openingWidth": 2.1,
+  "openingHeight": 2.65
+}

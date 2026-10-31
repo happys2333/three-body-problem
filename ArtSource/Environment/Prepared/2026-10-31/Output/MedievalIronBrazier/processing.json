@@ -1,0 +1,32 @@
+{
+  "id": "MedievalIronBrazier",
+  "sourceId": "MedievalIronBrazier",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/MedievalIronBrazier.prefab",
+  "modifications": [
+    "Original PBR atlas retained; UV-preserving QEM LODs."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    30000,
+    7500,
+    1700
+  ],
+  "sizeBlender": [
+    1.277939796447754,
+    1.2804319858551025,
+    1.1002510786056519
+  ],
+  "usage": "Static environment prop",
+  "charred": false,
+  "openingWidth": 0,
+  "openingHeight": 0
+}

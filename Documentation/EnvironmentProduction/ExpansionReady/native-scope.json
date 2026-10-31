@@ -1,0 +1,7 @@
+{
+  "functionalPassed": true,
+  "latestRun": "Native/attempt10/qa.json",
+  "latestPerformancePassed": false,
+  "scope": "Current 24 approved prefabs plus palace interior. All physical and view checks passed; four P95 checks failed. Previous 26-view runs are historical and not used as current-version proof.",
+  "prefabSerializationChangedDuringReimport": true
+}

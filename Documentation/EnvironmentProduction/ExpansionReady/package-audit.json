@@ -1,0 +1,1306 @@
+{
+  "passed": true,
+  "package": "Builds/EnvironmentExpansionReady_20261031.unitypackage",
+  "bytes": 376736676,
+  "sha256": "1e5f2bf841c02907c411c437cb86bca38747a27a2cb9df37e3f64e5de968a9cd",
+  "entries": 185,
+  "unresolvedGuids": [],
+  "assets": [
+    {
+      "guid": "67a81a5613f114e74bfc343b7ae006fe",
+      "bytes": 2874296,
+      "sha256": "c76f03e24de9f5bb826676b0c34bfa49e5d1ca240166a2811d2d3874d47d21bd",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/pine_bark/pine_bark_ao_2k.jpg"
+    },
+    {
+      "guid": "cf92295b9f43f4b86b0867e1a4c077f2",
+      "bytes": 3167561,
+      "sha256": "741f333ab9f8a0996d8a53905b5ac792fab77d7ccb8cac5fbaed8c99b9f6abd5",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/pine_bark/pine_bark_diff_2k.jpg"
+    },
+    {
+      "guid": "72ab5b7f1ef9744cfba41a302dbec194",
+      "bytes": 4637035,
+      "sha256": "e91d024441a698523472ef2001be2eade2f73005d798466c7acd3ec5d585667f",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/pine_bark/pine_bark_nor_gl_2k.jpg"
+    },
+    {
+      "guid": "b433e243b7d5f47b08abd446949d8b89",
+      "bytes": 2085022,
+      "sha256": "a86618f6358a97410b15d226d0b3d52bb203aed8d9a29cfa355769b95df94d03",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/pine_bark/pine_bark_rough_2k.jpg"
+    },
+    {
+      "guid": "11a384bf36b6a4d6a863c5686cad680c",
+      "bytes": 1621583,
+      "sha256": "a1307b27bb712faa3569ec6bfbd74e867c30f66a815df3fc88f86b6158551d5d",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/rock_face/rock_face_ao_2k.jpg"
+    },
+    {
+      "guid": "dc884c900dfc2460ab4245ef763b1649",
+      "bytes": 2971109,
+      "sha256": "b989c832327538a9e546cca359417acb9a657d041f300407e8398daaf743f5bc",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/rock_face/rock_face_diff_2k.jpg"
+    },
+    {
+      "guid": "aef8b9cfe1bd1495d891c4c5fac3458d",
+      "bytes": 4158538,
+      "sha256": "352b87db2502d54487b0ed8abdfb621fae2abf7d360a281b419f567346178cf0",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/rock_face/rock_face_nor_gl_2k.jpg"
+    },
+    {
+      "guid": "83b19a814ffec4c3ea936be00b4d954f",
+      "bytes": 980027,
+      "sha256": "91517cdc191bf60fdb135929e12041e2ad50dd7343b33f25dae75d87ba61b226",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/rock_face/rock_face_rough_2k.jpg"
+    },
+    {
+      "guid": "4e5e6c1a9f47c4b8b8ffb5842300f0c8",
+      "bytes": 3145820,
+      "sha256": "b2c2694a10403a9f1508d28cf44f4e65c11da2430e48cb76bee4c99e7ba1ea42",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/thatch_roof_angled/thatch_roof_angled_ao_2k.jpg"
+    },
+    {
+      "guid": "ecc1aa8dd5129444ca0b46f868434bca",
+      "bytes": 3225496,
+      "sha256": "dd544436986e9be6ae80996fbd132c67b38c81e8ed1b7c4384a961efe87460b7",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/thatch_roof_angled/thatch_roof_angled_diff_2k.jpg"
+    },
+    {
+      "guid": "96b68b13c8d394db5a143048b94dd1fe",
+      "bytes": 5097746,
+      "sha256": "e7b71772b830fb1a45f82cb796ace9233e5c331f4c3410aba142d8c69a8710e0",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/thatch_roof_angled/thatch_roof_angled_nor_gl_2k.jpg"
+    },
+    {
+      "guid": "93e0773cd979841dfb39381590b82547",
+      "bytes": 2202771,
+      "sha256": "511d4d0369fe1676bc31587390a3d5823664ef516efd5bef7d9a4f809bd55382",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/EnvironmentReady/PolyHaven/thatch_roof_angled/thatch_roof_angled_rough_2k.jpg"
+    },
+    {
+      "guid": "7d37cf12ea06649918de884e925100fe",
+      "bytes": 347863,
+      "sha256": "68abd3834d30e8bdaa4b12b67f463f79e39514b5a21b0347b63cd5a520352fb2",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/PolyHaven/clay_plaster/textures/clay_plaster_ao_1k.jpg"
+    },
+    {
+      "guid": "d0c83ebf8fd354afa9a7545f359c28b8",
+      "bytes": 354209,
+      "sha256": "82e43c68bddebb55a18577ae3cb0d01c02c23f086d342a854ff8a174d9f4fd73",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/PolyHaven/clay_plaster/textures/clay_plaster_diff_1k.jpg"
+    },
+    {
+      "guid": "c61006c3ab497467295a64518371580d",
+      "bytes": 784921,
+      "sha256": "359f814292005ab16be86807678a4a51e8256a87c282ebf5f5333ce18c428fba",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/PolyHaven/clay_plaster/textures/clay_plaster_nor_gl_1k.jpg"
+    },
+    {
+      "guid": "7102de6ebd87a453b8924189d98a196a",
+      "bytes": 345709,
+      "sha256": "e91a6238456b54a82dbf2c025e0b046851c90e7e772fe2affd26a46b243ce7b7",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/PolyHaven/clay_plaster/textures/clay_plaster_rough_1k.jpg"
+    },
+    {
+      "guid": "e873fadc6a2de45d69222ad18b8a5b0a",
+      "bytes": 635678,
+      "sha256": "d17c322d9e793ab9fc198948a34f2632595560471ff8714f2b0e052bc75c9ee3",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/PolyHaven/sandstone_blocks_05/sandstone_blocks_05_diff_1k.jpg"
+    },
+    {
+      "guid": "d2c9fd10fc5234a7eba9ed20d58d81cd",
+      "bytes": 1224895,
+      "sha256": "ab42361855310d8de9b11470c6b21e512c9926decd5548dc9e9d72bd6cc06f3e",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/PolyHaven/sandstone_blocks_05/sandstone_blocks_05_nor_gl_1k.jpg"
+    },
+    {
+      "guid": "69bd7ac6c246a4c9985ca39a875a45dd",
+      "bytes": 210439,
+      "sha256": "4f4d27fc3186e18db5423ddbd41902cd5c5bd5642d4cdea89610c1b5d1f9821d",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/PolyHaven/sandstone_blocks_05/sandstone_blocks_05_rough_1k.jpg"
+    },
+    {
+      "guid": "c41af4c34d6b5489a8842e3b035cfc0a",
+      "bytes": 351488,
+      "sha256": "9ab36d73298d789b7bf9c6a873db79e09fbd3fc987217e3ec4cc6110786f05b5",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/PolyHaven/wood_planks/textures/wood_planks_ao_1k.jpg"
+    },
+    {
+      "guid": "89c16642c1a4c46779c390e0b0440780",
+      "bytes": 609525,
+      "sha256": "3b0669f683e4bf10f5a55a381cfa9669a7b8dfd921901829daa3b35acc2bbdec",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/PolyHaven/wood_planks/textures/wood_planks_diff_1k.jpg"
+    },
+    {
+      "guid": "be7bfde93b4c64b58a841dcfa2abe999",
+      "bytes": 652441,
+      "sha256": "d02abf113e17a8abe97e1be3e9d6d88add242e8c2291e2200d37aa8c68909f25",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/PolyHaven/wood_planks/textures/wood_planks_nor_gl_1k.jpg"
+    },
+    {
+      "guid": "fc66ac8cc1de440fb81e643d4120c447",
+      "bytes": 299757,
+      "sha256": "1b7f115bfa25619b0a2db554eb1ab88a6fc5ef0b74ba4890611eae04d00b9829",
+      "metadataVerified": true,
+      "path": "Assets/ThirdParty/PolyHaven/wood_planks/textures/wood_planks_rough_1k.jpg"
+    },
+    {
+      "guid": "2c952d169d276430ab5fa566788db9f6",
+      "bytes": 796,
+      "sha256": "2401d1858fc4f02bf46d566429fb9646914fba1f937ea85c39584927e8e171b7",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/ActOne/Materials/Flame.mat"
+    },
+    {
+      "guid": "9665aaefc9a5c4851946380c983d8fe2",
+      "bytes": 755,
+      "sha256": "c908aecb9f1269a65c926f9690ea301eb540e93913a2ede5f145dc996205f32a",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/ActOne/Materials/TorchFlame.mat"
+    },
+    {
+      "guid": "2ce3cdd99a70c4124a4e188dcad0a6f6",
+      "bytes": 964,
+      "sha256": "4b35d13caf3080fdfe40c3d73d45bba0383fa88be8862670317aad772ed10abe",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/AtmosphereParticle.shader"
+    },
+    {
+      "guid": "8494d02a4f488497388248094310da55",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Documentation"
+    },
+    {
+      "guid": "58976894509fb448595b32a8aa12f4fe",
+      "bytes": 2286,
+      "sha256": "1f70f519937c9eb8a0dc6478ffc5b6f78bce0fb458be5f8d419945b89991b31c",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Documentation/README.txt"
+    },
+    {
+      "guid": "b913294b7c7694d989bfb681718da8d6",
+      "bytes": 800,
+      "sha256": "830711db101fe980fb4983b96ec44c2d9da4ff91d6c059357c2ac5dba23bccdf",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Documentation/SOURCES.txt"
+    },
+    {
+      "guid": "d23ab8ead7ee648499f87a381592e8d8",
+      "bytes": 1323,
+      "sha256": "1a0342be206f2ac55ee76db08442c218acb8b3f534f67c3eaaecaf159034d526",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Documentation/VALIDATION.txt"
+    },
+    {
+      "guid": "f6b198d48a17f4af2935a570f164e145",
+      "bytes": 188,
+      "sha256": "025fab62174ebdcd5b11bf8914e7624c43a5553d0766f2286cbd3b1e6685a42a",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Documentation/clay_plaster_SOURCE.txt"
+    },
+    {
+      "guid": "e5296ab70c866432f8f4be5081eb1293",
+      "bytes": 4725,
+      "sha256": "57079763de7145f22458ed12dce35917a1f90d043433d8b1d082e176c10bdaec",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Documentation/photographic-surface-sources.json"
+    },
+    {
+      "guid": "a753afafa65804cdda0998deb96963db",
+      "bytes": 184,
+      "sha256": "93e18f447155caa2be3a3fc91b867cbf8756c17ebcf4290cb9eaf43c2bc26544",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Documentation/pine_bark_SOURCE.txt"
+    },
+    {
+      "guid": "24710c748f597442898d632756e459dc",
+      "bytes": 184,
+      "sha256": "2621c863556735913428e0d77ceefd06dac484310166ac7fd3275be858fff5e7",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Documentation/rock_face_SOURCE.txt"
+    },
+    {
+      "guid": "5fb3f14cb4cc14c52b1649f107f0486c",
+      "bytes": 193,
+      "sha256": "532ae053394aaee9019df502d42a7628496bca66de71b1502cb95426c85b73dd",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Documentation/thatch_roof_angled_SOURCE.txt"
+    },
+    {
+      "guid": "00b11cc06211a429298928806012a9fc",
+      "bytes": 187,
+      "sha256": "5eb04ca3dfb0899abe92d97add1054b5adcecfb544721b8b753ef0356a3f6607",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Documentation/wood_planks_SOURCE.txt"
+    },
+    {
+      "guid": "9afd68cd71a7b4ad2bd0a7fde71a7b21",
+      "bytes": 2438,
+      "sha256": "34e66174daff5b6954e9659b82cf264e47c21102beb9930ea3eb39d70c2774a6",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Materials/BronzeWallTorchBracket_OriginalSupplies.mat"
+    },
+    {
+      "guid": "6e1569f1d29c44856a343b4e8319fd8e",
+      "bytes": 1718,
+      "sha256": "2274bd27cca4c7b89925dd0e56e3e1b208dd8d1ae3b2b178eb830db6a119dcfd",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Materials/CharredBush_Bark.mat"
+    },
+    {
+      "guid": "56e8f21dddbed4f28ae0bac0f764326e",
+      "bytes": 2435,
+      "sha256": "c07f562bd7057adcf16067e880c108de1efa031fbbcff8a8a0f034e4d55bf546",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Materials/MedievalIronBrazier_OriginalSupplies.mat"
+    },
+    {
+      "guid": "f27a31e73722446729525caf366d7bf5",
+      "bytes": 2431,
+      "sha256": "736e32b5bc796eeaf9e2533e7c92fc838e556c5a7d4b3660adae2a763017d26d",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Materials/MedievalLectern_OriginalSupplies.mat"
+    },
+    {
+      "guid": "3f44e92fe75784157a8fa3235fc12170",
+      "bytes": 2427,
+      "sha256": "e765cebeccc5a6f23aa4aba150ecf655efa8455b7cd0c0f8d074f34d3019642c",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Materials/MedievalPew_OriginalSupplies.mat"
+    },
+    {
+      "guid": "2edd16399bdad4883af7a994659dbf57",
+      "bytes": 1719,
+      "sha256": "b765f97710e1ad0245939defd53ee7af9a4e193263daafa50f185193c85f6824",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Materials/ScorchedTree_Bark.mat"
+    },
+    {
+      "guid": "5d85fd72a2cf44a07850145e4800d42d",
+      "bytes": 2434,
+      "sha256": "25bf11f9cfb02224f5b0eacc2fd9e4ddad00276f09827b6f522e24ba0b395b33",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Materials/ShangBronzeBrazier_OriginalSupplies.mat"
+    },
+    {
+      "guid": "900073141a1904e22bf82c6cfa9f6366",
+      "bytes": 2431,
+      "sha256": "70f4ccee77fcb348b25a86c2a34bfbfd85a073c45cfd8bc15677adb7d78ff27a",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Materials/ShangBronzeDing_OriginalSupplies.mat"
+    },
+    {
+      "guid": "d3f6aeb59a1784d14af90ee8c1cb1be8",
+      "bytes": 2432,
+      "sha256": "2bde774685cd5a0c1985c1efed000f1139897a24a3376668c3eaeec7f1430138",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Materials/ShangMarketGoods_OriginalSupplies.mat"
+    },
+    {
+      "guid": "2509a7646973a43c38d831e2ef473145",
+      "bytes": 2431,
+      "sha256": "02b872dedc94ff8d0bcf5206c8472efaad216506e31f69f190e4d3c9ce6a2ca9",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Materials/ShangOracleBone_OriginalSupplies.mat"
+    },
+    {
+      "guid": "be21a589071514567a1422ec13bd6b19",
+      "bytes": 2449,
+      "sha256": "ba5c1252d7698e5a4e65d0c3f03d91edcffb1bec75ba2b94735b50ca6b08924d",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Materials/TravellerLeatherFlask_OriginalSupplies.mat"
+    },
+    {
+      "guid": "629b6dae4d83f4e0faa612e61148e824",
+      "bytes": 1758098,
+      "sha256": "4d2742947ecd9583cc53e544be928ac34df10b7e1850a1bd2e6cf4aa7efa9840",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/BronzeWallTorchBracket_Ready_LOD0.asset"
+    },
+    {
+      "guid": "2b53f95ee4cbd497bb807b5dc64de618",
+      "bytes": 591886,
+      "sha256": "0579b0ef79a965a012b437657aa22b641e20003b978b9ae08a33c644df440064",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/BronzeWallTorchBracket_Ready_LOD1.asset"
+    },
+    {
+      "guid": "496bf5231cdb84ff9bf7bb4fab6baeb3",
+      "bytes": 157870,
+      "sha256": "ab4c33130827a9e0a9fa3479088384068d2e6a1b4843915b5801aa95106f5555",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/BronzeWallTorchBracket_Ready_LOD2.asset"
+    },
+    {
+      "guid": "12dab79fc2cc8405994695326089e2b9",
+      "bytes": 2299381,
+      "sha256": "d4fdd92530fc304829e47f19226ab73d5c195044c593aeb613fd98881bd963cb",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/CharredBush_Ready_LOD0.asset"
+    },
+    {
+      "guid": "ef792544a2cd446a38e194749c0e58f8",
+      "bytes": 851695,
+      "sha256": "77b55c9bf53bd70defd186987e8728cc5c0418e852e903e64ba99f7d585656a2",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/CharredBush_Ready_LOD1.asset"
+    },
+    {
+      "guid": "122fb1054d894441cbb6683d02438ea9",
+      "bytes": 249578,
+      "sha256": "df93a161a8f33bc2445dda9678e64fd955cb9b616dd22f330de4192476a128bd",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/CharredBush_Ready_LOD2.asset"
+    },
+    {
+      "guid": "cd4395be1209b43459f5ccf6b9aa4fb3",
+      "bytes": 2979879,
+      "sha256": "8545a448c74ec96eabaf3b81eb61fba1ae0b89d83e60b84583dbcad2c44b8619",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/DeadTamariskV2_Ready_LOD0.asset"
+    },
+    {
+      "guid": "808c169c1161e49e49f71e83a9fbe669",
+      "bytes": 1014714,
+      "sha256": "02b6da155c12f84ddc0a0086d1dc82323f124e938deb6a30ddec86582fc82600",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/DeadTamariskV2_Ready_LOD1.asset"
+    },
+    {
+      "guid": "dcbe88dc97bad4f24be9ece64e834a27",
+      "bytes": 327627,
+      "sha256": "04ee2dad04be7cbe65e0ef9d0e0466c17607ad6f4279e675313491b2e0c87cf9",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/DeadTamariskV2_Ready_LOD2.asset"
+    },
+    {
+      "guid": "8f4bd12e57038489680fb22caafff580",
+      "bytes": 2503003,
+      "sha256": "53de81cd765345cea2589afba7a635c075d66e35ba2c5402c9df8346b8b79127",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/DesertDryScrubV2_Ready_LOD0.asset"
+    },
+    {
+      "guid": "3f943e6ab48b54f9aabc27448bffd8b3",
+      "bytes": 918900,
+      "sha256": "bc947e5fb6a362ba54edf958f9666e5f75ef1f986c4490d44a785781a832896b",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/DesertDryScrubV2_Ready_LOD1.asset"
+    },
+    {
+      "guid": "a73ec168591b842eaa10e5ab256fd41a",
+      "bytes": 268405,
+      "sha256": "59d4e7c8e6d1c7005869ac31d841d6f8870fcc47b2e92f9adbb9025710ba22d9",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/DesertDryScrubV2_Ready_LOD2.asset"
+    },
+    {
+      "guid": "b4691866cff9043aa9457efb7fbf32e3",
+      "bytes": 2965794,
+      "sha256": "c15878e7250edcdd733c45d70b1dec1e91e5160b685b5b8fd497d725cf0450e2",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/MedievalIronBrazier_Ready_LOD0.asset"
+    },
+    {
+      "guid": "12589d5a8cfde4df7a6ab27f6ce0c6dc",
+      "bytes": 961911,
+      "sha256": "1b8547b220dde8db0c4aa589f0ba97a0b4e77721dc4cd7aa1a6a7dc8f60062a4",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/MedievalIronBrazier_Ready_LOD1.asset"
+    },
+    {
+      "guid": "5635a475453ac4e85b6879c6e1d3ba2a",
+      "bytes": 311314,
+      "sha256": "57573fdd2f50fa9b8e52fc25ac2399d0ab94c6c8faf583fddbf68ebefc739edd",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/MedievalIronBrazier_Ready_LOD2.asset"
+    },
+    {
+      "guid": "1cf746fa01195461ca02c6af50343509",
+      "bytes": 2047199,
+      "sha256": "d834dc18351a4cf21a30f8a3ba5bc074708a883af009662ca421c5fdf03d3510",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/MedievalLectern_Ready_LOD0.asset"
+    },
+    {
+      "guid": "359c4e2a9f52c46819c5c84cab8c503f",
+      "bytes": 612381,
+      "sha256": "87637ad80a4654eaba62a2d2db75e14adc4276e41fd0a01f9d14f83bd0746154",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/MedievalLectern_Ready_LOD1.asset"
+    },
+    {
+      "guid": "5c2eeaf7d0a444813a23ecef44a26343",
+      "bytes": 173467,
+      "sha256": "63b1d1c668463fda037d406b2c7719f4fb4a0e1ce7dfe239988bf4588fce2c62",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/MedievalLectern_Ready_LOD2.asset"
+    },
+    {
+      "guid": "d3b53b9e5d33d450887f342af7d46a09",
+      "bytes": 2583451,
+      "sha256": "57cd47dab9c91d276d1a2bdfeb89c8b87233b22a5aa1c9900b6ef2aeaac5c4d1",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/MedievalPew_Ready_LOD0.asset"
+    },
+    {
+      "guid": "14bf63f3012f14f4c8651f66b0be6d7d",
+      "bytes": 785933,
+      "sha256": "a215e282b86d0b9b97f24bac50b8564cc35accfdfbddfc976da8e4b1b081ca39",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/MedievalPew_Ready_LOD1.asset"
+    },
+    {
+      "guid": "cefa36246f96e437199c5d243d805540",
+      "bytes": 223749,
+      "sha256": "927eb0f83e69332493a1a45cecba760cbcbf6b1843c31435d74b5a13347bc6aa",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/MedievalPew_Ready_LOD2.asset"
+    },
+    {
+      "guid": "b3299b9f9d117460cbdd087dbde7689e",
+      "bytes": 7183667,
+      "sha256": "1fba2d09c184a8febae4b6df3b045d9e4470406b98ce4b198400b1ab419b41ba",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/MedievalStoneArch_Ready_LOD0.asset"
+    },
+    {
+      "guid": "8a4f39acd69724892ab069d7fa6b54a8",
+      "bytes": 2093845,
+      "sha256": "a1bfcc50b3b08c38a9677b0742c60c90d6e874703c9d1130be11f56aba9ad315",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/MedievalStoneArch_Ready_LOD1.asset"
+    },
+    {
+      "guid": "5dc3d10157ab14dfb858dd81ef0d8113",
+      "bytes": 614095,
+      "sha256": "aa3685b1d1dd9f218def06a478634f20dcc5bd1896f8dbd7295b7edbd8163ad2",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/MedievalStoneArch_Ready_LOD2.asset"
+    },
+    {
+      "guid": "615ee85d73c4e46e2bb3aada173c3991",
+      "bytes": 9334016,
+      "sha256": "54a36d96e4f5825a6eaaa0767b29d8f3acd1a2c525d4c2c78c46ec014f79e558",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/NaturalRidgeV2_Ready_LOD0.asset"
+    },
+    {
+      "guid": "9187955288f5047d8b1f81b179e7e431",
+      "bytes": 2592507,
+      "sha256": "14bf6d23c1cb650cf4a2d3a5d7235b93dfa2831dde8d0529ce9648c7c71b61ef",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/NaturalRidgeV2_Ready_LOD1.asset"
+    },
+    {
+      "guid": "bcd2765e3bf5b4a9196267ee02e39b90",
+      "bytes": 686304,
+      "sha256": "6ab2c475c2980ce1a4cd2c1171787076248419e897e78dc85474f2496625889b",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/NaturalRidgeV2_Ready_LOD2.asset"
+    },
+    {
+      "guid": "fa9d4768db4024210a03dd4ef7b29f2a",
+      "bytes": 6180713,
+      "sha256": "22395c84fde697a5bdd1305d8240411449f1497bbfa59c08770a53dc0367b0d5",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/PalaceStoneColumn_Ready_LOD0.asset"
+    },
+    {
+      "guid": "eeb257b32cfc74f1aa72b56dcb262622",
+      "bytes": 1790821,
+      "sha256": "cad1674f817aa8647fabfbe39e724a88f43ba0470286f8f562143c48e735356b",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/PalaceStoneColumn_Ready_LOD1.asset"
+    },
+    {
+      "guid": "7b8ce244f415f4ec0b699d2d9076514b",
+      "bytes": 479075,
+      "sha256": "c7ed2beeca2051fb5a1ac4e142769f30ebd7e6ae8a79f812bfbf94a24ef8dfe8",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/PalaceStoneColumn_Ready_LOD2.asset"
+    },
+    {
+      "guid": "7f3b3c165537e46749c5c8e7f260e7fb",
+      "bytes": 6844975,
+      "sha256": "e0c868e23618f3cdf739a42b266bf524530e233a5d696b5bde7f0974a534d3f6",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/PalaceStoneStairs_Ready_LOD0.asset"
+    },
+    {
+      "guid": "083f71b2735db4dfb92adbfd0d749d44",
+      "bytes": 2086501,
+      "sha256": "c167eb2010aec59440125819d8e07a7db9ff542223d6b6e119f21d2a21cc7c3b",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/PalaceStoneStairs_Ready_LOD1.asset"
+    },
+    {
+      "guid": "db79a0fd63289498abd1c659ca38fae8",
+      "bytes": 648995,
+      "sha256": "76c0c4b025949a1c75df9da2fc22468352b24844dcbfdd668751fae87c831465",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/PalaceStoneStairs_Ready_LOD2.asset"
+    },
+    {
+      "guid": "1a1bb8bf7760440b49e17c20249974c9",
+      "bytes": 6164721,
+      "sha256": "3f0527dc47253cd7eebdd3c2e021bf957e590ba838ee305828848ffb9b0ecc73",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/PyramidEntryPassage_Ready_LOD0.asset"
+    },
+    {
+      "guid": "c560faed6fd0a4b98aac4a9db6fc4afe",
+      "bytes": 1461767,
+      "sha256": "0b1e0fa8fdd48b8889df032e7f5e377fda7dbcf4cf02306dcf01c080b1dc674a",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/PyramidEntryPassage_Ready_LOD1.asset"
+    },
+    {
+      "guid": "255570ea6aea645c38fc86277bef4704",
+      "bytes": 336551,
+      "sha256": "b916c22a3d85216e14f0f1278b48ce506dc5d342f4d4d6b27035fcd5522d40cc",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/PyramidEntryPassage_Ready_LOD2.asset"
+    },
+    {
+      "guid": "df33acfbb5d1e4899acf4bb50385de7b",
+      "bytes": 2714753,
+      "sha256": "cd2206887a18740e53e487efe186bb932ec3408039c6f4918d8622186bd6024a",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ScorchedTree_Ready_LOD0.asset"
+    },
+    {
+      "guid": "e36b3098362e34348a32f61c95da0d9b",
+      "bytes": 955162,
+      "sha256": "c39b537af5cccbfc869100799464fb9d54a726222e0a3c8b0e6bb69aebfe43a0",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ScorchedTree_Ready_LOD1.asset"
+    },
+    {
+      "guid": "a4d6b8a3b59c8460eab8ec1002a7a75e",
+      "bytes": 308117,
+      "sha256": "8ea04920f26d247e896798f6f1743cd1eda865ef08dda43f8bc3456e37af7378",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ScorchedTree_Ready_LOD2.asset"
+    },
+    {
+      "guid": "e5d60341d87c8420dbbba6d2f211389d",
+      "bytes": 2201268,
+      "sha256": "efbd96bf311b41dd158cd96254f5401bda69e5b5bf033e76916caf1555847820",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ScreePatch_Ready_LOD0.asset"
+    },
+    {
+      "guid": "4beac490fc78a41fb95536ece0545f8c",
+      "bytes": 673704,
+      "sha256": "01f00f15c43286baba0f90fda32ac7628577b1e68bf96d06203f5635235f3759",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ScreePatch_Ready_LOD1.asset"
+    },
+    {
+      "guid": "5066f90b414f444cca28d0cb25a35d5f",
+      "bytes": 206274,
+      "sha256": "5779648612d06e9af1efb6d1b8f384c72628ccd2fe0fada6dc6a69a89ee22a3a",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ScreePatch_Ready_LOD2.asset"
+    },
+    {
+      "guid": "9a0dd007b623a4d3b98dd21a50be7366",
+      "bytes": 6850783,
+      "sha256": "83b23244f86fe749187e4c483b7633cd334cffe4b348e90f31f6be8fee789fe2",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShadeOverhangV2_Ready_LOD0.asset"
+    },
+    {
+      "guid": "7ef2ac8ea3f924308b2bf62d0ff3cfcd",
+      "bytes": 1921663,
+      "sha256": "b377f1bc570cdc7d6178903af9bc769897cbf2c3bc62184d4964213de19a4ea6",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShadeOverhangV2_Ready_LOD1.asset"
+    },
+    {
+      "guid": "ff21a5563801c4f4d8ce1d80d2e9da17",
+      "bytes": 514207,
+      "sha256": "3cf3d821f227505f43b255956867a1d7ed13ac17e061b629fae821e77ef71462",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShadeOverhangV2_Ready_LOD2.asset"
+    },
+    {
+      "guid": "d7724f80b93e446eda1bef803685297f",
+      "bytes": 3033783,
+      "sha256": "dcd9ec42fa8730d006957cb4de43eb16ee6c987566aa85a33c1632540fe79f36",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShangBronzeBrazier_Ready_LOD0.asset"
+    },
+    {
+      "guid": "aeddeeebeb2524ff09e3b8487216a98a",
+      "bytes": 1002992,
+      "sha256": "656665767dc813814f8b03286f9728268aa8434c6a22b68a48964f7847d2f0ea",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShangBronzeBrazier_Ready_LOD1.asset"
+    },
+    {
+      "guid": "78447bf198ee245f689dcb20088829af",
+      "bytes": 311507,
+      "sha256": "30fcdc70498db1894b073bcdf4a05986bde409fea4990b3eee4b5afd7a0c3e6c",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShangBronzeBrazier_Ready_LOD2.asset"
+    },
+    {
+      "guid": "ecd9b2de1d6ea4b9baaa7690b92c064d",
+      "bytes": 3666593,
+      "sha256": "bceb51ded54c844476aa5f317a495b37b7e8fff7a5eeeebbec1de9fc92c799a6",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShangBronzeDing_Ready_LOD0.asset"
+    },
+    {
+      "guid": "92f72593185984810ac29ed73e8119a0",
+      "bytes": 1271127,
+      "sha256": "e1abf71130ab4b0be3b2ebecb7b1de488dbe6551d9855fd5a7a17a44331d716b",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShangBronzeDing_Ready_LOD1.asset"
+    },
+    {
+      "guid": "ae6eda5aef3f9435dab744db6d002aec",
+      "bytes": 389556,
+      "sha256": "f27e83ae4b5d8a1079f50d05f1f4a51db0ffe571e383a48127f4093294249265",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShangBronzeDing_Ready_LOD2.asset"
+    },
+    {
+      "guid": "430f09c6b7f1d43c490bc5ba39df377a",
+      "bytes": 3859170,
+      "sha256": "66243342ffc112c64f157ac6af0f1ac6f6a51153d3910c6c90b53175ecf2f192",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShangMarketGoods_Ready_LOD0.asset"
+    },
+    {
+      "guid": "d5f9452167a774f4e98fd7a3283dcbe5",
+      "bytes": 1326038,
+      "sha256": "9fb84510210907f864967bf53ab6584f8179e1af5fe3ac42615573be7d5fcd92",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShangMarketGoods_Ready_LOD1.asset"
+    },
+    {
+      "guid": "7576d247add0c41acba4f9075aa8da02",
+      "bytes": 444277,
+      "sha256": "b780a7a6ee6f845c5d51d64dcac2140a37ecd3e6bb8a65566bdab744db88507f",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShangMarketGoods_Ready_LOD2.asset"
+    },
+    {
+      "guid": "9075677b15e3d4d1abbaef13a7f498c0",
+      "bytes": 1751659,
+      "sha256": "4717c34b6474f1ef58301d954834d05b2c52e17582ebfa5d5979323e56dbcaf8",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShangOracleBone_Ready_LOD0.asset"
+    },
+    {
+      "guid": "d137268e6766847dba89fc631afe6d5e",
+      "bytes": 560107,
+      "sha256": "06d60f320ada83b856dc2b1cee287076c14a60f864407517179ad72ab0c812a8",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShangOracleBone_Ready_LOD1.asset"
+    },
+    {
+      "guid": "bc667034d9dfd4988a6508c87a433ba6",
+      "bytes": 175719,
+      "sha256": "85e9bf0a1407c615ad39c49be3d13d60730f994355588ad03040bf55443f7ed7",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShangOracleBone_Ready_LOD2.asset"
+    },
+    {
+      "guid": "90c8e0e2776214d8e84a9dccbb36d4df",
+      "bytes": 4917524,
+      "sha256": "b37bd994b1b0077efc32b9553890baf22a14f2411e484605a6e6cc388bc2d447",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShangStraightEarthWall_Ready_LOD0.asset"
+    },
+    {
+      "guid": "0d447dfeabb044aaa96fedfc60a5a3e8",
+      "bytes": 1515376,
+      "sha256": "6ac6f7ec5e952779487ddcfe742909db20442b8c70b1fc5fe22ca95cfd974735",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShangStraightEarthWall_Ready_LOD1.asset"
+    },
+    {
+      "guid": "7f8d2f10d4f7244bcbfb05efe675e103",
+      "bytes": 784912,
+      "sha256": "aa2f3bb440bd7ecd4f8b66dbee4fd156a354d50a0183aceba4615891a6760576",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShangStraightEarthWall_Ready_LOD2.asset"
+    },
+    {
+      "guid": "357f90e0aba4f488c906bddbd7bbcc7d",
+      "bytes": 3273717,
+      "sha256": "940fa9125e67ba925a234a5ee9d3dca71fde01a5ab3ad8c366371bb6120aa686",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShangTimberGate_Ready_LOD0.asset"
+    },
+    {
+      "guid": "c6679c717a18a4ebd939eb4362c87494",
+      "bytes": 1232993,
+      "sha256": "80346baeae26e316771ab08d5549700fdab44990a3cf3f36471a7f3a1ffeef2b",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShangTimberGate_Ready_LOD1.asset"
+    },
+    {
+      "guid": "21d40b201a15d4252b25fb8b9fd3c5f2",
+      "bytes": 430774,
+      "sha256": "f4fbaa844507eb8d16c253d3642685ee2fb30d09dbd52a815c342a5c226fef76",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/ShangTimberGate_Ready_LOD2.asset"
+    },
+    {
+      "guid": "2d9069cffca924c5c8c9285da66eda0a",
+      "bytes": 2677568,
+      "sha256": "4f1df13586fa991998f6b139890f00a7429a22b7932387133ca08b0cd07636c4",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/SplitBoulder_Ready_LOD0.asset"
+    },
+    {
+      "guid": "c46c90c6d82d244c8a9533f123dace78",
+      "bytes": 754974,
+      "sha256": "db43e49fcb49a4bdd3a2faef8c3bf5b7d2c43120230d6245caa29cadc3f157cf",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/SplitBoulder_Ready_LOD1.asset"
+    },
+    {
+      "guid": "5609aad21fc5546b08edb9d5c6a17039",
+      "bytes": 203546,
+      "sha256": "1a447a4076efb2cdb9ae299afabcf28157032e0f067e04e8c28a1badb76f4bc7",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/SplitBoulder_Ready_LOD2.asset"
+    },
+    {
+      "guid": "3777422a733ba4de3922b7062b00659c",
+      "bytes": 1967306,
+      "sha256": "f5e31449f8ec9c5bd63f0a8c0b6e90c6e11ed2c20a5a88ea5c78756931f2cf1d",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/TravellerLeatherFlask_Ready_LOD0.asset"
+    },
+    {
+      "guid": "c03840b95f1d84f8daf153c93685c1a9",
+      "bytes": 503689,
+      "sha256": "a007b7b5f6a6bb0094ad70add6d70983587f09380932b8217f92f9ca4b55ee84",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/TravellerLeatherFlask_Ready_LOD1.asset"
+    },
+    {
+      "guid": "32e262e7acadd4bd687d07276c620d35",
+      "bytes": 121795,
+      "sha256": "51cb600cb72ab3b98eaca513196ea1b29c122af2850af870fcbae921243f2080",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/TravellerLeatherFlask_Ready_LOD2.asset"
+    },
+    {
+      "guid": "68c0e767aad574cb4813198470f7e068",
+      "bytes": 4875566,
+      "sha256": "49cb438b0a7db345fde8096581841e4fd0016f5079a8162f03fd418dd44c5dbd",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/WindCarvedPillar_Ready_LOD0.asset"
+    },
+    {
+      "guid": "dd55f49af2e584a1e8f890669c56e489",
+      "bytes": 1478316,
+      "sha256": "403dc79dd5352579d96bd08fa95c610790e1055975e737632bde60a0bdc9ee5e",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/WindCarvedPillar_Ready_LOD1.asset"
+    },
+    {
+      "guid": "3b8df8d4b831c4312b2e7ccf8059bb8d",
+      "bytes": 407811,
+      "sha256": "8e4cc012e0f3eb41f1659e9dd40287611f88b4d0c045d0696924dc0e11921896",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Meshes/WindCarvedPillar_Ready_LOD2.asset"
+    },
+    {
+      "guid": "5eaaed5f7b13e45acab2b1ba56cb69cd",
+      "bytes": 134941,
+      "sha256": "3117af2d9f70713988e8eea4d6bff438f460309271faf8aa497e93e1f51f59f6",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/BronzeWallTorchBracket.prefab"
+    },
+    {
+      "guid": "f03f2d6dd3f7b4d8393b779cad5a71ed",
+      "bytes": 12186,
+      "sha256": "7783ffc16717622f763e77b6c93f0a29b5463caa7f97674eb03b85bba58af83c",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/CharredBush.prefab"
+    },
+    {
+      "guid": "0597dca206b994136b8121dcb36f64bb",
+      "bytes": 12186,
+      "sha256": "612047dbbaa1eb6c8dbf0aaf73124fd492bd958a872160f9a4962ac5e4f222a2",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/DeadTamariskV2.prefab"
+    },
+    {
+      "guid": "13f541528f1c1460ba506572a286e33a",
+      "bytes": 12186,
+      "sha256": "81bfa671fb5511d240e5dfb1c5265f246e40882985e6c275ff0cb356319397a8",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/DesertDryScrubV2.prefab"
+    },
+    {
+      "guid": "0a3fc77cb40e74964a24d57e1ebcb4cc",
+      "bytes": 134876,
+      "sha256": "864c3cb2342f2378bb916d0d0033380571092088def3de561055043941127a32",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/MedievalIronBrazier.prefab"
+    },
+    {
+      "guid": "efa2cc62333aa48bb9e0bfaae789fadf",
+      "bytes": 12192,
+      "sha256": "6df658358df29e85f9f402cfb0160f042059ef3acd6267cf81de48aea8e57a5e",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/MedievalLectern.prefab"
+    },
+    {
+      "guid": "a9a8e319aebce4682a730a06f31a2af6",
+      "bytes": 12179,
+      "sha256": "6ac2780df9ccdd15fb9d158e59b57c62b7a958db98e833058768e9002cc92801",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/MedievalPew.prefab"
+    },
+    {
+      "guid": "a3f55f85bc951400d8fc2a26479179bb",
+      "bytes": 12182,
+      "sha256": "64f679a615f877567f9b0811d4c1b9d7ed0a5293c08d1783f3962f24bb734994",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/MedievalStoneArch.prefab"
+    },
+    {
+      "guid": "44f61bb76661b49cdb2d5178e42d4ad7",
+      "bytes": 12162,
+      "sha256": "87ef8f337b09497207428917305b7d347c7981290ed152998a6e88677c95721d",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/NaturalRidgeV2.prefab"
+    },
+    {
+      "guid": "1a90f76f76f4b4c3abe651da04673c0d",
+      "bytes": 12160,
+      "sha256": "17a63b5aef37fd38ec9c5fa190ebad60e7ebe882fb90bd3ebf9f56adacce8e3a",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/PalaceStoneColumn.prefab"
+    },
+    {
+      "guid": "752c7b8711f124410b02bcaa71698553",
+      "bytes": 12143,
+      "sha256": "8b1465176225b29240085972c417a46ef7b78bdbea7fceecf102adc9757a6612",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/PalaceStoneStairs.prefab"
+    },
+    {
+      "guid": "29988db712d0f46c78d5944a2eb3e327",
+      "bytes": 21226,
+      "sha256": "c6710c222510b7a1848d80d659d650f70bb2985ad40e8b561bb62f5ab40fb8aa",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/PyramidEntryPassage.prefab"
+    },
+    {
+      "guid": "027200e272e454dbd99704a7991cb2f5",
+      "bytes": 12189,
+      "sha256": "e79c97adcf2bc08f930b4bfd31e14e07c4b27d573201c9ad0dfd656b18fc3f96",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ScorchedTree.prefab"
+    },
+    {
+      "guid": "28d2e9347905f488b8c9d144a147a712",
+      "bytes": 12180,
+      "sha256": "3149a40ca220d99eaa354795311af291a755a37d6286b069d4d6fc6247eca1f9",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ScreePatch.prefab"
+    },
+    {
+      "guid": "d0b1adc821da9458e82a9c7108b4b97a",
+      "bytes": 12157,
+      "sha256": "06163ce702f37ba20f02c8db38a51c82fbe4f0b189f66dac836f5c7365b14479",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShadeOverhangV2.prefab"
+    },
+    {
+      "guid": "91fb936af4a7c4fb79c701106962ae4f",
+      "bytes": 134879,
+      "sha256": "9ff7dd6120989f216eee12e3b6cb5f179fb5e358920edb355b9486605e7d4376",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangBronzeBrazier.prefab"
+    },
+    {
+      "guid": "8529fb960d46e44fda0afa3b5a8243e0",
+      "bytes": 12191,
+      "sha256": "514731753d49e87c432487006ac66dcf1f20ad56300710550a796b2fb17019cd",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangBronzeDing.prefab"
+    },
+    {
+      "guid": "e206825149e8a440896a344f8423fb92",
+      "bytes": 12191,
+      "sha256": "db963bc78182289134ee1d35a70f9ad7c9345bae3afc32b72adc7707080f37f4",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangMarketGoods.prefab"
+    },
+    {
+      "guid": "c3dd871ec7606434fb7a7a2313489243",
+      "bytes": 12098,
+      "sha256": "f3af53665c52ec92ca4a3f36f146ffa605ca572ae92f441490ead94d77bf957f",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangOracleBone.prefab"
+    },
+    {
+      "guid": "3b2d729fc83f447bea884b7415b0480a",
+      "bytes": 12170,
+      "sha256": "83125729512fbf663f7fa601c6321ca1f36e000ccc7e9fe94f5cd8323fcfbd38",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangStraightEarthWall.prefab"
+    },
+    {
+      "guid": "aa4e12dadc6b14c0483eecb24dda4490",
+      "bytes": 12581,
+      "sha256": "570920812b9091592d72126cc68ec3d036cc7648ab3590489c709dc19837c8a9",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangTimberGate.prefab"
+    },
+    {
+      "guid": "f162b940f841c4d8b99fe8d06f69e659",
+      "bytes": 12162,
+      "sha256": "5914f9569bb6b779eae9620a393c0f588e7bb878565a221bf4f6ef06407b3185",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/SplitBoulder.prefab"
+    },
+    {
+      "guid": "a31564c0ef1ec4c7aa852c83a72dbec8",
+      "bytes": 12316,
+      "sha256": "e6982cf296e013aa795648c4c0e95d4efd2941d228d3b7d6f4449df9d84d80c6",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/TravellerLeatherFlask.prefab"
+    },
+    {
+      "guid": "97bad6b0a68464ad59cb1397adb01854",
+      "bytes": 12167,
+      "sha256": "0e94ead630568a2ce9e9c3142499073fd1de60f35e724284ad4b2b6642a2fff0",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/WindCarvedPillar.prefab"
+    },
+    {
+      "guid": "93944cc7f7bf44b9297bdc069b1a4b80",
+      "bytes": 1706,
+      "sha256": "09947d6d7740640052e03f0d1b501114b95faaf151b05bdd88dab1f7009fc6e7",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentReady/Materials/Bark.mat"
+    },
+    {
+      "guid": "915f427470c9048788d558196becc282",
+      "bytes": 1705,
+      "sha256": "4572881492a5f4fddf98efe5b20bf9959fc152afd47e24a6f74e7fc48d1afed4",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentReady/Materials/Earth.mat"
+    },
+    {
+      "guid": "92fbdd654b91343919791fdfbe3d454c",
+      "bytes": 1644,
+      "sha256": "04eaaf378beba7d96ecc7413a73052f9067dc01b0aa71b9bbc45dadae905ef8a",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentReady/Materials/Masonry.mat"
+    },
+    {
+      "guid": "e837449bc703e4ef1ad20ff2aa235160",
+      "bytes": 1703,
+      "sha256": "ce8b39d8228fd4e17e3b74b7282d6edc0c29b8e317345a28f744bdeac820d50b",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentReady/Materials/Rock.mat"
+    },
+    {
+      "guid": "dd5524eaa82ac4608914091251909a42",
+      "bytes": 1707,
+      "sha256": "86c8d68af697313956b420a9a3d63aaae7a97bdf4ff14f1931511cad01b207d9",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentReady/Materials/Thatch.mat"
+    },
+    {
+      "guid": "2c45e30fd648c4e1c94451a731b90231",
+      "bytes": 1705,
+      "sha256": "bde0127f6610a66122fb58e010f95c7797a82a71069eeaa04c5e73bf23bde7e5",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentReady/Materials/Wood.mat"
+    },
+    {
+      "guid": "453faddb0544844819c02d3e85f03feb",
+      "bytes": 6688321,
+      "sha256": "2c7b6a2c4e8a6a54d42467d7a0f37862373154dedce844c8a54c489f0c98bf0f",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentReady/Textures/Bark_Surface.png"
+    },
+    {
+      "guid": "3b77c63a81dd64295a5af72ddf4e9269",
+      "bytes": 1185477,
+      "sha256": "836442e7a47b5264543d1108acb1a2596efd1c4346e22fb2214ebcbc53028bc4",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentReady/Textures/Earth_Surface.png"
+    },
+    {
+      "guid": "d74ea7bef482c43d296ce46aa6761b72",
+      "bytes": 754553,
+      "sha256": "27085bdce1273cd2269028158a72091302cf4031ad24440be14531381dcf500c",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentReady/Textures/Masonry_Surface.png"
+    },
+    {
+      "guid": "cbe41b6589aa648f48ce90404da7a4e8",
+      "bytes": 4620088,
+      "sha256": "687425814578b092437d83cac36f81b5c99dbddab5c21ac991b127a55191f186",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentReady/Textures/Rock_Surface.png"
+    },
+    {
+      "guid": "c6ffe48d546c84b2e8ecdc083f988c12",
+      "bytes": 6679817,
+      "sha256": "1634711c07db0930b885b364cc28a71ab0de93d99ece6a8118558893a520d2bf",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentReady/Textures/Thatch_Surface.png"
+    },
+    {
+      "guid": "70947160d228f407a842b6b0ae047a33",
+      "bytes": 1120761,
+      "sha256": "150f0109facb7782e0100ea9b38f874f7768dc9a0906b8bf227988efa123365a",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/EnvironmentReady/Textures/Wood_Surface.png"
+    },
+    {
+      "guid": "1c726d66685ce49e2838d839ab97fe32",
+      "bytes": 5186662,
+      "sha256": "5a58ed465457a6427b47d4f843595e97b7cb839bc745fed4d6d3367da49a8df0",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalIronBrazier/Textures/MedievalIronBrazier_MetallicSmoothness.png"
+    },
+    {
+      "guid": "048bf3be1e6c84945902bb296d583a46",
+      "bytes": 14248913,
+      "sha256": "32595af9cd90fef32cb79d4a9f31d7c8accfdeab2fba1ededb09d2e008f1c23a",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalIronBrazier/Textures/texture_pbr_20250901.png"
+    },
+    {
+      "guid": "1d27a393bc78a48d18cc0ec169dcd070",
+      "bytes": 7569851,
+      "sha256": "3df9d439b2495cd54a25f0acc2b13789578279d9a93aef91206dc0dc63388c82",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalIronBrazier/Textures/texture_pbr_20250901_normal.png"
+    },
+    {
+      "guid": "13485be59f45640308d3e533e5576e94",
+      "bytes": 3337492,
+      "sha256": "209f66134097d969e2a5623a9e7bb5dd651db54bbe5258b29983569e02283727",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalLectern/Textures/MedievalLectern_MetallicSmoothness.png"
+    },
+    {
+      "guid": "58bfbd96c6c38455f91a88fbd0ec093b",
+      "bytes": 13235657,
+      "sha256": "eab3ad8a3af63b431127a97b065d639600f29bbf55bfeaac54623db3c169076a",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalLectern/Textures/texture_pbr_20250901.png"
+    },
+    {
+      "guid": "298a2dfa827ce4acbaed4a803135c5a3",
+      "bytes": 8573113,
+      "sha256": "45fc43c568fdd600d3cd0adb7bdba1692b1bdae2d94bd0fee92a0273965675fb",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalLectern/Textures/texture_pbr_20250901_normal.png"
+    },
+    {
+      "guid": "64beabf92939b4e2a93c94ae7350f381",
+      "bytes": 4080537,
+      "sha256": "ad8b1ee01655f32725156c2cbc90ec4fdd9e2c3d9473676a6ec230ba4b42cf73",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalPew/Textures/MedievalPew_MetallicSmoothness.png"
+    },
+    {
+      "guid": "c69918e1c9cea4eeab5dc3ddb43bf30a",
+      "bytes": 17790115,
+      "sha256": "dd7f0456179f6fc1b83bfbcfcc2f7be31dacc197cf26024b80f0db0e889e25f5",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalPew/Textures/texture_pbr_20250901.png"
+    },
+    {
+      "guid": "be2075b86df3b4d67995f967939e5968",
+      "bytes": 12478262,
+      "sha256": "720c7b26716029cda8e4dec5859cf3e6783b506365d73521023d28825974b08a",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalPew/Textures/texture_pbr_20250901_normal.png"
+    },
+    {
+      "guid": "10b1e7a67f8e5481cb64f8d76591e51b",
+      "bytes": 4002118,
+      "sha256": "a39ced6c96a44a94c53187bf017185575dc56e8420192b2cf97ba2aef9c8251e",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/ShangBronzeBrazier/Textures/ShangBronzeBrazier_MetallicSmoothness.png"
+    },
+    {
+      "guid": "865ead62649f04185bcd695d3a23e235",
+      "bytes": 14859590,
+      "sha256": "c04bee1042816c51e03740405473e12216e1af2981dff8560823cf189dfdb3c2",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/ShangBronzeBrazier/Textures/texture_pbr_20250901.png"
+    },
+    {
+      "guid": "59a3b42d6dd15464f9abbaffe57db2a5",
+      "bytes": 7940623,
+      "sha256": "af6082fd075842b218e3ab2a5bafe48389663de27ec573505f595590cb7663da",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/ShangBronzeBrazier/Textures/texture_pbr_20250901_normal.png"
+    },
+    {
+      "guid": "08bc0981e917c4268877687d49855f28",
+      "bytes": 5417419,
+      "sha256": "d49b919f6e19cb7205a7e7d0fbbcc25544826645b0bbb40ce21f65f7af7ed704",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/ShangBronzeDing/Textures/ShangBronzeDing_MetallicSmoothness.png"
+    },
+    {
+      "guid": "edead3b85c12441f987045abbd5d96a2",
+      "bytes": 19065736,
+      "sha256": "86c9d9dc6c40c86e65fb3ce1ae0733c0c56a3cfe7a07799b0e237216948f3c66",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/ShangBronzeDing/Textures/texture_pbr_20250901.png"
+    },
+    {
+      "guid": "ac494fd95cac046b7b9f25d739fadcc7",
+      "bytes": 10889559,
+      "sha256": "5838bf6fd9ec55d666b65eda2405224f91720957a0227571626bcd3910815751",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/ShangBronzeDing/Textures/texture_pbr_20250901_normal.png"
+    },
+    {
+      "guid": "64a3725aa27ea455393947c6945273f5",
+      "bytes": 3993461,
+      "sha256": "ab8a814be3d2afa9f36aeab74067b8ece33e1889fdde468a73b6a4a294c2830c",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/ShangMarketGoods/Textures/ShangMarketGoods_MetallicSmoothness.png"
+    },
+    {
+      "guid": "ae4ab0603d63c4a92970c105a394d038",
+      "bytes": 18902895,
+      "sha256": "f0905fce4d6c4e67f5d71744f0dff39959bb2b8af9306777b9f3182cd18e4394",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/ShangMarketGoods/Textures/texture_pbr_20250901.png"
+    },
+    {
+      "guid": "5f00b8ea3cb494bfb9e6a4c71e46594c",
+      "bytes": 10140077,
+      "sha256": "79961871ad4bf6d459ba7e7756d45b7e59bd0b410066aedb7cfcce3bdf54fd81",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/ShangMarketGoods/Textures/texture_pbr_20250901_normal.png"
+    },
+    {
+      "guid": "9a70474765ccf43ffad09bb985264dc0",
+      "bytes": 3755563,
+      "sha256": "a04ce43b087699d22a2ecd1e3247a7bcfc9a6c9e16edfec3a6e69d3c3b2fac40",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/TravellerWaterskin/Textures/TravellerWaterskin_MetallicSmoothness.png"
+    },
+    {
+      "guid": "d119b12288fe44fde9c890e935ceccdd",
+      "bytes": 14412640,
+      "sha256": "cff9ee7b71c3b62fe3a8fed1198b09f4f6d4a3d28e50b3b5b50ac34edc05ba02",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/TravellerWaterskin/Textures/texture_pbr_20250901.png"
+    },
+    {
+      "guid": "b778c45e140884acfbc3b4d787440a75",
+      "bytes": 8690384,
+      "sha256": "37dd8d526f0252cece973e91467910bd6e5d0049e061295392a4178e6598feb6",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261030/TravellerWaterskin/Textures/texture_pbr_20250901_normal.png"
+    },
+    {
+      "guid": "ca80aeef1de0648bda05cdbb6ea2e321",
+      "bytes": 14314779,
+      "sha256": "56c452c99fdf253cd37bd9a35d0cd5828e88ee8db18bb827b709986d538daf3e",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261031/BronzeWallTorchBracket/Textures/BronzeWallTorchBracket_Albedo.png"
+    },
+    {
+      "guid": "29428dc9574f34b6a9f41c7caa6b4139",
+      "bytes": 4639016,
+      "sha256": "c1e5ee011cce21ec222bdb5750f637db3f08e2bf0108defa0c8757b1a8f028bb",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261031/BronzeWallTorchBracket/Textures/BronzeWallTorchBracket_MetallicSmoothness.png"
+    },
+    {
+      "guid": "863ecdb9d201041d5b2c4f5c333f0789",
+      "bytes": 10995752,
+      "sha256": "8ba34534dd9697fc093056efd68a5ee99bffb0de7ae3f193cba8a24b8d56e59a",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261031/BronzeWallTorchBracket/Textures/BronzeWallTorchBracket_Normal.png"
+    },
+    {
+      "guid": "261ce08feb6934e6884864eac83f44a0",
+      "bytes": 2912385,
+      "sha256": "1b3eba4159e6e825886fd4f274caa23781ee1c8c5e2f07e68a90feb3971c7967",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261031/ShangOracleBone/Textures/ShangOracleBone_MetallicSmoothness.png"
+    },
+    {
+      "guid": "7560c21557f8a4c33a014b8ebc0d3dda",
+      "bytes": 17047974,
+      "sha256": "c437da070a405c8a2524b4c7c82a61245dedbd20da580b52bc71f1532e8ca76c",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261031/ShangOracleBone/Textures/texture_pbr_20250901.png"
+    },
+    {
+      "guid": "cd9b91ff5d28542e09409a69738598be",
+      "bytes": 11419544,
+      "sha256": "e1b043e7027997fb88971d9fff472f0e35498b56fd6e0584a1425fb37f2d2083",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/HunyuanEnvironment20261031/ShangOracleBone/Textures/texture_pbr_20250901_normal.png"
+    },
+    {
+      "guid": "c5a3dcaabd04d4cbb91fb914eba23da4",
+      "bytes": 3580,
+      "sha256": "4178a9a16d290d0195557597ee708e4536ea45301598d83bd0cf4505dff0b685",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/Shaders/EnvironmentSurface.shader"
+    },
+    {
+      "guid": "10828f2a0dae54e5292e2d62b4fff28a",
+      "bytes": 1278,
+      "sha256": "8ede6d005cfbb2ec45c29b530294c081ab6ad33a2afda14ca3ddd927e3592972",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Art/Shaders/TorchFlame.shader"
+    },
+    {
+      "guid": "5653a8afe936f4a649aac3a0d0cf9f95",
+      "bytes": 371,
+      "sha256": "013e57fa36a1738cb059eed503569adcfa7a8638a331eac19818b00e82f6df37",
+      "metadataVerified": true,
+      "path": "Assets/_Project/Scripts/TorchFlameBillboard.cs"
+    }
+  ],
+  "scope": "Archive contents and serialized GUID reference closure; not an independent empty-project import test."
+}

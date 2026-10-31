@@ -1,0 +1,160 @@
+{
+  "scope": "Agent review of saved shelf previews and actual native screenshots; usage limits retained.",
+  "assets": [
+    {
+      "id": "BronzeWallTorchBracket",
+      "status": "accepted_for_stated_usage",
+      "usage": "Wall-mounted torch holder",
+      "nativeScreenshot": "Native/final/BronzeWallTorchBracket.png"
+    },
+    {
+      "id": "CharredBush",
+      "status": "accepted_for_stated_usage",
+      "usage": "Charred vegetation state; no baked flames or people",
+      "nativeScreenshot": "Native/final/CharredBush.png"
+    },
+    {
+      "id": "DeadTamariskV2",
+      "status": "accepted_for_stated_usage",
+      "usage": "Static environment prop",
+      "nativeScreenshot": "Native/final/DeadTamariskV2.png"
+    },
+    {
+      "id": "DesertDryScrubV2",
+      "status": "accepted_for_stated_usage",
+      "usage": "Static environment prop",
+      "nativeScreenshot": "Native/final/DesertDryScrubV2.png"
+    },
+    {
+      "id": "MedievalIronBrazier",
+      "status": "accepted_for_stated_usage",
+      "usage": "Static environment prop",
+      "nativeScreenshot": "Native/final/MedievalIronBrazier.png"
+    },
+    {
+      "id": "MedievalLectern",
+      "status": "accepted_for_stated_usage",
+      "usage": "Static environment prop",
+      "nativeScreenshot": "Native/final/MedievalLectern.png"
+    },
+    {
+      "id": "MedievalPew",
+      "status": "accepted_for_stated_usage",
+      "usage": "Static environment prop",
+      "nativeScreenshot": "Native/final/MedievalPew.png"
+    },
+    {
+      "id": "MedievalStoneArch",
+      "status": "accepted_for_stated_usage",
+      "usage": "Traversable architectural opening",
+      "nativeScreenshot": "Native/final/MedievalStoneArch.png"
+    },
+    {
+      "id": "NaturalRidgeV2",
+      "status": "accepted_for_stated_usage",
+      "usage": "Distant ridge backdrop; not a foreground climbable mountain",
+      "nativeScreenshot": "Native/final/NaturalRidgeV2.png"
+    },
+    {
+      "id": "PalaceStoneColumn",
+      "status": "accepted_for_stated_usage",
+      "usage": "Static environment prop",
+      "nativeScreenshot": "Native/final/PalaceStoneColumn.png"
+    },
+    {
+      "id": "PalaceStoneStairs",
+      "status": "accepted_for_stated_usage",
+      "usage": "Static environment prop",
+      "nativeScreenshot": "Native/final/PalaceStoneStairs.png"
+    },
+    {
+      "id": "PyramidEntryPassage",
+      "status": "accepted_for_stated_usage",
+      "usage": "Walkable 48 m architectural study; the main capital uses separately authored MonumentalMasonry palace.",
+      "nativeScreenshot": "Native/final/PyramidEntryPassage.png"
+    },
+    {
+      "id": "ScorchedTree",
+      "status": "accepted_for_stated_usage",
+      "usage": "Charred vegetation state; no baked flames or people",
+      "nativeScreenshot": "Native/final/ScorchedTree.png"
+    },
+    {
+      "id": "ScreePatch",
+      "status": "accepted_for_stated_usage",
+      "usage": "Low rock pile; combine with existing scattered-stone assets",
+      "nativeScreenshot": "Native/final/ScreePatch.png"
+    },
+    {
+      "id": "ShadeOverhangV2",
+      "status": "accepted_for_stated_usage",
+      "usage": "Natural shelter with open front; verify capsule clearance in the yard",
+      "nativeScreenshot": "Native/final/ShadeOverhangV2.png"
+    },
+    {
+      "id": "ShangBronzeBrazier",
+      "status": "accepted_for_stated_usage",
+      "usage": "Static environment prop",
+      "nativeScreenshot": "Native/final/ShangBronzeBrazier.png"
+    },
+    {
+      "id": "ShangBronzeDing",
+      "status": "accepted_for_stated_usage",
+      "usage": "Static environment prop",
+      "nativeScreenshot": "Native/final/ShangBronzeDing.png"
+    },
+    {
+      "id": "ShangMarketGoods",
+      "status": "accepted_for_stated_usage",
+      "usage": "Static environment prop",
+      "nativeScreenshot": "Native/final/ShangMarketGoods.png"
+    },
+    {
+      "id": "ShangOracleBone",
+      "status": "accepted_for_stated_usage",
+      "usage": "Static environment prop",
+      "nativeScreenshot": "Native/final/ShangOracleBone.png"
+    },
+    {
+      "id": "ShangStraightEarthWall",
+      "status": "accepted_for_stated_usage",
+      "usage": "Static environment prop",
+      "nativeScreenshot": "Native/final/ShangStraightEarthWall.png"
+    },
+    {
+      "id": "ShangTimberGate",
+      "status": "accepted_for_stated_usage",
+      "usage": "Traversable architectural opening",
+      "nativeScreenshot": "Native/final/ShangTimberGate.png"
+    },
+    {
+      "id": "SplitBoulder",
+      "status": "accepted_for_stated_usage",
+      "usage": "Static environment prop",
+      "nativeScreenshot": "Native/final/SplitBoulder.png"
+    },
+    {
+      "id": "TravellerLeatherFlask",
+      "status": "accepted_for_stated_usage",
+      "usage": "Carryable tied leather flask; reconstructed without modern zipper or metal hardware",
+      "nativeScreenshot": "Native/final/TravellerLeatherFlask.png"
+    },
+    {
+      "id": "WindCarvedPillar",
+      "status": "accepted_for_stated_usage",
+      "usage": "Static environment prop",
+      "nativeScreenshot": "Native/final/WindCarvedPillar.png"
+    }
+  ],
+  "rejected": [
+    {
+      "id": "GobiShadeCanopyV3",
+      "reason": "Folded thin surfaces and major roof holes visible from reverse sides despite technical/controller checks passing.",
+      "evidence": [
+        "ReviewAttempts/RejectedCanopy/GobiShadeCanopyV3_OpenSide.jpg",
+        "ReviewAttempts/RejectedCanopy/GobiShadeCanopyV3_Reverse.jpg"
+      ],
+      "replacement": "ShadeOverhangV2"
+    }
+  ]
+}

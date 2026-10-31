@@ -1,0 +1,32 @@
+{
+  "id": "WindCarvedPillar",
+  "sourceId": "WindCarvedPillar",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/WindCarvedPillar.prefab",
+  "modifications": [
+    "Display plinth cropped and capped; silhouette weathered; photographic rock surface."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    47999,
+    11999,
+    2399
+  ],
+  "sizeBlender": [
+    3.8162853717803955,
+    3.5491371154785156,
+    7.930052757263184
+  ],
+  "usage": "Static environment prop",
+  "charred": false,
+  "openingWidth": 0,
+  "openingHeight": 0
+}

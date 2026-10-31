@@ -1,0 +1,34 @@
+{
+  "id": "PalaceStoneStairs",
+  "sourceId": "PalaceStoneStairs",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261031/Prefabs/PalaceStoneStairs.prefab",
+  "modifications": [
+    "Rescaled over-tall generated staircase to 4 m width, 6 m run and 3 m rise for first-person traversal.",
+    "Photographic masonry surface; display ground trimmed."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    64998,
+    16000,
+    3500
+  ],
+  "sizeBlender": [
+    3.9946651458740234,
+    6.000760078430176,
+    3.000365972518921
+  ],
+  "usage": "Static environment prop",
+  "charred": false,
+  "openingWidth": 0,
+  "openingHeight": 0,
+  "hasInterior": false
+}

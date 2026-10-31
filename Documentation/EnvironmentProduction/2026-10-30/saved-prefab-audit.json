@@ -1,0 +1,426 @@
+{
+    "passed": true,
+    "scope": "Reloaded saved prefabs: geometry, LOD, PBR maps, texture colour spaces, collision and references. Art and runtime evidence are separate.",
+    "assets": [
+        {
+            "id": "NaturalRidgeV2",
+            "passed": true,
+            "meshReferences": true,
+            "pbrMaterials": true,
+            "textureColourSpaces": true,
+            "lodThresholds": true,
+            "collisionReferences": true,
+            "rootScaleAndGrounding": true,
+            "finiteGeometry": true,
+            "trianglesByLod": [
+                492922,
+                17077,
+                4320
+            ],
+            "colliderCount": 1,
+            "missingScripts": 0,
+            "width": 100.0,
+            "height": 18.739158630371095,
+            "depth": 18.36306381225586
+        },
+        {
+            "id": "ShadeOverhangV2",
+            "passed": true,
+            "meshReferences": true,
+            "pbrMaterials": true,
+            "textureColourSpaces": true,
+            "lodThresholds": true,
+            "collisionReferences": true,
+            "rootScaleAndGrounding": true,
+            "finiteGeometry": true,
+            "trianglesByLod": [
+                504200,
+                37652,
+                8248
+            ],
+            "colliderCount": 1,
+            "missingScripts": 0,
+            "width": 12.000000953674317,
+            "height": 9.88274097442627,
+            "depth": 11.999543190002442
+        },
+        {
+            "id": "WindCarvedPillar",
+            "passed": true,
+            "meshReferences": true,
+            "pbrMaterials": true,
+            "textureColourSpaces": true,
+            "lodThresholds": true,
+            "collisionReferences": true,
+            "rootScaleAndGrounding": true,
+            "finiteGeometry": true,
+            "trianglesByLod": [
+                500063,
+                30616,
+                6849
+            ],
+            "colliderCount": 1,
+            "missingScripts": 0,
+            "width": 6.453588962554932,
+            "height": 9.0,
+            "depth": 6.847288131713867
+        },
+        {
+            "id": "SplitBoulder",
+            "passed": true,
+            "meshReferences": true,
+            "pbrMaterials": true,
+            "textureColourSpaces": true,
+            "lodThresholds": true,
+            "collisionReferences": true,
+            "rootScaleAndGrounding": true,
+            "finiteGeometry": true,
+            "trianglesByLod": [
+                49978,
+                20972,
+                6197
+            ],
+            "colliderCount": 1,
+            "missingScripts": 0,
+            "width": 3.6050775051116945,
+            "height": 2.999999761581421,
+            "depth": 3.6052494049072267
+        },
+        {
+            "id": "ScreePatch",
+            "passed": true,
+            "meshReferences": true,
+            "pbrMaterials": true,
+            "textureColourSpaces": true,
+            "lodThresholds": true,
+            "collisionReferences": true,
+            "rootScaleAndGrounding": true,
+            "finiteGeometry": true,
+            "trianglesByLod": [
+                50008,
+                18986,
+                5595
+            ],
+            "colliderCount": 1,
+            "missingScripts": 0,
+            "width": 7.0,
+            "height": 3.3789241313934328,
+            "depth": 8.005837440490723
+        },
+        {
+            "id": "DeadTamariskV2",
+            "passed": true,
+            "meshReferences": true,
+            "pbrMaterials": true,
+            "textureColourSpaces": true,
+            "lodThresholds": true,
+            "collisionReferences": true,
+            "rootScaleAndGrounding": true,
+            "finiteGeometry": true,
+            "trianglesByLod": [
+                50000,
+                13493,
+                4392
+            ],
+            "colliderCount": 1,
+            "missingScripts": 0,
+            "width": 1.6769543886184693,
+            "height": 2.200000047683716,
+            "depth": 1.3493280410766602
+        },
+        {
+            "id": "DesertDryScrubV2",
+            "passed": true,
+            "meshReferences": true,
+            "pbrMaterials": true,
+            "textureColourSpaces": true,
+            "lodThresholds": true,
+            "collisionReferences": true,
+            "rootScaleAndGrounding": true,
+            "finiteGeometry": true,
+            "trianglesByLod": [
+                50000,
+                16226,
+                5411
+            ],
+            "colliderCount": 1,
+            "missingScripts": 0,
+            "width": 0.9871476888656616,
+            "height": 0.75,
+            "depth": 1.1575901508331299
+        },
+        {
+            "id": "CharredBush",
+            "passed": true,
+            "meshReferences": true,
+            "pbrMaterials": true,
+            "textureColourSpaces": true,
+            "lodThresholds": true,
+            "collisionReferences": true,
+            "rootScaleAndGrounding": true,
+            "finiteGeometry": true,
+            "trianglesByLod": [
+                50000,
+                12108,
+                3481
+            ],
+            "colliderCount": 1,
+            "missingScripts": 0,
+            "width": 0.7568436861038208,
+            "height": 1.100000023841858,
+            "depth": 0.6442378163337708
+        },
+        {
+            "id": "ScorchedTree",
+            "passed": true,
+            "meshReferences": true,
+            "pbrMaterials": true,
+            "textureColourSpaces": true,
+            "lodThresholds": true,
+            "collisionReferences": true,
+            "rootScaleAndGrounding": true,
+            "finiteGeometry": true,
+            "trianglesByLod": [
+                50000,
+                12012,
+                3199
+            ],
+            "colliderCount": 1,
+            "missingScripts": 0,
+            "width": 1.974531650543213,
+            "height": 2.8000001907348635,
+            "depth": 1.6425518989562989
+        },
+        {
+            "id": "TravellerWaterskin",
+            "passed": true,
+            "meshReferences": true,
+            "pbrMaterials": true,
+            "textureColourSpaces": true,
+            "lodThresholds": true,
+            "collisionReferences": true,
+            "rootScaleAndGrounding": true,
+            "finiteGeometry": true,
+            "trianglesByLod": [
+                50000,
+                18258,
+                5445
+            ],
+            "colliderCount": 1,
+            "missingScripts": 0,
+            "width": 0.4729262888431549,
+            "height": 0.550000011920929,
+            "depth": 0.4303957223892212
+        },
+        {
+            "id": "ShangRammedWall",
+            "passed": true,
+            "meshReferences": true,
+            "pbrMaterials": true,
+            "textureColourSpaces": true,
+            "lodThresholds": true,
+            "collisionReferences": true,
+            "rootScaleAndGrounding": true,
+            "finiteGeometry": true,
+            "trianglesByLod": [
+                499992,
+                17724,
+                3607
+            ],
+            "colliderCount": 1,
+            "missingScripts": 0,
+            "width": 8.0,
+            "height": 14.461283683776856,
+            "depth": 45.526241302490237
+        },
+        {
+            "id": "ShangTimberGate",
+            "passed": true,
+            "meshReferences": true,
+            "pbrMaterials": true,
+            "textureColourSpaces": true,
+            "lodThresholds": true,
+            "collisionReferences": true,
+            "rootScaleAndGrounding": true,
+            "finiteGeometry": true,
+            "trianglesByLod": [
+                500000,
+                39639,
+                9648
+            ],
+            "colliderCount": 1,
+            "missingScripts": 0,
+            "width": 5.999999523162842,
+            "height": 5.306297302246094,
+            "depth": 3.1930558681488039
+        },
+        {
+            "id": "PalaceStoneColumn",
+            "passed": true,
+            "meshReferences": true,
+            "pbrMaterials": true,
+            "textureColourSpaces": true,
+            "lodThresholds": true,
+            "collisionReferences": true,
+            "rootScaleAndGrounding": true,
+            "finiteGeometry": true,
+            "trianglesByLod": [
+                499760,
+                26408,
+                5242
+            ],
+            "colliderCount": 1,
+            "missingScripts": 0,
+            "width": 3.949573278427124,
+            "height": 4.0,
+            "depth": 3.9942362308502199
+        },
+        {
+            "id": "ShangBronzeDing",
+            "passed": true,
+            "meshReferences": true,
+            "pbrMaterials": true,
+            "textureColourSpaces": true,
+            "lodThresholds": true,
+            "collisionReferences": true,
+            "rootScaleAndGrounding": true,
+            "finiteGeometry": true,
+            "trianglesByLod": [
+                50172,
+                19416,
+                6915
+            ],
+            "colliderCount": 1,
+            "missingScripts": 0,
+            "width": 1.2594919204711915,
+            "height": 1.2999999523162842,
+            "depth": 0.9594906568527222
+        },
+        {
+            "id": "ShangBronzeBrazier",
+            "passed": true,
+            "meshReferences": true,
+            "pbrMaterials": true,
+            "textureColourSpaces": true,
+            "lodThresholds": true,
+            "collisionReferences": true,
+            "rootScaleAndGrounding": true,
+            "finiteGeometry": true,
+            "trianglesByLod": [
+                50356,
+                24217,
+                7983
+            ],
+            "colliderCount": 1,
+            "missingScripts": 0,
+            "width": 1.531084656715393,
+            "height": 1.2000000476837159,
+            "depth": 1.5303040742874146
+        },
+        {
+            "id": "ShangMarketGoods",
+            "passed": true,
+            "meshReferences": true,
+            "pbrMaterials": true,
+            "textureColourSpaces": true,
+            "lodThresholds": true,
+            "collisionReferences": true,
+            "rootScaleAndGrounding": true,
+            "finiteGeometry": true,
+            "trianglesByLod": [
+                49992,
+                12798,
+                4121
+            ],
+            "colliderCount": 1,
+            "missingScripts": 0,
+            "width": 2.0,
+            "height": 0.8323845863342285,
+            "depth": 0.6482484936714172
+        },
+        {
+            "id": "MedievalStoneArch",
+            "passed": true,
+            "meshReferences": true,
+            "pbrMaterials": true,
+            "textureColourSpaces": true,
+            "lodThresholds": true,
+            "collisionReferences": true,
+            "rootScaleAndGrounding": true,
+            "finiteGeometry": true,
+            "trianglesByLod": [
+                499836,
+                31806,
+                6509
+            ],
+            "colliderCount": 1,
+            "missingScripts": 0,
+            "width": 6.276058673858643,
+            "height": 4.5,
+            "depth": 3.5094337463378908
+        },
+        {
+            "id": "MedievalPew",
+            "passed": true,
+            "meshReferences": true,
+            "pbrMaterials": true,
+            "textureColourSpaces": true,
+            "lodThresholds": true,
+            "collisionReferences": true,
+            "rootScaleAndGrounding": true,
+            "finiteGeometry": true,
+            "trianglesByLod": [
+                50000,
+                14104,
+                4685
+            ],
+            "colliderCount": 1,
+            "missingScripts": 0,
+            "width": 2.200000047683716,
+            "height": 1.1601229906082154,
+            "depth": 0.7025817632675171
+        },
+        {
+            "id": "MedievalLectern",
+            "passed": true,
+            "meshReferences": true,
+            "pbrMaterials": true,
+            "textureColourSpaces": true,
+            "lodThresholds": true,
+            "collisionReferences": true,
+            "rootScaleAndGrounding": true,
+            "finiteGeometry": true,
+            "trianglesByLod": [
+                50000,
+                13493,
+                4089
+            ],
+            "colliderCount": 1,
+            "missingScripts": 0,
+            "width": 0.7205103635787964,
+            "height": 1.3000001907348633,
+            "depth": 0.8128411769866943
+        },
+        {
+            "id": "MedievalIronBrazier",
+            "passed": true,
+            "meshReferences": true,
+            "pbrMaterials": true,
+            "textureColourSpaces": true,
+            "lodThresholds": true,
+            "collisionReferences": true,
+            "rootScaleAndGrounding": true,
+            "finiteGeometry": true,
+            "trianglesByLod": [
+                50000,
+                26460,
+                8495
+            ],
+            "colliderCount": 1,
+            "missingScripts": 0,
+            "width": 1.277939796447754,
+            "height": 1.1000001430511475,
+            "depth": 1.280644178390503
+        }
+    ]
+}

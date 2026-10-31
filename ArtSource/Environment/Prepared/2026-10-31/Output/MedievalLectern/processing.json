@@ -1,0 +1,32 @@
+{
+  "id": "MedievalLectern",
+  "sourceId": "MedievalLectern",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/MedievalLectern.prefab",
+  "modifications": [
+    "Original PBR atlas retained; UV-preserving QEM LODs."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    24000,
+    6000,
+    1300
+  ],
+  "sizeBlender": [
+    0.7206551432609558,
+    0.8128581047058105,
+    1.2999658584594727
+  ],
+  "usage": "Static environment prop",
+  "charred": false,
+  "openingWidth": 0,
+  "openingHeight": 0
+}

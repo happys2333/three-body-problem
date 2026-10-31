@@ -1,0 +1,32 @@
+{
+  "id": "PalaceStoneColumn",
+  "sourceId": "PalaceStoneColumn",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/PalaceStoneColumn.prefab",
+  "modifications": [
+    "Loose display debris removed; structural column base retained; photographic masonry."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    65000,
+    16000,
+    3500
+  ],
+  "sizeBlender": [
+    1.070306420326233,
+    1.076630711555481,
+    3.59982967376709
+  ],
+  "usage": "Static environment prop",
+  "charred": false,
+  "openingWidth": 0,
+  "openingHeight": 0
+}

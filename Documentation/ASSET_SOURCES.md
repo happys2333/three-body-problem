@@ -127,3 +127,9 @@ Mixamo 源模型沿用 Adobe 服务与内容条款，**不是 CC0**。本仓库 
 识别使用 [Qwen3-ASR-0.6B 的 MLX 8bit 转换](https://huggingface.co/mlx-community/Qwen3-ASR-0.6B-8bit/tree/89e96d92ba34aca20b3e29fb10cc284097d1219f)。合成使用 [MOSS-TTS-Nano-100M ONNX](https://huggingface.co/OpenMOSS-Team/MOSS-TTS-Nano-100M-ONNX/tree/f52645cb467506d8e18e746ddd59482685b74e58) 与 [MOSS 音频编解码器](https://huggingface.co/OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano-ONNX/tree/ceff0d0749bfb3fa2d61149794ec6feef0d1e1ae)，底层 CPU 运行时代码固定为 [MOSS-TTS-Nano 8b7bcc9](https://github.com/OpenMOSS/MOSS-TTS-Nano/tree/8b7bcc9341b3b4ef3a3a58ba1338a7d85ff133eb)。模型与代码均从公开仓库取得；本地安装记录见 [model-installation.json](ActOne/LocalVoice/model-installation.json)，权重没有提交到游戏仓库。
 
 六条剧情 WAV 与二十条试听由这些模型的内置 Weiguo、Zhiming、Junhao 声线生成，没有采集用户或其他真实人物录音来克隆。它们是临时模型配音，不标为 CC0；模型、预设声线及生成输出分别遵循对应上游的适用说明，项目 LICENSE 不替代这些条件。脚本文字、实际生成参数和转写对照保存在 `Tools/scripted_voice_lines.json`、`Tools/voice_profiles.json` 与 [LocalVoice](ActOne/LocalVoice/) 内。
+
+## 混元环境与道具续批（2026-10-30）
+
+通过用户 Chrome 中的混元首页 V3.1 使用恢复的二十次额度，生成十组荒漠及旅人道具、六组朝歌与宫殿构件、四组中世纪构件与室内道具。二十组均已生成，并于 2026-10-31 补齐全部二十件 PBR FBX 的正常下载与哈希归档。其中六件完成预制体技术加工，新增十四件待加工，全批尚无模型通过最终美术验收。续下载确认过网络中断，另有操作等待超时；此前的客户端阻止没有复现，未认定唯一根因。没有购买、订阅、上传个人文件、关闭安全检查或绕过安全警告。
+
+原档在 `ArtSource/Environment/Hunyuan/2026-10-30/`，新候选库在 `Assets/_Project/Art/HunyuanEnvironment20261030/`。实际文件、提示词、哈希、待修整问题和剩余导出见 [批次说明](EnvironmentProduction/2026-10-30/README.md) 与 [清单](EnvironmentProduction/2026-10-30/manifest.json)。这些是腾讯平台生成内容，不标为 CC0，也未替换主线场景。

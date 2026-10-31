@@ -1,0 +1,33 @@
+{
+  "id": "ShangOracleBone",
+  "sourceId": "ShangOracleBone",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261031/Prefabs/ShangOracleBone.prefab",
+  "modifications": [
+    "Original PBR atlas retained; UV-preserving QEM LODs."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    18000,
+    4500,
+    1000
+  ],
+  "sizeBlender": [
+    0.2767195999622345,
+    0.07350030541419983,
+    0.3200705051422119
+  ],
+  "usage": "Static environment prop",
+  "charred": false,
+  "openingWidth": 0,
+  "openingHeight": 0,
+  "hasInterior": false
+}

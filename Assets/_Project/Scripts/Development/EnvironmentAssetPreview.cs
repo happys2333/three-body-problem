@@ -16,6 +16,10 @@ namespace ThreeBodyProblem
         public string[] assetIds;
         public Vector3[] viewpoints, viewTargets;
         public Transform gate, portal;
+        public float gateWallProbeOffset = 2.3f, portalWallProbeOffset = 1.2f;
+        public Transform[] additionalOpenings, shelters;
+        public float[] additionalWallProbeOffsets;
+        public Transform stairs, palace;
         public Font uiFont;
         private string current = "Environment art yard";
         private bool benchmarking;
@@ -23,8 +27,9 @@ namespace ThreeBodyProblem
         private int previousShadowCascades;
         private int previousFrameRate, previousVSync;
         private bool shadowsConfigured;
-        [Serializable] public class Metric { public string asset; public bool viewClear; public float meanFrameMs, p95FrameMs, meanMainThreadMs, meanPresentWaitMs, meanGpuMs, p95GpuMs; public int gpuSamples; public long batches, triangles; public int[] visibleLods; }
-        [Serializable] public class Report { public string gpu; public int width, height, frameRateCap; public float shadowDistance; public bool passed; public List<Metric> metrics = new List<Metric>(); public List<string> errors = new List<string>(); public bool gateClear, portalClear, gateWallSolid, portalWallSolid, gateWalkThrough, portalWalkThrough; }
+        [Serializable] public class Metric { public string asset, obstruction; public bool viewClear, ignoredPlayerCollider; public float meanFrameMs, p95FrameMs, meanMainThreadMs, meanPresentWaitMs, meanGpuMs, p95GpuMs; public int gpuSamples; public long batches, triangles; public int[] visibleLods; }
+        [Serializable] public class StructureCheck { public string asset; public bool clear, wallSolid, walked; }
+        [Serializable] public class Report { public string gpu; public int width, height, frameRateCap; public float shadowDistance; public bool passed; public List<Metric> metrics = new List<Metric>(); public List<string> errors = new List<string>(); public bool gateClear, portalClear, gateWallSolid, portalWallSolid, gateWalkThrough, portalWalkThrough; public List<StructureCheck> structures = new List<StructureCheck>(); public bool stairsClimbed; public float stairsPeakHeight; }
 
         private IEnumerator Start()
         {
@@ -44,11 +49,52 @@ namespace ThreeBodyProblem
             Application.logMessageReceived += (message, trace, type) => { if ((type == LogType.Error || type == LogType.Exception || type == LogType.Assert) && report.errors.Count < 30) report.errors.Add(message); };
             yield return null;
             report.gateClear = ApertureClear(gate, 4.7f); report.portalClear = ApertureClear(portal, 2.55f);
-            report.gateWallSolid = WallSolid(gate, 2.3f); report.portalWallSolid = WallSolid(portal, 1.2f);
+            report.gateWallSolid = WallSolid(gate, gateWallProbeOffset); report.portalWallSolid = WallSolid(portal, portalWallProbeOffset);
             if (!report.gateClear || !report.portalClear || !report.gateWallSolid || !report.portalWallSolid) report.errors.Add("Aperture or side-wall collision check failed.");
             yield return WalkThrough(portal, value => report.portalWalkThrough = value);
             yield return WalkThrough(gate, value => report.gateWalkThrough = value);
             if (!report.portalWalkThrough || !report.gateWalkThrough) report.errors.Add("First-person controller could not walk through both apertures.");
+            if (additionalOpenings != null) for (int i = 0; i < additionalOpenings.Length; i++)
+            {
+                var root = additionalOpenings[i]; var check = new StructureCheck { asset = root.name, clear = ApertureClear(root, 2.5f), wallSolid = WallSolid(root, additionalWallProbeOffsets[i]) };
+                yield return WalkThrough(root, value => check.walked = value); report.structures.Add(check);
+                if (!check.clear || !check.wallSolid || !check.walked) report.errors.Add(root.name + ": additional passage validation failed.");
+            }
+            if (shelters != null) foreach (var shelter in shelters)
+            {
+                var check = new StructureCheck { asset = shelter.name };
+                yield return WalkIntoShelter(shelter, check); report.structures.Add(check);
+                if (!check.clear || !check.walked) report.errors.Add(shelter.name + ": could not enter a clear space beneath the rock roof.");
+            }
+            if (stairs != null)
+            {
+                var b = stairs.GetComponent<LODGroup>().GetLODs()[0].renderers[0].bounds;
+                var start = new Vector3(b.center.x, 1.7f, b.max.z + 1.1f); player.Teleport(start, start + Vector3.back * 10);
+                player.enabled = false; player.InputBlocked = false;
+                int steps = Mathf.CeilToInt((b.size.z + .5f) / player.walkSpeed * 60);
+                for (int i = 0; i < steps; i++) { player.MoveInput(Vector2.up, false, 1f / 60); report.stairsPeakHeight = Mathf.Max(report.stairsPeakHeight, player.transform.position.y - stairs.position.y); yield return null; }
+                player.InputBlocked = true; player.enabled = true;
+                report.stairsClimbed = report.stairsPeakHeight > b.size.y * .8f;
+                if (!report.stairsClimbed) report.errors.Add("First-person controller did not climb the stone stairs.");
+            }
+            if (palace != null)
+            {
+                var check = new StructureCheck { asset = "PyramidPalace_Interior" };
+                var centre = palace.position;
+                RaycastHit roof;
+                check.clear = !Physics.CheckCapsule(centre + Vector3.up * .65f, centre + Vector3.up * 1.85f, .3f)
+                    && Physics.Raycast(centre + Vector3.up * 2, Vector3.up, out roof, 15) && roof.transform.IsChildOf(palace);
+                RaycastHit side;
+                check.wallSolid = Physics.Raycast(centre + Vector3.up * 1.4f, Vector3.right, out side, 15) && side.transform.IsChildOf(palace);
+                var b = palace.GetComponent<LODGroup>().GetLODs()[0].renderers[0].bounds;
+                var start = new Vector3(centre.x, 1.7f, b.max.z + 1.5f); player.Teleport(start, centre + Vector3.up * 1.7f);
+                player.enabled = false; player.InputBlocked = false;
+                int steps = Mathf.CeilToInt((start.z - centre.z) / player.walkSpeed * 60);
+                for (int i = 0; i < steps; i++) { player.MoveInput(Vector2.up, false, 1f / 60); yield return null; }
+                check.walked = Vector3.Distance(player.transform.position, centre + Vector3.up * .25f) < 1;
+                player.InputBlocked = true; player.enabled = true; report.structures.Add(check);
+                if (!check.clear || !check.wallSolid || !check.walked) report.errors.Add("Palace entrance, chamber headroom or actual entry failed.");
+            }
             for (int i = 0; i < stations.Length; i++)
             {
                 current = assetIds[i]; player.Teleport(viewpoints[i], viewTargets[i]);
@@ -73,14 +119,18 @@ namespace ThreeBodyProblem
                 }
                 frames.Sort(); gpuFrames.Sort(); var lods = stations[i].GetComponent<LODGroup>().GetLODs();
                 var visible = Enumerable.Range(0, lods.Length).Where(level => lods[level].renderers.Any(r => r.isVisible)).ToArray();
-                bool clear=!stations.Where((station,index)=>index!=i).Any(station=>station.GetComponent<LODGroup>().GetLODs()[0].renderers[0].bounds.Contains(viewpoints[i]));
-                RaycastHit obstruction;Vector3 sight=viewTargets[i]-viewpoints[i];
-                if(Physics.Raycast(viewpoints[i],sight.normalized,out obstruction,sight.magnitude)&&!obstruction.transform.IsChildOf(stations[i]))clear=false;
+                bool clear=!stations.Where(station=>station!=stations[i]).Any(station=>station.GetComponent<LODGroup>().GetLODs()[0].renderers[0].bounds.Contains(viewpoints[i]));
+                Vector3 sight=viewTargets[i]-viewpoints[i];
+                var sightHits=Physics.RaycastAll(viewpoints[i],sight.normalized,sight.magnitude).OrderBy(h=>h.distance).ToArray();
+                bool ignoredPlayer=sightHits.Any(h=>h.transform.IsChildOf(player.transform));
+                var obstruction=sightHits.FirstOrDefault(h=>!h.transform.IsChildOf(player.transform));
+                if(obstruction.collider!=null&&!obstruction.transform.IsChildOf(stations[i]))clear=false;
                 var metric = new Metric { asset = current, meanFrameMs = frames.Average(), p95FrameMs = frames[(int)(frames.Count * .95f)],
                     meanMainThreadMs = mainCount > 0 ? mainSum / mainCount : -1, batches = renderCount > 0 ? batches / renderCount : -1,
                     meanPresentWaitMs = presentCount > 0 ? presentSum / presentCount : -1,
                     meanGpuMs = gpuFrames.Count > 0 ? gpuFrames.Average() : -1, p95GpuMs = gpuFrames.Count > 0 ? gpuFrames[(int)(gpuFrames.Count * .95f)] : -1, gpuSamples = gpuFrames.Count,
-                    triangles = renderCount > 0 ? triangles / renderCount : -1, visibleLods = visible, viewClear=clear };
+                    triangles = renderCount > 0 ? triangles / renderCount : -1, visibleLods = visible, viewClear=clear,
+                    ignoredPlayerCollider=ignoredPlayer, obstruction=obstruction.collider==null?"":obstruction.collider.name };
                 report.metrics.Add(metric);
                 if (metric.p95FrameMs > 16.67f) report.errors.Add(current + ": P95 frame time exceeds 16.67 ms.");
                 if (visible.Length == 0) report.errors.Add(current + ": target did not render.");
@@ -114,6 +164,32 @@ namespace ThreeBodyProblem
             int steps = Mathf.CeilToInt((bounds.size.z + 3.5f) / player.walkSpeed * 60);
             for (int i = 0; i < steps; i++) { player.MoveInput(Vector2.up, false, 1f / 60); yield return null; }
             result(player.transform.position.z < bounds.min.z - .4f && player.transform.position.y > -.2f);
+            player.InputBlocked = true; player.enabled = true;
+        }
+        private IEnumerator WalkIntoShelter(Transform root, StructureCheck check)
+        {
+            var b = root.GetComponent<LODGroup>().GetLODs()[0].renderers[0].bounds;
+            Vector3 entry = Vector3.zero, target = Vector3.zero; bool found = false;
+            for (int x = 1; x <= 5 && !found; x++) for (int z = 1; z <= 5 && !found; z++)
+            {
+                var point = new Vector3(Mathf.Lerp(b.min.x, b.max.x, x / 6f), .05f, Mathf.Lerp(b.min.z, b.max.z, z / 6f));
+                RaycastHit roof;
+                if (!Physics.Raycast(point + Vector3.up * 1.8f, Vector3.up, out roof, b.size.y + 1) || !roof.transform.IsChildOf(root)) continue;
+                if (Physics.CheckCapsule(point + Vector3.up * .35f, point + Vector3.up * 1.5f, .3f)) continue;
+                foreach (var direction in new[] { Vector3.forward, Vector3.back, Vector3.right, Vector3.left })
+                {
+                    float extent = Mathf.Abs(direction.x) > 0 ? b.extents.x : b.extents.z;
+                    var outside = point + direction * (extent * 2 + 1.4f); var delta = point - outside;
+                    if (Physics.CapsuleCast(outside + Vector3.up * .35f, outside + Vector3.up * 1.5f, .3f, delta.normalized, delta.magnitude)) continue;
+                    entry = outside; target = point; found = true; break;
+                }
+            }
+            check.clear = found; if (!found) yield break;
+            player.Teleport(entry + Vector3.up * 1.65f, target + Vector3.up * 1.65f);
+            player.enabled = false; player.InputBlocked = false;
+            int count = Mathf.CeilToInt(Vector3.Distance(entry, target) / player.walkSpeed * 60);
+            for (int i = 0; i < count; i++) { player.MoveInput(Vector2.up, false, 1f / 60); yield return null; }
+            check.walked = Vector2.Distance(new Vector2(player.transform.position.x, player.transform.position.z), new Vector2(target.x, target.z)) < .75f;
             player.InputBlocked = true; player.enabled = true;
         }
         private void OnGUI()

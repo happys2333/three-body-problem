@@ -1,0 +1,54 @@
+[
+  {
+    "id": "ShangStraightEarthWall",
+    "downloadPath": "/Users/happys/Downloads/6d757a8bfbb0faff62f75ee8fd0d659e.fbx",
+    "pbrCandidate": 1,
+    "thumbnailFile": "961ad0f974d82c5280cc5b2c20634e70.png",
+    "uiTriangles": 497086,
+    "uiVertices": 325646,
+    "observation": "Visible FBX export; native Chrome network continuation. Source geometry and four embedded images checked."
+  },
+  {
+    "id": "ShangOracleBone",
+    "downloadPath": "/Users/happys/Downloads/978959b9caca0a7d6caf4803d3149ba1.fbx",
+    "pbrCandidate": 1,
+    "uiTriangles": 50000,
+    "uiVertices": 31796,
+    "observation": "Native FBX menu click; exact UI/source triangle and UV counts matched, four embedded PNG maps."
+  },
+  {
+    "id": "PyramidEntryPassage",
+    "downloadPath": "/Users/happys/Downloads/f1dee24fda0ac65b7d1652ca47aa70fb.glb",
+    "pbrCandidate": 1,
+    "format": "GLB",
+    "observation": "Normal platform export menu; completed native Chrome download bubble and complete local file verified. Original GLB retained when converted locally."
+  },
+  {
+    "id": "PalaceStoneStairs",
+    "downloadPath": "/Users/happys/Downloads/76cfe19ae597a944c03e62e8696e20df.fbx",
+    "pbrCandidate": 1,
+    "format": "FBX",
+    "observation": "Normal platform export menu; completed native Chrome download bubble and complete local file verified. Original GLB retained when converted locally."
+  },
+  {
+    "id": "BronzeWallTorchBracket",
+    "downloadPath": "/Users/happys/Downloads/ba1eb36d9d8f95c0a3025340d32f0413.glb",
+    "pbrCandidate": 1,
+    "format": "GLB",
+    "observation": "Normal platform export menu; completed native Chrome download bubble and complete local file verified. Original GLB retained when converted locally."
+  },
+  {
+    "id": "GobiShadeCanopyV3",
+    "downloadPath": "/Users/happys/Downloads/6b9265af1d5b8f5baae911cddc341320.fbx",
+    "format": "FBX",
+    "pbrCandidate": 1,
+    "observation": "A documented browser download event returned this path; final binary FBX, 4 embedded PBR PNGs and viewer triangle/UV topology verified. Background platform menu export; no security change or new generation."
+  },
+  {
+    "id": "TravellerWaterskinV2",
+    "downloadPath": "/Users/happys/Downloads/c3fc5c411c8ca147805bd1a54053d081.fbx",
+    "format": "FBX",
+    "pbrCandidate": 1,
+    "observation": "A documented browser download event returned this path; final binary FBX, 4 embedded PBR PNGs and viewer triangle/UV topology verified. Background platform menu export; no security change or new generation."
+  }
+]

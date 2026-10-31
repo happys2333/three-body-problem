@@ -1,0 +1,32 @@
+{
+  "id": "ShangBronzeBrazier",
+  "sourceId": "ShangBronzeBrazier",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShangBronzeBrazier.prefab",
+  "modifications": [
+    "Original PBR atlas retained; UV-preserving QEM LODs."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    32000,
+    8500,
+    1900
+  ],
+  "sizeBlender": [
+    1.5310213565826416,
+    1.5305098295211792,
+    1.200031042098999
+  ],
+  "usage": "Static environment prop",
+  "charred": false,
+  "openingWidth": 0,
+  "openingHeight": 0
+}

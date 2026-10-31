@@ -1,0 +1,4 @@
+Source: https://polyhaven.com/a/thatch_roof_angled
+License: CC0 1.0 https://polyhaven.com/license
+Retrieved: 2026-10-28
+Purpose: seamless surface material; 2K albedo, normal, roughness and AO.

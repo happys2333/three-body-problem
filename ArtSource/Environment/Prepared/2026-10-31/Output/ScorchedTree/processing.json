@@ -1,0 +1,34 @@
+{
+  "id": "ScorchedTree",
+  "sourceId": "DeadTamariskV2",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/DeadTamariskV2.prefab",
+  "modifications": [
+    "Removed display ground; vegetation uses photographic bark.",
+    "Removed bird-like central object and its perch.",
+    "Derived from the cleaned matching unburnt plant; rejected baked fire/person source is not used."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    24999,
+    6499,
+    1499
+  ],
+  "sizeBlender": [
+    1.6767829656600952,
+    1.332092523574829,
+    1.6949234008789062
+  ],
+  "usage": "Charred vegetation state; no baked flames or people",
+  "charred": true,
+  "openingWidth": 0,
+  "openingHeight": 0
+}

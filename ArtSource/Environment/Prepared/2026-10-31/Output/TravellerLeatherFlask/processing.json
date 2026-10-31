@@ -1,0 +1,33 @@
+{
+  "id": "TravellerLeatherFlask",
+  "sourceId": "TravellerWaterskin",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/TravellerWaterskin.prefab",
+  "modifications": [
+    "Body and tied neck rebuilt; original source used as a size/silhouette reference only. Clean leather-only atlas region is remapped; generated zipper geometry and imagery are excluded."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    26000,
+    6500,
+    1400
+  ],
+  "sizeBlender": [
+    0.2612234950065613,
+    0.17053568363189697,
+    0.3705000579357147
+  ],
+  "usage": "Carryable tied leather flask; reconstructed without modern zipper or metal hardware",
+  "charred": false,
+  "openingWidth": 0,
+  "openingHeight": 0,
+  "hasInterior": false
+}

@@ -1,0 +1,33 @@
+{
+  "id": "ShangStraightEarthWall",
+  "sourceId": "ShangStraightEarthWall",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261031/Prefabs/ShangStraightEarthWall.prefab",
+  "modifications": [
+    "Unwanted roof-like timber trim and display footing cropped; capped solid earth wall set to 8 by 3 by 1.5 metres with a photographic earth surface."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    44999,
+    9999,
+    4167
+  ],
+  "sizeBlender": [
+    7.998800277709961,
+    1.5000873804092407,
+    3.0006537437438965
+  ],
+  "usage": "Static environment prop",
+  "charred": false,
+  "openingWidth": 0,
+  "openingHeight": 0,
+  "hasInterior": false
+}

@@ -1,0 +1,33 @@
+{
+  "id": "MedievalStoneArch",
+  "sourceId": "MedievalStoneArch",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/MedievalStoneArch.prefab",
+  "modifications": [
+    "Photographic masonry surface; display ground trimmed.",
+    "Clear through aperture carved: 1.65 m wide by 2.35 m high."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    75000,
+    18000,
+    4000
+  ],
+  "sizeBlender": [
+    6.275320053100586,
+    3.509716033935547,
+    4.387423038482666
+  ],
+  "usage": "Traversable architectural opening",
+  "charred": false,
+  "openingWidth": 1.65,
+  "openingHeight": 2.35
+}

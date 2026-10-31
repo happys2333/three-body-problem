@@ -1,0 +1,410 @@
+{
+    "assets": [
+        {
+            "id": "CharredBush",
+            "prefab": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/CharredBush.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/DesertDryScrubV2.prefab",
+            "usage": "Charred vegetation state; no baked flames or people",
+            "modifications": [
+                "Removed display ground; vegetation uses photographic bark.",
+                "Derived from the cleaned matching unburnt plant; rejected baked fire/person source is not used."
+            ],
+            "materialsUsed": [
+                "Bark"
+            ],
+            "trianglesByLod": [
+                18000,
+                5000,
+                1100
+            ],
+            "collisionTriangles": 5000,
+            "width": 0.877345085144043,
+            "height": 0.7239680290222168,
+            "depth": 1.1140096187591553,
+            "passed": true
+        },
+        {
+            "id": "DeadTamariskV2",
+            "prefab": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/DeadTamariskV2.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/DeadTamariskV2.prefab",
+            "usage": "Static environment prop",
+            "modifications": [
+                "Removed display ground; vegetation uses photographic bark.",
+                "Removed bird-like central object and its perch."
+            ],
+            "materialsUsed": [
+                "Bark"
+            ],
+            "trianglesByLod": [
+                27999,
+                7000,
+                1600
+            ],
+            "collisionTriangles": 7000,
+            "width": 1.6769545078277588,
+            "height": 1.862535834312439,
+            "depth": 1.3321278095245362,
+            "passed": true
+        },
+        {
+            "id": "DesertDryScrubV2",
+            "prefab": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/DesertDryScrubV2.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/DesertDryScrubV2.prefab",
+            "usage": "Static environment prop",
+            "modifications": [
+                "Removed display ground; vegetation uses photographic bark."
+            ],
+            "materialsUsed": [
+                "Bark"
+            ],
+            "trianglesByLod": [
+                20000,
+                5500,
+                1200
+            ],
+            "collisionTriangles": 5500,
+            "width": 0.877345085144043,
+            "height": 0.7239155769348145,
+            "depth": 1.1140096187591553,
+            "passed": true
+        },
+        {
+            "id": "MedievalIronBrazier",
+            "prefab": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/MedievalIronBrazier.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/MedievalIronBrazier.prefab",
+            "usage": "Static environment prop",
+            "modifications": [
+                "Original PBR atlas retained; UV-preserving QEM LODs."
+            ],
+            "materialsUsed": [
+                "OriginalSupplies"
+            ],
+            "trianglesByLod": [
+                30000,
+                7500,
+                1700
+            ],
+            "collisionTriangles": 7500,
+            "width": 1.277939796447754,
+            "height": 1.1002510786056519,
+            "depth": 1.2804319858551026,
+            "passed": true
+        },
+        {
+            "id": "MedievalLectern",
+            "prefab": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/MedievalLectern.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/MedievalLectern.prefab",
+            "usage": "Static environment prop",
+            "modifications": [
+                "Original PBR atlas retained; UV-preserving QEM LODs."
+            ],
+            "materialsUsed": [
+                "OriginalSupplies"
+            ],
+            "trianglesByLod": [
+                24000,
+                6000,
+                1300
+            ],
+            "collisionTriangles": 6000,
+            "width": 0.7206551432609558,
+            "height": 1.2999658584594727,
+            "depth": 0.8128581047058106,
+            "passed": true
+        },
+        {
+            "id": "MedievalPew",
+            "prefab": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/MedievalPew.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/MedievalPew.prefab",
+            "usage": "Static environment prop",
+            "modifications": [
+                "Original PBR atlas retained; UV-preserving QEM LODs."
+            ],
+            "materialsUsed": [
+                "OriginalSupplies"
+            ],
+            "trianglesByLod": [
+                28000,
+                7000,
+                1500
+            ],
+            "collisionTriangles": 7000,
+            "width": 2.1999692916870119,
+            "height": 1.1601228713989258,
+            "depth": 0.702589750289917,
+            "passed": true
+        },
+        {
+            "id": "MedievalStoneArch",
+            "prefab": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/MedievalStoneArch.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/MedievalStoneArch.prefab",
+            "usage": "Traversable architectural opening",
+            "modifications": [
+                "Photographic masonry surface; display ground trimmed.",
+                "Clear through aperture carved: 1.65 m wide by 2.35 m high."
+            ],
+            "materialsUsed": [
+                "Masonry"
+            ],
+            "trianglesByLod": [
+                75000,
+                18000,
+                4000
+            ],
+            "collisionTriangles": 75000,
+            "width": 6.275320053100586,
+            "height": 4.387423038482666,
+            "depth": 3.509716033935547,
+            "passed": true
+        },
+        {
+            "id": "NaturalRidgeV2",
+            "prefab": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/NaturalRidgeV2.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/NaturalRidgeV2.prefab",
+            "usage": "Distant ridge backdrop; not a foreground climbable mountain",
+            "modifications": [
+                "Thin ridge deepened; reserved for distant terrain composition.",
+                "Display plinth cropped and capped; silhouette weathered; photographic rock surface."
+            ],
+            "materialsUsed": [
+                "Rock"
+            ],
+            "trianglesByLod": [
+                100000,
+                24000,
+                4999
+            ],
+            "collisionTriangles": 4999,
+            "width": 100.36112213134766,
+            "height": 18.459014892578126,
+            "depth": 30.39535903930664,
+            "passed": false
+        },
+        {
+            "id": "PalaceStoneColumn",
+            "prefab": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/PalaceStoneColumn.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/PalaceStoneColumn.prefab",
+            "usage": "Static environment prop",
+            "modifications": [
+                "Loose display debris removed; structural column base retained; photographic masonry."
+            ],
+            "materialsUsed": [
+                "Masonry"
+            ],
+            "trianglesByLod": [
+                65000,
+                16000,
+                3500
+            ],
+            "collisionTriangles": 16000,
+            "width": 2.2225255966186525,
+            "height": 3.899796962738037,
+            "depth": 2.1555557250976564,
+            "passed": true
+        },
+        {
+            "id": "ScorchedTree",
+            "prefab": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ScorchedTree.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/DeadTamariskV2.prefab",
+            "usage": "Charred vegetation state; no baked flames or people",
+            "modifications": [
+                "Removed display ground; vegetation uses photographic bark.",
+                "Removed bird-like central object and its perch.",
+                "Derived from the cleaned matching unburnt plant; rejected baked fire/person source is not used."
+            ],
+            "materialsUsed": [
+                "Bark"
+            ],
+            "trianglesByLod": [
+                24999,
+                6499,
+                1499
+            ],
+            "collisionTriangles": 6499,
+            "width": 1.6767829656600953,
+            "height": 1.6949234008789063,
+            "depth": 1.332092523574829,
+            "passed": true
+        },
+        {
+            "id": "ScreePatch",
+            "prefab": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ScreePatch.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ScreePatch.prefab",
+            "usage": "Low rock pile; combine with existing scattered-stone assets",
+            "modifications": [
+                "Display plinth cropped and capped; silhouette weathered; photographic rock surface."
+            ],
+            "materialsUsed": [
+                "Rock"
+            ],
+            "trianglesByLod": [
+                24000,
+                6000,
+                1400
+            ],
+            "collisionTriangles": 6000,
+            "width": 6.1726531982421879,
+            "height": 1.900139331817627,
+            "depth": 5.939835548400879,
+            "passed": true
+        },
+        {
+            "id": "ShadeOverhangV2",
+            "prefab": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShadeOverhangV2.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShadeOverhangV2.prefab",
+            "usage": "Natural shelter with open front; verify capsule clearance in the yard",
+            "modifications": [
+                "Display floor and lower-front generated objects removed; rock underside and back wall capped."
+            ],
+            "materialsUsed": [
+                "Rock"
+            ],
+            "trianglesByLod": [
+                74999,
+                18000,
+                4000
+            ],
+            "collisionTriangles": 18000,
+            "width": 11.999855995178223,
+            "height": 9.240419387817383,
+            "depth": 7.9990339279174809,
+            "passed": true
+        },
+        {
+            "id": "ShangBronzeBrazier",
+            "prefab": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangBronzeBrazier.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShangBronzeBrazier.prefab",
+            "usage": "Static environment prop",
+            "modifications": [
+                "Original PBR atlas retained; UV-preserving QEM LODs."
+            ],
+            "materialsUsed": [
+                "OriginalSupplies"
+            ],
+            "trianglesByLod": [
+                32000,
+                8500,
+                1900
+            ],
+            "collisionTriangles": 8500,
+            "width": 1.5310213565826417,
+            "height": 1.200031042098999,
+            "depth": 1.5305098295211793,
+            "passed": true
+        },
+        {
+            "id": "ShangBronzeDing",
+            "prefab": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangBronzeDing.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShangBronzeDing.prefab",
+            "usage": "Static environment prop",
+            "modifications": [
+                "Original PBR atlas retained; UV-preserving QEM LODs."
+            ],
+            "materialsUsed": [
+                "OriginalSupplies"
+            ],
+            "trianglesByLod": [
+                34000,
+                9000,
+                2000
+            ],
+            "collisionTriangles": 9000,
+            "width": 1.2592908143997193,
+            "height": 1.3002324104309083,
+            "depth": 0.9594905376434326,
+            "passed": true
+        },
+        {
+            "id": "ShangMarketGoods",
+            "prefab": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangMarketGoods.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShangMarketGoods.prefab",
+            "usage": "Static environment prop",
+            "modifications": [
+                "Original PBR atlas retained; UV-preserving QEM LODs."
+            ],
+            "materialsUsed": [
+                "OriginalSupplies"
+            ],
+            "trianglesByLod": [
+                38000,
+                10000,
+                2400
+            ],
+            "collisionTriangles": 10000,
+            "width": 1.99974524974823,
+            "height": 0.8323844075202942,
+            "depth": 0.6482484340667725,
+            "passed": true
+        },
+        {
+            "id": "ShangTimberGate",
+            "prefab": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangTimberGate.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShangTimberGate.prefab",
+            "usage": "Traversable architectural opening",
+            "modifications": [
+                "Detached broken wall and curved late-style roof removed; straight timber/thatch roof reconstructed.",
+                "Clear through aperture carved: 2.1 m wide by 2.65 m high."
+            ],
+            "materialsUsed": [
+                "Earth",
+                "Masonry",
+                "Thatch",
+                "Wood"
+            ],
+            "trianglesByLod": [
+                84999,
+                22000,
+                4999
+            ],
+            "collisionTriangles": 84999,
+            "width": 5.667550086975098,
+            "height": 5.252189636230469,
+            "depth": 3.5055127143859865,
+            "passed": true
+        },
+        {
+            "id": "SplitBoulder",
+            "prefab": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/SplitBoulder.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/SplitBoulder.prefab",
+            "usage": "Static environment prop",
+            "modifications": [
+                "Display plinth cropped and capped; silhouette weathered; photographic rock surface."
+            ],
+            "materialsUsed": [
+                "Rock"
+            ],
+            "trianglesByLod": [
+                32000,
+                8000,
+                1800
+            ],
+            "collisionTriangles": 8000,
+            "width": 3.2645554542541506,
+            "height": 2.818903923034668,
+            "depth": 3.314302682876587,
+            "passed": true
+        },
+        {
+            "id": "WindCarvedPillar",
+            "prefab": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/WindCarvedPillar.prefab",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/WindCarvedPillar.prefab",
+            "usage": "Static environment prop",
+            "modifications": [
+                "Display plinth cropped and capped; silhouette weathered; photographic rock surface."
+            ],
+            "materialsUsed": [
+                "Rock"
+            ],
+            "trianglesByLod": [
+                47999,
+                11999,
+                2399
+            ],
+            "collisionTriangles": 11999,
+            "width": 4.4375410079956059,
+            "height": 8.489550590515137,
+            "depth": 3.439685821533203,
+            "passed": true
+        }
+    ]
+}

@@ -1,0 +1,200 @@
+{
+  "date": "2026-10-31",
+  "platform": "Tencent Hunyuan 3D web V3.1 through user Chrome UI",
+  "observedRemainingAtStart": 20,
+  "purchaseOrSubscription": false,
+  "unityRoot": "Assets/_Project/Art/HunyuanEnvironment20261031",
+  "scope": "Seven prioritized missing or replacement static assets; no character or animation generation.",
+  "status": "all_seven_sources_archived",
+  "assets": [
+    {
+      "id": "ShangStraightEarthWall",
+      "name": "殷商平直夯土厚墙",
+      "category": "architecture",
+      "prompt": "商代夯土直墙模块，长8米高3米厚1.5米，完整平直的实心墙段，墙顶平直略收分，夯层裂缝和泥土质感，写实游戏PBR，无屋顶无柱子无亭子，无门窗无人无文字无展示底座，单独物体",
+      "requestedTriangles": 500000,
+      "targetSizeMetres": 8,
+      "sizeAxis": "width",
+      "state": "source_archived_candidate_and_curated_derivative_prepared",
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/6d757a8bfbb0faff62f75ee8fd0d659e.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-31/ShangStraightEarthWall/ShangStraightEarthWall_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261031/ShangStraightEarthWall/ShangStraightEarthWall_PBR.fbx",
+        "sha256": "dcf5f31338bf3a1c47f186f9bc8f7598370374abac6e806955541b6e9586abd6",
+        "bytes": 64761580
+      },
+      "pbrThumbnailFile": "961ad0f974d82c5280cc5b2c20634e70.png",
+      "browserTopology": {
+        "triangles": 497086,
+        "vertices": 325646,
+        "source": "PBR model viewer visible topology counters"
+      }
+    },
+    {
+      "id": "GobiShadeCanopyV3",
+      "name": "天然悬挑岩棚",
+      "category": "gobi",
+      "prompt": "戈壁天然悬挑岩棚，一整块粗糙风蚀砂岩，一侧高岩壁支撑宽大悬挑岩顶，底部开放有可站立遮阴空间，真实不规则岩层和断面，写实PBR，只有岩石，无人物无球体无建筑无底座无地台无植物",
+      "requestedTriangles": 500000,
+      "targetSizeMetres": 12,
+      "sizeAxis": "width",
+      "state": "source_archived_rejected_folded_roof_and_holes",
+      "pbrThumbnailFile": "b06e513fefd1ddd46d753087c3e8565c.png",
+      "browserTopology": {
+        "triangles": 499924,
+        "vertices": 307353,
+        "source": "PBR model viewer visible topology counters"
+      },
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/6b9265af1d5b8f5baae911cddc341320.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-31/GobiShadeCanopyV3/GobiShadeCanopyV3_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261031/GobiShadeCanopyV3/GobiShadeCanopyV3_PBR.fbx",
+        "sha256": "1359968759d4945bd308b00fdba5ea78dbba68d499033891e3553a946bd33eea",
+        "bytes": 57785484
+      },
+      "artReview": "Reverse-side screenshots expose folded thin surfaces and large holes. Derivative removed from usable library; ShadeOverhangV2 retained."
+    },
+    {
+      "id": "PyramidEntryPassage",
+      "name": "厚墙金字塔入口",
+      "category": "architecture",
+      "prompt": "巨石金字塔宫殿入口模块，厚重倾斜石墙围绕一个方形贯通门洞，门洞内壁清楚可见，粗砺深灰巨石，古朴宏伟写实PBR，独立墙体模块，无门扇无雕像无人物无屋顶无金色装饰无文字无展示底座",
+      "requestedTriangles": 500000,
+      "targetSizeMetres": 7,
+      "sizeAxis": "width",
+      "state": "source_archived_candidate_and_curated_derivative_prepared",
+      "pbrThumbnailFile": "ed0725cf2659b3dabcd244421996d9ca.png",
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/f1dee24fda0ac65b7d1652ca47aa70fb.glb",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-31/PyramidEntryPassage/PyramidEntryPassage_PBR.glb",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261031/PyramidEntryPassage/PyramidEntryPassage_PBR.fbx",
+        "sha256": "d1a82e9dd6f6b48119030cb6a18620a57cf893bc089c62d721467105e26e47ed",
+        "bytes": 50802620,
+        "sourceFormat": "GLB",
+        "projectSha256": "0317f1171d37541fc73572c12c5d3cc17a5e444e4df1028fc125d247297e4986"
+      },
+      "conversion": "Local Blender GLB to FBX; glTF B metallic/G roughness split losslessly; original GLB retained",
+      "browserTopology": {
+        "triangles": 500026,
+        "vertices": 294643,
+        "source": "PBR model viewer visible topology counters"
+      }
+    },
+    {
+      "id": "PalaceStoneStairs",
+      "name": "宫殿石阶模块",
+      "category": "architecture",
+      "prompt": "古代宫殿宽阔石阶模块，十二级笔直石阶，宽4米总高3米，灰褐色巨石砌筑，有磨损棱角细微裂纹，平直宽阔可行走的踏面，写实PBR，单独阶梯，无栏杆无建筑无雕像无人物无装饰底座",
+      "requestedTriangles": 500000,
+      "targetSizeMetres": 4,
+      "sizeAxis": "width",
+      "state": "source_archived_candidate_and_curated_derivative_prepared",
+      "pbrThumbnailFile": "74e3a83f5683ef08fe682a3fd4bcee53.png",
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/76cfe19ae597a944c03e62e8696e20df.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-31/PalaceStoneStairs/PalaceStoneStairs_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261031/PalaceStoneStairs/PalaceStoneStairs_PBR.fbx",
+        "sha256": "014aad444a3ded285362546c543a7e116cdabcea8387fc5a62de4c0362c12218",
+        "bytes": 66138508
+      },
+      "browserTopology": {
+        "triangles": 500000,
+        "vertices": 314149,
+        "source": "PBR model viewer visible topology counters"
+      }
+    },
+    {
+      "id": "BronzeWallTorchBracket",
+      "name": "青铜壁挂火炬架",
+      "category": "prop",
+      "prompt": "商代古朴青铜壁挂火炬支架，竖直背板和向外伸出的环形托架，铜锈与锤锻细节，写实PBR，单独支架，无火焰无火炬无墙体无人物无文字无展示底座，无现代螺丝",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 0.45,
+      "sizeAxis": "height",
+      "state": "source_archived_candidate_and_curated_derivative_prepared",
+      "pbrThumbnailFile": "a42589f9ba099fffe6acc67a65fc0948.png",
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/ba1eb36d9d8f95c0a3025340d32f0413.glb",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-31/BronzeWallTorchBracket/BronzeWallTorchBracket_PBR.glb",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261031/BronzeWallTorchBracket/BronzeWallTorchBracket_PBR.fbx",
+        "sha256": "556e8f73136135ee3e23cb903a9e7fdc6d0c9904e7ef2cd68068ebaf7a2d3084",
+        "bytes": 43735272,
+        "sourceFormat": "GLB",
+        "projectSha256": "d682477aaa43b2239ae7bf9b4bdb721d80e52797f0bec285098a416a4b7d9814"
+      },
+      "conversion": "Local Blender GLB to FBX; glTF B metallic/G roughness split losslessly; original GLB retained",
+      "browserTopology": {
+        "triangles": 50000,
+        "vertices": 33077,
+        "source": "PBR model viewer visible topology counters"
+      }
+    },
+    {
+      "id": "ShangOracleBone",
+      "name": "卜辞甲骨道具",
+      "category": "prop",
+      "prompt": "一块商代牛肩胛卜骨，完整独立扁平骨片，不规则天然骨缘，烧灼钻孔和浅刻痕，古旧米黄色骨质，写实游戏PBR，单独物体，无底座无支架无桌面无人物无现代文字无背景道具",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 0.32,
+      "sizeAxis": "height",
+      "state": "source_archived_candidate_and_curated_derivative_prepared",
+      "pbrThumbnailFile": "fca56d57ee456454502d4c7d0b52aacf.png",
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/978959b9caca0a7d6caf4803d3149ba1.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-31/ShangOracleBone/ShangOracleBone_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261031/ShangOracleBone/ShangOracleBone_PBR.fbx",
+        "sha256": "9231a25d262bea662126fe57f1cdfe1a5af6ad3f527a88a24638dba7912639cf",
+        "bytes": 37584268
+      },
+      "browserTopology": {
+        "triangles": 50000,
+        "vertices": 31796,
+        "source": "PBR model viewer visible topology counters"
+      }
+    },
+    {
+      "id": "TravellerWaterskinV2",
+      "name": "扎口古代皮水囊",
+      "category": "prop",
+      "prompt": "古代游牧旅行者的动物胃囊皮水袋，浑圆鼓胀的深棕皮囊和细长收口颈，颈口用粗麻绳缠绕扎紧，手工粗缝线与磨损皮革，写实PBR，单独悬空物体，无拉链无金属无扣件无背包结构无底座无人",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 0.55,
+      "sizeAxis": "height",
+      "state": "source_archived_rejected_modern_zipper",
+      "replaces": "TravellerWaterskin",
+      "pbrThumbnailFile": "de8e3c67be3d2ad107bf97d02371eaa8.png",
+      "browserTopology": {
+        "triangles": 50000,
+        "vertices": 35300,
+        "source": "PBR viewer visible topology counters"
+      },
+      "artReview": {
+        "status": "rejected",
+        "note": "Visible modern zipper. Retain source for provenance; usable TravellerLeatherFlask is a separate local reconstruction."
+      },
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/c3fc5c411c8ca147805bd1a54053d081.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-31/TravellerWaterskinV2/TravellerWaterskinV2_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261031/TravellerWaterskinV2/TravellerWaterskinV2_PBR.fbx",
+        "sha256": "c6b2b848b35026d47b5af44efba8005691783081af02e3de9f04143a5cb4be7c",
+        "bytes": 39246268
+      }
+    }
+  ],
+  "submissions": 7,
+  "observedRemainingLatest": 13,
+  "generatedGroups": 7,
+  "observedRemainingAfterGeneration": 13,
+  "pendingExports": [],
+  "localReplacement": {
+    "id": "TravellerLeatherFlask",
+    "sourceReference": "2026-10-30 TravellerWaterskin",
+    "note": "Locally rebuilt pouch and tied neck; no zipper. Not counted as an additional Hunyuan generation or download."
+  },
+  "downloadIssue": {
+    "observation": "No final file after native FBX/GLB requests for the canopy, including a normal page reload; water FBX likewise did not appear. A download-success toast alone is not counted as a downloaded model.",
+    "securitySettingsWeakened": false,
+    "userManualCanopyExportRequested": false,
+    "resolved": "Normal background FBX export with the documented download listener returned both complete local files on retry; exact viewer topology matched the files."
+  }
+}

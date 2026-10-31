@@ -1,0 +1,25 @@
+﻿ID,名称,预制体,LOD0,LOD1,LOD2,宽m,高m,深m,用途
+BronzeWallTorchBracket,青铜壁挂火炬,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/BronzeWallTorchBracket.prefab,18000,5000,1000,0.22264644503593445,0.3509877324104309,0.15527576208114624,Wall-mounted torch holder
+CharredBush,炭化灌木,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/CharredBush.prefab,18000,5000,1100,0.877345085144043,0.7239680290222168,1.1140096187591553,Charred vegetation state; no baked flames or people
+DeadTamariskV2,枯树,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/DeadTamariskV2.prefab,27999,7000,1600,1.6769545078277588,1.862535834312439,1.3321278095245361,Static environment prop
+DesertDryScrubV2,荒漠干灌木,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/DesertDryScrubV2.prefab,20000,5500,1200,0.877345085144043,0.7239155769348145,1.1140096187591553,Static environment prop
+MedievalIronBrazier,中世纪铁火盆,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/MedievalIronBrazier.prefab,30000,7500,1700,1.277939796447754,1.1002510786056519,1.2804319858551025,Static environment prop
+MedievalLectern,学者讲台,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/MedievalLectern.prefab,24000,6000,1300,0.7206551432609558,1.2999658584594727,0.8128581047058105,Static environment prop
+MedievalPew,木长椅,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/MedievalPew.prefab,28000,7000,1500,2.1999692916870117,1.1601228713989258,0.702589750289917,Static environment prop
+MedievalStoneArch,中世纪石拱门,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/MedievalStoneArch.prefab,75000,18000,4000,6.275320053100586,4.387423038482666,3.509716033935547,Traversable architectural opening
+NaturalRidgeV2,远景岩脊,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/NaturalRidgeV2.prefab,100000,24000,4999,100.36112213134766,18.459014892578125,30.39535903930664,Distant ridge backdrop; not a foreground climbable mountain
+PalaceStoneColumn,宫殿石柱,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/PalaceStoneColumn.prefab,65000,16000,3500,1.070306420326233,3.59982967376709,1.076630711555481,Static environment prop
+PalaceStoneStairs,宫殿石阶,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/PalaceStoneStairs.prefab,64998,16000,3500,3.9946651458740234,3.000365972518921,6.000760078430176,Static environment prop
+PyramidEntryPassage,可进入的厚墙金字塔宫殿,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/PyramidEntryPassage.prefab,85000,20000,4500,47.9996337890625,38.76578903198242,50.51318359375,可进入的 48 米建筑研究样件；中央宫殿使用 MonumentalMasonry 自建 120×156 米结构
+ScorchedTree,焦枯树,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ScorchedTree.prefab,24999,6499,1499,1.6767829656600952,1.6949234008789062,1.332092523574829,Charred vegetation state; no baked flames or people
+ScreePatch,层叠碎石簇,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ScreePatch.prefab,24000,6000,1400,6.1726531982421875,1.900139331817627,5.939835548400879,Low rock pile; combine with existing scattered-stone assets
+ShadeOverhangV2,可进入的遮阴岩棚,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShadeOverhangV2.prefab,75000,18000,4000,10.652764320373535,6.917987823486328,8.105266571044922,Natural shelter with open front; verify capsule clearance in the yard
+ShangBronzeBrazier,商代青铜火盆,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangBronzeBrazier.prefab,32000,8500,1900,1.5310213565826416,1.200031042098999,1.5305098295211792,Static environment prop
+ShangBronzeDing,青铜方鼎,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangBronzeDing.prefab,34000,9000,2000,1.2592908143997192,1.3002324104309082,0.9594905376434326,Static environment prop
+ShangMarketGoods,市集货担,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangMarketGoods.prefab,38000,10000,2400,1.99974524974823,0.8323844075202942,0.6482484340667725,Static environment prop
+ShangOracleBone,甲骨道具,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangOracleBone.prefab,18000,4500,1000,0.2767195999622345,0.3200705051422119,0.07350030541419983,Static environment prop
+ShangStraightEarthWall,夯土厚墙,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangStraightEarthWall.prefab,44999,9999,4167,7.998800277709961,3.0006537437438965,1.5000873804092407,Static environment prop
+ShangTimberGate,木构院门,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangTimberGate.prefab,11708,4096,1434,5.207953453063965,4.702000141143799,2.4055001735687256,Traversable architectural opening
+SplitBoulder,开裂巨石,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/SplitBoulder.prefab,32000,8000,1800,3.2546792030334473,2.6393651962280273,3.330791711807251,Static environment prop
+TravellerLeatherFlask,重建扎口皮水囊,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/TravellerLeatherFlask.prefab,26000,6500,1400,0.2612234950065613,0.3705000579357147,0.17053568363189697,Carryable tied leather flask; reconstructed without modern zipper or metal hardware
+WindCarvedPillar,风蚀岩柱,Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/WindCarvedPillar.prefab,47999,11999,2399,3.8162853717803955,7.930052757263184,3.5491371154785156,Static environment prop

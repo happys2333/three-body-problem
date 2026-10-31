@@ -1,0 +1,33 @@
+{
+  "id": "NaturalRidgeV2",
+  "sourceId": "NaturalRidgeV2",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/NaturalRidgeV2.prefab",
+  "modifications": [
+    "Thin ridge deepened; reserved for distant terrain composition.",
+    "Display plinth cropped and capped; silhouette weathered; photographic rock surface."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    100000,
+    24000,
+    4999
+  ],
+  "sizeBlender": [
+    100.36112213134766,
+    30.39535903930664,
+    18.459014892578125
+  ],
+  "usage": "Distant ridge backdrop; not a foreground climbable mountain",
+  "charred": false,
+  "openingWidth": 0,
+  "openingHeight": 0
+}

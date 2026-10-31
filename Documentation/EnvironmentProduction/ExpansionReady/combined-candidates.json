@@ -1,0 +1,602 @@
+{
+  "assets": [
+    {
+      "id": "NaturalRidgeV2",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261030/NaturalRidgeV2/NaturalRidgeV2_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/NaturalRidgeV2.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        492922,
+        17077,
+        4320
+      ],
+      "widthMetres": 100.0,
+      "heightMetres": 18.739158630371094,
+      "depthMetres": 18.36306381225586,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261030/NaturalRidgeV2/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/NaturalRidgeV2/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/NaturalRidgeV2/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/NaturalRidgeV2/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "ShadeOverhangV2",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261030/ShadeOverhangV2/ShadeOverhangV2_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShadeOverhangV2.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        504200,
+        37652,
+        8248
+      ],
+      "widthMetres": 12.000000953674316,
+      "heightMetres": 9.88274097442627,
+      "depthMetres": 11.999543190002441,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShadeOverhangV2/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShadeOverhangV2/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShadeOverhangV2/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShadeOverhangV2/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "WindCarvedPillar",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261030/WindCarvedPillar/WindCarvedPillar_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/WindCarvedPillar.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        500063,
+        30616,
+        6849
+      ],
+      "widthMetres": 6.453588962554932,
+      "heightMetres": 9.0,
+      "depthMetres": 6.847288131713867,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261030/WindCarvedPillar/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/WindCarvedPillar/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/WindCarvedPillar/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/WindCarvedPillar/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "SplitBoulder",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261030/SplitBoulder/SplitBoulder_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/SplitBoulder.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        49978,
+        20972,
+        6197
+      ],
+      "widthMetres": 3.6050775051116943,
+      "heightMetres": 2.999999761581421,
+      "depthMetres": 3.6052494049072266,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261030/SplitBoulder/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/SplitBoulder/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/SplitBoulder/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/SplitBoulder/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "ScreePatch",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261030/ScreePatch/ScreePatch_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ScreePatch.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        50008,
+        18986,
+        5595
+      ],
+      "widthMetres": 7.0,
+      "heightMetres": 3.3789241313934326,
+      "depthMetres": 8.005837440490723,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ScreePatch/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ScreePatch/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ScreePatch/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ScreePatch/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "DeadTamariskV2",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261030/DeadTamariskV2/DeadTamariskV2_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/DeadTamariskV2.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        50000,
+        13493,
+        4392
+      ],
+      "widthMetres": 1.6769543886184692,
+      "heightMetres": 2.200000047683716,
+      "depthMetres": 1.3493280410766602,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261030/DeadTamariskV2/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/DeadTamariskV2/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/DeadTamariskV2/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/DeadTamariskV2/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "DesertDryScrubV2",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261030/DesertDryScrubV2/DesertDryScrubV2_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/DesertDryScrubV2.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        50000,
+        16226,
+        5411
+      ],
+      "widthMetres": 0.9871476888656616,
+      "heightMetres": 0.75,
+      "depthMetres": 1.1575901508331299,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261030/DesertDryScrubV2/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/DesertDryScrubV2/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/DesertDryScrubV2/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/DesertDryScrubV2/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "CharredBush",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261030/CharredBush/CharredBush_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/CharredBush.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        50000,
+        12108,
+        3481
+      ],
+      "widthMetres": 0.7568436861038208,
+      "heightMetres": 1.100000023841858,
+      "depthMetres": 0.6442378163337708,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261030/CharredBush/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/CharredBush/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/CharredBush/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/CharredBush/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "ScorchedTree",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261030/ScorchedTree/ScorchedTree_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ScorchedTree.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        50000,
+        12012,
+        3199
+      ],
+      "widthMetres": 1.974531650543213,
+      "heightMetres": 2.8000001907348633,
+      "depthMetres": 1.6425518989562988,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ScorchedTree/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ScorchedTree/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ScorchedTree/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ScorchedTree/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "TravellerWaterskin",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261030/TravellerWaterskin/TravellerWaterskin_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/TravellerWaterskin.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        50000,
+        18258,
+        5445
+      ],
+      "widthMetres": 0.4729262888431549,
+      "heightMetres": 0.550000011920929,
+      "depthMetres": 0.4303957223892212,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261030/TravellerWaterskin/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/TravellerWaterskin/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/TravellerWaterskin/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/TravellerWaterskin/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "ShangRammedWall",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261030/ShangRammedWall/ShangRammedWall_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShangRammedWall.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        499992,
+        17724,
+        3607
+      ],
+      "widthMetres": 8.0,
+      "heightMetres": 14.461283683776855,
+      "depthMetres": 45.526241302490234,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShangRammedWall/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShangRammedWall/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShangRammedWall/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShangRammedWall/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "ShangTimberGate",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261030/ShangTimberGate/ShangTimberGate_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShangTimberGate.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        500000,
+        39639,
+        9648
+      ],
+      "widthMetres": 5.999999523162842,
+      "heightMetres": 5.306297302246094,
+      "depthMetres": 3.1930558681488037,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShangTimberGate/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShangTimberGate/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShangTimberGate/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShangTimberGate/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "PalaceStoneColumn",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261030/PalaceStoneColumn/PalaceStoneColumn_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/PalaceStoneColumn.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        499760,
+        26408,
+        5242
+      ],
+      "widthMetres": 3.949573278427124,
+      "heightMetres": 4.0,
+      "depthMetres": 3.9942362308502197,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261030/PalaceStoneColumn/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/PalaceStoneColumn/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/PalaceStoneColumn/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/PalaceStoneColumn/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "ShangBronzeDing",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261030/ShangBronzeDing/ShangBronzeDing_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShangBronzeDing.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        50172,
+        19416,
+        6915
+      ],
+      "widthMetres": 1.2594919204711914,
+      "heightMetres": 1.2999999523162842,
+      "depthMetres": 0.9594906568527222,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShangBronzeDing/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShangBronzeDing/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShangBronzeDing/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShangBronzeDing/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "ShangBronzeBrazier",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261030/ShangBronzeBrazier/ShangBronzeBrazier_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShangBronzeBrazier.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        50356,
+        24217,
+        7983
+      ],
+      "widthMetres": 1.531084656715393,
+      "heightMetres": 1.2000000476837158,
+      "depthMetres": 1.5303040742874146,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShangBronzeBrazier/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShangBronzeBrazier/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShangBronzeBrazier/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShangBronzeBrazier/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "ShangMarketGoods",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261030/ShangMarketGoods/ShangMarketGoods_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShangMarketGoods.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        49992,
+        12798,
+        4121
+      ],
+      "widthMetres": 2.0,
+      "heightMetres": 0.8323845863342285,
+      "depthMetres": 0.6482484936714172,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShangMarketGoods/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShangMarketGoods/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShangMarketGoods/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/ShangMarketGoods/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "MedievalStoneArch",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalStoneArch/MedievalStoneArch_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/MedievalStoneArch.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        499836,
+        31806,
+        6509
+      ],
+      "widthMetres": 6.276058673858643,
+      "heightMetres": 4.5,
+      "depthMetres": 3.5094337463378906,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalStoneArch/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalStoneArch/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalStoneArch/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalStoneArch/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "MedievalPew",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalPew/MedievalPew_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/MedievalPew.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        50000,
+        14104,
+        4685
+      ],
+      "widthMetres": 2.200000047683716,
+      "heightMetres": 1.1601229906082153,
+      "depthMetres": 0.7025817632675171,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalPew/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalPew/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalPew/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalPew/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "MedievalLectern",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalLectern/MedievalLectern_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/MedievalLectern.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        50000,
+        13493,
+        4089
+      ],
+      "widthMetres": 0.7205103635787964,
+      "heightMetres": 1.3000001907348633,
+      "depthMetres": 0.8128411769866943,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalLectern/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalLectern/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalLectern/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalLectern/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "MedievalIronBrazier",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalIronBrazier/MedievalIronBrazier_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/MedievalIronBrazier.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        50000,
+        26460,
+        8495
+      ],
+      "widthMetres": 1.277939796447754,
+      "heightMetres": 1.1000001430511475,
+      "depthMetres": 1.280644178390503,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalIronBrazier/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalIronBrazier/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalIronBrazier/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalIronBrazier/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "ShangStraightEarthWall",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261031/ShangStraightEarthWall/ShangStraightEarthWall_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261031/Prefabs/ShangStraightEarthWall.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        496973,
+        16824,
+        6859
+      ],
+      "widthMetres": 8.0,
+      "heightMetres": 17.969669342041016,
+      "depthMetres": 92.82820129394531,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261031/ShangStraightEarthWall/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261031/ShangStraightEarthWall/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261031/ShangStraightEarthWall/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261031/ShangStraightEarthWall/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "GobiShadeCanopyV3",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261031/GobiShadeCanopyV3/GobiShadeCanopyV3_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261031/Prefabs/GobiShadeCanopyV3.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        499922,
+        56711,
+        12270
+      ],
+      "widthMetres": 12.000000953674316,
+      "heightMetres": 11.281612396240234,
+      "depthMetres": 14.29440975189209,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261031/GobiShadeCanopyV3/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261031/GobiShadeCanopyV3/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261031/GobiShadeCanopyV3/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261031/GobiShadeCanopyV3/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "PyramidEntryPassage",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261031/PyramidEntryPassage/PyramidEntryPassage_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261031/Prefabs/PyramidEntryPassage.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        500026,
+        29347,
+        5918
+      ],
+      "widthMetres": 7.0,
+      "heightMetres": 5.651959419250488,
+      "depthMetres": 5.982707500457764,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261031/PyramidEntryPassage/Textures/PyramidEntryPassage_Albedo.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261031/PyramidEntryPassage/Textures/PyramidEntryPassage_Metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261031/PyramidEntryPassage/Textures/PyramidEntryPassage_Normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261031/PyramidEntryPassage/Textures/PyramidEntryPassage_Roughness.png"
+      ]
+    },
+    {
+      "id": "PalaceStoneStairs",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261031/PalaceStoneStairs/PalaceStoneStairs_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261031/Prefabs/PalaceStoneStairs.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        499998,
+        22345,
+        4836
+      ],
+      "widthMetres": 3.999999761581421,
+      "heightMetres": 10.472227096557617,
+      "depthMetres": 17.096147537231445,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261031/PalaceStoneStairs/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261031/PalaceStoneStairs/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261031/PalaceStoneStairs/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261031/PalaceStoneStairs/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    },
+    {
+      "id": "BronzeWallTorchBracket",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261031/BronzeWallTorchBracket/BronzeWallTorchBracket_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261031/Prefabs/BronzeWallTorchBracket.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        50000,
+        12728,
+        3932
+      ],
+      "widthMetres": 0.22260716557502747,
+      "heightMetres": 0.4500000476837158,
+      "depthMetres": 0.15539997816085815,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261031/BronzeWallTorchBracket/Textures/BronzeWallTorchBracket_Albedo.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261031/BronzeWallTorchBracket/Textures/BronzeWallTorchBracket_Metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261031/BronzeWallTorchBracket/Textures/BronzeWallTorchBracket_Normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261031/BronzeWallTorchBracket/Textures/BronzeWallTorchBracket_Roughness.png"
+      ]
+    },
+    {
+      "id": "ShangOracleBone",
+      "source": "Assets/_Project/Art/HunyuanEnvironment20261031/ShangOracleBone/ShangOracleBone_PBR.fbx",
+      "prefab": "Assets/_Project/Art/HunyuanEnvironment20261031/Prefabs/ShangOracleBone.prefab",
+      "passed": true,
+      "albedo": true,
+      "normal": true,
+      "metallicSmoothness": true,
+      "trianglesByLod": [
+        50000,
+        13883,
+        3707
+      ],
+      "widthMetres": 0.2766076624393463,
+      "heightMetres": 0.31999996304512024,
+      "depthMetres": 0.07353906333446503,
+      "textures": [
+        "Assets/_Project/Art/HunyuanEnvironment20261031/ShangOracleBone/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261031/ShangOracleBone/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261031/ShangOracleBone/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanEnvironment20261031/ShangOracleBone/Textures/texture_pbr_20250901_roughness.png"
+      ]
+    }
+  ]
+}

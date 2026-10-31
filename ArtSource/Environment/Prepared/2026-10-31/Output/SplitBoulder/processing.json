@@ -1,0 +1,32 @@
+{
+  "id": "SplitBoulder",
+  "sourceId": "SplitBoulder",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/SplitBoulder.prefab",
+  "modifications": [
+    "Display plinth cropped and capped; silhouette weathered; photographic rock surface."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    32000,
+    8000,
+    1800
+  ],
+  "sizeBlender": [
+    3.2546792030334473,
+    3.330791711807251,
+    2.6393651962280273
+  ],
+  "usage": "Static environment prop",
+  "charred": false,
+  "openingWidth": 0,
+  "openingHeight": 0
+}

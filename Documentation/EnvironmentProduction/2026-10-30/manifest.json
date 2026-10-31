@@ -1,0 +1,618 @@
+{
+  "date": "2026-10-30",
+  "platform": "Tencent Hunyuan 3D web V3.1 through user Chrome UI",
+  "entry": "https://3d.hunyuan.tencent.com/creation",
+  "observedRemainingAtStart": 20,
+  "observedRemainingLatest": 0,
+  "submissions": 20,
+  "purchaseOrSubscription": false,
+  "unityRoot": "Assets/_Project/Art/HunyuanEnvironment20261030",
+  "scope": "New reusable environment and prop candidates. Preserve source exports; validate appearance and Unity library before any story integration.",
+  "status": "source_downloads_complete_pending_preparation_and_art_review",
+  "assets": [
+    {
+      "id": "NaturalRidgeV2",
+      "name": "天然破碎岩脊",
+      "category": "gobi",
+      "order": 1,
+      "prompt": "一段天然荒漠砂岩山脊，连续不规则锯齿峰线，灰褐色沉积岩层、风蚀沟槽、细密破碎岩面，左右端自然收低，宽底可埋入地形。摄影扫描质感，真实粗糙度，均匀阴天光照，独立完整岩体，浅灰背景，无底座，无人造结构，无卡通风格。",
+      "requestedTriangles": 500000,
+      "targetSizeMetres": 100,
+      "sizeAxis": "width",
+      "yawDegrees": 90,
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/7c60d2ae5cbaccc0d34a8e5a81ede7bc.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-30/NaturalRidgeV2/NaturalRidgeV2_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261030/NaturalRidgeV2/NaturalRidgeV2_PBR.fbx",
+        "sha256": "9da4b4efde191e1cd927089374e124d333d297ce9d0bc1bcf572fac4e0ceab3a",
+        "bytes": 54068220
+      },
+      "normalizationNote": "Source ridge runs along Z. Rotate around Y before normalizing to 100 m width; original FBX preserved.",
+      "unityValidation": {
+        "id": "NaturalRidgeV2",
+        "source": "Assets/_Project/Art/HunyuanEnvironment20261030/NaturalRidgeV2/NaturalRidgeV2_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/NaturalRidgeV2.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          492922,
+          17077,
+          4320
+        ],
+        "widthMetres": 100.0,
+        "heightMetres": 18.739158630371094,
+        "depthMetres": 18.36306381225586,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment20261030/NaturalRidgeV2/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment20261030/NaturalRidgeV2/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment20261030/NaturalRidgeV2/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment20261030/NaturalRidgeV2/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Saved Unity LOD0 isolated preview, 2026-10-30",
+        "note": "已消除上一轮明显的门洞状人工结构，但当前结果是狭长薄带、重复锯齿小峰，岩面偏绘制风格；仍需修整轮廓、摄影岩面与地形接缝。"
+      }
+    },
+    {
+      "id": "ShadeOverhangV2",
+      "name": "巨日避险岩棚",
+      "category": "gobi",
+      "order": 2,
+      "prompt": "一块天然荒漠悬挑巨岩，厚重水平砂岩岩顶向前伸出，下方宽敞开放，可供两名成年人站立避日，后方是连续坚实岩壁，侧面自然断裂。真实风蚀层理、灰褐粗糙岩面，摄影扫描质感，独立完整岩体，浅灰背景，无地台、植物和人工结构。",
+      "requestedTriangles": 500000,
+      "targetSizeMetres": 12,
+      "sizeAxis": "width",
+      "yawDegrees": 0,
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/3fea4e702a3d84d251019321de3d5589.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-30/ShadeOverhangV2/ShadeOverhangV2_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261030/ShadeOverhangV2/ShadeOverhangV2_PBR.fbx",
+        "sha256": "b450b1e4bfe17321da2a6620cc2a3a1b2d1cb353b6565b5443bf1b993368558a",
+        "bytes": 61834076
+      },
+      "unityValidation": {
+        "id": "ShadeOverhangV2",
+        "source": "Assets/_Project/Art/HunyuanEnvironment20261030/ShadeOverhangV2/ShadeOverhangV2_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShadeOverhangV2.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          504200,
+          37652,
+          8248
+        ],
+        "widthMetres": 12.000000953674316,
+        "heightMetres": 9.88274097442627,
+        "depthMetres": 11.999543190002441,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment20261030/ShadeOverhangV2/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment20261030/ShadeOverhangV2/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment20261030/ShadeOverhangV2/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment20261030/ShadeOverhangV2/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Saved Unity LOD0 isolated preview, 2026-10-30",
+        "note": "生成结果把参照人形、球体与矩形地台烘进模型，必须先移除；岩棚形体仍有明显块面。不能作为可用人物、已验证掩体或可通行空间。"
+      }
+    },
+    {
+      "id": "WindCarvedPillar",
+      "name": "风蚀岩柱",
+      "category": "gobi",
+      "order": 3,
+      "prompt": "一根不对称戈壁风蚀砂岩柱，中段收窄，顶部粗厚偏斜，底部自然碎裂，灰黄褐色沉积层、砂蚀凹坑与细密裂隙。真实岩石摄影扫描质感，均匀漫射光，独立完整物体，浅灰背景，无底座、建筑、植被，无低多边形与绘画风格。",
+      "requestedTriangles": 500000,
+      "targetSizeMetres": 9,
+      "sizeAxis": "height",
+      "yawDegrees": 0,
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/8d66951aaef8ce08982fa96020552454.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-30/WindCarvedPillar/WindCarvedPillar_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261030/WindCarvedPillar/WindCarvedPillar_PBR.fbx",
+        "sha256": "e1ef90ca191c2eaaffa6c2e82118030dcee67bd954343d22de82a2d7c9d88220",
+        "bytes": 56068428
+      },
+      "unityValidation": {
+        "id": "WindCarvedPillar",
+        "source": "Assets/_Project/Art/HunyuanEnvironment20261030/WindCarvedPillar/WindCarvedPillar_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/WindCarvedPillar.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          500063,
+          30616,
+          6849
+        ],
+        "widthMetres": 6.453588962554932,
+        "heightMetres": 9.0,
+        "depthMetres": 6.847288131713867,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment20261030/WindCarvedPillar/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment20261030/WindCarvedPillar/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment20261030/WindCarvedPillar/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment20261030/WindCarvedPillar/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Saved Unity LOD0 isolated preview, 2026-10-30",
+        "note": "柱体轮廓清楚，但块状台阶和图绘裂纹明显，且附带圆形展示底盘；需去底盘并重配摄影岩面。"
+      }
+    },
+    {
+      "id": "SplitBoulder",
+      "name": "开裂巨石",
+      "category": "gobi",
+      "order": 4,
+      "prompt": "一块矮胖不规则戈壁巨石，中央深裂缝但整体相连，棕灰色粗糙砂岩、细碎剥落面和风蚀孔洞，底部自然平稳可埋入沙土。写实摄影扫描游戏道具，均匀漫射光，完整独立物体，浅灰背景，无地台、草木和人工雕刻。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 3,
+      "sizeAxis": "height",
+      "yawDegrees": 0,
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/7c02febc0fb7f82bc4238a087f41ad95.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-30/SplitBoulder/SplitBoulder_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261030/SplitBoulder/SplitBoulder_PBR.fbx",
+        "sha256": "4ace5d233af38bda201fbd81788a6d4d24da823d73ee723b0cefbece1f1cff6a",
+        "bytes": 30883884
+      },
+      "unityValidation": {
+        "id": "SplitBoulder",
+        "source": "Assets/_Project/Art/HunyuanEnvironment20261030/SplitBoulder/SplitBoulder_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/SplitBoulder.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          49978,
+          20972,
+          6197
+        ],
+        "widthMetres": 3.6050775051116943,
+        "heightMetres": 2.999999761581421,
+        "depthMetres": 3.6052494049072266,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment20261030/SplitBoulder/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment20261030/SplitBoulder/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment20261030/SplitBoulder/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment20261030/SplitBoulder/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Saved Unity LOD0 isolated preview, 2026-10-30",
+        "note": "有完整开裂岩体，但卵形轮廓和孔洞偏风格化，附带展示底盘；需清理底盘、调整自然轮廓和材质。"
+      }
+    },
+    {
+      "id": "ScreePatch",
+      "name": "荒漠碎石簇",
+      "category": "gobi",
+      "order": 5,
+      "prompt": "一簇七块大小不一的扁平荒漠碎岩，紧密交叠为一个低矮整体，棱角破碎、自然磨蚀，灰褐砂岩颗粒和层状断口，适合散布戈壁地面。摄影扫描质感，均匀漫射光，完整独立物体，浅灰背景，没有包围石头的泥土地板或展示底座。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 7,
+      "sizeAxis": "width",
+      "yawDegrees": 0,
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/a60f1d05a01dc1f88802d39f5fda52a7.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-30/ScreePatch/ScreePatch_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261030/ScreePatch/ScreePatch_PBR.fbx",
+        "sha256": "212d786e75e31890aa46ddc8d9446430950779a0fc886e58847b1eb50863c292",
+        "bytes": 30446172
+      },
+      "unityValidation": {
+        "id": "ScreePatch",
+        "source": "Assets/_Project/Art/HunyuanEnvironment20261030/ScreePatch/ScreePatch_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ScreePatch.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          50008,
+          18986,
+          5595
+        ],
+        "widthMetres": 7.0,
+        "heightMetres": 3.3789241313934326,
+        "depthMetres": 8.005837440490723,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment20261030/ScreePatch/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment20261030/ScreePatch/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment20261030/ScreePatch/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment20261030/ScreePatch/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Saved Unity LOD0 isolated preview, 2026-10-30",
+        "note": "结果更像层叠石堆，而不是低矮地表碎石簇，附带薄地台；宜改作石堆候选，不能直接当作自然碎石散布。"
+      }
+    },
+    {
+      "id": "DeadTamariskV2",
+      "name": "枯死柽柳",
+      "category": "gobi",
+      "order": 6,
+      "prompt": "一株枯死的荒漠柽柳灌木，主干低矮扭曲，稀疏细枝从根部自然分叉，完全无叶，灰褐色开裂树皮，轮廓疏松不对称，根部只有少量短根。真实植物标本与摄影扫描质感，均匀漫射光，完整独立物体，浅灰背景，无盆、泥土圆盘或底座。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 2.2,
+      "sizeAxis": "height",
+      "yawDegrees": 0,
+      "state": "library_technical_checks_passed_art_rework_required",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/d219da9ff84538476593de17bbfb1c13.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-30/DeadTamariskV2/DeadTamariskV2_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261030/DeadTamariskV2/DeadTamariskV2_PBR.fbx",
+        "sha256": "457776571ea0582d572e11453b2d352017ff2007e72d3f86e687c283fc3a2109",
+        "bytes": 30596284
+      },
+      "unityValidation": {
+        "id": "DeadTamariskV2",
+        "source": "Assets/_Project/Art/HunyuanEnvironment20261030/DeadTamariskV2/DeadTamariskV2_PBR.fbx",
+        "prefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/DeadTamariskV2.prefab",
+        "passed": true,
+        "albedo": true,
+        "normal": true,
+        "metallicSmoothness": true,
+        "trianglesByLod": [
+          50000,
+          13493,
+          4392
+        ],
+        "widthMetres": 1.6769543886184692,
+        "heightMetres": 2.200000047683716,
+        "depthMetres": 1.3493280410766602,
+        "textures": [
+          "Assets/_Project/Art/HunyuanEnvironment20261030/DeadTamariskV2/Textures/texture_pbr_20250901.png",
+          "Assets/_Project/Art/HunyuanEnvironment20261030/DeadTamariskV2/Textures/texture_pbr_20250901_metallic.png",
+          "Assets/_Project/Art/HunyuanEnvironment20261030/DeadTamariskV2/Textures/texture_pbr_20250901_normal.png",
+          "Assets/_Project/Art/HunyuanEnvironment20261030/DeadTamariskV2/Textures/texture_pbr_20250901_roughness.png"
+        ]
+      },
+      "artReview": {
+        "status": "reviewed_requires_rework",
+        "method": "Saved Unity LOD0 isolated preview, 2026-10-30",
+        "note": "结果为枯树形体，附带环形盆底，上部有似鸟形小块；需去除底盘和多余物体，并补粗糙树皮。"
+      }
+    },
+    {
+      "id": "DesertDryScrubV2",
+      "name": "低矮干草灌木",
+      "category": "gobi",
+      "order": 7,
+      "prompt": "一丛低矮干枯荒漠灌木，细密弯曲短枝与少量枯黄草茎，从狭小根部向外散开，枝条自然稀疏有空隙，形体不对称，适合戈壁地表近景。写实植物摄影质感，均匀漫射光，完整独立物体，浅灰背景，无树冠、盆、土块或底座。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 0.75,
+      "sizeAxis": "height",
+      "yawDegrees": 0,
+      "state": "pbr_fbx_archived_pending_unity_and_art_review",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/d0eec877e7693831ba28982eccaf9a68.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-30/DesertDryScrubV2/DesertDryScrubV2_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261030/DesertDryScrubV2/DesertDryScrubV2_PBR.fbx",
+        "sha256": "bfe4c6979b9768a1871fd51a44db1c33b709f9ba7f35080c48d6d72524448fa6",
+        "bytes": 36152684
+      }
+    },
+    {
+      "id": "CharredBush",
+      "name": "烧焦灌木残枝",
+      "category": "gobi",
+      "order": 8,
+      "prompt": "一株被烈日烧毁的荒漠灌木残枝，黑灰色焦化细枝，表面炭化裂纹与浅灰灰烬斑，细枝稀疏折断，仍保留低矮灌木自然轮廓，根部很小。写实游戏环境道具，均匀漫射光，完整独立物体，浅灰背景，无火焰、烟、地板或展示底座。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 1.1,
+      "sizeAxis": "height",
+      "yawDegrees": 0,
+      "state": "pbr_fbx_archived_pending_unity_and_art_review",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/9687bcecd8f698bce53cf9f95c9a044a.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-30/CharredBush/CharredBush_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261030/CharredBush/CharredBush_PBR.fbx",
+        "sha256": "ac73ec747169b09db0a687f4754ab423966ee2501e33ced775d35699650821b6",
+        "bytes": 38630492
+      }
+    },
+    {
+      "id": "ScorchedTree",
+      "name": "焦枯小树",
+      "category": "gobi",
+      "order": 9,
+      "prompt": "一棵矮小烧焦的荒漠枯树，扭曲细树干，三根长短不同的断裂粗枝，黑褐炭化树皮与灰白剥落表面，完全没有叶片，根部少量裸根。真实摄影扫描质感，均匀漫射光，完整独立物体，浅灰背景，无火焰、烟雾、泥土地台或底座。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 2.8,
+      "sizeAxis": "height",
+      "yawDegrees": 0,
+      "state": "pbr_fbx_archived_pending_unity_and_art_review",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/ea5f5b85ccaabd09084bcd4779485fd8.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-30/ScorchedTree/ScorchedTree_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261030/ScorchedTree/ScorchedTree_PBR.fbx",
+        "sha256": "04e906c0ac8ef692ed63f7b32c2d99ae04155174300d05affad86f6ae6355b6a",
+        "bytes": 37847612
+      }
+    },
+    {
+      "id": "TravellerWaterskin",
+      "name": "旅人皮水囊",
+      "category": "gobi",
+      "order": 10,
+      "prompt": "一个古代旅人使用的深褐色皮革水囊，鼓起的不规则梨形袋身、手工粗线缝边、细皮绳提带和小木塞口，皮面磨损与皱褶真实，朴素实用。写实近景游戏道具，均匀漫射光，完整独立物体，浅灰背景，无金属拉链、现代扣具、文字和底座。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 0.55,
+      "sizeAxis": "height",
+      "yawDegrees": 0,
+      "state": "pbr_fbx_archived_pending_unity_and_art_review",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/99526269abb345183c771e07552bef26.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-30/TravellerWaterskin/TravellerWaterskin_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261030/TravellerWaterskin/TravellerWaterskin_PBR.fbx",
+        "sha256": "a69b8a3435ecf68d5c31b24e27968e72a17d13f86f2cb65c76e9ef3fcc273fbe",
+        "bytes": 34444620
+      }
+    },
+    {
+      "id": "ShangRammedWall",
+      "name": "夯土院墙模块",
+      "category": "shang",
+      "order": 11,
+      "prompt": "一段厚重殷商风格夯土院墙，平直长方形墙身，两端竖直断面，墙顶略不规则，黄褐夯层、少量砾石和风化裂纹，底部粗石基础，朴素坚固。电影写实游戏建筑模块，均匀漫射光，完整独立物体，浅灰背景，无屋顶、门窗、琉璃、龙饰和底座。",
+      "requestedTriangles": 500000,
+      "targetSizeMetres": 8,
+      "sizeAxis": "width",
+      "yawDegrees": 0,
+      "state": "pbr_fbx_archived_pending_unity_and_art_review",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/8b990b03259b2972556c8b0c49da5411.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-30/ShangRammedWall/ShangRammedWall_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261030/ShangRammedWall/ShangRammedWall_PBR.fbx",
+        "sha256": "71e7a1c44f217e26e89ebe6d22b0974dd332a433ad7fcf6ba617b83391a1e929",
+        "bytes": 62087708
+      }
+    },
+    {
+      "id": "ShangTimberGate",
+      "name": "殷商木构院门",
+      "category": "shang",
+      "order": 12,
+      "prompt": "一座朴素殷商院门，粗壮方木立柱和直木横梁，顶部短直坡茅草盖，两侧厚夯土短墙，中央门洞完全敞开，能让成年人通行，底部没有门槛堵塞。黄褐夯土与深褐老木真实风化，电影写实建筑，浅灰背景，无弯檐、琉璃瓦、雕龙、地台或门扇。",
+      "requestedTriangles": 500000,
+      "targetSizeMetres": 6,
+      "sizeAxis": "width",
+      "yawDegrees": 0,
+      "state": "pbr_fbx_archived_pending_unity_and_art_review",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/da15b8addf34ae300053a5b594fec8d1.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-30/ShangTimberGate/ShangTimberGate_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261030/ShangTimberGate/ShangTimberGate_PBR.fbx",
+        "sha256": "c7f8effc1302493b4440c489f7bad1422ce1ad72d09ff7eb101596e540d28287",
+        "bytes": 64310652
+      }
+    },
+    {
+      "id": "PalaceStoneColumn",
+      "name": "厚墙宫殿石柱",
+      "category": "shang",
+      "order": 13,
+      "prompt": "一根厚重金字塔石殿内的方形石柱，宽厚基座、竖直柱身、简单方形柱头，巨大灰褐砂岩块砌筑，细密接缝、轻微倒角与岁月磨蚀，庄严压迫。电影写实游戏建筑构件，均匀漫射光，独立完整物体，浅灰背景，无人物、文字、金饰和展示地板。",
+      "requestedTriangles": 500000,
+      "targetSizeMetres": 4,
+      "sizeAxis": "height",
+      "yawDegrees": 0,
+      "state": "pbr_fbx_archived_pending_unity_and_art_review",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/84c1b3fe409cb291390fc6fd4ea12d9f.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-30/PalaceStoneColumn/PalaceStoneColumn_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261030/PalaceStoneColumn/PalaceStoneColumn_PBR.fbx",
+        "sha256": "125ff2089f18949a7d841a8dcc03cf9b10de3b57371f488847147729bb10e6b0",
+        "bytes": 65349020
+      }
+    },
+    {
+      "id": "ShangBronzeDing",
+      "name": "殷商青铜方鼎",
+      "category": "shang",
+      "order": 14,
+      "prompt": "一件厚重殷商青铜方鼎，长方形深腹，四根坚实柱足，两只直立大耳，腹部浅浮雕兽面纹，深褐青铜与局部青绿锈蚀，边缘磨亮，比例庄严。博物馆文物摄影质感，均匀漫射光，完整独立物体，浅灰背景，无文字、火焰、石台和金色卡通材质。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 1.3,
+      "sizeAxis": "height",
+      "yawDegrees": 0,
+      "state": "pbr_fbx_archived_pending_unity_and_art_review",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/0e00593124e5e42c501329a888bd9ad9.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-30/ShangBronzeDing/ShangBronzeDing_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261030/ShangBronzeDing/ShangBronzeDing_PBR.fbx",
+        "sha256": "f01bea7bbd2d41c4ad00a0a83f3ba34bdaf299c62ee65efc9feeac4367e3e734",
+        "bytes": 46009164
+      }
+    },
+    {
+      "id": "ShangBronzeBrazier",
+      "name": "青铜火盆",
+      "category": "shang",
+      "order": 15,
+      "prompt": "一个古代厚重青铜火盆，浅而宽的圆形盆体，三条短粗足，盆口外翻，简朴兽面浅纹，内部堆有几块黑色炭木，暗褐青铜和少量铜绿，真实磨损。电影写实游戏道具，均匀漫射光，完整独立物体，浅灰背景，无火焰、烟、现代五金和底座。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 1.2,
+      "sizeAxis": "height",
+      "yawDegrees": 0,
+      "state": "pbr_fbx_archived_pending_unity_and_art_review",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/f55c861c349fb712765a028a8ed3f96d.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-30/ShangBronzeBrazier/ShangBronzeBrazier_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261030/ShangBronzeBrazier/ShangBronzeBrazier_PBR.fbx",
+        "sha256": "6638f7fb99bf58bdda52222ee3c3b42c4a7102e43016ebf9b3cd62979966fde2",
+        "bytes": 34508108
+      }
+    },
+    {
+      "id": "ShangMarketGoods",
+      "name": "王都市集陶器货担",
+      "category": "shang",
+      "order": 16,
+      "prompt": "一副古代集市木制货担，粗木扁担横放在两只编织竹筐上，筐里装几个灰褐粗陶罐、卷起的麻布和少量谷穗，手工绳结，朴素自然磨损。电影写实近景道具，均匀漫射光，完整独立组合，浅灰背景，无文字、现代包装、金属车轮和地台。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 2,
+      "sizeAxis": "width",
+      "yawDegrees": 0,
+      "state": "pbr_fbx_archived_pending_unity_and_art_review",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/a1ab961687570ad142cc8e323dad93bc.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-30/ShangMarketGoods/ShangMarketGoods_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261030/ShangMarketGoods/ShangMarketGoods_PBR.fbx",
+        "sha256": "296262467eb5802509041e87830a573affa4c079201508f7e1606d3e6ed146b1",
+        "bytes": 40726220
+      }
+    },
+    {
+      "id": "MedievalStoneArch",
+      "name": "中世纪石拱门",
+      "category": "medieval",
+      "order": 17,
+      "prompt": "一座中世纪厚重石拱门，灰色粗石砌成半圆拱顶，两侧短厚墙墩，中央通道完全敞开，底部没有石块或门槛，细密灰浆缝、自然风化。真实欧洲古建筑摄影扫描质感，均匀漫射光，独立完整构件，浅灰背景，无雕像、尖塔、木门、地板和底座。",
+      "requestedTriangles": 500000,
+      "targetSizeMetres": 4.5,
+      "sizeAxis": "height",
+      "yawDegrees": 0,
+      "state": "pbr_fbx_archived_pending_unity_and_art_review",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/9c073b7c157685f58f76750432d447be.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-30/MedievalStoneArch/MedievalStoneArch_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalStoneArch/MedievalStoneArch_PBR.fbx",
+        "sha256": "7571665e53f770f5d64ef983b803855b97f612735a443c0698f0dc7a8c9e1d99",
+        "bytes": 67271004
+      }
+    },
+    {
+      "id": "MedievalPew",
+      "name": "中世纪木长椅",
+      "category": "medieval",
+      "order": 18,
+      "prompt": "一张中世纪教堂实木长椅，深褐厚木板座面、平直低靠背、两端简朴木扶手和稳固粗腿，木纹、磨亮边缘与陈旧划痕清晰，比例真实。电影写实游戏室内道具，均匀漫射光，完整独立物体，浅灰背景，无软垫、钉饰、文字、地板和展示底座。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 2.2,
+      "sizeAxis": "width",
+      "yawDegrees": 0,
+      "state": "pbr_fbx_archived_pending_unity_and_art_review",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/b372e66dd32d38f1afddfd7c2af318a7.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-30/MedievalPew/MedievalPew_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalPew/MedievalPew_PBR.fbx",
+        "sha256": "699fa60424507f9d4a5929eb6cb8f90e42f4b479323c7816960796b0992d236f",
+        "bytes": 42735788
+      }
+    },
+    {
+      "id": "MedievalLectern",
+      "name": "学者木讲台",
+      "category": "medieval",
+      "order": 19,
+      "prompt": "一座中世纪学者用的实木讲台，倾斜矩形阅读台面，前缘窄挡条，粗厚中央支柱与稳固十字底脚，深褐老木、手工榫接、清晰纹理与磨损，朴素实用。电影写实游戏室内道具，均匀漫射光，完整独立物体，浅灰背景，无书、烛火、文字、地台和底座。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 1.3,
+      "sizeAxis": "height",
+      "yawDegrees": 0,
+      "state": "pbr_fbx_archived_pending_unity_and_art_review",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/2d2e76a020e4371306022b62c1db6337.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-30/MedievalLectern/MedievalLectern_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalLectern/MedievalLectern_PBR.fbx",
+        "sha256": "efd630854b260dc3e6d113adb24980abf0b97d962cfd252086bcbbc38c0e8fe0",
+        "bytes": 31661244
+      }
+    },
+    {
+      "id": "MedievalIronBrazier",
+      "name": "中世纪铁火盆",
+      "category": "medieval",
+      "order": 20,
+      "prompt": "一个中世纪锻铁立式火盆，开口圆篮形盆体，粗铁条围成盆壁，三根弯曲坚实脚，内部少量暗黑木炭，黑灰铁锈、锻打痕迹与真实磨损。电影写实游戏道具，均匀漫射光，完整独立物体，浅灰背景，无火焰、烟、现代螺丝、地板和展示底座。",
+      "requestedTriangles": 50000,
+      "targetSizeMetres": 1.1,
+      "sizeAxis": "height",
+      "yawDegrees": 0,
+      "state": "pbr_fbx_archived_pending_unity_and_art_review",
+      "sceneIntegrated": false,
+      "files": {
+        "sourceDownload": "/Users/happys/Downloads/50392305aad9240c539f5baeaba727c9.fbx",
+        "rawFile": "ArtSource/Environment/Hunyuan/2026-10-30/MedievalIronBrazier/MedievalIronBrazier_PBR.fbx",
+        "projectFile": "Assets/_Project/Art/HunyuanEnvironment20261030/MedievalIronBrazier/MedievalIronBrazier_PBR.fbx",
+        "sha256": "14b3cfa1e52f136e0887dfa3bb6b4414bdf85c045eddbdcd86ef00bf0bdc0037",
+        "bytes": 36944124
+      }
+    }
+  ],
+  "generatedGroups": 20,
+  "downloadedPbrFbx": 20,
+  "browserContinuation": {
+    "status": "source_downloads_complete",
+    "completedAt": "2026-10-31T01:38:42+08:00",
+    "currentTab": "594827232",
+    "downloaded": 20,
+    "remaining": [],
+    "method": "Normal visible platform FBX export and native Chrome network-resume control; no security protections weakened."
+  },
+  "technicalPrepared": 6,
+  "artApproved": 0,
+  "verificationBaselineFile": "download-resume-baseline.json",
+  "previousBrowserIssue": {
+    "state": "manual_download_interstitial_handling_required",
+    "tabId": "594827109",
+    "blockedAsset": "DesertDryScrubV2",
+    "blockedDownloadName": "2d41ff7bcfa4b8b2021a1737870438d2.fbx",
+    "blockedDomain": "hunyuan-3d-1258344703.cos.ap-guangzhou.myqcloud.com",
+    "browserError": "ERR_BLOCKED_BY_CLIENT",
+    "bypassed": false,
+    "note": "User asked to handle the browser download block; all 20 generated groups remain in the Hunyuan library."
+  },
+  "downloadResume": {
+    "date": "2026-10-31",
+    "resumedDownloads": 14,
+    "newGenerationRequests": 0,
+    "purchases": 0,
+    "securitySettingsChanged": false,
+    "extensionsDisabled": false,
+    "observedCurrentDailyBalance": 20,
+    "note": "Daily generation quota had refreshed after midnight. Exporting existing models did not submit new generation requests.",
+    "diagnosis": "CHROME_DOWNLOAD_DIAGNOSIS.md",
+    "sourceAudit": "source-file-audit.json"
+  }
+}

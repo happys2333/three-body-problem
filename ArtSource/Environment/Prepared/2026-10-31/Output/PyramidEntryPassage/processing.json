@@ -1,0 +1,33 @@
+{
+  "id": "PyramidEntryPassage",
+  "sourceId": "PyramidEntryPassage",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261031/Prefabs/PyramidEntryPassage.prefab",
+  "modifications": [
+    "Entire generated pyramid repurposed as a large palace; gold finish replaced by masonry; real chamber and entrance subtracted; floor and dais rebuilt."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    85000,
+    20000,
+    4500
+  ],
+  "sizeBlender": [
+    47.9996337890625,
+    50.51318359375,
+    38.76578903198242
+  ],
+  "usage": "Enterable pyramid palace: 48 m exterior, 14 by 18 m chamber, 8 m headroom, thick stone walls and a raised dais",
+  "charred": false,
+  "openingWidth": 3.4,
+  "openingHeight": 4.4,
+  "hasInterior": true
+}

@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-10-31T01:38:42+08:00",
+  "sourceDownloadsComplete": 20,
+  "resumedSourceDownloads": 14,
+  "automaticDownloadsAlreadyAllowed": true,
+  "secureConnectionObserved": true,
+  "shortAutomationTimeoutIsNotBlockEvidence": true,
+  "originalClientBlockReproduced": false,
+  "uniqueCauseOfOriginalClientBlock": "Not established",
+  "taskManagerObservation": {
+    "memory": "2.5 GB",
+    "cpuSnapshot": 16.9,
+    "networkSnapshot": 0,
+    "scope": "A point-in-time observation; not proof of the cause."
+  },
+  "securitySettingsChanged": false,
+  "extensionsDisabled": false,
+  "newGenerationRequests": 0,
+  "artApproved": 0,
+  "preparedPrefabs": 6,
+  "confirmedNetworkInterruptions": [
+    {
+      "asset": "ShangBronzeBrazier",
+      "file": "f55c861c349fb712765a028a8ed3f96d.fbx",
+      "message": "请检查互联网连接状况",
+      "recoveredBy": "Native Chrome Continue download",
+      "completed": true
+    },
+    {
+      "asset": "MedievalIronBrazier",
+      "file": "50392305aad9240c539f5baeaba727c9.fbx",
+      "message": "请检查互联网连接状况",
+      "recoveredBy": "Native Chrome Continue download",
+      "completed": true
+    }
+  ],
+  "finalUnityAssetRefresh": "completed, idle",
+  "consoleErrorWarningCountAfterRefresh": 0,
+  "proof": "DownloadProof/CompletedDownloads.jpg"
+}

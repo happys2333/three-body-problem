@@ -1,0 +1,131 @@
+[
+  {
+    "id": "NaturalRidgeV2",
+    "downloadPath": "/Users/happys/Downloads/7c60d2ae5cbaccc0d34a8e5a81ede7bc.fbx",
+    "pbrCandidate": 1
+  },
+  {
+    "id": "ShadeOverhangV2",
+    "downloadPath": "/Users/happys/Downloads/3fea4e702a3d84d251019321de3d5589.fbx",
+    "pbrCandidate": 1
+  },
+  {
+    "id": "WindCarvedPillar",
+    "downloadPath": "/Users/happys/Downloads/8d66951aaef8ce08982fa96020552454.fbx",
+    "pbrCandidate": 1
+  },
+  {
+    "id": "SplitBoulder",
+    "downloadPath": "/Users/happys/Downloads/7c02febc0fb7f82bc4238a087f41ad95.fbx",
+    "pbrCandidate": 1
+  },
+  {
+    "id": "ScreePatch",
+    "downloadPath": "/Users/happys/Downloads/a60f1d05a01dc1f88802d39f5fda52a7.fbx",
+    "pbrCandidate": 1
+  },
+  {
+    "id": "DeadTamariskV2",
+    "downloadPath": "/Users/happys/Downloads/d219da9ff84538476593de17bbfb1c13.fbx",
+    "pbrCandidate": 1,
+    "observation": "Sole new completed FBX after the verified cee8ac51 UI export; browser download event was not returned."
+  },
+  {
+    "id": "DesertDryScrubV2",
+    "downloadPath": "/Users/happys/Downloads/d0eec877e7693831ba28982eccaf9a68.fbx",
+    "pbrCandidate": 1,
+    "observation": "Downloaded through the platform FBX menu. Chrome native download bubble confirmed completion although the automation download event timed out.",
+    "sha256": "bfe4c6979b9768a1871fd51a44db1c33b709f9ba7f35080c48d6d72524448fa6",
+    "bytes": 36152684
+  },
+  {
+    "id": "CharredBush",
+    "downloadPath": "/Users/happys/Downloads/9687bcecd8f698bce53cf9f95c9a044a.fbx",
+    "pbrCandidate": 1,
+    "observation": "Normal FBX export completed after the initial 20-second observation window; no safety setting was changed."
+  },
+  {
+    "id": "ScorchedTree",
+    "downloadPath": "/Users/happys/Downloads/ea5f5b85ccaabd09084bcd4779485fd8.fbx",
+    "pbrCandidate": 1,
+    "uiGroupIndex": 11,
+    "observation": "Chrome native download bubble confirmed 36.1 MB completed after normal FBX export; the initial short observation window did not establish failure."
+  },
+  {
+    "id": "TravellerWaterskin",
+    "downloadPath": "/Users/happys/Downloads/99526269abb345183c771e07552bef26.fbx",
+    "pbrCandidate": 1,
+    "uiGroupIndex": 10,
+    "observation": "Normal platform FBX menu export; completion verified from the final file, not solely from an automation download event."
+  },
+  {
+    "id": "ShangRammedWall",
+    "downloadPath": "/Users/happys/Downloads/8b990b03259b2972556c8b0c49da5411.fbx",
+    "pbrCandidate": 1,
+    "uiGroupIndex": 9,
+    "observation": "Normal platform FBX menu export; completion verified from the final file, not solely from an automation download event."
+  },
+  {
+    "id": "ShangTimberGate",
+    "downloadPath": "/Users/happys/Downloads/da15b8addf34ae300053a5b594fec8d1.fbx",
+    "pbrCandidate": 1,
+    "uiGroupIndex": 8,
+    "observation": "Normal platform FBX menu export; completion verified from the final file, not solely from an automation download event."
+  },
+  {
+    "id": "PalaceStoneColumn",
+    "downloadPath": "/Users/happys/Downloads/84c1b3fe409cb291390fc6fd4ea12d9f.fbx",
+    "pbrCandidate": 1,
+    "uiGroupIndex": 7,
+    "observation": "Normal platform FBX menu export; completion verified from the final file, not solely from an automation download event."
+  },
+  {
+    "id": "ShangBronzeDing",
+    "downloadPath": "/Users/happys/Downloads/0e00593124e5e42c501329a888bd9ad9.fbx",
+    "pbrCandidate": 1,
+    "uiGroupIndex": 6,
+    "observation": "Normal platform FBX menu export; completion verified from the final file, not solely from an automation download event."
+  },
+  {
+    "id": "ShangBronzeBrazier",
+    "downloadPath": "/Users/happys/Downloads/f55c861c349fb712765a028a8ed3f96d.fbx",
+    "pbrCandidate": 1,
+    "uiGroupIndex": 5,
+    "observation": "Normal platform FBX menu export; completion verified from the final file, not solely from an automation download event."
+  },
+  {
+    "id": "ShangMarketGoods",
+    "downloadPath": "/Users/happys/Downloads/a1ab961687570ad142cc8e323dad93bc.fbx",
+    "pbrCandidate": 1,
+    "uiGroupIndex": 4,
+    "observation": "Normal platform FBX menu export; completion verified from the final file, not solely from an automation download event."
+  },
+  {
+    "id": "MedievalStoneArch",
+    "downloadPath": "/Users/happys/Downloads/9c073b7c157685f58f76750432d447be.fbx",
+    "pbrCandidate": 1,
+    "uiGroupIndex": 3,
+    "observation": "Normal platform FBX menu export; completion verified from the final file, not solely from an automation download event."
+  },
+  {
+    "id": "MedievalPew",
+    "downloadPath": "/Users/happys/Downloads/b372e66dd32d38f1afddfd7c2af318a7.fbx",
+    "pbrCandidate": 1,
+    "uiGroupIndex": 2,
+    "observation": "Normal platform FBX menu export; completion verified from the final file, not solely from an automation download event."
+  },
+  {
+    "id": "MedievalLectern",
+    "downloadPath": "/Users/happys/Downloads/2d2e76a020e4371306022b62c1db6337.fbx",
+    "pbrCandidate": 1,
+    "uiGroupIndex": 1,
+    "observation": "Normal platform FBX menu export; completion verified from the final file, not solely from an automation download event."
+  },
+  {
+    "id": "MedievalIronBrazier",
+    "downloadPath": "/Users/happys/Downloads/50392305aad9240c539f5baeaba727c9.fbx",
+    "pbrCandidate": 1,
+    "uiGroupIndex": 0,
+    "observation": "Normal platform FBX menu export; completion verified from the final file, not solely from an automation download event."
+  }
+]

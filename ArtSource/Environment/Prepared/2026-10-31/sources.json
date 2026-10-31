@@ -1,0 +1,212 @@
+{
+    "assets": [
+        {
+            "id": "NaturalRidgeV2",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/NaturalRidgeV2.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261030/NaturalRidgeV2/Textures/texture_pbr_20250901.png",
+            "width": 100.0,
+            "height": 18.739158630371095,
+            "depth": 18.36306381225586
+        },
+        {
+            "id": "ShadeOverhangV2",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShadeOverhangV2.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261030/ShadeOverhangV2/Textures/texture_pbr_20250901.png",
+            "width": 12.000000953674317,
+            "height": 9.88274097442627,
+            "depth": 11.999543190002442
+        },
+        {
+            "id": "WindCarvedPillar",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/WindCarvedPillar.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261030/WindCarvedPillar/Textures/texture_pbr_20250901.png",
+            "width": 6.453588962554932,
+            "height": 9.0,
+            "depth": 6.847288131713867
+        },
+        {
+            "id": "SplitBoulder",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/SplitBoulder.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261030/SplitBoulder/Textures/texture_pbr_20250901.png",
+            "width": 3.6050775051116945,
+            "height": 2.999999761581421,
+            "depth": 3.6052494049072267
+        },
+        {
+            "id": "ScreePatch",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ScreePatch.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261030/ScreePatch/Textures/texture_pbr_20250901.png",
+            "width": 7.0,
+            "height": 3.3789241313934328,
+            "depth": 8.005837440490723
+        },
+        {
+            "id": "DeadTamariskV2",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/DeadTamariskV2.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261030/DeadTamariskV2/Textures/texture_pbr_20250901.png",
+            "width": 1.6769543886184693,
+            "height": 2.200000047683716,
+            "depth": 1.3493280410766602
+        },
+        {
+            "id": "DesertDryScrubV2",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/DesertDryScrubV2.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261030/DesertDryScrubV2/Textures/texture_pbr_20250901.png",
+            "width": 0.9871476888656616,
+            "height": 0.75,
+            "depth": 1.1575901508331299
+        },
+        {
+            "id": "CharredBush",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/CharredBush.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261030/CharredBush/Textures/texture_pbr_20250901.png",
+            "width": 0.7568436861038208,
+            "height": 1.100000023841858,
+            "depth": 0.6442378163337708
+        },
+        {
+            "id": "ScorchedTree",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ScorchedTree.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261030/ScorchedTree/Textures/texture_pbr_20250901.png",
+            "width": 1.974531650543213,
+            "height": 2.8000001907348635,
+            "depth": 1.6425518989562989
+        },
+        {
+            "id": "TravellerWaterskin",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/TravellerWaterskin.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261030/TravellerWaterskin/Textures/texture_pbr_20250901.png",
+            "width": 0.4729262888431549,
+            "height": 0.550000011920929,
+            "depth": 0.4303957223892212
+        },
+        {
+            "id": "ShangRammedWall",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShangRammedWall.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261030/ShangRammedWall/Textures/texture_pbr_20250901.png",
+            "width": 8.0,
+            "height": 14.461283683776856,
+            "depth": 45.526241302490237
+        },
+        {
+            "id": "ShangTimberGate",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShangTimberGate.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261030/ShangTimberGate/Textures/texture_pbr_20250901.png",
+            "width": 5.999999523162842,
+            "height": 5.306297302246094,
+            "depth": 3.1930558681488039
+        },
+        {
+            "id": "PalaceStoneColumn",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/PalaceStoneColumn.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261030/PalaceStoneColumn/Textures/texture_pbr_20250901.png",
+            "width": 3.949573278427124,
+            "height": 4.0,
+            "depth": 3.9942362308502199
+        },
+        {
+            "id": "ShangBronzeDing",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShangBronzeDing.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261030/ShangBronzeDing/Textures/texture_pbr_20250901.png",
+            "width": 1.2594919204711915,
+            "height": 1.2999999523162842,
+            "depth": 0.9594906568527222
+        },
+        {
+            "id": "ShangBronzeBrazier",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShangBronzeBrazier.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261030/ShangBronzeBrazier/Textures/texture_pbr_20250901.png",
+            "width": 1.531084656715393,
+            "height": 1.2000000476837159,
+            "depth": 1.5303040742874146
+        },
+        {
+            "id": "ShangMarketGoods",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/ShangMarketGoods.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261030/ShangMarketGoods/Textures/texture_pbr_20250901.png",
+            "width": 2.0,
+            "height": 0.8323845863342285,
+            "depth": 0.6482484936714172
+        },
+        {
+            "id": "MedievalStoneArch",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/MedievalStoneArch.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261030/MedievalStoneArch/Textures/texture_pbr_20250901.png",
+            "width": 6.276058673858643,
+            "height": 4.5,
+            "depth": 3.5094337463378908
+        },
+        {
+            "id": "MedievalPew",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/MedievalPew.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261030/MedievalPew/Textures/texture_pbr_20250901.png",
+            "width": 2.200000047683716,
+            "height": 1.1601229906082154,
+            "depth": 0.7025817632675171
+        },
+        {
+            "id": "MedievalLectern",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/MedievalLectern.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261030/MedievalLectern/Textures/texture_pbr_20250901.png",
+            "width": 0.7205103635787964,
+            "height": 1.3000001907348633,
+            "depth": 0.8128411769866943
+        },
+        {
+            "id": "MedievalIronBrazier",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261030/Prefabs/MedievalIronBrazier.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261030/MedievalIronBrazier/Textures/texture_pbr_20250901.png",
+            "width": 1.277939796447754,
+            "height": 1.1000001430511475,
+            "depth": 1.280644178390503
+        },
+        {
+            "id": "ShangStraightEarthWall",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261031/Prefabs/ShangStraightEarthWall.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261031/ShangStraightEarthWall/Textures/texture_pbr_20250901.png",
+            "width": 8.0,
+            "height": 17.969669342041017,
+            "depth": 92.82820129394531
+        },
+        {
+            "id": "GobiShadeCanopyV3",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261031/Prefabs/GobiShadeCanopyV3.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261031/GobiShadeCanopyV3/Textures/texture_pbr_20250901.png",
+            "width": 12.000000953674317,
+            "height": 11.281612396240235,
+            "depth": 14.29440975189209
+        },
+        {
+            "id": "PyramidEntryPassage",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261031/Prefabs/PyramidEntryPassage.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261031/PyramidEntryPassage/Textures/PyramidEntryPassage_Albedo.png",
+            "width": 7.0,
+            "height": 5.651959419250488,
+            "depth": 5.982707500457764
+        },
+        {
+            "id": "PalaceStoneStairs",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261031/Prefabs/PalaceStoneStairs.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261031/PalaceStoneStairs/Textures/texture_pbr_20250901.png",
+            "width": 3.999999761581421,
+            "height": 10.472227096557618,
+            "depth": 17.096147537231447
+        },
+        {
+            "id": "BronzeWallTorchBracket",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261031/Prefabs/BronzeWallTorchBracket.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261031/BronzeWallTorchBracket/Textures/BronzeWallTorchBracket_Albedo.png",
+            "width": 0.22260716557502747,
+            "height": 0.4500000476837158,
+            "depth": 0.15539997816085816
+        },
+        {
+            "id": "ShangOracleBone",
+            "sourcePrefab": "Assets/_Project/Art/HunyuanEnvironment20261031/Prefabs/ShangOracleBone.prefab",
+            "albedo": "/Users/happys/Documents/GitHub/three-body-problem/Assets/_Project/Art/HunyuanEnvironment20261031/ShangOracleBone/Textures/texture_pbr_20250901.png",
+            "width": 0.2766076624393463,
+            "height": 0.31999996304512026,
+            "depth": 0.07353906333446503
+        }
+    ]
+}
