@@ -30,6 +30,7 @@
 # Keep scenes, materials, scripts, configuration assets and .meta GUIDs reviewable.
 *.fbx filter=lfs diff=lfs merge=lfs -text
 *.blend filter=lfs diff=lfs merge=lfs -text
+*.glb filter=lfs diff=lfs merge=lfs -text
 *.meshbin filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
@@ -42,10 +43,16 @@
 *.mp3 filter=lfs diff=lfs merge=lfs -text
 *.ogg filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
+*.pptx filter=lfs diff=lfs merge=lfs -text
+*.docx filter=lfs diff=lfs merge=lfs -text
 Assets/_Project/Art/GeneratedMeshes/*.asset filter=lfs diff=lfs merge=lfs -text
 Assets/_Project/Art/Terrain/*.asset filter=lfs diff=lfs merge=lfs -text
 Assets/_Project/Art/EnvironmentReady/Meshes/*.asset filter=lfs diff=lfs merge=lfs -text
 Assets/_Project/Art/EnvironmentReady/GobiDressing/*.asset filter=lfs diff=lfs merge=lfs -text
+Assets/_Project/Art/EnvironmentExpansionReady/Meshes/*.asset filter=lfs diff=lfs merge=lfs -text
+Assets/_Project/Art/EnvironmentExpansionRejected/**/*.asset filter=lfs diff=lfs merge=lfs -text
+Assets/_Project/Art/MonumentalMasonry/Meshes/*.asset filter=lfs diff=lfs merge=lfs -text
+Assets/_Project/Art/CapitalRevival/Meshes/*.asset filter=lfs diff=lfs merge=lfs -text
 Assets/_Project/Art/ActOne/Meshes/*.asset filter=lfs diff=lfs merge=lfs -text
 Assets/_Project/Characters/Crowd/Meshes/*.asset filter=lfs diff=lfs merge=lfs -text
 Assets/_Project/Characters/Story/PlayerFirstPersonBody.asset filter=lfs diff=lfs merge=lfs -text
