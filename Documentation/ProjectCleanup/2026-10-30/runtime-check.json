@@ -1,0 +1,34 @@
+{
+    "passed": true,
+    "checkedMoments": 12,
+    "recordedObservations": 7,
+    "gpu": "Apple M5",
+    "measurement": "Unity Editor Play mode, no idle throttling, VSync disabled during sample",
+    "errors": [],
+    "metrics": [
+        {
+            "scene": "01_GobiJourney",
+            "averageFrameMs": 11.125397682189942,
+            "p95FrameMs": 12.581746101379395,
+            "mainThreadMs": 11.980875015258789,
+            "width": 1920,
+            "height": 1080
+        },
+        {
+            "scene": "02_ChaogeCourt",
+            "averageFrameMs": 3.4648258686065676,
+            "p95FrameMs": 3.9472081661224367,
+            "mainThreadMs": 3.822624921798706,
+            "width": 1920,
+            "height": 1080
+        },
+        {
+            "scene": "03_MedievalTribunal",
+            "averageFrameMs": 2.6707279682159426,
+            "p95FrameMs": 2.997285842895508,
+            "mainThreadMs": 2.6546669006347658,
+            "width": 1920,
+            "height": 1080
+        }
+    ]
+}
