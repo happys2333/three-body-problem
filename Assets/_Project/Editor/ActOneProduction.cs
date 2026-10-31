@@ -29,15 +29,15 @@ namespace ThreeBodyProblem.Editor
             particles=SaveMaterial(new Material(Shader.Find("Traveller/Atmosphere Particle")){name="Flame and smoke"},Root+"/Materials/Flame.mat");
             torch=BuildProp("Torch");ash=BuildProp("Ash");bushFire=BuildFire();
             var story=GetOrCreate<GobiStorySettings>("Assets/_Project/Settings/ActOne/GobiStory.asset");
-            story.nightMeetingSeconds=12;story.shelterWaitSeconds=600;story.suddenSunsetSeconds=2;story.minimumNightWalkSeconds=12;story.minimumNightWalkMetres=35;story.departureGoal=new Vector3(2,0,64);
+            story.suddenSunsetSeconds=2;story.minimumNightWalkSeconds=12;story.minimumNightWalkMetres=35;story.departureGoal=new Vector3(2,0,64);
             story.maximumHealth=100;story.sunlightDamage=10;story.sunlightDamageInterval=1;story.burnSeconds=32;story.torchPrefab=torch;story.ashPrefab=ash;story.vegetationFirePrefab=bushFire;
-            story.meetingLine=Audio("Meeting");story.warningLine=Audio("Warning");story.shelterLine=Audio("Shelter");story.identityLine=Audio("Identity");story.hourglassLine=Audio("Hourglass");story.departureLine=Audio("Departure");EditorUtility.SetDirty(story);
+            story.callLine=Audio("Call");story.meetingLine=Audio("Meeting");story.warningLine=Audio("Warning");story.shelterLine=Audio("Shelter");story.identityLine=Audio("Identity");story.hourglassLine=Audio("Hourglass");story.departureLine=Audio("Departure");EditorUtility.SetDirty(story);
             var dialogue=GetOrCreate<NpcDialogueSettings>("Assets/_Project/Settings/ActOne/Dialogue.asset");dialogue.sharedPrompt=AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/_Project/Dialogue/Prompts/shared.txt");EditorUtility.SetDirty(dialogue);
             var personas=new Dictionary<string,NpcPersona>();
             var ids=new[]{"wenwang","king","pope","scholar","davinci","shang_guard","church_guard","citizen"};
             var names=new[]{"周文王","纣王","教皇","学者","达芬奇","朝歌卫兵","守卫","居民"};
             for(int i=0;i<ids.Length;i++)
-            {var p=GetOrCreate<NpcPersona>("Assets/_Project/Dialogue/Personas/"+ids[i]+".asset");p.characterId=ids[i];p.displayName=names[i];p.prompt=AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/_Project/Dialogue/Prompts/"+ids[i]+".txt");personas.Add(ids[i],p);EditorUtility.SetDirty(p);}
+            {var p=GetOrCreate<NpcPersona>("Assets/_Project/Dialogue/Personas/"+ids[i]+".asset");p.characterId=ids[i];p.displayName=names[i];p.prompt=AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/_Project/Dialogue/Prompts/"+(p.IsMajorCharacter?ids[i]:"bystander")+".txt");personas.Add(ids[i],p);EditorUtility.SetDirty(p);}
             int carriers=0,fuelCount=0;
             foreach(var name in TravellerStage.SceneNames)
             {
@@ -88,8 +88,51 @@ namespace ThreeBodyProblem.Editor
             }
             PlayerSettings.macOS.microphoneUsageDescription="按住说话时，用麦克风把你的话转为可编辑文字，与旅人交流。";
             AssetDatabase.SaveAssets();EditorSceneManager.OpenScene(GobiEnvironmentDressing.ScenePath);
-            File.WriteAllText(Docs+"/resources.json","{\"torchCarriers\":"+carriers+",\"vegetationFuel\":"+fuelCount+",\"shelterWaitSeconds\":600,\"sunlightDamage\":10,\"health\":100,\"nightOpening\":true}");
+            UpdateOpening();
+            File.WriteAllText(Docs+"/resources.json","{\"torchCarriers\":"+carriers+",\"vegetationFuel\":"+fuelCount+",\"aiDirectedOpening\":true,\"maximumOpeningAnswers\":3,\"sunlightDamage\":10,\"health\":100,\"nightOpening\":true}");
             return "Act one integrated: "+carriers+" torch carriers, "+fuelCount+" burnable plants.";
+        }
+        [MenuItem("Tools/Three Body Traveller/Act One/Update Desert Awakening")]
+        public static string UpdateOpening()
+        {
+            if(EditorApplication.isPlaying||SceneManager.GetActiveScene().isDirty)throw new InvalidOperationException("Stop Play and save the current scene first.");
+            var scene=EditorSceneManager.OpenScene(GobiEnvironmentDressing.ScenePath);
+            var stage=Object.FindFirstObjectByType<TravellerStage>();var story=stage.profile.gobiStory;
+            story.wakeSeconds=3.5f;story.minimumOpeningTalkSeconds=8;story.minimumShelterTalkSeconds=20;story.sunriseSeconds=3;story.suddenSunsetSeconds=2;
+            story.meetingPosition=new Vector3(-6,0,-2);story.investigationGoal=new Vector3(7,0,-19);story.discoverDistance=20;story.greetingDistance=4.2f;story.minimumExplorationMetres=4;
+            story.narrativeCheckSeconds=12;story.offlineOpeningSilenceSeconds=24;story.offlineShelterSilenceSeconds=60;
+            story.callLine=Audio("Call");story.meetingLine=Audio("Meeting");story.warningLine=Audio("Warning");story.shelterLine=Audio("Shelter");story.identityLine=Audio("Identity");story.departureLine=Audio("Departure");
+            var profile=stage.profile;profile.moments[0].title="苏醒 · 陌生的荒漠";profile.moments[0].caption="";profile.moments[0].objective="调查四周，看看发生了什么事";
+            profile.subtitle="荒漠苏醒 · 火光相遇 · 巨日避险 · 夜行朝歌";
+            profile.moments[0].description="在夜色中的戈壁醒来。四周空阔，散落着枯木；远处陌生旅人的火把是唯一的人迹。";
+            profile.moments[0].viewTarget=new Vector3(30,2,-17);profile.moments[0].sunA=new Vector3(.3f,-.32f,1);
+            profile.moments[2].sunA=profile.moments[0].sunA;profile.moments[2].sunRadii=profile.moments[1].sunRadii;
+            profile.moments[5].objective="与姬昌一同前往朝歌";
+            var court=AssetDatabase.LoadAssetAtPath<TravellerSceneProfile>("Assets/_Project/Settings/Traveller/02_ChaogeCourt.asset");
+            var medieval=AssetDatabase.LoadAssetAtPath<TravellerSceneProfile>("Assets/_Project/Settings/Traveller/03_MedievalTribunal.asset");
+            court.chapter="第二幕 / 朝歌 · 殷商王都";medieval.chapter="第三幕 / 中世纪文明";EditorUtility.SetDirty(court);EditorUtility.SetDirty(medieval);
+            var dialogue=stage.GetComponent<NpcDialogueDirector>().settings;dialogue.autoSubmitMicrophone=true;
+            foreach(var actor in stage.GetComponentsInChildren<TravellerActor>())if(actor.role==TravellerRole.WenWang)actor.transform.position=story.meetingPosition;
+            var environment=stage.transform.Find("Environment");var landmarks=environment.Find("Opening deadwood");
+            if(landmarks==null)
+            {
+                landmarks=new GameObject("Opening deadwood").transform;landmarks.SetParent(environment,false);
+                var source=AssetDatabase.LoadAssetAtPath<GameObject>("Assets/_Project/Art/EnvironmentReady/Prefabs/DeadTamarisk.prefab");
+                var points=new[]{new Vector3(10,0,-18),new Vector3(-12,0,-31),new Vector3(5,0,-27)};
+                var terrain=stage.GetComponentInChildren<Terrain>();
+                for(int i=0;i<points.Length;i++)
+                {
+                    var tree=(GameObject)PrefabUtility.InstantiatePrefab(source,scene);tree.name="Awakening weathered tamarisk "+i;tree.transform.SetParent(landmarks,false);
+                    var point=points[i];if(terrain!=null)point.y=terrain.SampleHeight(point)+terrain.transform.position.y;
+                    tree.transform.position=point;tree.transform.localScale=Vector3.one*(i==0?1.15f:.8f);tree.transform.rotation=Quaternion.Euler(0,73*i,0);AddFuel(tree);
+                }
+            }
+            var nearTree=landmarks.Find("Awakening weathered tamarisk 2");
+            if(nearTree!=null){var point=new Vector3(5,0,-27);var floor=stage.GetComponentInChildren<Terrain>();if(floor!=null)point.y=floor.SampleHeight(point)+floor.transform.position.y;nearTree.position=point;}
+            EditorUtility.SetDirty(story);EditorUtility.SetDirty(profile);EditorUtility.SetDirty(dialogue);stage.ApplyMoment(0,true);
+            PlayerSettings.macOS.microphoneUsageDescription="按住 F 时录音，松开后转写并向提问开始时看向的人物提问；也可以打字交谈。";
+            EditorSceneManager.MarkSceneDirty(scene);EditorSceneManager.SaveScene(scene);AssetDatabase.SaveAssets();
+            return "Desert awakening, deadwood, traveller rendezvous and AI story settings saved.";
         }
         private static int AddFuel(GameObject go)
         {

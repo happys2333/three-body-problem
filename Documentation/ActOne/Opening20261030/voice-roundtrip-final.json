@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Call",
+    "text": "来这里！",
+    "seconds": 1.84,
+    "syntheticAsr": "啊，这里。"
+  },
+  {
+    "name": "Meeting",
+    "text": "快过来，现在是乱纪元，不要命吗？",
+    "seconds": 6.56,
+    "syntheticAsr": "会过来。现在是乱纪元。不要命吗？"
+  },
+  {
+    "name": "Warning",
+    "text": "太阳！快跟我躲进岩石下面！",
+    "seconds": 4.8,
+    "syntheticAsr": "太阳快跟我躲进岩石下面。"
+  },
+  {
+    "name": "Shelter",
+    "text": "进来，别站在日光里。现在可以喘口气了。",
+    "seconds": 5.2,
+    "syntheticAsr": "进来，别站在日光里。现在可以喘口气了。"
+  },
+  {
+    "name": "Identity",
+    "text": "我叫姬昌，要去朝歌。乱纪元里，你为什么一个人在外面？",
+    "seconds": 6.4,
+    "syntheticAsr": "我叫姬昌，要去朝歌。乱纪元里，你为什么一个人在外面？"
+  },
+  {
+    "name": "Hourglass",
+    "text": "沙漏还在走，天象却未必守时。先在阴影里歇一歇。",
+    "seconds": 6.8,
+    "syntheticAsr": "沙漏还在走，天象却未必属实。先在阴影里歇一歇。"
+  },
+  {
+    "name": "Departure",
+    "text": "我在前面照路。跟紧些，我们一同去朝歌。",
+    "seconds": 4.24,
+    "syntheticAsr": "我在前面照路，跟锦邪，我们一同去找歌。"
+  }
+]

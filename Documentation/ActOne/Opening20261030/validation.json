@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "editModePassed": 49,
+  "gatewayTests": 16,
+  "nativeChecks": 56,
+  "microphoneAutoSendVerified": true,
+  "build": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 0
+  },
+  "nativeFrameP95Ms": 11.643545150756836,
+  "captureDimensions": [
+    [
+      1920,
+      935
+    ]
+  ],
+  "requestedResolution": [
+    1920,
+    1080
+  ],
+  "voiceLines": [
+    {
+      "name": "Call",
+      "seconds": 1.84,
+      "sha256": "3f3ae2f9d7cf12bf9c2cb5e35891686a94d15e6db88b1f2e708be34b50ed293e"
+    },
+    {
+      "name": "Meeting",
+      "seconds": 4.56,
+      "sha256": "3837f030d093ffdf29c3f2df987939294b86b40295425cfd6352f44104f1b047"
+    },
+    {
+      "name": "Warning",
+      "seconds": 4.8,
+      "sha256": "ad2f41484582ebf21c2c05e2ff0eace73b91b52580fd39de6c403a8942939bce"
+    },
+    {
+      "name": "Shelter",
+      "seconds": 5.2,
+      "sha256": "eeeca9bf290ba3b2268dca3d2e021df1b0fe2219f7971223ffb9d81fd7f39e99"
+    },
+    {
+      "name": "Identity",
+      "seconds": 6.4,
+      "sha256": "ddbb8a37d76234d057ade5a6d43b46dff8ee654c146579b368c2ebb0df792047"
+    },
+    {
+      "name": "Hourglass",
+      "seconds": 6.8,
+      "sha256": "16cd78a1b1241bd00887cf3c184f927acac29fc2cebca4a5aa593c319ddd53de"
+    },
+    {
+      "name": "Departure",
+      "seconds": 4.24,
+      "sha256": "c45b8f02e887155f5fd8f202413f922d8f747a0c26fdc950312e097aa3ce508d"
+    }
+  ],
+  "vegetation": {
+    "ignited": 88,
+    "ash": 88,
+    "shadedSurvived": 53
+  },
+  "limits": [
+    "The native player requests 1920x1080; macOS fits its window to the display. Use captureDimensions for the actual rendered size.",
+    "Synthetic speech was injected into the real ASR coroutine; no hardware microphone or permission prompt was exercised.",
+    "The live run used scripted fallback. Online decisions were tested with a fake upstream, not a real DeepSeek key.",
+    "Short synthetic speech still has ASR character errors; this is not human voice-quality or recognition-accuracy acceptance.",
+    "One representative Gobi frame sample on this Mac, not a whole-game or other-hardware performance guarantee."
+  ]
+}

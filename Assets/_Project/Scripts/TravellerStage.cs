@@ -53,12 +53,12 @@ namespace ThreeBodyProblem
             if(player.bodyActor!=null)playerTorch=player.bodyActor.GetComponent<TorchBearer>();
         }
 
-        public void ApplyMoment(int index, bool instant = false, bool moveToView = true)
+        public void ApplyMoment(int index, bool instant = false, bool moveToView = true, float duration = -1)
         {
             momentIndex = Mathf.Clamp(index, 0, profile.moments.Length - 1);
             if (transition != null) StopCoroutine(transition);
             if (!Application.isPlaying || instant) ApplySky(Current, 1f);
-            else transition = StartCoroutine(Transition(Current));
+            else transition = StartCoroutine(Transition(Current,duration>0?duration:profile.transitionSeconds));
             SetParticles(fires, Current.heat > 0.5f);
             SetParticles(snow, Current.frost > 0.5f);
             if (embers != null) { var emission = embers.emission; emission.enabled = Current.heat > 0.7f; }
@@ -69,7 +69,7 @@ namespace ThreeBodyProblem
             Changed?.Invoke();
         }
 
-        private IEnumerator Transition(SceneMoment target)
+        private IEnumerator Transition(SceneMoment target,float seconds)
         {
             var startTop = liveSky.GetColor("_Zenith");
             var startHorizon = liveSky.GetColor("_Horizon");
@@ -81,14 +81,18 @@ namespace ThreeBodyProblem
             float startDensity = RenderSettings.fogDensity;
             Vector3 startDirection = liveSky.GetVector("_SunA");
             Vector3 startRadii = liveSky.GetVector("_SunRadii");
-            liveSky.SetFloat("_SunCount", target.sunCount);
+            // Keep the disc visible as it descends; hide it only after it crosses the horizon.
+            bool setting=target.sunCount==0&&liveSky.GetFloat("_SunCount")>0;
+            liveSky.SetFloat("_SunCount", setting?1:target.sunCount);
             liveSky.SetVector("_SunB", target.sunB.normalized);
             liveSky.SetVector("_SunC", target.sunC.normalized);
             float elapsed = 0f;
-            while (elapsed < profile.transitionSeconds)
+            var hud=GetComponentInChildren<TravellerHud>();
+            while (elapsed < seconds)
             {
+                if(hud!=null&&hud.IsWorldPaused){yield return null;continue;}
                 elapsed += Time.deltaTime;
-                float t = Mathf.SmoothStep(0f, 1f, elapsed / profile.transitionSeconds);
+                float t = Mathf.SmoothStep(0f, 1f, elapsed / seconds);
                 liveSky.SetColor("_Zenith", Color.Lerp(startTop, target.zenith, t));
                 liveSky.SetColor("_Horizon", Color.Lerp(startHorizon, target.horizon, t));
                 liveSky.SetVector("_SunA", Vector3.Slerp(startDirection, target.sunA.normalized, t));
@@ -193,7 +197,6 @@ namespace ThreeBodyProblem
             if(Input.GetKeyDown(KeyCode.T)&&playerTorch!=null)playerTorch.equipped=!playerTorch.equipped;
             if (Journey != null && !Journey.IsPreviewing)
             {
-                if (Input.GetKeyDown(KeyCode.F)) Journey.Interact();
                 if (Input.GetKeyDown(KeyCode.R)) Journey.FaceGoal();
                 if (Input.GetKeyDown(KeyCode.E) && Journey.CanObserve) RecordObservation();
             }

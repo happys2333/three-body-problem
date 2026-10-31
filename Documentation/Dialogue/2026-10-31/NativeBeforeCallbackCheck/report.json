@@ -1,0 +1,28 @@
+{
+    "passed": false,
+    "hardwareMicrophoneUsed": false,
+    "onlineModelUsed": false,
+    "microphoneAutoSendVerified": false,
+    "checks": 57,
+    "openingAnswers": 2,
+    "damageEvents": 2,
+    "ignited": 88,
+    "burned": 88,
+    "shaded": 53,
+    "walkedMetres": 103.40174102783203,
+    "frameMeanMs": 15.123794555664063,
+    "frameP95Ms": 23.180377960205079,
+    "sunriseSeconds": 2.9864959716796877,
+    "sunsetSeconds": 2.0206985473632814,
+    "phase": "complete",
+    "asrTranscript": "太阳快跟我躲进岩石下面。",
+    "gatewayMode": "{\"ready\": true, \"mode\": \"scripted\", \"asrModelPresent\": true, \"asrModel\": \"Qwen3-ASR-0.6B-8bit\", \"asrEngine\": \"qwen3-asr-mlx-8bit\", \"ttsEngine\": \"moss-tts-nano-onnx-cpu\", \"ttsModel\": \"MOSS-TTS-Nano-100M-ONNX\", \"voiceProfiles\": {\"wenwang\": \"Weiguo\", \"king\": \"Zhiming\", \"pope\": \"Weiguo\", \"scholar\": \"Junhao\", \"davinci\": \"Zhiming\", \"shang_guard\": \"Junhao\", \"church_guard\": \"Weiguo\", \"citizen\": \"Junhao\"}, \"lastVoiceTimings\": {\"tts\": {\"seconds\": 2.220297040999867, \"firstPcmSeconds\": 0.2927336249849759, \"audioSeconds\": 6.48, \"voice\": \"Weiguo\", \"frames\": 81, \"torchImported\": false, \"cacheHit\": false}, \"asr\": {\"seconds\": 0.3848553750140127, \"metalPeakBytes\": 1657639652, \"silence\": false}}}",
+    "measurement": "Native development player at 1920x1080",
+    "errors": [
+        "The actual ASR callback did not automatically submit the recognized words.",
+        "The opening answer budget is incorrect.",
+        "The story answer budget must not disable further free questions.",
+        "Sunlight failed to apply hidden ten-point hits.",
+        "The representative Gobi view exceeded the 60 FPS frame budget: 23.18038"
+    ]
+}

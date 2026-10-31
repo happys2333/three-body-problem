@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Call",
+    "synthesisText": "来，这里！",
+    "transcript": "嗯，这里。",
+    "characterErrors": 1
+  },
+  {
+    "name": "Call",
+    "synthesisText": "来这里。",
+    "transcript": "你来这里。",
+    "characterErrors": 1
+  },
+  {
+    "chosen": "Call",
+    "synthesisText": "来这里！",
+    "transcript": "啊，这里。",
+    "characterErrors": 1
+  },
+  {
+    "name": "Meeting",
+    "synthesisText": "快过来！现在是乱纪元，不要命吗？",
+    "transcript": "快过来！现在是乱纪元。不要命吗？",
+    "characterErrors": 0
+  },
+  {
+    "chosen": "Meeting",
+    "synthesisText": "快过来！现在是乱纪元，不要命吗？",
+    "transcript": "快过来！现在是乱纪元。不要命吗？",
+    "characterErrors": 0
+  }
+]

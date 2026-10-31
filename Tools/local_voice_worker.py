@@ -66,13 +66,13 @@ class MossTts:
         self.sample_rate=int(self.runtime.codec_meta['codec_config']['sample_rate'])
 
     def split(self,text):
-        parts=[];current=''
+        parts=[]
         for piece in re.findall(r'[^。！？!?；;]+[。！？!?；;]*',text):
-            if current and len(self.tokenizer.encode(current+piece))>70:parts.append(current);current=''
             while len(self.tokenizer.encode(piece))>70:
                 cut=min(40,len(piece));parts.append(piece[:cut]);piece=piece[cut:]
-            current+=piece
-        if current:parts.append(current)
+            # Short multi-sentence requests can emit EOS after the first sentence.
+            # Generate each sentence independently so no later sentence silently disappears.
+            if piece.strip():parts.append(piece)
         return parts
 
     def run(self,request):

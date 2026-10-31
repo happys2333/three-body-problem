@@ -1,0 +1,40 @@
+{
+  "success": true,
+  "message": "Test job status retrieved.",
+  "error": null,
+  "data": {
+    "job_id": "98f47f4d0893430ab5332b2052d53c24",
+    "status": "succeeded",
+    "mode": "EditMode",
+    "started_unix_ms": 1793374597589,
+    "finished_unix_ms": 1793374614398,
+    "last_update_unix_ms": 1793374614398,
+    "progress": {
+      "completed": 49,
+      "total": 49,
+      "current_test_full_name": null,
+      "current_test_started_unix_ms": 1793374613962,
+      "last_finished_test_full_name": "ThreeBodyProblem.Tests.TravellerSceneTests.SceneHasCompleteRuntimeAndRenderingReferences(\"03_MedievalTribunal\")",
+      "last_finished_unix_ms": 1793374614235,
+      "stuck_suspected": false,
+      "editor_is_focused": false,
+      "blocked_reason": null,
+      "failures_so_far": [],
+      "failures_capped": false
+    },
+    "error": null,
+    "result": {
+      "mode": "EditMode",
+      "summary": {
+        "total": 49,
+        "passed": 49,
+        "failed": 0,
+        "skipped": 0,
+        "durationSeconds": 11.2369884,
+        "resultState": "Passed"
+      },
+      "results": []
+    }
+  },
+  "hint": null
+}

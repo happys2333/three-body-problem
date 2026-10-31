@@ -48,27 +48,29 @@ namespace ThreeBodyProblem
             }
             Screen.SetResolution(1920,1080,FullScreenMode.Windowed); yield return Frames(8);
             journey.Begin(); yield return Frames(3);
-            Check(journey.Progress.Step == JourneyStep.SeekShelter, "Start did not begin the opening encounter.");
+            Check(journey.Progress.Step==JourneyStep.Awakening,"Start did not begin with awakening.");
+            yield return Realtime(stage.profile.gobiStory.wakeSeconds+.1f);
+            Check(journey.Progress.Step == JourneyStep.ExploreDesert, "Waking did not enable free exploration.");
             Check(!stage.player.InputBlocked, "The player cannot walk after Start.");
             Check(hud.Root.Q("debug-overlay").resolvedStyle.display == DisplayStyle.None, "Preview tools remain visible after Start.");
             Transform actor = FindTraveller(); Vector3 actorBefore = actor.position;
-            yield return Frames(90); Check(Vector3.Distance(actor.position,actorBefore) > 0.5f, "The companion does not lead the player.");
+            yield return Frames(90); Check(Vector3.Distance(actor.position,actorBefore) < 0.5f, "The companion left before the encounter.");
             CheckGameplayLayout();
             ScreenCapture.CaptureScreenshot(Path.Combine(Path.GetDirectoryName(output),"opening.png")); yield return Frames(3);
             Check(stage.Current.sunCount==0,"The revised opening must begin at night.");
-            journey.Progress.Tick(stage.profile.gobiStory.nightMeetingSeconds+stage.profile.transitionSeconds+1);yield return Frames(3);
+            journey.Progress.DiscoverTraveller();journey.Progress.MeetTraveller();journey.Progress.RecordNpcAnswer();journey.Progress.ChooseStoryIntent("sunrise");yield return Realtime(stage.profile.gobiStory.sunriseSeconds+.2f);
             actor.position = new Vector3(-16f,0f,13f); yield return GoToGoal();
             Check(journey.Progress.Step == JourneyStep.ShelterTalk, "Entering the shelter did not start the conversation opportunity.");
             journey.Interact(); yield return Frames(2); Check(journey.DialogueOpen, "Nearby traveller cannot be spoken to.");
-            Check(stage.player.InputBlocked, "Dialogue does not release movement for the choices.");
-            journey.SelectDialogue("identity"); yield return Frames(2);
+            Check(!stage.player.InputBlocked, "Gobi conversation unexpectedly blocks movement.");
+            journey.Progress.IntroduceTraveller(); yield return Frames(2);
             Check(journey.Progress.KnowsIdentity, "Identity was not revealed by the answer.");
             CheckInside(hud.Root.Q("dialogue"));
             ScreenCapture.CaptureScreenshot(Path.Combine(Path.GetDirectoryName(output),"conversation.png")); yield return Frames(3);
             Vector3 playerBefore = stage.player.transform.position; journey.SelectDialogue("continue"); yield return Frames(2);
             Check(Vector3.Distance(playerBefore,stage.player.transform.position) < 0.5f, "Changing the sky teleported the player.");
             Check(journey.Progress.Step==JourneyStep.ShelterTalk,"Closing dialogue skipped the configured shelter wait.");
-            journey.Progress.Tick(stage.profile.gobiStory.shelterWaitSeconds);journey.Progress.Tick(stage.profile.gobiStory.suddenSunsetSeconds);yield return Frames(3);
+            journey.Progress.Tick(stage.profile.gobiStory.minimumShelterTalkSeconds);journey.Progress.ChooseStoryIntent("sunset");yield return Realtime(stage.profile.gobiStory.suddenSunsetSeconds+.2f);
             stage.player.Teleport(new Vector3(2,1.75f,42),stage.profile.moments[3].viewTarget);stage.ApplyMoment(3,true,false);Observe();yield return Frames(2);
             Check(journey.Progress.Step==JourneyStep.WalkToChaoge,"Optional star observation interrupted automatic travel.");
             stage.player.Teleport(new Vector3(2,1.75f,64),stage.profile.moments[4].viewTarget);stage.ApplyMoment(4,true,false);Observe();yield return Frames(2);
@@ -107,6 +109,7 @@ namespace ThreeBodyProblem
         }
 
         private void Bind() { stage = UnityEngine.Object.FindFirstObjectByType<TravellerStage>(); journey = stage.Journey; hud = UnityEngine.Object.FindFirstObjectByType<TravellerHud>(); }
+        private static IEnumerator Realtime(float seconds){float until=Time.realtimeSinceStartup+seconds;while(Time.realtimeSinceStartup<until)yield return null;}
         private static IEnumerator Frames(int frames) { for (int i=0;i<frames;i++) yield return null; }
         private IEnumerator GoToGoal() { var point = journey.Goal; stage.player.Teleport(point + Vector3.up * 1.75f,point + new Vector3(0f,1.75f,10f)); yield return Frames(5); }
         private IEnumerator WaitForScene(int index)

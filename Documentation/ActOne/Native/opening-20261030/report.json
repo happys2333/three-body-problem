@@ -1,0 +1,22 @@
+{
+    "passed": true,
+    "hardwareMicrophoneUsed": false,
+    "onlineModelUsed": false,
+    "microphoneAutoSendVerified": true,
+    "checks": 56,
+    "openingAnswers": 3,
+    "damageEvents": 2,
+    "ignited": 88,
+    "burned": 88,
+    "shaded": 53,
+    "walkedMetres": 103.40994262695313,
+    "frameMeanMs": 11.203502655029297,
+    "frameP95Ms": 11.643545150756836,
+    "sunriseSeconds": 3.007823944091797,
+    "sunsetSeconds": 2.005096435546875,
+    "phase": "complete",
+    "asrTranscript": "太阳快跟我躲进岩石下面。",
+    "gatewayMode": "{\"ready\": true, \"mode\": \"scripted\", \"asrModelPresent\": true, \"asrModel\": \"Qwen3-ASR-0.6B-8bit\", \"asrEngine\": \"qwen3-asr-mlx-8bit\", \"ttsEngine\": \"moss-tts-nano-onnx-cpu\", \"ttsModel\": \"MOSS-TTS-Nano-100M-ONNX\", \"voiceProfiles\": {\"wenwang\": \"Weiguo\", \"king\": \"Zhiming\", \"pope\": \"Weiguo\", \"scholar\": \"Junhao\", \"davinci\": \"Zhiming\", \"shang_guard\": \"Junhao\", \"church_guard\": \"Weiguo\", \"citizen\": \"Junhao\"}, \"lastVoiceTimings\": {\"tts\": {\"seconds\": 1.3587975420232397, \"firstPcmSeconds\": 0.14030595900840126, \"audioSeconds\": 4.56, \"voice\": \"Weiguo\", \"frames\": 57, \"torchImported\": false, \"cacheHit\": false}, \"asr\": {\"seconds\": 0.29415179099305533, \"metalPeakBytes\": 1654291172, \"silence\": false}}}",
+    "measurement": "Native development player at 1920x1080",
+    "errors": []
+}

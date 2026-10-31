@@ -1,0 +1,11 @@
+{
+  "sameRuntimeAssemblyAsPassedNativeRun": true,
+  "assemblies": {
+    "Builds/ActOneTraveller.app/Contents/Resources/Data/Managed/ThreeBodyProblem.Runtime.dll": true
+  },
+  "build": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 0
+  }
+}

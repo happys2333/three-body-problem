@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: ThreeBodyProblem.Runtime::ThreeBodyProblem.NpcPersona
   characterId: citizen
   displayName: "\u5C45\u6C11"
-  prompt: {fileID: 4900000, guid: 8be2c7ffcfc5040d0afff3b1750fdd10, type: 3}
+  aliases: []
+  prompt: {fileID: 4900000, guid: 49a3619376a25482d8fb48d7ef46ecd7, type: 3}
   fallbackReply: "\u8FD9\u4EF6\u4E8B\u8FD8\u8981\u770B\u773C\u524D\u7684\u8BC1\u636E\u3002\u4F60\u60F3\u5148\u770B\u770B\u4EC0\u4E48\uFF1F"

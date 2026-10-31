@@ -9,12 +9,14 @@ namespace ThreeBodyProblem
         public TravellerPlayer player;
         public Shader shader;
         private Material material;
-        private void Awake(){if(shader!=null&&shader.isSupported)material=new Material(shader);}
+        private GobiSequenceController sequence;
+        private void Awake(){if(shader!=null&&shader.isSupported)material=new Material(shader);if(exposure!=null)sequence=exposure.GetComponent<GobiSequenceController>();}
         private void LateUpdate()
         {
             if(player==null||exposure==null)return;
             float pulse=exposure.HitPulse;
-            transform.localPosition=Vector3.up*player.eyeHeight+new Vector3(Mathf.Sin(Time.unscaledTime*47),Mathf.Sin(Time.unscaledTime*57),0)*pulse*.012f;
+            float wake=sequence!=null?Mathf.SmoothStep(0,1,sequence.WakeProgress):1;
+            transform.localPosition=Vector3.up*(player.eyeHeight*Mathf.Lerp(.38f,1,wake))+new Vector3(Mathf.Sin(Time.unscaledTime*47),Mathf.Sin(Time.unscaledTime*57),0)*pulse*.012f;
         }
         private void OnRenderImage(RenderTexture source,RenderTexture destination)
         {

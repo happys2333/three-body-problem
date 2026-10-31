@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: ThreeBodyProblem.Runtime::ThreeBodyProblem.NpcPersona
   characterId: church_guard
   displayName: "\u5B88\u536B"
-  prompt: {fileID: 4900000, guid: fb4abd997fb7c4d6ea10c89834b66116, type: 3}
+  aliases: []
+  prompt: {fileID: 4900000, guid: 49a3619376a25482d8fb48d7ef46ecd7, type: 3}
   fallbackReply: "\u8FD9\u4EF6\u4E8B\u8FD8\u8981\u770B\u773C\u524D\u7684\u8BC1\u636E\u3002\u4F60\u60F3\u5148\u770B\u770B\u4EC0\u4E48\uFF1F"

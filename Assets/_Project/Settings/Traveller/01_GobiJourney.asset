@@ -13,16 +13,17 @@ MonoBehaviour:
   m_Name: 01_GobiJourney
   m_EditorClassIdentifier: ThreeBodyProblem.Runtime::ThreeBodyProblem.TravellerSceneProfile
   chapter: "\u7B2C\u4E00\u5E55 / \u6208\u58C1\u65C5\u4EBA"
-  subtitle: "\u5DE8\u5CA9\u907F\u65E5 \xB7 \u5CA9\u4E0B\u4EA4\u8C08 \xB7 \u98DE\u661F\u89C2\u5BDF\u4E4B\u8DEF"
+  subtitle: "\u8352\u6F20\u82CF\u9192 \xB7 \u706B\u5149\u76F8\u9047 \xB7 \u5DE8\u65E5\u907F\u9669
+    \xB7 \u591C\u884C\u671D\u6B4C"
   sceneIndex: 0
   transitionSeconds: 2
   moments:
-  - title: "\u591C\u8272 \xB7 \u6208\u58C1\u76F8\u9047"
-    description: "\u7070\u8910\u8272\u6208\u58C1\u4E0E\u6C89\u9ED8\u7684\u77F3\u5CF0\u3002\u65C5\u4EBA\u5DF2\u5728\u5DE8\u5CA9\u65C1\u7B49\u5019\uFF0C\u5929\u8FB9\u7684\u4EAE\u5149\u6B63\u5728\u53D8\u5F97\u5F02\u5E38\u3002"
-    caption: "\u65C5\u4EBA\uFF1A\u4E00\u4E2A\u4EBA\u5728\u591C\u91CC\u8D76\u8DEF\uFF1F\u4E3E\u7740\u706B\u628A\uFF0C\u8DDF\u6211\u8D70\u3002"
-    objective: "\u6CBF\u77F3\u8DEF\u8D70\u8FD1\u65C5\u4EBA\uFF0C\u8FA8\u8BA4\u5DE8\u5CA9\u4E0B\u7684\u9634\u5F71\u3002"
+  - title: "\u82CF\u9192 \xB7 \u964C\u751F\u7684\u8352\u6F20"
+    description: "\u5728\u591C\u8272\u4E2D\u7684\u6208\u58C1\u9192\u6765\u3002\u56DB\u5468\u7A7A\u9614\uFF0C\u6563\u843D\u7740\u67AF\u6728\uFF1B\u8FDC\u5904\u964C\u751F\u65C5\u4EBA\u7684\u706B\u628A\u662F\u552F\u4E00\u7684\u4EBA\u8FF9\u3002"
+    caption:
+    objective: "\u8C03\u67E5\u56DB\u5468\uFF0C\u770B\u770B\u53D1\u751F\u4E86\u4EC0\u4E48\u4E8B"
     viewPosition: {x: 0, y: 1.75, z: -30}
-    viewTarget: {x: -6, y: 7, z: 32}
+    viewTarget: {x: 30, y: 2, z: -17}
     zenith: {r: 0.005, g: 0.012, b: 0.032, a: 1}
     horizon: {r: 0.035, g: 0.065, b: 0.105, a: 1}
     fog: {r: 0.035, g: 0.055, b: 0.08, a: 1}
@@ -31,7 +32,7 @@ MonoBehaviour:
     lightIntensity: 0.1
     fogDensity: 0.0015
     sunCount: 0
-    sunA: {x: 0.3, y: -0.3, z: 1}
+    sunA: {x: 0.3, y: -0.32, z: 1}
     sunB: {x: -0.3, y: 0.4, z: 1}
     sunC: {x: 0.1, y: 0.6, z: 1}
     sunRadii: {x: 0.055, y: 0.03, z: 0.03}
@@ -79,10 +80,10 @@ MonoBehaviour:
     lightIntensity: 0.1
     fogDensity: 0.0015
     sunCount: 0
-    sunA: {x: 0.3, y: -0.3, z: 1}
+    sunA: {x: 0.3, y: -0.32, z: 1}
     sunB: {x: -0.3, y: 0.4, z: 1}
     sunC: {x: 0.1, y: 0.6, z: 1}
-    sunRadii: {x: 0.035, y: 0.035, z: 0.035}
+    sunRadii: {x: 0.23, y: 0.03, z: 0.03}
     stars: 1
     flyingStars: 0
     heat: 0
@@ -141,7 +142,7 @@ MonoBehaviour:
   - title: "\u591C\u884C \xB7 \u524D\u5F80\u671D\u6B4C"
     description: "\u592A\u9633\u7A81\u7136\u6C89\u843D\u3002\u8DDF\u968F\u706B\u5149\u8D70\u8FC7\u591C\u8DEF\uFF0C\u65C5\u7A0B\u968F\u540E\u8FC7\u6E21\u5230\u6570\u65E5\u540E\u7684\u671D\u6B4C\u3002"
     caption: 
-    objective: "\u8DDF\u968F\u5468\u6587\u738B\u8D70\u8FC7\u591C\u8DEF\u3002"
+    objective: "\u4E0E\u59EC\u660C\u4E00\u540C\u524D\u5F80\u671D\u6B4C"
     viewPosition: {x: 1, y: 1.75, z: 83}
     viewTarget: {x: 0, y: 5, z: 145}
     zenith: {r: 0.005, g: 0.012, b: 0.032, a: 1}

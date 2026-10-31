@@ -36,11 +36,14 @@ namespace ThreeBodyProblem.Tests
         }
         [Test] public void UntrustedAiIntentCannotBecomeAStateChangingCommand()
         {Assert.That(NpcDialogueDirector.GestureClip("advance_scene"),Is.EqualTo("MX_TalkCalm"));Assert.That(NpcDialogueDirector.GestureClip("set_health_100"),Is.EqualTo("MX_TalkCalm"));}
-        [Test] public void SavedOpeningIsNightAndUsesTheRequestedRealDurations()
+        [Test] public void SavedOpeningIsNightWithShortWakeAndAiDirectedConversation()
         {
             var profile=AssetDatabase.LoadAssetAtPath<TravellerSceneProfile>("Assets/_Project/Settings/Traveller/01_GobiJourney.asset");
-            Assert.That(profile.moments[0].sunCount,Is.Zero);Assert.That(profile.moments[0].stars,Is.GreaterThan(.9f));Assert.That(profile.gobiStory.shelterWaitSeconds,Is.EqualTo(600));
+            Assert.That(profile.moments[0].sunCount,Is.Zero);Assert.That(profile.moments[0].stars,Is.GreaterThan(.9f));Assert.That(profile.gobiStory.wakeSeconds,Is.EqualTo(3.5f));
+            Assert.That(profile.gobiStory.minimumShelterTalkSeconds,Is.EqualTo(20));Assert.That(profile.moments[2].sunA,Is.EqualTo(profile.moments[0].sunA));
             Assert.That(profile.gobiStory.sunlightDamage,Is.EqualTo(10));Assert.That(profile.gobiStory.maximumHealth,Is.EqualTo(100));
+            Assert.That(profile.gobiStory.callLine,Is.Not.Null);Assert.That(profile.gobiStory.meetingLine,Is.Not.Null);Assert.That(profile.gobiStory.identityLine,Is.Not.Null);
+            Assert.That(profile.moments[0].sunA.y,Is.LessThan(0));
         }
     }
 }

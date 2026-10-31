@@ -17,4 +17,5 @@ MonoBehaviour:
   speechTimeoutSeconds: 35
   sharedPrompt: {fileID: 4900000, guid: d5395ece66ae141a08f053100809d0d9, type: 3}
   synthesiseReplies: 1
+  autoSubmitMicrophone: 1
   conversationDistance: 5

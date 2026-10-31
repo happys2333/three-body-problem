@@ -5,9 +5,19 @@ namespace ThreeBodyProblem
     [CreateAssetMenu(menuName="Three Body/Gobi Story Settings")]
     public sealed class GobiStorySettings : ScriptableObject
     {
-        public float nightMeetingSeconds=12;
+        public float wakeSeconds=3.5f;
+        public Vector3 investigationGoal=new Vector3(7,0,-19);
+        public Vector3 meetingPosition=new Vector3(-6,0,-2);
+        public float discoverDistance=20;
+        public float greetingDistance=4.2f;
+        public float minimumExplorationMetres=4;
+        public float minimumOpeningTalkSeconds=8;
+        public float minimumShelterTalkSeconds=20;
+        public float narrativeCheckSeconds=12;
+        public float offlineOpeningSilenceSeconds=24;
+        public float offlineShelterSilenceSeconds=60;
+        public float sunriseSeconds=3;
         public float dangerRunSpeed=4.2f;
-        public float shelterWaitSeconds=600;
         public float suddenSunsetSeconds=2;
         public float minimumNightWalkSeconds=12;
         public float minimumNightWalkMetres=35;
@@ -24,6 +34,6 @@ namespace ThreeBodyProblem
         public int shadowCascades=2;
         public int antiAliasingSamples=2;
         public GameObject torchPrefab,vegetationFirePrefab,ashPrefab;
-        public AudioClip meetingLine,warningLine,shelterLine,identityLine,hourglassLine,departureLine;
+        public AudioClip callLine,meetingLine,warningLine,shelterLine,identityLine,hourglassLine,departureLine;
     }
 }

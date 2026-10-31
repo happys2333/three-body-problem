@@ -35,6 +35,16 @@ def main():
             'verifiedFiles':len(model['files']),
             'upstreamLfsChecksums':sum(e['upstreamSha256Checked'] for e in model['files'])})
     assert sum(m['upstreamLfsChecksums'] for m in models)==14
+    if (DOC/'Opening20261030/source-manifest.json').exists():
+        from audit_gobi_opening import audit
+        current=audit()
+        with urllib.request.urlopen('http://127.0.0.1:8769/health',timeout=5) as response:health=json.load(response)
+        assert health['ready'] and health['asrEngine']=='qwen3-asr-mlx-8bit' and health['ttsEngine']=='moss-tts-nano-onnx-cpu'
+        report={'passed':True,'models':models,'runtimeRevision':source,'currentGateway':health,
+                'openingValidation':'Opening20261030/validation.json','scriptedLines':len(current['voiceLines']),
+                'limits':current['limits']}
+        (DOC/'Opening20261030/voice-validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+        print(json.dumps({'passed':True,'upstreamLfsChecksums':14,'scriptedLines':report['scriptedLines'],'nativeChecks':current['nativeChecks']},ensure_ascii=False));return
     baseline=read(DOC/'LocalVoice/publication-baseline.json')
     # Compare existing .meta files to the published pre-upgrade snapshot.
     baseline_sha=baseline['remoteHeadVerified']

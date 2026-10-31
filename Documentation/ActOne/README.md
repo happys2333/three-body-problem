@@ -8,7 +8,7 @@ Unity 打开 `Assets/_Project/Scenes/Traveller/01_GobiJourney.unity`，Play 后�
 
 macOS 可双击 `Tools/PlayActOne.command`，同时启动本机语音服务和试玩包；也可在项目根目录运行 `python3 Tools/play_act_one.py`。该入口默认使用离线剧情，不启用付费模型请求。
 
-WASD 行走，Shift 快走，按住鼠标右键环顾，F 靠近人物交谈，T 切换玩家火把。交谈时可输入文字发送，或按住 V 录音，松开后等待中文转写；核对或修改文字，再点击发送。游戏不在后台持续录音。首次使用麦克风时由 macOS 显示授权提示，拒绝或无设备时仍能打字。
+WASD 行走，Shift 快走，按住鼠标右键环顾，F 靠近人物交谈，T 切换玩家火把。交谈时可输入文字发送，或按住 F 录音，松开后等待中文转写；核对或修改文字，再点击发送。游戏不在后台持续录音。首次使用麦克风时由 macOS 显示授权提示，拒绝或无设备时仍能打字。
 
 ## 第一幕时序
 
@@ -49,7 +49,7 @@ MOSS 官方提供独立 ONNX CPU 推理、参考音频克隆和流式解码路�
 
 本项目使用固定到提交 `8b7bcc9` 的底层 `OrtCpuRuntime`，以 NumPy / SciPy 处理音频，未加载 PyTorch。高层参考脚本仍有 torch / torchaudio 导入，因此没有直接安装其全套推理包。`Tools/voice_profiles.json` 固定八类角色配置，当前复用 Weiguo、Zhiming、Junhao 三种内置中文男声，属于集成用临时选音，不是八名独立演员，也尚未完成男女居民的细分选音。
 
-ASR 使用 `mlx-community/Qwen3-ASR-0.6B-8bit` 与 `mlx-audio 0.6.3`，是上游 Qwen3-ASR 的社区 MLX 转换版本。继续采用按住说话、松开识别、核对文字后发送；已核对该版本的 `hotwords` 参数，把朝歌、姬昌、纣王、乱纪元等作为上下文词表，不强行替换识别结果。模型文件大小不等于实际运行内存。[MLX 实现说明](https://github.com/Blaizzy/mlx-audio/blob/main/mlx_audio/stt/models/qwen3_asr/README.md)、[模型卡](https://huggingface.co/mlx-community/Qwen3-ASR-0.6B-8bit)
+ASR 使用 `mlx-community/Qwen3-ASR-0.6B-8bit` 与 `mlx-audio 0.6.3`，是上游 Qwen3-ASR 的社区 MLX 转换版本。继续采用按住说话、松开识别、识别后自动发送；已核对该版本的 `hotwords` 参数，把朝歌、姬昌、纣王、乱纪元等作为上下文词表，不强行替换识别结果。模型文件大小不等于实际运行内存。[MLX 实现说明](https://github.com/Blaizzy/mlx-audio/blob/main/mlx_audio/stt/models/qwen3_asr/README.md)、[模型卡](https://huggingface.co/mlx-community/Qwen3-ASR-0.6B-8bit)
 
 关键剧情台词提前合成并缓存，自由回复实时合成；同一角色配置保持相同声线。MOSS 内部使用增量解码，但当前 Unity HTTP 接口仍接收完整 WAV 后播放，尚未实现网络音频流缓冲；模型内部的首段 PCM 时间不能当成玩家实际听到首音的延迟。CosyVoice 3 留作后续听感比较候选。具体模型 ID 与限制见 [选型记录](voice-model-selection.json)。
 
@@ -69,7 +69,7 @@ python3 Tools/play_act_one.py
 ~/.cache/three-body-voice/venv/bin/python Tools/dialogue_gateway.py
 ```
 
-服务监听 `127.0.0.1:8769`。Unity 上传 16 kHz 单声道 WAV 到本机 Qwen 识别，原始麦克风录音不保存，也不发给 DeepSeek。玩家确认发送后才作为一句对话处理。MOSS 输出 24 kHz 单声道 NPC 语音，字幕始终保留，生成音频缓存在用户目录，不依赖云端语音 API。
+服务监听 `127.0.0.1:8769`。Unity 上传 16 kHz 单声道 WAV 到本机 Qwen 识别，原始麦克风录音不保存，也不发给 DeepSeek。转写成功后自动作为一句对话处理。MOSS 输出 24 kHz 单声道 NPC 语音，字幕始终保留，生成音频缓存在用户目录，不依赖云端语音 API。
 
 ASR 与 TTS 分别在独立常驻进程运行，复用权重。MOSS 限制为一个 CPU 推理线程并关闭空闲自旋；ASR 单并发。识别处理上限 28 秒，客户端等待上限 32 秒；语音合成客户端上限 35 秒。玩家开始录音、关闭交谈或关键剧情插话时，停止旧声音并丢弃晚到结果。自动检查使用合成语音，不启动硬件录音。
 
@@ -131,3 +131,7 @@ ASR 与 TTS 分别在独立常驻进程运行，复用权重。MOSS 限制为一
 - 权重固定到模型仓库提交，14 个 LFS 权重 / 图文件核验上游 SHA-256；Python 依赖锁定在 `Tools/requirements-local-voice.lock.txt`，完整权重留在用户缓存。后台进程内存足迹快照约为 ASR 1.1 GiB、TTS 1.6 GiB，不能和 Metal 分配峰值直接相加，也不能替代其他场景与硬件验收。
 
 运行 `python3 Tools/audit_local_voice.py` 可重新核对本机模型哈希、六条 WAV 与 GUID、语音和第一幕报告、依赖、网关及适配单测，并生成 [语音交付审计](LocalVoice/delivery.json)。
+
+## 统一 F 键提问
+
+按住 F 说话、松开自动提问；按下时锁定视线对象，移除预设问题选项。转交语义由 LLM 判断，离线回退保留锁定人物。说明与验证边界见 [统一 F 键提问](../F_DIALOGUE.md)。

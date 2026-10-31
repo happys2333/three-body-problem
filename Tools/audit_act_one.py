@@ -18,6 +18,9 @@ def transforms(path):
 
 
 def main():
+    if (DOC/'Opening20261030/source-manifest.json').exists():
+        from audit_gobi_opening import main as audit_current_opening
+        audit_current_opening();return
     baseline=read('baseline.json')
     protected=[name for name in baseline if name.endswith((
         'PalaceSkylight.cs','PendulumMotion.cs','TravellerActor.cs','TravellerPlayer.cs',

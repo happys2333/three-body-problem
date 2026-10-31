@@ -1,0 +1,56 @@
+{
+  "mode": "stay",
+  "events": [
+    {
+      "npcId": "king",
+      "recipientId": "2331134",
+      "utterance": "你想如何验证历法？",
+      "kind": "dialogue",
+      "allowHandoff": true,
+      "context": {
+        "scene": "第二幕 / 朝歌 · 殷商王都",
+        "phase": "CourtTalk",
+        "sky": "朝歌 · 殷商王都",
+        "objective": "看向人物，按住 F 参与质询",
+        "hypothesis": "",
+        "giantSunSeen": false,
+        "inShade": true,
+        "bothInShade": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "plantsIgnited": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "phaseElapsed": 40.13286590576172,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "observations": []
+      },
+      "history": [],
+      "interlocutors": [
+        {
+          "id": "2331134",
+          "npcId": "king",
+          "displayName": "纣王",
+          "aliases": [
+            "纣王",
+            "商王",
+            "大王"
+          ]
+        },
+        {
+          "id": "2331610",
+          "npcId": "wenwang",
+          "displayName": "姬昌",
+          "aliases": [
+            "周文王",
+            "姬昌",
+            "文王",
+            "旅人"
+          ]
+        }
+      ]
+    }
+  ]
+}

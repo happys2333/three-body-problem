@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d8a5f27e65a4c64bd5df7cb2a3d038, type: 3}
   m_Name: 03_MedievalTribunal
   m_EditorClassIdentifier: ThreeBodyProblem.Runtime::ThreeBodyProblem.TravellerSceneProfile
-  chapter: "\u7B2C\u4E8C\u5E55 / \u4E2D\u4E16\u7EAA\u6587\u660E"
+  chapter: "\u7B2C\u4E09\u5E55 / \u4E2D\u4E16\u7EAA\u6587\u660E"
   subtitle: "\u5E26\u7740\u8BC1\u636E\u63D0\u51FA\u89E3\u91CA\uFF0C\u89C1\u8BC1\u4E09\u65E5\u51CC\u7A7A"
   sceneIndex: 2
   transitionSeconds: 4
@@ -90,3 +90,11 @@ MonoBehaviour:
     frost: 0
     observation: "\u4E09\u4E2A\u592A\u9633\u540C\u65F6\u53EF\u89C1\u540E\uFF0C\u6574\u5EA7\u57CE\u5E02\u6301\u7EED\u5347\u6E29\uFF0C\u5730\u88C2\u4E0E\u8349\u706B\u51FA\u73B0\u5728\u89C2\u6D4B\u53F0\u5468\u56F4\u3002"
     interpretation: 
+  hasCapitalRoute: 0
+  companionArrival: {x: 0, y: 0, z: 0}
+  courtGoal: {x: 0, y: 0, z: 0}
+  waterGoal: {x: 0, y: 0, z: 0}
+  courtWaypoints: []
+  waterWaypoints: []
+  companionWalkSpeed: 2.6
+  gobiStory: {fileID: 0}

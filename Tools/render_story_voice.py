@@ -1,4 +1,4 @@
-"""Pre-render six mandatory story lines with the same voice profile as live replies."""
+"""Pre-render the configured mandatory story lines with the same voice profile as live replies."""
 import json
 from pathlib import Path
 import shutil

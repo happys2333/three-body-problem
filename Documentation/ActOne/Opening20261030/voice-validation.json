@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "models": [
+    {
+      "repo": "mlx-community/Qwen3-ASR-0.6B-8bit",
+      "revision": "89e96d92ba34aca20b3e29fb10cc284097d1219f",
+      "verifiedFiles": 10,
+      "upstreamLfsChecksums": 1
+    },
+    {
+      "repo": "OpenMOSS-Team/MOSS-TTS-Nano-100M-ONNX",
+      "revision": "f52645cb467506d8e18e746ddd59482685b74e58",
+      "verifiedFiles": 11,
+      "upstreamLfsChecksums": 8
+    },
+    {
+      "repo": "OpenMOSS-Team/MOSS-Audio-Tokenizer-Nano-ONNX",
+      "revision": "ceff0d0749bfb3fa2d61149794ec6feef0d1e1ae",
+      "verifiedFiles": 7,
+      "upstreamLfsChecksums": 5
+    }
+  ],
+  "runtimeRevision": "8b7bcc9341b3b4ef3a3a58ba1338a7d85ff133eb",
+  "currentGateway": {
+    "ready": true,
+    "mode": "scripted",
+    "asrModelPresent": true,
+    "asrModel": "Qwen3-ASR-0.6B-8bit",
+    "asrEngine": "qwen3-asr-mlx-8bit",
+    "ttsEngine": "moss-tts-nano-onnx-cpu",
+    "ttsModel": "MOSS-TTS-Nano-100M-ONNX",
+    "voiceProfiles": {
+      "wenwang": "Weiguo",
+      "king": "Zhiming",
+      "pope": "Weiguo",
+      "scholar": "Junhao",
+      "davinci": "Zhiming",
+      "shang_guard": "Junhao",
+      "church_guard": "Weiguo",
+      "citizen": "Junhao"
+    },
+    "lastVoiceTimings": {
+      "tts": {
+        "seconds": 2.220297040999867,
+        "firstPcmSeconds": 0.2927336249849759,
+        "audioSeconds": 6.48,
+        "voice": "Weiguo",
+        "frames": 81,
+        "torchImported": false,
+        "cacheHit": false
+      },
+      "asr": {
+        "seconds": 0.3848553750140127,
+        "metalPeakBytes": 1657639652,
+        "silence": false
+      }
+    }
+  },
+  "openingValidation": "Opening20261030/validation.json",
+  "scriptedLines": 7,
+  "limits": [
+    "The native player requests 1920x1080; macOS fits its window to the display. Use captureDimensions for the actual rendered size.",
+    "Synthetic speech was injected into the real ASR coroutine; no hardware microphone or permission prompt was exercised.",
+    "The live run used scripted fallback. Online decisions were tested with a fake upstream, not a real DeepSeek key.",
+    "Short synthetic speech still has ASR character errors; this is not human voice-quality or recognition-accuracy acceptance.",
+    "One representative Gobi frame sample on this Mac, not a whole-game or other-hardware performance guarantee."
+  ]
+}

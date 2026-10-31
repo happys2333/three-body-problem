@@ -1,0 +1,191 @@
+{
+  "date": "2026-10-31",
+  "timezone": "Asia/Hong_Kong",
+  "engine": "Unity 6000.3.27f2",
+  "scope": "F question lock and LLM-directed handoff",
+  "hardwareMicrophoneUsed": false,
+  "realLanguageModelUsed": false,
+  "upstream": "Controlled test double through the real dialogue gateway; no provider network requests",
+  "transcription": "Synthetic PCM with a controlled ASR response for asynchronous routing validation",
+  "tests": {
+    "gateway": {
+      "passed": 21,
+      "failed": 0
+    },
+    "editorFullSuite": {
+      "passed": 59,
+      "failed": 0
+    },
+    "editorTargetingRerun": {
+      "passed": 10,
+      "failed": 0
+    }
+  },
+  "stay": {
+    "playing": true,
+    "frame": 758,
+    "phase": "WalkToWater",
+    "current": "king",
+    "reply": "king独自回答了这个问题。",
+    "busy": false,
+    "memories": {
+      "king:2331134": 2
+    },
+    "choicesRemoved": true,
+    "movementBlocked": false
+  },
+  "handoff": {
+    "frame": 1369,
+    "current": "wenwang",
+    "reply": "wenwang独自回答了这个问题。",
+    "busy": false,
+    "memories": {
+      "king:2331134": 0,
+      "wenwang:2331610": 2
+    },
+    "speech": ""
+  },
+  "edge": {
+    "soleFarBehind": true,
+    "noEligibleNpc": true,
+    "selectionMeanMs": 0.0076465000000000005,
+    "frame": 2179
+  },
+  "departed": {
+    "busy": false,
+    "reply": null,
+    "status": "刚才的提问已取消，按住 F 重新提问",
+    "activeQuestion": false,
+    "frame": 2373
+  },
+  "cancelledOldQuestion": {
+    "reply": "wenwang独自回答了这个问题。",
+    "current": "wenwang",
+    "frame": 3113
+  },
+  "nativeAsrCheck": {
+    "passed": true,
+    "hardwareMicrophoneUsed": false,
+    "onlineModelUsed": false,
+    "microphoneAutoSendVerified": true,
+    "asrStartedFocused": true,
+    "asrFinishedFocused": true,
+    "asrGenerationStart": 0,
+    "asrGenerationEnd": 0,
+    "asrCallbackStatus": "对方正在思考……",
+    "asrAutoSendTranscript": "快过来！现在是乱纪元。不要命吗？",
+    "checks": 21,
+    "openingAnswers": 0,
+    "damageEvents": 0,
+    "ignited": 0,
+    "burned": 0,
+    "shaded": 0,
+    "walkedMetres": 24.61721420288086,
+    "frameMeanMs": 0.0,
+    "frameP95Ms": 0.0,
+    "sunriseSeconds": 0.0,
+    "sunsetSeconds": 0.0,
+    "phase": "F ASR callback",
+    "asrTranscript": "",
+    "gatewayMode": "{\"ready\": true, \"mode\": \"scripted\", \"asrModelPresent\": true, \"asrModel\": \"Qwen3-ASR-0.6B-8bit\", \"asrEngine\": \"qwen3-asr-mlx-8bit\", \"ttsEngine\": \"moss-tts-nano-onnx-cpu\", \"ttsModel\": \"MOSS-TTS-Nano-100M-ONNX\", \"voiceProfiles\": {\"wenwang\": \"Weiguo\", \"king\": \"Zhiming\", \"pope\": \"Weiguo\", \"scholar\": \"Junhao\", \"davinci\": \"Zhiming\", \"shang_guard\": \"Junhao\", \"church_guard\": \"Weiguo\", \"citizen\": \"Junhao\"}, \"lastVoiceTimings\": {\"tts\": {\"cacheHit\": true, \"voice\": \"Weiguo\"}, \"asr\": {\"seconds\": 8.77763454199885, \"metalPeakBytes\": 1654171780, \"silence\": false}}}",
+    "measurement": "Native development player at 1920x1080",
+    "errors": []
+  },
+  "nativeOpeningCheck": {
+    "passed": true,
+    "hardwareMicrophoneUsed": false,
+    "onlineModelUsed": false,
+    "microphoneAutoSendVerified": true,
+    "asrStartedFocused": true,
+    "asrFinishedFocused": true,
+    "asrGenerationStart": 0,
+    "asrGenerationEnd": 0,
+    "asrCallbackStatus": "对方正在思考……",
+    "asrAutoSendTranscript": "快过来！现在是乱纪元。不要命吗？",
+    "checks": 57,
+    "openingAnswers": 3,
+    "damageEvents": 2,
+    "ignited": 88,
+    "burned": 88,
+    "shaded": 53,
+    "walkedMetres": 103.42481994628906,
+    "frameMeanMs": 11.512598991394043,
+    "frameP95Ms": 14.445542335510254,
+    "sunriseSeconds": 2.9952945709228516,
+    "sunsetSeconds": 2.0147323608398438,
+    "phase": "complete",
+    "asrTranscript": "太阳快跟我躲进岩石下面。",
+    "gatewayMode": "{\"ready\": true, \"mode\": \"scripted\", \"asrModelPresent\": true, \"asrModel\": \"Qwen3-ASR-0.6B-8bit\", \"asrEngine\": \"qwen3-asr-mlx-8bit\", \"ttsEngine\": \"moss-tts-nano-onnx-cpu\", \"ttsModel\": \"MOSS-TTS-Nano-100M-ONNX\", \"voiceProfiles\": {\"wenwang\": \"Weiguo\", \"king\": \"Zhiming\", \"pope\": \"Weiguo\", \"scholar\": \"Junhao\", \"davinci\": \"Zhiming\", \"shang_guard\": \"Junhao\", \"church_guard\": \"Weiguo\", \"citizen\": \"Junhao\"}, \"lastVoiceTimings\": {\"tts\": {\"cacheHit\": true, \"voice\": \"Weiguo\"}, \"asr\": {\"seconds\": 16.431160624983022, \"metalPeakBytes\": 1654171780, \"silence\": false}}}",
+    "measurement": "Native development player at 1920x1080",
+    "errors": []
+  },
+  "build": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 1
+  },
+  "finalNativeAsrCheck": {
+    "passed": true,
+    "hardwareMicrophoneUsed": false,
+    "onlineModelUsed": false,
+    "microphoneAutoSendVerified": true,
+    "asrStartedFocused": true,
+    "asrFinishedFocused": true,
+    "asrGenerationStart": 0,
+    "asrGenerationEnd": 0,
+    "asrCallbackStatus": "对方正在思考……",
+    "asrAutoSendTranscript": "快过来！现在是乱纪元。不要命吗？",
+    "checks": 21,
+    "openingAnswers": 0,
+    "damageEvents": 0,
+    "ignited": 0,
+    "burned": 0,
+    "shaded": 0,
+    "walkedMetres": 24.634111404418945,
+    "frameMeanMs": 0.0,
+    "frameP95Ms": 0.0,
+    "sunriseSeconds": 0.0,
+    "sunsetSeconds": 0.0,
+    "phase": "F ASR callback",
+    "asrTranscript": "",
+    "gatewayMode": "{\"ready\": true, \"mode\": \"scripted\", \"asrModelPresent\": true, \"asrModel\": \"Qwen3-ASR-0.6B-8bit\", \"asrEngine\": \"qwen3-asr-mlx-8bit\", \"ttsEngine\": \"moss-tts-nano-onnx-cpu\", \"ttsModel\": \"MOSS-TTS-Nano-100M-ONNX\", \"voiceProfiles\": {\"wenwang\": \"Weiguo\", \"king\": \"Zhiming\", \"pope\": \"Weiguo\", \"scholar\": \"Junhao\", \"davinci\": \"Zhiming\", \"shang_guard\": \"Junhao\", \"church_guard\": \"Weiguo\", \"citizen\": \"Junhao\"}, \"lastVoiceTimings\": {\"tts\": {\"cacheHit\": true, \"voice\": \"Weiguo\"}, \"asr\": {\"seconds\": 1.5163636669749394, \"metalPeakBytes\": 1657625316, \"silence\": false}}}",
+    "measurement": "Native development player at 1920x1080",
+    "errors": []
+  },
+  "finalFrameworkAttempt": {
+    "status": "failed_to_initialize",
+    "testsExecuted": 0,
+    "notCountedAsPassed": true
+  },
+  "sourceSha256": {
+    "Assets/_Project/Scripts/NpcDialogueDirector.cs": "93479e836156f141da30b12ef1c7e337c769c0fac1876bb6278ccebff8c01748",
+    "Assets/_Project/Scripts/NpcQuestionTargeting.cs": "3e39e220f0af3a9145197076adfece7bb93b353e063a7a04c02be5da5773ab25",
+    "Assets/_Project/Scripts/PlayerMicrophoneInput.cs": "d048671689cacc8f547b068e4a2900a6f43e74ddcc996b687665e94af458b309",
+    "Assets/_Project/Scripts/TravellerHud.cs": "549fb73882613fb786390462dd042b50fb2948bb9c4942ac177c9f8af4e962b5",
+    "Assets/_Project/Scripts/TravellerJourney.cs": "bf1bf17dab622e8260e3787a2f1e45ae23abae34ea2235aa127e11ba32f878c0",
+    "Assets/_Project/Scripts/NpcPersona.cs": "f11fd900705dc5ddd86355d76402ce2f0e5c798636d9cef52d88ec2e0ee28e12",
+    "Assets/_Project/Scripts/NpcIdentity.cs": "f26e8a0ea8167c1e2c25d2ff1a0d6872c52e049dd4884d7a62522cb229d1790f",
+    "Assets/_Project/Scripts/TravellerStage.cs": "3b921c5f22eb9a462526c1f10093f9740798bd0b7ff33c69087cdf93a3026857",
+    "Assets/_Project/Tests/Editor/NpcQuestionTargetingTests.cs": "2ba92275d660c541ac86219e1e085986ad0c7c172b6cea86c66b4738158a19bb",
+    "Tools/dialogue_gateway.py": "56efdee407f5619834f5e3c0d4ba5c999b49b56c319b6a7b133cd11721a06312",
+    "Tools/test_dialogue_gateway.py": "5ed821aab5ef260ea850a233ee4e9ebc26a8bebf41c175960f5cee453975a5d5"
+  },
+  "scopeNote": "Language-directed handoff was tested with a controlled model response; native ASR used synthetic speech and the real local recognizer. No hardware recording or live NPC LLM evaluation.",
+  "finalTargetedChecks": {
+    "passed": 11,
+    "total": 11,
+    "results": {
+      "SoleNpcAnswersEvenFarAwayAndBehindThePlayer": "Passed",
+      "LookingAtSomeoneBeatsStandingCloserToSomebodyElse": "Passed",
+      "EqualViewingAnglesUseDistance": "Passed",
+      "AVisiblePersonWinsOverSomeoneBehindAWall": "Passed",
+      "SupportingPeopleCanAnswerWithoutBeingOverriddenByAMainCharacter": "Passed",
+      "DisabledAndNonInteractivePeopleAreNotRecipients": "Passed",
+      "TurningDuringASentenceKeepsTheOriginalRecipient": "Passed",
+      "AnOldTranscriptCannotBeSubmittedAsANewQuestion": "Passed",
+      "ADepartedRecipientDoesNotSilentlyRetargetTheQuestion": "Passed",
+      "OneQuestionCanOnlyBeSubmittedOnce": "Passed",
+      "AStoryLineCannotInvalidateAnInFlightPlayerQuestion": "Passed"
+    }
+  }
+}

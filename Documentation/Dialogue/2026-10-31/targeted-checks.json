@@ -1,0 +1,17 @@
+{
+  "passed": 11,
+  "total": 11,
+  "results": {
+    "SoleNpcAnswersEvenFarAwayAndBehindThePlayer": "Passed",
+    "LookingAtSomeoneBeatsStandingCloserToSomebodyElse": "Passed",
+    "EqualViewingAnglesUseDistance": "Passed",
+    "AVisiblePersonWinsOverSomeoneBehindAWall": "Passed",
+    "SupportingPeopleCanAnswerWithoutBeingOverriddenByAMainCharacter": "Passed",
+    "DisabledAndNonInteractivePeopleAreNotRecipients": "Passed",
+    "TurningDuringASentenceKeepsTheOriginalRecipient": "Passed",
+    "AnOldTranscriptCannotBeSubmittedAsANewQuestion": "Passed",
+    "ADepartedRecipientDoesNotSilentlyRetargetTheQuestion": "Passed",
+    "OneQuestionCanOnlyBeSubmittedOnce": "Passed",
+    "AStoryLineCannotInvalidateAnInFlightPlayerQuestion": "Passed"
+  }
+}

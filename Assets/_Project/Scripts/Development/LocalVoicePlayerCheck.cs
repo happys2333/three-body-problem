@@ -39,7 +39,7 @@ namespace ThreeBodyProblem
             using(var web=UnityWebRequest.Get(dialogue.settings.gatewayUrl+"/health"))
             {web.timeout=10;yield return web.SendWebRequest();report.health=web.downloadHandler.text;Check(web.result==UnityWebRequest.Result.Success&&report.health.Contains("qwen3-asr-mlx-8bit")&&report.health.Contains("moss-tts-nano-onnx-cpu"),"The running service did not use the selected neural models.");}
             journey.Begin();stage.player.enabled=false;yield return Frames(8);
-            journey.Progress.Tick(stage.profile.gobiStory.nightMeetingSeconds);yield return Realtime(stage.profile.transitionSeconds+.2f);
+            journey.Progress.WakeUp();journey.Progress.DiscoverTraveller();journey.Progress.MeetTraveller();journey.Progress.RecordNpcAnswer();journey.Progress.ChooseStoryIntent("sunrise");yield return Realtime(stage.profile.gobiStory.sunriseSeconds+.2f);
             stage.player.Teleport(new Vector3(-13,1.75f,12),new Vector3(-16,1.4f,13));
             foreach(var actor in stage.GetComponentsInChildren<TravellerActor>())if(actor.role==TravellerRole.WenWang)actor.transform.position=new Vector3(-16,0,13);
             float until=Time.realtimeSinceStartup+12;while(journey.Progress.Step!=JourneyStep.ShelterTalk&&Time.realtimeSinceStartup<until)yield return null;

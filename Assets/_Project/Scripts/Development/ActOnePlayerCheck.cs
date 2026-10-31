@@ -11,13 +11,13 @@ using Unity.Profiling;
 
 namespace ThreeBodyProblem
 {
-    // Real player check. The optional -act-one-real-wait flag waits the full 600 gameplay seconds.
+    // Real controller check. The optional real-wait flag lets the dialogue director choose the shelter ending.
     public sealed class ActOnePlayerCheck : MonoBehaviour
     {
         [Serializable] private class Metric{public int moment,actualFrameRateLimit,vSyncCount;public bool focused;public float meanMs,p95Ms,gpuMeanMs,mainThreadMeanMs,waitForTargetMeanMs;public long triangles,batches;}
         [Serializable] private class Report
         {
-            public bool passed,mechanicsPassed,performancePassed,performanceOnly,realTenMinuteWait,hardwareMicrophoneUsed;
+            public bool passed,mechanicsPassed,performancePassed,performanceOnly,realDecisionWait,hardwareMicrophoneUsed;
             public int checks,ignited,burned,shaded,frameRateLimit;public string phase,gpu;public float walkedMetres,shelterWallSeconds,sunsetWallSeconds;
             public List<string> errors=new List<string>();public List<Metric> metrics=new List<Metric>();
             public string asrTranscript,playerTorchViewport;
@@ -30,7 +30,7 @@ namespace ThreeBodyProblem
         {
             var args=Environment.GetCommandLineArgs();int index=Array.IndexOf(args,"-act-one-check");
             if(index<0||index+1>=args.Length||UnityEngine.Object.FindFirstObjectByType<ActOnePlayerCheck>()!=null)return;
-            var go=new GameObject("Development Act One Check");DontDestroyOnLoad(go);var check=go.AddComponent<ActOnePlayerCheck>();check.output=args[index+1];check.report.realTenMinuteWait=Array.IndexOf(args,"-act-one-real-wait")>=0;
+            var go=new GameObject("Development Act One Check");DontDestroyOnLoad(go);var check=go.AddComponent<ActOnePlayerCheck>();check.output=args[index+1];check.report.realDecisionWait=Array.IndexOf(args,"-act-one-real-wait")>=0;
             check.report.performanceOnly=Array.IndexOf(args,"-act-one-perf-only")>=0;
         }
         private IEnumerator Start()
@@ -41,17 +41,17 @@ namespace ThreeBodyProblem
             Application.targetFrameRate=settings.frameRateLimit;report.frameRateLimit=settings.frameRateLimit;
             if(!report.performanceOnly)
             {
-            Check(journey.IsTitle&&stage.Current.sunCount==0,"Opening must be a night-time title.");Check(settings.shelterWaitSeconds==600,"Production wait is not 600 seconds.");
+            Check(journey.IsTitle&&stage.Current.sunCount==0,"Opening must be a night-time title.");Check(settings.wakeSeconds>0,"Awakening is not configured.");
             foreach(var size in new[]{new Vector2Int(960,540),new Vector2Int(1280,720),new Vector2Int(1920,1080),new Vector2Int(1024,768)})
             {Screen.SetResolution(size.x,size.y,FullScreenMode.Windowed);yield return Frames(8);CheckInside(hud.Root.Q("title-card"));}
             Screen.SetResolution(1920,1080,FullScreenMode.Windowed);yield return Frames(8);
-            journey.Begin();stage.player.enabled=false;yield return Realtime(.3f);
+            journey.Begin();stage.player.enabled=false;Check(journey.Progress.Step==JourneyStep.Awakening,"The run did not begin by waking up.");yield return Realtime(settings.wakeSeconds+.2f);
             var carriers=stage.GetComponentsInChildren<TorchBearer>();Check(carriers.Length==2,"Opening cast must both have torch bearers.");
             foreach(var carrier in carriers){Check(carrier.IsLit&&carrier.Grip!=null,"Opening torch is not lit.");Check(carrier.Grip.GetComponentInChildren<Light>().enabled,"Torch light is disabled.");var hand=carrier.GetComponent<TravellerActor>().animator.GetBoneTransform(HumanBodyBones.LeftHand);Check(Vector3.Distance(hand.position,carrier.HandTarget)<.08f,"Torch hand IK cannot reach the grip: "+carrier.name);}
             foreach(var carrier in carriers)if(carrier.GetComponent<TravellerActor>().role==TravellerRole.PlayerTraveller)
             {var point=stage.player.viewCamera.WorldToViewportPoint(carrier.Grip.TransformPoint(Vector3.up*.77f));report.playerTorchViewport=point.ToString();Check(point.z>0&&point.x>0&&point.x<1&&point.y>0&&point.y<1,"The first-person torch is outside the default view.");}
             Capture("01_NightMeeting");yield return Frames(3);SetPhase("night encounter");
-            journey.Progress.Tick(settings.nightMeetingSeconds);yield return Realtime(stage.profile.transitionSeconds+.2f);
+            journey.Progress.DiscoverTraveller();journey.Progress.MeetTraveller();journey.Progress.RecordNpcAnswer();journey.Progress.ChooseStoryIntent("sunrise");yield return Realtime(settings.sunriseSeconds+.2f);
             Check(stage.MomentIndex==1&&stage.GetComponent<GobiSequenceController>().SunHasRisen,"Giant sun failed to appear.");
             stage.player.Teleport(new Vector3(9,1.75f,-18),new Vector3(25,9,120));yield return Frames(25);
             Check(exposure.Vitality.Health<100&&exposure.Vitality.Health%10==0,"Sunlight does not cause hidden ten-point damage.");
@@ -67,7 +67,7 @@ namespace ThreeBodyProblem
             float shelterStart=Time.realtimeSinceStartup;SetPhase("shelter conversation and fire");
             until=Time.realtimeSinceStartup+15;while(Vector3.Distance(companion.position,stage.player.transform.position)>4.8f&&Time.realtimeSinceStartup<until)yield return null;
             journey.Interact();yield return Frames(3);Check(journey.DialogueOpen,"Shelter conversation cannot open.");CheckInside(hud.Root.Q("dialogue"));
-            Check(hud.Root.Q("chat-input")!=null&&hud.Root.Q("microphone")!=null,"Free text or microphone entry is missing.");
+            Check(hud.Root.Q("conversation-recipient")!=null&&hud.Root.Q("voice-status")!=null,"F question recipient or microphone status is missing.");
             var dialogue=stage.GetComponent<NpcDialogueDirector>();dialogue.Submit("你是谁？为什么带着沙漏？");
             until=Time.realtimeSinceStartup+13;while(dialogue.IsBusy&&Time.realtimeSinceStartup<until)yield return null;
             Check(!string.IsNullOrEmpty(dialogue.LastReply),"Dialogue service produced no visible response.");
@@ -91,21 +91,21 @@ namespace ThreeBodyProblem
             report.ignited=fire.IgnitedCount;report.burned=fire.BurnedCount;report.shaded=fire.ShadedCount;
             Check(report.ignited>0&&report.burned==report.ignited,"Exposed shrubs did not finish as ash.");Check(report.shaded>0,"No shaded plant survived the sunlight.");
             stage.player.FaceTarget(new Vector3(8,1,28));Capture("04_AshesAndShade");yield return Frames(3);
-            SetPhase(report.realTenMinuteWait?"waiting the full 600 seconds":"checking the 600-second boundary with injected time");
-            if(!report.realTenMinuteWait)
+            SetPhase(report.realDecisionWait?"waiting for the narrative director":"checking a validated sunset decision");
+            journey.Progress.IntroduceTraveller();
+            if(!report.realDecisionWait)
             {
-                journey.Progress.Tick(Mathf.Max(0,settings.shelterWaitSeconds-journey.Progress.Elapsed-.2f));
-                Check(journey.Progress.Step==JourneyStep.ShelterTalk,"Shelter ended before the configured wait.");journey.Progress.Tick(.25f);
+                journey.Progress.Tick(settings.minimumShelterTalkSeconds);
+                Check(journey.Progress.Step==JourneyStep.ShelterTalk,"The clock alone ended the shelter conversation.");
+                journey.Progress.ChooseStoryIntent("sunset");
             }
             else
             {
-                float next=Time.realtimeSinceStartup+30;
-                while(journey.Progress.Step==JourneyStep.ShelterTalk)
-                {if(Time.realtimeSinceStartup>next){next+=30;Save();}yield return null;}
+                float deadline=Time.realtimeSinceStartup+120;
+                while(journey.Progress.Step==JourneyStep.ShelterTalk&&Time.realtimeSinceStartup<deadline)yield return null;
             }
             report.shelterWallSeconds=Time.realtimeSinceStartup-shelterStart;
-            if(report.realTenMinuteWait)Check(report.shelterWallSeconds>=599,"The full real-time shelter wait was skipped.");
-            Check(journey.Progress.Step==JourneyStep.Sunset,"Sunset was not triggered by the clock.");
+            Check(journey.Progress.Step==JourneyStep.Sunset,"A valid sunset decision was not executed.");
             float sunsetStart=Time.realtimeSinceStartup;until=sunsetStart+6;
             while(journey.Progress.Step==JourneyStep.Sunset&&Time.realtimeSinceStartup<until)yield return null;
             report.sunsetWallSeconds=Time.realtimeSinceStartup-sunsetStart;

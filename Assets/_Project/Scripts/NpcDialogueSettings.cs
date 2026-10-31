@@ -9,6 +9,7 @@ namespace ThreeBodyProblem
         public float speechTimeoutSeconds=35;
         public TextAsset sharedPrompt;
         public bool synthesiseReplies=true;
+        public bool autoSubmitMicrophone=true;
         public float conversationDistance=5;
     }
 }

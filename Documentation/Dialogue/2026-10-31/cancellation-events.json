@@ -1,0 +1,56 @@
+{
+  "mode": "stay",
+  "events": [
+    {
+      "npcId": "wenwang",
+      "recipientId": "2331610",
+      "utterance": "这是一句新的提问。",
+      "kind": "dialogue",
+      "allowHandoff": true,
+      "context": {
+        "scene": "第二幕 / 朝歌 · 殷商王都",
+        "phase": "WalkToWater",
+        "sky": "恒纪元 · 王都复苏池",
+        "objective": "从侧门出殿，前往复苏水边",
+        "hypothesis": "",
+        "giantSunSeen": false,
+        "inShade": true,
+        "bothInShade": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "plantsIgnited": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "phaseElapsed": 239.05372619628906,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "observations": []
+      },
+      "history": [],
+      "interlocutors": [
+        {
+          "id": "2331134",
+          "npcId": "king",
+          "displayName": "纣王",
+          "aliases": [
+            "纣王",
+            "商王",
+            "大王"
+          ]
+        },
+        {
+          "id": "2331610",
+          "npcId": "wenwang",
+          "displayName": "姬昌",
+          "aliases": [
+            "周文王",
+            "姬昌",
+            "文王",
+            "旅人"
+          ]
+        }
+      ]
+    }
+  ]
+}

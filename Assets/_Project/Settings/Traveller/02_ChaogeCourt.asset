@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d8a5f27e65a4c64bd5df7cb2a3d038, type: 3}
   m_Name: 02_ChaogeCourt
   m_EditorClassIdentifier: ThreeBodyProblem.Runtime::ThreeBodyProblem.TravellerSceneProfile
-  chapter: "\u7B2C\u4E00\u5E55 / \u671D\u6B4C \xB7 \u6BB7\u5546\u738B\u90FD"
+  chapter: "\u7B2C\u4E8C\u5E55 / \u671D\u6B4C \xB7 \u6BB7\u5546\u738B\u90FD"
   subtitle: "\u5DE8\u6446\u73AF\u7ED5 \xB7 \u77F3\u780C\u91D1\u5B57\u5854 \xB7 \u590D\u82CF\u4E0E\u957F\u591C"
   sceneIndex: 1
   transitionSeconds: 4
@@ -110,3 +110,4 @@ MonoBehaviour:
   - {x: 82, y: 0, z: -9}
   - {x: 82, y: 0, z: -20}
   companionWalkSpeed: 3.4
+  gobiStory: {fileID: 0}

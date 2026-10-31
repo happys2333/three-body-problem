@@ -57,3 +57,14 @@
 .travel-overlay { background-color: rgb(9,12,14); }
 .travel-title { font-size: 36px; letter-spacing: 5px; color: rgb(230,205,155); -unity-text-align: middle-center; white-space: normal; margin: 20px; }
 .travel-subtitle { font-size: 16px; color: rgb(177,171,153); margin-top: 20px; }
+.quest-marker { position: absolute; width: 84px; align-items: center; }
+.quest-arrow { width: 44px; height: 44px; font-size: 34px; color: rgb(102,244,142); -unity-text-align: middle-center; -unity-font-style: bold; }
+.quest-distance { font-size: 14px; color: rgb(174,255,197); background-color: rgba(7,23,17,0.72); padding: 3px 9px; border-radius: 9px; -unity-text-align: middle-center; }
+.wake-lid { position: absolute; left: 0; right: 0; background-color: rgb(0,0,0); }
+.wake-top { top: 0; }
+.wake-bottom { bottom: 0; }
+.gobi-chat { width: 36%; max-width: 510px; align-self: flex-end; padding: 12px 16px; }
+.gobi-chat .dialogue-scroll { max-height: 320px; }
+.gobi-chat .button { font-size: 14px; min-height: 34px; padding: 6px 10px; }
+.compact .gobi-chat { width: 75%; max-width: 510px; }
+.chat-input .unity-base-text-field__input, .chat-input .unity-text-field__input { background-color: rgb(28,38,46); color: rgb(240,224,191); padding: 8px; border-color: rgb(105,118,125); border-width: 1px; }
