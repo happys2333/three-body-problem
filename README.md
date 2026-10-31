@@ -13,10 +13,10 @@
 1. 在 Unity Hub 中添加当前目录，使用上述版本打开项目。
 2. 打开 `Assets/_Project/Scenes/Traveller/01_GobiJourney.unity`。
 3. 点击 **Play**，在标题页点击 **开始旅程**。
-4. 在荒漠中醒来，使用 WASD 行走、按住鼠标右键环顾，沿火光找到旅人。巨日出现后跟随旅人进入巨岩阴影。
-5. 看向人物按住 F 说话，松开后自动转写并提问；按下时锁定本次接收者。T 切换火把，E 记录观察，J 打开观察簿，Esc 暂停。
+4. 在荒漠中醒来，使用 WASD 行走、按住鼠标右键环顾，沿绿色箭头调查四周并接近火光。巨日出现后跟随旅人进入巨岩阴影。
+5. 看向人物按住 F 说话，松开后自动转写并提问；按下时锁定本次接收者，转头不改选；T 切换火把。E 记录观察，J 打开观察簿，Esc 暂停。
 
-主线顺序：荒漠苏醒与火光相遇 → 巨日与晒伤避险 → 岩下交谈、暴晒植被烧成灰烬 → 突然入夜 → 同行一段夜路后自动抵达朝歌 → 穿城进入金字塔石殿 → 献历验证 → 复苏池苑 → 长夜 → 中世纪质询 → 三日凌空 → 回顾。夜路上的两次飞星观察为可选，不阻止第一幕结束。当前第一幕完整说明、语音服务启动和验收见 [夜色中的戈壁旅人](Documentation/ActOne/README.md)，独立开发包为 `Builds/ActOneTraveller.app`。
+主线顺序：荒漠苏醒与调查 → 火光相遇、最多三次简短回答 → AI 决定巨日升起与晒伤避险 → 岩下认识姬昌、交流与植被燃烧 → AI 决定日落、原路退回地平线 → 同行一段夜路后自动抵达朝歌 → 穿城进入金字塔石殿 → 献历验证 → 复苏池苑 → 长夜 → 中世纪质询 → 三日凌空 → 回顾。夜路上的两次飞星观察为可选，不阻止第一幕结束。当前第一幕完整说明、语音服务启动和验收见 [夜色中的戈壁旅人](Documentation/ActOne/README.md)，独立开发包为 `Builds/ActOneTraveller.app`。
 
 当前本机语音使用 MOSS-TTS-Nano ONNX CPU 合成与 Qwen3-ASR-0.6B MLX 8-bit 识别，保留旧服务回退。七条剧情台词已预生成；其他电脑的安装、临时声线与实际测试范围见 [本地语音说明](Documentation/ActOne/README.md#本机语音服务)。
 
@@ -24,9 +24,9 @@
 
 场景时刻、跳转与传送仅用于调试：编辑器或 Development Build 中按 **F8** 打开，普通游戏默认隐藏。
 
-三个旅人场景已加入 Build Profiles 的 Scene List，戈壁为构建入口。通过 **File → Build Profiles** 选择目标平台后即可构建。原 `Main.unity` 保留为初始化样例。
+三个旅人场景已加入 Build Profiles 的 Scene List，戈壁为构建入口。通过 **File → Build Profiles** 选择目标平台后即可构建。旧的空白初始化场景已移除。
 
-场景包含巨日避险、一颗与两颗飞星、朝歌大厅与复苏水边、长夜、中世纪大厅和三日凌空。全部人物已使用带贴图与骨架的 Humanoid 模型：六套主要人物，以及卫兵、男女居民和复苏者。玩家采用第一人称，低头可见身体和脚，视线不跟随头部骨骼摇晃。周文王带路、等候与交谈，纣王和教皇保留坐姿手势，学者与达芬奇在警报后走出大厅。卫兵持盾矛站岗，居民短途走动并在寒冷时发抖。36 个角色已装配持火把能力；交互角色有独立会话、八类提示词、文字输入和本机语音转写。默认显示离线剧情回复，未来 DeepSeek 接口已适配，真实在线生成仍需服务端密钥验证。
+场景包含巨日避险、一颗与两颗飞星、朝歌大厅与复苏水边、长夜、中世纪大厅和三日凌空。全部人物已使用带贴图与骨架的 Humanoid 模型：六套主要人物，以及卫兵、男女居民和复苏者。玩家采用第一人称，低头可见身体和脚，视线不跟随头部骨骼摇晃。周文王带路、等候与交谈，纣王和教皇保留坐姿手势，学者与达芬奇在警报后走出大厅。卫兵持盾矛站岗，居民短途走动并在寒冷时发抖。36 个角色已装配持火把能力；主要人物使用独立 AI 角色，普通人物共用旁人角色，对话保留独立记忆、文字输入和本机语音转写。默认显示离线剧情回复，未来 DeepSeek 接口已适配，真实在线生成仍需服务端密钥验证。
 
 - [场景、操作与制作结构](Documentation/SCENE_GUIDE.md)
 - [Unity CLI、共享技能与跨会话制作流程](Documentation/UNITY_CLI_WORKFLOW.md)
@@ -35,6 +35,10 @@
 - [建筑模型目录与三角形数](Documentation/architecture-model-catalog.csv)
 - [逐文件资源清单与校验值](Documentation/asset-manifest.json)
 - [场景验证与本机性能采样](Documentation/QA_SUMMARY.md)
+- [项目清理与恢复记录](Documentation/ProjectCleanup/README.md)
+- [荒漠苏醒：第一幕开场设计](Documentation/ActOne/OPENING_DESIGN.md)：调查、绿色指引、初谈上限、AI 日出日落与麦克风流程。
+- [统一 F 键提问与 LLM 转交](Documentation/F_DIALOGUE.md)：视线选人、开始时锁定、单人回答，以及 LLM 接入与验收边界。
+- [AI 角色决策与剧情推进方案](Documentation/AI_NPC_DECISIONS.md)：第一幕已接入受约束的日出、日落意图；纣王卫兵命令与通用剧情分支仍待开发。
 - [角色生成记录](Documentation/CharacterProduction/hunyuan-production-manifest.json)与[实际动作覆盖表](Documentation/CharacterProduction/ACTION_COVERAGE.csv)：六套主要角色已接入三个剧情场景。动作库共 99 个片段／版本，594 种角色与动作组合通过骨架和蒙皮检查；剧情按需要使用其中的待机、移动、交谈、手势和环境反应。
 - [完整人物替换记录](Documentation/CharacterProduction/full-cast-integration.json)：27 个配角由九套造型替换，三个场景共 36 个人物实例、零人物占位体；配角另外验证了 45 组常用动作组合。九套造型复用四个人体源模型，并非 27 个独立生成的人体。
 - [混元后续素材](Documentation/CharacterProduction/HUNYUAN_EXPANSION_20261028.md)：新增四套独立配角、历法箱、沙漏和皮面书，以及尚未绑骨的教皇服装修订候选；下载、Unity 预制体、复核与额度记录单独保存，尚未自动覆盖主线场景。
@@ -64,7 +68,6 @@
 | `Dialogue/` | 八类角色提示词、身份和独立会话配置 |
 | `Scenes/CharacterPreview/` | 独立角色动作预览场景 |
 | `Materials/` | 材质 |
-| `Art/Models/`、`Art/Textures/` | 模型与贴图 |
 | `Audio/` | 音乐与音效 |
 | `UI/` | 界面资源 |
 | `Settings/` | 项目配置资源 |
@@ -79,9 +82,3 @@
 - `.editorconfig` 与 `.gitattributes` 统一文本格式和 LF 换行。
 
 2026-10-27：中央王宫已按《三体》朝歌描写改为厚墙金字塔，加入低入口、甬道、内殿与可开启天窗；戈壁与首都河谷换用连续地形、扫描岩石与摄影植被，见 [王都布局与美术](Documentation/SHANG_CAPITAL.md) 和 [环境素材来源](Documentation/ASSET_SOURCES.md)。
-
-## 统一 F 键提问
-
-看向人物，按住 F 说话，松开后自动转写并发送；提问过程中转头不改变接收者。预设问题选项已移除，麦克风或识别不可用时显示文字输入。主要人物使用独立角色和记忆，普通人物共用旁人角色。点名转交的语义由 LLM 理解，Unity 校验在场名单并保证最终只有一人回答。
-
-实现、在线接入范围与验收见 [统一 F 键提问](Documentation/F_DIALOGUE.md)。
