@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 834bd774cc8c241d2ba619520b4abf1e, type: 3}
+  m_Name: ChurchGuard_Steel
+  m_EditorClassIdentifier: ThreeBodyProblem.Runtime::ThreeBodyProblem.EraGuardProfile
+  role: 7
+  bodySource: Assets/_Project/Art/HunyuanExpansion/Prefabs/ChurchGuard.prefab
+  layoutVersion: 4
+  standingHeight: 1.85
+  polearmPosition: {x: 0.28, y: 0.08, z: 0.24}
+  polearmGripHeight: 1.18
+  polearmEuler: {x: -2, y: 0, z: -3}
+  rightGrip: {x: 0.43670082, y: 1.254283, z: 0.24459802}
+  shieldPosition: {x: -0.32, y: 1.17, z: 0.25}
+  torchGrip: {x: -0.3, y: 1.2, z: 0.23}
+  shieldBackPosition: {x: 0, y: 1.2, z: -0.27}
+  leftGrip: {x: -0.42001998, y: 1.17, z: 0.055353023}
+  handBlendSeconds: 0.25
+  gripRadius: 0.028
+  knuckleDistance: 0.1
+  shieldStowSeconds: 0.45
+  patrolSpeed: 1.05
+  patrolInterval: 22
+  playerClearance: 5
+  patrolHalfWidth: 1.4
+  idleMotion: MX_WeightShift

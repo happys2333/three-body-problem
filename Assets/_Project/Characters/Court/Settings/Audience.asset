@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a40b754504444a6a82305e1b5480818, type: 3}
+  m_Name: Audience
+  m_EditorClassIdentifier: ThreeBodyProblem.Runtime::ThreeBodyProblem.CourtAudienceSettings
+  walkSpeed: 1.25
+  transferSeconds: 1.25
+  courtesySeconds: 0.8
+  companionHandoff: {x: -2.3, y: 4.01, z: 19.8}
+  officerHandoff: {x: -3.35, y: 4.01, z: 19.8}
+  ascent:
+  - {x: -2.7, y: 4.01, z: 24.6}
+  - {x: -2.7, y: 4.46, z: 27.95}
+  - {x: -2.7, y: 4.91, z: 29.15}
+  - {x: -2.7, y: 5.3600006, z: 30.35}
+  - {x: -2.7, y: 5.8100004, z: 31.55}
+  - {x: -0.65, y: 5.8100004, z: 32.1}
+  companionCarry: {x: 0, y: 1.12, z: 0.36}
+  officerCarry: {x: 0, y: 1.1, z: 0.36}
+  kingCarry: {x: 0, y: 1.12, z: 0.4}
