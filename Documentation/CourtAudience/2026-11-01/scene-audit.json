@@ -1,0 +1,43 @@
+{
+  "scene": "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity",
+  "play": false,
+  "dirty": false,
+  "actors": 36,
+  "crowd": 33,
+  "missingScripts": 0,
+  "missingMaterials": 0,
+  "unsupportedMaterials": 0,
+  "attendants": [
+    {
+      "id": "CourtSteward",
+      "position": "(5.800, 4.010, 24.600)",
+      "role": "CitizenMale",
+      "fan": false,
+      "formalRobe": true
+    },
+    {
+      "id": "RitualAttendant",
+      "position": "(-2.600, 5.810, 35.100)",
+      "role": "CitizenFemale",
+      "fan": true,
+      "formalRobe": false
+    },
+    {
+      "id": "CalendarAttendant",
+      "position": "(-5.800, 4.010, 24.600)",
+      "role": "CitizenMale",
+      "fan": false,
+      "formalRobe": true
+    },
+    {
+      "id": "ChamberAttendant",
+      "position": "(2.600, 5.810, 35.100)",
+      "role": "CitizenFemale",
+      "fan": true,
+      "formalRobe": false
+    }
+  ],
+  "shangGuards": 10,
+  "ceremonialSentries": 8,
+  "audienceReady": true
+}

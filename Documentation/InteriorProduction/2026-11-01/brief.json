@@ -1,0 +1,292 @@
+{
+  "date": "2026-11-01",
+  "updated": "2026-11-01T15:02:31.467225+08:00",
+  "scope": "Saved palace interior, runtime divination, timer, Foley and GTA-inspired shared HUD",
+  "status": "Implemented, saved and verified: 35 EditMode tests and 202 native functional checks passed; chamber performance budget remains unpassed.",
+  "referenceScope": {
+    "television": "Tencent Three-Body, original 30-episode edition, episode 7 game sequence",
+    "televisionVideoObserved": false,
+    "access": "Official Chinese/English YouTube editions were members-only; WeTV player failed to load. Public scene-image repost reviewed, mainly exterior desert frames. No shot timestamps or interior TV prop details asserted as verified.",
+    "excludeAsExactReference": "Horizon/幻熊视觉 publicly labels the located concept art Qin Palace, a later civilisation; it is not evidence for the Shang audience chamber.",
+    "novel": "Three-Body / 三体、周文王、长夜, short relevant narrative descriptions checked; detailed new art and layout are project proposals"
+  },
+  "sources": [
+    {
+      "kind": "official_episode_entry",
+      "url": "https://www.youtube.com/watch?v=TONQ01_IIDw"
+    },
+    {
+      "kind": "official_episode_entry",
+      "url": "https://wetv.vip/zh-tw/play/h31rop8wfso9jnh/d0045rgs9bg-EP07%3A_Tiga_Tubuh"
+    },
+    {
+      "kind": "public_concept_artist_later_era",
+      "url": "https://www.zcool.com.cn/work/ZNjY4NTM2MTY=.html"
+    },
+    {
+      "kind": "public_scene_still_repost",
+      "url": "https://finance.sina.cn/tech/2023-01-19/detail-imyasptq8757845.d.html"
+    },
+    {
+      "kind": "novel_chapter_text",
+      "url": "https://yuannancheng.com/Docs/%E4%B8%89%E4%BD%93/1/4.html"
+    }
+  ],
+  "newGenerationCandidates": [
+    {
+      "id": "ShangRoyalSeat",
+      "name": "石木青铜御座",
+      "priority": "P0",
+      "method": "Authored locally in Blender for this delivery; prior Hunyuan prompt retained as an optional future replacement.",
+      "targetSizeMetres": [
+        2.4,
+        2.4,
+        1.6
+      ],
+      "trianglesByLodBudget": [
+        40000,
+        12000,
+        2800
+      ],
+      "prompt": "殷商风格王座，厚重石质基座与深色木座，青铜兽面扶手和高靠背，暗褐兽皮坐垫，朴素威严，写实PBR，单独完整家具，正面略侧视，无人物无房间无文字无地台，无明清盘龙椅无欧式王冠无底座装饰"
+    },
+    {
+      "id": "ShangRoyalReliefPanel",
+      "name": "兽面雷纹青铜浮雕板",
+      "priority": "P0",
+      "method": "Authored locally in Blender for this delivery; prior Hunyuan prompt retained as an optional future replacement.",
+      "targetSizeMetres": [
+        2.8,
+        4.0,
+        0.22
+      ],
+      "trianglesByLodBudget": [
+        28000,
+        8000,
+        1500
+      ],
+      "prompt": "殷商风格竖向长方形青铜浮雕板，正面居中对称兽面纹，周围细密几何雷纹边框，厚重浅浮雕，深褐青铜与少量铜绿，写实PBR，单独完整物体，平直背面，无人物无场景无支架无文字无龙凤无现代符号"
+    },
+    {
+      "id": "ShangBronzeJue",
+      "name": "青铜爵",
+      "priority": "P1",
+      "method": "Authored locally in Blender for this delivery; prior Hunyuan prompt retained as an optional future replacement.",
+      "targetSizeMetres": [
+        0.21,
+        0.24,
+        0.16
+      ],
+      "trianglesByLodBudget": [
+        8000,
+        2000,
+        500
+      ],
+      "prompt": "商代风格青铜爵，一件完整三足酒器，前流后尾，口沿两柱，腹侧单鋬，朴素兽面浅纹，深褐青铜少量铜绿，真实磨损写实PBR，单独器物，无其他器皿无人无桌子无文字无场景无底座"
+    },
+    {
+      "id": "ShangBronzeGu",
+      "name": "青铜觚",
+      "priority": "P1",
+      "method": "Authored locally in Blender for this delivery; prior Hunyuan prompt retained as an optional future replacement.",
+      "targetSizeMetres": [
+        0.16,
+        0.28,
+        0.16
+      ],
+      "trianglesByLodBudget": [
+        8000,
+        2000,
+        500
+      ],
+      "prompt": "商代风格青铜觚，一件完整细腰高足酒器，喇叭形敞口，圈足，腹部朴素兽面浅纹，深褐青铜少量铜绿，真实磨损写实PBR，单独器物，无其他器皿无人无桌子无文字无场景无底座"
+    }
+  ],
+  "reuse": [
+    {
+      "id": "ShangBronzeDing",
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangBronzeDing.prefab",
+      "status": "Planning inventory retained; see implemented/reuseAtDelivery and asset audit for delivery state.",
+      "priority": "P0"
+    },
+    {
+      "id": "ShangBronzeBrazier",
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangBronzeBrazier.prefab",
+      "status": "Planning inventory retained; see implemented/reuseAtDelivery and asset audit for delivery state.",
+      "priority": "P0"
+    },
+    {
+      "id": "CalendarChest",
+      "path": "Assets/_Project/Art/HunyuanExpansion/Prefabs/CalendarChest.prefab",
+      "status": "Planning inventory retained; see implemented/reuseAtDelivery and asset audit for delivery state.",
+      "priority": "P0"
+    },
+    {
+      "id": "ShangOracleBone",
+      "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangOracleBone.prefab",
+      "status": "Planning inventory retained; see implemented/reuseAtDelivery and asset audit for delivery state.",
+      "priority": "P0"
+    },
+    {
+      "id": "ShangStorageJar",
+      "path": "Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangStorageJar.prefab",
+      "status": "Planning inventory retained; see implemented/reuseAtDelivery and asset audit for delivery state.",
+      "priority": "P1"
+    },
+    {
+      "id": "BronzeHourglass",
+      "path": "Assets/_Project/Art/HunyuanExpansion/Prefabs/BronzeHourglass.prefab",
+      "status": "Planning inventory retained; see implemented/reuseAtDelivery and asset audit for delivery state.",
+      "priority": "P2"
+    }
+  ],
+  "authoredOrEffects": [
+    {
+      "id": "FiveCompartmentSandTimer",
+      "priority": "P0",
+      "reason": "Exact five-tier openable wooden case and independently animated sand need deterministic construction",
+      "targetSizeMetres": [
+        0.55,
+        1.05,
+        0.3
+      ],
+      "placement": "Replace presentation timer at (-5.8, 5.31, 17), then reassess table height; maintain a separate narrative time variable",
+      "parts": [
+        "Wood case",
+        "Five internal compartments",
+        "Hinged front panel",
+        "Separate sand surfaces and streams",
+        "Shared rotation pivot"
+      ],
+      "interaction": "Flip during calendar verification under story time control; visual timing must never grant an LLM arbitrary frame or time access"
+    },
+    {
+      "id": "DivinationFloor",
+      "priority": "P0",
+      "reason": "Geometry or authored decal gives exact trigram strokes and avoids invented generated writing",
+      "placement": "Flat under the existing skylight, centred at (0, 4.03, 23.5), radius about 3.2 m",
+      "interaction": "Reveal with Ji Chang's demonstration; retain a flat, collision-free central walkway"
+    },
+    {
+      "id": "RitualDingEffects",
+      "priority": "P0",
+      "reason": "Reuse detailed vessel; fire, charcoal, water and steam are game effects",
+      "interaction": "Low steam and coal glow; keep emissions/lights within existing chamber lighting budget"
+    },
+    {
+      "id": "ChamberSurfaceDressing",
+      "priority": "P1",
+      "reason": "Repeated relief trim, worn stair edges, soot and stone-floor borders work as reusable geometry/material variations",
+      "interaction": "Decorative; no collision over existing stairs or main route"
+    },
+    {
+      "id": "WeaponRacksAndMats",
+      "priority": "P1",
+      "reason": "Reuse the locally authored Shang bronze ge and spear meshes, plus timber supports and woven mats",
+      "placement": "Side-wall pockets outside central sightline and side-exit route"
+    }
+  ],
+  "optionalCharacter": {
+    "id": "Fuxi",
+    "status": "Role absent from current TravellerRole enum; proposal only",
+    "priority": "P2",
+    "needs": [
+      "Dedicated black-robed character and rig",
+      "Append a persistent role identifier without renumbering existing roles",
+      "Story script and bounded NPC prompt",
+      "Place in a dim side pocket, not the central observation area"
+    ]
+  },
+  "layoutConstraints": {
+    "chamberWidth": 28,
+    "chamberDepth": 38,
+    "clearHeight": 8.4,
+    "floorWorldY": 4,
+    "skylightCentre": [
+      0,
+      23.5
+    ],
+    "skylightClearMetres": [
+      4,
+      4
+    ],
+    "keepClear": [
+      "Main approach to the king",
+      "Existing court-to-pool route",
+      "Skylight cover movement",
+      "Direct line of sight between player, Ji Chang and King Zhou"
+    ],
+    "centralWalkwayWidthAtLeast": 3
+  },
+  "generationPolicy": {
+    "priorityOrder": [
+      "ShangRoyalSeat",
+      "ShangRoyalReliefPanel",
+      "ShangBronzeJue",
+      "ShangBronzeGu"
+    ],
+    "lastQuotaObservation": {
+      "requestsRemaining": 1,
+      "from": "Previous 2026-11-01 batch; not queried again in this research task"
+    },
+    "newRequestsMadeThisTask": 0,
+    "promptsMaxCharacters": 150
+  },
+  "acceptance": [
+    "Reload saved prefabs and verify original references/LOD/materials",
+    "Match seat height to actual seated character hips, hands and feet",
+    "Verify doorway, stairs and court-to-pool route with the real CharacterController",
+    "Skylight beam/visible dust must follow cover opening and sun state",
+    "Compare before/after from the same three interior viewpoints",
+    "Profile chamber day/night plus full revival path; previous pool timing exceeded 60 FPS budget"
+  ],
+  "baseline": {
+    "capture": "Isolated Unity preview scene, saved current scene, Edit mode; not native gameplay evidence",
+    "images": [
+      "Baseline/01_Existing_Chamber.jpg",
+      "Baseline/02_Existing_Throne.jpg",
+      "Baseline/03_Existing_Calendar.jpg"
+    ],
+    "sceneSha256": "baebb9a0874ba58b1111b9c0ee648c028fe9e30f66f2da9afc7c86ad4a18bcd2"
+  },
+  "implemented": {
+    "furnishings": [
+      "RoyalSeat",
+      "RoyalRelief (two instances)",
+      "CalendarTable",
+      "BronzeJue",
+      "BronzeGu"
+    ],
+    "runtime": [
+      "PalaceDivination",
+      "FiveTierSandTimer",
+      "PalaceSoundscape"
+    ],
+    "ui": "Lower-centre mission with yellow targets, bottom paginated outlined subtitles, upper-left help, right-side voice/text panel",
+    "durationSeconds": 26,
+    "revealSeconds": 2.6,
+    "fadeSeconds": 0.9,
+    "radiusMetres": 3.2,
+    "note": "64 unique decorative binary hexagrams; not asserted to follow the historical King Wen sequence."
+  },
+  "reuseAtDelivery": {
+    "ShangBronzeBrazier": 4,
+    "CalendarChest": 1,
+    "ShangOracleBone": 1,
+    "existingDingKept": 2,
+    "newRealTimeLights": 0
+  },
+  "validation": "See editmode-tests.json, Native/*/report.json, asset-validation.json and preservation-audit.json",
+  "verification": {
+    "editModePassed": 35,
+    "nativePassed": 202,
+    "resolutions": [
+      "960x540",
+      "1280x720",
+      "1600x900",
+      "1024x768"
+    ],
+    "chamberP95Ms": 24.119537353515625,
+    "wholeGame60FpsVerified": false
+  }
+}

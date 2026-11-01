@@ -1,0 +1,12 @@
+{
+  "scene": "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity",
+  "backup": "Logs/interior-backups/20261101_145956",
+  "source": "Locally authored Blender furnishings; existing project PBR and props reused",
+  "newLocalModels": 5,
+  "hexagrams": 64,
+  "runtime": [
+    "PalaceDivination",
+    "FiveTierSandTimer",
+    "PalaceSoundscape"
+  ]
+}

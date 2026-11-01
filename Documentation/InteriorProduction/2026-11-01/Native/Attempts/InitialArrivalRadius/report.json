@@ -1,0 +1,27 @@
+{
+    "passed": false,
+    "performanceBudgetPassed": true,
+    "checks": 53,
+    "width": 1600,
+    "height": 900,
+    "meanMs": 6.6995768547058109,
+    "p95Ms": 16.010000228881837,
+    "gpu": "Apple M5",
+    "errors": [
+        "Ji Chang never reaches the ritual centre.",
+        "Rune circle is not beneath the caster.",
+        "Casting animation did not start.",
+        "Runes skipped the gradual reveal.",
+        "Rune glow did not reach its active state.",
+        "Objective target emphasis is missing.",
+        "Objective target emphasis is missing.",
+        "Objective target emphasis is missing.",
+        "Objective target emphasis is missing."
+    ],
+    "resolutions": [
+        "960x540",
+        "1280x720",
+        "1600x900",
+        "1024x768"
+    ]
+}

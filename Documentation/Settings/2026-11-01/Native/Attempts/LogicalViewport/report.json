@@ -1,0 +1,21 @@
+{
+    "passed": false,
+    "checks": 40,
+    "errors": [
+        "Settings outside viewport: settings-card",
+        "Settings outside viewport: settings-save",
+        "Settings outside viewport: settings-test",
+        "Settings outside viewport: settings-card",
+        "Settings outside viewport: settings-save",
+        "Settings outside viewport: settings-test",
+        "Settings outside viewport: settings-card",
+        "Settings outside viewport: settings-save",
+        "Settings outside viewport: settings-test"
+    ],
+    "resolutions": [
+        "1600x900",
+        "1280x720",
+        "960x540",
+        "1024x768"
+    ]
+}

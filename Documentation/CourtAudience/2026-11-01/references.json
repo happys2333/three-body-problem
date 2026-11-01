@@ -1,0 +1,14 @@
+{
+  "primaryReference": {
+    "title": "故宫博物院：阎立本步辇图卷",
+    "url": "https://intl.dpm.org.cn/Ceramics/64087.html",
+    "observed": "Museum page describes palace women holding fans and a red-robed introducing official.",
+    "period": "Tang; used for compositional inspiration, not asserted as Shang dress reconstruction."
+  },
+  "newHunyuanRequests": 0,
+  "originalPropSources": "ArtSource/CourtAudience/2026-11-01",
+  "localSourceScripts": [
+    "Tools/prepare_court_props.py",
+    "Assets/_Project/Editor/CourtCostumeProduction.cs"
+  ]
+}

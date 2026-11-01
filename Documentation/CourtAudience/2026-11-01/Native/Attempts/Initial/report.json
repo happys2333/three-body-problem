@@ -1,0 +1,20 @@
+{
+  "passed": false,
+  "performanceBudgetPassed": false,
+  "checks": 172,
+  "width": 1600,
+  "height": 900,
+  "meanMs": 6.719985485076904,
+  "p95Ms": 23.377790451049805,
+  "gpu": "Apple M5",
+  "errors": [
+    "Fan bearer is not gripping the moving staff.",
+    "Fan bearer is not gripping the moving staff.",
+    "A ceremonial retainer did not return to the post: 传奏官 [Humanoid]"
+  ],
+  "corrections": [
+    "Raised and moved fan grip closer to the chest so both arms can reach the moving shaft.",
+    "Return uses a 2.5 cm horizontal stop tolerance and restores the stationary capsule.",
+    "Post audit now compares the courier with its saved home position, rather than an already-moving sample."
+  ]
+}

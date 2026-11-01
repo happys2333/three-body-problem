@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "newModelsGeneratedThisTask": 0,
+  "plannedGenerationCandidates": 4,
+  "existingPropsAudited": 5,
+  "staticPreviewCaptures": 3,
+  "planSvgValid": true,
+  "allLocalLinksValid": true,
+  "sceneFileUnchanged": true,
+  "nativeTestsRerun": false,
+  "reason": "Read-only inventory and documentation/diagram task; no runtime code or scene edits."
+}

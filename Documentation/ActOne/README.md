@@ -8,7 +8,9 @@ Unity 打开 `Assets/_Project/Scenes/Traveller/01_GobiJourney.unity`，Play 后�
 
 macOS 可双击 `Tools/PlayActOne.command`，同时启动本机语音服务和试玩包；也可在项目根目录运行 `python3 Tools/play_act_one.py`。该入口默认使用离线剧情，不启用付费模型请求。
 
-WASD 行走，Shift 快走，按住鼠标右键环顾，F 看向人物交谈，T 切换玩家火把。可输入文字发送，或看向人物直接按住 F 录音，松开后中文转写并自动发送，无需先按 F。配置中可关闭自动发送，恢复松开 F 后自动发送。游戏不在后台持续录音。首次使用麦克风时由 macOS 显示授权提示，拒绝或无设备时仍能打字。
+WASD 行走，Shift 快走，直接移动鼠标环顾，T 切换玩家火把。看向人物按住 F 录音、松开后中文转写并自动发送；Enter 打开文字交谈，Esc 关闭文字输入或打开暂停菜单并释放鼠标。游戏不在后台持续录音。首次使用麦克风时由 macOS 显示授权提示，拒绝或无设备时仍能打字。
+
+标题页或 Esc 菜单的“设置 · AI 与操作”允许选择 DeepSeek、自定义 Chat Completions 兼容接口、离线对白或原有服务端配置。可填写 API 地址、Key、模型与等待时间并测试连接；Key 遮挡显示、仅在当前运行中使用。详细设置、操作与验证见 [游戏内设置说明](../Settings/2026-11-01/README_CN.md)。
 
 ## 第一幕时序
 
@@ -86,7 +88,7 @@ ASR 与 TTS 分别在独立常驻进程运行，复用权重。MOSS 限制为一
 
 没有启用在线服务时，界面明确显示“离线剧情”，采用预设回复，主线仍可完整运行。**目前未使用真实 DeepSeek 密钥验证在线生成**；接口适配测试使用模拟上游，不能当成真人自由对话或模型角色表现验收。
 
-需要在线时，在服务端环境中设置 `DEEPSEEK_API_KEY`，可选设置 `DEEPSEEK_MODEL`，然后运行：
+现在可直接在游戏设置中填写在线接口、模型和 Key。选择“沿用本地服务配置”时，仍支持原有环境变量方式：在服务端设置 `DEEPSEEK_API_KEY`，可选设置 `DEEPSEEK_MODEL`，然后运行：
 
 ```sh
 ~/.cache/three-body-voice/venv/bin/python Tools/dialogue_gateway.py --online

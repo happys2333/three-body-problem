@@ -1,0 +1,180 @@
+{
+  "date": "2026-11-01",
+  "updated": "2026-11-01T07:51:41.531962+08:00",
+  "editor": "6000.3.27f2",
+  "pipeline": "Built-in",
+  "completeForThisBatch": true,
+  "newGeneratedInputs": 9,
+  "newStaticAssets": 8,
+  "guardVariants": 3,
+  "shangGuards": 6,
+  "medievalGuards": 2,
+  "replacedBuildings": 71,
+  "replacedGrainJars": 24,
+  "replacedFurnaces": 5,
+  "replacedBronzeVessels": 13,
+  "quota": {
+    "initial": 30,
+    "requests": 29,
+    "remainingObserved": 1,
+    "purchase": false
+  },
+  "build": {
+    "result": "Succeeded",
+    "output": "Builds/ShangCapital20261101/Traveller.app",
+    "error": "",
+    "seconds": 14.147540999999999,
+    "bytes": 1189088283,
+    "errors": 0,
+    "warnings": 0
+  },
+  "functional": {
+    "editMode": {
+      "total": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "durationSeconds": 6.2330227,
+      "resultState": "Passed"
+    },
+    "civic": {
+      "passed": true,
+      "checks": 57,
+      "errors": []
+    },
+    "capitalWalk": {
+      "passed": true,
+      "checks": 36,
+      "metresWalked": 369.01171875,
+      "errors": []
+    },
+    "revival": {
+      "passed": true,
+      "checks": 38,
+      "participants": 7,
+      "states": [
+        "01_DryPaper: DryPaper hydration=0.000",
+        "02_Wetting: Wetting hydration=0.000",
+        "03_RegainingVolume: Inflating hydration=0.481",
+        "04_GettingUp: GettingUp hydration=1.000",
+        "05_Recovered: Recovered hydration=1.000"
+      ],
+      "errors": []
+    }
+  },
+  "nativeFunctionalChecks": 131,
+  "sourceArchivesPassed": true,
+  "newAssetMetasPassed": true,
+  "newMeshLfsRulesPassed": true,
+  "newMeshAssets": 48,
+  "protectedDataPassed": true,
+  "performance": {
+    "gpu": "Apple M5",
+    "width": 1600,
+    "height": 900,
+    "requestedFrameCap": 120,
+    "method": "Development native player, VSync disabled; 1.5-second warmup then 300 frames per fixed civic view. Warmup maximum retained. All civic actors forced AlwaysAnimate. Revival samples include its full timed phase transitions.",
+    "civicViews": [
+      {
+        "view": "01_Gate_Guard_Day",
+        "meanMs": 8.659625053405762,
+        "p95Ms": 10.205506324768066,
+        "warmupMaxMs": 13.509374618530273,
+        "budgetPassed": true
+      },
+      {
+        "view": "10_Palace_Guard_Day",
+        "meanMs": 6.017377853393555,
+        "p95Ms": 7.49929141998291,
+        "warmupMaxMs": 28.865293502807617,
+        "budgetPassed": true
+      },
+      {
+        "view": "02_Residential_Street",
+        "meanMs": 2.873976469039917,
+        "p95Ms": 3.608914375305176,
+        "warmupMaxMs": 6.07342004776001,
+        "budgetPassed": true
+      },
+      {
+        "view": "03_Market_Avenue",
+        "meanMs": 3.3251705169677734,
+        "p95Ms": 4.79754114151001,
+        "warmupMaxMs": 62.930992126464844,
+        "budgetPassed": true
+      },
+      {
+        "view": "04_Bronze_Workshop",
+        "meanMs": 3.396998167037964,
+        "p95Ms": 4.399454116821289,
+        "warmupMaxMs": 5.08345365524292,
+        "budgetPassed": true
+      },
+      {
+        "view": "05_Granary",
+        "meanMs": 3.201690196990967,
+        "p95Ms": 4.60933256149292,
+        "warmupMaxMs": 11.98233413696289,
+        "budgetPassed": true
+      },
+      {
+        "view": "06_Watercourse",
+        "meanMs": 5.3526411056518555,
+        "p95Ms": 7.092503070831299,
+        "warmupMaxMs": 43.76083755493164,
+        "budgetPassed": true
+      },
+      {
+        "view": "07_Western_Residential_Ward",
+        "meanMs": 11.762587547302246,
+        "p95Ms": 13.080626487731934,
+        "warmupMaxMs": 80.93895721435547,
+        "budgetPassed": true
+      },
+      {
+        "view": "08_Gate_Guard_Night",
+        "meanMs": 5.471656322479248,
+        "p95Ms": 7.514498233795166,
+        "warmupMaxMs": 26.30853843688965,
+        "budgetPassed": true
+      },
+      {
+        "view": "09_Medieval_Guard",
+        "meanMs": 5.824082374572754,
+        "p95Ms": 8.013421058654785,
+        "warmupMaxMs": 96.76841735839844,
+        "budgetPassed": true
+      }
+    ],
+    "civicSteadyViewsBudgetPassed": true,
+    "revivalMeanMs": 12.208024024963379,
+    "revivalP95Ms": 25.410457611083984,
+    "revivalBudgetPassed": false,
+    "wholeGameStable60FpsVerified": false,
+    "limitations": [
+      "Revival P95 exceeds 16.67 ms.",
+      "Warmup transitions still contain hitches.",
+      "Previous civic attempts had budget failures; final short samples are not a sustained frame-rate guarantee.",
+      "Body meshes retain full skinned detail; only equipment and static assets have three mesh LODs."
+    ]
+  },
+  "finalReports": {
+    "Civic": "Documentation/SceneProduction/2026-11-01/Native/Civic/report.json",
+    "CapitalWalk": "Documentation/SceneProduction/2026-11-01/Native/CapitalWalk/report.json",
+    "Revival": "Documentation/SceneProduction/2026-11-01/Native/Revival/report.json"
+  },
+  "scene": "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity",
+  "editorLeftStoppedAndSaved": true,
+  "gitPushedThisTask": false,
+  "nextModels": [
+    "Wooden loom",
+    "Millet plant cluster",
+    "Clay cooking hearth",
+    "Ox and separate yoke after rig/animation planning"
+  ],
+  "knownArtScope": [
+    "Novel-inspired Shang game art, not an exact archaeological reconstruction.",
+    "Exterior civic buildings retain closed footprint collision; palace interiors and routes remain playable.",
+    "Bridge final geometry authored locally after generated input failed native visual review."
+  ]
+}

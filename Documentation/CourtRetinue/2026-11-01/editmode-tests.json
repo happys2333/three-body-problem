@@ -1,0 +1,16 @@
+{
+  "mode": "EditMode",
+  "jobId": "52ca34d715b24e6b9c69054466a5b59d",
+  "total": 36,
+  "passed": 36,
+  "failed": 0,
+  "durationSeconds": 23.2732836,
+  "classes": [
+    "TravellerCrowdTests",
+    "PalaceInteriorTests",
+    "CapitalSeparationTests",
+    "TravellerSceneTests",
+    "NpcQuestionTargetingTests"
+  ],
+  "pythonGatewayTests": 21
+}

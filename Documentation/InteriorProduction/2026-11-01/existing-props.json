@@ -1,0 +1,42 @@
+[
+  {
+    "path": "Assets/_Project/Art/HunyuanExpansion/Prefabs/BronzeHourglass.prefab",
+    "size": "(0.271, 0.450, 0.286)",
+    "lods": 0,
+    "particles": 0,
+    "lights": 0,
+    "instances": 0
+  },
+  {
+    "path": "Assets/_Project/Art/HunyuanExpansion/Prefabs/CalendarChest.prefab",
+    "size": "(0.650, 0.645, 0.527)",
+    "lods": 0,
+    "particles": 0,
+    "lights": 0,
+    "instances": 0
+  },
+  {
+    "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangBronzeBrazier.prefab",
+    "size": "(1.531, 1.200, 1.531)",
+    "lods": 3,
+    "particles": 1,
+    "lights": 1,
+    "instances": 0
+  },
+  {
+    "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangBronzeDing.prefab",
+    "size": "(1.259, 1.300, 0.959)",
+    "lods": 3,
+    "particles": 0,
+    "lights": 0,
+    "instances": 13
+  },
+  {
+    "path": "Assets/_Project/Art/EnvironmentExpansionReady/Prefabs/ShangOracleBone.prefab",
+    "size": "(0.277, 0.320, 0.074)",
+    "lods": 3,
+    "particles": 0,
+    "lights": 0,
+    "instances": 0
+  }
+]

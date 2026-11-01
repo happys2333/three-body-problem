@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-11-01T01:08:28.125144+08:00",
+  "sha256": {
+    "Assets/_Project/Scenes/Traveller/01_GobiJourney.unity": "46a0ba5799afdd11a8acabc2cde5646afbf7b3c226712660b6b9417a5a3b12e0",
+    "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity": "d6c254973637db6d0b2da05e2ed51932bac6776246c0e0e3f25aafe626e50bd2",
+    "Assets/_Project/Scenes/Traveller/03_MedievalTribunal.unity": "d6272715bef30cef2ac427cd4b0568d4981d49180b1c4c0ca91a0eb43152ab62",
+    "ProjectSettings/EditorBuildSettings.asset": "2ba55d958a3cfa90b1018b036772d97350a84092c86c193eaa93a430a4706ee8",
+    "Assets/_Project/Settings/ActOne/Dialogue.asset": "f8cefdcd680408417e8b613f54b17ddb684b774eea99e343cc55a84f56f33533",
+    "Assets/_Project/Art/CapitalRevival/Revival.asset": "28bc94b1251dd5f885c0f906c5932bab99fc729e55768cf6a4f511bbd0ba55c5"
+  }
+}

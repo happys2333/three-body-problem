@@ -1,0 +1,73 @@
+{
+    "passed": true,
+    "checks": 56,
+    "width": 1600,
+    "height": 900,
+    "gpu": "Apple M5",
+    "errors": [],
+    "performance": [
+        {
+            "view": "01_Gate_Guard_Day",
+            "meanMs": 17.314350128173829,
+            "p95Ms": 29.0211238861084,
+            "warmupMaxMs": 67.3009262084961,
+            "budgetPassed": false
+        },
+        {
+            "view": "02_Residential_Street",
+            "meanMs": 4.510072231292725,
+            "p95Ms": 5.596960067749023,
+            "warmupMaxMs": 17.70724868774414,
+            "budgetPassed": true
+        },
+        {
+            "view": "03_Market_Avenue",
+            "meanMs": 5.341558933258057,
+            "p95Ms": 8.137627601623536,
+            "warmupMaxMs": 68.07879638671875,
+            "budgetPassed": true
+        },
+        {
+            "view": "04_Bronze_Workshop",
+            "meanMs": 4.859673023223877,
+            "p95Ms": 5.987372398376465,
+            "warmupMaxMs": 8.803082466125489,
+            "budgetPassed": true
+        },
+        {
+            "view": "05_Granary",
+            "meanMs": 4.727709770202637,
+            "p95Ms": 6.716085433959961,
+            "warmupMaxMs": 12.230874061584473,
+            "budgetPassed": true
+        },
+        {
+            "view": "06_Watercourse",
+            "meanMs": 10.765368461608887,
+            "p95Ms": 43.4970817565918,
+            "warmupMaxMs": 60.0657958984375,
+            "budgetPassed": false
+        },
+        {
+            "view": "07_Western_Residential_Ward",
+            "meanMs": 17.723285675048829,
+            "p95Ms": 21.020456314086915,
+            "warmupMaxMs": 130.84461975097657,
+            "budgetPassed": false
+        },
+        {
+            "view": "08_Gate_Guard_Night",
+            "meanMs": 6.959263324737549,
+            "p95Ms": 10.151665687561036,
+            "warmupMaxMs": 52.15579605102539,
+            "budgetPassed": true
+        },
+        {
+            "view": "09_Medieval_Guard",
+            "meanMs": 5.985347270965576,
+            "p95Ms": 8.4137544631958,
+            "warmupMaxMs": 11.202792167663575,
+            "budgetPassed": true
+        }
+    ]
+}

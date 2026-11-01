@@ -1,0 +1,12 @@
+{
+  "job_id": "d184af2a01b54485be9663960586d69a",
+  "status": "succeeded",
+  "summary": {
+    "total": 43,
+    "passed": 43,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 7.1423707
+  },
+  "source": "First completed get_test_job response; later build reloads clear the detailed cached result."
+}

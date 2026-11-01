@@ -1,0 +1,120 @@
+{
+  "timestamp": "2026-11-01T07:51:41.531962+08:00",
+  "passed": true,
+  "files": [
+    {
+      "file": "ArtSource/ShangCapital/2026-11-01/ShangGuardV2/ShangGuardV2_Concept.png",
+      "bytes": 228559,
+      "sha256": "42a0f489c96420c566a0081e0a58cce5942095ab0c7608ffaed6f5b2f752f3bb",
+      "passed": true
+    },
+    {
+      "file": "ArtSource/ShangCapital/2026-11-01/ShangGuardV2/ShangGuardV2_PBR.fbx",
+      "bytes": 34729900,
+      "sha256": "2f429d82c0458621131313eeccb0a80970f4216991a9d63d0f65299df6831949",
+      "passed": true
+    },
+    {
+      "file": "ArtSource/ShangCapital/2026-11-01/ShangGuardV2/ShangGuardV2_Rig.fbx",
+      "bytes": 33697436,
+      "sha256": "8d313782b4831a1524277ba0f26272eb8dbadbf536603202996290bfcade1388",
+      "passed": true
+    },
+    {
+      "file": "ArtSource/ShangCapital/2026-11-01/ShangWatchtower/ShangWatchtower_Concept.png",
+      "bytes": 536953,
+      "sha256": "14581e19c800438e607640987f0d740424c30597e29e57a10b75219d268122ca",
+      "passed": true
+    },
+    {
+      "file": "ArtSource/ShangCapital/2026-11-01/ShangWatchtower/ShangWatchtower_PBR.fbx",
+      "bytes": 66998508,
+      "sha256": "71be4f6a646ba797dc7f0182c439d9a9f7d331b433fb242dada769a76f3a136a",
+      "passed": true
+    },
+    {
+      "file": "ArtSource/ShangCapital/2026-11-01/ShangCourtyardHall/ShangCourtyardHall_Concept.png",
+      "bytes": 512741,
+      "sha256": "b22048f841eac7a1460d096b5cefc69ad5a46ec2d63fb62e394a7747481f3e62",
+      "passed": true
+    },
+    {
+      "file": "ArtSource/ShangCapital/2026-11-01/ShangCourtyardHall/ShangCourtyardHall_PBR.fbx",
+      "bytes": 67016540,
+      "sha256": "934234559cb009d344ce769be6269bac56bb9b3a8af7e164736a3c9f4d2e803e",
+      "passed": true
+    },
+    {
+      "file": "ArtSource/ShangCapital/2026-11-01/ShangCastingFurnace/ShangCastingFurnace_Concept.png",
+      "bytes": 767457,
+      "sha256": "678619099982733ef7cad5e4d7fba76822bf64c12d566a37e7c968a75fa7ce50",
+      "passed": true
+    },
+    {
+      "file": "ArtSource/ShangCapital/2026-11-01/ShangCastingFurnace/ShangCastingFurnace_PBR.fbx",
+      "bytes": 31225836,
+      "sha256": "a9d7060397772e42e1006d70ac61282dd935f0cf815a609b699519387fe6c5ae",
+      "passed": true
+    },
+    {
+      "file": "ArtSource/ShangCapital/2026-11-01/ShangWoodCart/ShangWoodCart_Concept.png",
+      "bytes": 318132,
+      "sha256": "72aef80420086c59b9a3ee3bd3a85421851445277025f626ae71db62ffa9dac2",
+      "passed": true
+    },
+    {
+      "file": "ArtSource/ShangCapital/2026-11-01/ShangWoodCart/ShangWoodCart_PBR.fbx",
+      "bytes": 60435836,
+      "sha256": "93b37e41d694ce389f8b32e2bce605518c5e8bb36c1fb6324476cabb456815c1",
+      "passed": true
+    },
+    {
+      "file": "ArtSource/ShangCapital/2026-11-01/ShangStorageJar/ShangStorageJar_Concept.png",
+      "bytes": 738777,
+      "sha256": "63f77026fab7703c3432036bc35bc834145a15ce5fe1ef9a3e8544892bab3015",
+      "passed": true
+    },
+    {
+      "file": "ArtSource/ShangCapital/2026-11-01/ShangStorageJar/ShangStorageJar_PBR.fbx",
+      "bytes": 29675052,
+      "sha256": "cad055939899d744418c588f9149ec071f3915fd97eff7390b7b5427883c60f9",
+      "passed": true
+    },
+    {
+      "file": "ArtSource/ShangCapital/2026-11-01/ShangGrainBasket/ShangGrainBasket_Concept.png",
+      "bytes": 940523,
+      "sha256": "8d1f33185d242d08a79fafe5fda243d5d58adbb5cd2d8178fc14358d7f4d0c39",
+      "passed": true
+    },
+    {
+      "file": "ArtSource/ShangCapital/2026-11-01/ShangGrainBasket/ShangGrainBasket_PBR.fbx",
+      "bytes": 49606604,
+      "sha256": "b263e2c9eca1fec1dad143fffaa1c7df8fcdca65168782f8b6839350a3308bb1",
+      "passed": true
+    },
+    {
+      "file": "ArtSource/ShangCapital/2026-11-01/ShangWoodFootbridge/ShangWoodFootbridge_Concept.png",
+      "bytes": 626087,
+      "sha256": "4061f3053d47ea7913e1d99a37cbf3c132288c7041fa9ea40a7088ae0952ed11",
+      "passed": true
+    },
+    {
+      "file": "ArtSource/ShangCapital/2026-11-01/ShangWoodFootbridge/ShangWoodFootbridge_PBR.fbx",
+      "bytes": 62556028,
+      "sha256": "08cb9511d6c4bea9c5c697b83de63869d17acf73cee535e63471c1bf79f631ee",
+      "passed": true
+    },
+    {
+      "file": "ArtSource/ShangCapital/2026-11-01/ShangVillageWell/ShangVillageWell_Concept.png",
+      "bytes": 580851,
+      "sha256": "4a5f74ef3544c6ca7aebad8f7d15f7cde77a19636a4b713f63c5bfbbb8147600",
+      "passed": true
+    },
+    {
+      "file": "ArtSource/ShangCapital/2026-11-01/ShangVillageWell/ShangVillageWell_PBR.fbx",
+      "bytes": 32983612,
+      "sha256": "5566742770969fe4ded29e116c3741d0398ea7274d41bef48bab9c6215c6e505",
+      "passed": true
+    }
+  ]
+}

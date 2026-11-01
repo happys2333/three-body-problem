@@ -1,0 +1,5 @@
+{
+  "normalCulling": "CullUpdateTransforms",
+  "initialFailures": "Four offscreen sentries had deliberately sleeping bone transforms during the first global wrist inspection. Visible sentries and native close-up grip checks passed.",
+  "verificationFix": "After the normal performance sample, temporarily use AlwaysAnimate for pose/contact inspection at every ceremonial post, then restore each original culling mode. Production culling remains unchanged."
+}

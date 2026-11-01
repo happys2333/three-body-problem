@@ -1,0 +1,17 @@
+{
+  "mode": "EditMode",
+  "jobId": "00cdc958d39d444f89dec769afda0b74",
+  "total": 35,
+  "passed": 35,
+  "failed": 0,
+  "skipped": 0,
+  "durationSeconds": 11.4906345,
+  "classes": [
+    "PalaceInteriorTests",
+    "JourneyProgressTests",
+    "TravellerEntryRegressionTests",
+    "TravellerSceneTests",
+    "CapitalRevivalTests",
+    "CapitalSeparationTests"
+  ]
+}

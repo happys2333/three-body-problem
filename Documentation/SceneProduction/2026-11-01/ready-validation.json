@@ -1,0 +1,116 @@
+{
+    "assets": [
+        {
+            "id": "ShangCastingFurnace",
+            "prefab": "Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangCastingFurnace.prefab",
+            "source": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangCastingFurnace.prefab",
+            "triangles": [
+                30000,
+                7500,
+                1600
+            ],
+            "width": 2.442915439605713,
+            "height": 2.1999995708465578,
+            "depth": 2.457249879837036,
+            "passed": true
+        },
+        {
+            "id": "ShangCourtyardHall",
+            "prefab": "Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangCourtyardHall.prefab",
+            "source": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangCourtyardHall.prefab",
+            "triangles": [
+                75000,
+                18000,
+                4000
+            ],
+            "width": 8.333378791809082,
+            "height": 5.0,
+            "depth": 5.687832832336426,
+            "passed": true
+        },
+        {
+            "id": "ShangGrainBasket",
+            "prefab": "Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangGrainBasket.prefab",
+            "source": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangGrainBasket.prefab",
+            "triangles": [
+                28000,
+                6500,
+                1400
+            ],
+            "width": 1.0522899627685547,
+            "height": 0.8500000238418579,
+            "depth": 1.0489654541015626,
+            "passed": true
+        },
+        {
+            "id": "ShangStorageJar",
+            "prefab": "Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangStorageJar.prefab",
+            "source": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangStorageJar.prefab",
+            "triangles": [
+                20000,
+                5000,
+                1000
+            ],
+            "width": 1.2731282711029053,
+            "height": 1.2499998807907105,
+            "depth": 1.2723872661590577,
+            "passed": true
+        },
+        {
+            "id": "ShangVillageWell",
+            "prefab": "Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangVillageWell.prefab",
+            "source": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangVillageWell.prefab",
+            "triangles": [
+                35000,
+                8500,
+                1800
+            ],
+            "width": 3.2153759002685549,
+            "height": 3.0,
+            "depth": 3.1475892066955568,
+            "passed": true
+        },
+        {
+            "id": "ShangWatchtower",
+            "prefab": "Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangWatchtower.prefab",
+            "source": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangWatchtower.prefab",
+            "triangles": [
+                64998,
+                16000,
+                3500
+            ],
+            "width": 5.518538475036621,
+            "height": 6.999999523162842,
+            "depth": 5.4995832443237309,
+            "passed": true
+        },
+        {
+            "id": "ShangWoodCart",
+            "prefab": "Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangWoodCart.prefab",
+            "source": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangWoodCart.prefab",
+            "triangles": [
+                45000,
+                11000,
+                2400
+            ],
+            "width": 3.718559980392456,
+            "height": 1.649999737739563,
+            "depth": 1.7453913688659669,
+            "passed": true
+        },
+        {
+            "id": "ShangWoodFootbridge",
+            "prefab": "Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangWoodFootbridge.prefab",
+            "source": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangWoodFootbridge.prefab",
+            "triangles": [
+                41964,
+                15000,
+                3200
+            ],
+            "width": 7.599999904632568,
+            "height": 1.2999999523162842,
+            "depth": 2.2429919242858888,
+            "passed": true
+        }
+    ]
+}

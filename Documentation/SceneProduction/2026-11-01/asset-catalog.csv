@@ -1,0 +1,10 @@
+﻿ID,Kind,Scene,Prefab,LOD0Triangles,LOD1Triangles,LOD2Triangles,HeightMetres,FinalGeometry
+ShangGuardV2,character,02_ChaogeCourt,Assets/_Project/Art/HunyuanExpansion/Prefabs/ShangGuardV2.prefab,49940,,,1.83,Generated with local repair
+ShangWatchtower,architecture,02_ChaogeCourt,Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangWatchtower.prefab,64998,16000,3500,6.999999523162842,Generated with local repair
+ShangCourtyardHall,architecture,02_ChaogeCourt,Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangCourtyardHall.prefab,75000,18000,4000,5.0,Generated with local repair
+ShangCastingFurnace,prop,02_ChaogeCourt,Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangCastingFurnace.prefab,30000,7500,1600,2.1999995708465576,Generated with local repair
+ShangWoodCart,prop,02_ChaogeCourt,Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangWoodCart.prefab,45000,11000,2400,1.649999737739563,Generated with local repair
+ShangStorageJar,prop,02_ChaogeCourt,Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangStorageJar.prefab,20000,5000,1000,1.2499998807907104,Generated with local repair
+ShangGrainBasket,prop,02_ChaogeCourt,Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangGrainBasket.prefab,28000,6500,1400,0.8500000238418579,Generated with local repair
+ShangWoodFootbridge,architecture,02_ChaogeCourt,Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangWoodFootbridge.prefab,41964,15000,3200,1.2999999523162842,Authored replacement after review
+ShangVillageWell,prop,02_ChaogeCourt,Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangVillageWell.prefab,35000,8500,1800,3.0,Generated with local repair

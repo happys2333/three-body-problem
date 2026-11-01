@@ -1,0 +1,123 @@
+{
+  "scene": "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity",
+  "dirty": false,
+  "actors": 36,
+  "chamberGuards": 6,
+  "spearSentries": 8,
+  "attendants": 4,
+  "missingScripts": 0,
+  "invalidMaterials": 0,
+  "prefabs": [
+    {
+      "path": "Assets/_Project/Characters/Court/Prefabs/CalendarAttendant.prefab",
+      "guid": "1a7df14ebc8a343f5bd67888fee7ba81",
+      "validAvatars": true
+    },
+    {
+      "path": "Assets/_Project/Characters/Court/Prefabs/ChamberAttendant.prefab",
+      "guid": "d41373f77366c4e12881adc4a036a1e2",
+      "validAvatars": true
+    },
+    {
+      "path": "Assets/_Project/Characters/Court/Prefabs/CourtSteward.prefab",
+      "guid": "08f112cfa746e43459faa135fdd21815",
+      "validAvatars": true
+    },
+    {
+      "path": "Assets/_Project/Characters/Court/Prefabs/RitualAttendant.prefab",
+      "guid": "dfc5ef05687da431bb2dcaa554cb15f2",
+      "validAvatars": true
+    },
+    {
+      "path": "Assets/_Project/Characters/Court/Prefabs/ShangSpearSentry.prefab",
+      "guid": "fc05024c38cac4de39e443fa1ae31d8d",
+      "validAvatars": true
+    }
+  ],
+  "posts": [
+    {
+      "id": "dais-west",
+      "name": "石殿卫兵 [Humanoid]",
+      "position": "(-5.50, 4.91, 29.00)",
+      "spearGuard": true,
+      "persona": "朝歌卫兵"
+    },
+    {
+      "id": "tunnel-west",
+      "name": "入口卫兵 [Humanoid]",
+      "position": "(-4.60, 4.01, -50.00)",
+      "spearGuard": true,
+      "persona": "朝歌卫兵"
+    },
+    {
+      "id": "dais-east",
+      "name": "石殿卫兵 [Humanoid]",
+      "position": "(5.50, 4.91, 29.00)",
+      "spearGuard": true,
+      "persona": "朝歌卫兵"
+    },
+    {
+      "id": "tunnel-east",
+      "name": "入口卫兵 [Humanoid]",
+      "position": "(4.60, 4.01, -50.00)",
+      "spearGuard": true,
+      "persona": "朝歌卫兵"
+    },
+    {
+      "id": "throne--1",
+      "name": "御前持矛亲卫 [Humanoid]",
+      "position": "(-3.15, 5.81, 35.10)",
+      "spearGuard": true,
+      "persona": "朝歌卫兵"
+    },
+    {
+      "id": "hall--1",
+      "name": "殿门持矛卫兵 [Humanoid]",
+      "position": "(-7.60, 4.01, 10.60)",
+      "spearGuard": true,
+      "persona": "朝歌卫兵"
+    },
+    {
+      "id": "throne-1",
+      "name": "御前持矛亲卫 [Humanoid]",
+      "position": "(3.15, 5.81, 35.10)",
+      "spearGuard": true,
+      "persona": "朝歌卫兵"
+    },
+    {
+      "id": "hall-1",
+      "name": "殿门持矛卫兵 [Humanoid]",
+      "position": "(7.60, 4.01, 10.60)",
+      "spearGuard": true,
+      "persona": "朝歌卫兵"
+    },
+    {
+      "id": "CourtSteward",
+      "name": "御前内侍 [Humanoid]",
+      "position": "(-2.55, 5.81, 33.80)",
+      "spearGuard": false,
+      "persona": "御前内侍"
+    },
+    {
+      "id": "RitualAttendant",
+      "name": "奉礼侍从 [Humanoid]",
+      "position": "(2.55, 5.81, 33.80)",
+      "spearGuard": false,
+      "persona": "奉礼侍从"
+    },
+    {
+      "id": "CalendarAttendant",
+      "name": "献历侍从 [Humanoid]",
+      "position": "(-7.40, 4.01, 18.20)",
+      "spearGuard": false,
+      "persona": "献历侍从"
+    },
+    {
+      "id": "ChamberAttendant",
+      "name": "值殿侍从 [Humanoid]",
+      "position": "(7.30, 4.01, 20.80)",
+      "spearGuard": false,
+      "persona": "值殿侍从"
+    }
+  ]
+}

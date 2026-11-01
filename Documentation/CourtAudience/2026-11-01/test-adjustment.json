@@ -1,0 +1,7 @@
+{
+  "initialJob": "2c211776c63f4c58b015870042a5c29c",
+  "initialPassed": 47,
+  "initialFailed": 1,
+  "reason": "The legacy crowd test assumed all skinned materials have a MainTex. New skinned robe and cap use the authored procedural Palace Craft Surface shader.",
+  "adjustment": "Original textured bodies still require a valid MainTex. The known procedural surface instead requires the supported shader and a positive surface-detail scale. Robe bone weights and deformation are tested separately."
+}

@@ -1,0 +1,21 @@
+{
+    "id": "ShangGuardV2",
+    "kind": "character",
+    "source": "Assets/_Project/Art/HunyuanCapital20261101/ShangGuardV2/ShangGuardV2_Rig.fbx",
+    "prefab": "Assets/_Project/Art/HunyuanExpansion/Prefabs/ShangGuardV2.prefab",
+    "passed": true,
+    "validHumanAvatar": true,
+    "albedo": true,
+    "normal": true,
+    "metallicSmoothness": true,
+    "triangles": 49940,
+    "vertices": 38788,
+    "skinBones": 23,
+    "heightMetres": 1.8299998044967652,
+    "textures": [
+        "Assets/_Project/Art/HunyuanCapital20261101/ShangGuardV2/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/HunyuanCapital20261101/ShangGuardV2/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/HunyuanCapital20261101/ShangGuardV2/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/HunyuanCapital20261101/ShangGuardV2/Textures/texture_pbr_20250901_roughness.png"
+    ]
+}

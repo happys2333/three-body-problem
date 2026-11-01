@@ -1,0 +1,54 @@
+{
+  "files": [
+    {
+      "path": "Assets/_Project/Scenes/Traveller/01_GobiJourney.unity",
+      "baseline": "46a0ba5799afdd11a8acabc2cde5646afbf7b3c226712660b6b9417a5a3b12e0",
+      "current": "46a0ba5799afdd11a8acabc2cde5646afbf7b3c226712660b6b9417a5a3b12e0",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity",
+      "baseline": "f253a34d50dd16486aaa048f4d9bd8c396d182fe0a6f890aceb0b9a8d9d73407",
+      "current": "f253a34d50dd16486aaa048f4d9bd8c396d182fe0a6f890aceb0b9a8d9d73407",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/_Project/Scenes/Traveller/03_MedievalTribunal.unity",
+      "baseline": "d6272715bef30cef2ac427cd4b0568d4981d49180b1c4c0ca91a0eb43152ab62",
+      "current": "d6272715bef30cef2ac427cd4b0568d4981d49180b1c4c0ca91a0eb43152ab62",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/_Project/Art/CapitalRevival/Revival.asset",
+      "baseline": "28bc94b1251dd5f885c0f906c5932bab99fc729e55768cf6a4f511bbd0ba55c5",
+      "current": "28bc94b1251dd5f885c0f906c5932bab99fc729e55768cf6a4f511bbd0ba55c5",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/_Project/Settings/ActOne/Dialogue.asset",
+      "baseline": "f8cefdcd680408417e8b613f54b17ddb684b774eea99e343cc55a84f56f33533",
+      "current": "f8cefdcd680408417e8b613f54b17ddb684b774eea99e343cc55a84f56f33533",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/_Project/Characters/Crowd/Prefabs/ShangGuard_Bronze.prefab",
+      "baseline": "5d682fdc914fe10bd967ef0feb2907bd345f413a8fad97ed92e8cd8daf7d60dd",
+      "current": "5d682fdc914fe10bd967ef0feb2907bd345f413a8fad97ed92e8cd8daf7d60dd",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/_Project/Characters/Crowd/Prefabs/ShangGuard_Dark.prefab",
+      "baseline": "e4f271a6d30901ee919c7ababd3ca34a07db6eb1a341e8b7db7a8ae68d28710f",
+      "current": "e4f271a6d30901ee919c7ababd3ca34a07db6eb1a341e8b7db7a8ae68d28710f",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/_Project/Characters/Guards/Profiles/ShangGuard_Bronze.asset",
+      "baseline": "93f5e25dcc0546d063a6bdcb2be7275b24b804fdee2fef4d8b5556becc9e0a4a",
+      "current": "93f5e25dcc0546d063a6bdcb2be7275b24b804fdee2fef4d8b5556becc9e0a4a",
+      "unchanged": true
+    }
+  ],
+  "allUnchanged": true,
+  "missingNewScriptMetas": []
+}

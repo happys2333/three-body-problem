@@ -1,0 +1,69 @@
+{
+    "passed": false,
+    "checks": 43,
+    "width": 1600,
+    "height": 900,
+    "gpu": "Apple M5",
+    "errors": [
+        "Polearm wrist is unreachable: 石殿卫兵 [Humanoid]",
+        "Polearm wrist is unreachable: 入口卫兵 [Humanoid]",
+        "Polearm wrist is unreachable: 石殿卫兵 [Humanoid]",
+        "Polearm wrist is unreachable: 入口卫兵 [Humanoid]"
+    ],
+    "performance": [
+        {
+            "view": "01_Gate_Guard_Day",
+            "meanMs": 5.699429988861084,
+            "p95Ms": 11.896045684814454,
+            "budgetPassed": true
+        },
+        {
+            "view": "02_Residential_Street",
+            "meanMs": 2.320399761199951,
+            "p95Ms": 7.001254081726074,
+            "budgetPassed": true
+        },
+        {
+            "view": "03_Market_Avenue",
+            "meanMs": 2.419811964035034,
+            "p95Ms": 8.316999435424805,
+            "budgetPassed": true
+        },
+        {
+            "view": "04_Bronze_Workshop",
+            "meanMs": 2.72263503074646,
+            "p95Ms": 7.83771276473999,
+            "budgetPassed": true
+        },
+        {
+            "view": "05_Granary",
+            "meanMs": 2.220576047897339,
+            "p95Ms": 7.488456726074219,
+            "budgetPassed": true
+        },
+        {
+            "view": "06_Watercourse",
+            "meanMs": 4.282834053039551,
+            "p95Ms": 20.754165649414064,
+            "budgetPassed": false
+        },
+        {
+            "view": "07_Western_Residential_Ward",
+            "meanMs": 6.0094428062438969,
+            "p95Ms": 12.4973783493042,
+            "budgetPassed": true
+        },
+        {
+            "view": "08_Gate_Guard_Night",
+            "meanMs": 4.034915447235107,
+            "p95Ms": 11.706915855407715,
+            "budgetPassed": true
+        },
+        {
+            "view": "09_Medieval_Guard",
+            "meanMs": 2.4398956298828127,
+            "p95Ms": 7.7227463722229,
+            "budgetPassed": true
+        }
+    ]
+}

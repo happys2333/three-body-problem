@@ -1,0 +1,91 @@
+{
+  "completed": true,
+  "feature": "Automatic first-person mouse look and in-game AI/API settings",
+  "builtApp": "/Users/happys/Documents/GitHub/three-body-problem/Builds/ActOneTraveller.app",
+  "build": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 0,
+    "seconds": 2.100155,
+    "bytes": 1264371531,
+    "path": "/Users/happys/Documents/GitHub/three-body-problem/Builds/ActOneTraveller.app",
+    "builtUtc": "2026-11-01T12:22:03.0954900Z"
+  },
+  "editorTests": {
+    "total": 43,
+    "passed": 43,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 7.1423707
+  },
+  "pythonTests": {
+    "total": 30,
+    "passed": 30,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 1.049,
+    "realPaidApiCalls": 0,
+    "passedAll": true
+  },
+  "nativeChecks": {
+    "settings": {
+      "passed": true,
+      "checks": 45,
+      "errors": [],
+      "resolutions": [
+        "1600x900",
+        "1280x720",
+        "960x540",
+        "1024x768"
+      ]
+    },
+    "gobi": {
+      "passed": true,
+      "hardwareMicrophoneUsed": false,
+      "onlineModelUsed": false,
+      "microphoneAutoSendVerified": true,
+      "asrStartedFocused": true,
+      "asrFinishedFocused": true,
+      "asrGenerationStart": 0,
+      "asrGenerationEnd": 0,
+      "asrCallbackStatus": "对方正在思考……",
+      "asrAutoSendTranscript": "快过来！现在是乱纪元。不要命吗？",
+      "checks": 57,
+      "openingAnswers": 3,
+      "damageEvents": 2,
+      "ignited": 88,
+      "burned": 88,
+      "shaded": 53,
+      "walkedMetres": 103.31333923339844,
+      "frameMeanMs": 11.17308235168457,
+      "frameP95Ms": 11.525701522827148,
+      "sunriseSeconds": 3.0090179443359375,
+      "sunsetSeconds": 2.0026702880859375,
+      "phase": "complete",
+      "asrTranscript": "太阳快跟我躲进岩石下面。",
+      "measurement": "Native development player at 1920x1080",
+      "errors": []
+    },
+    "total": 102
+  },
+  "credentials": {
+    "persisted": false,
+    "scope": "Current game process; survives scene changes, cleared on a fresh run.",
+    "inNpcPrompts": false,
+    "inProjectAssets": false
+  },
+  "localService": {
+    "connectionSettings": 1,
+    "updatedOwnedService": true,
+    "asr": "qwen3-asr-mlx-8bit",
+    "tts": "moss-tts-nano-onnx-cpu"
+  },
+  "preservationAudit": "preservation-audit.json",
+  "supportedApi": "OpenAI-compatible Chat Completions with JSON output; DeepSeek preset and custom cloud/local endpoints.",
+  "validationLimits": [
+    "Cloud account credentials were not used; actual model address/key/name forwarding was validated against a local mock over real HTTP.",
+    "ASR regression used synthetic audio; no hardware microphone recording.",
+    "Gobi frame sample does not establish city-wide or cross-platform stable frame rates."
+  ]
+}

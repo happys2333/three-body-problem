@@ -1,0 +1,80 @@
+{
+    "passed": true,
+    "checks": 56,
+    "width": 1600,
+    "height": 900,
+    "gpu": "Apple M5",
+    "errors": [],
+    "performance": [
+        {
+            "view": "01_Gate_Guard_Day",
+            "meanMs": 12.766122817993164,
+            "p95Ms": 14.825623512268067,
+            "warmupMaxMs": 33.08187484741211,
+            "budgetPassed": true
+        },
+        {
+            "view": "10_Palace_Guard_Day",
+            "meanMs": 8.577377319335938,
+            "p95Ms": 10.200332641601563,
+            "warmupMaxMs": 21.108964920043947,
+            "budgetPassed": true
+        },
+        {
+            "view": "02_Residential_Street",
+            "meanMs": 4.551703453063965,
+            "p95Ms": 5.909077167510986,
+            "warmupMaxMs": 87.97415924072266,
+            "budgetPassed": true
+        },
+        {
+            "view": "03_Market_Avenue",
+            "meanMs": 4.852050304412842,
+            "p95Ms": 7.065291881561279,
+            "warmupMaxMs": 8.11158561706543,
+            "budgetPassed": true
+        },
+        {
+            "view": "04_Bronze_Workshop",
+            "meanMs": 4.454978942871094,
+            "p95Ms": 5.493126392364502,
+            "warmupMaxMs": 12.997045516967774,
+            "budgetPassed": true
+        },
+        {
+            "view": "05_Granary",
+            "meanMs": 4.0513153076171879,
+            "p95Ms": 4.911168098449707,
+            "warmupMaxMs": 6.312337398529053,
+            "budgetPassed": true
+        },
+        {
+            "view": "06_Watercourse",
+            "meanMs": 9.493956565856934,
+            "p95Ms": 34.977210998535159,
+            "warmupMaxMs": 64.92271423339844,
+            "budgetPassed": false
+        },
+        {
+            "view": "07_Western_Residential_Ward",
+            "meanMs": 15.805317878723145,
+            "p95Ms": 17.902162551879884,
+            "warmupMaxMs": 99.98695373535156,
+            "budgetPassed": false
+        },
+        {
+            "view": "08_Gate_Guard_Night",
+            "meanMs": 9.307692527770996,
+            "p95Ms": 16.55491828918457,
+            "warmupMaxMs": 19.779287338256837,
+            "budgetPassed": true
+        },
+        {
+            "view": "09_Medieval_Guard",
+            "meanMs": 6.0093231201171879,
+            "p95Ms": 8.493416786193848,
+            "warmupMaxMs": 10.339335441589356,
+            "budgetPassed": true
+        }
+    ]
+}

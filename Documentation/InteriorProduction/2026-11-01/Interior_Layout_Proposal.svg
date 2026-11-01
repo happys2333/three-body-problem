@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="920" viewBox="0 0 1260 920">
+<rect width="1260" height="920" fill="#101b20"/>
+<style>text{font-family:PingFang SC,Heiti SC,sans-serif;fill:#e7e2d6}.title{font-size:29px;font-weight:600}.sub{font-size:15px;fill:#a6b9bd}.label{font-size:14px}.note{font-size:17px}.small{font-size:13px;fill:#a6b9bd}</style>
+<text x="48" y="53" class="title">朝歌内殿 · 陈设补齐方案</text>
+<text x="48" y="82" class="sub">依据项目现有空间绘制｜新增位置为设计建议｜不是电视剧逐帧复刻</text>
+<rect x="116.00" y="174.00" width="464.00" height="624.00" rx="2" fill="#414341" stroke="#878979"/>
+<rect x="128.00" y="186.00" width="440.00" height="600.00" rx="0" fill="#242e31" stroke="#6f7776"/>
+<rect x="311.20" y="782.00" width="73.60" height="80.00" rx="0" fill="#293438" stroke="#8b938f"/>
+<rect x="324.00" y="334.00" width="48.00" height="432.00" rx="0" fill="#294847" stroke="#47736e"/>
+<text x="348" y="878" class="sub" text-anchor="middle">现有甬道 / 入殿方向</text>
+<rect x="244.00" y="270.00" width="208.00" height="128.00" rx="3" fill="#645b4a" stroke="#c4ae7f"/>
+<path d="M247.2,390 H448.8" stroke="#b5a07e"/>
+<path d="M256.8,374 H439.2" stroke="#b5a07e"/>
+<path d="M266.4,358 H429.6" stroke="#b5a07e"/>
+<rect x="317.60" y="293.20" width="60.80" height="33.60" rx="3" fill="#726444" stroke="#d8b266"/>
+<text x="348" y="315" class="label" text-anchor="middle">① 御座</text>
+<text x="348" y="358.8" class="small" text-anchor="middle">现有石台与台阶</text>
+<rect x="223.20" y="188.40" width="67.20" height="12.80" rx="3" fill="#705b3b" stroke="#d8b266"/>
+<rect x="405.60" y="188.40" width="67.20" height="12.80" rx="3" fill="#705b3b" stroke="#d8b266"/>
+<text x="348" y="178.79999999999995" class="label" text-anchor="middle">② 兽面纹浮雕背景</text>
+<circle cx="197.6" cy="374" r="17.92" fill="#66513c" stroke="#cba15d"/>
+<text x="197.6" y="379" class="label" text-anchor="middle">鼎</text>
+<circle cx="498.4" cy="374" r="17.92" fill="#66513c" stroke="#cba15d"/>
+<text x="498.4" y="379" class="label" text-anchor="middle">鼎</text>
+<text x="197.6" y="409.2" class="small" text-anchor="middle">加炭火 / 蒸汽</text>
+<circle cx="348" cy="478.0" r="51.2" fill="#234447" stroke="#80d5d3" stroke-dasharray="5 5"/>
+<rect x="316.00" y="446.00" width="64.00" height="64.00" rx="0" fill="none" stroke="#d2c492"/>
+<text x="348" y="472.0" class="label" text-anchor="middle">③ 阴阳与卦象</text>
+<text x="348" y="495.0" class="small" text-anchor="middle">现有天窗正下方</text>
+<rect x="244.00" y="570.00" width="48.00" height="24.00" rx="3" fill="#62523b" stroke="#d8b266"/>
+<text x="268" y="560" class="label" text-anchor="middle">④ 献历与五层沙漏</text>
+<path d="M196.0,701 L205.0,710 L196.0,719 L187.0,710 Z" fill="#efb56a"/>
+<path d="M196.0,301 L205.0,310 L196.0,319 L187.0,310 Z" fill="#efb56a"/>
+<path d="M500.0,701 L509.0,710 L500.0,719 L491.0,710 Z" fill="#efb56a"/>
+<path d="M500.0,301 L509.0,310 L500.0,319 L491.0,310 Z" fill="#efb56a"/>
+<rect x="149.60" y="622.00" width="12.80" height="48.00" rx="3" fill="#516760" stroke="#8ec7bb"/>
+<rect x="533.60" y="622.00" width="12.80" height="48.00" rx="3" fill="#516760" stroke="#8ec7bb"/>
+<rect x="484.00" y="510.00" width="48.00" height="48.00" rx="3" fill="#293b45" stroke="#7d9db5"/>
+<text x="508" y="528" class="small" text-anchor="middle">伏羲侧区</text>
+<text x="508" y="547" class="small" text-anchor="middle">可选剧情扩展</text>
+<text x="348" y="730" class="small" text-anchor="middle">中央通路 ≥ 3 米</text>
+<path d="M669,122 V839" stroke="#33484e"/>
+<text x="710" y="148" class="note">① 御座是视觉中心</text>
+<text x="710" y="180" class="sub">石木与青铜组合；兽皮坐垫。</text>
+<text x="710" y="205" class="sub">坐姿、手臂与脚部需要重新贴合。</text>
+<text x="710" y="277" class="note">② 背景、柱面与墙边</text>
+<text x="710" y="309" class="sub">先做一块兽面雷纹板，成对布置。</text>
+<text x="710" y="334" class="sub">墙角补磨损、烟熏和少量重复纹带。</text>
+<text x="710" y="406" class="note">③ 剧情演示地面</text>
+<text x="710" y="438" class="sub">阴阳鱼与六十四卦采用程序几何。</text>
+<text x="710" y="463" class="sub">保持平整，不添加阻挡玩家的碰撞。</text>
+<text x="710" y="535" class="note">④ 计时与献历陈设</text>
+<text x="710" y="567" class="sub">五层木箱沙漏自建；甲骨、历箱复用。</text>
+<text x="710" y="592" class="sub">普通玻璃沙漏保留为配景候选。</text>
+<text x="710" y="664" class="note">⑤ 火光和空间层次</text>
+<text x="710" y="696" class="sub">四处精细火盆复用现有灯光预算。</text>
+<text x="710" y="721" class="sub">天窗开启后出现日光落点与少量浮尘。</text>
+<text x="710" y="800" class="small">图中尺寸来自项目：约 28 × 38 米，净高 8.4 米。</text>
+<text x="710" y="827" class="small">金色：陈设重点   青色：演示区域   绿色：通行空间</text>
+<text x="48" y="910" class="sub">制作顺序：御座与背景 → 五层沙漏 / 卦象 → 礼器火光 → 边缘陈设。</text>
+</svg>

@@ -1,0 +1,41 @@
+{
+  "completed": "2026-11-01T17:42:52.411943+08:00",
+  "scene": "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity",
+  "attendants": 4,
+  "chamberSpearSentries": 6,
+  "palaceTunnelSpearSentries": 2,
+  "totalShangGuards": 10,
+  "source": "Existing rigged models and authored equipment reused; no new Hunyuan generation requests.",
+  "editmodeTests": 36,
+  "gatewayAdapterTests": 21,
+  "nativeFunctionalChecks": 199,
+  "nativeFunctionalPassed": true,
+  "walkedMetres": 369.01171875,
+  "build": {
+    "result": "Succeeded",
+    "output": "Builds/CourtRetinue20261101/Traveller.app",
+    "seconds": 2.761021,
+    "bytes": 1248226962,
+    "errors": 0,
+    "warnings": 0
+  },
+  "performance": {
+    "gpu": "Apple M5",
+    "width": 1600,
+    "height": 900,
+    "meanMs": 6.463725566864014,
+    "p95Ms": 24.49078941345215,
+    "performanceBudgetPassed": false
+  },
+  "performanceConditions": {
+    "frameCap": 120,
+    "warmupSeconds": 2,
+    "samples": 240,
+    "normalAnimatorCulling": true,
+    "scope": "Active divination view in native macOS development player; temporary full skeleton evaluation happens afterwards for the contact test."
+  },
+  "protectedPassed": true,
+  "missingScripts": 0,
+  "invalidMaterials": 0,
+  "editorSceneSaved": true
+}

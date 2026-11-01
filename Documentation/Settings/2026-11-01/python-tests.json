@@ -1,0 +1,11 @@
+{
+  "total": 30,
+  "passed": 30,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 1.049,
+  "realPaidApiCalls": 0,
+  "passedAll": true,
+  "output": "..............................\n----------------------------------------------------------------------\nRan 30 tests in 1.044s\n\nOK\n"
+}

@@ -1,0 +1,108 @@
+{
+  "completed": true,
+  "scene": "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity",
+  "cast": {
+    "femaleFanBearers": 2,
+    "maleOfficialsBelowDais": 2,
+    "movingPetitionCouriers": 1,
+    "chamberSpearSentries": 6,
+    "palaceAndTunnelSpearSentries": 8,
+    "allShangGuards": 10
+  },
+  "ritualWaitsForPetition": true,
+  "newHunyuanRequests": 0,
+  "editModeTests": {
+    "total": 48,
+    "passed": 48,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 13.4504947,
+    "resultState": "Passed"
+  },
+  "pythonGatewayTests": {
+    "passed": 21,
+    "command": "python3 -m unittest discover -s Tools -p test_dialogue_gateway.py -q"
+  },
+  "nativeChecks": {
+    "Interior": {
+      "passed": true,
+      "performanceBudgetPassed": false,
+      "checks": 172,
+      "width": 1600,
+      "height": 900,
+      "meanMs": 7.251612663269043,
+      "p95Ms": 25.895288467407227,
+      "gpu": "Apple M5",
+      "errors": []
+    },
+    "CapitalWalk": {
+      "passed": true,
+      "checks": 36,
+      "metresWalked": 369.01171875,
+      "errors": []
+    },
+    "Revival": {
+      "passed": true,
+      "checks": 39,
+      "participants": 7,
+      "gpu": "Apple M5",
+      "width": 1600,
+      "height": 900,
+      "frameCap": 120,
+      "meanFrameMs": 8.387331008911133,
+      "p95FrameMs": 8.401126861572266,
+      "performanceBudgetPassed": true,
+      "errors": []
+    }
+  },
+  "nativeCheckTotal": 247,
+  "performance": {
+    "globalStable60FpsVerified": false,
+    "interiorP95Ms": 25.895288467407227,
+    "interiorMeanMs": 7.251612663269043,
+    "budgetP95Ms": 16.67,
+    "performanceBudgetPassed": false,
+    "scope": "Apple M5, 1600x900, 120 FPS cap; 240 frames after 2 s warm-up during divination. All-post pose inspection and screenshots occur afterwards."
+  },
+  "finalBuild": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 0,
+    "seconds": 1.455128,
+    "bytes": 1264342297,
+    "path": "/Users/happys/Documents/GitHub/three-body-problem/Builds/CourtAudience20261101/Traveller.app",
+    "builtUtc": "2026-11-01T11:05:32.3798610Z",
+    "changeSinceVerifiedRuns": "Final rebuild after full Editor script refresh. Gameplay and asset content unchanged since the successful presentation and revival runs."
+  },
+  "video": {
+    "path": "Documentation/CourtAudience/2026-11-01/Previews/Royal_Fan_Motion.mp4",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1600,
+          "height": 900,
+          "nb_frames": "48"
+        }
+      ],
+      "format": {
+        "duration": "3.941124"
+      }
+    }
+  },
+  "preservationAudit": "preservation-audit.json",
+  "sceneAudit": "scene-audit.json",
+  "knownLimitations": [
+    "Palace-wide performance budget remains unmet.",
+    "No new live microphone or online LLM calls in this task.",
+    "The fan / court composition reference is Tang imagery, not a claimed Shang-period costume reconstruction."
+  ],
+  "buildEvidence": {
+    "presentationAndWalk": "native-build-presentation-verified.json",
+    "revival": "native-build-revival-verified.json",
+    "final": "native-build.json",
+    "note": "Only the development revival check was adjusted after the successful presentation and walk; gameplay and assets were unchanged. Final full refresh rebuild has zero errors/warnings."
+  }
+}

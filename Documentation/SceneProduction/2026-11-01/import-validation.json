@@ -1,0 +1,188 @@
+{
+    "assets": [
+        {
+            "id": "ShangWatchtower",
+            "source": "Assets/_Project/Art/HunyuanCapital20261101/ShangWatchtower/ShangWatchtower_PBR.fbx",
+            "prefab": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangWatchtower.prefab",
+            "passed": true,
+            "albedo": true,
+            "normal": true,
+            "metallicSmoothness": true,
+            "trianglesByLod": [
+                500000,
+                35380,
+                7638
+            ],
+            "widthMetres": 5.518538475036621,
+            "heightMetres": 7.0,
+            "depthMetres": 5.499583721160889,
+            "textures": [
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangWatchtower/Textures/texture_pbr_20250901.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangWatchtower/Textures/texture_pbr_20250901_metallic.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangWatchtower/Textures/texture_pbr_20250901_normal.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangWatchtower/Textures/texture_pbr_20250901_roughness.png"
+            ]
+        },
+        {
+            "id": "ShangCourtyardHall",
+            "source": "Assets/_Project/Art/HunyuanCapital20261101/ShangCourtyardHall/ShangCourtyardHall_PBR.fbx",
+            "prefab": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangCourtyardHall.prefab",
+            "passed": true,
+            "albedo": true,
+            "normal": true,
+            "metallicSmoothness": true,
+            "trianglesByLod": [
+                499986,
+                33333,
+                7303
+            ],
+            "widthMetres": 7.830141544342041,
+            "heightMetres": 5.0,
+            "depthMetres": 5.098212718963623,
+            "textures": [
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangCourtyardHall/Textures/texture_pbr_20250901.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangCourtyardHall/Textures/texture_pbr_20250901_metallic.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangCourtyardHall/Textures/texture_pbr_20250901_normal.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangCourtyardHall/Textures/texture_pbr_20250901_roughness.png"
+            ]
+        },
+        {
+            "id": "ShangCastingFurnace",
+            "source": "Assets/_Project/Art/HunyuanCapital20261101/ShangCastingFurnace/ShangCastingFurnace_PBR.fbx",
+            "prefab": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangCastingFurnace.prefab",
+            "passed": true,
+            "albedo": true,
+            "normal": true,
+            "metallicSmoothness": true,
+            "trianglesByLod": [
+                50000,
+                27781,
+                8195
+            ],
+            "widthMetres": 2.442915678024292,
+            "heightMetres": 2.200000047683716,
+            "depthMetres": 2.457249879837036,
+            "textures": [
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangCastingFurnace/Textures/texture_pbr_20250901.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangCastingFurnace/Textures/texture_pbr_20250901_metallic.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangCastingFurnace/Textures/texture_pbr_20250901_normal.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangCastingFurnace/Textures/texture_pbr_20250901_roughness.png"
+            ]
+        },
+        {
+            "id": "ShangWoodCart",
+            "source": "Assets/_Project/Art/HunyuanCapital20261101/ShangWoodCart/ShangWoodCart_PBR.fbx",
+            "prefab": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangWoodCart.prefab",
+            "passed": true,
+            "albedo": true,
+            "normal": true,
+            "metallicSmoothness": true,
+            "trianglesByLod": [
+                500000,
+                21012,
+                4561
+            ],
+            "widthMetres": 3.718559980392456,
+            "heightMetres": 1.649999737739563,
+            "depthMetres": 1.7453912496566773,
+            "textures": [
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangWoodCart/Textures/texture_pbr_20250901.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangWoodCart/Textures/texture_pbr_20250901_metallic.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangWoodCart/Textures/texture_pbr_20250901_normal.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangWoodCart/Textures/texture_pbr_20250901_roughness.png"
+            ]
+        },
+        {
+            "id": "ShangStorageJar",
+            "source": "Assets/_Project/Art/HunyuanCapital20261101/ShangStorageJar/ShangStorageJar_PBR.fbx",
+            "prefab": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangStorageJar.prefab",
+            "passed": true,
+            "albedo": true,
+            "normal": true,
+            "metallicSmoothness": true,
+            "trianglesByLod": [
+                50000,
+                27851,
+                8226
+            ],
+            "widthMetres": 1.2731282711029053,
+            "heightMetres": 1.25,
+            "depthMetres": 1.2723872661590577,
+            "textures": [
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangStorageJar/Textures/texture_pbr_20250901.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangStorageJar/Textures/texture_pbr_20250901_metallic.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangStorageJar/Textures/texture_pbr_20250901_normal.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangStorageJar/Textures/texture_pbr_20250901_roughness.png"
+            ]
+        },
+        {
+            "id": "ShangGrainBasket",
+            "source": "Assets/_Project/Art/HunyuanCapital20261101/ShangGrainBasket/ShangGrainBasket_PBR.fbx",
+            "prefab": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangGrainBasket.prefab",
+            "passed": true,
+            "albedo": true,
+            "normal": true,
+            "metallicSmoothness": true,
+            "trianglesByLod": [
+                50000,
+                22735,
+                6933
+            ],
+            "widthMetres": 1.0522898435592652,
+            "heightMetres": 0.8500000238418579,
+            "depthMetres": 1.0489654541015626,
+            "textures": [
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangGrainBasket/Textures/texture_pbr_20250901.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangGrainBasket/Textures/texture_pbr_20250901_metallic.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangGrainBasket/Textures/texture_pbr_20250901_normal.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangGrainBasket/Textures/texture_pbr_20250901_roughness.png"
+            ]
+        },
+        {
+            "id": "ShangWoodFootbridge",
+            "source": "Assets/_Project/Art/HunyuanCapital20261101/ShangWoodFootbridge/ShangWoodFootbridge_PBR.fbx",
+            "prefab": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangWoodFootbridge.prefab",
+            "passed": true,
+            "albedo": true,
+            "normal": true,
+            "metallicSmoothness": true,
+            "trianglesByLod": [
+                499992,
+                16763,
+                3591
+            ],
+            "widthMetres": 0.9755436778068543,
+            "heightMetres": 1.2999999523162842,
+            "depthMetres": 3.559004783630371,
+            "textures": [
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangWoodFootbridge/Textures/texture_pbr_20250901.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangWoodFootbridge/Textures/texture_pbr_20250901_metallic.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangWoodFootbridge/Textures/texture_pbr_20250901_normal.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangWoodFootbridge/Textures/texture_pbr_20250901_roughness.png"
+            ]
+        },
+        {
+            "id": "ShangVillageWell",
+            "source": "Assets/_Project/Art/HunyuanCapital20261101/ShangVillageWell/ShangVillageWell_PBR.fbx",
+            "prefab": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangVillageWell.prefab",
+            "passed": true,
+            "albedo": true,
+            "normal": true,
+            "metallicSmoothness": true,
+            "trianglesByLod": [
+                49986,
+                24439,
+                9178
+            ],
+            "widthMetres": 3.138206720352173,
+            "heightMetres": 3.0,
+            "depthMetres": 3.072047472000122,
+            "textures": [
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangVillageWell/Textures/texture_pbr_20250901.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangVillageWell/Textures/texture_pbr_20250901_metallic.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangVillageWell/Textures/texture_pbr_20250901_normal.png",
+                "Assets/_Project/Art/HunyuanCapital20261101/ShangVillageWell/Textures/texture_pbr_20250901_roughness.png"
+            ]
+        }
+    ]
+}

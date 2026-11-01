@@ -1,0 +1,5 @@
+{
+  "reason": "UI Toolkit worldBound uses panel coordinates; the initial check compared those with physical Screen pixels. Actual screenshots fit all four window sizes.",
+  "change": "Compare with the HUD root worldBound, matching the existing native HUD checker.",
+  "uiOverflowObserved": false
+}

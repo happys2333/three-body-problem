@@ -1,0 +1,10 @@
+{
+  "result": "Succeeded",
+  "errors": 0,
+  "warnings": 0,
+  "seconds": 1.455128,
+  "bytes": 1264342297,
+  "path": "/Users/happys/Documents/GitHub/three-body-problem/Builds/CourtAudience20261101/Traveller.app",
+  "builtUtc": "2026-11-01T11:05:32.3798610Z",
+  "changeSinceVerifiedRuns": "Final rebuild after full Editor script refresh. Gameplay and asset content unchanged since the successful presentation and revival runs."
+}

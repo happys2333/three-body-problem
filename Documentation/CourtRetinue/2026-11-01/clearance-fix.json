@@ -1,0 +1,9 @@
+{
+  "initialEditmodeJob": "6bf15c9622fc43009a6f12cea6c115ac",
+  "initialPassed": 35,
+  "initialFailed": 1,
+  "failure": "The right throne attendant capsule clipped the edge of an existing stone-seat collider.",
+  "fix": "Both throne-side attendants moved from x +/-2.1 m to +/-2.55 m; rechecking collision and walking routes.",
+  "verifiedBy": "52ca34d715b24e6b9c69054466a5b59d",
+  "fixed": true
+}

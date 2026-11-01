@@ -1,0 +1,371 @@
+{
+  "date": "2026-11-01",
+  "platform": "Tencent Hunyuan 3D Studio via user Chrome",
+  "quotaObservedAtStart": 30,
+  "purchaseOrSubscription": false,
+  "sourceRoot": "ArtSource/ShangCapital/2026-11-01",
+  "unitySourceRoot": "Assets/_Project/Art/HunyuanCapital20261101",
+  "assets": [
+    {
+      "id": "ShangGuardV2",
+      "kind": "character",
+      "prompt": "殷商王都卫兵，成年中国男性，全身单人，青铜帽形胄护耳护颈，深褐皮甲和粗麻短袍，窄腰带束腿布靴，朴实威严，写实游戏角色，标准A姿势双臂分开空手，手指清楚，无武器盾牌无披风无底座无文字，避免汉唐明清盔甲及西式板甲",
+      "targetHeightMetres": 1.83,
+      "intendedUse": "4名宫廷卫兵；有效 Humanoid、昼夜装备与双手握持已在独立运行中检查",
+      "state": "scene_integrated_native_verified",
+      "concept": {
+        "file": "ArtSource/ShangCapital/2026-11-01/ShangGuardV2/ShangGuardV2_Concept.png",
+        "sourceDownload": "/Users/happys/Downloads/20261101005110_cebd15c2.png",
+        "bytes": 228559,
+        "sha256": "42a0f489c96420c566a0081e0a58cce5942095ab0c7608ffaed6f5b2f752f3bb"
+      },
+      "geometryTriangles": 49940,
+      "files": {
+        "textured": {
+          "rawFile": "ArtSource/ShangCapital/2026-11-01/ShangGuardV2/ShangGuardV2_PBR.fbx",
+          "sourceDownload": "/Users/happys/Downloads/20261101020437_3bbe4d2d.fbx",
+          "bytes": 34729900,
+          "sha256": "2f429d82c0458621131313eeccb0a80970f4216991a9d63d0f65299df6831949"
+        },
+        "rig": {
+          "rawFile": "ArtSource/ShangCapital/2026-11-01/ShangGuardV2/ShangGuardV2_Rig.fbx",
+          "sourceDownload": "/Users/happys/Downloads/20261101022453_3817c803.fbx",
+          "bytes": 33697436,
+          "sha256": "8d313782b4831a1524277ba0f26272eb8dbadbf536603202996290bfcade1388",
+          "projectFile": "Assets/_Project/Art/HunyuanCapital20261101/ShangGuardV2/ShangGuardV2_Rig.fbx"
+        }
+      },
+      "validation": "Documentation/SceneProduction/2026-11-01/ShangGuardV2-import.json",
+      "prefab": "Assets/_Project/Art/HunyuanExpansion/Prefabs/ShangGuardV2.prefab",
+      "verification": "Documentation/SceneProduction/2026-11-01/Native/Civic/report.json"
+    },
+    {
+      "id": "ShangWatchtower",
+      "kind": "architecture",
+      "prompt": "摄影级真实的青铜时代木制瞭望平台，四根粗糙原木支柱承托高架木板平台，顶部完全露天，平台四边朴素木栏，正面一架笔直木梯，榫卯和麻绳捆扎，木材磨损细节，完整独立物体，只有木材与麻绳，无房屋屋顶无旗帜无石板底座无装饰无人物",
+      "targetHeightMetres": 7.0,
+      "intendedUse": "城门及外墙哨位，独立于主线通道",
+      "state": "scene_integrated_native_verified",
+      "attempts": [
+        {
+          "concept": "ArtSource/ShangCapital/2026-11-01/ShangWatchtower/Rejected_Concept_01.png",
+          "sha256": "f989dd389b446bda5531a11d18a8c8bb29e2aefc3716d7b24dfd49ff29738597",
+          "accepted": false,
+          "reason": "Glazed roof, upturned eaves, flags and display base contradict intended material and silhouette."
+        }
+      ],
+      "concept": {
+        "rawFile": "ArtSource/ShangCapital/2026-11-01/ShangWatchtower/ShangWatchtower_Concept.png",
+        "sourceDownload": "/Users/happys/Downloads/20261101034213_e1cf150f.png",
+        "bytes": 536953,
+        "sha256": "14581e19c800438e607640987f0d740424c30597e29e57a10b75219d268122ca"
+      },
+      "geometryTriangles": 500000,
+      "files": {
+        "textured": {
+          "rawFile": "ArtSource/ShangCapital/2026-11-01/ShangWatchtower/ShangWatchtower_PBR.fbx",
+          "sourceDownload": "/Users/happys/Downloads/20261101040207_0d5ea68a.fbx",
+          "bytes": 66998508,
+          "sha256": "71be4f6a646ba797dc7f0182c439d9a9f7d331b433fb242dada769a76f3a136a",
+          "projectFile": "Assets/_Project/Art/HunyuanCapital20261101/ShangWatchtower/ShangWatchtower_PBR.fbx"
+        }
+      },
+      "prefab": "Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangWatchtower.prefab",
+      "trianglesByLod": [
+        64998,
+        16000,
+        3500
+      ],
+      "actualDimensions": {
+        "width": 5.518538475036621,
+        "height": 6.999999523162842,
+        "depth": 5.4995832443237305
+      },
+      "verification": "Documentation/SceneProduction/2026-11-01/Native/Civic/report.json"
+    },
+    {
+      "id": "ShangCourtyardHall",
+      "kind": "architecture",
+      "prompt": "殷商风格长方形三开间民居，低夯土台基，土黄色夯土墙，粗木柱，平直双坡茅草屋顶，中央关闭的木门与小窗，质朴粗砺有生活痕迹，写实PBR，单独完整房屋，无院墙无人无地台无植物，无明清翘檐琉璃瓦无文字",
+      "targetHeightMetres": 5.0,
+      "intendedUse": "替换部分重复的占位民居，保持原街道留空",
+      "state": "scene_integrated_native_verified",
+      "requiredRepair": "Remove generated curved green roof trim; rebuild straight thick thatch roof before scene use.",
+      "concept": {
+        "rawFile": "ArtSource/ShangCapital/2026-11-01/ShangCourtyardHall/ShangCourtyardHall_Concept.png",
+        "sourceDownload": "/Users/happys/Downloads/20261101040036_7e8fc757.png",
+        "bytes": 512741,
+        "sha256": "b22048f841eac7a1460d096b5cefc69ad5a46ec2d63fb62e394a7747481f3e62"
+      },
+      "files": {
+        "textured": {
+          "rawFile": "ArtSource/ShangCapital/2026-11-01/ShangCourtyardHall/ShangCourtyardHall_PBR.fbx",
+          "sourceDownload": "/Users/happys/Downloads/20261101043847_7d8b725c.fbx",
+          "bytes": 67016540,
+          "sha256": "934234559cb009d344ce769be6269bac56bb9b3a8af7e164736a3c9f4d2e803e",
+          "projectFile": "Assets/_Project/Art/HunyuanCapital20261101/ShangCourtyardHall/ShangCourtyardHall_PBR.fbx"
+        }
+      },
+      "prefab": "Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangCourtyardHall.prefab",
+      "trianglesByLod": [
+        75000,
+        18000,
+        4000
+      ],
+      "geometryTriangles": 499986,
+      "actualDimensions": {
+        "width": 8.333378791809082,
+        "height": 5.0,
+        "depth": 5.687832832336426
+      },
+      "verification": "Documentation/SceneProduction/2026-11-01/Native/Civic/report.json"
+    },
+    {
+      "id": "ShangCastingFurnace",
+      "kind": "prop",
+      "prompt": "商代青铜铸造工坊的一座泥质熔炉，粗糙红褐陶土圆鼓炉体，下部圆形炉门与侧面鼓风孔，上口敞开，熏黑烧结裂纹，写实PBR，单独完整炉体，无火焰无金属管道无人物无工具无底座无文字",
+      "targetHeightMetres": 2.2,
+      "intendedUse": "铸造区炉体，火焰由游戏特效控制",
+      "state": "scene_integrated_native_verified",
+      "concept": {
+        "rawFile": "ArtSource/ShangCapital/2026-11-01/ShangCastingFurnace/ShangCastingFurnace_Concept.png",
+        "sourceDownload": "/Users/happys/Downloads/20261101043720_b9aa3891.png",
+        "bytes": 767457,
+        "sha256": "678619099982733ef7cad5e4d7fba76822bf64c12d566a37e7c968a75fa7ce50"
+      },
+      "files": {
+        "textured": {
+          "rawFile": "ArtSource/ShangCapital/2026-11-01/ShangCastingFurnace/ShangCastingFurnace_PBR.fbx",
+          "sourceDownload": "/Users/happys/Downloads/20261101050642_626524cf.fbx",
+          "bytes": 31225836,
+          "sha256": "a9d7060397772e42e1006d70ac61282dd935f0cf815a609b699519387fe6c5ae",
+          "projectFile": "Assets/_Project/Art/HunyuanCapital20261101/ShangCastingFurnace/ShangCastingFurnace_PBR.fbx"
+        }
+      },
+      "prefab": "Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangCastingFurnace.prefab",
+      "trianglesByLod": [
+        30000,
+        7500,
+        1600
+      ],
+      "geometryTriangles": 50000,
+      "actualDimensions": {
+        "width": 2.442915439605713,
+        "height": 2.1999995708465576,
+        "depth": 2.457249879837036
+      },
+      "verification": "Documentation/SceneProduction/2026-11-01/Native/Civic/report.json"
+    },
+    {
+      "id": "ShangWoodCart",
+      "kind": "prop",
+      "prompt": "古代木制双轮搬运车，粗木车厢，两根长木车辕，木辐轮和木轴，古朴榫卯与磨损木纹，写实PBR，完整独立车辆，无货物无人物无马无地台，无橡胶轮胎无现代钢件无文字",
+      "targetHeightMetres": 1.65,
+      "intendedUse": "工坊和粮仓运输陈设",
+      "state": "scene_integrated_native_verified",
+      "concept": {
+        "rawFile": "ArtSource/ShangCapital/2026-11-01/ShangWoodCart/ShangWoodCart_Concept.png",
+        "sourceDownload": "/Users/happys/Downloads/20261101050442_54b30c96.png",
+        "bytes": 318132,
+        "sha256": "72aef80420086c59b9a3ee3bd3a85421851445277025f626ae71db62ffa9dac2"
+      },
+      "files": {
+        "textured": {
+          "rawFile": "ArtSource/ShangCapital/2026-11-01/ShangWoodCart/ShangWoodCart_PBR.fbx",
+          "sourceDownload": "/Users/happys/Downloads/20261101052241_82ae6c9f.fbx",
+          "bytes": 60435836,
+          "sha256": "93b37e41d694ce389f8b32e2bce605518c5e8bb36c1fb6324476cabb456815c1",
+          "projectFile": "Assets/_Project/Art/HunyuanCapital20261101/ShangWoodCart/ShangWoodCart_PBR.fbx"
+        }
+      },
+      "prefab": "Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangWoodCart.prefab",
+      "trianglesByLod": [
+        45000,
+        11000,
+        2400
+      ],
+      "geometryTriangles": 500000,
+      "actualDimensions": {
+        "width": 3.718559980392456,
+        "height": 1.649999737739563,
+        "depth": 1.7453913688659668
+      },
+      "verification": "Documentation/SceneProduction/2026-11-01/Native/Civic/report.json"
+    },
+    {
+      "id": "ShangStorageJar",
+      "kind": "prop",
+      "prompt": "商代风格大型灰陶储粮罐，鼓腹束口，厚实陶口，粗绳纹和手工烧制斑驳，暗灰褐色粗陶，写实PBR，单独完整器物，口内可见深色内壁，无把手无盖无支架无底座无人无文字",
+      "targetHeightMetres": 1.25,
+      "intendedUse": "替换粮仓旁的球形占位陶罐",
+      "state": "scene_integrated_native_verified",
+      "concept": {
+        "rawFile": "ArtSource/ShangCapital/2026-11-01/ShangStorageJar/ShangStorageJar_Concept.png",
+        "sourceDownload": "/Users/happys/Downloads/20261101051905_a9b8c62f.png",
+        "bytes": 738777,
+        "sha256": "63f77026fab7703c3432036bc35bc834145a15ce5fe1ef9a3e8544892bab3015"
+      },
+      "files": {
+        "textured": {
+          "rawFile": "ArtSource/ShangCapital/2026-11-01/ShangStorageJar/ShangStorageJar_PBR.fbx",
+          "sourceDownload": "/Users/happys/Downloads/20261101053746_a6ea30f9.fbx",
+          "bytes": 29675052,
+          "sha256": "cad055939899d744418c588f9149ec071f3915fd97eff7390b7b5427883c60f9",
+          "projectFile": "Assets/_Project/Art/HunyuanCapital20261101/ShangStorageJar/ShangStorageJar_PBR.fbx"
+        }
+      },
+      "prefab": "Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangStorageJar.prefab",
+      "trianglesByLod": [
+        20000,
+        5000,
+        1000
+      ],
+      "geometryTriangles": 50000,
+      "actualDimensions": {
+        "width": 1.2731282711029053,
+        "height": 1.2499998807907104,
+        "depth": 1.2723872661590576
+      },
+      "verification": "Documentation/SceneProduction/2026-11-01/Native/Civic/report.json"
+    },
+    {
+      "id": "ShangGrainBasket",
+      "kind": "prop",
+      "prompt": "古代大号竹编粮筐，鼓腹敞口，细密交错的黄褐竹篾和粗竹口沿，筐内装有谷粒，真实磨损写实PBR，单独完整器物，无塑料无金属无布无把手无桌面无底座无人无文字",
+      "targetHeightMetres": 0.85,
+      "intendedUse": "粮仓和市集生活细节",
+      "state": "scene_integrated_native_verified",
+      "concept": {
+        "rawFile": "ArtSource/ShangCapital/2026-11-01/ShangGrainBasket/ShangGrainBasket_Concept.png",
+        "sourceDownload": "/Users/happys/Downloads/20261101053431_0379178b.png",
+        "bytes": 940523,
+        "sha256": "8d1f33185d242d08a79fafe5fda243d5d58adbb5cd2d8178fc14358d7f4d0c39"
+      },
+      "files": {
+        "textured": {
+          "rawFile": "ArtSource/ShangCapital/2026-11-01/ShangGrainBasket/ShangGrainBasket_PBR.fbx",
+          "sourceDownload": "/Users/happys/Downloads/20261101054658_fc7d2199.fbx",
+          "bytes": 49606604,
+          "sha256": "b263e2c9eca1fec1dad143fffaa1c7df8fcdca65168782f8b6839350a3308bb1",
+          "projectFile": "Assets/_Project/Art/HunyuanCapital20261101/ShangGrainBasket/ShangGrainBasket_PBR.fbx"
+        }
+      },
+      "prefab": "Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangGrainBasket.prefab",
+      "trianglesByLod": [
+        28000,
+        6500,
+        1400
+      ],
+      "geometryTriangles": 50000,
+      "actualDimensions": {
+        "width": 1.0522899627685547,
+        "height": 0.8500000238418579,
+        "depth": 1.0489654541015625
+      },
+      "verification": "Documentation/SceneProduction/2026-11-01/Native/Civic/report.json"
+    },
+    {
+      "id": "ShangWoodFootbridge",
+      "kind": "architecture",
+      "prompt": "古朴直线木制小桥，长六米宽两米，粗木梁和平直木板桥面，两侧低木栏，朴素榫卯与绳结，磨损木纹写实PBR，独立完整桥体，桥下开放，无水无石头无植物无人无地台，无拱形无明清装饰无文字",
+      "targetHeightMetres": 1.3,
+      "intendedUse": "河岸支路与水渠配景，须单独验证平整桥面与碰撞",
+      "state": "scene_integrated_native_verified",
+      "concept": {
+        "rawFile": "ArtSource/ShangCapital/2026-11-01/ShangWoodFootbridge/ShangWoodFootbridge_Concept.png",
+        "sourceDownload": "/Users/happys/Downloads/20261101054521_0dbf66e3.png",
+        "bytes": 626087,
+        "sha256": "4061f3053d47ea7913e1d99a37cbf3c132288c7041fa9ea40a7088ae0952ed11"
+      },
+      "files": {
+        "textured": {
+          "rawFile": "ArtSource/ShangCapital/2026-11-01/ShangWoodFootbridge/ShangWoodFootbridge_PBR.fbx",
+          "sourceDownload": "/Users/happys/Downloads/20261101055927_3dd74787.fbx",
+          "bytes": 62556028,
+          "sha256": "08cb9511d6c4bea9c5c697b83de63869d17acf73cee535e63471c1bf79f631ee",
+          "projectFile": "Assets/_Project/Art/HunyuanCapital20261101/ShangWoodFootbridge/ShangWoodFootbridge_PBR.fbx"
+        }
+      },
+      "prefab": "Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangWoodFootbridge.prefab",
+      "trianglesByLod": [
+        41964,
+        15000,
+        3200
+      ],
+      "geometryTriangles": 499992,
+      "actualDimensions": {
+        "width": 7.599999904632568,
+        "height": 1.2999999523162842,
+        "depth": 2.2429919242858887
+      },
+      "verification": "Documentation/SceneProduction/2026-11-01/Native/Civic/report.json",
+      "requiredRepair": "Native review rejected fused raised geometry; replaced by authored bevelled plank deck, bearers, rails, posts and rope lashings. Generated input archived.",
+      "finalGeometryAuthoredLocally": true
+    },
+    {
+      "id": "ShangVillageWell",
+      "kind": "prop",
+      "prompt": "古代村落取水井，低矮粗石圆形井圈，上方两根木柱和一根横梁，麻绳悬挂朴素木桶，粗粝磨损写实PBR，完整独立结构，无顶棚无地台无人无场景，无金属曲柄无现代部件无文字",
+      "targetHeightMetres": 3.0,
+      "intendedUse": "民居院落水源陈设",
+      "state": "scene_integrated_native_verified",
+      "requiredRepair": "Remove invented metal crank; rebuild timber frame, rope and wooden bucket before scene use.",
+      "concept": {
+        "rawFile": "ArtSource/ShangCapital/2026-11-01/ShangVillageWell/ShangVillageWell_Concept.png",
+        "sourceDownload": "/Users/happys/Downloads/20261101055526_f5fd7abb.png",
+        "bytes": 580851,
+        "sha256": "4a5f74ef3544c6ca7aebad8f7d15f7cde77a19636a4b713f63c5bfbbb8147600"
+      },
+      "files": {
+        "textured": {
+          "rawFile": "ArtSource/ShangCapital/2026-11-01/ShangVillageWell/ShangVillageWell_PBR.fbx",
+          "sourceDownload": "/Users/happys/Downloads/20261101061500_b46082c2.fbx",
+          "bytes": 32983612,
+          "sha256": "5566742770969fe4ded29e116c3741d0398ea7274d41bef48bab9c6215c6e505",
+          "projectFile": "Assets/_Project/Art/HunyuanCapital20261101/ShangVillageWell/ShangVillageWell_PBR.fbx"
+        }
+      },
+      "prefab": "Assets/_Project/Art/ShangCapitalReady/Prefabs/ShangVillageWell.prefab",
+      "trianglesByLod": [
+        35000,
+        8500,
+        1800
+      ],
+      "geometryTriangles": 49986,
+      "actualDimensions": {
+        "width": 3.2153759002685547,
+        "height": 3.0,
+        "depth": 3.1475892066955566
+      },
+      "verification": "Documentation/SceneProduction/2026-11-01/Native/Civic/report.json"
+    }
+  ],
+  "reuse": [
+    "Existing Hunyuan ShangGuard and ChurchGuard humanoids",
+    "EnvironmentReady housing, granaries and stalls",
+    "EnvironmentExpansionReady bronze vessels and gates",
+    "Authored MonumentalMasonry palace and wall modules"
+  ],
+  "preserve": [
+    "Separate Gobi / Chaoge / medieval scenes",
+    "NPC identities, dialogue and first-person player",
+    "Seven-person paper-to-volume rehydration",
+    "Palace openings, skylight and court-to-pool route"
+  ],
+  "references": [
+    "https://museum.sinica.edu.tw/en/exhibition/28/item/11/",
+    "https://ytsc.rootinhenan.gov.cn/sitesources/ytsc/page_pc/hnly/xsgq/articlea75bcf027a674182ac7819b8dabbe9a0.html"
+  ],
+  "historicalScope": "Novel-inspired game art; archaeological references guide material and silhouette, not a claim of exact reconstruction.",
+  "updated": "2026-11-01T07:51:41.531962+08:00",
+  "quotaObservedLatest": 1,
+  "requestsUsed": 29,
+  "newAssets": 9,
+  "repairedLocally": [
+    "Straight thatch roof replacing generated curled green roof; earthen gable closures on scene building instances",
+    "Well timber frame, rope and wooden bucket replacing metal crank",
+    "Bridge geometry rejected after native visual review; authored straight timber structure and tested continuous deck/rail collision",
+    "Guard weapon/shield geometry, grip morphs and Humanoid hand contact calibration",
+    "13 detailed bronze vessels replacing standalone and batched placeholders with derived meshes"
+  ]
+}

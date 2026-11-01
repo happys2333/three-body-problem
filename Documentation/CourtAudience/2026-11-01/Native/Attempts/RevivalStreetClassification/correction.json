@@ -1,0 +1,5 @@
+{
+  "reason": "The legacy street array included four indoor court attendants, who intentionally keep fans/tablets and do not automatically carry torches at night.",
+  "change": "Exclude CourtRetainer from outdoor street civilians and add a separate check that all four indoor attendants keep torches put away.",
+  "runtimeTorchPolicyChanged": false
+}

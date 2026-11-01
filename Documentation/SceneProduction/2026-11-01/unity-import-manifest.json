@@ -1,0 +1,84 @@
+{
+  "assets": [
+    {
+      "id": "ShangWatchtower",
+      "category": "architecture",
+      "sizeAxis": "height",
+      "targetSizeMetres": 7.0,
+      "yawDegrees": 0,
+      "files": {
+        "projectFile": "Assets/_Project/Art/HunyuanCapital20261101/ShangWatchtower/ShangWatchtower_PBR.fbx"
+      }
+    },
+    {
+      "id": "ShangCourtyardHall",
+      "category": "architecture",
+      "sizeAxis": "height",
+      "targetSizeMetres": 5.0,
+      "yawDegrees": 0,
+      "files": {
+        "projectFile": "Assets/_Project/Art/HunyuanCapital20261101/ShangCourtyardHall/ShangCourtyardHall_PBR.fbx"
+      }
+    },
+    {
+      "id": "ShangCastingFurnace",
+      "category": "prop",
+      "sizeAxis": "height",
+      "targetSizeMetres": 2.2,
+      "yawDegrees": 0,
+      "files": {
+        "projectFile": "Assets/_Project/Art/HunyuanCapital20261101/ShangCastingFurnace/ShangCastingFurnace_PBR.fbx"
+      }
+    },
+    {
+      "id": "ShangWoodCart",
+      "category": "prop",
+      "sizeAxis": "height",
+      "targetSizeMetres": 1.65,
+      "yawDegrees": 0,
+      "files": {
+        "projectFile": "Assets/_Project/Art/HunyuanCapital20261101/ShangWoodCart/ShangWoodCart_PBR.fbx"
+      }
+    },
+    {
+      "id": "ShangStorageJar",
+      "category": "prop",
+      "sizeAxis": "height",
+      "targetSizeMetres": 1.25,
+      "yawDegrees": 0,
+      "files": {
+        "projectFile": "Assets/_Project/Art/HunyuanCapital20261101/ShangStorageJar/ShangStorageJar_PBR.fbx"
+      }
+    },
+    {
+      "id": "ShangGrainBasket",
+      "category": "prop",
+      "sizeAxis": "height",
+      "targetSizeMetres": 0.85,
+      "yawDegrees": 0,
+      "files": {
+        "projectFile": "Assets/_Project/Art/HunyuanCapital20261101/ShangGrainBasket/ShangGrainBasket_PBR.fbx"
+      }
+    },
+    {
+      "id": "ShangWoodFootbridge",
+      "category": "architecture",
+      "sizeAxis": "height",
+      "targetSizeMetres": 1.3,
+      "yawDegrees": 0,
+      "files": {
+        "projectFile": "Assets/_Project/Art/HunyuanCapital20261101/ShangWoodFootbridge/ShangWoodFootbridge_PBR.fbx"
+      }
+    },
+    {
+      "id": "ShangVillageWell",
+      "category": "prop",
+      "sizeAxis": "height",
+      "targetSizeMetres": 3.0,
+      "yawDegrees": 0,
+      "files": {
+        "projectFile": "Assets/_Project/Art/HunyuanCapital20261101/ShangVillageWell/ShangVillageWell_PBR.fbx"
+      }
+    }
+  ]
+}

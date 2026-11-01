@@ -1,0 +1,71 @@
+{
+  "furnishings": [
+    {
+      "id": "RoyalSeat",
+      "path": "Assets/_Project/Art/PalaceInterior/Prefabs/RoyalSeat.prefab",
+      "guid": "b809769f321b94b7b91d271fd498fcc2",
+      "triangles": [
+        21736,
+        10433,
+        3911
+      ],
+      "materials": true,
+      "colliders": 1
+    },
+    {
+      "id": "RoyalRelief",
+      "path": "Assets/_Project/Art/PalaceInterior/Prefabs/RoyalRelief.prefab",
+      "guid": "9ba357fac3c5c4450bcc5631708f971f",
+      "triangles": [
+        15052,
+        7224,
+        2708
+      ],
+      "materials": true,
+      "colliders": 0
+    },
+    {
+      "id": "CalendarTable",
+      "path": "Assets/_Project/Art/PalaceInterior/Prefabs/CalendarTable.prefab",
+      "guid": "dc18577c748a04c1c8b5ad3022ab049a",
+      "triangles": [
+        3384,
+        1624,
+        608
+      ],
+      "materials": true,
+      "colliders": 1
+    },
+    {
+      "id": "BronzeJue",
+      "path": "Assets/_Project/Art/PalaceInterior/Prefabs/BronzeJue.prefab",
+      "guid": "74298dce7a1124792918ded9df33572a",
+      "triangles": [
+        4884,
+        2344,
+        878
+      ],
+      "materials": true,
+      "colliders": 0
+    },
+    {
+      "id": "BronzeGu",
+      "path": "Assets/_Project/Art/PalaceInterior/Prefabs/BronzeGu.prefab",
+      "guid": "93e4c68059c104bebb54d916d969402d",
+      "triangles": [
+        3424,
+        1643,
+        615
+      ],
+      "materials": true,
+      "colliders": 0
+    }
+  ],
+  "savedScene": "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity",
+  "dirty": false,
+  "missingScripts": 0,
+  "invalidMaterials": 0,
+  "timerSettings": "Assets/_Project/Art/PalaceInterior/Settings/Ritual.asset",
+  "audioSources": 8,
+  "audioMissing": 0
+}

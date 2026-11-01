@@ -1,0 +1,60 @@
+{
+  "updated": "2026-11-01T15:10:09.791739+08:00",
+  "editorTests": {
+    "mode": "EditMode",
+    "jobId": "00cdc958d39d444f89dec769afda0b74",
+    "total": 35,
+    "passed": 35,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 11.4906345,
+    "classes": [
+      "PalaceInteriorTests",
+      "JourneyProgressTests",
+      "TravellerEntryRegressionTests",
+      "TravellerSceneTests",
+      "CapitalRevivalTests",
+      "CapitalSeparationTests"
+    ]
+  },
+  "nativeChecks": {
+    "Interior": {
+      "passed": true,
+      "checks": 71,
+      "performanceBudgetPassed": false,
+      "p95Ms": 24.119537353515625
+    },
+    "CapitalWalk": {
+      "passed": true,
+      "checks": 36,
+      "metresWalked": 369.01171875
+    },
+    "Revival": {
+      "passed": true,
+      "checks": 38,
+      "performanceBudgetPassed": true,
+      "p95FrameMs": 8.391794204711914
+    },
+    "GobiOpening": {
+      "passed": true,
+      "checks": 57,
+      "frameP95Ms": 11.654414176940918
+    }
+  },
+  "nativeFunctionalPassed": true,
+  "nativeChecksTotal": 202,
+  "performanceBudgetPassedForAllMeasuredViews": false,
+  "validationNotes": [
+    "Gobi opening used the scripted local gateway and synthetic speech, not hardware microphone or an online LLM.",
+    "The final shared HUD safety margins and observation-hint state were tested in the interior at four aspect/size combinations.",
+    "Short scene samples are not a guarantee of whole-game frame rate."
+  ],
+  "runtimeHashes": {
+    "Assets/_Project/UI/TravellerHud.uss": "f35594fb99bbc525e58bb5c0011e22a0b63bdb5e66301196bb58d78dfac1f10b",
+    "Assets/_Project/Scripts/TravellerHud.cs": "0d97d2075d819888fb45f7a340c335f41e81c4bc7090f9846128e89fd6799de3",
+    "Assets/_Project/Scripts/PalaceDivination.cs": "2a2830eefc7f42972e42d569a7fa417993277ab423c762454d70064484f628d2",
+    "Assets/_Project/Scripts/FiveTierSandTimer.cs": "d075b2fba7eb2bbf2da2c20a3425816fd9755e468b56d18ef21c3f7a928f1a50",
+    "Assets/_Project/Scripts/PalaceSoundscape.cs": "6bdf75aab359c4c54abfa8a3e37925269939ecec01a817cde493dae14f633524",
+    "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity": "b1350306ebd836d2c083c917b860a47feb37ab2594eeca2e2bc98fc14b93a26e"
+  }
+}
