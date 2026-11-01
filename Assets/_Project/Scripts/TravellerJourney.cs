@@ -26,6 +26,8 @@ namespace ThreeBodyProblem
         public bool IsPreviewing => previewMode;
         public bool DialogueOpen { get; private set; }
         public string Speech => speech;
+        public int SpeechVersion { get; private set; }
+        public float SpeechRemainingSeconds => Mathf.Max(0, speechUntil - Time.unscaledTime);
         public bool IsTitle => !previewMode && Progress.Step == JourneyStep.Title;
         public bool IsSummary => !previewMode && Progress.Step == JourneyStep.Summary;
         public bool CanObserve => !previewMode && (Progress.Step != JourneyStep.ObserveRevival || stage.IsRevivalComplete) && ((Progress.Step==JourneyStep.WalkToChaoge&&stage.profile.sceneIndex==0&&(stage.MomentIndex==3||stage.MomentIndex==4))||Progress.Step == JourneyStep.ObserveFirstStar || Progress.Step == JourneyStep.ObserveTwoStars || Progress.Step == JourneyStep.ObserveRevival || Progress.Step == JourneyStep.ObserveLongNight || Progress.Step == JourneyStep.ObserveThreeSuns);
@@ -73,8 +75,8 @@ namespace ThreeBodyProblem
                     case JourneyStep.WalkToChaoge: return "与姬昌一同前往朝歌";
                     case JourneyStep.DepartForCapital: return "沿驿路启程前往朝歌；按住 F 可随时提问";
                     case JourneyStep.CourtApproach: return "随周文王入城，穿过金字塔甬道进入石殿";
-                    case JourneyStep.CourtTalk: return "看向人物，按住 F 参与质询";
-                    case JourneyStep.CalendarWait: return "观察沙漏与天窗光斑，等待短期验证";
+                    case JourneyStep.CourtTalk: return stage.HasPendingCourtAudience ? "观看传奏官呈送表章，按住 F 可与人物交谈" : "看向人物，按住 F 参与质询";
+                    case JourneyStep.CalendarWait: return stage.HasPendingCourtAudience ? "等候传奏官呈送表章" : "观看姬昌推演，观察沙漏与天窗光斑";
                     case JourneyStep.WalkToWater: return "从侧门出殿，前往复苏水边";
                     case JourneyStep.ObserveRevival: return stage.IsRevivalComplete ? "见证文明复苏，按 E 记录应验的结果" : "观察纸片浸水、恢复形体并重新站起";
                     case JourneyStep.AfterRevival: return "等待下一次日出；按住 F 可随时提问";
@@ -216,8 +218,8 @@ namespace ThreeBodyProblem
                         SetMoment(0); if (traveller != null) traveller.position = stage.profile.hasCapitalRoute ? stage.profile.companionArrival : new Vector3(-2f,0f,-15f);
                         SetPath(stage.profile.hasCapitalRoute ? stage.profile.courtWaypoints : new[] { new Vector3(-3.3f,0f,14f) });
                         Say("数日之后，朝歌王都。周文王：到了。巨摆之间的金字塔就是王宫，跟我走进甬道。", 10f); break;
-                    case JourneyStep.CourtTalk: Say("纣王：下一次稳定时期何时到来？把能让寡人查验的事说清楚。"); break;
-                    case JourneyStep.CalendarWait: Say("石板缓缓移开，日光从竖井落入内殿。沙漏继续流下……这一次，天窗光斑接近了推演。", 7f); break;
+                    case JourneyStep.CourtTalk: Say(stage.Audience!=null?"纣王：将表章呈上来。待寡人看过，再说你的历法。":"纣王：下一次稳定时期何时到来？把能让寡人查验的事说清楚。"); break;
+                    case JourneyStep.CalendarWait: Say(stage.HasPendingCourtAudience?"表章正由传奏官送呈。待大王览奏，再演示卦象与历法。":"石板缓缓移开，日光从竖井落入内殿。沙漏继续流下……这一次，天窗光斑接近了推演。", 7f); break;
                     case JourneyStep.WalkToWater: SetMoment(1); SetPath(stage.profile.hasCapitalRoute ? stage.profile.waterWaypoints : new[] { new Vector3(-6f,0f,-9f),new Vector3(13f,0f,-9f),new Vector3(15f,0f,-6f),new Vector3(19f,0f,-6f),new Vector3(28f,0f,-9f) }); Say("周文王：这一次，它与推演相合。沿侧面甬道出殿，去复苏池边看看。"); break;
                     case JourneyStep.ObserveRevival: Say("周文王：看，这些脱水的人正在吸水。等他们恢复形体，重新站起来。", 8f); break;
                     case JourneyStep.WaitForDawn: Say("人们等待着下一次日出。沙漏继续流下，晨光却没有到来。", 6f); break;
@@ -234,7 +236,15 @@ namespace ThreeBodyProblem
 
         private void SetMoment(int index) { if (stage.MomentIndex != index) stage.ApplyMoment(index, false, false); }
         private void SetPath(params Vector3[] points) { actorPath = points; actorWaypoint = 0; }
-        private void Say(string value, float seconds = 6f) { speech = value; speechUntil = Time.unscaledTime + seconds; Changed?.Invoke(); }
+        public void GuideCompanionForCalendar(Vector3 position)
+        {
+            if (stage.profile.sceneIndex == 1 && Progress.Step == JourneyStep.CalendarWait) SetPath(position);
+        }
+        public void GuideCompanionForAudience(params Vector3[] positions)
+        {
+            if(stage.profile.sceneIndex==1&&(Progress.Step==JourneyStep.CourtTalk||Progress.Step==JourneyStep.CalendarWait))SetPath(positions);
+        }
+        private void Say(string value, float seconds = 6f) { speech = value; SpeechVersion++; speechUntil = Time.unscaledTime + seconds; Changed?.Invoke(); }
         public void Speak(string value,float seconds=8){Say(value,seconds);}
         public void CloseDialogue(){SetDialogueOpen(false);}
         public void SetDialogueOpen(bool value){DialogueOpen=value;Changed?.Invoke();}
@@ -242,7 +252,7 @@ namespace ThreeBodyProblem
         private void Update()
         {
             if (stage == null || previewMode || IsTitle || IsSummary || stage.IsLoading || (hud!=null&&hud.IsWorldPaused)) return;
-            Progress.Tick(gobi!=null?Time.unscaledDeltaTime:Time.deltaTime);
+            if(Progress.Step!=JourneyStep.CalendarWait||!stage.HasPendingCourtAudience)Progress.Tick(gobi!=null?Time.unscaledDeltaTime:Time.deltaTime);
             bool conversing=dialogueDirector!=null&&(dialogueDirector.HasPlayerQuestion||dialogueDirector.IsBusy||dialogueDirector.IsVocalising);
             if(!conversing)
             {
@@ -251,10 +261,14 @@ namespace ThreeBodyProblem
             }
 
             if (gobi==null&&IsWalking&&Progress.SceneIndex == stage.profile.sceneIndex&&Vector2.Distance(new Vector2(stage.player.transform.position.x,stage.player.transform.position.z),new Vector2(Goal.x,Goal.z))<6f)Progress.Arrive();
-            if (traveller != null && actorPath != null && actorWaypoint < actorPath.Length && !ShouldWaitForPlayer(traveller.position, stage.player.transform.position, actorPath[actorPath.Length - 1]))
+            if (traveller != null && actorPath != null && actorWaypoint < actorPath.Length &&
+                !(stage.HasPendingCourtAudience&&stage.Audience.ParticipantSpeaking)&&
+                !ShouldWaitForPlayer(traveller.position, stage.player.transform.position, actorPath[actorPath.Length - 1]))
             {
                 var delta = actorPath[actorWaypoint] - traveller.position;
-                if (delta.sqrMagnitude < 0.16f) actorWaypoint++;
+                // The engraved ritual has a tighter arrival radius than travel waypoints.
+                float arrivalSquared = Progress.Step == JourneyStep.CalendarWait || Progress.Step==JourneyStep.CourtTalk && stage.HasPendingCourtAudience ? .01f : .16f;
+                if (delta.sqrMagnitude < arrivalSquared) actorWaypoint++;
                 else
                 {
                     float speed=stage.profile.gobiStory!=null&&(Progress.Step==JourneyStep.Sunrise||Progress.Step==JourneyStep.SeekShelter)?stage.profile.gobiStory.dangerRunSpeed:stage.profile.companionWalkSpeed;

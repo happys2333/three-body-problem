@@ -32,7 +32,7 @@ namespace ThreeBodyProblem
                 if (!stage.Journey.IsPreviewing) stage.Journey.TogglePreview(); hud.Root.style.display = DisplayStyle.None;
                 stage.ApplyMoment(0, true, false); yield return Frames(8);
                 var actors = stage.GetComponentsInChildren<TravellerActor>(); var crowd = stage.GetComponentsInChildren<TravellerCrowdMember>();
-                Check(actors.Length == new[] { 2, 28, 6 }[scene] && crowd.Length == new[] { 0, 25, 2 }[scene], "Complete real-character roster in " + TravellerStage.SceneNames[scene]);
+                Check(actors.Length == new[] { 2, 36, 6 }[scene] && crowd.Length == new[] { 0, 33, 2 }[scene], "Complete real-character roster in " + TravellerStage.SceneNames[scene]);
                 Check(!stage.GetComponentsInChildren<Transform>(true).Any(t => t.name.Contains("[scene stand-in]")), "No primitive character anchors in " + TravellerStage.SceneNames[scene]);
                 foreach (var member in crowd)
                 {
@@ -43,8 +43,8 @@ namespace ThreeBodyProblem
                 var guard = crowd.First(m => m.isGuard).GetComponent<TravellerActor>(); Quaternion heading = guard.transform.rotation;
                 stage.player.Teleport(guard.transform.position + new Vector3(2,1.65f,-3.8f), guard.transform.position + Vector3.up*1.2f);
                 yield return Frames(65);
-                Check(guard.CurrentMotion == "MX_WeightShift" && Quaternion.Angle(heading,guard.transform.rotation)<.1f, "Guard idle keeps the authored watch direction in scene " + scene);
-                Check(guard.GetComponentsInChildren<MeshFilter>().Any(m=>m.sharedMesh.name.Contains("spear")), "Guard carries attached spear in scene " + scene);
+                Check(guard.CurrentMotion == guard.GetComponent<EraGuardEquipment>().profile.idleMotion && Quaternion.Angle(heading,guard.transform.rotation)<.1f, "Guard idle keeps the authored watch direction in scene " + scene);
+                Check(guard.GetComponentsInChildren<MeshFilter>().Any(m=>m.sharedMesh.name.IndexOf("spear",StringComparison.OrdinalIgnoreCase)>=0), "Guard carries attached spear in scene " + scene);
                 Capture(scene == 1 ? "Chaoge_ShangeGuard" : "Medieval_ChurchGuard"); yield return Frames(4);
                 if (scene == 2) continue;
                 var woman = crowd.First(m=>m.GetComponent<TravellerActor>().role==TravellerRole.CitizenFemale&&!m.isReviving).GetComponent<TravellerActor>();

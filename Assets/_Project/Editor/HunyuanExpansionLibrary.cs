@@ -63,6 +63,14 @@ namespace ThreeBodyProblem.Editor
             return report;
         }
 
+        public static Check PrepareImportedCharacter(string id, string rigFile)
+        {
+            if (EditorApplication.isPlaying) throw new InvalidOperationException("Stop Play before importing a character.");
+            if (!File.Exists(rigFile)) throw new FileNotFoundException(rigFile);
+            Directory.CreateDirectory(Root + "/Prefabs"); AssetDatabase.Refresh();
+            return Prepare(new Asset { id = id, files = new Files { rig = new Export { projectFile = rigFile } } }, true);
+        }
+
         private static Check Prepare(Asset asset, bool character, bool rigged = true)
         {
             bool skinned = character && rigged;
@@ -280,7 +288,7 @@ namespace ThreeBodyProblem.Editor
         }
         private static GameObject NewObject(string name, Scene scene) { var value = new GameObject(name); SceneManager.MoveGameObjectToScene(value, scene); return value; }
         private static bool Contains(string path, string text) => Path.GetFileName(path).IndexOf(text, StringComparison.OrdinalIgnoreCase) >= 0;
-        private static float Height(string id) => id == "CitizenFemale" ? 1.65f : id == "CitizenMale" ? 1.73f : id == "ChurchGuard" ? 1.85f : id == "ShangGuard" ? 1.83f : 1.8f;
+        private static float Height(string id) => id == "CitizenFemale" ? 1.65f : id == "CitizenMale" ? 1.73f : id == "ChurchGuard" ? 1.85f : id == "ShangGuard" || id == "ShangGuardV2" ? 1.83f : 1.8f;
         private static Bounds Bounds(GameObject root)
         {
             bool first = true; var result = new Bounds();

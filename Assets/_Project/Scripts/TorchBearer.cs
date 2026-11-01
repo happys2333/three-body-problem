@@ -17,6 +17,7 @@ namespace ThreeBodyProblem
         private TorchFlameBillboard[] flameCards;
         private float nextLightingUpdate;
         private bool manualCarry;
+        private EraGuardEquipment guardEquipment;
         public void ToggleCarrying()
         {
             equipped=!IsCarried;
@@ -25,6 +26,7 @@ namespace ThreeBodyProblem
         private void Start()
         {
             actor=GetComponent<TravellerActor>();stage=GetComponentInParent<TravellerStage>();
+            guardEquipment=GetComponent<EraGuardEquipment>();
             if(actor==null||actor.animator==null||!actor.animator.isHuman||torchPrefab==null){enabled=false;return;}
             hand=actor.animator.GetBoneTransform(HumanBodyBones.LeftHand);if(hand==null){enabled=false;return;}
             shoulder=actor.animator.GetBoneTransform(HumanBodyBones.LeftUpperArm);
@@ -49,6 +51,8 @@ namespace ThreeBodyProblem
             Vector3 basePoint=first?actor.firstPersonPlayer.transform.position:transform.position;
             float sitting=actor.seated?.25f:0;
             HandTarget=basePoint+Vector3.up*(1.13f-sitting)+forward*(first?.56f:.28f)-right*(first?.23f:.30f);
+            if(!first&&guardEquipment!=null&&guardEquipment.profile!=null)
+                HandTarget=transform.TransformPoint(guardEquipment.profile.torchGrip);
             if(first&&shoulder!=null)HandTarget=shoulder.position+forward*.33f-Vector3.up*.17f-right*.02f;
             HandRotation=Quaternion.LookRotation(forward,Vector3.up)*Quaternion.Euler(0,0,-15);
             bool darkness=stage==null||stage.Current.sunCount==0;
@@ -75,7 +79,8 @@ namespace ThreeBodyProblem
             // Keep the flame upright while the animated hand carries the handle.
             bool first=actor.firstPersonPlayer!=null;
             var rotation=Quaternion.Euler(first?40:-7,transform.eulerAngles.y,8);
-            Vector3 grip=hand.position-rotation*Vector3.up*(first?.15f:.2f);
+            Vector3 palm=guardEquipment!=null?guardEquipment.LeftPalmCenter(hand):hand.position;
+            Vector3 grip=palm-rotation*Vector3.up*(first?.15f:.2f);
             instance.transform.SetPositionAndRotation(grip,rotation);
         }
         private void OnDestroy(){if(instance!=null)Destroy(instance);}

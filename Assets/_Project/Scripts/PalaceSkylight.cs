@@ -12,7 +12,10 @@ namespace ThreeBodyProblem
         public Vector3 openPosition;
         public Vector3 observationPoint = new Vector3(0,4.05f,23.5f);
         [SerializeField, Range(0,1)] private float opening;
+        private TravellerHud hud;
         public float Opening => opening;
+
+        private void Start() { if(stage!=null)hud=stage.GetComponentInChildren<TravellerHud>(); }
 
         public void SetOpening(float fraction)
         {
@@ -22,9 +25,9 @@ namespace ThreeBodyProblem
 
         private void Update()
         {
-            if(stage==null||stage.Journey==null||stage.Journey.IsPreviewing||stage.Journey.IsTitle)return;
+            if(stage==null||stage.Journey==null||stage.Journey.IsPreviewing||stage.Journey.IsTitle||hud!=null&&hud.IsWorldPaused)return;
             var step=stage.Journey.Progress.Step;
-            bool open=step>=JourneyStep.CalendarWait&&step<=JourneyStep.WaitForDawn&&stage.MomentIndex<2;
+            bool open=step>=JourneyStep.CalendarWait&&step<=JourneyStep.WaitForDawn&&stage.MomentIndex<2&&!stage.HasPendingCourtAudience;
             SetOpening(Mathf.MoveTowards(opening,open?1:0,Time.deltaTime/1.5f));
         }
     }

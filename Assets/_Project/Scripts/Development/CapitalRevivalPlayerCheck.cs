@@ -27,6 +27,9 @@ namespace ThreeBodyProblem
         private readonly List<float> frames = new List<float>();
         private string output;
         private TravellerStage stage;
+        private const string JournalKey = "ThreeBodyTraveller.Journal.v1";
+        private bool journalWasPresent, journalCaptured;
+        private string originalJournal;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Boot()
@@ -39,6 +42,8 @@ namespace ThreeBodyProblem
 
         private IEnumerator Start()
         {
+            journalWasPresent = PlayerPrefs.HasKey(JournalKey);
+            originalJournal = PlayerPrefs.GetString(JournalKey, ""); journalCaptured = true;
             Application.logMessageReceived += OnLog;
             Application.runInBackground = true; QualitySettings.vSyncCount = 0; Application.targetFrameRate = 120;
             Directory.CreateDirectory(Path.GetDirectoryName(output));
@@ -54,7 +59,8 @@ namespace ThreeBodyProblem
             report.gpu = SystemInfo.graphicsDeviceName; report.width = Screen.width; report.height = Screen.height; report.frameCap = Application.targetFrameRate;
             report.participants = pool.citizens.Length; Check(report.participants == 7, "Expected seven participants.");
             var first = pool.citizens[0];
-            var street = stage.GetComponentsInChildren<TravellerCrowdMember>().Where(m => !m.isGuard && !m.isReviving).ToArray();
+            var street = stage.GetComponentsInChildren<TravellerCrowdMember>().Where(m => !m.isGuard && !m.isReviving && m.GetComponent<CourtRetainer>() == null).ToArray();
+            var palaceStaff = stage.GetComponentsInChildren<CourtRetainer>().Where(r => !r.spearGuard).ToArray();
             var scales = pool.citizens.Select(c => c.transform.localScale).ToArray();
             stage.ApplyMoment(0, true, false);
             stage.player.Teleport(first.transform.position + new Vector3(-4, 1.65f, -1), first.transform.position + Vector3.up * .65f);
@@ -93,6 +99,7 @@ namespace ThreeBodyProblem
             yield return Delay(.6f); yield return Capture("06_CivilianDay", null);
             stage.ApplyMoment(2, true, false); yield return Delay(.6f);
             Check(street.All(c => c.GetComponent<TorchBearer>().IsCarried && c.GetComponent<TorchBearer>().IsLit), "Dry civilians fail to equip torches at night.");
+            Check(palaceStaff.All(c => !c.GetComponent<TorchBearer>().IsCarried), "Indoor court attendants unnecessarily carry torches at night.");
             Check(pool.citizens.All(c => !c.GetComponent<TorchBearer>().IsCarried), "People still in the soaking pool carry lit torches.");
             var bearer = resident.GetComponent<TorchBearer>(); var actor = resident.GetComponent<TravellerActor>(); actor.animator.cullingMode = AnimatorCullingMode.AlwaysAnimate;
             yield return Delay(.5f);
@@ -133,11 +140,18 @@ namespace ThreeBodyProblem
         private void OnLog(string message, string trace, LogType type) { if (type == LogType.Error || type == LogType.Exception || type == LogType.Assert) report.errors.Add(message); }
         private void Finish()
         {
+            RestoreJournal();
             if (frames.Count > 0) { frames.Sort(); report.meanFrameMs = frames.Sum() / frames.Count; report.p95FrameMs = frames[(int)(frames.Count * .95f)]; }
             report.performanceBudgetPassed = frames.Count > 0 && report.p95FrameMs <= 16.67f;
             report.passed = report.errors.Count == 0; File.WriteAllText(output, JsonUtility.ToJson(report, true)); Application.Quit(report.passed ? 0 : 1);
         }
-        private void OnDestroy() { Application.logMessageReceived -= OnLog; }
+        private void RestoreJournal()
+        {
+            if (!journalCaptured) return;
+            if (journalWasPresent) PlayerPrefs.SetString(JournalKey, originalJournal); else PlayerPrefs.DeleteKey(JournalKey);
+            PlayerPrefs.Save(); journalCaptured = false;
+        }
+        private void OnDestroy() { RestoreJournal(); Application.logMessageReceived -= OnLog; }
     }
 }
 #endif

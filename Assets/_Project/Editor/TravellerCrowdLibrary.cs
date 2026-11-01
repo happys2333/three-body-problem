@@ -69,6 +69,15 @@ namespace ThreeBodyProblem.Editor
             {
                 foreach (var def in Definitions)
                 {
+                    if (def.role == TravellerRole.ShangGuard || def.role == TravellerRole.ChurchGuard)
+                    {
+                        EraGuardProduction.PrepareVariant(def.id, def.role);
+                        var ready = AssetDatabase.LoadAssetAtPath<GameObject>(PrefabPath(def.id));
+                        report.variants.Add(new Variant { id = def.id, source = ready.GetComponent<EraGuardEquipment>().profile.bodySource,
+                            role = def.role.ToString(), prefab = PrefabPath(def.id), standingHeight = ready.GetComponent<CapsuleCollider>().height,
+                            skinnedTriangles = ready.GetComponentsInChildren<SkinnedMeshRenderer>().Sum(s => s.sharedMesh.triangles.Length / 3) });
+                        continue;
+                    }
                     var root=new GameObject(def.id);SceneManager.MoveGameObjectToScene(root,preview);
                     string path=def.source=="PlayerTraveller"?GeneratedCharacterLibrary.Root+"/Prefabs/PlayerTraveller.prefab":Root+"/Sources/"+def.source+"/"+def.source+".fbx";
                     var model=(GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(path),preview);model.transform.SetParent(root.transform,false);

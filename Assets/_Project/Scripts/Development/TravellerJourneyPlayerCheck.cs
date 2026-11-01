@@ -92,7 +92,7 @@ namespace ThreeBodyProblem
             Check(skylight!=null&&Vector3.Dot(stage.player.viewCamera.transform.forward,(skylight.observationPoint-stage.player.viewCamera.transform.position).normalized)>0.99f,"Calendar observation guidance misses the sunlight patch.");
             Check(skylight!=null&&!Physics.Linecast(stage.player.viewCamera.transform.position,skylight.observationPoint,~0,QueryTriggerInteraction.Ignore),"The calendar table or another object hides the sunlight patch.");
             ScreenCapture.CaptureScreenshot(Path.Combine(Path.GetDirectoryName(output),"calendar_skylight.png"));yield return Frames(3);
-            journey.Progress.Tick(7f); yield return Frames(2);
+            journey.Progress.Tick(journey.Progress.CalendarWaitSeconds); yield return Frames(2);
             yield return GoToGoal(); Observe(); yield return Frames(2);
             Check(journey.Progress.Step == JourneyStep.AfterRevival, "Revival observation missing.");
             journey.Interact(); journey.Progress.Tick(5f); yield return Frames(2); Observe(); yield return Frames(2);

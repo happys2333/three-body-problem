@@ -32,9 +32,11 @@ namespace ThreeBodyProblem
         public float MinimumNightWalkSeconds { get; private set; }=12;
         public float MinimumNightWalkMetres { get; private set; }=35;
         public float NightWalkMetres { get; private set; }
+        public float CalendarWaitSeconds { get; private set; } = 7;
         private bool firstStarRecorded,twoStarsRecorded;
         public int SceneIndex => Step < JourneyStep.CourtApproach ? 0 : Step < JourneyStep.TribunalApproach ? 1 : 2;
         public event Action Changed;
+        public void ConfigureCalendar(float seconds) { CalendarWaitSeconds = Math.Max(7, Math.Min(60, seconds)); }
 
         public void Begin()
         {
@@ -132,7 +134,7 @@ namespace ThreeBodyProblem
         {
             Elapsed += Math.Max(0f, seconds);
             if (Step == JourneyStep.Sunset && Elapsed >= SuddenSunsetSeconds) Enter(JourneyStep.WalkToChaoge);
-            else if (Step == JourneyStep.CalendarWait && Elapsed >= 7f) Enter(JourneyStep.WalkToWater);
+            else if (Step == JourneyStep.CalendarWait && Elapsed >= CalendarWaitSeconds) Enter(JourneyStep.WalkToWater);
             else if (Step == JourneyStep.WaitForDawn && Elapsed >= 5f) Enter(JourneyStep.ObserveLongNight);
             else if (Step == JourneyStep.Collapse && Elapsed >= 9f) Enter(JourneyStep.Summary);
         }

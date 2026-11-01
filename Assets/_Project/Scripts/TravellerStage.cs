@@ -32,6 +32,9 @@ namespace ThreeBodyProblem
         private Vector3[] starPositions;
         private TorchBearer playerTorch;
         private CapitalRevivalDirector revival;
+        private CourtAudienceSequence audience;
+        public CourtAudienceSequence Audience => audience;
+        public bool HasPendingCourtAudience => audience != null && !audience.IsComplete;
         public event Action Changed;
         public event Action<string> Notice;
         public event Action<int> ObservationRecorded;
@@ -46,6 +49,7 @@ namespace ThreeBodyProblem
         {
             Journal = ObservationJournal.Load();
             revival = GetComponent<CapitalRevivalDirector>();
+            audience = GetComponentInChildren<CourtAudienceSequence>(true);
             liveSky = new Material(skyMaterial);
             RenderSettings.skybox = liveSky;
             starPositions = new Vector3[flyingStars.Length];
