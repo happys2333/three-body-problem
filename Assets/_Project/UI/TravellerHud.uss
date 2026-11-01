@@ -5,7 +5,7 @@
 .chapter-small { font-size: 13px; color: rgb(206,178,126); margin-bottom: 7px; }
 .objective { font-size: 21px; white-space: normal; }
 .navigation { font-size: 13px; color: rgb(216,201,168); margin-top: 7px; white-space: normal; }
-.hud-tools { flex-direction: row; flex-shrink: 0; }
+.hud-tools { flex-direction: row; flex-shrink: 0; margin-left: auto; }
 .hud-tools .button { margin-left: 8px; padding: 8px 12px; font-size: 14px; }
 .hud-bottom { position: absolute; left: 28px; right: 28px; bottom: 20px; align-items: center; }
 .caption-card { width: 82%; max-width: 850px; padding: 15px 22px; background-color: rgba(10,17,23,0.79); margin-bottom: 12px; }
@@ -68,3 +68,71 @@
 .gobi-chat .button { font-size: 14px; min-height: 34px; padding: 6px 10px; }
 .compact .gobi-chat { width: 75%; max-width: 510px; }
 .chat-input .unity-base-text-field__input, .chat-input .unity-text-field__input { background-color: rgb(28,38,46); color: rgb(240,224,191); padding: 8px; border-color: rgb(105,118,125); border-width: 1px; }
+
+/* Mission guidance and dialogue use separate screen-space bands. */
+.hud-top { left: 4%; right: 4%; top: 4%; }
+.help-card { width: 400px; max-width: 43%; padding: 10px 14px; background-color: rgba(0,0,0,0.68); }
+.help-card .chapter-small { font-size: 11px; color: rgb(184,184,174); margin-bottom: 3px; }
+.help-card .navigation { color: rgb(244,243,238); margin-top: 0; font-size: 14px; }
+.hud-tools .button { background-color: rgba(0,0,0,0.28); border-width: 0; color: rgb(221,221,214); min-height: 28px; font-size: 12px; padding: 5px 8px; }
+.mission-dock { position: absolute; left: 10%; right: 10%; bottom: 17%; align-items: center; }
+.mission { width: 100%; max-width: 1160px; padding: 2px 12px; background-color: rgba(0,0,0,0); border-left-width: 0; }
+.objective { font-size: 23px; color: rgb(255,255,250); -unity-text-align: middle-center; -unity-font-style: bold; -unity-text-outline-color: rgba(0,0,0,0.94); -unity-text-outline-width: 1px; text-shadow: 1px 2px 2px rgba(0,0,0,0.9); }
+.hud-bottom { left: 10%; right: 10%; bottom: 5%; }
+.caption-card { width: 100%; max-width: 1040px; padding: 5px 12px; background-color: rgba(0,0,0,0.18); margin-bottom: 0; }
+.caption { font-size: 23px; color: rgb(255,255,250); -unity-text-outline-color: rgba(0,0,0,0.95); -unity-text-outline-width: 1px; text-shadow: 1px 2px 2px rgba(0,0,0,0.95); }
+.dialogue-card { position: absolute; right: 4%; bottom: 28%; width: 350px; max-width: 39%; max-height: 48%; padding: 10px 14px; background-color: rgba(0,0,0,0.72); border-left-width: 0; }
+.gobi-chat { width: 350px; max-width: 39%; }
+.dialogue-scroll { max-height: 320px; }
+.dialogue-card .panel-heading { color: rgb(231,220,185); margin-bottom: 5px; }
+.free-dialogue { border-top-width: 0; margin-top: 0; padding-top: 0; }
+.context-actions { position: absolute; right: 4%; bottom: 25%; margin-bottom: 0; }
+.context-action { font-size: 14px; min-height: 30px; background-color: rgba(0,0,0,0.42); border-width: 0; padding: 6px 10px; }
+.notice { left: 4%; top: 17%; bottom: auto; width: 380px; max-width: 43%; align-self: auto; -unity-text-align: middle-left; background-color: rgba(0,0,0,0.72); }
+.compact .objective { font-size: 21px; }
+.compact .caption { font-size: 21px; }
+.compact .mission-dock { bottom: 21%; left: 9%; right: 9%; }
+.compact .context-actions { bottom: 29%; }
+.compact .dialogue-card, .compact .gobi-chat { width: 360px; max-width: 52%; bottom: 35%; }
+.compact .help-card { max-width: 55%; }
+.compact .hud-tools { flex-direction: row; }
+
+/* Settings reuse the pause menu's dark surface and warm highlights. */
+.settings-overlay { background-color: rgba(4,8,12,0.82); }
+.settings-card { width: 86%; max-width: 800px; height: 88%; max-height: 780px; padding: 24px 30px; }
+.settings-title { margin-bottom: 4px; font-size: 28px; }
+.settings-description { font-size: 15px; color: rgb(209,207,197); white-space: normal; margin-bottom: 12px; flex-shrink: 0; }
+.settings-tabs { flex-direction: row; margin-bottom: 10px; flex-shrink: 0; }
+.settings-tabs .button { flex-grow: 1; margin-right: 6px; font-size: 16px; min-height: 38px; padding: 8px 14px; }
+.settings-scroll { flex-grow: 1; min-height: 80px; margin-bottom: 8px; }
+.settings-page { padding-right: 12px; padding-bottom: 12px; }
+.settings-label { font-size: 14px; color: rgb(226,214,189); margin-top: 10px; margin-bottom: 4px; }
+.settings-input { min-height: 36px; flex-shrink: 0; }
+.settings-input .unity-text-field__input, .settings-input .unity-base-text-field__input { background-color: rgb(26,36,44); color: rgb(244,233,211); padding: 8px 10px; border-width: 1px; border-color: rgb(91,102,110); font-size: 15px; }
+.settings-hint { font-size: 12px; color: rgb(180,179,168); white-space: normal; margin-top: 5px; margin-bottom: 8px; flex-shrink: 0; }
+.settings-select { margin-top: 8px; margin-bottom: 8px; min-height: 32px; flex-shrink: 0; }
+.settings-select > .unity-base-field__label { min-width: 160px; color: rgb(226,214,189); }
+.settings-select .unity-base-field__input { background-color: rgb(26,36,44); color: rgb(244,233,211); min-height: 30px; }
+.settings-key-row { flex-direction: row; align-items: center; }
+.settings-key-input { flex-grow: 1; margin-right: 10px; }
+.settings-key-row .unity-toggle { max-width: 70px; min-width: 64px; }
+.settings-key-row .unity-base-field__label { min-width: 0; margin-right: 6px; }
+.settings-scroll .unity-scroller--vertical { background-color: rgb(19,27,33); }
+.settings-scroll .unity-scroller__slider { background-color: rgb(19,27,33); }
+.settings-scroll .unity-base-slider__tracker { background-color: rgb(29,40,48); }
+.settings-scroll .unity-base-slider__dragger { background-color: rgb(114,108,91); border-color: rgb(147,136,111); }
+.settings-scroll .unity-scroller__low-button, .settings-scroll .unity-scroller__high-button { background-color: rgb(29,40,48); }
+.settings-page .unity-toggle { margin-top: 10px; margin-bottom: 10px; }
+.settings-status { min-height: 28px; font-size: 13px; white-space: normal; margin-top: 4px; margin-bottom: 5px; flex-shrink: 0; }
+.settings-good { color: rgb(158,224,181); }
+.settings-error { color: rgb(244,160,136); }
+.settings-footer { flex-direction: row; justify-content: space-between; align-items: center; flex-shrink: 0; }
+.settings-closing { flex-direction: row; margin-left: auto; }
+.settings-closing .button { margin-left: 8px; }
+.settings-footer .button { min-height: 40px; padding: 8px 15px; font-size: 15px; }
+.compact .settings-card { padding: 14px 18px; height: 92%; max-height: 92%; }
+.compact .settings-title { font-size: 23px; }
+.compact .settings-description { font-size: 13px; margin-bottom: 6px; }
+.compact .settings-select > .unity-base-field__label { min-width: 138px; font-size: 13px; }
+.compact .settings-tabs { margin-bottom: 5px; }
+.compact .settings-tabs .button, .compact .settings-footer .button { font-size: 13px; min-height: 34px; padding: 6px 10px; }

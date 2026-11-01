@@ -24,7 +24,8 @@ def refresh_owned_gateway_if_needed():
     preference=Path.home()/'.cache/three-body-voice/active-backends.json'
     desired=json.loads(preference.read_text()).get('useLocalModels',False) if preference.exists() else False
     current=health()
-    if not current or (current.get('asrEngine')=='qwen3-asr-mlx-8bit')==desired:return
+    if not current:return
+    if current.get('connectionSettings',0)>=1 and (current.get('asrEngine')=='qwen3-asr-mlx-8bit')==desired:return
     record=ROOT/'Logs/ActOne/voice-gateway.pid'
     if not record.exists():raise SystemExit('8769 端口上已有另一项语音服务，请先关闭它再启动试玩。')
     pid=int(record.read_text())

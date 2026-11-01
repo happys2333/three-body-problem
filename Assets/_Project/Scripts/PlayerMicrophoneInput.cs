@@ -56,7 +56,7 @@ namespace ThreeBodyProblem
         {
             var target=recordingTarget;int turn=questionId;
             IsTranscribing=true;dialogue.SetStatus("正在转写……");
-            using(var web=new UnityWebRequest(dialogue.settings.gatewayUrl.TrimEnd('/')+"/transcribe","POST"))
+            using(var web=new UnityWebRequest(dialogue.GatewayUrl+"/transcribe","POST"))
             {
                 web.uploadHandler=new UploadHandlerRaw(wav);web.downloadHandler=new DownloadHandlerBuffer();web.SetRequestHeader("Content-Type","audio/wav");web.timeout=32;pending=web;
                 yield return web.SendWebRequest();if(token!=generation)yield break;pending=null;IsTranscribing=false;

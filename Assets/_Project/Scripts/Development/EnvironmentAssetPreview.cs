@@ -197,7 +197,7 @@ namespace ThreeBodyProblem
             if (uiFont != null) GUI.skin.font = uiFont;
             GUI.skin.label.fontSize=16;
             GUI.color = new Color(.05f, .06f, .07f, .8f); GUI.Box(new Rect(18, 18, 620, 66), ""); GUI.color = Color.white;
-            GUI.Label(new Rect(32, 26, 590, 26), benchmarking ? current : "环境素材试走场：右键环顾 · WASD 行走 · Shift 快走");
+            GUI.Label(new Rect(32, 26, 590, 26), benchmarking ? current : "环境素材试走场：鼠标环顾 · WASD 行走 · Shift 快走");
             GUI.Label(new Rect(32, 51, 590, 24), benchmarking ? "材质、碰撞与运行开销检查" : "前方可穿过石门和门楼，两侧可查看建筑与荒漠物件");
         }
         private void OnDestroy(){if(shadowsConfigured){QualitySettings.shadowDistance=previousShadowDistance;QualitySettings.shadowCascades=previousShadowCascades;QualitySettings.vSyncCount=previousVSync;Application.targetFrameRate=previousFrameRate;}}

@@ -1,7 +1,8 @@
-"""Local NPC dialogue / Chinese ASR / macOS TTS gateway. Online DeepSeek is explicitly opt-in.
+"""Local NPC dialogue / Chinese ASR / macOS TTS gateway. Online models are opt-in.
 
 python dialogue_gateway.py [--online]
-Keys are read from the server process environment; none are sent to the Unity client.
+Legacy keys stay in the server environment. Game settings may supply a per-request
+connection; those credentials are never persisted, logged or placed in prompts.
 """
 import argparse
 import atexit
@@ -18,9 +19,9 @@ import sys
 import tempfile
 import threading
 import time
-import urllib.request
 from http.server import BaseHTTPRequestHandler,ThreadingHTTPServer
 import wave
+from llm_connection import resolve_connection, chat_completion, connection_test
 
 ROOT=Path(__file__).resolve().parents[1]
 PROMPTS=ROOT/'Assets/_Project/Dialogue/Prompts'
@@ -253,17 +254,10 @@ def dialogue(payload,online=False,opener=None):
     def fallback():
         return {'speech':'' if director else safe_speech(npc_id,scripted_reply(npc_id,text,context),text,context),
                 'targetId':'','gesture':'think','mode':'scripted','storyIntent':scripted_intent(npc_id,context,director)}
-    key=os.environ.get('DEEPSEEK_API_KEY','')
-    if not online or not key:
-        return fallback()
-    body={'model':os.environ.get('DEEPSEEK_MODEL','deepseek-flash'),'messages':messages,
-          'response_format':{'type':'json_object'},'max_tokens':320,'temperature':.7,'stream':False,
-          'thinking':{'type':'disabled'}}
-    request=urllib.request.Request(os.environ.get('DEEPSEEK_API_URL','https://api.deepseek.com/chat/completions'),
-                                   data=json.dumps(body,ensure_ascii=False).encode(),headers={'Authorization':'Bearer '+key,'Content-Type':'application/json'})
     try:
-        with (opener or urllib.request.urlopen)(request,timeout=8) as response:raw=json.load(response)
-        value=json.loads(raw['choices'][0]['message']['content'])
+        connection=resolve_connection(payload.get('connection'),online)
+        if connection is None:return fallback()
+        value=chat_completion(connection,messages,opener=opener)
         target=value.get('targetId','')
         if not isinstance(target,str):raise ValueError('Invalid handoff type')
         if target:
@@ -294,7 +288,7 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path=='/health':
             info={'ready':True,'mode':'online' if self.online and os.environ.get('DEEPSEEK_API_KEY') else 'scripted',
-                'asrModelPresent':MODEL.is_dir(),'asrModel':MODEL.name,'asrEngine':'vosk','ttsEngine':'macos-say'}
+                'asrModelPresent':MODEL.is_dir(),'asrModel':MODEL.name,'asrEngine':'vosk','ttsEngine':'macos-say','connectionSettings':1}
             if _neural is not None:info.update(_neural.health());info['asrModelPresent']=True
             self.send(info)
         else:self.send({'error':'Not found'},404)
@@ -308,6 +302,7 @@ class Handler(BaseHTTPRequestHandler):
             if self.path=='/transcribe':self.send({'text':transcribe(raw)});return
             data=json.loads(raw)
             if self.path=='/dialogue':self.send(dialogue(data,self.online));return
+            if self.path=='/connection-test':self.send(connection_test(data.get('connection'),self.online));return
             if self.path=='/speech':self.send(speech_wav(data.get('text',''),data.get('npcId','wenwang'),use_cache=data.get('cache',True) is not False),content_type='audio/wav');return
             self.send({'error':'Not found'},404)
         except (ValueError,KeyError,json.JSONDecodeError):self.send({'error':'Invalid request'},400)

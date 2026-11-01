@@ -15,6 +15,7 @@ namespace ThreeBodyProblem
         public string LastReply {get;private set;}
         public bool IsBusy {get;private set;}
         public bool UsingFallback {get;private set;}
+        public string GatewayUrl => TravellerUserSettings.Current.GatewayUrl(settings);
         public bool IsSpeaking => speaker!=null&&speaker.isPlaying;
         public bool IsVocalising => IsSpeaking||synthesis!=null;
         public int CurrentSpeechSampleRate => speaker!=null&&speaker.clip!=null?speaker.clip.frequency:0;
@@ -37,7 +38,7 @@ namespace ThreeBodyProblem
         [Serializable] public class Message{public string role,content;public Message(string role,string content){this.role=role;this.content=content;}}
         [Serializable] private class Context
         {
-            public string scene,phase,sky,objective,hypothesis;
+            public string scene,phase,sky,objective,hypothesis,courtAudience,petitionHolder;
             public bool giantSunSeen,inShade,bothInShade,identityKnown,askedPlayerOrigin,plantsIgnited;
             public int openingAnswers,shelterAnswers;
             public float phaseElapsed;
@@ -45,7 +46,7 @@ namespace ThreeBodyProblem
             public List<string> observations=new List<string>();
         }
         [Serializable] private class Interlocutor{public string id,npcId,displayName;public string[] aliases;}
-        [Serializable] private class Request{public string npcId,recipientId,utterance,kind;public bool allowHandoff;public Context context;public List<Message> history;public List<Interlocutor> interlocutors;}
+        [Serializable] private class Request{public string npcId,recipientId,utterance,kind;public bool allowHandoff;public Context context;public List<Message> history;public List<Interlocutor> interlocutors;public NpcApiConnection connection;}
         [Serializable] private class Reply{public string speech,gesture,mode,error,storyIntent,targetId;}
         [Serializable] private class SpeechRequest{public string text,npcId;}
 
@@ -114,11 +115,11 @@ namespace ThreeBodyProblem
             string id=identity.persona.characterId;
             string memoryKey=id+":"+identity.GetInstanceID();
             List<Message> history;if(!memories.TryGetValue(memoryKey,out history)){history=new List<Message>();memories[memoryKey]=history;}
-            var request=new Request{npcId=id,recipientId=identity.GetInstanceID().ToString(),utterance=text,kind=director?"director":"dialogue",allowHandoff=!director&&allowHandoff,interlocutors=Interlocutors(),context=BuildContext(),history=new List<Message>(history)};
+            var request=new Request{npcId=id,recipientId=identity.GetInstanceID().ToString(),utterance=text,kind=director?"director":"dialogue",allowHandoff=!director&&allowHandoff,interlocutors=Interlocutors(),context=BuildContext(),history=new List<Message>(history),connection=TravellerUserSettings.Current.connection.Copy()};
             Reply reply=null;
-            using(var web=new UnityWebRequest(settings.gatewayUrl.TrimEnd('/')+"/dialogue","POST"))
+            using(var web=new UnityWebRequest(GatewayUrl+"/dialogue","POST"))
             {
-                web.uploadHandler=new UploadHandlerRaw(Encoding.UTF8.GetBytes(JsonUtility.ToJson(request)));web.downloadHandler=new DownloadHandlerBuffer();web.SetRequestHeader("Content-Type","application/json");web.timeout=Mathf.CeilToInt(settings.replyTimeoutSeconds);pending=web;
+                web.uploadHandler=new UploadHandlerRaw(Encoding.UTF8.GetBytes(JsonUtility.ToJson(request)));web.downloadHandler=new DownloadHandlerBuffer();web.SetRequestHeader("Content-Type","application/json");web.timeout=request.connection.mode=="gateway"?Mathf.CeilToInt(settings.replyTimeoutSeconds):request.connection.timeoutSeconds+3;pending=web;
                 yield return web.SendWebRequest();
                 if(token!=version)yield break;
                 if(web.result==UnityWebRequest.Result.Success)
@@ -155,7 +156,7 @@ namespace ThreeBodyProblem
             journey.Speak(name+"："+speech,Mathf.Max(7,speech.Length*.16f));
             var actor=identity.GetComponent<TravellerActor>();if(actor!=null)actor.Gesture(GestureClip(reply==null?null:reply.gesture),5);
             if(sequence!=null&&id=="wenwang"&&journey.Progress.Step==step)sequence.OnNpcReply(intent,true,speech.Length);
-            if(settings.synthesiseReplies)StartCoroutine(Synthesise(speech,id,token));
+            if(settings.synthesiseReplies&&TravellerUserSettings.Current.speakReplies)StartCoroutine(Synthesise(speech,id,token));
             journey.OnQuestionAnswered(id,text);
         }
         public string DisplayName(NpcIdentity identity)
@@ -178,6 +179,7 @@ namespace ThreeBodyProblem
             if(sequence!=null&&p.CanChooseStoryIntent("sunrise"))allowed.Add("sunrise");
             if(sequence!=null&&sequence.BothInShade&&p.CanChooseStoryIntent("sunset"))allowed.Add("sunset");
             var context=new Context{scene=stage.profile.chapter,phase=p.Step.ToString(),phaseElapsed=p.Elapsed,sky=stage.Current.title,objective=journey.Objective,
+                courtAudience=stage.Audience==null?"":stage.Audience.State.ToString(),petitionHolder=stage.Audience==null?"":stage.Audience.PetitionHolder,
                 hypothesis=sequence==null?stage.Journal.hypothesis:"",giantSunSeen=p.GiantSunSeen,identityKnown=p.KnowsIdentity,askedPlayerOrigin=p.AskedPlayerOrigin,
                 openingAnswers=p.OpeningAnswers,shelterAnswers=p.ShelterAnswers,allowedStoryIntents=allowed.ToArray(),bothInShade=sequence!=null&&sequence.BothInShade,
                 plantsIgnited=sequence!=null&&sequence.VegetationIgnited,
@@ -193,7 +195,7 @@ namespace ThreeBodyProblem
         private IEnumerator Synthesise(string text,string id,int token)
         {
             var voice=GetComponent<PlayerMicrophoneInput>();if(voice!=null&&voice.IsRecording)yield break;
-            using(var web=new UnityWebRequest(settings.gatewayUrl.TrimEnd('/')+"/speech","POST"))
+            using(var web=new UnityWebRequest(GatewayUrl+"/speech","POST"))
             {
                 web.uploadHandler=new UploadHandlerRaw(Encoding.UTF8.GetBytes(JsonUtility.ToJson(new SpeechRequest{text=text,npcId=id})));
                 web.downloadHandler=new DownloadHandlerBuffer();web.SetRequestHeader("Content-Type","application/json");web.timeout=Mathf.CeilToInt(settings.speechTimeoutSeconds);synthesis=web;

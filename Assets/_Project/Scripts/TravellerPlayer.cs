@@ -14,12 +14,16 @@ namespace ThreeBodyProblem
         private CharacterController controller;
         private float pitch;
         private float verticalSpeed;
+        private bool hasFocus;
+        private int ignoreLookFrames;
         public bool InputBlocked { get; set; }
+        public bool PointerReleased { get; set; }
         public bool IsRunning { get; private set; }
 
         private void Awake()
         {
             controller = GetComponent<CharacterController>();
+            hasFocus = Application.isFocused;
             viewCamera.transform.SetParent(transform, false);
             viewCamera.transform.localPosition = Vector3.up * eyeHeight;
             SynchronizeView();
@@ -62,17 +66,40 @@ namespace ThreeBodyProblem
 
         private void UpdateMovement()
         {
-            bool look = !InputBlocked && Input.GetMouseButton(1) && !Input.GetKey(KeyCode.Escape);
-            Cursor.lockState = look ? CursorLockMode.Locked : CursorLockMode.None;
-            Cursor.visible = !look;
-            if (look)
+            bool look = ShouldCaptureMouse(InputBlocked, PointerReleased, hasFocus);
+            var desired = look ? CursorLockMode.Locked : CursorLockMode.None;
+            if (Cursor.lockState != desired)
             {
-                pitch = Mathf.Clamp(pitch - Input.GetAxis("Mouse Y") * lookSensitivity, -82f, 82f);
-                transform.Rotate(Vector3.up, Input.GetAxis("Mouse X") * lookSensitivity, Space.World);
-                viewCamera.transform.localRotation = Quaternion.Euler(pitch, 0f, 0f);
+                Cursor.lockState = desired; ignoreLookFrames = 2;
             }
-            MoveInput(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")), Input.GetKey(KeyCode.LeftShift), Time.deltaTime);
+            Cursor.visible = !look;
+            if (look && ignoreLookFrames == 0) LookInput(new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")));
+            if (ignoreLookFrames > 0) ignoreLookFrames--;
+            if (hasFocus) MoveInput(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")), Input.GetKey(KeyCode.LeftShift), Time.deltaTime);
+            else IsRunning = false;
         }
+
+        public static bool ShouldCaptureMouse(bool inputBlocked, bool pointerReleased, bool focused) =>
+            !inputBlocked && !pointerReleased && focused;
+
+        public void LookInput(Vector2 delta)
+        {
+            if (InputBlocked || PointerReleased) return;
+            var preferences = TravellerUserSettings.Current;
+            float sensitivity = lookSensitivity * preferences.mouseSensitivity / 2f;
+            pitch = Mathf.Clamp(pitch - delta.y * sensitivity * (preferences.invertMouseY ? -1 : 1), -82f, 82f);
+            transform.Rotate(Vector3.up, delta.x * sensitivity, Space.World);
+            viewCamera.transform.localRotation = Quaternion.Euler(pitch, 0f, 0f);
+        }
+
+        private void OnApplicationFocus(bool focused)
+        {
+            hasFocus = focused; ignoreLookFrames = 2;
+            if (!focused) ReleasePointer();
+        }
+
+        public void ReleasePointer()
+        { Cursor.lockState = CursorLockMode.None; Cursor.visible = true; }
 
         public void MoveInput(Vector2 input, bool running, float deltaTime)
         {
@@ -95,8 +122,7 @@ namespace ThreeBodyProblem
 
         private void OnDisable()
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            ReleasePointer();
         }
     }
 }
