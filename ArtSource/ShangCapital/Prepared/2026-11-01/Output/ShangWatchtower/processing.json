@@ -1,0 +1,26 @@
+{
+  "id": "ShangWatchtower",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangWatchtower.prefab",
+  "modifications": [
+    "Original UV atlas/PBR preserved; coincident vertices welded; dimensions in metres."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    64998,
+    16000,
+    3500
+  ],
+  "width": 5.518538475036621,
+  "height": 6.999999523162842,
+  "depth": 5.4995832443237305,
+  "usage": "Static exterior / prop; bridge has a separate tested walk surface."
+}

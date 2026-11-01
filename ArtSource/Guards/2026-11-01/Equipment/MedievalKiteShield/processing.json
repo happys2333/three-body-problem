@@ -1,0 +1,15 @@
+{
+  "id": "MedievalKiteShield",
+  "authoredLocally": true,
+  "materials": [
+    "Wood",
+    "Metal",
+    "Leather"
+  ],
+  "trianglesByLod": [
+    838,
+    402,
+    150
+  ],
+  "scope": "Static equipment meshes; character attachment and contact checked in Unity."
+}

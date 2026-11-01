@@ -1,0 +1,16 @@
+{
+  "id": "BambooPetition",
+  "authoredLocally": true,
+  "materials": [
+    "Wood",
+    "Metal",
+    "Feather",
+    "Tip"
+  ],
+  "trianglesByLod": [
+    10092,
+    4844,
+    1816
+  ],
+  "scope": "Static equipment meshes; character attachment and contact checked in Unity."
+}

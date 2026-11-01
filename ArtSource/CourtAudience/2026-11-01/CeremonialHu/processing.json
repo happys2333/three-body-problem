@@ -1,0 +1,16 @@
+{
+  "id": "CeremonialHu",
+  "authoredLocally": true,
+  "materials": [
+    "Wood",
+    "Metal",
+    "Feather",
+    "Tip"
+  ],
+  "trianglesByLod": [
+    564,
+    270,
+    100
+  ],
+  "scope": "Static equipment meshes; character attachment and contact checked in Unity."
+}

@@ -1,0 +1,26 @@
+{
+  "id": "ShangStorageJar",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangStorageJar.prefab",
+  "modifications": [
+    "Original UV atlas/PBR preserved; coincident vertices welded; dimensions in metres."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    20000,
+    5000,
+    1000
+  ],
+  "width": 1.2731282711029053,
+  "height": 1.2499998807907104,
+  "depth": 1.2723872661590576,
+  "usage": "Static exterior / prop; bridge has a separate tested walk surface."
+}

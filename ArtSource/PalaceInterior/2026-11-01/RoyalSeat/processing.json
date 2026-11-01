@@ -1,0 +1,16 @@
+{
+  "id": "RoyalSeat",
+  "authoredLocally": true,
+  "materials": [
+    "Stone",
+    "Wood",
+    "Metal",
+    "Leather"
+  ],
+  "trianglesByLod": [
+    21736,
+    10433,
+    3911
+  ],
+  "scope": "Original static palace furnishing; metre-scale coordinate conversion and three distance LODs. Placement and contact verified in Unity."
+}

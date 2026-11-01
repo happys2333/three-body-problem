@@ -1,0 +1,27 @@
+{
+  "id": "ShangWoodFootbridge",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangWoodFootbridge.prefab",
+  "modifications": [
+    "Original UV atlas/PBR preserved; coincident vertices welded; dimensions in metres.",
+    "Generated bridge rejected after native visual review: fused raised masses obstructed its walking axis. Rebuilt separate bevelled deck planks, bearers, paired wooden rails, posts and rope lashings; 7.6 x 2.2 x 1.3 m. Raw model retained for provenance."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    41964,
+    15000,
+    3200
+  ],
+  "width": 7.599999904632568,
+  "height": 1.2999999523162842,
+  "depth": 2.2429919242858887,
+  "usage": "Static exterior / prop; bridge has a separate tested walk surface."
+}

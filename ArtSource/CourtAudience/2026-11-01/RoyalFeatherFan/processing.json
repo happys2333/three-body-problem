@@ -1,0 +1,16 @@
+{
+  "id": "RoyalFeatherFan",
+  "authoredLocally": true,
+  "materials": [
+    "Wood",
+    "Metal",
+    "Feather",
+    "Tip"
+  ],
+  "trianglesByLod": [
+    11052,
+    5304,
+    1988
+  ],
+  "scope": "Static equipment meshes; character attachment and contact checked in Unity."
+}

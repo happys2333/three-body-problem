@@ -1,0 +1,27 @@
+{
+  "id": "ShangCourtyardHall",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangCourtyardHall.prefab",
+  "modifications": [
+    "Original UV atlas/PBR preserved; coincident vertices welded; dimensions in metres.",
+    "Generated curved green roof removed; straight pitched timber and thick thatch rebuilt."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    75000,
+    18000,
+    4000
+  ],
+  "width": 8.333378791809082,
+  "height": 5.0,
+  "depth": 5.687832832336426,
+  "usage": "Static exterior / prop; bridge has a separate tested walk surface."
+}

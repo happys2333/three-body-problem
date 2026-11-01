@@ -1,0 +1,12 @@
+{
+  "authoredLocally": true,
+  "date": "2026-11-01",
+  "sourceScript": "Tools/prepare_palace_interior.py",
+  "style": "Original Shang-inspired game furnishings, not a copy of TV production art.",
+  "materials": [
+    "Stone",
+    "Wood",
+    "Metal",
+    "Leather"
+  ]
+}

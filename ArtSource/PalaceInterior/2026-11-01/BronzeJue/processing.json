@@ -1,0 +1,16 @@
+{
+  "id": "BronzeJue",
+  "authoredLocally": true,
+  "materials": [
+    "Stone",
+    "Wood",
+    "Metal",
+    "Leather"
+  ],
+  "trianglesByLod": [
+    4884,
+    2344,
+    878
+  ],
+  "scope": "Original static palace furnishing; metre-scale coordinate conversion and three distance LODs. Placement and contact verified in Unity."
+}

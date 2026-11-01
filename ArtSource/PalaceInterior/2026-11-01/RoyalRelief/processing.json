@@ -1,0 +1,16 @@
+{
+  "id": "RoyalRelief",
+  "authoredLocally": true,
+  "materials": [
+    "Stone",
+    "Wood",
+    "Metal",
+    "Leather"
+  ],
+  "trianglesByLod": [
+    15052,
+    7224,
+    2708
+  ],
+  "scope": "Original static palace furnishing; metre-scale coordinate conversion and three distance LODs. Placement and contact verified in Unity."
+}

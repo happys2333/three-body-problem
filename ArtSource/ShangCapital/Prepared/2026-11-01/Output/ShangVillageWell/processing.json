@@ -1,0 +1,27 @@
+{
+  "id": "ShangVillageWell",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangVillageWell.prefab",
+  "modifications": [
+    "Original UV atlas/PBR preserved; coincident vertices welded; dimensions in metres.",
+    "Invented metal crank and entire upper frame/bucket removed. Rebuilt timber supports, rope bindings and hollow wooden bucket, retaining the generated stone well ring."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    35000,
+    8500,
+    1800
+  ],
+  "width": 3.2153759002685547,
+  "height": 3.0,
+  "depth": 3.1475892066955566,
+  "usage": "Static exterior / prop; bridge has a separate tested walk surface."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "ShangLeatherShield",
+  "authoredLocally": true,
+  "materials": [
+    "Wood",
+    "Metal",
+    "Leather"
+  ],
+  "trianglesByLod": [
+    7072,
+    3394,
+    1272
+  ],
+  "scope": "Static equipment meshes; character attachment and contact checked in Unity."
+}

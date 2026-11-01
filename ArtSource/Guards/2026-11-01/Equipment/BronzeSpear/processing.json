@@ -1,0 +1,15 @@
+{
+  "id": "BronzeSpear",
+  "authoredLocally": true,
+  "materials": [
+    "Wood",
+    "Metal",
+    "Leather"
+  ],
+  "trianglesByLod": [
+    8656,
+    4154,
+    1558
+  ],
+  "scope": "Static equipment meshes; character attachment and contact checked in Unity."
+}

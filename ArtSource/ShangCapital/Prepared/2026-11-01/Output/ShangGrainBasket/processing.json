@@ -1,0 +1,26 @@
+{
+  "id": "ShangGrainBasket",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangGrainBasket.prefab",
+  "modifications": [
+    "Original UV atlas/PBR preserved; coincident vertices welded; dimensions in metres."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    28000,
+    6500,
+    1400
+  ],
+  "width": 1.0522899627685547,
+  "height": 0.8500000238418579,
+  "depth": 1.0489654541015625,
+  "usage": "Static exterior / prop; bridge has a separate tested walk surface."
+}

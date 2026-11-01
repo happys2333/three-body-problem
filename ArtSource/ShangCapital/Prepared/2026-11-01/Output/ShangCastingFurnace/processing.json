@@ -1,0 +1,26 @@
+{
+  "id": "ShangCastingFurnace",
+  "sourcePrefab": "Assets/_Project/Art/HunyuanCapital20261101/Library/Prefabs/ShangCastingFurnace.prefab",
+  "modifications": [
+    "Original UV atlas/PBR preserved; coincident vertices welded; dimensions in metres."
+  ],
+  "materials": [
+    "Rock",
+    "Masonry",
+    "Earth",
+    "Wood",
+    "Thatch",
+    "RoofTile",
+    "Bark",
+    "OriginalSupplies"
+  ],
+  "trianglesByLod": [
+    30000,
+    7500,
+    1600
+  ],
+  "width": 2.442915439605713,
+  "height": 2.1999995708465576,
+  "depth": 2.457249879837036,
+  "usage": "Static exterior / prop; bridge has a separate tested walk surface."
+}

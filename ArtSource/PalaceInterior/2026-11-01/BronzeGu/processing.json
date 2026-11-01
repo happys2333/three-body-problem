@@ -1,0 +1,16 @@
+{
+  "id": "BronzeGu",
+  "authoredLocally": true,
+  "materials": [
+    "Stone",
+    "Wood",
+    "Metal",
+    "Leather"
+  ],
+  "trianglesByLod": [
+    3424,
+    1643,
+    615
+  ],
+  "scope": "Original static palace furnishing; metre-scale coordinate conversion and three distance LODs. Placement and contact verified in Unity."
+}
