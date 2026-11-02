@@ -1,0 +1,7 @@
+{
+  "ownedGatewayRestarted": true,
+  "connectionSettings": 2,
+  "asrEngine": "qwen3-asr-mlx-8bit",
+  "ttsEngine": "moss-tts-nano-onnx-cpu",
+  "credentialsInstalled": false
+}

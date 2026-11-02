@@ -1,0 +1,87 @@
+{
+  "id": "h04",
+  "category": "handoff",
+  "npcId": "king",
+  "utterance": "我昨天提到过姬昌，不是让他回答。我问您是否准许查验？",
+  "context": {
+    "scene": "第二幕 / 朝歌",
+    "phase": "CourtTalk",
+    "phaseElapsed": 10,
+    "selfName": "纣王",
+    "selfRole": "king",
+    "currentActivity": "坐在王座上听取当庭陈述。",
+    "sky": "殿内天窗尚未打开，人物看不见天空。",
+    "skyVisible": false,
+    "objective": "",
+    "courtAudience": "Complete",
+    "petitionHolder": "纣王",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家目前在夜色中，能看见他。",
+    "knownEvents": []
+  },
+  "history": [],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 240,
+    "targetId": ""
+  },
+  "reply": {
+    "speech": "准。昨日你说姬昌能以沙漏与天窗预测日影，朕倒要看看是真是假——当庭查验，不许预演。",
+    "targetId": "",
+    "gesture": "nod",
+    "mode": "online",
+    "storyIntent": "continue"
+  },
+  "provider": {
+    "seconds": 17.075,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 51,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 1493,
+      "prompt_tokens_details": {
+        "cached_tokens": 1493,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 1544
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\":\"准。昨日你说姬昌能以沙漏与天窗预测日影，朕倒要看看是真是假——当庭查验，不许预演。\",\"gesture\":\"nod\",\"storyIntent\":\"continue\",\"targetId\":\"\"}",
+    "reasoningCharacters": 0,
+    "httpStatus": 200
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "targetId": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}

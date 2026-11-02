@@ -1,0 +1,57 @@
+{
+  "baseUrl": "https://discovery-api.intern-ai.org.cn/v1",
+  "requestedModel": "Atria-Dawn",
+  "connectionChecks": [
+    {
+      "seconds": 9.361,
+      "httpStatus": 502,
+      "errorType": "HTTPError",
+      "parseError": "HTTPError",
+      "maxTokens": 32
+    },
+    {
+      "seconds": 11.476,
+      "model": "Atria-Dawn",
+      "usage": {
+        "completion_tokens": 29,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 22,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens": 29,
+        "prompt_tokens_details": {
+          "cached_tokens": 29,
+          "created_cache_tokens": 0,
+          "multimodal_tokens": null
+        },
+        "total_tokens": 58
+      },
+      "finishReason": "stop",
+      "content": "{\"ok\":true}",
+      "reasoningCharacters": 91,
+      "httpStatus": 200,
+      "parsed": {
+        "ok": true
+      },
+      "maxTokens": 320
+    }
+  ],
+  "availableModels": [
+    "Agents-A1",
+    "Atria-Dawn",
+    "Atria-Dawn-Preview",
+    "Sage-A1.5",
+    "deepseek-v4-flash-0731",
+    "deepseek-v4-flash-vision",
+    "deepseek-v4-pro-0813",
+    "deepseek-v4.1-flash-1017",
+    "glm-5.3",
+    "gpt-6.1-terra-azure",
+    "intern-s2",
+    "kimi-k2.6",
+    "minimax-m3",
+    "qwen3.8-27b"
+  ]
+}

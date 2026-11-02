@@ -16,7 +16,8 @@ def main():
     python=str(bundled) if bundled.exists() else shutil.which('python3.12') or sys.executable
     executable=CACHE/'venv/bin/python'
     if not executable.exists():subprocess.run([python,'-m','venv',str(CACHE/'venv')],check=True)
-    subprocess.run([str(executable),'-m','pip','install','vosk==0.3.44'],check=True)
+    subprocess.run([str(executable),'-m','pip','install','vosk==0.3.44','tokenizers==0.23.3'],check=True)
+    subprocess.run([str(executable),str(Path(__file__).with_name('setup_context_tokenizer.py'))],check=True)
     models=CACHE/'models';models.mkdir(parents=True,exist_ok=True)
     archive=models/'vosk-model-small-cn-0.22.zip'
     if not archive.exists():

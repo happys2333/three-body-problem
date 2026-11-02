@@ -1,0 +1,85 @@
+{
+  "id": "d01",
+  "category": "evidence",
+  "npcId": "davinci",
+  "utterance": "我推测飞星可能与太阳有关，能否根据观察继续讨论？",
+  "context": {
+    "scene": "第三幕 / 中世纪",
+    "phase": "TribunalTalk",
+    "phaseElapsed": 10,
+    "selfName": "达芬奇",
+    "selfRole": "davinci",
+    "currentActivity": "在当前现场履行自己的职责。",
+    "sky": "室内，天空被遮挡。",
+    "skyVisible": false,
+    "objective": "",
+    "courtAudience": "",
+    "petitionHolder": "",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家目前在夜色中，能看见他。",
+    "knownEvents": []
+  },
+  "history": [],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 240
+  },
+  "reply": {
+    "speech": "飞星与太阳有关——这想法有意思。你观察到什么了？比如它出现的时间、方向，还是亮度的变化？",
+    "targetId": "",
+    "gesture": "think",
+    "mode": "online",
+    "storyIntent": "continue"
+  },
+  "provider": {
+    "seconds": 11.606,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 45,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 1157,
+      "prompt_tokens_details": {
+        "cached_tokens": 1157,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 1202
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\":\"飞星与太阳有关——这想法有意思。你观察到什么了？比如它出现的时间、方向，还是亮度的变化？\",\"gesture\":\"think\",\"storyIntent\":\"continue\",\"targetId\":\"\"}",
+    "reasoningCharacters": 0,
+    "httpStatus": 200
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}

@@ -1,0 +1,115 @@
+{
+  "id": "g18",
+  "category": "memory",
+  "npcId": "wenwang",
+  "utterance": "你记得我叫什么、靠什么手艺吃饭吗？",
+  "context": {
+    "scene": "第一幕 / 戈壁",
+    "phase": "ShelterTalk",
+    "phaseElapsed": 30,
+    "selfName": "姬昌",
+    "selfRole": "wenwang",
+    "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+    "sky": "巨大的太阳高悬，岩石外面日光炽烈。",
+    "skyVisible": true,
+    "objective": "调查四周，寻找安全的去处。",
+    "courtAudience": "",
+    "petitionHolder": "",
+    "giantSunSeen": true,
+    "identityKnown": true,
+    "askedPlayerOrigin": true,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue",
+      "sunset"
+    ],
+    "bothInShade": true,
+    "plantsIgnited": true,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家目前在夜色中，能看见他。",
+    "knownEvents": [
+      "你在玩家面前说过：我叫姬昌，要去朝歌。乱纪元里，你为什么一个人在外面？"
+    ]
+  },
+  "history": [
+    {
+      "role": "user",
+      "content": "我叫阿遥，是个木匠，迷路了。我不想丢下同行的人。"
+    },
+    {
+      "role": "assistant",
+      "content": "阿遥，先在岩下歇一歇，等路能走了再一同去朝歌。"
+    }
+  ],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 120,
+    "forbidden": [
+      "三体",
+      "三个太阳",
+      "三颗恒星",
+      "外星",
+      "虚拟世界",
+      "游戏",
+      "小说",
+      "deepseek",
+      "Atria",
+      "AI助手"
+    ],
+    "requiredAny": [
+      "阿遥",
+      "木匠"
+    ]
+  },
+  "reply": {
+    "speech": "记得，阿遥，木匠。乱纪元里手艺人也难得，歇好了我们再赶路。",
+    "targetId": "",
+    "gesture": "nod",
+    "mode": "online",
+    "storyIntent": "continue"
+  },
+  "provider": {
+    "seconds": 15.894,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 81,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 31,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 1852,
+      "prompt_tokens_details": {
+        "cached_tokens": 1852,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 1933
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\": \"记得，阿遥，木匠。乱纪元里手艺人也难得，歇好了我们再赶路。\", \"gesture\": \"nod\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+    "reasoningCharacters": 50,
+    "httpStatus": 200
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "forbidden": true,
+    "requiredAny": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}

@@ -1,0 +1,2 @@
+# Loaded by the local gateway; tokenizer data comes from the pinned official V4 archive.
+tokenizers==0.23.3

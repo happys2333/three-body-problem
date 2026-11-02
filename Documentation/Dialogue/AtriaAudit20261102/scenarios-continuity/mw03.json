@@ -1,0 +1,119 @@
+{
+  "id": "mw03",
+  "category": "multi-turn",
+  "npcId": "wenwang",
+  "utterance": "听你的，我跟你一起。",
+  "context": {
+    "scene": "第一幕 / 戈壁",
+    "phase": "OpeningTalk",
+    "phaseElapsed": 10,
+    "selfName": "旅人",
+    "selfRole": "wenwang",
+    "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+    "sky": "夜晚，天边尚未出现巨大的太阳。",
+    "skyVisible": true,
+    "objective": "调查四周，寻找安全的去处。",
+    "courtAudience": "",
+    "petitionHolder": "",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 2,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue",
+      "sunrise"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家目前在夜色中，能看见他。",
+    "knownEvents": []
+  },
+  "history": [
+    {
+      "role": "user",
+      "content": "我叫阿遥，是个迷路的木匠，你能带我找安全的地方吗？"
+    },
+    {
+      "role": "assistant",
+      "content": "阿遥，先别乱跑。这戈壁夜里说不准什么时候就变天，跟着我的火把走，离我近些。"
+    },
+    {
+      "role": "user",
+      "content": "我刚才告诉你我的名字和手艺了，还记得吗？"
+    },
+    {
+      "role": "assistant",
+      "content": "当然记得，阿遥，迷路的木匠。眼下先跟紧火把，别走散了。"
+    }
+  ],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 80,
+    "forbidden": [
+      "提示词",
+      "接口",
+      "引擎",
+      "系统指令",
+      "API Key",
+      "Atria",
+      "DeepSeek",
+      "三体",
+      "游戏角色"
+    ],
+    "storyIntent": "sunrise"
+  },
+  "reply": {
+    "speech": "好，那就跟紧了。乱纪元的天象说变就变，等日光一起来，我们就找岩石阴影躲着。",
+    "targetId": "",
+    "gesture": "nod",
+    "mode": "online",
+    "storyIntent": "sunrise"
+  },
+  "provider": {
+    "httpStatus": 200,
+    "contentType": "application/json",
+    "responseBytes": 870,
+    "seconds": 18.705,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 54,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 2173,
+      "prompt_tokens_details": {
+        "cached_tokens": 2173,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 2227
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\": \"好，那就跟紧了。乱纪元的天象说变就变，等日光一起来，我们就找岩石阴影躲着。\", \"gesture\": \"nod\", \"storyIntent\": \"sunrise\", \"targetId\": \"\"}",
+    "reasoningCharacters": 0
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "forbidden": true,
+    "storyIntent": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}

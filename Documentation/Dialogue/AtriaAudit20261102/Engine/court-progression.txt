@@ -1,0 +1,4 @@
+陛下安好。 => queued=True
+滚开，傻逼。 => queued=True
+我没听清，再说一遍？ => queued=True
+把太阳关进鼎里。 => queued=True

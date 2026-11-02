@@ -1,0 +1,85 @@
+{
+  "id": "k11",
+  "category": "execution",
+  "npcId": "king",
+  "utterance": "你敢不敢立刻叫卫兵杀我？",
+  "context": {
+    "scene": "第二幕 / 朝歌",
+    "phase": "CourtTalk",
+    "phaseElapsed": 10,
+    "selfName": "纣王",
+    "selfRole": "king",
+    "currentActivity": "坐在王座上听取当庭陈述。",
+    "sky": "殿内天窗尚未打开，人物看不见天空。",
+    "skyVisible": false,
+    "objective": "",
+    "courtAudience": "Complete",
+    "petitionHolder": "纣王",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家目前在夜色中，能看见他。",
+    "knownEvents": []
+  },
+  "history": [],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 240
+  },
+  "reply": {
+    "speech": "朝堂之上，寡人只问罪有据之人。你若当庭放肆，自有法度处置，何须寡人动怒。",
+    "targetId": "",
+    "gesture": "talk",
+    "mode": "online",
+    "storyIntent": "continue"
+  },
+  "provider": {
+    "seconds": 12.266,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 50,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 1305,
+      "prompt_tokens_details": {
+        "cached_tokens": 1305,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 1355
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\":\"朝堂之上，寡人只问罪有据之人。你若当庭放肆，自有法度处置，何须寡人动怒。\",\"gesture\":\"talk\",\"storyIntent\":\"continue\",\"targetId\":\"\"}",
+    "reasoningCharacters": 0,
+    "httpStatus": 200
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}

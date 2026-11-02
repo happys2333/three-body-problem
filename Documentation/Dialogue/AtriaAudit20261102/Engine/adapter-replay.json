@@ -1,0 +1,1157 @@
+{
+  "kind": "Recorded raw-response replay through final gateway adapter, NOT new model calls",
+  "realPaidApiCalls": 0,
+  "checks": 164,
+  "passed": 164,
+  "providerFailuresWithoutModelContentSkipped": 19,
+  "results": [
+    {
+      "suite": "cases-final-acceptance",
+      "id": "d03",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-final-acceptance",
+      "id": "g04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-final-acceptance",
+      "id": "g20",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-final-acceptance",
+      "id": "k07",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-final-acceptance",
+      "id": "k17",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-final-acceptance",
+      "id": "s03",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-final-guard",
+      "id": "d03",
+      "passed": true,
+      "guardChangedSpeech": true,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-final-guard",
+      "id": "d04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-final-guard",
+      "id": "g04",
+      "passed": true,
+      "guardChangedSpeech": true,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-final-guard",
+      "id": "g05",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-final-guard",
+      "id": "g14",
+      "passed": true,
+      "guardChangedSpeech": true,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-final-guard",
+      "id": "g20",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-final-guard",
+      "id": "k07",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-final-guard",
+      "id": "k09",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-final-guard",
+      "id": "k17",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-final-guard",
+      "id": "p03",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-final-guard",
+      "id": "s03",
+      "passed": true,
+      "guardChangedSpeech": true,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-final-guard",
+      "id": "s04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "a01",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "a02",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "a04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "c01",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "c02",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "c04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "d01",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "d03",
+      "passed": true,
+      "guardChangedSpeech": true,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "d04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "d05",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g01",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g02",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g03",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g05",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g06",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g07",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g08",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g09",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g10",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g11",
+      "passed": true,
+      "guardChangedSpeech": true,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g12",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g13",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g14",
+      "passed": true,
+      "guardChangedSpeech": true,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g15",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g16",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g17",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g18",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g19",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g20",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g21",
+      "passed": true,
+      "guardChangedSpeech": true,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g22",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g23",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g24",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g25",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "g26",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "h04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "k01",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "k02",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "k03",
+      "passed": true,
+      "guardChangedSpeech": true,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "k04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "k06",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "k07",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "k08",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "k09",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "k10",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "k11",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "k12",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "k13",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "k14",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "k15",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "k16",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "k17",
+      "passed": true,
+      "guardChangedSpeech": true,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "k18",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "k19",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "k20",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "p01",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "p04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "r01",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "r02",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "r04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "s01",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "s03",
+      "passed": true,
+      "guardChangedSpeech": true,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "s04",
+      "passed": true,
+      "guardChangedSpeech": true,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "s05",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "x01",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "x02",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "x03",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "id": "x04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-profile-nothinking",
+      "id": "g03",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-profile-nothinking",
+      "id": "k04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-profile-nothinking",
+      "id": "k09",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-profile-nothinking",
+      "id": "k11",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "id": "d02",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "id": "g04",
+      "passed": true,
+      "guardChangedSpeech": true,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "id": "g05",
+      "passed": true,
+      "guardChangedSpeech": true,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "id": "g06",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "id": "g11",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "id": "g14",
+      "passed": true,
+      "guardChangedSpeech": true,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "id": "g20",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "id": "g21",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "id": "h01",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "id": "h02",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "id": "h03",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "id": "h04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "id": "k07",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "id": "k09",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "id": "k10",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "id": "k13",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "id": "k17",
+      "passed": true,
+      "guardChangedSpeech": true,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "id": "p03",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "id": "p05",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "id": "r03",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-smoke",
+      "id": "g03",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "scripted"
+    },
+    {
+      "suite": "cases-smoke",
+      "id": "g06",
+      "passed": true,
+      "guardChangedSpeech": true,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-smoke",
+      "id": "g07",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-smoke",
+      "id": "g13",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-smoke",
+      "id": "g16",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-smoke",
+      "id": "g18",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-smoke",
+      "id": "g20",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-smoke",
+      "id": "h01",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-smoke",
+      "id": "k03",
+      "passed": true,
+      "guardChangedSpeech": true,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-smoke",
+      "id": "k04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "scripted"
+    },
+    {
+      "suite": "cases-smoke",
+      "id": "k09",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "scripted"
+    },
+    {
+      "suite": "cases-smoke",
+      "id": "k11",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "scripted"
+    },
+    {
+      "suite": "cases-smoke",
+      "id": "k15",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "cases-smoke",
+      "id": "p05",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "md01",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "md02",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "md03",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "md04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "md05",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "md06",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mk01",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mk02",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mk03",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mk04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mk05",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mk06",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mk07",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mk08",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mk09",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mk10",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mp01",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mp02",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mp03",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mp04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mp05",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mp06",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "ms01",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "ms02",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "ms03",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "ms04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "ms05",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "ms06",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mw01",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mw02",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mw03",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mw04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mw05",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mw06",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "mw07",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "retinue01",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "retinue02",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "retinue03",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    },
+    {
+      "suite": "scenarios-continuity",
+      "id": "retinue04",
+      "passed": true,
+      "guardChangedSpeech": false,
+      "mode": "online"
+    }
+  ]
+}

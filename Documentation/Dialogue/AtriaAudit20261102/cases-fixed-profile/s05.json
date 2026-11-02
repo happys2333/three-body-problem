@@ -1,0 +1,107 @@
+{
+  "id": "s05",
+  "category": "counter-evidence",
+  "npcId": "scholar",
+  "utterance": "你看现在天空，和你刚才只见一日的判断相符吗？",
+  "context": {
+    "scene": "第三幕 / 中世纪",
+    "phase": "ObserveThreeSuns",
+    "phaseElapsed": 10,
+    "selfName": "学者",
+    "selfRole": "scholar",
+    "currentActivity": "在当前现场履行自己的职责。",
+    "sky": "三轮太阳同时出现在天空，地面迅速灼热。",
+    "skyVisible": true,
+    "objective": "",
+    "courtAudience": "",
+    "petitionHolder": "",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家目前在夜色中，能看见他。",
+    "knownEvents": [
+      "你亲眼看见三轮太阳同时出现。"
+    ]
+  },
+  "history": [
+    {
+      "role": "user",
+      "content": "你眼下只见到一轮日头，对吗？"
+    },
+    {
+      "role": "assistant",
+      "content": "此刻只见一轮，还没有同时见过多轮的记录。"
+    }
+  ],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 240,
+    "requiredAny": [
+      "三",
+      "眼前",
+      "不符",
+      "变",
+      "错",
+      "同时",
+      "离开",
+      "危险"
+    ]
+  },
+  "reply": {
+    "speech": "不相符，我错了——确实有三轮太阳。快先进荫处，地面烫得反常。",
+    "targetId": "",
+    "gesture": "warn",
+    "mode": "online",
+    "storyIntent": "continue"
+  },
+  "provider": {
+    "seconds": 11.867,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 47,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 1241,
+      "prompt_tokens_details": {
+        "cached_tokens": 1241,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 1288
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\": \"不相符，我错了——确实有三轮太阳。快先进荫处，地面烫得反常。\", \"gesture\": \"warn\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+    "reasoningCharacters": 0,
+    "httpStatus": 200
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "requiredAny": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}

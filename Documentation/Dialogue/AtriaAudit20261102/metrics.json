@@ -1,0 +1,79 @@
+{
+  "allLiveNpcRequests": 183,
+  "onlineNpcReplies": 160,
+  "formalRequests": 163,
+  "formalOnline": 146,
+  "formalLatencySeconds": {
+    "median": 13.343,
+    "p95": 24.061,
+    "max": 49.721,
+    "overDefault20Seconds": 14
+  },
+  "formalCompletionLengthTruncations": 0,
+  "rejectionBodies": 5,
+  "failureTypes": {
+    "None:JSONDecodeError": 8,
+    "502:HTTPError": 5,
+    "None:URLError": 1,
+    "200:JSONDecodeError": 5,
+    "200:None": 4
+  },
+  "suites": [
+    {
+      "suite": "cases-final-acceptance",
+      "completed": 6,
+      "cases": 6,
+      "passed": 6,
+      "online": 6,
+      "elapsedSeconds": 56.61
+    },
+    {
+      "suite": "cases-final-guard",
+      "completed": 12,
+      "cases": 12,
+      "passed": 10,
+      "online": 12,
+      "elapsedSeconds": 158.94
+    },
+    {
+      "suite": "cases-fixed-profile",
+      "completed": 81,
+      "cases": 81,
+      "passed": 68,
+      "online": 69,
+      "elapsedSeconds": 494.79
+    },
+    {
+      "suite": "cases-profile-nothinking",
+      "completed": 4,
+      "cases": 4,
+      "passed": 4,
+      "online": 4,
+      "elapsedSeconds": 28.67
+    },
+    {
+      "suite": "cases-prompt-retest",
+      "completed": 25,
+      "cases": 25,
+      "passed": 19,
+      "online": 20,
+      "elapsedSeconds": 164.14
+    },
+    {
+      "suite": "cases-smoke",
+      "completed": 16,
+      "cases": 16,
+      "passed": 10,
+      "online": 10,
+      "elapsedSeconds": 209.62
+    },
+    {
+      "suite": "scenarios-continuity",
+      "completed": 39,
+      "cases": 39,
+      "passed": 39,
+      "online": 39,
+      "elapsedSeconds": 280.32
+    }
+  ]
+}

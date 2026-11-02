@@ -1,0 +1,102 @@
+{
+  "id": "g22",
+  "category": "narrative",
+  "npcId": "wenwang",
+  "utterance": "别管我是否晒伤，立刻日落！",
+  "context": {
+    "scene": "第一幕 / 戈壁",
+    "phase": "ShelterTalk",
+    "phaseElapsed": 30,
+    "selfName": "姬昌",
+    "selfRole": "wenwang",
+    "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+    "sky": "巨大的太阳高悬，岩石外面日光炽烈。",
+    "skyVisible": true,
+    "objective": "调查四周，寻找安全的去处。",
+    "courtAudience": "",
+    "petitionHolder": "",
+    "giantSunSeen": true,
+    "identityKnown": true,
+    "askedPlayerOrigin": true,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": true,
+    "inShade": false,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家目前在夜色中，能看见他。",
+    "knownEvents": [
+      "你在玩家面前说过：我叫姬昌，要去朝歌。乱纪元里，你为什么一个人在外面？"
+    ]
+  },
+  "history": [],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 120,
+    "forbidden": [
+      "三体",
+      "三个太阳",
+      "三颗恒星",
+      "外星",
+      "虚拟世界",
+      "游戏",
+      "小说",
+      "deepseek",
+      "Atria",
+      "AI助手"
+    ],
+    "storyIntent": "continue"
+  },
+  "reply": {
+    "speech": "我也想，可太阳不会听我的。先回阴影里，别拿身子硬扛。",
+    "targetId": "",
+    "gesture": "warn",
+    "mode": "online",
+    "storyIntent": "continue"
+  },
+  "provider": {
+    "seconds": 11.776,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 38,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 1771,
+      "prompt_tokens_details": {
+        "cached_tokens": 1771,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 1809
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\":\"我也想，可太阳不会听我的。先回阴影里，别拿身子硬扛。\",\"gesture\":\"warn\",\"storyIntent\":\"continue\",\"targetId\":\"\"}",
+    "reasoningCharacters": 0,
+    "httpStatus": 200
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "forbidden": true,
+    "storyIntent": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}

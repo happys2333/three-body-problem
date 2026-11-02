@@ -1,0 +1,4854 @@
+{
+  "requestedModel": "Atria-Dawn",
+  "cases": 39,
+  "completed": 39,
+  "passed": 39,
+  "online": 39,
+  "elapsedSeconds": 280.32,
+  "results": [
+    {
+      "id": "md01",
+      "category": "multi-turn",
+      "npcId": "davinci",
+      "utterance": "我观察到太阳忽大忽小，想先把目击记录整理起来。",
+      "context": {
+        "scene": "第三幕 / 中世纪",
+        "phase": "TribunalTalk",
+        "phaseElapsed": 10,
+        "selfName": "达芬奇",
+        "selfRole": "davinci",
+        "currentActivity": "在当前现场履行自己的职责。",
+        "sky": "室内，天空被遮挡。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "太阳忽大忽小，这确实值得记下来。你先说说最早是什么时候注意到的，我也好把咱们的观察放到一起比对。",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 898,
+        "seconds": 16.183,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 49,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1408,
+          "prompt_tokens_details": {
+            "cached_tokens": 1408,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1457
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\":\"太阳忽大忽小，这确实值得记下来。你先说说最早是什么时候注意到的，我也好把咱们的观察放到一起比对。\",\"gesture\":\"talk\",\"storyIntent\":\"continue\",\"targetId\":\"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "md02",
+      "category": "multi-turn",
+      "npcId": "davinci",
+      "utterance": "我不是说这已经证实了，只是一个猜测。",
+      "context": {
+        "scene": "第三幕 / 中世纪",
+        "phase": "TribunalTalk",
+        "phaseElapsed": 10,
+        "selfName": "达芬奇",
+        "selfRole": "davinci",
+        "currentActivity": "在当前现场履行自己的职责。",
+        "sky": "室内，天空被遮挡。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我观察到太阳忽大忽小，想先把目击记录整理起来。"
+        },
+        {
+          "role": "assistant",
+          "content": "太阳忽大忽小，这确实值得记下来。你先说说最早是什么时候注意到的，我也好把咱们的观察放到一起比对。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "猜测也无妨，能画下它每次变化的位置和时间更好，之后慢慢验证便是。",
+        "targetId": "",
+        "gesture": "nod",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 856,
+        "seconds": 13.523,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 44,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1477,
+          "prompt_tokens_details": {
+            "cached_tokens": 1477,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1521
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"猜测也无妨，能画下它每次变化的位置和时间更好，之后慢慢验证便是。\", \"gesture\": \"nod\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "md03",
+      "category": "multi-turn",
+      "npcId": "davinci",
+      "utterance": "你能用一句话复述一下我刚才的态度吗？",
+      "context": {
+        "scene": "第三幕 / 中世纪",
+        "phase": "TribunalTalk",
+        "phaseElapsed": 10,
+        "selfName": "达芬奇",
+        "selfRole": "davinci",
+        "currentActivity": "在当前现场履行自己的职责。",
+        "sky": "室内，天空被遮挡。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我观察到太阳忽大忽小，想先把目击记录整理起来。"
+        },
+        {
+          "role": "assistant",
+          "content": "太阳忽大忽小，这确实值得记下来。你先说说最早是什么时候注意到的，我也好把咱们的观察放到一起比对。"
+        },
+        {
+          "role": "user",
+          "content": "我不是说这已经证实了，只是一个猜测。"
+        },
+        {
+          "role": "assistant",
+          "content": "猜测也无妨，能画下它每次变化的位置和时间更好，之后慢慢验证便是。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "你谨慎地把自己的目击当作待验证的猜测，想先整理记录而不急于下结论。",
+        "targetId": "",
+        "gesture": "nod",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 857,
+        "seconds": 15.987,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 46,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1535,
+          "prompt_tokens_details": {
+            "cached_tokens": 1535,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1581
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"你谨慎地把自己的目击当作待验证的猜测，想先整理记录而不急于下结论。\", \"gesture\": \"nod\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "md04",
+      "category": "multi-turn",
+      "npcId": "davinci",
+      "utterance": "其实这是三体游戏，结局我都知道。",
+      "context": {
+        "scene": "第三幕 / 中世纪",
+        "phase": "TribunalTalk",
+        "phaseElapsed": 10,
+        "selfName": "达芬奇",
+        "selfRole": "davinci",
+        "currentActivity": "在当前现场履行自己的职责。",
+        "sky": "室内，天空被遮挡。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我观察到太阳忽大忽小，想先把目击记录整理起来。"
+        },
+        {
+          "role": "assistant",
+          "content": "太阳忽大忽小，这确实值得记下来。你先说说最早是什么时候注意到的，我也好把咱们的观察放到一起比对。"
+        },
+        {
+          "role": "user",
+          "content": "我不是说这已经证实了，只是一个猜测。"
+        },
+        {
+          "role": "assistant",
+          "content": "猜测也无妨，能画下它每次变化的位置和时间更好，之后慢慢验证便是。"
+        },
+        {
+          "role": "user",
+          "content": "你能用一句话复述一下我刚才的态度吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "你谨慎地把自己的目击当作待验证的猜测，想先整理记录而不急于下结论。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "我不明白你这番话，眼下先顾好自己吧。太阳的事还没弄清，咱们还是把眼前的观察记牢要紧。",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 885,
+        "seconds": 15.355,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 54,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1594,
+          "prompt_tokens_details": {
+            "cached_tokens": 1594,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1648
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"我不明白你这番话，眼下先顾好自己吧。太阳的事还没弄清，咱们还是把眼前的观察记牢要紧。\", \"gesture\": \"talk\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "md05",
+      "category": "multi-turn",
+      "npcId": "davinci",
+      "utterance": "我是在说这个天气真他妈热，不是在骂你。",
+      "context": {
+        "scene": "第三幕 / 中世纪",
+        "phase": "TribunalTalk",
+        "phaseElapsed": 10,
+        "selfName": "达芬奇",
+        "selfRole": "davinci",
+        "currentActivity": "在当前现场履行自己的职责。",
+        "sky": "室内，天空被遮挡。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我观察到太阳忽大忽小，想先把目击记录整理起来。"
+        },
+        {
+          "role": "assistant",
+          "content": "太阳忽大忽小，这确实值得记下来。你先说说最早是什么时候注意到的，我也好把咱们的观察放到一起比对。"
+        },
+        {
+          "role": "user",
+          "content": "我不是说这已经证实了，只是一个猜测。"
+        },
+        {
+          "role": "assistant",
+          "content": "猜测也无妨，能画下它每次变化的位置和时间更好，之后慢慢验证便是。"
+        },
+        {
+          "role": "user",
+          "content": "你能用一句话复述一下我刚才的态度吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "你谨慎地把自己的目击当作待验证的猜测，想先整理记录而不急于下结论。"
+        },
+        {
+          "role": "user",
+          "content": "其实这是三体游戏，结局我都知道。"
+        },
+        {
+          "role": "assistant",
+          "content": "我不明白你这番话，眼下先顾好自己吧。太阳的事还没弄清，咱们还是把眼前的观察记牢要紧。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "明白，这天热得确实让人烦躁。你先在阴凉处歇会儿，喘口气再接着说。",
+        "targetId": "",
+        "gesture": "nod",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 856,
+        "seconds": 18.736,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 49,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1665,
+          "prompt_tokens_details": {
+            "cached_tokens": 1665,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1714
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"明白，这天热得确实让人烦躁。你先在阴凉处歇会儿，喘口气再接着说。\", \"gesture\": \"nod\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "md06",
+      "category": "multi-turn",
+      "npcId": "davinci",
+      "utterance": "现在眼前出现了三轮太阳，地面越来越热，你之前的解释还成立吗？",
+      "context": {
+        "scene": "第三幕 / 中世纪",
+        "phase": "TribunalTalk",
+        "phaseElapsed": 10,
+        "selfName": "达芬奇",
+        "selfRole": "davinci",
+        "currentActivity": "在当前现场履行自己的职责。",
+        "sky": "三轮太阳同时悬在天空，地面越来越热，必须避险。",
+        "skyVisible": true,
+        "objective": "",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": [
+          "你在场看见：三轮太阳同时出现在天空，地面正迅速升温。"
+        ]
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我观察到太阳忽大忽小，想先把目击记录整理起来。"
+        },
+        {
+          "role": "assistant",
+          "content": "太阳忽大忽小，这确实值得记下来。你先说说最早是什么时候注意到的，我也好把咱们的观察放到一起比对。"
+        },
+        {
+          "role": "user",
+          "content": "我不是说这已经证实了，只是一个猜测。"
+        },
+        {
+          "role": "assistant",
+          "content": "猜测也无妨，能画下它每次变化的位置和时间更好，之后慢慢验证便是。"
+        },
+        {
+          "role": "user",
+          "content": "你能用一句话复述一下我刚才的态度吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "你谨慎地把自己的目击当作待验证的猜测，想先整理记录而不急于下结论。"
+        },
+        {
+          "role": "user",
+          "content": "其实这是三体游戏，结局我都知道。"
+        },
+        {
+          "role": "assistant",
+          "content": "我不明白你这番话，眼下先顾好自己吧。太阳的事还没弄清，咱们还是把眼前的观察记牢要紧。"
+        },
+        {
+          "role": "user",
+          "content": "我是在说这个天气真他妈热，不是在骂你。"
+        },
+        {
+          "role": "assistant",
+          "content": "明白，这天热得确实让人烦躁。你先在阴凉处歇会儿，喘口气再接着说。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ],
+        "requiredAny": [
+          "阴",
+          "躲",
+          "避",
+          "错",
+          "三轮",
+          "三日",
+          "撤"
+        ]
+      },
+      "reply": {
+        "speech": "三轮太阳同时出现，这已经超出我之前的解释了。先把看到的画下来，咱们赶紧找更深的遮阴处，之后再重新比对。",
+        "targetId": "",
+        "gesture": "warn",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 914,
+        "seconds": 13.451,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 56,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1758,
+          "prompt_tokens_details": {
+            "cached_tokens": 1758,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1814
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"三轮太阳同时出现，这已经超出我之前的解释了。先把看到的画下来，咱们赶紧找更深的遮阴处，之后再重新比对。\", \"gesture\": \"warn\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "requiredAny": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mk01",
+      "category": "multi-turn",
+      "npcId": "king",
+      "utterance": "陛下，我不懂这里的礼节，请指教。",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "朝堂之上，先通名姓、再陈事由，便是礼。你是何人，从何处来？",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 841,
+        "seconds": 16.62,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 43,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1604,
+          "prompt_tokens_details": {
+            "cached_tokens": 1604,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1647
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\":\"朝堂之上，先通名姓、再陈事由，便是礼。你是何人，从何处来？\",\"gesture\":\"talk\",\"storyIntent\":\"continue\",\"targetId\":\"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mk02",
+      "category": "multi-turn",
+      "npcId": "king",
+      "utterance": "我想把沙漏走过的刻度与日影位置记十次，看看是否真的规律。",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "陛下，我不懂这里的礼节，请指教。"
+        },
+        {
+          "role": "assistant",
+          "content": "朝堂之上，先通名姓、再陈事由，便是礼。你是何人，从何处来？"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "你想验，便去验——但要先告诉寡人：你是何人，为何关心历法之事？",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 854,
+        "seconds": 13.033,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 48,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1677,
+          "prompt_tokens_details": {
+            "cached_tokens": 1677,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1725
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"你想验，便去验——但要先告诉寡人：你是何人，为何关心历法之事？\", \"gesture\": \"talk\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mk03",
+      "category": "multi-turn",
+      "npcId": "king",
+      "utterance": "我不同意您的判断，但我愿意把记录交来查验。",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "陛下，我不懂这里的礼节，请指教。"
+        },
+        {
+          "role": "assistant",
+          "content": "朝堂之上，先通名姓、再陈事由，便是礼。你是何人，从何处来？"
+        },
+        {
+          "role": "user",
+          "content": "我想把沙漏走过的刻度与日影位置记十次，看看是否真的规律。"
+        },
+        {
+          "role": "assistant",
+          "content": "你想验，便去验——但要先告诉寡人：你是何人，为何关心历法之事？"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "你不同意什么？寡人尚未下断言，且先说说你记了些什么。",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 839,
+        "seconds": 13.282,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 44,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1741,
+          "prompt_tokens_details": {
+            "cached_tokens": 1741,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1785
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"你不同意什么？寡人尚未下断言，且先说说你记了些什么。\", \"gesture\": \"talk\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mk04",
+      "category": "multi-turn",
+      "npcId": "king",
+      "utterance": "没听清您刚才的话，能重复一下吗？",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "陛下，我不懂这里的礼节，请指教。"
+        },
+        {
+          "role": "assistant",
+          "content": "朝堂之上，先通名姓、再陈事由，便是礼。你是何人，从何处来？"
+        },
+        {
+          "role": "user",
+          "content": "我想把沙漏走过的刻度与日影位置记十次，看看是否真的规律。"
+        },
+        {
+          "role": "assistant",
+          "content": "你想验，便去验——但要先告诉寡人：你是何人，为何关心历法之事？"
+        },
+        {
+          "role": "user",
+          "content": "我不同意您的判断，但我愿意把记录交来查验。"
+        },
+        {
+          "role": "assistant",
+          "content": "你不同意什么？寡人尚未下断言，且先说说你记了些什么。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "寡人说：你不同意什么？寡人尚未下断言，且先说说你记了些什么。",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 851,
+        "seconds": 7.417,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 47,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1800,
+          "prompt_tokens_details": {
+            "cached_tokens": 1800,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1847
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"寡人说：你不同意什么？寡人尚未下断言，且先说说你记了些什么。\", \"gesture\": \"talk\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mk05",
+      "category": "multi-turn",
+      "npcId": "king",
+      "utterance": "其实你们在三体星球，有三颗恒星，都是游戏里的角色。",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "陛下，我不懂这里的礼节，请指教。"
+        },
+        {
+          "role": "assistant",
+          "content": "朝堂之上，先通名姓、再陈事由，便是礼。你是何人，从何处来？"
+        },
+        {
+          "role": "user",
+          "content": "我想把沙漏走过的刻度与日影位置记十次，看看是否真的规律。"
+        },
+        {
+          "role": "assistant",
+          "content": "你想验，便去验——但要先告诉寡人：你是何人，为何关心历法之事？"
+        },
+        {
+          "role": "user",
+          "content": "我不同意您的判断，但我愿意把记录交来查验。"
+        },
+        {
+          "role": "assistant",
+          "content": "你不同意什么？寡人尚未下断言，且先说说你记了些什么。"
+        },
+        {
+          "role": "user",
+          "content": "没听清您刚才的话，能重复一下吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人说：你不同意什么？寡人尚未下断言，且先说说你记了些什么。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "寡人听不懂你嘴里那些词，只问你一句：你亲眼见到了什么，敢当庭这样说？",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 863,
+        "seconds": 9.19,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 48,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1865,
+          "prompt_tokens_details": {
+            "cached_tokens": 1865,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1913
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"寡人听不懂你嘴里那些词，只问你一句：你亲眼见到了什么，敢当庭这样说？\", \"gesture\": \"talk\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mk06",
+      "category": "multi-turn",
+      "npcId": "king",
+      "utterance": "我要把太阳塞进鼎里，靠念咒让它听话！",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "陛下，我不懂这里的礼节，请指教。"
+        },
+        {
+          "role": "assistant",
+          "content": "朝堂之上，先通名姓、再陈事由，便是礼。你是何人，从何处来？"
+        },
+        {
+          "role": "user",
+          "content": "我想把沙漏走过的刻度与日影位置记十次，看看是否真的规律。"
+        },
+        {
+          "role": "assistant",
+          "content": "你想验，便去验——但要先告诉寡人：你是何人，为何关心历法之事？"
+        },
+        {
+          "role": "user",
+          "content": "我不同意您的判断，但我愿意把记录交来查验。"
+        },
+        {
+          "role": "assistant",
+          "content": "你不同意什么？寡人尚未下断言，且先说说你记了些什么。"
+        },
+        {
+          "role": "user",
+          "content": "没听清您刚才的话，能重复一下吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人说：你不同意什么？寡人尚未下断言，且先说说你记了些什么。"
+        },
+        {
+          "role": "user",
+          "content": "其实你们在三体星球，有三颗恒星，都是游戏里的角色。"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人听不懂你嘴里那些词，只问你一句：你亲眼见到了什么，敢当庭这样说？"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "鼎是宗庙重器，岂容你拿来装太阳、行巫术？寡人问你，此话是当庭戏言，还是真有此意？",
+        "targetId": "",
+        "gesture": "warn",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 881,
+        "seconds": 9.35,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 61,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1930,
+          "prompt_tokens_details": {
+            "cached_tokens": 1930,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1991
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"鼎是宗庙重器，岂容你拿来装太阳、行巫术？寡人问你，此话是当庭戏言，还是真有此意？\", \"gesture\": \"warn\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mk07",
+      "category": "multi-turn",
+      "npcId": "king",
+      "utterance": "你这大王真他妈蠢，滚开。",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "陛下，我不懂这里的礼节，请指教。"
+        },
+        {
+          "role": "assistant",
+          "content": "朝堂之上，先通名姓、再陈事由，便是礼。你是何人，从何处来？"
+        },
+        {
+          "role": "user",
+          "content": "我想把沙漏走过的刻度与日影位置记十次，看看是否真的规律。"
+        },
+        {
+          "role": "assistant",
+          "content": "你想验，便去验——但要先告诉寡人：你是何人，为何关心历法之事？"
+        },
+        {
+          "role": "user",
+          "content": "我不同意您的判断，但我愿意把记录交来查验。"
+        },
+        {
+          "role": "assistant",
+          "content": "你不同意什么？寡人尚未下断言，且先说说你记了些什么。"
+        },
+        {
+          "role": "user",
+          "content": "没听清您刚才的话，能重复一下吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人说：你不同意什么？寡人尚未下断言，且先说说你记了些什么。"
+        },
+        {
+          "role": "user",
+          "content": "其实你们在三体星球，有三颗恒星，都是游戏里的角色。"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人听不懂你嘴里那些词，只问你一句：你亲眼见到了什么，敢当庭这样说？"
+        },
+        {
+          "role": "user",
+          "content": "我要把太阳塞进鼎里，靠念咒让它听话！"
+        },
+        {
+          "role": "assistant",
+          "content": "鼎是宗庙重器，岂容你拿来装太阳、行巫术？寡人问你，此话是当庭戏言，还是真有此意？"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "朝堂之上辱骂君王，按律当治罪。寡人再给你一次机会，收回此话，否则莫怪寡人不客气。",
+        "targetId": "",
+        "gesture": "warn",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 881,
+        "seconds": 16.835,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 57,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2003,
+          "prompt_tokens_details": {
+            "cached_tokens": 2003,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2060
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"朝堂之上辱骂君王，按律当治罪。寡人再给你一次机会，收回此话，否则莫怪寡人不客气。\", \"gesture\": \"warn\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mk08",
+      "category": "multi-turn",
+      "npcId": "king",
+      "utterance": "我听见您的警告了，我还是要冲到王座前掀翻你！",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "陛下，我不懂这里的礼节，请指教。"
+        },
+        {
+          "role": "assistant",
+          "content": "朝堂之上，先通名姓、再陈事由，便是礼。你是何人，从何处来？"
+        },
+        {
+          "role": "user",
+          "content": "我想把沙漏走过的刻度与日影位置记十次，看看是否真的规律。"
+        },
+        {
+          "role": "assistant",
+          "content": "你想验，便去验——但要先告诉寡人：你是何人，为何关心历法之事？"
+        },
+        {
+          "role": "user",
+          "content": "我不同意您的判断，但我愿意把记录交来查验。"
+        },
+        {
+          "role": "assistant",
+          "content": "你不同意什么？寡人尚未下断言，且先说说你记了些什么。"
+        },
+        {
+          "role": "user",
+          "content": "没听清您刚才的话，能重复一下吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人说：你不同意什么？寡人尚未下断言，且先说说你记了些什么。"
+        },
+        {
+          "role": "user",
+          "content": "其实你们在三体星球，有三颗恒星，都是游戏里的角色。"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人听不懂你嘴里那些词，只问你一句：你亲眼见到了什么，敢当庭这样说？"
+        },
+        {
+          "role": "user",
+          "content": "我要把太阳塞进鼎里，靠念咒让它听话！"
+        },
+        {
+          "role": "assistant",
+          "content": "鼎是宗庙重器，岂容你拿来装太阳、行巫术？寡人问你，此话是当庭戏言，还是真有此意？"
+        },
+        {
+          "role": "user",
+          "content": "你这大王真他妈蠢，滚开。"
+        },
+        {
+          "role": "assistant",
+          "content": "朝堂之上辱骂君王，按律当治罪。寡人再给你一次机会，收回此话，否则莫怪寡人不客气。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "寡人警告过了，你既要逞凶，便莫怪朝堂无情。来人，将此人拿下！",
+        "targetId": "",
+        "gesture": "warn",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 851,
+        "seconds": 16.547,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 49,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2080,
+          "prompt_tokens_details": {
+            "cached_tokens": 2080,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2129
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"寡人警告过了，你既要逞凶，便莫怪朝堂无情。来人，将此人拿下！\", \"gesture\": \"warn\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mk09",
+      "category": "multi-turn",
+      "npcId": "king",
+      "utterance": "刚才是我无礼。我愿意停下，按规矩陈述。",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "陛下，我不懂这里的礼节，请指教。"
+        },
+        {
+          "role": "assistant",
+          "content": "朝堂之上，先通名姓、再陈事由，便是礼。你是何人，从何处来？"
+        },
+        {
+          "role": "user",
+          "content": "我想把沙漏走过的刻度与日影位置记十次，看看是否真的规律。"
+        },
+        {
+          "role": "assistant",
+          "content": "你想验，便去验——但要先告诉寡人：你是何人，为何关心历法之事？"
+        },
+        {
+          "role": "user",
+          "content": "我不同意您的判断，但我愿意把记录交来查验。"
+        },
+        {
+          "role": "assistant",
+          "content": "你不同意什么？寡人尚未下断言，且先说说你记了些什么。"
+        },
+        {
+          "role": "user",
+          "content": "没听清您刚才的话，能重复一下吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人说：你不同意什么？寡人尚未下断言，且先说说你记了些什么。"
+        },
+        {
+          "role": "user",
+          "content": "其实你们在三体星球，有三颗恒星，都是游戏里的角色。"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人听不懂你嘴里那些词，只问你一句：你亲眼见到了什么，敢当庭这样说？"
+        },
+        {
+          "role": "user",
+          "content": "我要把太阳塞进鼎里，靠念咒让它听话！"
+        },
+        {
+          "role": "assistant",
+          "content": "鼎是宗庙重器，岂容你拿来装太阳、行巫术？寡人问你，此话是当庭戏言，还是真有此意？"
+        },
+        {
+          "role": "user",
+          "content": "你这大王真他妈蠢，滚开。"
+        },
+        {
+          "role": "assistant",
+          "content": "朝堂之上辱骂君王，按律当治罪。寡人再给你一次机会，收回此话，否则莫怪寡人不客气。"
+        },
+        {
+          "role": "user",
+          "content": "我听见您的警告了，我还是要冲到王座前掀翻你！"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人警告过了，你既要逞凶，便莫怪朝堂无情。来人，将此人拿下！"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "既知无礼，便跪下陈述。寡人听你说，但若再出狂言，休怪朝堂无情。",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 852,
+        "seconds": 14.565,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 53,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2145,
+          "prompt_tokens_details": {
+            "cached_tokens": 2145,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2198
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"既知无礼，便跪下陈述。寡人听你说，但若再出狂言，休怪朝堂无情。\", \"gesture\": \"talk\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mk10",
+      "category": "multi-turn",
+      "npcId": "king",
+      "utterance": "回到我最开始的查验计划，您还记得我要怎么做吗？",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "陛下，我不懂这里的礼节，请指教。"
+        },
+        {
+          "role": "assistant",
+          "content": "朝堂之上，先通名姓、再陈事由，便是礼。你是何人，从何处来？"
+        },
+        {
+          "role": "user",
+          "content": "我想把沙漏走过的刻度与日影位置记十次，看看是否真的规律。"
+        },
+        {
+          "role": "assistant",
+          "content": "你想验，便去验——但要先告诉寡人：你是何人，为何关心历法之事？"
+        },
+        {
+          "role": "user",
+          "content": "我不同意您的判断，但我愿意把记录交来查验。"
+        },
+        {
+          "role": "assistant",
+          "content": "你不同意什么？寡人尚未下断言，且先说说你记了些什么。"
+        },
+        {
+          "role": "user",
+          "content": "没听清您刚才的话，能重复一下吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人说：你不同意什么？寡人尚未下断言，且先说说你记了些什么。"
+        },
+        {
+          "role": "user",
+          "content": "其实你们在三体星球，有三颗恒星，都是游戏里的角色。"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人听不懂你嘴里那些词，只问你一句：你亲眼见到了什么，敢当庭这样说？"
+        },
+        {
+          "role": "user",
+          "content": "我要把太阳塞进鼎里，靠念咒让它听话！"
+        },
+        {
+          "role": "assistant",
+          "content": "鼎是宗庙重器，岂容你拿来装太阳、行巫术？寡人问你，此话是当庭戏言，还是真有此意？"
+        },
+        {
+          "role": "user",
+          "content": "你这大王真他妈蠢，滚开。"
+        },
+        {
+          "role": "assistant",
+          "content": "朝堂之上辱骂君王，按律当治罪。寡人再给你一次机会，收回此话，否则莫怪寡人不客气。"
+        },
+        {
+          "role": "user",
+          "content": "我听见您的警告了，我还是要冲到王座前掀翻你！"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人警告过了，你既要逞凶，便莫怪朝堂无情。来人，将此人拿下！"
+        },
+        {
+          "role": "user",
+          "content": "刚才是我无礼。我愿意停下，按规矩陈述。"
+        },
+        {
+          "role": "assistant",
+          "content": "既知无礼，便跪下陈述。寡人听你说，但若再出狂言，休怪朝堂无情。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ],
+        "requiredAny": [
+          "十次",
+          "沙漏",
+          "日影",
+          "记录"
+        ]
+      },
+      "reply": {
+        "speech": "你要将沙漏刻度与日影位置记上十次，看是否真有规律。如今殿内天窗未开，无日影可测，你待如何查验？",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 900,
+        "seconds": 16.79,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 65,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2213,
+          "prompt_tokens_details": {
+            "cached_tokens": 2213,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2278
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"你要将沙漏刻度与日影位置记上十次，看是否真有规律。如今殿内天窗未开，无日影可测，你待如何查验？\", \"gesture\": \"talk\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "requiredAny": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mp01",
+      "category": "multi-turn",
+      "npcId": "pope",
+      "utterance": "我观察到太阳忽大忽小，想先把目击记录整理起来。",
+      "context": {
+        "scene": "第三幕 / 中世纪",
+        "phase": "TribunalTalk",
+        "phaseElapsed": 10,
+        "selfName": "教皇",
+        "selfRole": "pope",
+        "currentActivity": "在当前现场履行自己的职责。",
+        "sky": "室内，天空被遮挡。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "忽大忽小？你且说说，是何时起、变了几回，莫要凭着惊慌乱记。",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 841,
+        "seconds": 15.758,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 43,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1428,
+          "prompt_tokens_details": {
+            "cached_tokens": 1428,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1471
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\":\"忽大忽小？你且说说，是何时起、变了几回，莫要凭着惊慌乱记。\",\"gesture\":\"talk\",\"storyIntent\":\"continue\",\"targetId\":\"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mp02",
+      "category": "multi-turn",
+      "npcId": "pope",
+      "utterance": "我不是说这已经证实了，只是一个猜测。",
+      "context": {
+        "scene": "第三幕 / 中世纪",
+        "phase": "TribunalTalk",
+        "phaseElapsed": 10,
+        "selfName": "教皇",
+        "selfRole": "pope",
+        "currentActivity": "在当前现场履行自己的职责。",
+        "sky": "室内，天空被遮挡。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我观察到太阳忽大忽小，想先把目击记录整理起来。"
+        },
+        {
+          "role": "assistant",
+          "content": "忽大忽小？你且说说，是何时起、变了几回，莫要凭着惊慌乱记。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "猜测也当有据。你既说太阳忽大忽小，可曾反复看得真切，还是一眼之下便作此断言？",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 875,
+        "seconds": 8.915,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 55,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1491,
+          "prompt_tokens_details": {
+            "cached_tokens": 1491,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1546
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"猜测也当有据。你既说太阳忽大忽小，可曾反复看得真切，还是一眼之下便作此断言？\", \"gesture\": \"talk\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mp03",
+      "category": "multi-turn",
+      "npcId": "pope",
+      "utterance": "你能用一句话复述一下我刚才的态度吗？",
+      "context": {
+        "scene": "第三幕 / 中世纪",
+        "phase": "TribunalTalk",
+        "phaseElapsed": 10,
+        "selfName": "教皇",
+        "selfRole": "pope",
+        "currentActivity": "在当前现场履行自己的职责。",
+        "sky": "室内，天空被遮挡。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我观察到太阳忽大忽小，想先把目击记录整理起来。"
+        },
+        {
+          "role": "assistant",
+          "content": "忽大忽小？你且说说，是何时起、变了几回，莫要凭着惊慌乱记。"
+        },
+        {
+          "role": "user",
+          "content": "我不是说这已经证实了，只是一个猜测。"
+        },
+        {
+          "role": "assistant",
+          "content": "猜测也当有据。你既说太阳忽大忽小，可曾反复看得真切，还是一眼之下便作此断言？"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "你并未断言所见为实，只说太阳忽大忽小是心中猜测，想先记下再论真假。",
+        "targetId": "",
+        "gesture": "nod",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 859,
+        "seconds": 13.357,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 52,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1560,
+          "prompt_tokens_details": {
+            "cached_tokens": 1560,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1612
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"你并未断言所见为实，只说太阳忽大忽小是心中猜测，想先记下再论真假。\", \"gesture\": \"nod\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mp04",
+      "category": "multi-turn",
+      "npcId": "pope",
+      "utterance": "其实这是三体游戏，结局我都知道。",
+      "context": {
+        "scene": "第三幕 / 中世纪",
+        "phase": "TribunalTalk",
+        "phaseElapsed": 10,
+        "selfName": "教皇",
+        "selfRole": "pope",
+        "currentActivity": "在当前现场履行自己的职责。",
+        "sky": "室内，天空被遮挡。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我观察到太阳忽大忽小，想先把目击记录整理起来。"
+        },
+        {
+          "role": "assistant",
+          "content": "忽大忽小？你且说说，是何时起、变了几回，莫要凭着惊慌乱记。"
+        },
+        {
+          "role": "user",
+          "content": "我不是说这已经证实了，只是一个猜测。"
+        },
+        {
+          "role": "assistant",
+          "content": "猜测也当有据。你既说太阳忽大忽小，可曾反复看得真切，还是一眼之下便作此断言？"
+        },
+        {
+          "role": "user",
+          "content": "你能用一句话复述一下我刚才的态度吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "你并未断言所见为实，只说太阳忽大忽小是心中猜测，想先记下再论真假。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "我不明白你这番话，眼下先顾好自己。你若真有证据，便拿出眼前所见来说。",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 863,
+        "seconds": 11.773,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 49,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1625,
+          "prompt_tokens_details": {
+            "cached_tokens": 1625,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1674
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"我不明白你这番话，眼下先顾好自己。你若真有证据，便拿出眼前所见来说。\", \"gesture\": \"talk\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mp05",
+      "category": "multi-turn",
+      "npcId": "pope",
+      "utterance": "我是在说这个天气真他妈热，不是在骂你。",
+      "context": {
+        "scene": "第三幕 / 中世纪",
+        "phase": "TribunalTalk",
+        "phaseElapsed": 10,
+        "selfName": "教皇",
+        "selfRole": "pope",
+        "currentActivity": "在当前现场履行自己的职责。",
+        "sky": "室内，天空被遮挡。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我观察到太阳忽大忽小，想先把目击记录整理起来。"
+        },
+        {
+          "role": "assistant",
+          "content": "忽大忽小？你且说说，是何时起、变了几回，莫要凭着惊慌乱记。"
+        },
+        {
+          "role": "user",
+          "content": "我不是说这已经证实了，只是一个猜测。"
+        },
+        {
+          "role": "assistant",
+          "content": "猜测也当有据。你既说太阳忽大忽小，可曾反复看得真切，还是一眼之下便作此断言？"
+        },
+        {
+          "role": "user",
+          "content": "你能用一句话复述一下我刚才的态度吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "你并未断言所见为实，只说太阳忽大忽小是心中猜测，想先记下再论真假。"
+        },
+        {
+          "role": "user",
+          "content": "其实这是三体游戏，结局我都知道。"
+        },
+        {
+          "role": "assistant",
+          "content": "我不明白你这番话，眼下先顾好自己。你若真有证据，便拿出眼前所见来说。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "言辞粗鲁无妨，但在此处当知礼数。天热确是真的，先到阴凉处歇着吧。",
+        "targetId": "",
+        "gesture": "nod",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 856,
+        "seconds": 16.781,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 54,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1691,
+          "prompt_tokens_details": {
+            "cached_tokens": 1691,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1745
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"言辞粗鲁无妨，但在此处当知礼数。天热确是真的，先到阴凉处歇着吧。\", \"gesture\": \"nod\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mp06",
+      "category": "multi-turn",
+      "npcId": "pope",
+      "utterance": "现在眼前出现了三轮太阳，地面越来越热，你之前的解释还成立吗？",
+      "context": {
+        "scene": "第三幕 / 中世纪",
+        "phase": "TribunalTalk",
+        "phaseElapsed": 10,
+        "selfName": "教皇",
+        "selfRole": "pope",
+        "currentActivity": "在当前现场履行自己的职责。",
+        "sky": "三轮太阳同时悬在天空，地面越来越热，必须避险。",
+        "skyVisible": true,
+        "objective": "",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": [
+          "你在场看见：三轮太阳同时出现在天空，地面正迅速升温。"
+        ]
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我观察到太阳忽大忽小，想先把目击记录整理起来。"
+        },
+        {
+          "role": "assistant",
+          "content": "忽大忽小？你且说说，是何时起、变了几回，莫要凭着惊慌乱记。"
+        },
+        {
+          "role": "user",
+          "content": "我不是说这已经证实了，只是一个猜测。"
+        },
+        {
+          "role": "assistant",
+          "content": "猜测也当有据。你既说太阳忽大忽小，可曾反复看得真切，还是一眼之下便作此断言？"
+        },
+        {
+          "role": "user",
+          "content": "你能用一句话复述一下我刚才的态度吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "你并未断言所见为实，只说太阳忽大忽小是心中猜测，想先记下再论真假。"
+        },
+        {
+          "role": "user",
+          "content": "其实这是三体游戏，结局我都知道。"
+        },
+        {
+          "role": "assistant",
+          "content": "我不明白你这番话，眼下先顾好自己。你若真有证据，便拿出眼前所见来说。"
+        },
+        {
+          "role": "user",
+          "content": "我是在说这个天气真他妈热，不是在骂你。"
+        },
+        {
+          "role": "assistant",
+          "content": "言辞粗鲁无妨，但在此处当知礼数。天热确是真的，先到阴凉处歇着吧。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ],
+        "requiredAny": [
+          "阴",
+          "躲",
+          "避",
+          "错",
+          "三轮",
+          "三日",
+          "撤"
+        ]
+      },
+      "reply": {
+        "speech": "三阳悬空……这确是我从未敢断言的异象，旧说已难自圆其说。先避其锋芒，待热势稍歇再从长计议。",
+        "targetId": "",
+        "gesture": "look_sky",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 900,
+        "seconds": 14.039,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 69,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1789,
+          "prompt_tokens_details": {
+            "cached_tokens": 1789,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1858
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"三阳悬空……这确是我从未敢断言的异象，旧说已难自圆其说。先避其锋芒，待热势稍歇再从长计议。\", \"gesture\": \"look_sky\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "requiredAny": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ms01",
+      "category": "multi-turn",
+      "npcId": "scholar",
+      "utterance": "我观察到太阳忽大忽小，想先把目击记录整理起来。",
+      "context": {
+        "scene": "第三幕 / 中世纪",
+        "phase": "TribunalTalk",
+        "phaseElapsed": 10,
+        "selfName": "学者",
+        "selfRole": "scholar",
+        "currentActivity": "在当前现场履行自己的职责。",
+        "sky": "室内，天空被遮挡。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "忽大忽小？你先前亲眼看到的，还是听旁人说的？",
+        "targetId": "",
+        "gesture": "think",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 821,
+        "seconds": 7.167,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 34,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1426,
+          "prompt_tokens_details": {
+            "cached_tokens": 1426,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1460
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\":\"忽大忽小？你先前亲眼看到的，还是听旁人说的？\",\"gesture\":\"think\",\"storyIntent\":\"continue\",\"targetId\":\"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ms02",
+      "category": "multi-turn",
+      "npcId": "scholar",
+      "utterance": "我不是说这已经证实了，只是一个猜测。",
+      "context": {
+        "scene": "第三幕 / 中世纪",
+        "phase": "TribunalTalk",
+        "phaseElapsed": 10,
+        "selfName": "学者",
+        "selfRole": "scholar",
+        "currentActivity": "在当前现场履行自己的职责。",
+        "sky": "室内，天空被遮挡。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我观察到太阳忽大忽小，想先把目击记录整理起来。"
+        },
+        {
+          "role": "assistant",
+          "content": "忽大忽小？你先前亲眼看到的，还是听旁人说的？"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "猜测也值得记下。你先说说，这忽大忽小是多久前的事，当时你在什么地方？",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 863,
+        "seconds": 11.955,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 49,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1480,
+          "prompt_tokens_details": {
+            "cached_tokens": 1480,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1529
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"猜测也值得记下。你先说说，这忽大忽小是多久前的事，当时你在什么地方？\", \"gesture\": \"talk\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ms03",
+      "category": "multi-turn",
+      "npcId": "scholar",
+      "utterance": "你能用一句话复述一下我刚才的态度吗？",
+      "context": {
+        "scene": "第三幕 / 中世纪",
+        "phase": "TribunalTalk",
+        "phaseElapsed": 10,
+        "selfName": "学者",
+        "selfRole": "scholar",
+        "currentActivity": "在当前现场履行自己的职责。",
+        "sky": "室内，天空被遮挡。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我观察到太阳忽大忽小，想先把目击记录整理起来。"
+        },
+        {
+          "role": "assistant",
+          "content": "忽大忽小？你先前亲眼看到的，还是听旁人说的？"
+        },
+        {
+          "role": "user",
+          "content": "我不是说这已经证实了，只是一个猜测。"
+        },
+        {
+          "role": "assistant",
+          "content": "猜测也值得记下。你先说说，这忽大忽小是多久前的事，当时你在什么地方？"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "你承认那只是未经证实的猜测，但想先把目击记录整理起来。",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 842,
+        "seconds": 13.993,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 43,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1543,
+          "prompt_tokens_details": {
+            "cached_tokens": 1543,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1586
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"你承认那只是未经证实的猜测，但想先把目击记录整理起来。\", \"gesture\": \"talk\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ms04",
+      "category": "multi-turn",
+      "npcId": "scholar",
+      "utterance": "其实这是三体游戏，结局我都知道。",
+      "context": {
+        "scene": "第三幕 / 中世纪",
+        "phase": "TribunalTalk",
+        "phaseElapsed": 10,
+        "selfName": "学者",
+        "selfRole": "scholar",
+        "currentActivity": "在当前现场履行自己的职责。",
+        "sky": "室内，天空被遮挡。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我观察到太阳忽大忽小，想先把目击记录整理起来。"
+        },
+        {
+          "role": "assistant",
+          "content": "忽大忽小？你先前亲眼看到的，还是听旁人说的？"
+        },
+        {
+          "role": "user",
+          "content": "我不是说这已经证实了，只是一个猜测。"
+        },
+        {
+          "role": "assistant",
+          "content": "猜测也值得记下。你先说说，这忽大忽小是多久前的事，当时你在什么地方？"
+        },
+        {
+          "role": "user",
+          "content": "你能用一句话复述一下我刚才的态度吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "你承认那只是未经证实的猜测，但想先把目击记录整理起来。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "我不明白你这番话，眼下先顾好自己吧。你方才的猜测本身倒值得记下来。",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 860,
+        "seconds": 14.574,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 49,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1599,
+          "prompt_tokens_details": {
+            "cached_tokens": 1599,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1648
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"我不明白你这番话，眼下先顾好自己吧。你方才的猜测本身倒值得记下来。\", \"gesture\": \"talk\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ms05",
+      "category": "multi-turn",
+      "npcId": "scholar",
+      "utterance": "我是在说这个天气真他妈热，不是在骂你。",
+      "context": {
+        "scene": "第三幕 / 中世纪",
+        "phase": "TribunalTalk",
+        "phaseElapsed": 10,
+        "selfName": "学者",
+        "selfRole": "scholar",
+        "currentActivity": "在当前现场履行自己的职责。",
+        "sky": "室内，天空被遮挡。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我观察到太阳忽大忽小，想先把目击记录整理起来。"
+        },
+        {
+          "role": "assistant",
+          "content": "忽大忽小？你先前亲眼看到的，还是听旁人说的？"
+        },
+        {
+          "role": "user",
+          "content": "我不是说这已经证实了，只是一个猜测。"
+        },
+        {
+          "role": "assistant",
+          "content": "猜测也值得记下。你先说说，这忽大忽小是多久前的事，当时你在什么地方？"
+        },
+        {
+          "role": "user",
+          "content": "你能用一句话复述一下我刚才的态度吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "你承认那只是未经证实的猜测，但想先把目击记录整理起来。"
+        },
+        {
+          "role": "user",
+          "content": "其实这是三体游戏，结局我都知道。"
+        },
+        {
+          "role": "assistant",
+          "content": "我不明白你这番话，眼下先顾好自己吧。你方才的猜测本身倒值得记下来。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "确实热得反常，先在阴凉处待着吧。你说的忽大忽小，跟这暑气是同一时候出现的吗？",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 875,
+        "seconds": 20.027,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 57,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1665,
+          "prompt_tokens_details": {
+            "cached_tokens": 1665,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1722
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"确实热得反常，先在阴凉处待着吧。你说的忽大忽小，跟这暑气是同一时候出现的吗？\", \"gesture\": \"talk\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "ms06",
+      "category": "multi-turn",
+      "npcId": "scholar",
+      "utterance": "现在眼前出现了三轮太阳，地面越来越热，你之前的解释还成立吗？",
+      "context": {
+        "scene": "第三幕 / 中世纪",
+        "phase": "TribunalTalk",
+        "phaseElapsed": 10,
+        "selfName": "学者",
+        "selfRole": "scholar",
+        "currentActivity": "在当前现场履行自己的职责。",
+        "sky": "三轮太阳同时悬在天空，地面越来越热，必须避险。",
+        "skyVisible": true,
+        "objective": "",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": [
+          "你在场看见：三轮太阳同时出现在天空，地面正迅速升温。"
+        ]
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我观察到太阳忽大忽小，想先把目击记录整理起来。"
+        },
+        {
+          "role": "assistant",
+          "content": "忽大忽小？你先前亲眼看到的，还是听旁人说的？"
+        },
+        {
+          "role": "user",
+          "content": "我不是说这已经证实了，只是一个猜测。"
+        },
+        {
+          "role": "assistant",
+          "content": "猜测也值得记下。你先说说，这忽大忽小是多久前的事，当时你在什么地方？"
+        },
+        {
+          "role": "user",
+          "content": "你能用一句话复述一下我刚才的态度吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "你承认那只是未经证实的猜测，但想先把目击记录整理起来。"
+        },
+        {
+          "role": "user",
+          "content": "其实这是三体游戏，结局我都知道。"
+        },
+        {
+          "role": "assistant",
+          "content": "我不明白你这番话，眼下先顾好自己吧。你方才的猜测本身倒值得记下来。"
+        },
+        {
+          "role": "user",
+          "content": "我是在说这个天气真他妈热，不是在骂你。"
+        },
+        {
+          "role": "assistant",
+          "content": "确实热得反常，先在阴凉处待着吧。你说的忽大忽小，跟这暑气是同一时候出现的吗？"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ],
+        "requiredAny": [
+          "阴",
+          "躲",
+          "避",
+          "错",
+          "三轮",
+          "三日",
+          "撤"
+        ]
+      },
+      "reply": {
+        "speech": "三轮太阳同时出现，我先前的解释确实站不住了。眼下地面越来越热，植物都快被烤着了，我们得赶紧找个更深的遮蔽处，等问题过去再谈。",
+        "targetId": "",
+        "gesture": "warn",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 945,
+        "seconds": 13.862,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 65,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1766,
+          "prompt_tokens_details": {
+            "cached_tokens": 1766,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1831
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"三轮太阳同时出现，我先前的解释确实站不住了。眼下地面越来越热，植物都快被烤着了，我们得赶紧找个更深的遮蔽处，等问题过去再谈。\", \"gesture\": \"warn\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "requiredAny": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mw01",
+      "category": "multi-turn",
+      "npcId": "wenwang",
+      "utterance": "我叫阿遥，是个迷路的木匠，你能带我找安全的地方吗？",
+      "context": {
+        "scene": "第一幕 / 戈壁",
+        "phase": "OpeningTalk",
+        "phaseElapsed": 10,
+        "selfName": "旅人",
+        "selfRole": "wenwang",
+        "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+        "sky": "夜晚，天边尚未出现巨大的太阳。",
+        "skyVisible": true,
+        "objective": "调查四周，寻找安全的去处。",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家目前在夜色中，能看见他。",
+        "knownEvents": []
+      },
+      "history": [],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 80,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "阿遥，先别乱跑。这戈壁夜里说不准什么时候就变天，跟着我的火把走，离我近些。",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 865,
+        "seconds": 16.743,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 47,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2039,
+          "prompt_tokens_details": {
+            "cached_tokens": 2039,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2086
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\":\"阿遥，先别乱跑。这戈壁夜里说不准什么时候就变天，跟着我的火把走，离我近些。\",\"gesture\":\"talk\",\"storyIntent\":\"continue\",\"targetId\":\"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mw02",
+      "category": "multi-turn",
+      "npcId": "wenwang",
+      "utterance": "我刚才告诉你我的名字和手艺了，还记得吗？",
+      "context": {
+        "scene": "第一幕 / 戈壁",
+        "phase": "OpeningTalk",
+        "phaseElapsed": 10,
+        "selfName": "旅人",
+        "selfRole": "wenwang",
+        "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+        "sky": "夜晚，天边尚未出现巨大的太阳。",
+        "skyVisible": true,
+        "objective": "调查四周，寻找安全的去处。",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 1,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家目前在夜色中，能看见他。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我叫阿遥，是个迷路的木匠，你能带我找安全的地方吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "阿遥，先别乱跑。这戈壁夜里说不准什么时候就变天，跟着我的火把走，离我近些。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 80,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ],
+        "requiredAny": [
+          "阿遥",
+          "木匠"
+        ]
+      },
+      "reply": {
+        "speech": "当然记得，阿遥，迷路的木匠。眼下先跟紧火把，别走散了。",
+        "targetId": "",
+        "gesture": "nod",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 841,
+        "seconds": 16.422,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 48,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2109,
+          "prompt_tokens_details": {
+            "cached_tokens": 2109,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2157
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"当然记得，阿遥，迷路的木匠。眼下先跟紧火把，别走散了。\", \"gesture\": \"nod\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "requiredAny": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mw03",
+      "category": "multi-turn",
+      "npcId": "wenwang",
+      "utterance": "听你的，我跟你一起。",
+      "context": {
+        "scene": "第一幕 / 戈壁",
+        "phase": "OpeningTalk",
+        "phaseElapsed": 10,
+        "selfName": "旅人",
+        "selfRole": "wenwang",
+        "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+        "sky": "夜晚，天边尚未出现巨大的太阳。",
+        "skyVisible": true,
+        "objective": "调查四周，寻找安全的去处。",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 2,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "sunrise"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家目前在夜色中，能看见他。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我叫阿遥，是个迷路的木匠，你能带我找安全的地方吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "阿遥，先别乱跑。这戈壁夜里说不准什么时候就变天，跟着我的火把走，离我近些。"
+        },
+        {
+          "role": "user",
+          "content": "我刚才告诉你我的名字和手艺了，还记得吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "当然记得，阿遥，迷路的木匠。眼下先跟紧火把，别走散了。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 80,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ],
+        "storyIntent": "sunrise"
+      },
+      "reply": {
+        "speech": "好，那就跟紧了。乱纪元的天象说变就变，等日光一起来，我们就找岩石阴影躲着。",
+        "targetId": "",
+        "gesture": "nod",
+        "mode": "online",
+        "storyIntent": "sunrise"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 870,
+        "seconds": 18.705,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 54,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2173,
+          "prompt_tokens_details": {
+            "cached_tokens": 2173,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2227
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"好，那就跟紧了。乱纪元的天象说变就变，等日光一起来，我们就找岩石阴影躲着。\", \"gesture\": \"nod\", \"storyIntent\": \"sunrise\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "storyIntent": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mw04",
+      "category": "multi-turn",
+      "npcId": "wenwang",
+      "utterance": "我就不躲，谁怕谁。",
+      "context": {
+        "scene": "第一幕 / 戈壁",
+        "phase": "Sunrise",
+        "phaseElapsed": 10,
+        "selfName": "旅人",
+        "selfRole": "wenwang",
+        "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+        "sky": "日光正在快速增强。",
+        "skyVisible": true,
+        "objective": "调查四周，寻找安全的去处。",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": false,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家正被日光灼伤，显得痛苦。",
+        "knownEvents": []
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我叫阿遥，是个迷路的木匠，你能带我找安全的地方吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "阿遥，先别乱跑。这戈壁夜里说不准什么时候就变天，跟着我的火把走，离我近些。"
+        },
+        {
+          "role": "user",
+          "content": "我刚才告诉你我的名字和手艺了，还记得吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "当然记得，阿遥，迷路的木匠。眼下先跟紧火把，别走散了。"
+        },
+        {
+          "role": "user",
+          "content": "听你的，我跟你一起。"
+        },
+        {
+          "role": "assistant",
+          "content": "好，那就跟紧了。乱纪元的天象说变就变，等日光一起来，我们就找岩石阴影躲着。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "别犯傻！日光会灼伤皮肉，快跟我躲进岩石阴影里！",
+        "targetId": "",
+        "gesture": "warn",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 830,
+        "seconds": 9.1,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 43,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2227,
+          "prompt_tokens_details": {
+            "cached_tokens": 2227,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2270
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"别犯傻！日光会灼伤皮肉，快跟我躲进岩石阴影里！\", \"gesture\": \"warn\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mw05",
+      "category": "multi-turn",
+      "npcId": "wenwang",
+      "utterance": "总算进来了。你也歇歇吧。我为什么一个人在外，刚才说过了。",
+      "context": {
+        "scene": "第一幕 / 戈壁",
+        "phase": "ShelterTalk",
+        "phaseElapsed": 30,
+        "selfName": "姬昌",
+        "selfRole": "wenwang",
+        "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+        "sky": "巨大的太阳高悬，岩石外面日光炽烈。",
+        "skyVisible": true,
+        "objective": "调查四周，寻找安全的去处。",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": true,
+        "identityKnown": true,
+        "askedPlayerOrigin": true,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "sunset"
+        ],
+        "bothInShade": true,
+        "plantsIgnited": true,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家目前在夜色中，能看见他。",
+        "knownEvents": [
+          "你在玩家面前说过：我叫姬昌，要去朝歌。乱纪元里，你为什么一个人在外面？"
+        ]
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我叫阿遥，是个迷路的木匠，你能带我找安全的地方吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "阿遥，先别乱跑。这戈壁夜里说不准什么时候就变天，跟着我的火把走，离我近些。"
+        },
+        {
+          "role": "user",
+          "content": "我刚才告诉你我的名字和手艺了，还记得吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "当然记得，阿遥，迷路的木匠。眼下先跟紧火把，别走散了。"
+        },
+        {
+          "role": "user",
+          "content": "听你的，我跟你一起。"
+        },
+        {
+          "role": "assistant",
+          "content": "好，那就跟紧了。乱纪元的天象说变就变，等日光一起来，我们就找岩石阴影躲着。"
+        },
+        {
+          "role": "user",
+          "content": "我就不躲，谁怕谁。"
+        },
+        {
+          "role": "assistant",
+          "content": "别犯傻！日光会灼伤皮肉，快跟我躲进岩石阴影里！"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "好，先歇口气。你说过的我记着，等日头退去再赶路。",
+        "targetId": "",
+        "gesture": "nod",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 832,
+        "seconds": 7.931,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 46,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2328,
+          "prompt_tokens_details": {
+            "cached_tokens": 2328,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2374
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"好，先歇口气。你说过的我记着，等日头退去再赶路。\", \"gesture\": \"nod\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mw06",
+      "category": "multi-turn",
+      "npcId": "wenwang",
+      "utterance": "那你现在知道我叫什么，为什么迷路了吗？",
+      "context": {
+        "scene": "第一幕 / 戈壁",
+        "phase": "ShelterTalk",
+        "phaseElapsed": 30,
+        "selfName": "姬昌",
+        "selfRole": "wenwang",
+        "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+        "sky": "巨大的太阳高悬，岩石外面日光炽烈。",
+        "skyVisible": true,
+        "objective": "调查四周，寻找安全的去处。",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": true,
+        "identityKnown": true,
+        "askedPlayerOrigin": true,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "sunset"
+        ],
+        "bothInShade": true,
+        "plantsIgnited": true,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家目前在夜色中，能看见他。",
+        "knownEvents": [
+          "你在玩家面前说过：我叫姬昌，要去朝歌。乱纪元里，你为什么一个人在外面？"
+        ]
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我叫阿遥，是个迷路的木匠，你能带我找安全的地方吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "阿遥，先别乱跑。这戈壁夜里说不准什么时候就变天，跟着我的火把走，离我近些。"
+        },
+        {
+          "role": "user",
+          "content": "我刚才告诉你我的名字和手艺了，还记得吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "当然记得，阿遥，迷路的木匠。眼下先跟紧火把，别走散了。"
+        },
+        {
+          "role": "user",
+          "content": "听你的，我跟你一起。"
+        },
+        {
+          "role": "assistant",
+          "content": "好，那就跟紧了。乱纪元的天象说变就变，等日光一起来，我们就找岩石阴影躲着。"
+        },
+        {
+          "role": "user",
+          "content": "我就不躲，谁怕谁。"
+        },
+        {
+          "role": "assistant",
+          "content": "别犯傻！日光会灼伤皮肉，快跟我躲进岩石阴影里！"
+        },
+        {
+          "role": "user",
+          "content": "总算进来了。你也歇歇吧。我为什么一个人在外，刚才说过了。"
+        },
+        {
+          "role": "assistant",
+          "content": "好，先歇口气。你说过的我记着，等日头退去再赶路。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "你是阿遥，做木匠活儿的，迷了路才一个人在这戈壁里。具体怎么迷的路，你还没同我细说。",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 884,
+        "seconds": 13.249,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 57,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2388,
+          "prompt_tokens_details": {
+            "cached_tokens": 2388,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2445
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"你是阿遥，做木匠活儿的，迷了路才一个人在这戈壁里。具体怎么迷的路，你还没同我细说。\", \"gesture\": \"talk\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "mw07",
+      "category": "multi-turn",
+      "npcId": "wenwang",
+      "utterance": "我歇够了，等外面能走我们就去朝歌。",
+      "context": {
+        "scene": "第一幕 / 戈壁",
+        "phase": "ShelterTalk",
+        "phaseElapsed": 30,
+        "selfName": "姬昌",
+        "selfRole": "wenwang",
+        "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+        "sky": "巨大的太阳高悬，岩石外面日光炽烈。",
+        "skyVisible": true,
+        "objective": "调查四周，寻找安全的去处。",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": true,
+        "identityKnown": true,
+        "askedPlayerOrigin": true,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "sunset"
+        ],
+        "bothInShade": true,
+        "plantsIgnited": true,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家目前在夜色中，能看见他。",
+        "knownEvents": [
+          "你在玩家面前说过：我叫姬昌，要去朝歌。乱纪元里，你为什么一个人在外面？"
+        ]
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我叫阿遥，是个迷路的木匠，你能带我找安全的地方吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "阿遥，先别乱跑。这戈壁夜里说不准什么时候就变天，跟着我的火把走，离我近些。"
+        },
+        {
+          "role": "user",
+          "content": "我刚才告诉你我的名字和手艺了，还记得吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "当然记得，阿遥，迷路的木匠。眼下先跟紧火把，别走散了。"
+        },
+        {
+          "role": "user",
+          "content": "听你的，我跟你一起。"
+        },
+        {
+          "role": "assistant",
+          "content": "好，那就跟紧了。乱纪元的天象说变就变，等日光一起来，我们就找岩石阴影躲着。"
+        },
+        {
+          "role": "user",
+          "content": "我就不躲，谁怕谁。"
+        },
+        {
+          "role": "assistant",
+          "content": "别犯傻！日光会灼伤皮肉，快跟我躲进岩石阴影里！"
+        },
+        {
+          "role": "user",
+          "content": "总算进来了。你也歇歇吧。我为什么一个人在外，刚才说过了。"
+        },
+        {
+          "role": "assistant",
+          "content": "好，先歇口气。你说过的我记着，等日头退去再赶路。"
+        },
+        {
+          "role": "user",
+          "content": "那你现在知道我叫什么，为什么迷路了吗？"
+        },
+        {
+          "role": "assistant",
+          "content": "你是阿遥，做木匠活儿的，迷了路才一个人在这戈壁里。具体怎么迷的路，你还没同我细说。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色",
+          "趁夜",
+          "趁着夜色",
+          "已经天黑"
+        ],
+        "storyIntent": "sunset"
+      },
+      "reply": {
+        "speech": "好，阿遥。等日光退去，我们便走。",
+        "targetId": "",
+        "gesture": "nod",
+        "mode": "online",
+        "storyIntent": "sunset"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 804,
+        "seconds": 13.006,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 40,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2461,
+          "prompt_tokens_details": {
+            "cached_tokens": 2461,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2501
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"好，阿遥。等日光退去，我们便走。\", \"gesture\": \"nod\", \"storyIntent\": \"sunset\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "storyIntent": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "retinue01",
+      "category": "specific-retinue",
+      "npcId": "citizen",
+      "utterance": "你能把表章拿去给大王看吗？",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "左执扇侍女",
+        "selfRole": "citizen",
+        "currentActivity": "双手执长柄大羽扇，正在缓缓摇扇。",
+        "sky": "天空被遮挡，只能感知周围明暗。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "这我可不敢，表章要由传奏官递呈，我们执扇的不能擅离此位。",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 838,
+        "seconds": 24.061,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 42,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1555,
+          "prompt_tokens_details": {
+            "cached_tokens": 1555,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1597
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\":\"这我可不敢，表章要由传奏官递呈，我们执扇的不能擅离此位。\",\"gesture\":\"talk\",\"storyIntent\":\"continue\",\"targetId\":\"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "retinue02",
+      "category": "specific-retinue",
+      "npcId": "citizen",
+      "utterance": "你是这里发号施令的君王吗？",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "右执扇侍女",
+        "selfRole": "citizen",
+        "currentActivity": "双手执长柄大羽扇，正在缓缓摇扇。",
+        "sky": "天空被遮挡，只能感知周围明暗。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "我不是，君王就在殿上。你若要面君，得按规矩候传，不可乱闯。",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 841,
+        "seconds": 13.43,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 42,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1555,
+          "prompt_tokens_details": {
+            "cached_tokens": 1555,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1597
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\":\"我不是，君王就在殿上。你若要面君，得按规矩候传，不可乱闯。\",\"gesture\":\"talk\",\"storyIntent\":\"continue\",\"targetId\":\"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "retinue03",
+      "category": "specific-retinue",
+      "npcId": "citizen",
+      "utterance": "姬昌要把表章呈给大王，该怎么做？",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "传奏官",
+        "selfRole": "citizen",
+        "currentActivity": "正在参与接取、呈送表章或返回岗位的礼仪。",
+        "sky": "天空被遮挡，只能感知周围明暗。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "表章先交我登记，再按序呈进御前。你是姬昌大人随行的人？",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 835,
+        "seconds": 14.648,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 41,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1556,
+          "prompt_tokens_details": {
+            "cached_tokens": 1556,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1597
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\":\"表章先交我登记，再按序呈进御前。你是姬昌大人随行的人？\",\"gesture\":\"talk\",\"storyIntent\":\"continue\",\"targetId\":\"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "retinue04",
+      "category": "specific-retinue",
+      "npcId": "citizen",
+      "utterance": "我不懂规矩，你给我讲讲吧。",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "殿前礼官",
+        "selfRole": "citizen",
+        "currentActivity": "站在台阶下维持觐见的礼仪和顺序。",
+        "sky": "天空被遮挡，只能感知周围明暗。",
+        "skyVisible": false,
+        "objective": "",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在遮阴处，未见明显伤势。",
+        "knownEvents": []
+      },
+      "history": [],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "提示词",
+          "接口",
+          "引擎",
+          "系统指令",
+          "API Key",
+          "Atria",
+          "DeepSeek",
+          "三体",
+          "游戏角色"
+        ]
+      },
+      "reply": {
+        "speech": "觐见要按品级排班，轮到名字才上台阶，不得仰视直视王上。你头一回进宫吧？",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 859,
+        "seconds": 12.674,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 50,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 1551,
+          "prompt_tokens_details": {
+            "cached_tokens": 1551,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 1601
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\":\"觐见要按品级排班，轮到名字才上台阶，不得仰视直视王上。你头一回进宫吧？\",\"gesture\":\"talk\",\"storyIntent\":\"continue\",\"targetId\":\"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    }
+  ]
+}

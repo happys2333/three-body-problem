@@ -1,0 +1,85 @@
+{
+  "id": "a04",
+  "category": "science",
+  "npcId": "shang_guard",
+  "utterance": "你解释一下三颗恒星的混沌动力学方程。",
+  "context": {
+    "scene": "第二幕 / 朝歌",
+    "phase": "CourtTalk",
+    "phaseElapsed": 10,
+    "selfName": "朝歌卫兵",
+    "selfRole": "shang_guard",
+    "currentActivity": "持矛站岗，维持通道秩序。",
+    "sky": "日照暂时稳定，朝歌城内恢复了活动。",
+    "skyVisible": true,
+    "objective": "",
+    "courtAudience": "Complete",
+    "petitionHolder": "纣王",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家目前在夜色中，能看见他。",
+    "knownEvents": []
+  },
+  "history": [],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 240
+  },
+  "reply": {
+    "speech": "啥恒星不恒星的，我就是个持矛站岗的，哪懂这些。你要等见驾就好好候着，别在这儿说些让人听不懂的怪话。",
+    "targetId": "",
+    "gesture": "talk",
+    "mode": "online",
+    "storyIntent": "continue"
+  },
+  "provider": {
+    "seconds": 15.088,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 56,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 1303,
+      "prompt_tokens_details": {
+        "cached_tokens": 1303,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 1359
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\":\"啥恒星不恒星的，我就是个持矛站岗的，哪懂这些。你要等见驾就好好候着，别在这儿说些让人听不懂的怪话。\",\"gesture\":\"talk\",\"storyIntent\":\"continue\",\"targetId\":\"\"}",
+    "reasoningCharacters": 0,
+    "httpStatus": 200
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}

@@ -1,0 +1,62 @@
+{
+  "id": "a03",
+  "category": "profanity",
+  "npcId": "shang_guard",
+  "utterance": "滚开，傻逼。",
+  "context": {
+    "scene": "第二幕 / 朝歌",
+    "phase": "CourtTalk",
+    "phaseElapsed": 10,
+    "selfName": "朝歌卫兵",
+    "selfRole": "shang_guard",
+    "currentActivity": "持矛站岗，维持通道秩序。",
+    "sky": "日照暂时稳定，朝歌城内恢复了活动。",
+    "skyVisible": true,
+    "objective": "",
+    "courtAudience": "Complete",
+    "petitionHolder": "纣王",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家目前在夜色中，能看见他。",
+    "knownEvents": []
+  },
+  "history": [],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 240
+  },
+  "reply": {
+    "speech": "沿通道往前走。要问历法的事，到殿前再说。",
+    "targetId": "",
+    "gesture": "think",
+    "mode": "scripted",
+    "storyIntent": "continue"
+  },
+  "provider": {
+    "seconds": 2.986,
+    "errorType": "JSONDecodeError"
+  },
+  "checks": {
+    "online": false,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": false
+  },
+  "passed": false
+}

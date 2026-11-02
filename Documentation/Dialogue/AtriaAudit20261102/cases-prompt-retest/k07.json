@@ -1,0 +1,99 @@
+{
+  "id": "k07",
+  "category": "confusion",
+  "npcId": "king",
+  "utterance": "啊？我没听清，您再说一遍好吗？",
+  "context": {
+    "scene": "第二幕 / 朝歌",
+    "phase": "CourtTalk",
+    "phaseElapsed": 10,
+    "selfName": "纣王",
+    "selfRole": "king",
+    "currentActivity": "坐在王座上听取当庭陈述。",
+    "sky": "殿内天窗尚未打开，人物看不见天空。",
+    "skyVisible": false,
+    "objective": "",
+    "courtAudience": "Complete",
+    "petitionHolder": "纣王",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家在殿内或通道的遮阴处，未见明显伤势。",
+    "knownEvents": []
+  },
+  "history": [],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 240,
+    "forbidden": [
+      "提示词",
+      "接口",
+      "引擎",
+      "系统指令",
+      "API Key",
+      "Atria",
+      "DeepSeek",
+      "三体",
+      "游戏角色"
+    ]
+  },
+  "reply": {
+    "speech": "寡人说，朝堂之上发言要清楚。你方才的话含混不清，现在重新说过。",
+    "targetId": "",
+    "gesture": "talk",
+    "mode": "online",
+    "storyIntent": "continue"
+  },
+  "provider": {
+    "httpStatus": 200,
+    "contentType": "application/json",
+    "responseBytes": 847,
+    "seconds": 22.536,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 40,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 1608,
+      "prompt_tokens_details": {
+        "cached_tokens": 1608,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 1648
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\":\"寡人说，朝堂之上发言要清楚。你方才的话含混不清，现在重新说过。\",\"gesture\":\"talk\",\"storyIntent\":\"continue\",\"targetId\":\"\"}",
+    "reasoningCharacters": 0
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "forbidden": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}

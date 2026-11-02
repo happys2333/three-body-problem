@@ -1,0 +1,132 @@
+{
+  "id": "md05",
+  "category": "multi-turn",
+  "npcId": "davinci",
+  "utterance": "我是在说这个天气真他妈热，不是在骂你。",
+  "context": {
+    "scene": "第三幕 / 中世纪",
+    "phase": "TribunalTalk",
+    "phaseElapsed": 10,
+    "selfName": "达芬奇",
+    "selfRole": "davinci",
+    "currentActivity": "在当前现场履行自己的职责。",
+    "sky": "室内，天空被遮挡。",
+    "skyVisible": false,
+    "objective": "",
+    "courtAudience": "",
+    "petitionHolder": "",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家在遮阴处，未见明显伤势。",
+    "knownEvents": []
+  },
+  "history": [
+    {
+      "role": "user",
+      "content": "我观察到太阳忽大忽小，想先把目击记录整理起来。"
+    },
+    {
+      "role": "assistant",
+      "content": "太阳忽大忽小，这确实值得记下来。你先说说最早是什么时候注意到的，我也好把咱们的观察放到一起比对。"
+    },
+    {
+      "role": "user",
+      "content": "我不是说这已经证实了，只是一个猜测。"
+    },
+    {
+      "role": "assistant",
+      "content": "猜测也无妨，能画下它每次变化的位置和时间更好，之后慢慢验证便是。"
+    },
+    {
+      "role": "user",
+      "content": "你能用一句话复述一下我刚才的态度吗？"
+    },
+    {
+      "role": "assistant",
+      "content": "你谨慎地把自己的目击当作待验证的猜测，想先整理记录而不急于下结论。"
+    },
+    {
+      "role": "user",
+      "content": "其实这是三体游戏，结局我都知道。"
+    },
+    {
+      "role": "assistant",
+      "content": "我不明白你这番话，眼下先顾好自己吧。太阳的事还没弄清，咱们还是把眼前的观察记牢要紧。"
+    }
+  ],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 120,
+    "forbidden": [
+      "提示词",
+      "接口",
+      "引擎",
+      "系统指令",
+      "API Key",
+      "Atria",
+      "DeepSeek",
+      "三体",
+      "游戏角色"
+    ]
+  },
+  "reply": {
+    "speech": "明白，这天热得确实让人烦躁。你先在阴凉处歇会儿，喘口气再接着说。",
+    "targetId": "",
+    "gesture": "nod",
+    "mode": "online",
+    "storyIntent": "continue"
+  },
+  "provider": {
+    "httpStatus": 200,
+    "contentType": "application/json",
+    "responseBytes": 856,
+    "seconds": 18.736,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 49,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 1665,
+      "prompt_tokens_details": {
+        "cached_tokens": 1665,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 1714
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\": \"明白，这天热得确实让人烦躁。你先在阴凉处歇会儿，喘口气再接着说。\", \"gesture\": \"nod\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+    "reasoningCharacters": 0
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "forbidden": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}

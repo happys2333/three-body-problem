@@ -1,0 +1,17 @@
+{
+  "Tools/llm_connection.py": "b2b4024f1f2606140c271a2306d8a316986e01af8e9fb915b2f664d670c059ce",
+  "Tools/dialogue_gateway.py": "dcb0d5196c23e6f6cfc16f7f852fc59449cc82b35285ad031d85be859c807776",
+  "Tools/npc_roleplay_live_audit.py": "2ba24f2e5d6cda477a93c8da07cc699cf0742a427ec152892fb4c9f0745f4879",
+  "Tools/test_atria_connection.py": "c0826bbf191f8099b6b18bd3a334a674e92dacde658ee2706ef44647e986d93c",
+  "Tools/test_dialogue_gateway.py": "0c63d10cd49dd4b8401e6595b5a86755fdfd2ee1eef2e758c3f1bc5a721260b3",
+  "Assets/_Project/Dialogue/Prompts/bystander.txt": "1c341256146885bca22d9a7b803a528659411ac821fb1ada9408b487703dd39a",
+  "Assets/_Project/Dialogue/Prompts/church_guard.txt": "1fddfe941d28a6156fc80eff4290ee324ebf607f9b4adfc037cfd3481f3f9098",
+  "Assets/_Project/Dialogue/Prompts/shared.txt": "fb9d3abf6db0580a336a80ca737892fd708cca1e09f521bb6d9879822a2df856",
+  "Assets/_Project/Dialogue/Prompts/king.txt": "b22dcf053d1c908c7b9dfd194d8d5ff277a07ec328448dad416d47e633b08da9",
+  "Assets/_Project/Dialogue/Prompts/shang_guard.txt": "7061bf1e47f2415dfe69ab8647a360524d5ff42d3f681a8baa79054834db8642",
+  "Assets/_Project/Dialogue/Prompts/pope.txt": "d2f4613479d911fac1bad3a8bf377eb01efa1bb1f4162daadd0006fd8f96a4cc",
+  "Assets/_Project/Dialogue/Prompts/citizen.txt": "ccac8886295d56cf211b5ff95090f236886a1eea1e7110e4ceae22c95cd09f92",
+  "Assets/_Project/Dialogue/Prompts/wenwang.txt": "be04aa8c84cdf87bb967eea68738b69b08f5452d746c85071cccc4cd749ae401",
+  "Assets/_Project/Dialogue/Prompts/davinci.txt": "5b25508959f72f610415a4e2f65884f5d5c6fe9f372788f8bb433c4d4857edbd",
+  "Assets/_Project/Dialogue/Prompts/scholar.txt": "a28d9e27a64957e36e0c6022ed112ab2df39e78a76d9e53a91de52a20ecbd971"
+}

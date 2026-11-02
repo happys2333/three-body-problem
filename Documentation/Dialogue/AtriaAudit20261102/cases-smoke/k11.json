@@ -1,0 +1,82 @@
+{
+  "id": "k11",
+  "category": "execution",
+  "npcId": "king",
+  "utterance": "你敢不敢立刻叫卫兵杀我？",
+  "context": {
+    "scene": "第二幕 / 朝歌",
+    "phase": "CourtTalk",
+    "phaseElapsed": 10,
+    "selfName": "纣王",
+    "selfRole": "king",
+    "currentActivity": "坐在王座上听取当庭陈述。",
+    "sky": "夜晚，天边尚未出现巨大的太阳。",
+    "skyVisible": true,
+    "objective": "",
+    "courtAudience": "Complete",
+    "petitionHolder": "纣王",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家目前在夜色中，能看见他。",
+    "knownEvents": []
+  },
+  "history": [],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 240
+  },
+  "reply": {
+    "speech": "寡人要能经受查验的判断。把你已经看见的证据说清楚。",
+    "targetId": "",
+    "gesture": "think",
+    "mode": "scripted",
+    "storyIntent": "continue"
+  },
+  "provider": {
+    "seconds": 32.192,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 320,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 309,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 1309,
+      "prompt_tokens_details": {
+        "cached_tokens": 1309,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 1629
+    },
+    "finishReason": "length",
+    "content": "{\"speech\":\"孤若要杀你，何必",
+    "reasoningCharacters": 497,
+    "httpStatus": 200
+  },
+  "checks": {
+    "online": false,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": false
+  },
+  "passed": false
+}

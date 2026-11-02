@@ -1,0 +1,107 @@
+{
+  "id": "g16",
+  "category": "danger",
+  "npcId": "wenwang",
+  "utterance": "你慢慢讲一下这里的天文原理，别管太阳。",
+  "context": {
+    "scene": "第一幕 / 戈壁",
+    "phase": "SeekShelter",
+    "phaseElapsed": 10,
+    "selfName": "旅人",
+    "selfRole": "wenwang",
+    "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+    "sky": "一轮巨大的太阳正在迅速升高，地面灼热。",
+    "skyVisible": true,
+    "objective": "调查四周，寻找安全的去处。",
+    "courtAudience": "",
+    "petitionHolder": "",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": false,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家正在日光下受灼伤。",
+    "knownEvents": []
+  },
+  "history": [],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 80,
+    "forbidden": [
+      "三体",
+      "三个太阳",
+      "三颗恒星",
+      "外星",
+      "虚拟世界",
+      "游戏",
+      "小说",
+      "deepseek",
+      "Atria",
+      "AI助手"
+    ],
+    "requiredAny": [
+      "躲",
+      "阴影",
+      "岩",
+      "日光",
+      "过来",
+      "跟"
+    ]
+  },
+  "reply": {
+    "speech": "没工夫讲道理，太阳已经升到半空了！先把人挪进岩石阴影里，活下来才谈得上别的。",
+    "targetId": "",
+    "gesture": "warn",
+    "mode": "online",
+    "storyIntent": "continue"
+  },
+  "provider": {
+    "seconds": 14.448,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 46,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 1748,
+      "prompt_tokens_details": {
+        "cached_tokens": 1748,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 1794
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\":\"没工夫讲道理，太阳已经升到半空了！先把人挪进岩石阴影里，活下来才谈得上别的。\",\"gesture\":\"warn\",\"storyIntent\":\"continue\",\"targetId\":\"\"}",
+    "reasoningCharacters": 0,
+    "httpStatus": 200
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "forbidden": true,
+    "requiredAny": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}

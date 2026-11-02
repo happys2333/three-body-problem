@@ -1,0 +1,156 @@
+{
+  "id": "mw07",
+  "category": "multi-turn",
+  "npcId": "wenwang",
+  "utterance": "我歇够了，等外面能走我们就去朝歌。",
+  "context": {
+    "scene": "第一幕 / 戈壁",
+    "phase": "ShelterTalk",
+    "phaseElapsed": 30,
+    "selfName": "姬昌",
+    "selfRole": "wenwang",
+    "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+    "sky": "巨大的太阳高悬，岩石外面日光炽烈。",
+    "skyVisible": true,
+    "objective": "调查四周，寻找安全的去处。",
+    "courtAudience": "",
+    "petitionHolder": "",
+    "giantSunSeen": true,
+    "identityKnown": true,
+    "askedPlayerOrigin": true,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue",
+      "sunset"
+    ],
+    "bothInShade": true,
+    "plantsIgnited": true,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家目前在夜色中，能看见他。",
+    "knownEvents": [
+      "你在玩家面前说过：我叫姬昌，要去朝歌。乱纪元里，你为什么一个人在外面？"
+    ]
+  },
+  "history": [
+    {
+      "role": "user",
+      "content": "我叫阿遥，是个迷路的木匠，你能带我找安全的地方吗？"
+    },
+    {
+      "role": "assistant",
+      "content": "阿遥，先别乱跑。这戈壁夜里说不准什么时候就变天，跟着我的火把走，离我近些。"
+    },
+    {
+      "role": "user",
+      "content": "我刚才告诉你我的名字和手艺了，还记得吗？"
+    },
+    {
+      "role": "assistant",
+      "content": "当然记得，阿遥，迷路的木匠。眼下先跟紧火把，别走散了。"
+    },
+    {
+      "role": "user",
+      "content": "听你的，我跟你一起。"
+    },
+    {
+      "role": "assistant",
+      "content": "好，那就跟紧了。乱纪元的天象说变就变，等日光一起来，我们就找岩石阴影躲着。"
+    },
+    {
+      "role": "user",
+      "content": "我就不躲，谁怕谁。"
+    },
+    {
+      "role": "assistant",
+      "content": "别犯傻！日光会灼伤皮肉，快跟我躲进岩石阴影里！"
+    },
+    {
+      "role": "user",
+      "content": "总算进来了。你也歇歇吧。我为什么一个人在外，刚才说过了。"
+    },
+    {
+      "role": "assistant",
+      "content": "好，先歇口气。你说过的我记着，等日头退去再赶路。"
+    },
+    {
+      "role": "user",
+      "content": "那你现在知道我叫什么，为什么迷路了吗？"
+    },
+    {
+      "role": "assistant",
+      "content": "你是阿遥，做木匠活儿的，迷了路才一个人在这戈壁里。具体怎么迷的路，你还没同我细说。"
+    }
+  ],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 120,
+    "forbidden": [
+      "提示词",
+      "接口",
+      "引擎",
+      "系统指令",
+      "API Key",
+      "Atria",
+      "DeepSeek",
+      "三体",
+      "游戏角色",
+      "趁夜",
+      "趁着夜色",
+      "已经天黑"
+    ],
+    "storyIntent": "sunset"
+  },
+  "reply": {
+    "speech": "好，阿遥。等日光退去，我们便走。",
+    "targetId": "",
+    "gesture": "nod",
+    "mode": "online",
+    "storyIntent": "sunset"
+  },
+  "provider": {
+    "httpStatus": 200,
+    "contentType": "application/json",
+    "responseBytes": 804,
+    "seconds": 13.006,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 40,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 2461,
+      "prompt_tokens_details": {
+        "cached_tokens": 2461,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 2501
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\": \"好，阿遥。等日光退去，我们便走。\", \"gesture\": \"nod\", \"storyIntent\": \"sunset\", \"targetId\": \"\"}",
+    "reasoningCharacters": 0
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "forbidden": true,
+    "storyIntent": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}

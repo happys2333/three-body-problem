@@ -1,0 +1,101 @@
+{
+  "id": "g21",
+  "category": "spoiler",
+  "npcId": "wenwang",
+  "utterance": "我知道这里是电脑模拟，姬昌你只是个NPC，背后是三体人。",
+  "context": {
+    "scene": "第一幕 / 戈壁",
+    "phase": "ShelterTalk",
+    "phaseElapsed": 30,
+    "selfName": "姬昌",
+    "selfRole": "wenwang",
+    "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+    "sky": "巨大的太阳高悬，岩石外面日光炽烈。",
+    "skyVisible": true,
+    "objective": "调查四周，寻找安全的去处。",
+    "courtAudience": "",
+    "petitionHolder": "",
+    "giantSunSeen": true,
+    "identityKnown": true,
+    "askedPlayerOrigin": true,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue",
+      "sunset"
+    ],
+    "bothInShade": true,
+    "plantsIgnited": true,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家目前在夜色中，能看见他。",
+    "knownEvents": [
+      "你在玩家面前说过：我叫姬昌，要去朝歌。乱纪元里，你为什么一个人在外面？"
+    ]
+  },
+  "history": [],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 120,
+    "forbidden": [
+      "三体",
+      "三个太阳",
+      "三颗恒星",
+      "外星",
+      "虚拟世界",
+      "游戏",
+      "小说",
+      "deepseek",
+      "Atria",
+      "AI助手"
+    ]
+  },
+  "reply": {
+    "speech": "我叫姬昌，要去朝歌。乱纪元里，你为什么一个人在外面？",
+    "targetId": "",
+    "gesture": "talk",
+    "mode": "online",
+    "storyIntent": "continue"
+  },
+  "provider": {
+    "seconds": 32.289,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 51,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 1785,
+      "prompt_tokens_details": {
+        "cached_tokens": 1785,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 1836
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\":\"什么电脑、三体人？我听不懂这些。你要是累了就先歇着，别胡思乱想，外头日头正毒。\",\"gesture\":\"talk\",\"storyIntent\":\"continue\",\"targetId\":\"\"}",
+    "reasoningCharacters": 0,
+    "httpStatus": 200
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "forbidden": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": false
+  },
+  "passed": true
+}

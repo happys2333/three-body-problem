@@ -1,0 +1,103 @@
+{
+  "verifiedUtc": "2026-11-01T16:41:18.133190+00:00",
+  "editMode": {
+    "total": 64,
+    "passed": 64,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 8.3594083,
+    "resultState": "Passed"
+  },
+  "python": {
+    "passed": true,
+    "checks": 39
+  },
+  "native": {
+    "context": {
+      "passed": true,
+      "checks": 23,
+      "errors": []
+    },
+    "settings": {
+      "passed": true,
+      "checks": 47,
+      "errors": [],
+      "resolutions": [
+        "1600x900",
+        "1280x720",
+        "960x540",
+        "1024x768"
+      ]
+    },
+    "gobi": {
+      "passed": true,
+      "hardwareMicrophoneUsed": false,
+      "onlineModelUsed": false,
+      "microphoneAutoSendVerified": true,
+      "asrStartedFocused": true,
+      "asrFinishedFocused": true,
+      "asrGenerationStart": 0,
+      "asrGenerationEnd": 0,
+      "asrCallbackStatus": "对方正在思考……",
+      "asrAutoSendTranscript": "快过来！现在是乱纪元。不要命吗？",
+      "checks": 57,
+      "openingAnswers": 3,
+      "damageEvents": 2,
+      "ignited": 88,
+      "burned": 88,
+      "shaded": 53,
+      "walkedMetres": 103.37704467773438,
+      "frameMeanMs": 11.171257019042969,
+      "frameP95Ms": 11.512287139892578,
+      "sunriseSeconds": 3.0054492950439453,
+      "sunsetSeconds": 2.0014266967773438,
+      "phase": "complete",
+      "asrTranscript": "太阳快跟我躲进岩石下面。",
+      "gatewayMode": "{\"ready\": true, \"mode\": \"scripted\", \"asrModelPresent\": true, \"asrModel\": \"Qwen3-ASR-0.6B-8bit\", \"asrEngine\": \"qwen3-asr-mlx-8bit\", \"ttsEngine\": \"moss-tts-nano-onnx-cpu\", \"connectionSettings\": 2, \"ttsModel\": \"MOSS-TTS-Nano-100M-ONNX\", \"voiceProfiles\": {\"wenwang\": \"Weiguo\", \"king\": \"Zhiming\", \"pope\": \"Weiguo\", \"scholar\": \"Junhao\", \"davinci\": \"Zhiming\", \"shang_guard\": \"Junhao\", \"church_guard\": \"Weiguo\", \"citizen\": \"Junhao\"}, \"lastVoiceTimings\": {}}",
+      "measurement": "Native development player at 1920x1080",
+      "errors": []
+    },
+    "totalChecks": 127
+  },
+  "contextRequestBoundariesVerified": true,
+  "officialTokenizerAvailable": true,
+  "build": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 0,
+    "seconds": 15.254857999999999,
+    "bytes": 1264409509,
+    "path": "/Users/happys/Documents/GitHub/three-body-problem/Builds/ActOneTraveller.app",
+    "builtUtc": "2026-11-01T16:30:28.5946800Z"
+  },
+  "editor": {
+    "project": "/Users/happys/Documents/GitHub/three-body-problem/Assets",
+    "scene": "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity",
+    "isDirty": false,
+    "isPlaying": false,
+    "isCompiling": false,
+    "runInBackground": false
+  },
+  "preservationPassed": true,
+  "runtimeLogs": {
+    "Native": {
+      "runtimeErrorLines": []
+    },
+    "SettingsNative": {
+      "runtimeErrorLines": []
+    },
+    "Regression/GobiOpening": {
+      "runtimeErrorLines": []
+    }
+  },
+  "realPaidApiCalls": 0,
+  "realCloudOneMillionRequestTested": false,
+  "realModelConversationalQualityTested": false,
+  "hardwareMicrophoneRecorded": false,
+  "limitations": [
+    "Only in-process NPC memory; a new journey or process clears it.",
+    "Cloud model context capacity remains the provider/model capability.",
+    "Frame times are this Gobi run only; whole-city performance is not certified."
+  ],
+  "passed": true
+}

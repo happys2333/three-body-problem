@@ -1,0 +1,81 @@
+{
+  "baseUrl": "https://discovery-api.intern-ai.org.cn/v1",
+  "requestedModel": "Atria-Dawn",
+  "connectionChecks": [
+    {
+      "httpStatus": 200,
+      "contentType": "application/json",
+      "responseBytes": 675,
+      "seconds": 5.83,
+      "model": "Atria-Dawn",
+      "usage": {
+        "completion_tokens": 6,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens": 23,
+        "prompt_tokens_details": {
+          "cached_tokens": 23,
+          "created_cache_tokens": 0,
+          "multimodal_tokens": null
+        },
+        "total_tokens": 29
+      },
+      "finishReason": "stop",
+      "content": "{\"ok\":true}",
+      "reasoningCharacters": 0,
+      "parsed": {
+        "ok": true
+      },
+      "maxTokens": 32
+    },
+    {
+      "httpStatus": 200,
+      "contentType": "application/json",
+      "responseBytes": 675,
+      "seconds": 8.625,
+      "model": "Atria-Dawn",
+      "usage": {
+        "completion_tokens": 6,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": null
+        },
+        "prompt_tokens": 23,
+        "prompt_tokens_details": {
+          "cached_tokens": 23,
+          "created_cache_tokens": 0,
+          "multimodal_tokens": null
+        },
+        "total_tokens": 29
+      },
+      "finishReason": "stop",
+      "content": "{\"ok\":true}",
+      "reasoningCharacters": 0,
+      "parsed": {
+        "ok": true
+      },
+      "maxTokens": 320
+    }
+  ],
+  "availableModels": [
+    "Agents-A1",
+    "Atria-Dawn",
+    "Atria-Dawn-Preview",
+    "Sage-A1.5",
+    "deepseek-v4-flash-0731",
+    "deepseek-v4-flash-vision",
+    "deepseek-v4-pro-0813",
+    "deepseek-v4.1-flash-1017",
+    "glm-5.3",
+    "intern-s2",
+    "kimi-k2.6",
+    "minimax-m3",
+    "qwen3.8-27b"
+  ]
+}

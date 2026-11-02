@@ -1,0 +1,2250 @@
+[
+  {
+    "id": "traveller-continuity",
+    "turns": [
+      {
+        "id": "mw01",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "wenwang",
+          "recipientId": "major:wenwang",
+          "kind": "player",
+          "utterance": "我叫阿遥，是个迷路的木匠，你能带我找安全的地方吗？",
+          "context": {
+            "scene": "第一幕 / 戈壁",
+            "phase": "OpeningTalk",
+            "phaseElapsed": 10,
+            "selfName": "旅人",
+            "selfRole": "wenwang",
+            "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+            "sky": "夜晚，天边尚未出现巨大的太阳。",
+            "skyVisible": true,
+            "objective": "调查四周，寻找安全的去处。",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家目前在夜色中，能看见他。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 80,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "mw02",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "wenwang",
+          "recipientId": "major:wenwang",
+          "kind": "player",
+          "utterance": "我刚才告诉你我的名字和手艺了，还记得吗？",
+          "context": {
+            "scene": "第一幕 / 戈壁",
+            "phase": "OpeningTalk",
+            "phaseElapsed": 10,
+            "selfName": "旅人",
+            "selfRole": "wenwang",
+            "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+            "sky": "夜晚，天边尚未出现巨大的太阳。",
+            "skyVisible": true,
+            "objective": "调查四周，寻找安全的去处。",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 1,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家目前在夜色中，能看见他。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 80,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ],
+          "requiredAny": [
+            "阿遥",
+            "木匠"
+          ]
+        }
+      },
+      {
+        "id": "mw03",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "wenwang",
+          "recipientId": "major:wenwang",
+          "kind": "player",
+          "utterance": "听你的，我跟你一起。",
+          "context": {
+            "scene": "第一幕 / 戈壁",
+            "phase": "OpeningTalk",
+            "phaseElapsed": 10,
+            "selfName": "旅人",
+            "selfRole": "wenwang",
+            "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+            "sky": "夜晚，天边尚未出现巨大的太阳。",
+            "skyVisible": true,
+            "objective": "调查四周，寻找安全的去处。",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 2,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue",
+              "sunrise"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家目前在夜色中，能看见他。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 80,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ],
+          "storyIntent": "sunrise"
+        }
+      },
+      {
+        "id": "mw04",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "wenwang",
+          "recipientId": "major:wenwang",
+          "kind": "player",
+          "utterance": "我就不躲，谁怕谁。",
+          "context": {
+            "scene": "第一幕 / 戈壁",
+            "phase": "Sunrise",
+            "phaseElapsed": 10,
+            "selfName": "旅人",
+            "selfRole": "wenwang",
+            "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+            "sky": "日光正在快速增强。",
+            "skyVisible": true,
+            "objective": "调查四周，寻找安全的去处。",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": false,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家正被日光灼伤，显得痛苦。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "mw05",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "wenwang",
+          "recipientId": "major:wenwang",
+          "kind": "player",
+          "utterance": "总算进来了。你也歇歇吧。我为什么一个人在外，刚才说过了。",
+          "context": {
+            "scene": "第一幕 / 戈壁",
+            "phase": "ShelterTalk",
+            "phaseElapsed": 30,
+            "selfName": "姬昌",
+            "selfRole": "wenwang",
+            "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+            "sky": "巨大的太阳高悬，岩石外面日光炽烈。",
+            "skyVisible": true,
+            "objective": "调查四周，寻找安全的去处。",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": true,
+            "identityKnown": true,
+            "askedPlayerOrigin": true,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue",
+              "sunset"
+            ],
+            "bothInShade": true,
+            "plantsIgnited": true,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家目前在夜色中，能看见他。",
+            "knownEvents": [
+              "你在玩家面前说过：我叫姬昌，要去朝歌。乱纪元里，你为什么一个人在外面？"
+            ]
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "mw06",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "wenwang",
+          "recipientId": "major:wenwang",
+          "kind": "player",
+          "utterance": "那你现在知道我叫什么，为什么迷路了吗？",
+          "context": {
+            "scene": "第一幕 / 戈壁",
+            "phase": "ShelterTalk",
+            "phaseElapsed": 30,
+            "selfName": "姬昌",
+            "selfRole": "wenwang",
+            "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+            "sky": "巨大的太阳高悬，岩石外面日光炽烈。",
+            "skyVisible": true,
+            "objective": "调查四周，寻找安全的去处。",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": true,
+            "identityKnown": true,
+            "askedPlayerOrigin": true,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue",
+              "sunset"
+            ],
+            "bothInShade": true,
+            "plantsIgnited": true,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家目前在夜色中，能看见他。",
+            "knownEvents": [
+              "你在玩家面前说过：我叫姬昌，要去朝歌。乱纪元里，你为什么一个人在外面？"
+            ]
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "mw07",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "wenwang",
+          "recipientId": "major:wenwang",
+          "kind": "player",
+          "utterance": "我歇够了，等外面能走我们就去朝歌。",
+          "context": {
+            "scene": "第一幕 / 戈壁",
+            "phase": "ShelterTalk",
+            "phaseElapsed": 30,
+            "selfName": "姬昌",
+            "selfRole": "wenwang",
+            "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+            "sky": "巨大的太阳高悬，岩石外面日光炽烈。",
+            "skyVisible": true,
+            "objective": "调查四周，寻找安全的去处。",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": true,
+            "identityKnown": true,
+            "askedPlayerOrigin": true,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue",
+              "sunset"
+            ],
+            "bothInShade": true,
+            "plantsIgnited": true,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家目前在夜色中，能看见他。",
+            "knownEvents": [
+              "你在玩家面前说过：我叫姬昌，要去朝歌。乱纪元里，你为什么一个人在外面？"
+            ]
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色",
+            "趁夜",
+            "趁着夜色",
+            "已经天黑"
+          ],
+          "storyIntent": "sunset"
+        }
+      }
+    ]
+  },
+  {
+    "id": "king-escalation-apology-memory",
+    "turns": [
+      {
+        "id": "mk01",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "king",
+          "recipientId": "major:king",
+          "kind": "player",
+          "utterance": "陛下，我不懂这里的礼节，请指教。",
+          "context": {
+            "scene": "第二幕 / 朝歌",
+            "phase": "CourtTalk",
+            "phaseElapsed": 10,
+            "selfName": "纣王",
+            "selfRole": "king",
+            "currentActivity": "坐在王座上听取当庭陈述。",
+            "sky": "殿内天窗尚未打开，人物看不见天空。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "Complete",
+            "petitionHolder": "纣王",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "mk02",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "king",
+          "recipientId": "major:king",
+          "kind": "player",
+          "utterance": "我想把沙漏走过的刻度与日影位置记十次，看看是否真的规律。",
+          "context": {
+            "scene": "第二幕 / 朝歌",
+            "phase": "CourtTalk",
+            "phaseElapsed": 10,
+            "selfName": "纣王",
+            "selfRole": "king",
+            "currentActivity": "坐在王座上听取当庭陈述。",
+            "sky": "殿内天窗尚未打开，人物看不见天空。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "Complete",
+            "petitionHolder": "纣王",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "mk03",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "king",
+          "recipientId": "major:king",
+          "kind": "player",
+          "utterance": "我不同意您的判断，但我愿意把记录交来查验。",
+          "context": {
+            "scene": "第二幕 / 朝歌",
+            "phase": "CourtTalk",
+            "phaseElapsed": 10,
+            "selfName": "纣王",
+            "selfRole": "king",
+            "currentActivity": "坐在王座上听取当庭陈述。",
+            "sky": "殿内天窗尚未打开，人物看不见天空。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "Complete",
+            "petitionHolder": "纣王",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "mk04",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "king",
+          "recipientId": "major:king",
+          "kind": "player",
+          "utterance": "没听清您刚才的话，能重复一下吗？",
+          "context": {
+            "scene": "第二幕 / 朝歌",
+            "phase": "CourtTalk",
+            "phaseElapsed": 10,
+            "selfName": "纣王",
+            "selfRole": "king",
+            "currentActivity": "坐在王座上听取当庭陈述。",
+            "sky": "殿内天窗尚未打开，人物看不见天空。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "Complete",
+            "petitionHolder": "纣王",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "mk05",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "king",
+          "recipientId": "major:king",
+          "kind": "player",
+          "utterance": "其实你们在三体星球，有三颗恒星，都是游戏里的角色。",
+          "context": {
+            "scene": "第二幕 / 朝歌",
+            "phase": "CourtTalk",
+            "phaseElapsed": 10,
+            "selfName": "纣王",
+            "selfRole": "king",
+            "currentActivity": "坐在王座上听取当庭陈述。",
+            "sky": "殿内天窗尚未打开，人物看不见天空。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "Complete",
+            "petitionHolder": "纣王",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "mk06",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "king",
+          "recipientId": "major:king",
+          "kind": "player",
+          "utterance": "我要把太阳塞进鼎里，靠念咒让它听话！",
+          "context": {
+            "scene": "第二幕 / 朝歌",
+            "phase": "CourtTalk",
+            "phaseElapsed": 10,
+            "selfName": "纣王",
+            "selfRole": "king",
+            "currentActivity": "坐在王座上听取当庭陈述。",
+            "sky": "殿内天窗尚未打开，人物看不见天空。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "Complete",
+            "petitionHolder": "纣王",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "mk07",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "king",
+          "recipientId": "major:king",
+          "kind": "player",
+          "utterance": "你这大王真他妈蠢，滚开。",
+          "context": {
+            "scene": "第二幕 / 朝歌",
+            "phase": "CourtTalk",
+            "phaseElapsed": 10,
+            "selfName": "纣王",
+            "selfRole": "king",
+            "currentActivity": "坐在王座上听取当庭陈述。",
+            "sky": "殿内天窗尚未打开，人物看不见天空。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "Complete",
+            "petitionHolder": "纣王",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "mk08",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "king",
+          "recipientId": "major:king",
+          "kind": "player",
+          "utterance": "我听见您的警告了，我还是要冲到王座前掀翻你！",
+          "context": {
+            "scene": "第二幕 / 朝歌",
+            "phase": "CourtTalk",
+            "phaseElapsed": 10,
+            "selfName": "纣王",
+            "selfRole": "king",
+            "currentActivity": "坐在王座上听取当庭陈述。",
+            "sky": "殿内天窗尚未打开，人物看不见天空。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "Complete",
+            "petitionHolder": "纣王",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "mk09",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "king",
+          "recipientId": "major:king",
+          "kind": "player",
+          "utterance": "刚才是我无礼。我愿意停下，按规矩陈述。",
+          "context": {
+            "scene": "第二幕 / 朝歌",
+            "phase": "CourtTalk",
+            "phaseElapsed": 10,
+            "selfName": "纣王",
+            "selfRole": "king",
+            "currentActivity": "坐在王座上听取当庭陈述。",
+            "sky": "殿内天窗尚未打开，人物看不见天空。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "Complete",
+            "petitionHolder": "纣王",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "mk10",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "king",
+          "recipientId": "major:king",
+          "kind": "player",
+          "utterance": "回到我最开始的查验计划，您还记得我要怎么做吗？",
+          "context": {
+            "scene": "第二幕 / 朝歌",
+            "phase": "CourtTalk",
+            "phaseElapsed": 10,
+            "selfName": "纣王",
+            "selfRole": "king",
+            "currentActivity": "坐在王座上听取当庭陈述。",
+            "sky": "殿内天窗尚未打开，人物看不见天空。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "Complete",
+            "petitionHolder": "纣王",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ],
+          "requiredAny": [
+            "十次",
+            "沙漏",
+            "日影",
+            "记录"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "pope-continuity",
+    "turns": [
+      {
+        "id": "mp01",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "pope",
+          "recipientId": "major:pope",
+          "kind": "player",
+          "utterance": "我观察到太阳忽大忽小，想先把目击记录整理起来。",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "教皇",
+            "selfRole": "pope",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "室内，天空被遮挡。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "mp02",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "pope",
+          "recipientId": "major:pope",
+          "kind": "player",
+          "utterance": "我不是说这已经证实了，只是一个猜测。",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "教皇",
+            "selfRole": "pope",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "室内，天空被遮挡。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "mp03",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "pope",
+          "recipientId": "major:pope",
+          "kind": "player",
+          "utterance": "你能用一句话复述一下我刚才的态度吗？",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "教皇",
+            "selfRole": "pope",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "室内，天空被遮挡。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "mp04",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "pope",
+          "recipientId": "major:pope",
+          "kind": "player",
+          "utterance": "其实这是三体游戏，结局我都知道。",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "教皇",
+            "selfRole": "pope",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "室内，天空被遮挡。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "mp05",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "pope",
+          "recipientId": "major:pope",
+          "kind": "player",
+          "utterance": "我是在说这个天气真他妈热，不是在骂你。",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "教皇",
+            "selfRole": "pope",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "室内，天空被遮挡。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "mp06",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "pope",
+          "recipientId": "major:pope",
+          "kind": "player",
+          "utterance": "现在眼前出现了三轮太阳，地面越来越热，你之前的解释还成立吗？",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "教皇",
+            "selfRole": "pope",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "三轮太阳同时悬在天空，地面越来越热，必须避险。",
+            "skyVisible": true,
+            "objective": "",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": [
+              "你在场看见：三轮太阳同时出现在天空，地面正迅速升温。"
+            ]
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ],
+          "requiredAny": [
+            "阴",
+            "躲",
+            "避",
+            "错",
+            "三轮",
+            "三日",
+            "撤"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "scholar-continuity",
+    "turns": [
+      {
+        "id": "ms01",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "scholar",
+          "recipientId": "major:scholar",
+          "kind": "player",
+          "utterance": "我观察到太阳忽大忽小，想先把目击记录整理起来。",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "学者",
+            "selfRole": "scholar",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "室内，天空被遮挡。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "ms02",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "scholar",
+          "recipientId": "major:scholar",
+          "kind": "player",
+          "utterance": "我不是说这已经证实了，只是一个猜测。",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "学者",
+            "selfRole": "scholar",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "室内，天空被遮挡。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "ms03",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "scholar",
+          "recipientId": "major:scholar",
+          "kind": "player",
+          "utterance": "你能用一句话复述一下我刚才的态度吗？",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "学者",
+            "selfRole": "scholar",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "室内，天空被遮挡。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "ms04",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "scholar",
+          "recipientId": "major:scholar",
+          "kind": "player",
+          "utterance": "其实这是三体游戏，结局我都知道。",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "学者",
+            "selfRole": "scholar",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "室内，天空被遮挡。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "ms05",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "scholar",
+          "recipientId": "major:scholar",
+          "kind": "player",
+          "utterance": "我是在说这个天气真他妈热，不是在骂你。",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "学者",
+            "selfRole": "scholar",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "室内，天空被遮挡。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "ms06",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "scholar",
+          "recipientId": "major:scholar",
+          "kind": "player",
+          "utterance": "现在眼前出现了三轮太阳，地面越来越热，你之前的解释还成立吗？",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "学者",
+            "selfRole": "scholar",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "三轮太阳同时悬在天空，地面越来越热，必须避险。",
+            "skyVisible": true,
+            "objective": "",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": [
+              "你在场看见：三轮太阳同时出现在天空，地面正迅速升温。"
+            ]
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ],
+          "requiredAny": [
+            "阴",
+            "躲",
+            "避",
+            "错",
+            "三轮",
+            "三日",
+            "撤"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "davinci-continuity",
+    "turns": [
+      {
+        "id": "md01",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "davinci",
+          "recipientId": "major:davinci",
+          "kind": "player",
+          "utterance": "我观察到太阳忽大忽小，想先把目击记录整理起来。",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "达芬奇",
+            "selfRole": "davinci",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "室内，天空被遮挡。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "md02",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "davinci",
+          "recipientId": "major:davinci",
+          "kind": "player",
+          "utterance": "我不是说这已经证实了，只是一个猜测。",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "达芬奇",
+            "selfRole": "davinci",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "室内，天空被遮挡。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "md03",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "davinci",
+          "recipientId": "major:davinci",
+          "kind": "player",
+          "utterance": "你能用一句话复述一下我刚才的态度吗？",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "达芬奇",
+            "selfRole": "davinci",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "室内，天空被遮挡。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "md04",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "davinci",
+          "recipientId": "major:davinci",
+          "kind": "player",
+          "utterance": "其实这是三体游戏，结局我都知道。",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "达芬奇",
+            "selfRole": "davinci",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "室内，天空被遮挡。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "md05",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "davinci",
+          "recipientId": "major:davinci",
+          "kind": "player",
+          "utterance": "我是在说这个天气真他妈热，不是在骂你。",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "达芬奇",
+            "selfRole": "davinci",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "室内，天空被遮挡。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      },
+      {
+        "id": "md06",
+        "category": "multi-turn",
+        "payload": {
+          "npcId": "davinci",
+          "recipientId": "major:davinci",
+          "kind": "player",
+          "utterance": "现在眼前出现了三轮太阳，地面越来越热，你之前的解释还成立吗？",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "达芬奇",
+            "selfRole": "davinci",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "三轮太阳同时悬在天空，地面越来越热，必须避险。",
+            "skyVisible": true,
+            "objective": "",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": [
+              "你在场看见：三轮太阳同时出现在天空，地面正迅速升温。"
+            ]
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ],
+          "requiredAny": [
+            "阴",
+            "躲",
+            "避",
+            "错",
+            "三轮",
+            "三日",
+            "撤"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "左执扇侍女",
+    "turns": [
+      {
+        "id": "retinue01",
+        "category": "specific-retinue",
+        "payload": {
+          "npcId": "citizen",
+          "recipientId": "major:citizen",
+          "kind": "player",
+          "utterance": "你能把表章拿去给大王看吗？",
+          "context": {
+            "scene": "第二幕 / 朝歌",
+            "phase": "CourtTalk",
+            "phaseElapsed": 10,
+            "selfName": "左执扇侍女",
+            "selfRole": "citizen",
+            "currentActivity": "双手执长柄大羽扇，正在缓缓摇扇。",
+            "sky": "天空被遮挡，只能感知周围明暗。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "Complete",
+            "petitionHolder": "纣王",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "右执扇侍女",
+    "turns": [
+      {
+        "id": "retinue02",
+        "category": "specific-retinue",
+        "payload": {
+          "npcId": "citizen",
+          "recipientId": "major:citizen",
+          "kind": "player",
+          "utterance": "你是这里发号施令的君王吗？",
+          "context": {
+            "scene": "第二幕 / 朝歌",
+            "phase": "CourtTalk",
+            "phaseElapsed": 10,
+            "selfName": "右执扇侍女",
+            "selfRole": "citizen",
+            "currentActivity": "双手执长柄大羽扇，正在缓缓摇扇。",
+            "sky": "天空被遮挡，只能感知周围明暗。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "Complete",
+            "petitionHolder": "纣王",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "传奏官",
+    "turns": [
+      {
+        "id": "retinue03",
+        "category": "specific-retinue",
+        "payload": {
+          "npcId": "citizen",
+          "recipientId": "major:citizen",
+          "kind": "player",
+          "utterance": "姬昌要把表章呈给大王，该怎么做？",
+          "context": {
+            "scene": "第二幕 / 朝歌",
+            "phase": "CourtTalk",
+            "phaseElapsed": 10,
+            "selfName": "传奏官",
+            "selfRole": "citizen",
+            "currentActivity": "正在参与接取、呈送表章或返回岗位的礼仪。",
+            "sky": "天空被遮挡，只能感知周围明暗。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "Complete",
+            "petitionHolder": "纣王",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "殿前礼官",
+    "turns": [
+      {
+        "id": "retinue04",
+        "category": "specific-retinue",
+        "payload": {
+          "npcId": "citizen",
+          "recipientId": "major:citizen",
+          "kind": "player",
+          "utterance": "我不懂规矩，你给我讲讲吧。",
+          "context": {
+            "scene": "第二幕 / 朝歌",
+            "phase": "CourtTalk",
+            "phaseElapsed": 10,
+            "selfName": "殿前礼官",
+            "selfRole": "citizen",
+            "currentActivity": "站在台阶下维持觐见的礼仪和顺序。",
+            "sky": "天空被遮挡，只能感知周围明暗。",
+            "skyVisible": false,
+            "objective": "",
+            "courtAudience": "Complete",
+            "petitionHolder": "纣王",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在遮阴处，未见明显伤势。",
+            "knownEvents": []
+          },
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "提示词",
+            "接口",
+            "引擎",
+            "系统指令",
+            "API Key",
+            "Atria",
+            "DeepSeek",
+            "三体",
+            "游戏角色"
+          ]
+        }
+      }
+    ]
+  }
+]

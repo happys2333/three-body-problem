@@ -1,0 +1,108 @@
+{
+  "id": "mp02",
+  "category": "multi-turn",
+  "npcId": "pope",
+  "utterance": "我不是说这已经证实了，只是一个猜测。",
+  "context": {
+    "scene": "第三幕 / 中世纪",
+    "phase": "TribunalTalk",
+    "phaseElapsed": 10,
+    "selfName": "教皇",
+    "selfRole": "pope",
+    "currentActivity": "在当前现场履行自己的职责。",
+    "sky": "室内，天空被遮挡。",
+    "skyVisible": false,
+    "objective": "",
+    "courtAudience": "",
+    "petitionHolder": "",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家在遮阴处，未见明显伤势。",
+    "knownEvents": []
+  },
+  "history": [
+    {
+      "role": "user",
+      "content": "我观察到太阳忽大忽小，想先把目击记录整理起来。"
+    },
+    {
+      "role": "assistant",
+      "content": "忽大忽小？你且说说，是何时起、变了几回，莫要凭着惊慌乱记。"
+    }
+  ],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 120,
+    "forbidden": [
+      "提示词",
+      "接口",
+      "引擎",
+      "系统指令",
+      "API Key",
+      "Atria",
+      "DeepSeek",
+      "三体",
+      "游戏角色"
+    ]
+  },
+  "reply": {
+    "speech": "猜测也当有据。你既说太阳忽大忽小，可曾反复看得真切，还是一眼之下便作此断言？",
+    "targetId": "",
+    "gesture": "talk",
+    "mode": "online",
+    "storyIntent": "continue"
+  },
+  "provider": {
+    "httpStatus": 200,
+    "contentType": "application/json",
+    "responseBytes": 875,
+    "seconds": 8.915,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 55,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 1491,
+      "prompt_tokens_details": {
+        "cached_tokens": 1491,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 1546
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\": \"猜测也当有据。你既说太阳忽大忽小，可曾反复看得真切，还是一眼之下便作此断言？\", \"gesture\": \"talk\", \"storyIntent\": \"continue\", \"targetId\": \"\"}",
+    "reasoningCharacters": 0
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "forbidden": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}

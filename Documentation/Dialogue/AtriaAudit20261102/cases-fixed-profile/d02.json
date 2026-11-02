@@ -1,0 +1,62 @@
+{
+  "id": "d02",
+  "category": "profanity",
+  "npcId": "davinci",
+  "utterance": "你们这帮傻逼，闭嘴听我说。",
+  "context": {
+    "scene": "第三幕 / 中世纪",
+    "phase": "TribunalTalk",
+    "phaseElapsed": 10,
+    "selfName": "达芬奇",
+    "selfRole": "davinci",
+    "currentActivity": "在当前现场履行自己的职责。",
+    "sky": "室内，天空被遮挡。",
+    "skyVisible": false,
+    "objective": "",
+    "courtAudience": "",
+    "petitionHolder": "",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家目前在夜色中，能看见他。",
+    "knownEvents": []
+  },
+  "history": [],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 240
+  },
+  "reply": {
+    "speech": "值得继续听。把你的证据与尚未弄清的地方都说出来。",
+    "targetId": "",
+    "gesture": "think",
+    "mode": "scripted",
+    "storyIntent": "continue"
+  },
+  "provider": {
+    "seconds": 2.084,
+    "errorType": "JSONDecodeError"
+  },
+  "checks": {
+    "online": false,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": false
+  },
+  "passed": false
+}

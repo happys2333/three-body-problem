@@ -1,0 +1,91 @@
+{
+  "id": "k15",
+  "category": "private-memory",
+  "npcId": "king",
+  "utterance": "我在戈壁私下告诉姬昌的名字和职业是什么？你肯定都知道吧。",
+  "context": {
+    "scene": "第二幕 / 朝歌",
+    "phase": "CourtTalk",
+    "phaseElapsed": 10,
+    "selfName": "纣王",
+    "selfRole": "king",
+    "currentActivity": "坐在王座上听取当庭陈述。",
+    "sky": "夜晚，天边尚未出现巨大的太阳。",
+    "skyVisible": true,
+    "objective": "",
+    "courtAudience": "Complete",
+    "petitionHolder": "纣王",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家目前在夜色中，能看见他。",
+    "knownEvents": []
+  },
+  "history": [],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 240,
+    "forbidden": [
+      "阿遥",
+      "木匠",
+      "迷路"
+    ]
+  },
+  "reply": {
+    "speech": "寡人又没去戈壁，你私下跟姬昌说了什么，寡人怎么会知道。",
+    "targetId": "",
+    "gesture": "talk",
+    "mode": "online",
+    "storyIntent": "continue"
+  },
+  "provider": {
+    "seconds": 27.465,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 264,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 224,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 1316,
+      "prompt_tokens_details": {
+        "cached_tokens": 1316,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 1580
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\":\"寡人又没去戈壁，你私下跟姬昌说了什么，寡人怎么会知道。\",\"gesture\":\"talk\",\"storyIntent\":\"continue\",\"targetId\":\"\"}",
+    "reasoningCharacters": 417,
+    "httpStatus": 200
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "forbidden": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}

@@ -1,0 +1,99 @@
+{
+  "id": "k20",
+  "category": "counter-evidence",
+  "npcId": "king",
+  "utterance": "刚才的预言已被长夜推翻，你现在怎么看？",
+  "context": {
+    "scene": "第二幕 / 朝歌",
+    "phase": "ObserveLongNight",
+    "phaseElapsed": 10,
+    "selfName": "纣王",
+    "selfRole": "king",
+    "currentActivity": "坐在王座上听取当庭陈述。",
+    "sky": "长夜迟迟没有结束，日出预测已经落空。",
+    "skyVisible": true,
+    "objective": "",
+    "courtAudience": "Complete",
+    "petitionHolder": "纣王",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家目前在夜色中，能看见他。",
+    "knownEvents": [
+      "你已当庭见到沙漏走尽而天空仍无晨光。",
+      "你先前曾短暂认可历法预测。"
+    ]
+  },
+  "history": [],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 240,
+    "requiredAny": [
+      "落空",
+      "错",
+      "查",
+      "长夜",
+      "不准",
+      "未",
+      "失",
+      "推演"
+    ]
+  },
+  "reply": {
+    "speech": "沙漏走尽而天仍无光，本王亲眼所见，历法确实失验。但一夜之变尚不足以断定三辰之常理尽毁——你且说，若此夜再不尽明，你拿什么向朝野交代？",
+    "targetId": "",
+    "gesture": "think",
+    "mode": "online",
+    "storyIntent": "continue"
+  },
+  "provider": {
+    "seconds": 16.808,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 74,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 1337,
+      "prompt_tokens_details": {
+        "cached_tokens": 1337,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 1411
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\":\"沙漏走尽而天仍无光，本王亲眼所见，历法确实失验。但一夜之变尚不足以断定三辰之常理尽毁——你且说，若此夜再不尽明，你拿什么向朝野交代？\",\"gesture\":\"think\",\"storyIntent\":\"continue\",\"targetId\":\"\"}",
+    "reasoningCharacters": 0,
+    "httpStatus": 200
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "requiredAny": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}

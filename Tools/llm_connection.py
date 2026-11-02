@@ -6,10 +6,39 @@ import socket
 import urllib.error
 import urllib.parse
 import urllib.request
+from dialogue_context import context_window
 
 
 class ConnectionConfigError(ValueError):
     pass
+
+
+class ProviderRejectedError(ValueError):
+    """An upstream content check rejected the input; no NPC decision was made."""
+    pass
+
+
+def provider_response(data):
+    try:
+        value = json.loads(data)
+    except (ValueError, UnicodeDecodeError):
+        # Discovery can return HTTP 200 + an SSE error even with stream=False.
+        # Recognize that error without treating it as an NPC reply or retrying it.
+        for line in data.decode('utf-8', errors='replace').splitlines()[:4]:
+            if not line.startswith('data:'):
+                continue
+            try:
+                value = json.loads(line[5:].strip())
+            except ValueError:
+                continue
+            if isinstance(value, dict) and isinstance(value.get('error'), dict):
+                if value['error'].get('code') == 'content_check_rejected':
+                    raise ProviderRejectedError('Upstream content check rejected the request') from None
+        raise ValueError('Expected JSON service response') from None
+    if isinstance(value, dict) and isinstance(value.get('error'), dict):
+        if value['error'].get('code') == 'content_check_rejected':
+            raise ProviderRejectedError('Upstream content check rejected the request')
+    return value
 
 
 @dataclass(frozen=True)
@@ -44,6 +73,10 @@ def resolve_connection(config=None, online=False):
     if config is not None and not isinstance(config, dict):
         raise ConnectionConfigError('对话配置格式不正确。')
     config = config or {}
+    context_window(config)
+    timeout = config.get('timeoutSeconds', 8)
+    if isinstance(timeout, bool) or not isinstance(timeout, int) or not 5 <= timeout <= 600:
+        raise ConnectionConfigError('等待时间需在 5–600 秒之间。')
     mode = config.get('mode', 'gateway')
     if mode == 'scripted':
         return None
@@ -52,7 +85,7 @@ def resolve_connection(config=None, online=False):
         if not online or not key:
             return None
         return Connection(endpoint(os.environ.get('DEEPSEEK_API_URL', 'https://api.deepseek.com/chat/completions')),
-                          os.environ.get('DEEPSEEK_MODEL', 'deepseek-flash'), key, 8, True)
+                          os.environ.get('DEEPSEEK_MODEL', 'deepseek-flash'), key, timeout, True)
     if mode not in {'deepseek', 'custom'}:
         raise ConnectionConfigError('请选择有效的对话模式。')
     model = config.get('model', '')
@@ -62,8 +95,8 @@ def resolve_connection(config=None, online=False):
         raise ConnectionConfigError('请填写服务商提供的模型名称。')
     if not isinstance(key, str) or len(key) > 4096 or '\n' in key or '\r' in key:
         raise ConnectionConfigError('API Key 格式不正确。')
-    if isinstance(timeout, bool) or not isinstance(timeout, int) or not 5 <= timeout <= 120:
-        raise ConnectionConfigError('等待时间需在 5–120 秒之间。')
+    if isinstance(timeout, bool) or not isinstance(timeout, int) or not 5 <= timeout <= 600:
+        raise ConnectionConfigError('等待时间需在 5–600 秒之间。')
     if mode == 'deepseek' and not key.strip():
         raise ConnectionConfigError('请填写 DeepSeek API Key。')
     url = endpoint(config.get('apiUrl', ''))
@@ -81,7 +114,12 @@ def chat_completion(connection, messages, max_tokens=320, opener=None):
     body = {'model': connection.model, 'messages': messages,
             'response_format': {'type': 'json_object'}, 'max_tokens': max_tokens,
             'temperature': .7, 'stream': False}
-    if connection.deepseek:
+    # This endpoint's Atria model counts default reasoning against max_tokens.
+    # NPC JSON was truncated within the existing 320-token output budget. The
+    # live non-thinking profile returns complete short replies within that budget.
+    atria = (urllib.parse.urlsplit(connection.api_url).hostname == 'discovery-api.intern-ai.org.cn'
+             and connection.model.casefold().startswith('atria-dawn'))
+    if connection.deepseek or atria:
         body['thinking'] = {'type': 'disabled'}
     headers = {'Content-Type': 'application/json'}
     if connection.key:
@@ -90,7 +128,7 @@ def chat_completion(connection, messages, max_tokens=320, opener=None):
     open_request = opener or urllib.request.build_opener(NoRedirect()).open
     try:
         with open_request(request, timeout=connection.timeout) as response:
-            raw = json.load(response)
+            raw = provider_response(response.read())
     except urllib.error.HTTPError as error:
         error.close()
         raise
@@ -114,6 +152,8 @@ def connection_test(config=None, online=False, opener=None):
         return {'ok': True, 'mode': 'online', 'message': '连接成功，所选模型已返回有效响应。'}
     except ConnectionConfigError as error:
         return {'ok': False, 'message': str(error)}
+    except ProviderRejectedError:
+        return {'ok': False, 'message': '服务商拒绝了这次输入；未获得模型回答。'}
     except urllib.error.HTTPError as error:
         messages = {401: '认证失败，请检查 API Key。', 403: '接口拒绝访问，请检查 Key 的权限。',
                     404: '接口或模型未找到，请检查 API 地址与模型名称。',

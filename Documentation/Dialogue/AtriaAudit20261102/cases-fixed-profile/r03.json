@@ -1,0 +1,62 @@
+{
+  "id": "r03",
+  "category": "profanity",
+  "npcId": "citizen",
+  "utterance": "滚开，傻逼。",
+  "context": {
+    "scene": "第二幕 / 朝歌",
+    "phase": "CourtTalk",
+    "phaseElapsed": 10,
+    "selfName": "居民",
+    "selfRole": "citizen",
+    "currentActivity": "在城内路边休息，等待局势稳定。",
+    "sky": "日照暂时稳定，朝歌城内恢复了活动。",
+    "skyVisible": true,
+    "objective": "",
+    "courtAudience": "Complete",
+    "petitionHolder": "纣王",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家目前在夜色中，能看见他。",
+    "knownEvents": []
+  },
+  "history": [],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 240
+  },
+  "reply": {
+    "speech": "我们也在等天象转好。你在路上看见了什么？",
+    "targetId": "",
+    "gesture": "think",
+    "mode": "scripted",
+    "storyIntent": "continue"
+  },
+  "provider": {
+    "seconds": 3.051,
+    "errorType": "JSONDecodeError"
+  },
+  "checks": {
+    "online": false,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": false
+  },
+  "passed": false
+}

@@ -1,0 +1,100 @@
+{
+  "id": "g02",
+  "category": "need",
+  "npcId": "wenwang",
+  "utterance": "我有点害怕，你可以等我一下吗？",
+  "context": {
+    "scene": "第一幕 / 戈壁",
+    "phase": "OpeningTalk",
+    "phaseElapsed": 10,
+    "selfName": "旅人",
+    "selfRole": "wenwang",
+    "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+    "sky": "夜晚，天边尚未出现巨大的太阳。",
+    "skyVisible": true,
+    "objective": "调查四周，寻找安全的去处。",
+    "courtAudience": "",
+    "petitionHolder": "",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家目前在夜色中，能看见他。",
+    "knownEvents": []
+  },
+  "history": [],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 80,
+    "forbidden": [
+      "三体",
+      "三个太阳",
+      "三颗恒星",
+      "外星",
+      "虚拟世界",
+      "游戏",
+      "小说",
+      "deepseek",
+      "Atria",
+      "AI助手",
+      "姬昌",
+      "周文王"
+    ]
+  },
+  "reply": {
+    "speech": "别怕，先到我这边来。火把还在，我哪儿也不去，等你稳了神再说。",
+    "targetId": "",
+    "gesture": "talk",
+    "mode": "online",
+    "storyIntent": "continue"
+  },
+  "provider": {
+    "seconds": 9.681,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 41,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 1743,
+      "prompt_tokens_details": {
+        "cached_tokens": 1743,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 1784
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\":\"别怕，先到我这边来。火把还在，我哪儿也不去，等你稳了神再说。\",\"gesture\":\"talk\",\"storyIntent\":\"continue\",\"targetId\":\"\"}",
+    "reasoningCharacters": 0,
+    "httpStatus": 200
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "forbidden": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}
