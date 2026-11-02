@@ -54,11 +54,14 @@ Assets/_Project/Art/EnvironmentExpansionRejected/**/*.asset filter=lfs diff=lfs 
 Assets/_Project/Art/MonumentalMasonry/Meshes/*.asset filter=lfs diff=lfs merge=lfs -text
 Assets/_Project/Art/CapitalRevival/Meshes/*.asset filter=lfs diff=lfs merge=lfs -text
 Assets/_Project/Art/ActOne/Meshes/*.asset filter=lfs diff=lfs merge=lfs -text
+Assets/_Project/Art/ActOne/Meshes/GobiShadows/*.asset filter=lfs diff=lfs merge=lfs -text
 Assets/_Project/Characters/Crowd/Meshes/*.asset filter=lfs diff=lfs merge=lfs -text
 Assets/_Project/Characters/Guards/Meshes/*.asset filter=lfs diff=lfs merge=lfs -text
 Assets/_Project/Characters/Court/Meshes/*.asset filter=lfs diff=lfs merge=lfs -text
 Assets/_Project/Art/ShangCapitalReady/Meshes/*.asset filter=lfs diff=lfs merge=lfs -text
 Assets/_Project/Art/PalaceInterior/Meshes/*.asset filter=lfs diff=lfs merge=lfs -text
+Assets/_Project/Art/CharacterCompletion20261102/Meshes/*.asset filter=lfs diff=lfs merge=lfs -text
+Assets/_Project/Dialogue/Decisions/*_Navigation.asset filter=lfs diff=lfs merge=lfs -text
 Documentation/InteriorProduction/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
 Documentation/CourtAudience/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
 Assets/_Project/Characters/Story/PlayerFirstPersonBody.asset filter=lfs diff=lfs merge=lfs -text
