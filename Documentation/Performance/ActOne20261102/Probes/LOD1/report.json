@@ -1,0 +1,33 @@
+{
+    "gpu": "Apple M5",
+    "probe": "lod1",
+    "phase": "complete",
+    "passed": true,
+    "frameCap": 90,
+    "warmFrames": 240,
+    "sampleFrames": 360,
+    "errors": [],
+    "metrics": [
+        {
+            "view": "Sun_ShelterClose",
+            "width": 1600,
+            "height": 900,
+            "gpuSamples": 360,
+            "activeVegetationFires": 0,
+            "meanMs": 11.173144340515137,
+            "p95Ms": 11.410962104797364,
+            "p99Ms": 11.855208396911621,
+            "maxMs": 15.598703384399414,
+            "gpuMeanMs": 8.53858470916748,
+            "gpuP95Ms": 9.544500350952149,
+            "cpuWorkMs": 2.461899757385254,
+            "renderWorkMs": 1.868484616279602,
+            "targetWaitMs": 8.698553085327149,
+            "batches": 269,
+            "triangles": 3881738,
+            "setPasses": 160,
+            "gcBytesPerFrame": 8,
+            "maxGcBytes": 184
+        }
+    ]
+}

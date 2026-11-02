@@ -1,0 +1,10 @@
+{
+    "passed": true,
+    "checks": 447,
+    "ignited": 88,
+    "burned": 88,
+    "shaded": 53,
+    "metresWalked": 83.27542114257813,
+    "phase": "complete",
+    "errors": []
+}

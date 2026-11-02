@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "unchanged": [
+    "Assets/_Project/Settings/ActOne/GobiStory.asset",
+    "Assets/_Project/Scripts/GobiSequenceController.cs",
+    "Assets/_Project/Art/Shaders/EnvironmentSurface.shader",
+    "Assets/_Project/Art/PhotographicFoliage.shader"
+  ]
+}

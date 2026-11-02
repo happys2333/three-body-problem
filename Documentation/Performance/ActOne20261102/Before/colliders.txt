@@ -1,0 +1,630 @@
+Environment/Departure waystone|BoxCollider|True|False|(0.00, 0.00, 0.00) (0.85, 2.30, 0.70)|1.00000	0.00000	0.00000	5.00000
+0.00000	1.00000	0.00000	1.15000
+0.00000	0.00000	1.00000	127.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Giant rock shelter/Capstone/Simple collision|BoxCollider|True|False|(0.00, 0.00, 0.00) (2.53, 0.88, 1.23)|9.47814	0.00000	0.00000	-13.00000
+0.00000	7.93077	0.00000	8.90000
+0.00000	0.00000	14.58360	17.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Giant rock shelter/East buttress/Simple collision|BoxCollider|True|False|(0.00, 0.00, 0.00) (2.53, 0.88, 1.23)|1.97461	0.00000	0.00000	-1.50000
+0.00000	10.19671	0.00000	4.50000
+0.00000	0.00000	6.48160	21.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Giant rock shelter/Shelter roof shadow caster|BoxCollider|True|False|(0.00, 0.00, 0.00) (22.00, 1.00, 15.00)|1.00000	0.00000	0.00000	-13.00000
+0.00000	1.00000	0.00000	5.50000
+0.00000	0.00000	1.00000	17.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Giant rock shelter/West buttress/Simple collision|BoxCollider|True|False|(0.00, 0.00, 0.00) (2.53, 0.88, 1.23)|2.76446	0.00000	0.00000	-25.00000
+0.00000	11.32967	0.00000	5.00000
+0.00000	0.00000	9.72240	20.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Observation waystone 1|BoxCollider|True|False|(0.00, 0.00, 0.00) (0.55, 1.20, 0.45)|1.00000	0.00000	0.00000	6.00000
+0.00000	1.00000	0.00000	0.60000
+0.00000	0.00000	1.00000	42.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Observation waystone 2|BoxCollider|True|False|(0.00, 0.00, 0.00) (0.55, 1.20, 0.45)|1.00000	0.00000	0.00000	6.00000
+0.00000	1.00000	0.00000	0.60000
+0.00000	0.00000	1.00000	64.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Opening deadwood/Awakening weathered tamarisk 0/Static collision|MeshCollider|True|False|e6a26edc429af4c349d81349dde27ea6 convex=False|1.15000	0.00000	0.00000	10.00000
+0.00000	1.15000	0.00000	0.00293
+0.00000	0.00000	1.15000	-18.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Opening deadwood/Awakening weathered tamarisk 1/Static collision|MeshCollider|True|False|e6a26edc429af4c349d81349dde27ea6 convex=False|0.23390	0.00000	0.76504	-12.00000
+0.00000	0.80000	0.00000	0.00293
+-0.76504	0.00000	0.23390	-31.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Opening deadwood/Awakening weathered tamarisk 2/Static collision|MeshCollider|True|False|e6a26edc429af4c349d81349dde27ea6 convex=False|-0.66323	0.00000	0.44735	5.00000
+0.00000	0.80000	0.00000	0.00293
+-0.44735	0.00000	-0.66323	-27.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Photographic Gobi terrain|TerrainCollider|True|False|3d6b0c72d20c0466997ae60aeef20ba4|1.00000	0.00000	0.00000	-600.00000
+0.00000	1.00000	0.00000	-16.00000
+0.00000	0.00000	1.00000	-350.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Approach marker / GobiWaystone/Static collision|MeshCollider|True|False|c473fde8f27e74983a99a958e80b2b7f convex=False|0.75064	0.00000	0.11889	-7.00000
+0.00000	0.76000	0.00000	-0.05707
+-0.11889	0.00000	0.75064	-22.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Departure marker / GobiWaystone/Static collision|MeshCollider|True|False|c473fde8f27e74983a99a958e80b2b7f convex=False|1.13429	0.00000	0.32525	5.00000
+0.00000	1.18000	0.00000	-0.07707
+-0.32525	0.00000	1.13429	127.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Departure narrows / WindErodedCliff/Static collision|MeshCollider|True|False|06af484b406e64e53a270ee93e36ac34 convex=False|-0.99793	0.00000	-0.50847	29.00000
+0.00000	1.12000	0.00000	-1.79707
+0.50847	0.00000	-0.99793	176.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Departure narrows / WindErodedCliff/Static collision|MeshCollider|True|False|06af484b406e64e53a270ee93e36ac34 convex=False|0.77699	0.00000	0.41314	-25.00000
+0.00000	0.88000	0.00000	-1.19707
+-0.41314	0.00000	0.77699	155.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Eastern skyline / GobiMountainPeak/Static collision|MeshCollider|False|False|0ad2e6e0119ec4642a382f873e6c481d convex=False|-0.79674	0.00000	-0.51741	171.00000
+0.00000	0.95000	0.00000	31.31036
+0.51741	0.00000	-0.79674	205.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Eastern skyline / GobiRidge/Static collision|MeshCollider|False|False|ce9729e4573894c4084c4a7b363250a1 convex=False|-1.07596	0.00000	0.22870	255.00000
+0.00000	1.10000	0.00000	54.33430
+-0.22870	0.00000	-1.07596	338.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Eastern valley shoulder / WindErodedCliff/Static collision|MeshCollider|True|False|06af484b406e64e53a270ee93e36ac34 convex=False|-0.10115	0.00000	-0.82381	49.00000
+0.00000	0.83000	0.00000	-0.25870
+0.82381	0.00000	-0.10115	25.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Eastern valley shoulder / WindErodedCliff/Static collision|MeshCollider|True|False|06af484b406e64e53a270ee93e36ac34 convex=False|-0.75584	0.00000	0.07944	59.00000
+0.00000	0.76000	0.00000	2.25595
+-0.07944	0.00000	-0.75584	138.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Eastern valley shoulder / YardangMesa/Static collision|MeshCollider|True|False|a42e0ad9c281f49128ba22c176bd39be convex=False|-0.88060	0.00000	0.57187	73.00000
+0.00000	1.05000	0.00000	-0.40525
+-0.57187	0.00000	-0.88060	103.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Far eastern ridge / GobiRidge/Static collision|MeshCollider|False|False|ce9729e4573894c4084c4a7b363250a1 convex=False|-1.12030	0.00000	-0.43004	340.00000
+0.00000	1.20000	0.00000	31.21378
+0.43004	0.00000	-1.12030	477.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Far western ridge / GobiRidge/Static collision|MeshCollider|False|False|ce9729e4573894c4084c4a7b363250a1 convex=False|0.95076	0.00000	0.88660	-345.00000
+0.00000	1.30000	0.00000	37.07337
+-0.88660	0.00000	0.95076	434.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/First observation / GobiRockCluster/Static collision|MeshCollider|True|False|7d54167e0f2554679b65ef21f11e35f1 convex=False|0.26812	0.00000	0.22498	8.30000
+0.00000	0.35000	0.00000	-0.07707
+-0.22498	0.00000	0.26812	44.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/First observation / GobiWaystone/Static collision|MeshCollider|True|False|c473fde8f27e74983a99a958e80b2b7f convex=False|0.80208	0.00000	0.17049	6.00000
+0.00000	0.82000	0.00000	-0.05707
+-0.17049	0.00000	0.80208	42.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Northern saddle / YardangMesa/Static collision|MeshCollider|False|False|a42e0ad9c281f49128ba22c176bd39be convex=False|-0.76324	0.00000	0.47693	81.00000
+0.00000	0.90000	0.00000	1.01775
+-0.47693	0.00000	-0.76324	282.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Northern saddle / YardangMesa/Static collision|MeshCollider|False|False|a42e0ad9c281f49128ba22c176bd39be convex=False|0.60002	0.00000	0.36053	-85.00000
+0.00000	0.70000	0.00000	4.64279
+-0.36053	0.00000	0.60002	254.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Roadside erosion / GobiRockCluster/Static collision|MeshCollider|True|False|7d54167e0f2554679b65ef21f11e35f1 convex=False|-0.09052	0.00000	0.76599	-30.00000
+0.00000	0.77132	0.00000	-0.15707
+-0.76599	0.00000	-0.09052	-5.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Roadside erosion / GobiRockCluster/Static collision|MeshCollider|True|False|7d54167e0f2554679b65ef21f11e35f1 convex=False|-0.20715	0.00000	0.74085	24.00000
+0.00000	0.76926	0.00000	-0.15707
+-0.74085	0.00000	-0.20715	14.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Roadside erosion / GobiRockCluster/Static collision|MeshCollider|True|False|7d54167e0f2554679b65ef21f11e35f1 convex=False|-0.25937	0.00000	0.36923	20.00000
+0.00000	0.45122	0.00000	-0.15707
+-0.36923	0.00000	-0.25937	131.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Roadside erosion / GobiRockCluster/Static collision|MeshCollider|True|False|7d54167e0f2554679b65ef21f11e35f1 convex=False|-0.32207	0.00000	0.45881	-31.00000
+0.00000	0.56057	0.00000	-0.15707
+-0.45881	0.00000	-0.32207	38.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Roadside erosion / GobiRockCluster/Static collision|MeshCollider|True|False|7d54167e0f2554679b65ef21f11e35f1 convex=False|-0.50900	0.00000	-0.64808	-16.00000
+0.00000	0.82406	0.00000	-0.15707
+0.64808	0.00000	-0.50900	-32.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Roadside erosion / GobiRockCluster/Static collision|MeshCollider|True|False|7d54167e0f2554679b65ef21f11e35f1 convex=False|-0.52735	0.00000	0.51896	-20.00000
+0.00000	0.73988	0.00000	-0.15707
+-0.51896	0.00000	-0.52735	72.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Roadside erosion / GobiRockCluster/Static collision|MeshCollider|True|False|7d54167e0f2554679b65ef21f11e35f1 convex=False|-0.59723	0.00000	0.44288	39.00000
+0.00000	0.74352	0.00000	0.15209
+-0.44288	0.00000	-0.59723	165.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Roadside erosion / GobiRockCluster/Static collision|MeshCollider|True|False|7d54167e0f2554679b65ef21f11e35f1 convex=False|-0.71533	0.00000	-0.21546	13.00000
+0.00000	0.74708	0.00000	-0.15707
+0.21546	0.00000	-0.71533	-16.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Roadside erosion / GobiRockCluster/Static collision|MeshCollider|True|False|7d54167e0f2554679b65ef21f11e35f1 convex=False|-0.91863	0.00000	0.35566	23.00000
+0.00000	0.98508	0.00000	-0.15707
+-0.35566	0.00000	-0.91863	88.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Roadside erosion / GobiRockCluster/Static collision|MeshCollider|True|False|7d54167e0f2554679b65ef21f11e35f1 convex=False|0.60835	0.00000	0.63534	20.00000
+0.00000	0.87962	0.00000	-0.15707
+-0.63534	0.00000	0.60835	56.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Roadside erosion / GobiRockCluster/Static collision|MeshCollider|True|False|7d54167e0f2554679b65ef21f11e35f1 convex=False|0.78794	0.00000	0.46287	-20.00000
+0.00000	0.91384	0.00000	-0.15707
+-0.46287	0.00000	0.78794	113.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Roadside erosion / GobiRockCluster/Static collision|MeshCollider|True|False|7d54167e0f2554679b65ef21f11e35f1 convex=False|0.91720	0.00000	-0.16058	-39.00000
+0.00000	0.93115	0.00000	0.10591
+0.16058	0.00000	0.91720	145.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Second observation / GobiRockCluster/Static collision|MeshCollider|True|False|7d54167e0f2554679b65ef21f11e35f1 convex=False|-0.38648	0.00000	0.18850	8.40000
+0.00000	0.43000	0.00000	-0.07707
+-0.18850	0.00000	-0.38648	66.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Second observation / GobiWaystone/Static collision|MeshCollider|True|False|c473fde8f27e74983a99a958e80b2b7f convex=False|0.93485	0.00000	-0.09826	6.00000
+0.00000	0.94000	0.00000	-0.05707
+0.09826	0.00000	0.93485	64.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Shelter continuous canopy / RockOverhang/Static collision|MeshCollider|True|False|8b12ceefefaff40b68110093edb29d94 convex=False|1.02000	0.00000	0.00000	-13.00000
+0.00000	0.90000	0.00000	4.20000
+0.00000	0.00000	0.92000	19.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Shelter eastern spur / WindErodedCliff/Static collision|MeshCollider|True|False|06af484b406e64e53a270ee93e36ac34 convex=False|-0.37588	0.00000	0.17101	-0.70000
+0.00000	0.40000	0.00000	-1.39707
+-0.13681	0.00000	-0.46985	25.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Shelter talus / GobiRockCluster/Static collision|MeshCollider|True|False|7d54167e0f2554679b65ef21f11e35f1 convex=False|-0.65254	0.00000	-0.30429	-4.00000
+0.00000	0.72000	0.00000	-0.15707
+0.30429	0.00000	-0.65254	27.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Shelter talus / GobiRockCluster/Static collision|MeshCollider|True|False|7d54167e0f2554679b65ef21f11e35f1 convex=False|0.37440	0.00000	1.08735	-25.00000
+0.00000	1.15000	0.00000	-0.19707
+-1.08735	0.00000	0.37440	7.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Shelter western outcrop / RockOverhang/Static collision|MeshCollider|True|False|63bc582d56b494b28897f10d6d5ccc4b convex=False|0.95733	0.00000	-0.40636	-31.00000
+0.00000	1.04000	0.00000	-1.99707
+0.40636	0.00000	0.95733	22.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sheltered dry shrub/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|0.70000	0.00000	0.00000	-20.00000
+0.00000	0.70000	0.00000	0.00000
+0.00000	0.00000	0.70000	15.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Southern skyline / GobiMountainPeak/Static collision|MeshCollider|False|False|0ad2e6e0119ec4642a382f873e6c481d convex=False|0.67884	0.00000	0.51154	-185.00000
+0.00000	0.85000	0.00000	27.42458
+-0.51154	0.00000	0.67884	-138.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Southern skyline / GobiRidge/Static collision|MeshCollider|False|False|ce9729e4573894c4084c4a7b363250a1 convex=False|-0.57872	0.00000	0.74073	178.00000
+0.00000	0.94000	0.00000	16.23076
+-0.74073	0.00000	-0.57872	-142.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.01645	0.00000	-0.91242	-21.71857
+0.00000	0.91257	0.00000	-0.03207
+0.91242	0.00000	-0.01645	78.84912
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.14503	0.00000	0.82002	25.41392
+0.00000	0.83274	0.00000	-0.03207
+-0.82002	0.00000	-0.14503	94.36755
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.18976	0.00000	-1.02171	-15.36670
+0.00000	1.03918	0.00000	-0.03207
+1.02171	0.00000	-0.18976	-33.54869
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.23851	0.00000	0.97805	37.40188
+0.00000	1.00671	0.00000	0.16078
+-0.97805	0.00000	-0.23851	157.94540
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.26802	0.00000	-0.80668	24.82662
+0.00000	0.85004	0.00000	-0.03207
+0.80668	0.00000	-0.26802	92.93344
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.31753	0.00000	-0.66770	-22.84441
+0.00000	0.73935	0.00000	-0.03207
+0.66770	0.00000	-0.31753	65.43281
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.31827	0.00000	0.85953	-15.05921
+0.00000	0.91657	0.00000	-0.03207
+-0.85953	0.00000	-0.31827	117.96600
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.31971	0.00000	1.01618	18.26515
+0.00000	1.06529	0.00000	-0.03207
+-1.01618	0.00000	-0.31971	-9.87909
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.32761	0.00000	-1.08353	-18.77686
+0.00000	1.13197	0.00000	-0.03207
+1.08353	0.00000	-0.32761	66.32655
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.36884	0.00000	-1.03254	22.58434
+0.00000	1.09644	0.00000	-0.03207
+1.03254	0.00000	-0.36884	9.65291
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.40073	0.00000	-0.61232	-15.56745
+0.00000	0.73179	0.00000	-0.03207
+0.61232	0.00000	-0.40073	116.43120
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.40444	0.00000	-0.92534	21.39577
+0.00000	1.00987	0.00000	-0.03207
+0.92534	0.00000	-0.40444	136.07020
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.43329	0.00000	0.68835	-35.95220
+0.00000	0.81337	0.00000	0.01127
+-0.68835	0.00000	-0.43329	-11.02436
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.54916	0.00000	0.12603	-22.73641
+0.00000	0.56344	0.00000	-0.03207
+-0.12603	0.00000	-0.54916	72.00417
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.58831	0.00000	-0.39114	15.96869
+0.00000	0.70646	0.00000	-0.03207
+0.39114	0.00000	-0.58831	-16.72618
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.59251	0.00000	-0.21223	40.17880
+0.00000	0.62937	0.00000	0.39803
+0.21223	0.00000	-0.59251	163.21750
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.60133	0.00000	-0.19221	-32.16261
+0.00000	0.63131	0.00000	-0.03207
+0.19221	0.00000	-0.60133	-3.62970
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.66344	0.00000	-0.54122	20.42795
+0.00000	0.85619	0.00000	-0.03207
+0.54122	0.00000	-0.66344	128.85480
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.68167	0.00000	-0.04470	9.86632
+0.00000	0.68313	0.00000	-0.03207
+0.04470	0.00000	-0.68167	-13.36991
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.74925	0.00000	-0.46280	-19.58255
+0.00000	0.88066	0.00000	-0.03207
+0.46280	0.00000	-0.74925	-36.87839
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.78693	0.00000	-0.63955	14.78345
+0.00000	1.01404	0.00000	-0.03207
+0.63955	0.00000	-0.78693	134.64220
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.79862	0.00000	0.48260	-34.65271
+0.00000	0.93311	0.00000	0.00556
+-0.48260	0.00000	-0.79862	31.76172
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.82178	0.00000	0.05575	-21.82297
+0.00000	0.82366	0.00000	-0.03207
+-0.05575	0.00000	-0.82178	-28.23268
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.82866	0.00000	-0.22748	25.42265
+0.00000	0.85932	0.00000	-0.03207
+0.22748	0.00000	-0.82866	54.90775
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.86609	0.00000	-0.04005	-27.60433
+0.00000	0.86702	0.00000	-0.03207
+0.04005	0.00000	-0.86609	34.15260
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.89603	0.00000	-0.44080	37.32004
+0.00000	0.99858	0.00000	0.12040
+0.44080	0.00000	-0.89603	171.82560
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.92439	0.00000	-0.35289	-42.78933
+0.00000	0.98946	0.00000	0.56186
+0.35289	0.00000	-0.92439	139.91450
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|-0.97585	0.00000	-0.00970	28.56366
+0.00000	0.97590	0.00000	-0.03207
+0.00970	0.00000	-0.97585	17.58664
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|0.05479	0.00000	-0.82892	21.01772
+0.00000	0.83073	0.00000	-0.03207
+0.82892	0.00000	0.05479	59.81598
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|0.14719	0.00000	-1.00997	-21.07070
+0.00000	1.02064	0.00000	-0.03207
+1.00997	0.00000	0.14719	106.37870
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|0.26818	0.00000	0.72830	37.21313
+0.00000	0.77611	0.00000	0.14851
+-0.72830	0.00000	0.26818	158.09450
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|0.32579	0.00000	1.02725	-31.19911
+0.00000	1.07767	0.00000	-0.03207
+-1.02725	0.00000	0.32579	-8.58703
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|0.39669	0.00000	0.59653	-26.27047
+0.00000	0.71639	0.00000	-0.03207
+-0.59653	0.00000	0.39669	-8.89945
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|0.41542	0.00000	1.04694	-31.22911
+0.00000	1.12635	0.00000	-0.03207
+-1.04694	0.00000	0.41542	34.40911
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|0.48005	0.00000	0.70588	-35.48644
+0.00000	0.85364	0.00000	0.03364
+-0.70588	0.00000	0.48005	33.15553
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|0.51007	0.00000	-0.37794	19.87043
+0.00000	0.63483	0.00000	-0.03207
+0.37794	0.00000	0.51007	130.56400
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|0.56159	0.00000	-0.03211	-33.43735
+0.00000	0.56251	0.00000	-0.02270
+0.03211	0.00000	0.56159	144.28380
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|0.56835	0.00000	0.67417	22.63950
+0.00000	0.88177	0.00000	-0.03207
+-0.67417	0.00000	0.56835	51.54570
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|0.63906	0.00000	-0.08892	26.69646
+0.00000	0.64522	0.00000	-0.03207
+0.08892	0.00000	0.63906	10.15218
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|0.68840	0.00000	-0.38344	-37.26205
+0.00000	0.78798	0.00000	0.11892
+0.38344	0.00000	0.68840	149.15830
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|0.72617	0.00000	0.05437	-37.31519
+0.00000	0.72820	0.00000	0.12184
+-0.05437	0.00000	0.72617	148.80240
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|0.72975	0.00000	0.44324	26.00224
+0.00000	0.85381	0.00000	-0.03207
+-0.44324	0.00000	0.72975	91.72257
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|0.81206	0.00000	-0.02409	-17.19531
+0.00000	0.81242	0.00000	-0.03207
+0.02409	0.00000	0.81206	120.01700
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|0.81735	0.00000	-0.35782	24.39943
+0.00000	0.89224	0.00000	-0.03207
+0.35782	0.00000	0.81735	85.96685
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|0.88252	0.00000	0.07493	13.14237
+0.00000	0.88569	0.00000	-0.03207
+-0.07493	0.00000	0.88252	-15.53037
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|0.88659	0.00000	0.42872	14.67314
+0.00000	0.98481	0.00000	-0.03207
+-0.42872	0.00000	0.88659	50.05433
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|0.88976	0.00000	0.12074	23.52467
+0.00000	0.89792	0.00000	-0.03207
+-0.12074	0.00000	0.88976	9.36994
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Sparse desert vegetation / DesertThornBush/Static collision|MeshCollider|True|False|326f5a6a4c4214f68a0fae2fa7d5c2ce convex=False|1.01394	0.00000	0.30930	-20.23620
+0.00000	1.06006	0.00000	-0.03207
+-0.30930	0.00000	1.01394	-28.98344
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Traveller camp / CaravanSupplies/Static collision|MeshCollider|True|False|85283cb73fecf4eb983746e914648e33 convex=False|-0.68870	0.00000	0.36619	-19.00000
+0.00000	0.78000	0.00000	-0.01207
+-0.36619	0.00000	-0.68870	15.50000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Traveller camp / CaravanSupplies/Static collision|MeshCollider|True|False|85283cb73fecf4eb983746e914648e33 convex=False|0.88295	0.00000	0.46947	-17.50000
+0.00000	1.00000	0.00000	-0.01207
+-0.46947	0.00000	0.88295	11.90000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Western skyline / GobiMountainPeak/Static collision|MeshCollider|False|False|0ad2e6e0119ec4642a382f873e6c481d convex=False|1.12487	0.00000	-0.23910	-263.00000
+0.00000	1.15000	0.00000	31.05908
+0.23910	0.00000	1.12487	245.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Western skyline / GobiRidge/Static collision|MeshCollider|False|False|ce9729e4573894c4084c4a7b363250a1 convex=False|-0.02129	0.00000	1.21981	-192.00000
+0.00000	1.22000	0.00000	29.10257
+-1.21981	0.00000	-0.02129	356.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Western skyline / GobiRidge/Static collision|MeshCollider|False|False|ce9729e4573894c4084c4a7b363250a1 convex=False|0.82741	0.00000	0.64644	-177.00000
+0.00000	1.05000	0.00000	14.30731
+-0.64644	0.00000	0.82741	145.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Western valley shoulder / WindErodedCliff/Static collision|MeshCollider|True|False|06af484b406e64e53a270ee93e36ac34 convex=False|-0.30429	0.00000	0.65254	-48.00000
+0.00000	0.72000	0.00000	-0.87492
+-0.65254	0.00000	-0.30429	-18.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Western valley shoulder / YardangMesa/Static collision|MeshCollider|True|False|a42e0ad9c281f49128ba22c176bd39be convex=False|0.47693	0.00000	0.76324	-69.00000
+0.00000	0.90000	0.00000	-0.46604
+-0.76324	0.00000	0.47693	67.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Wind-shaped tamarisk / DeadTamarisk/Static collision|MeshCollider|True|False|e6a26edc429af4c349d81349dde27ea6 convex=False|-0.16740	0.00000	0.91804	-18.50000
+0.00000	0.93318	0.00000	-0.05707
+-0.91804	0.00000	-0.16740	-28.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Wind-shaped tamarisk / DeadTamarisk/Static collision|MeshCollider|True|False|e6a26edc429af4c349d81349dde27ea6 convex=False|-0.50442	0.00000	0.87386	17.50000
+0.00000	1.00899	0.00000	-0.05707
+-0.87386	0.00000	-0.50442	60.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Wind-shaped tamarisk / DeadTamarisk/Static collision|MeshCollider|True|False|e6a26edc429af4c349d81349dde27ea6 convex=False|-0.82068	0.00000	0.47818	-22.50000
+0.00000	0.94983	0.00000	-0.05707
+-0.47818	0.00000	-0.82068	76.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Wind-shaped tamarisk / DeadTamarisk/Static collision|MeshCollider|True|False|e6a26edc429af4c349d81349dde27ea6 convex=False|-0.87022	0.00000	0.18694	17.50000
+0.00000	0.89007	0.00000	-0.05707
+-0.18694	0.00000	-0.87022	135.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Wind-shaped tamarisk / DeadTamarisk/Static collision|MeshCollider|True|False|e6a26edc429af4c349d81349dde27ea6 convex=False|0.22973	0.00000	-0.78878	-41.50000
+0.00000	0.82155	0.00000	0.45109
+0.78878	0.00000	0.22973	149.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Wind-shaped tamarisk / DeadTamarisk/Static collision|MeshCollider|True|False|e6a26edc429af4c349d81349dde27ea6 convex=False|0.24183	0.00000	-0.83642	36.50000
+0.00000	0.87067	0.00000	0.06372
+0.83642	0.00000	0.24183	169.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Wind-shaped tamarisk / DeadTamarisk/Static collision|MeshCollider|True|False|e6a26edc429af4c349d81349dde27ea6 convex=False|0.32524	0.00000	0.92877	-22.50000
+0.00000	0.98407	0.00000	-0.05707
+-0.92877	0.00000	0.32524	117.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Wind-shaped tamarisk / DeadTamarisk/Static collision|MeshCollider|True|False|e6a26edc429af4c349d81349dde27ea6 convex=False|0.66094	0.00000	0.59316	-33.50000
+0.00000	0.88808	0.00000	-0.04676
+-0.59316	0.00000	0.66094	42.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Wind-shaped tamarisk / DeadTamarisk/Static collision|MeshCollider|True|False|e6a26edc429af4c349d81349dde27ea6 convex=False|0.73178	0.00000	0.14610	10.50000
+0.00000	0.74622	0.00000	-0.05707
+-0.14610	0.00000	0.73178	-12.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Wind-shaped tamarisk / DeadTamarisk/Static collision|MeshCollider|True|False|e6a26edc429af4c349d81349dde27ea6 convex=False|0.78469	0.00000	-0.17196	20.50000
+0.00000	0.80331	0.00000	-0.05707
+0.17196	0.00000	0.78469	92.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Wind-shaped tamarisk / DeadTamarisk/Static collision|MeshCollider|True|False|e6a26edc429af4c349d81349dde27ea6 convex=False|0.79432	0.00000	-0.49991	-32.50000
+0.00000	0.93853	0.00000	-0.05707
+0.49991	0.00000	0.79432	-1.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Prepared Gobi landscape/Wind-shaped tamarisk / DeadTamarisk/Static collision|MeshCollider|True|False|e6a26edc429af4c349d81349dde27ea6 convex=False|1.06513	0.00000	0.02475	21.50000
+0.00000	1.06542	0.00000	-0.05707
+-0.02475	0.00000	1.06513	18.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Scanned weathered outcrop|BoxCollider|True|False|(-0.10, 2.18, -1.92) (4.98, 4.48, 3.94)|-0.07970	0.00000	-2.47232	-76.45649
+0.00000	2.32803	0.00000	-3.29472
+2.28223	0.00000	-0.08634	32.77195
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Scanned weathered outcrop|BoxCollider|True|False|(-0.10, 2.18, -1.92) (4.98, 4.48, 3.94)|-1.64551	0.00000	-1.24817	-38.93331
+0.00000	2.04786	0.00000	-5.99937
+1.15220	0.00000	-1.78257	202.00580
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Scanned weathered outcrop|BoxCollider|True|False|(-0.10, 2.18, -1.92) (4.98, 4.48, 3.94)|0.62778	0.00000	-0.51247	43.77742
+0.00000	0.80135	0.00000	-1.94315
+0.47306	0.00000	0.68007	-1.40022
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Scanned weathered outcrop|BoxCollider|True|False|(0.45, 2.03, -1.51) (3.41, 4.26, 2.43)|-0.21120	0.00000	2.06770	102.22720
+0.00000	1.27348	0.00000	8.30342
+-1.72011	0.00000	-0.25388	106.19000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Scanned weathered outcrop|BoxCollider|True|False|(0.45, 2.03, -1.51) (3.41, 4.26, 2.43)|-0.40471	0.00000	4.62868	-75.88295
+0.00000	2.84511	0.00000	1.30395
+-3.85057	0.00000	-0.48649	148.53900
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Scanned weathered outcrop|BoxCollider|True|False|(0.45, 2.03, -1.51) (3.41, 4.26, 2.43)|-0.75399	0.00000	1.70460	53.87905
+0.00000	1.18017	0.00000	-2.52995
+-1.41805	0.00000	-0.90635	75.42992
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Scanned weathered outcrop|BoxCollider|True|False|(0.45, 2.03, -1.51) (3.41, 4.26, 2.43)|-2.43240	0.00000	-0.25581	-81.30864
+0.00000	1.79423	0.00000	-1.08482
+0.21281	0.00000	-2.92393	-22.16951
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Scanned weathered outcrop|BoxCollider|True|False|(0.45, 2.03, -1.51) (3.41, 4.26, 2.43)|3.44628	0.00000	-3.23662	59.22182
+0.00000	3.21371	0.00000	-7.45358
+2.69253	0.00000	4.14269	70.16023
+0.00000	0.00000	0.00000	1.00000
+
+Environment/Weathered stone table|BoxCollider|True|False|(0.01, 0.00, -0.02) (1.70, 0.75, 1.30)|1.00000	0.00000	0.00000	-12.00000
+0.00000	1.00000	0.00000	0.38000
+0.00000	0.00000	1.00000	15.00000
+0.00000	0.00000	0.00000	1.00000
+
+Environment/周文王 [Humanoid]|CapsuleCollider|True|False|(0.00, 0.85, 0.00) 0.3 1.7 1|-1.00000	0.00000	0.00000	-6.00000
+0.00000	1.00000	0.00000	0.00000
+0.00000	0.00000	-1.00000	-2.00000
+0.00000	0.00000	0.00000	1.00000
+
+Traveller|CharacterController|True|False||0.39761	0.00000	0.91756	0.00000
+0.00000	1.00000	0.00000	0.10000
+-0.91756	0.00000	0.39761	-30.00000
+0.00000	0.00000	0.00000	1.00000
+

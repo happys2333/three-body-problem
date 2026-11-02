@@ -130,6 +130,7 @@ namespace ThreeBodyProblem.Editor
                 if(RouteDistance(patch)>6)
                     Place("DeadTamarisk","Wind-shaped tamarisk",patch.x-2.5f,patch.y+4,.72f+(float)random.NextDouble()*.4f,(float)random.NextDouble()*360,.06f);
             }
+            ActOnePerformanceProduction.OptimizeStage(stage);
             Physics.SyncTransforms();
             Validate(stage);
             for(int i=0;i<report.placements.Count;i++)

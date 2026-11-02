@@ -1,0 +1,25 @@
+{
+  "ranked": [
+    {
+      "rank": 1,
+      "cause": "Geometry/LOD cost",
+      "prediction": "Force existing LOD1 in memory; triangle counts and GPU time should fall."
+    },
+    {
+      "rank": 2,
+      "cause": "Realtime shadows",
+      "prediction": "Disable directional shadows in memory; batches, shadow triangles and GPU time should fall."
+    },
+    {
+      "rank": 3,
+      "cause": "Triplanar surface shading",
+      "prediction": "Replace only Environment Surface materials with simple shared Standard materials; comparable geometry with lower GPU time."
+    },
+    {
+      "rank": 4,
+      "cause": "CPU/UI allocation",
+      "prediction": "If this dominated, CPU work and allocations would approach the frame budget; initial measurements are only 1\u20133 ms CPU and about 8 allocated bytes per frame."
+    }
+  ],
+  "note": "Diagnostic modes are opt-in development-player flags. No diagnostic visual downgrade is shipped to ordinary play."
+}

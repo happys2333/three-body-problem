@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "source": "/Users/happys/Documents/GitHub/three-body-problem/Builds/ActOnePerformance20261102/Traveller.app",
+  "playable": "/Users/happys/Documents/GitHub/three-body-problem/Builds/ActOneTraveller.app",
+  "backup": "/Users/happys/Documents/GitHub/three-body-problem/Builds/ActOneTraveller.before-gobi-performance.app",
+  "files": 227,
+  "treeSha256": "ef16fe9a831535f9fc7c304fd4fb141ccd91ae91081ca04e5a0e3b2fba8be521",
+  "editorChecks": 112,
+  "nativeMechanicsChecks": 447,
+  "performanceViews": 6
+}
