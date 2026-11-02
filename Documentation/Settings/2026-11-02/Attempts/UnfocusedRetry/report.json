@@ -1,0 +1,21 @@
+{
+    "passed": false,
+    "hardwareMicrophoneUsed": false,
+    "simulatedMicrophoneStarts": 4,
+    "checks": 72,
+    "errors": [
+        "Native player is not focused for mouse capture verification.",
+        "First-person look still requires a held mouse button.",
+        "A hidden settings text field retained keyboard focus.",
+        "Resume failed to capture the mouse.",
+        "Voice-only conversation prevents normal first-person control.",
+        "Esc cannot resume after voice dialogue.",
+        "Closing text chat did not restore first-person control."
+    ],
+    "resolutions": [
+        "1600x900",
+        "1280x720",
+        "960x540",
+        "1024x768"
+    ]
+}

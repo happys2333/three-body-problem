@@ -1,0 +1,40 @@
+{
+  "realPaidApiCalls": 0,
+  "gatewayOnlineFlag": false,
+  "requests": [
+    {
+      "path": "/v1/chat/completions",
+      "model": "qa-selected-model",
+      "hasBearerKey": true,
+      "credentialMatched": true,
+      "connectionTest": true
+    },
+    {
+      "path": "/v1/chat/completions",
+      "model": "qa-selected-model",
+      "hasBearerKey": true,
+      "credentialMatched": false,
+      "connectionTest": true
+    },
+    {
+      "path": "/v1/chat/completions",
+      "model": "qa-selected-model",
+      "hasBearerKey": true,
+      "credentialMatched": true,
+      "connectionTest": false
+    },
+    {
+      "path": "/transcribe",
+      "syntheticMicrophone": true,
+      "pcmWav": true,
+      "bytes": 32044
+    },
+    {
+      "path": "/v1/chat/completions",
+      "model": "qa-selected-model",
+      "hasBearerKey": true,
+      "credentialMatched": true,
+      "connectionTest": false
+    }
+  ]
+}

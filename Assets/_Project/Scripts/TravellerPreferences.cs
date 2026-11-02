@@ -11,6 +11,7 @@ namespace ThreeBodyProblem
         public string model = "deepseek-flash";
         public string apiKey = "";
         public int timeoutSeconds = 20;
+        public int contextWindowTokens = 32000;
 
         public NpcApiConnection Copy() => (NpcApiConnection)MemberwiseClone();
 
@@ -35,6 +36,8 @@ namespace ThreeBodyProblem
         public bool Validate(out string error)
         {
             error = null;
+            if (contextWindowTokens != 32000 && contextWindowTokens != 128000 && contextWindowTokens != 1000000)
+            { error = "上下文长度请选择 32K、128K 或 1M。"; return false; }
             if (mode != "gateway" && mode != "scripted" && mode != "deepseek" && mode != "custom")
             { error = "请选择对话模式。"; return false; }
             if (mode == "gateway" || mode == "scripted") return true;
@@ -44,8 +47,8 @@ namespace ThreeBodyProblem
             { error = "请填写服务商提供的模型名称。"; return false; }
             if ((apiKey ?? "").Length > 4096 || (apiKey ?? "").Contains("\n") || (apiKey ?? "").Contains("\r"))
             { error = "API Key 格式不正确，请检查是否包含换行。"; return false; }
-            if (timeoutSeconds < 5 || timeoutSeconds > 120)
-            { error = "等待时间需在 5–120 秒之间。"; return false; }
+            if (timeoutSeconds < 5 || timeoutSeconds > 600)
+            { error = "等待时间需在 5–600 秒之间。"; return false; }
             return true;
         }
     }
@@ -58,6 +61,8 @@ namespace ThreeBodyProblem
         public float mouseSensitivity = 2;
         public bool invertMouseY;
         public bool speakReplies = true;
+        public bool microphoneEnabled = true;
+        public string microphoneDevice = "";
 
         // Deliberately has no credential field: only the in-memory connection
         // is sent to the local service. Keys never enter PlayerPrefs or assets.
@@ -65,8 +70,13 @@ namespace ThreeBodyProblem
         {
             public string mode = "gateway", apiUrl = "https://api.deepseek.com/chat/completions", model = "deepseek-flash", gatewayUrl = "";
             public int timeoutSeconds = 20;
+            public int contextWindowTokens = 32000;
             public float mouseSensitivity = 2;
             public bool invertMouseY, speakReplies = true;
+            // Missing fields in older JSON must not disable a previously working microphone.
+            public int microphonePreferencesVersion;
+            public bool microphoneEnabled;
+            public string microphoneDevice;
         }
 
         public TravellerPreferences Copy()
@@ -88,6 +98,8 @@ namespace ThreeBodyProblem
             }
             if (float.IsNaN(mouseSensitivity) || float.IsInfinity(mouseSensitivity) || mouseSensitivity < .2f || mouseSensitivity > 5)
             { error = "鼠标灵敏度需在 0.2–5 之间。"; return false; }
+            if ((microphoneDevice ?? "").Length > 512 || (microphoneDevice ?? "").IndexOfAny(new[] { '\r', '\n', '\0' }) >= 0)
+            { error = "麦克风名称无效，请重新选择设备。"; return false; }
             error = null; return true;
         }
 
@@ -96,8 +108,9 @@ namespace ThreeBodyProblem
 
         public string ToSavedJson() => JsonUtility.ToJson(new Saved {
             mode = connection.mode, apiUrl = connection.apiUrl, model = connection.model,
-            timeoutSeconds = connection.timeoutSeconds, gatewayUrl = gatewayUrl,
-            mouseSensitivity = mouseSensitivity, invertMouseY = invertMouseY, speakReplies = speakReplies
+            timeoutSeconds = connection.timeoutSeconds, contextWindowTokens = connection.contextWindowTokens, gatewayUrl = gatewayUrl,
+            mouseSensitivity = mouseSensitivity, invertMouseY = invertMouseY, speakReplies = speakReplies,
+            microphonePreferencesVersion = 1, microphoneEnabled = microphoneEnabled, microphoneDevice = microphoneDevice ?? ""
         });
 
         public static TravellerPreferences FromSavedJson(string json)
@@ -108,9 +121,12 @@ namespace ThreeBodyProblem
                 var saved = JsonUtility.FromJson<Saved>(json);
                 if (saved == null) return new TravellerPreferences();
                 var value = new TravellerPreferences {
-                    connection = new NpcApiConnection { mode = saved.mode, apiUrl = saved.apiUrl, model = saved.model, timeoutSeconds = saved.timeoutSeconds },
+                    connection = new NpcApiConnection { mode = saved.mode, apiUrl = saved.apiUrl, model = saved.model, timeoutSeconds = saved.timeoutSeconds,
+                        contextWindowTokens = saved.contextWindowTokens > 0 ? saved.contextWindowTokens : 32000 },
                     gatewayUrl = saved.gatewayUrl, mouseSensitivity = saved.mouseSensitivity,
-                    invertMouseY = saved.invertMouseY, speakReplies = saved.speakReplies
+                    invertMouseY = saved.invertMouseY, speakReplies = saved.speakReplies,
+                    microphoneEnabled = saved.microphonePreferencesVersion < 1 || saved.microphoneEnabled,
+                    microphoneDevice = saved.microphoneDevice ?? ""
                 };
                 string error; return value.Validate(out error) ? value : new TravellerPreferences();
             }

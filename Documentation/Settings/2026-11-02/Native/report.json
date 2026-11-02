@@ -1,0 +1,13 @@
+{
+    "passed": true,
+    "hardwareMicrophoneUsed": false,
+    "simulatedMicrophoneStarts": 4,
+    "checks": 73,
+    "errors": [],
+    "resolutions": [
+        "1600x900",
+        "1280x720",
+        "960x540",
+        "1024x768"
+    ]
+}

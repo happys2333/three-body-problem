@@ -1,0 +1,133 @@
+{
+  "verifiedUtc": "2026-11-02T02:44:51.752423+00:00",
+  "editMode": {
+    "total": 71,
+    "passed": 71,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 8.5329877,
+    "resultState": "Passed"
+  },
+  "python": {
+    "passed": true,
+    "checks": 39
+  },
+  "settingsNative": {
+    "passed": true,
+    "hardwareMicrophoneUsed": false,
+    "simulatedMicrophoneStarts": 4,
+    "checks": 73,
+    "errors": [],
+    "resolutions": [
+      "1600x900",
+      "1280x720",
+      "960x540",
+      "1024x768"
+    ]
+  },
+  "gobiNative": {
+    "passed": true,
+    "hardwareMicrophoneUsed": false,
+    "onlineModelUsed": false,
+    "microphoneAutoSendVerified": true,
+    "asrStartedFocused": true,
+    "asrFinishedFocused": true,
+    "asrGenerationStart": 0,
+    "asrGenerationEnd": 0,
+    "asrCallbackStatus": "对方正在思考……",
+    "asrAutoSendTranscript": "快过来！现在是乱纪元。不要命吗？",
+    "checks": 57,
+    "openingAnswers": 3,
+    "damageEvents": 2,
+    "ignited": 88,
+    "burned": 88,
+    "shaded": 53,
+    "walkedMetres": 103.38744354248047,
+    "frameMeanMs": 11.163300514221191,
+    "frameP95Ms": 11.369126319885254,
+    "sunriseSeconds": 3.0069522857666016,
+    "sunsetSeconds": 2.01251220703125,
+    "frameSampleTargetRate": 90,
+    "unfocusedSampleFrames": 0,
+    "phase": "complete",
+    "asrTranscript": "太阳快跟我躲进岩石下面。",
+    "gatewayMode": "{\"ready\": true, \"mode\": \"scripted\", \"asrModelPresent\": true, \"asrModel\": \"Qwen3-ASR-0.6B-8bit\", \"asrEngine\": \"qwen3-asr-mlx-8bit\", \"ttsEngine\": \"moss-tts-nano-onnx-cpu\", \"connectionSettings\": 2, \"ttsModel\": \"MOSS-TTS-Nano-100M-ONNX\", \"voiceProfiles\": {\"wenwang\": \"Weiguo\", \"king\": \"Zhiming\", \"pope\": \"Weiguo\", \"scholar\": \"Junhao\", \"davinci\": \"Zhiming\", \"shang_guard\": \"Junhao\", \"church_guard\": \"Weiguo\", \"citizen\": \"Junhao\"}, \"lastVoiceTimings\": {\"tts\": {\"cacheHit\": true, \"voice\": \"Weiguo\"}, \"asr\": {\"seconds\": 0.41056170797673985, \"metalPeakBytes\": 1657639644, \"silence\": false}}}",
+    "measurement": "Native development player at 1920x1080",
+    "errors": []
+  },
+  "nightPerformanceProbe": {
+    "passed": true,
+    "mechanicsPassed": false,
+    "performancePassed": true,
+    "performanceOnly": true,
+    "realDecisionWait": false,
+    "hardwareMicrophoneUsed": false,
+    "checks": 1,
+    "ignited": 0,
+    "burned": 0,
+    "shaded": 0,
+    "frameRateLimit": 90,
+    "phase": "complete",
+    "gpu": "Apple M5",
+    "walkedMetres": 0.0,
+    "shelterWallSeconds": 0.0,
+    "sunsetWallSeconds": 0.0,
+    "errors": [],
+    "metrics": [
+      {
+        "moment": 0,
+        "actualFrameRateLimit": 90,
+        "vSyncCount": 0,
+        "focused": true,
+        "meanMs": 11.201671600341797,
+        "p95Ms": 11.506002426147461,
+        "gpuMeanMs": 8.321974754333496,
+        "mainThreadMeanMs": 11.197677612304688,
+        "waitForTargetMeanMs": 9.20384693145752,
+        "triangles": 1303106,
+        "batches": 163
+      }
+    ],
+    "asrTranscript": "",
+    "playerTorchViewport": ""
+  },
+  "syntheticMicrophoneHttpRequests": 2,
+  "syntheticPcmWavVerified": true,
+  "realPaidApiCalls": 0,
+  "hardwareMicrophoneRecorded": false,
+  "build": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 0,
+    "seconds": 2.201335,
+    "bytes": 1264426781,
+    "path": "/Users/happys/Documents/GitHub/three-body-problem/Builds/ActOneTraveller.app",
+    "builtUtc": "2026-11-02T02:39:13.6312500Z"
+  },
+  "editor": {
+    "project": "/Users/happys/Documents/GitHub/three-body-problem/Assets",
+    "scene": "Assets/_Project/Scenes/Traveller/02_ChaogeCourt.unity",
+    "isDirty": false,
+    "isPlaying": false,
+    "isCompiling": false,
+    "runInBackground": false
+  },
+  "preservationPassed": true,
+  "runtimeErrorLines": {
+    "Native": [],
+    "Regression/GobiOpening": [],
+    "PerformanceProbe": []
+  },
+  "initialFailedAttemptsPreserved": [
+    "Attempts/Unfocused/report.json",
+    "Attempts/UnfocusedRetry/report.json",
+    "Attempts/GobiFrameBudget/report.json"
+  ],
+  "limitations": [
+    "Device selection and capture cancellation use a simulated microphone in automated QA.",
+    "Real device quality and system permission UI remain hardware checks.",
+    "Initial frame-time spike did not reproduce; cause unconfirmed.",
+    "Gobi frame samples do not certify whole-city performance."
+  ],
+  "passed": true
+}

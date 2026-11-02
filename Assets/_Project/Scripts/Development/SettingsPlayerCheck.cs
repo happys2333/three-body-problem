@@ -16,6 +16,8 @@ namespace ThreeBodyProblem
         [Serializable] private sealed class Report
         {
             public bool passed;
+            public bool hardwareMicrophoneUsed;
+            public int simulatedMicrophoneStarts;
             public int checks;
             public List<string> errors = new List<string>(), resolutions = new List<string>();
         }
@@ -40,6 +42,7 @@ namespace ThreeBodyProblem
             hadPreferences = PlayerPrefs.HasKey(TravellerUserSettings.StorageKey); storedPreferences = PlayerPrefs.GetString(TravellerUserSettings.StorageKey, "");
             hadJournal = PlayerPrefs.HasKey("ThreeBodyTraveller.Journal.v1"); storedJournal = PlayerPrefs.GetString("ThreeBodyTraveller.Journal.v1", ""); captured = true;
             yield return Frames(15); Bind();
+            yield return Until(() => Application.isFocused, 45);
             Check(journey.IsTitle && Cursor.lockState == CursorLockMode.None, "The title should leave the pointer available.");
             Click(hud.Root.Q<Button>("title-settings")); yield return Frames(3);
             Check(hud.SettingsPanel.IsOpen && hud.IsWorldPaused, "Title settings did not open.");
@@ -66,6 +69,7 @@ namespace ThreeBodyProblem
             ui.Q<TextField>("settings-api-key").value = "test-session-only-key";
             ui.Q<TextField>("settings-gateway-url").value = Option("-settings-test-gateway");
             ui.Q<IntegerField>("settings-timeout").value = 5;
+            ui.Q<DropdownField>("settings-context-window").index = 2;
             ui.Q<Toggle>("settings-speak-replies").value = false;
             Click(ui.Q<Button>("settings-test"));
             yield return Until(() => ui.Q<Button>("settings-test").enabledSelf, 12);
@@ -82,6 +86,7 @@ namespace ThreeBodyProblem
             Click(ui.Q<Button>("settings-save"));yield return Frames(3);
             Check(!hud.SettingsPanel.IsOpen, "Valid settings were not saved.");
             Check(TravellerUserSettings.Current.connection.model == "qa-selected-model", "The selected model was not applied.");
+            Check(TravellerUserSettings.Current.connection.contextWindowTokens == 1000000, "The 1M context setting was not applied.");
             Check(TravellerUserSettings.Current.connection.apiKey == "test-session-only-key", "The key was lost before the game request.");
             string persisted = PlayerPrefs.GetString(TravellerUserSettings.StorageKey);
             Check(!persisted.Contains("test-session-only-key")&&!persisted.Contains("apiKey"), "The API key was persisted.");
@@ -136,7 +141,99 @@ namespace ThreeBodyProblem
             Check(hud.SettingsPanel.Root.Q<TextField>("settings-model").value=="qa-selected-model"&&
                   hud.SettingsPanel.Root.Q<TextField>("settings-api-key").value=="test-session-only-key", "Scene reload lost session settings.");
             Check(TravellerPreferences.FromSavedJson(persisted).connection.apiKey=="","A fresh preference load recovered a secret.");
+            Check(TravellerPreferences.FromSavedJson(persisted).connection.contextWindowTokens==1000000,"The long-context setting was not persisted.");
+            yield return VerifyMicrophoneSettings();
             Finish();
+        }
+        private sealed class SimulatedMicrophone : IMicrophoneCaptureSource
+        {
+            public string[] devices={"QA Built-in Microphone","QA USB Microphone"};
+            public bool authorized=true,holdPermission,releasePermission;
+            public int starts,ends,requests,permissionChecks,enumerations;
+            public string lastStarted,lastEnded;
+            public string[] Devices { get { enumerations++;return devices; } }
+            public bool HasPermission { get { permissionChecks++;return authorized; } }
+            public IEnumerator RequestPermission(){requests++;while(holdPermission&&!releasePermission)yield return null;if(releasePermission)authorized=true;}
+            public AudioClip Start(string device){starts++;lastStarted=device;return AudioClip.Create("Synthetic microphone verification",16000,1,16000,false);}
+            public int GetPosition(string device)=>16000;
+            public void End(string device){ends++;lastEnded=device;}
+        }
+        private IEnumerator VerifyMicrophoneSettings()
+        {
+            hud.SettingsPanel.Cancel();
+            var mic=stage.GetComponent<PlayerMicrophoneInput>();var input=new SimulatedMicrophone();mic.Source=input;
+            hud.OpenSettings();var ui=hud.SettingsPanel.Root;
+            Check(input.enumerations==0&&input.requests==0&&input.starts==0,"Opening AI settings unexpectedly accessed microphone capture.");
+            Click(ui.Q<Button>("settings-controls-tab"));yield return Frames(3);
+            var enabled=ui.Q<Toggle>("settings-microphone-enabled");var devices=ui.Q<DropdownField>("settings-microphone-device");
+            enabled.value=true;Click(ui.Q<Button>("settings-refresh-microphones"));yield return Frames(2);
+            Check(devices.choices.Contains("QA USB Microphone")&&devices.choices.Contains("系统默认麦克风"),"Microphone device choices are missing.");
+            bool previous=TravellerUserSettings.Current.microphoneEnabled;string previousDevice=TravellerUserSettings.Current.microphoneDevice;
+            enabled.value=false;Check(!devices.enabledSelf&&!ui.Q<Button>("settings-refresh-microphones").enabledSelf,"Disabling microphone did not disable its controls.");
+            hud.SettingsPanel.Cancel();
+            Check(TravellerUserSettings.Current.microphoneEnabled==previous&&TravellerUserSettings.Current.microphoneDevice==previousDevice,"Cancel applied an unsaved microphone choice.");
+            hud.OpenSettings();Click(ui.Q<Button>("settings-controls-tab"));enabled.value=true;
+            devices.index=devices.choices.IndexOf("QA USB Microphone");
+            foreach(var size in new[]{new Vector2Int(1600,900),new Vector2Int(960,540)})
+            {
+                Screen.SetResolution(size.x,size.y,FullScreenMode.Windowed);yield return Frames(10);
+                ui.Q<ScrollView>("settings-scroll").ScrollTo(devices);yield return Frames(3);
+                CheckInside(devices);CheckInside(ui.Q("settings-save"));Capture("Microphone_Settings_"+Screen.width+"x"+Screen.height);yield return Frames(3);
+            }
+            Screen.SetResolution(1600,900,FullScreenMode.Windowed);yield return Frames(8);hud.SettingsPanel.Apply();
+            var loaded=TravellerPreferences.FromSavedJson(PlayerPrefs.GetString(TravellerUserSettings.StorageKey));
+            Check(loaded.microphoneEnabled&&loaded.microphoneDevice=="QA USB Microphone","The explicit microphone choice was not persisted.");
+            Check(loaded.connection.contextWindowTokens==1000000&&TravellerUserSettings.Current.connection.apiKey=="test-session-only-key","Saving microphone settings changed the AI configuration.");
+            journey.Begin();journey.Progress.WakeUp();yield return Frames(5);
+            var companion=stage.GetComponent<TravellerCastDirector>().companion;
+            stage.player.Teleport(companion.transform.position+companion.transform.forward*2.3f+Vector3.up*1.65f,companion.transform.position+Vector3.up*1.45f);
+            journey.Progress.DiscoverTraveller();journey.Progress.MeetTraveller();yield return Frames(3);
+            yield return mic.BeginCapture();yield return Frames(2);
+            Check(mic.IsRecording&&input.lastStarted=="QA USB Microphone","Recording did not start on the chosen USB device.");
+            hud.OpenSettings();Check(!mic.IsRecording&&input.lastEnded=="QA USB Microphone","Opening settings did not stop the original capture device.");
+            Click(ui.Q<Button>("settings-controls-tab"));devices.index=0;hud.SettingsPanel.Apply();
+            yield return mic.BeginCapture();yield return Frames(2);
+            Check(mic.IsRecording&&input.lastStarted==null,"System default did not route to Unity's default device.");mic.CancelCapture();journey.CloseDialogue();
+
+            hud.OpenSettings();Click(ui.Q<Button>("settings-controls-tab"));enabled.value=false;hud.SettingsPanel.Apply();
+            int starts=input.starts,requests=input.requests,permissionChecks=input.permissionChecks,enumerations=input.enumerations;
+            yield return mic.BeginCapture();yield return Frames(3);
+            Check(!mic.IsRecording&&!mic.AwaitingPermission&&input.starts==starts&&input.requests==requests&&input.permissionChecks==permissionChecks&&input.enumerations==enumerations,"A disabled microphone accessed devices, permission, or capture.");
+            Check(journey.DialogueOpen&&hud.Root.Q("text-fallback").resolvedStyle.display==DisplayStyle.Flex,"Disabled microphone did not allow text conversation.");
+            journey.CloseDialogue();
+
+            hud.OpenSettings();Click(ui.Q<Button>("settings-controls-tab"));enabled.value=true;hud.SettingsPanel.Apply();
+            input.authorized=false;input.holdPermission=true;
+            mic.StartCoroutine(mic.BeginCapture());yield return Frames(3);
+            Check(mic.AwaitingPermission,"Microphone permission request did not enter the waiting state.");
+            hud.OpenSettings();input.releasePermission=true;yield return Frames(3);
+            Check(!mic.IsRecording&&!mic.AwaitingPermission&&input.starts==starts,"Cancelled permission later began recording.");
+            hud.SettingsPanel.Cancel();input.holdPermission=false;input.releasePermission=false;input.authorized=false;
+            yield return mic.BeginCapture();yield return Frames(3);
+            Check(!mic.IsRecording&&mic.NeedsTextFallback,"Permission denial did not preserve text fallback.");journey.CloseDialogue();input.authorized=true;
+
+            hud.OpenSettings();Click(ui.Q<Button>("settings-controls-tab"));devices.index=devices.choices.IndexOf("QA USB Microphone");hud.SettingsPanel.Apply();
+            input.devices=new[]{"QA Built-in Microphone"};hud.OpenSettings();Click(ui.Q<Button>("settings-controls-tab"));
+            Check(devices.value.Contains("不可用")&&devices.value.Contains("QA USB Microphone"),"An unplugged chosen device was silently replaced.");hud.SettingsPanel.Apply();
+            yield return mic.BeginCapture();yield return Frames(3);
+            Check(!mic.IsRecording&&input.starts==starts&&mic.NeedsTextFallback,"A missing chosen device recorded from another microphone.");journey.CloseDialogue();
+            input.devices=new string[0];hud.OpenSettings();Click(ui.Q<Button>("settings-controls-tab"));devices.index=0;hud.SettingsPanel.Apply();
+            yield return mic.BeginCapture();yield return Frames(3);
+            Check(!mic.IsRecording&&input.starts==starts&&mic.NeedsTextFallback,"No-device capture did not return to text chat.");journey.CloseDialogue();
+
+            input.devices=new[]{"QA Built-in Microphone","QA USB Microphone"};hud.OpenSettings();Click(ui.Q<Button>("settings-controls-tab"));
+            Click(ui.Q<Button>("settings-refresh-microphones"));devices.index=devices.choices.IndexOf("QA USB Microphone");hud.SettingsPanel.Apply();
+            var director=stage.GetComponent<NpcDialogueDirector>();
+            int answers=journey.Progress.OpeningAnswers;
+            yield return mic.BeginCapture();yield return Frames(2);mic.FinishCapture();
+            Check(mic.IsTranscribing,"Synthetic capture did not reach the transcription request.");
+            yield return Delay(.12f);
+            mic.CancelCapture();yield return Delay(.7f);
+            Check(!mic.IsTranscribing&&journey.Progress.OpeningAnswers==answers,"A cancelled transcription submitted an old player question.");journey.CloseDialogue();
+            yield return mic.BeginCapture();yield return Frames(2);mic.FinishCapture();
+            yield return Until(()=>!mic.IsTranscribing&&!director.IsBusy,15);
+            Check(input.lastStarted=="QA USB Microphone"&&!director.UsingFallback&&journey.Progress.OpeningAnswers==answers+1,"The chosen microphone did not complete capture, transcription and NPC auto-send.");
+            report.simulatedMicrophoneStarts=input.starts;journey.CloseDialogue();
         }
         private void Bind(){stage=FindFirstObjectByType<TravellerStage>();journey=stage.Journey;hud=stage.GetComponentInChildren<TravellerHud>();}
         private static void Click(Button button)

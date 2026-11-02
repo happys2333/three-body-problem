@@ -1,0 +1,30 @@
+{
+    "passed": false,
+    "hardwareMicrophoneUsed": false,
+    "onlineModelUsed": false,
+    "microphoneAutoSendVerified": true,
+    "asrStartedFocused": true,
+    "asrFinishedFocused": true,
+    "asrGenerationStart": 0,
+    "asrGenerationEnd": 0,
+    "asrCallbackStatus": "对方正在思考……",
+    "asrAutoSendTranscript": "快过来！现在是乱纪元。不要命吗？",
+    "checks": 57,
+    "openingAnswers": 3,
+    "damageEvents": 2,
+    "ignited": 88,
+    "burned": 88,
+    "shaded": 53,
+    "walkedMetres": 103.33380889892578,
+    "frameMeanMs": 32.53544235229492,
+    "frameP95Ms": 55.89012145996094,
+    "sunriseSeconds": 3.0068702697753908,
+    "sunsetSeconds": 2.028289794921875,
+    "phase": "complete",
+    "asrTranscript": "太阳快跟我躲进岩石下面。",
+    "gatewayMode": "{\"ready\": true, \"mode\": \"scripted\", \"asrModelPresent\": true, \"asrModel\": \"Qwen3-ASR-0.6B-8bit\", \"asrEngine\": \"qwen3-asr-mlx-8bit\", \"ttsEngine\": \"moss-tts-nano-onnx-cpu\", \"connectionSettings\": 2, \"ttsModel\": \"MOSS-TTS-Nano-100M-ONNX\", \"voiceProfiles\": {\"wenwang\": \"Weiguo\", \"king\": \"Zhiming\", \"pope\": \"Weiguo\", \"scholar\": \"Junhao\", \"davinci\": \"Zhiming\", \"shang_guard\": \"Junhao\", \"church_guard\": \"Weiguo\", \"citizen\": \"Junhao\"}, \"lastVoiceTimings\": {\"tts\": {\"cacheHit\": true, \"voice\": \"Weiguo\"}, \"asr\": {\"seconds\": 0.36752683302620426, \"metalPeakBytes\": 1657578204, \"silence\": false}}}",
+    "measurement": "Native development player at 1920x1080",
+    "errors": [
+        "The representative Gobi view exceeded the 60 FPS frame budget: 55.89012"
+    ]
+}

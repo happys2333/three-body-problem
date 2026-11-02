@@ -5,6 +5,7 @@ from pathlib import Path
 import plistlib
 import subprocess
 import threading
+import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 import dialogue_gateway as gateway
@@ -30,7 +31,16 @@ def main():
             value = {'ok': True} if body['max_tokens'] == 32 else {'speech': '风很大，先靠近火光。留意天边，我们一起走。', 'gesture': 'think', 'storyIntent': 'continue'}
             raw = json.dumps({'choices': [{'message': {'content': json.dumps(value, ensure_ascii=False)}}]}, ensure_ascii=False).encode()
             self.send_response(200); self.send_header('Content-Type', 'application/json'); self.send_header('Content-Length', str(len(raw))); self.end_headers(); self.wfile.write(raw)
-    class LocalGateway(gateway.Handler): online = False
+    class LocalGateway(gateway.Handler):
+        online = False
+        def do_POST(self):
+            if self.path == '/transcribe':
+                raw = self.rfile.read(int(self.headers['Content-Length']))
+                captured.append({'path':'/transcribe','syntheticMicrophone':True,'pcmWav':raw[:4]==b'RIFF','bytes':len(raw)})
+                time.sleep(.35)
+                self.send({'text':'这里安全吗？'})
+                return
+            super().do_POST()
     upstream = ThreadingHTTPServer(('127.0.0.1', 0), Upstream)
     local = ThreadingHTTPServer(('127.0.0.1', 0), LocalGateway)
     for server in (upstream, local): threading.Thread(target=server.serve_forever, daemon=True).start()

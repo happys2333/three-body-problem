@@ -9,7 +9,8 @@ namespace ThreeBodyProblem
     {
         public bool IsRecording {get;private set;}
         public bool IsTranscribing {get;private set;}
-        public bool NeedsTextFallback {get;private set;}
+        private bool needsTextFallback;
+        public bool NeedsTextFallback {get=>!TravellerUserSettings.Current.microphoneEnabled||needsTextFallback;private set=>needsTextFallback=value;}
         public bool AwaitingPermission => awaitingPermission;
         public event Action<string> TranscriptReady;
         private NpcDialogueDirector dialogue;private TravellerStage stage;
@@ -17,6 +18,12 @@ namespace ThreeBodyProblem
         private AudioClip recording;private string device;private float began;private UnityWebRequest pending;private int generation;private bool awaitingPermission;
         private NpcIdentity recordingTarget;
         private int questionId;
+        private IMicrophoneCaptureSource source=new UnityMicrophoneCaptureSource();
+        public IMicrophoneCaptureSource Source
+        {
+            get=>source;
+            set{if(value==null)throw new ArgumentNullException(nameof(value));CancelCapture();source=value;}
+        }
         [Serializable] private class Transcript{public string text,error;}
         private void Start(){dialogue=GetComponent<NpcDialogueDirector>();stage=GetComponent<TravellerStage>();hud=GetComponentInChildren<TravellerHud>();}
         public void ToggleCapture(){if(IsRecording)FinishCapture();else if(!IsTranscribing)StartCoroutine(BeginCapture());}
@@ -27,26 +34,38 @@ namespace ThreeBodyProblem
         }
         public IEnumerator BeginCapture(bool fromKeyboard=false)
         {
-            if(IsRecording||IsTranscribing||awaitingPermission||stage==null||!PrepareQuestion()||(hud!=null&&hud.IsWorldPaused))yield break;
+            if(IsRecording||IsTranscribing||awaitingPermission||stage==null||(hud!=null&&hud.IsWorldPaused))yield break;
+            if(!TravellerUserSettings.Current.microphoneEnabled)
+            {
+                if(hud!=null)hud.BeginTextChat();
+                dialogue.SetStatus("麦克风已关闭，请打字交谈；可在设置中重新开启。");yield break;
+            }
+            if(!PrepareQuestion())yield break;
             NeedsTextFallback=false;
             var sequence=GetComponent<GobiSequenceController>();sequence?.NotePlayerSpeech();
             int token=++generation;awaitingPermission=true;
             dialogue.CancelPending();dialogue.SetStatus("准备麦克风……");
-            if(!Application.HasUserAuthorization(UserAuthorization.Microphone))yield return Application.RequestUserAuthorization(UserAuthorization.Microphone);
+            if(!source.HasPermission)yield return source.RequestPermission();
             if(token!=generation)yield break;
             awaitingPermission=false;
             if(!isActiveAndEnabled||stage==null||!stage.Journey.DialogueOpen||(hud!=null&&hud.IsWorldPaused))yield break;
-            if(!Application.HasUserAuthorization(UserAuthorization.Microphone)){TextFallback("麦克风未获授权，仍可打字交谈");yield break;}
+            if(!TravellerUserSettings.Current.microphoneEnabled){TextFallback("麦克风已关闭，仍可打字交谈");yield break;}
+            if(!source.HasPermission){TextFallback("麦克风未获授权，请在系统隐私设置中允许，仍可打字交谈");yield break;}
             if(fromKeyboard&&!Input.GetKey(KeyCode.F)){dialogue.CancelQuestion();dialogue.SetStatus("麦克风已就绪，按住 F 说话");yield break;}
-            if(Microphone.devices.Length==0){TextFallback("没有找到麦克风，仍可打字交谈");yield break;}
-            device=null;recording=Microphone.Start(device,false,25,16000);
+            string error;
+            if(!MicrophoneDeviceSelection.TryResolve(TravellerUserSettings.Current.microphoneDevice,source.Devices,out device,out error))
+            {TextFallback(error);yield break;}
+            try{recording=source.Start(device);}catch(Exception){recording=null;}
             if(recording==null){TextFallback("无法启动麦克风，仍可打字交谈");yield break;}
             began=Time.realtimeSinceStartup;IsRecording=true;
             dialogue.SetStatus("正在向"+dialogue.DisplayName(recordingTarget)+"提问 · 松开 F 自动发送");
         }
         public void FinishCapture()
         {
-            if(!IsRecording)return;int frames=Microphone.GetPosition(device);Microphone.End(device);IsRecording=false;
+            if(!IsRecording)return;
+            int frames;
+            try{frames=source.GetPosition(device);source.End(device);}catch(Exception){CancelCapture();TextFallback("麦克风连接中断，请重新选择设备或打字交谈");return;}
+            IsRecording=false;
             if(recording==null||frames<1600){if(recording!=null)Destroy(recording);recording=null;dialogue.CancelQuestion();dialogue.SetStatus("说得太短了，按住 F 重新提问");return;}
             var samples=new float[frames*recording.channels];recording.GetData(samples,0);
             byte[] wav=VoiceWave.EncodeMono16(samples,recording.frequency,recording.channels);Destroy(recording);recording=null;
@@ -82,13 +101,13 @@ namespace ThreeBodyProblem
         {
             bool active=awaitingPermission||IsRecording||IsTranscribing;
             if(awaitingPermission){generation++;awaitingPermission=false;}
-            if(IsRecording){Microphone.End(device);IsRecording=false;}
+            if(IsRecording){try{source.End(device);}catch(Exception){}IsRecording=false;}
             if(recording!=null){Destroy(recording);recording=null;}
             if(pending!=null){generation++;pending.Abort();pending=null;IsTranscribing=false;}
             recordingTarget=null;
             if(active&&dialogue!=null)dialogue.CancelQuestion();
         }
-        private void OnApplicationFocus(bool focused){if(!focused&&(IsRecording||IsTranscribing))CancelCapture();}
+        private void OnApplicationFocus(bool focused){if(!focused&&(IsRecording||IsTranscribing||awaitingPermission))CancelCapture();}
         private void TextFallback(string message){NeedsTextFallback=true;dialogue.CancelQuestion();dialogue.SetStatus(message);}
         private void OnApplicationPause(bool paused){if(paused)CancelCapture();}
         private void OnDisable(){CancelCapture();}
