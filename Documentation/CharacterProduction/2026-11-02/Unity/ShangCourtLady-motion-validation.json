@@ -1,0 +1,80 @@
+{
+    "passed": true,
+    "characters": [
+        "ShangCourtLady"
+    ],
+    "motions": [
+        {
+            "id": "ShangCourtLady",
+            "clip": "MX_Idle",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.6494066715240479,
+            "maximumDisplacement": 0.015267814509570599,
+            "boneRotation": 1.4248871803283692
+        },
+        {
+            "id": "ShangCourtLady",
+            "clip": "MX_Walking",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.63596510887146,
+            "maximumDisplacement": 0.5216261744499207,
+            "boneRotation": 51.12516403198242
+        },
+        {
+            "id": "ShangCourtLady",
+            "clip": "MX_Running",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.59186851978302,
+            "maximumDisplacement": 0.7471310496330261,
+            "boneRotation": 94.97579193115235
+        },
+        {
+            "id": "ShangCourtLady",
+            "clip": "MX_SitIdle",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.2371479272842408,
+            "maximumDisplacement": 0.03099166788160801,
+            "boneRotation": 5.0471930503845219
+        },
+        {
+            "id": "ShangCourtLady",
+            "clip": "MX_TalkCalm",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.6350840330123902,
+            "maximumDisplacement": 0.6850399971008301,
+            "boneRotation": 98.6748275756836
+        },
+        {
+            "id": "ShangCourtLady",
+            "clip": "MX_CarryBoxIdle",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.6221650838851929,
+            "maximumDisplacement": 0.024942884221673013,
+            "boneRotation": 5.523600101470947
+        },
+        {
+            "id": "ShangCourtLady",
+            "clip": "MX_Bow",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.6556930541992188,
+            "maximumDisplacement": 0.21454700827598573,
+            "boneRotation": 23.90215492248535
+        },
+        {
+            "id": "ShangCourtLady",
+            "clip": "MX_ShieldEyes",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.6571333408355713,
+            "maximumDisplacement": 0.8013719320297241,
+            "boneRotation": 107.0077896118164
+        }
+    ]
+}

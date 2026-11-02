@@ -1,0 +1,21 @@
+{
+    "id": "MedievalCleric",
+    "kind": "character",
+    "source": "Assets/_Project/Art/CharacterCompletion20261102/MedievalCleric/MedievalCleric_Rig.fbx",
+    "prefab": "Assets/_Project/Art/CharacterCompletion20261102/Prefabs/MedievalCleric.prefab",
+    "passed": true,
+    "validHumanAvatar": true,
+    "albedo": true,
+    "normal": true,
+    "metallicSmoothness": true,
+    "triangles": 50000,
+    "vertices": 33605,
+    "skinBones": 23,
+    "heightMetres": 1.7599999904632569,
+    "textures": [
+        "Assets/_Project/Art/CharacterCompletion20261102/MedievalCleric/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/CharacterCompletion20261102/MedievalCleric/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/CharacterCompletion20261102/MedievalCleric/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/CharacterCompletion20261102/MedievalCleric/Textures/texture_pbr_20250901_roughness.png"
+    ]
+}

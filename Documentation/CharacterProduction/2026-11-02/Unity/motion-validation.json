@@ -1,0 +1,226 @@
+{
+    "passed": true,
+    "characters": [
+        "PopeV3",
+        "ShangCourtLady",
+        "MedievalCleric"
+    ],
+    "motions": [
+        {
+            "id": "PopeV3",
+            "clip": "MX_Idle",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.839762806892395,
+            "maximumDisplacement": 0.02000228688120842,
+            "boneRotation": 1.393224835395813
+        },
+        {
+            "id": "PopeV3",
+            "clip": "MX_Walking",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.8199979066848755,
+            "maximumDisplacement": 0.5370104908943176,
+            "boneRotation": 51.59271240234375
+        },
+        {
+            "id": "PopeV3",
+            "clip": "MX_Running",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.7725163698196412,
+            "maximumDisplacement": 0.7852752208709717,
+            "boneRotation": 96.52359771728516
+        },
+        {
+            "id": "PopeV3",
+            "clip": "MX_SitIdle",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.4129011631011963,
+            "maximumDisplacement": 0.04893537238240242,
+            "boneRotation": 5.0471930503845219
+        },
+        {
+            "id": "PopeV3",
+            "clip": "MX_TalkCalm",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.8214116096496583,
+            "maximumDisplacement": 0.7833998203277588,
+            "boneRotation": 98.07115173339844
+        },
+        {
+            "id": "PopeV3",
+            "clip": "MX_CarryBoxIdle",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.8104671239852906,
+            "maximumDisplacement": 0.030002692714333535,
+            "boneRotation": 5.579592227935791
+        },
+        {
+            "id": "PopeV3",
+            "clip": "MX_Bow",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.8466359376907349,
+            "maximumDisplacement": 0.3369954824447632,
+            "boneRotation": 23.90215492248535
+        },
+        {
+            "id": "PopeV3",
+            "clip": "MX_ShieldEyes",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.848803997039795,
+            "maximumDisplacement": 0.8856311440467835,
+            "boneRotation": 106.62294006347656
+        },
+        {
+            "id": "ShangCourtLady",
+            "clip": "MX_Idle",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.6494066715240479,
+            "maximumDisplacement": 0.015267814509570599,
+            "boneRotation": 1.4248871803283692
+        },
+        {
+            "id": "ShangCourtLady",
+            "clip": "MX_Walking",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.63596510887146,
+            "maximumDisplacement": 0.5216261744499207,
+            "boneRotation": 51.12516403198242
+        },
+        {
+            "id": "ShangCourtLady",
+            "clip": "MX_Running",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.59186851978302,
+            "maximumDisplacement": 0.7471310496330261,
+            "boneRotation": 94.97579193115235
+        },
+        {
+            "id": "ShangCourtLady",
+            "clip": "MX_SitIdle",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.2371479272842408,
+            "maximumDisplacement": 0.03099166788160801,
+            "boneRotation": 5.0471930503845219
+        },
+        {
+            "id": "ShangCourtLady",
+            "clip": "MX_TalkCalm",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.6350840330123902,
+            "maximumDisplacement": 0.6850399971008301,
+            "boneRotation": 98.6748275756836
+        },
+        {
+            "id": "ShangCourtLady",
+            "clip": "MX_CarryBoxIdle",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.6221650838851929,
+            "maximumDisplacement": 0.024942884221673013,
+            "boneRotation": 5.523600101470947
+        },
+        {
+            "id": "ShangCourtLady",
+            "clip": "MX_Bow",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.6556930541992188,
+            "maximumDisplacement": 0.21454700827598573,
+            "boneRotation": 23.90215492248535
+        },
+        {
+            "id": "ShangCourtLady",
+            "clip": "MX_ShieldEyes",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.6571333408355713,
+            "maximumDisplacement": 0.8013719320297241,
+            "boneRotation": 107.0077896118164
+        },
+        {
+            "id": "MedievalCleric",
+            "clip": "MX_Idle",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.76023268699646,
+            "maximumDisplacement": 0.01760617457330227,
+            "boneRotation": 1.5050297975540162
+        },
+        {
+            "id": "MedievalCleric",
+            "clip": "MX_Walking",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.7472561597824097,
+            "maximumDisplacement": 0.5632439851760864,
+            "boneRotation": 50.1473274230957
+        },
+        {
+            "id": "MedievalCleric",
+            "clip": "MX_Running",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.7019850015640259,
+            "maximumDisplacement": 0.817792534828186,
+            "boneRotation": 95.38044738769531
+        },
+        {
+            "id": "MedievalCleric",
+            "clip": "MX_SitIdle",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.3411800861358643,
+            "maximumDisplacement": 0.03848326951265335,
+            "boneRotation": 5.047037601470947
+        },
+        {
+            "id": "MedievalCleric",
+            "clip": "MX_TalkCalm",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.7465072870254517,
+            "maximumDisplacement": 0.770022451877594,
+            "boneRotation": 96.16885375976563
+        },
+        {
+            "id": "MedievalCleric",
+            "clip": "MX_CarryBoxIdle",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.7306593656539918,
+            "maximumDisplacement": 0.025839464738965036,
+            "boneRotation": 5.52969217300415
+        },
+        {
+            "id": "MedievalCleric",
+            "clip": "MX_Bow",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.7666889429092408,
+            "maximumDisplacement": 0.25298699736595156,
+            "boneRotation": 23.902090072631837
+        },
+        {
+            "id": "MedievalCleric",
+            "clip": "MX_ShieldEyes",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.7712535858154297,
+            "maximumDisplacement": 0.8568590879440308,
+            "boneRotation": 105.24345397949219
+        }
+    ]
+}

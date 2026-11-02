@@ -1,0 +1,80 @@
+{
+    "passed": true,
+    "characters": [
+        "PopeV3"
+    ],
+    "motions": [
+        {
+            "id": "PopeV3",
+            "clip": "MX_Idle",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.839762806892395,
+            "maximumDisplacement": 0.02000228688120842,
+            "boneRotation": 1.393224835395813
+        },
+        {
+            "id": "PopeV3",
+            "clip": "MX_Walking",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.8199979066848755,
+            "maximumDisplacement": 0.5370104908943176,
+            "boneRotation": 51.59271240234375
+        },
+        {
+            "id": "PopeV3",
+            "clip": "MX_Running",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.7725163698196412,
+            "maximumDisplacement": 0.7852752208709717,
+            "boneRotation": 96.52359771728516
+        },
+        {
+            "id": "PopeV3",
+            "clip": "MX_SitIdle",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.4129011631011963,
+            "maximumDisplacement": 0.04893537238240242,
+            "boneRotation": 5.0471930503845219
+        },
+        {
+            "id": "PopeV3",
+            "clip": "MX_TalkCalm",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.8214116096496583,
+            "maximumDisplacement": 0.7833998203277588,
+            "boneRotation": 98.07115173339844
+        },
+        {
+            "id": "PopeV3",
+            "clip": "MX_CarryBoxIdle",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.8104671239852906,
+            "maximumDisplacement": 0.030002692714333535,
+            "boneRotation": 5.579592227935791
+        },
+        {
+            "id": "PopeV3",
+            "clip": "MX_Bow",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.8466359376907349,
+            "maximumDisplacement": 0.3369954824447632,
+            "boneRotation": 23.90215492248535
+        },
+        {
+            "id": "PopeV3",
+            "clip": "MX_ShieldEyes",
+            "passed": true,
+            "poses": 5,
+            "maximumRadius": 1.848803997039795,
+            "maximumDisplacement": 0.8856311440467835,
+            "boneRotation": 106.62294006347656
+        }
+    ]
+}

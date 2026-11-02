@@ -84,7 +84,8 @@ namespace ThreeBodyProblem.Editor
 
         private static GameObject CreateModel(TravellerRole role, Transform parent, Scene scene)
         {
-            var source = AssetDatabase.LoadAssetAtPath<GameObject>(GeneratedCharacterLibrary.Root + "/Prefabs/" + role + ".prefab");
+            var source = role == TravellerRole.Pope ? CharacterCompletionProduction.ReviewedCharacter("PopeV3") : null;
+            if (source == null) source = AssetDatabase.LoadAssetAtPath<GameObject>(GeneratedCharacterLibrary.Root + "/Prefabs/" + role + ".prefab");
             var model = (GameObject)PrefabUtility.InstantiatePrefab(source, scene);
             model.transform.SetParent(parent, false);
             var animator = model.GetComponentInChildren<Animator>();

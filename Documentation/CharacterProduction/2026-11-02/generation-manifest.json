@@ -1,0 +1,413 @@
+{
+  "date": "2026-11-02",
+  "platform": "Tencent Hunyuan 3D Studio in the user's signed-in Chrome",
+  "userRequestLimit": 20,
+  "homepageQuotaObservedAtStart": 20,
+  "studioQuotaObservedAtStart": 30,
+  "purchaseOrSubscription": false,
+  "budget": {
+    "plannedRequests": 19,
+    "repairReserve": 1,
+    "requestsSubmitted": 19,
+    "initialPlannedRequests": 15,
+    "initialRepairReserve": 5,
+    "reservedRigRequests": 0,
+    "remainingUserAuthorisedRequests": 1
+  },
+  "priority": [
+    {
+      "id": "PopeV3",
+      "kind": "existing_character_completion",
+      "plannedRequests": 1,
+      "purpose": "Complete rigging of the reviewed short-robe model; verify seated and walking poses before replacing the long-cape pope.",
+      "actualRequests": 1
+    },
+    {
+      "id": "ShangCourtLady",
+      "kind": "new_character",
+      "plannedRequests": 4,
+      "purpose": "Dedicated adult palace attendant for the two existing royal fan-bearer posts; preserve their duty and fan behavior.",
+      "actualRequests": 6
+    },
+    {
+      "id": "MedievalCleric",
+      "kind": "new_character",
+      "plannedRequests": 4,
+      "purpose": "Add a distinct adult clerical attendant to the medieval tribunal; reuse the supporting-NPC AI and existing motion library.",
+      "actualRequests": 6
+    },
+    {
+      "id": "PapalThrone",
+      "kind": "new_prop",
+      "plannedRequests": 3,
+      "purpose": "Replace the visible primitive papal chair with a reviewed high-backed carved wooden throne.",
+      "actualRequests": 3
+    },
+    {
+      "id": "OpenManuscript",
+      "kind": "new_prop",
+      "plannedRequests": 3,
+      "purpose": "Scholar's open manuscript for lectern and held-book staging; no claim of full page-turn animation.",
+      "actualRequests": 3
+    }
+  ],
+  "reuseInsteadOfGenerating": [
+    "Existing six main cast bodies except the reviewed pope correction",
+    "Existing era guards, weapons and motion library",
+    "Existing medieval lectern",
+    "Existing royal fans, petition scroll, court officer costume and sand timer"
+  ],
+  "events": [
+    {
+      "id": "ShangCourtLady",
+      "stage": "concept",
+      "request": 1
+    },
+    {
+      "id": "MedievalCleric",
+      "stage": "concept",
+      "request": 2
+    },
+    {
+      "id": "PopeV3",
+      "stage": "rig",
+      "request": 3
+    },
+    {
+      "id": "PapalThrone",
+      "stage": "concept",
+      "request": 4
+    },
+    {
+      "id": "OpenManuscript",
+      "stage": "concept",
+      "request": 5
+    },
+    {
+      "id": "ShangCourtLady",
+      "stage": "concept_retry",
+      "request": 6,
+      "reason": "Reject wide hanging sleeves before spending geometry/texture/rig quota."
+    },
+    {
+      "id": "ShangCourtLady",
+      "stage": "concept_retry_short_sleeves",
+      "request": 7,
+      "reason": "Second concept still had wide hanging sleeves. Use explicit short sleeves and disable the pose template."
+    },
+    {
+      "id": "MedievalCleric",
+      "stage": "concept_retry_without_cape",
+      "request": 8,
+      "reason": "First concept included a long cape. Use a practical knee-length clerk costume without a pose template."
+    },
+    {
+      "id": "PapalThrone",
+      "stage": "geometry",
+      "request": 9,
+      "requestedFaces": 50000,
+      "input": "20261102110459_27e6057e.png"
+    },
+    {
+      "id": "PapalThrone",
+      "stage": "textured",
+      "request": 10
+    },
+    {
+      "id": "MedievalCleric",
+      "stage": "geometry",
+      "request": 11,
+      "requestedFaces": 50000,
+      "input": "/Users/happys/Downloads/20261102110725_3a311819.png",
+      "requestedAs": "OpenManuscript",
+      "actualInput": "20261102111956_bd9f36ca.png",
+      "issue": "Initial page initialization restored the concept source before submission; generated another clerk geometry. Keep as a reviewed alternate, not an open-book asset."
+    },
+    {
+      "id": "ShangCourtLady",
+      "stage": "geometry",
+      "request": 12,
+      "requestedFaces": 50000,
+      "input": "20261102111820_7aa9d506.png"
+    },
+    {
+      "id": "MedievalCleric",
+      "stage": "geometry",
+      "request": 13,
+      "requestedFaces": 50000,
+      "input": "20261102111956_bd9f36ca.png"
+    },
+    {
+      "id": "OpenManuscript",
+      "stage": "geometry",
+      "request": 14,
+      "input": "20261102110725_3a311819.png",
+      "requestedFaces": 50000
+    },
+    {
+      "id": "MedievalCleric",
+      "stage": "textured",
+      "request": 15,
+      "geometryRequest": 13
+    },
+    {
+      "id": "ShangCourtLady",
+      "stage": "textured",
+      "request": 16,
+      "geometryRequest": 12
+    },
+    {
+      "id": "OpenManuscript",
+      "stage": "textured",
+      "request": 17,
+      "geometryRequest": 14
+    },
+    {
+      "id": "ShangCourtLady",
+      "stage": "rig",
+      "request": 18,
+      "input": "reviewed textured output of request 16"
+    },
+    {
+      "id": "MedievalCleric",
+      "stage": "rig",
+      "request": 19,
+      "input": "reviewed textured output of request 15"
+    }
+  ],
+  "assets": [
+    {
+      "id": "PopeV3",
+      "kind": "existing_character_completion",
+      "files": {
+        "rig": {
+          "sourceDownload": "/Users/happys/Downloads/20261102110401_6a28f2fb.fbx",
+          "rawFile": "ArtSource/CharacterCompletion/2026-11-02/PopeV3/PopeV3_Rig.fbx",
+          "projectFile": "Assets/_Project/Art/CharacterCompletion20261102/PopeV3/PopeV3_Rig.fbx",
+          "sha256": "fc766b94cbae5782036e043c60fd5dfd99612f5be45ce44f84692edf4bf2e12c",
+          "bytes": 21172092
+        }
+      },
+      "status": "ready_integrated_and_native_verified",
+      "prefab": "Assets/_Project/Art/CharacterCompletion20261102/Prefabs/PopeV3.prefab",
+      "motionChecks": 8,
+      "sampledPoses": 40,
+      "nativeChecks": 6,
+      "actualRequests": 1
+    },
+    {
+      "id": "ShangCourtLady",
+      "kind": "new_character",
+      "files": {
+        "concept": {
+          "sourceDownload": "/Users/happys/Downloads/20261102111820_7aa9d506.png",
+          "rawFile": "ArtSource/CharacterCompletion/2026-11-02/ShangCourtLady/ShangCourtLady_Concept_ShortSleeves.png",
+          "projectFile": "Documentation/CharacterProduction/2026-11-02/Concepts/ShangCourtLady_Concept_ShortSleeves.png",
+          "sha256": "ce5aa793dbac7f6e8f76102dde6fa61a457515776efb4d99bab7e3db02f024f2",
+          "bytes": 292727
+        },
+        "geometry": {
+          "sourceDownload": "/Users/happys/Downloads/20261102113555_046a48c2.fbx",
+          "rawFile": "ArtSource/CharacterCompletion/2026-11-02/ShangCourtLady/ShangCourtLady_Geometry.fbx",
+          "projectFile": "Assets/_Project/Art/CharacterCompletion20261102/ShangCourtLady/ShangCourtLady_Geometry.fbx",
+          "sha256": "a7ebd546f731115ebf911c5c7ea44b50c59e64d5111af55688e1be350faccfda",
+          "bytes": 1499196
+        },
+        "textured": {
+          "sourceDownload": "/Users/happys/Downloads/20261102123220_d0ebc223.fbx",
+          "rawFile": "ArtSource/CharacterCompletion/2026-11-02/ShangCourtLady/ShangCourtLady_Textured.fbx",
+          "projectFile": "Assets/_Project/Art/CharacterCompletion20261102/ShangCourtLady/ShangCourtLady_Textured.fbx",
+          "sha256": "08a1443d4369f9db2218111bd85c1164d6950cd554cacac0f4d7df3046e3772e",
+          "bytes": 25291676
+        },
+        "rig": {
+          "sourceDownload": "/Users/happys/Downloads/20261102123555_d9aeb85e.fbx",
+          "rawFile": "ArtSource/CharacterCompletion/2026-11-02/ShangCourtLady/ShangCourtLady_Rig.fbx",
+          "projectFile": "Assets/_Project/Art/CharacterCompletion20261102/ShangCourtLady/ShangCourtLady_Rig.fbx",
+          "sha256": "5f28660eca5ee36fcf910c714c9177ea9c14b4686457f7f434ad2229753e3725",
+          "bytes": 24463532
+        }
+      },
+      "status": "ready_integrated_and_native_verified",
+      "rejectedConcepts": [
+        {
+          "sourceDownload": "/Users/happys/Downloads/20261102111053_2529c071.png",
+          "rawFile": "ArtSource/CharacterCompletion/2026-11-02/ShangCourtLady/ShangCourtLady_Concept_RejectedWideSleeves.png",
+          "projectFile": "Documentation/CharacterProduction/2026-11-02/Concepts/ShangCourtLady_Concept_RejectedWideSleeves.png",
+          "sha256": "5b2a6d58f4c0cf7b4694e0aa2eb8eca0c89a889ad41d104edfdb4233281d90cb",
+          "bytes": 234787,
+          "reason": "Wide hanging sleeves and floating ribbons risk fan and wrist intersection."
+        }
+      ],
+      "actualRequests": 6,
+      "prefab": "Assets/_Project/Art/CharacterCompletion20261102/Prefabs/ShangCourtLady.prefab",
+      "instancesInScene02": 2,
+      "skinBones": 23,
+      "clothRepair": "Unity/cloth-repair.json"
+    },
+    {
+      "id": "MedievalCleric",
+      "kind": "new_character",
+      "files": {
+        "concept": {
+          "sourceDownload": "/Users/happys/Downloads/20261102111956_bd9f36ca.png",
+          "rawFile": "ArtSource/CharacterCompletion/2026-11-02/MedievalCleric/MedievalCleric_Concept_NoCape.png",
+          "projectFile": "Documentation/CharacterProduction/2026-11-02/Concepts/MedievalCleric_Concept_NoCape.png",
+          "sha256": "6f30fcb75f697aa2cb76fec645a3036b27d1d76a537d91e3129910a1c60e6108",
+          "bytes": 290484
+        },
+        "geometry": {
+          "sourceDownload": "/Users/happys/Downloads/20261102113858_2efdfcfb.fbx",
+          "rawFile": "ArtSource/CharacterCompletion/2026-11-02/MedievalCleric/MedievalCleric_Geometry.fbx",
+          "projectFile": "Assets/_Project/Art/CharacterCompletion20261102/MedievalCleric/MedievalCleric_Geometry.fbx",
+          "sha256": "30146d6fb935e88edabb86a05946342b54afb485a0156020e23f1d28ad78ab28",
+          "bytes": 1496476
+        },
+        "textured": {
+          "sourceDownload": "/Users/happys/Downloads/20261102122909_51bfb79d.fbx",
+          "rawFile": "ArtSource/CharacterCompletion/2026-11-02/MedievalCleric/MedievalCleric_Textured.fbx",
+          "projectFile": "Assets/_Project/Art/CharacterCompletion20261102/MedievalCleric/MedievalCleric_Textured.fbx",
+          "sha256": "3248ed3f95d60fa1ce100665fdc3cb88ac9573a7519d0b842a1a6183848b4355",
+          "bytes": 26042956
+        },
+        "rig": {
+          "sourceDownload": "/Users/happys/Downloads/20261102123713_2893fb6c.fbx",
+          "rawFile": "ArtSource/CharacterCompletion/2026-11-02/MedievalCleric/MedievalCleric_Rig.fbx",
+          "projectFile": "Assets/_Project/Art/CharacterCompletion20261102/MedievalCleric/MedievalCleric_Rig.fbx",
+          "sha256": "5c576ef21a03d534bc8891f698bfa337c248a9a22c80b52610045b9e052a76cb",
+          "bytes": 25152716
+        }
+      },
+      "status": "ready_integrated_and_native_verified",
+      "rejectedConcepts": [
+        {
+          "sourceDownload": "/Users/happys/Downloads/20261102105852_6392bedf.png",
+          "rawFile": "ArtSource/CharacterCompletion/2026-11-02/MedievalCleric/MedievalCleric_Concept_RejectedCape.png",
+          "projectFile": "Documentation/CharacterProduction/2026-11-02/Concepts/MedievalCleric_Concept_RejectedCape.png",
+          "sha256": "ce2d63e33dbcb9fd911d4ba99754f4c92d6268e267c3360d6ef084af41d18ffc",
+          "bytes": 191228,
+          "reason": "Long cape and cartoon proportions obstruct walking and book contact."
+        }
+      ],
+      "actualRequests": 6,
+      "prefab": "Assets/_Project/Art/CharacterCompletion20261102/Prefabs/MedievalClerkActor.prefab",
+      "instancesInScene03": 1,
+      "skinBones": 23,
+      "identity": "教廷书记官",
+      "heldBookWidthMetres": 0.3588
+    },
+    {
+      "id": "PapalThrone",
+      "kind": "new_prop",
+      "files": {
+        "concept": {
+          "sourceDownload": "/Users/happys/Downloads/20261102110459_27e6057e.png",
+          "rawFile": "ArtSource/CharacterCompletion/2026-11-02/PapalThrone/PapalThrone_Concept.png",
+          "projectFile": "Documentation/CharacterProduction/2026-11-02/Concepts/PapalThrone_Concept.png",
+          "sha256": "82d7a01a7bb4b0cb43f414c2c3f73ae3d6fe4e6694d84854accd7817ae436e5b",
+          "bytes": 375436
+        },
+        "textured": {
+          "sourceDownload": "/Users/happys/Downloads/20261102115058_e819a1e4.fbx",
+          "rawFile": "ArtSource/CharacterCompletion/2026-11-02/PapalThrone/PapalThrone_Textured.fbx",
+          "projectFile": "Assets/_Project/Art/CharacterCompletion20261102/PapalThrone/PapalThrone_Textured.fbx",
+          "sha256": "453c1384243b055770424a8afe3c9a99a928cd8dcf32500bab6c49643587d0c5",
+          "bytes": 44288060
+        }
+      },
+      "status": "ready_integrated_and_native_verified",
+      "prefab": "Assets/_Project/Art/CharacterCompletion20261102/Prefabs/PapalThrone_SeatedFit.prefab",
+      "trianglesByLod": [
+        49994,
+        11998,
+        2998
+      ],
+      "actualRequests": 3
+    },
+    {
+      "id": "OpenManuscript",
+      "kind": "new_prop",
+      "files": {
+        "concept": {
+          "sourceDownload": "/Users/happys/Downloads/20261102110725_3a311819.png",
+          "rawFile": "ArtSource/CharacterCompletion/2026-11-02/OpenManuscript/OpenManuscript_Concept.png",
+          "projectFile": "Documentation/CharacterProduction/2026-11-02/Concepts/OpenManuscript_Concept.png",
+          "sha256": "722acc9551c1cf0c388a34a01e299e757f2aa303ae5c920e49b70eec5f4b9737",
+          "bytes": 480317
+        },
+        "geometry": {
+          "sourceDownload": "/Users/happys/Downloads/20261102115418_e2125fe4.fbx",
+          "rawFile": "ArtSource/CharacterCompletion/2026-11-02/OpenManuscript/OpenManuscript_Geometry.fbx",
+          "projectFile": "Assets/_Project/Art/CharacterCompletion20261102/OpenManuscript/OpenManuscript_Geometry.fbx",
+          "sha256": "561823de5251f39d721332476764e2da1bb5456854381ed844a7b7e5057a2aba",
+          "bytes": 1492876
+        },
+        "textured": {
+          "sourceDownload": "/Users/happys/Downloads/20261102123442_08220ef6.fbx",
+          "rawFile": "ArtSource/CharacterCompletion/2026-11-02/OpenManuscript/OpenManuscript_Textured.fbx",
+          "projectFile": "Assets/_Project/Art/CharacterCompletion20261102/OpenManuscript/OpenManuscript_Textured.fbx",
+          "sha256": "3516032b1b091b11ed97bdfa87770fc996928ab1afd119eb2cc3f0aef3377c93",
+          "bytes": 34249660
+        }
+      },
+      "status": "ready_integrated_and_native_verified",
+      "actualRequests": 3,
+      "prefab": "Assets/_Project/Art/CharacterCompletion20261102/Prefabs/OpenManuscript.prefab",
+      "instancesInScene03": 2,
+      "trianglesByLod": [
+        50000,
+        12000,
+        3000
+      ]
+    }
+  ],
+  "status": "concepts_queued_and_existing_pope_rig_input_prepared",
+  "studioQuotaObservedLatest": 28,
+  "updatedUtc": "2026-11-02T05:48:28.860443+00:00",
+  "unityRoot": "Assets/_Project/Art/CharacterCompletion20261102",
+  "nonProductionAlternates": [
+    {
+      "id": "MedievalCleric",
+      "request": 11,
+      "rawFile": "ArtSource/CharacterCompletion/2026-11-02/MedievalCleric/MedievalCleric_Alternate_Request11.fbx",
+      "sha256": "0bf18635aa27c28919c973291e8cd3c794201183d669fa5d1e8f151a389cf9d5",
+      "reason": "Wrong source mode restored by page initialization; kept outside Unity production imports."
+    }
+  ],
+  "pendingCloudTasks": [],
+  "exportCorrections": [
+    {
+      "requested": "OpenManuscript",
+      "actual": "ShangCourtLady rig",
+      "sha256": "5f28660eca5ee36fcf910c714c9177ea9c14b4686457f7f434ad2229753e3725",
+      "preservedAt": "ArtSource/CharacterCompletion/2026-11-02/ShangCourtLady/ShangCourtLady_Rig.fbx",
+      "reason": "Background-tab download was routed to the foreground asset. Detected by FBX skeleton inspection before prefab creation or scene use."
+    }
+  ],
+  "duplicateDownloadsRemoved": [
+    "20261102123555_d9aeb85e (1).fbx",
+    "20261102123555_d9aeb85e (2).fbx",
+    "20261102123555_d9aeb85e (3).fbx"
+  ],
+  "verification": {
+    "sourceRecords": 14,
+    "sourceHashesPassed": true,
+    "motionCombinations": 24,
+    "sampledPoses": 120,
+    "nativeCharacterChecks": 39,
+    "courtRegressionChecks": 172,
+    "tribunalP95Ms": 11.815504,
+    "courtP95Ms": 20.898123,
+    "court60FpsBudgetPassed": false,
+    "editorTestsPassed": 102
+  },
+  "limitations": [
+    "23-bone generated rigs use grip blend shapes, without individual finger joints.",
+    "Open manuscript is a static prop, without page-turn simulation.",
+    "Court regression functionality passes; its 20.90 ms P95 exceeds the 16.67 ms target."
+  ],
+  "playable": {
+    "path": "Builds/ActOneTraveller.app",
+    "verifiedIdenticalToNativeTestedBuild": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "PapalThrone",
+    "kind": "prop",
+    "source": "Assets/_Project/Art/CharacterCompletion20261102/PapalThrone/PapalThrone_Textured.fbx",
+    "prefab": "Assets/_Project/Art/CharacterCompletion20261102/Prefabs/PapalThrone.prefab",
+    "passed": true,
+    "validHumanAvatar": false,
+    "albedo": true,
+    "normal": true,
+    "metallicSmoothness": true,
+    "triangles": 49994,
+    "vertices": 36933,
+    "skinBones": 0,
+    "heightMetres": 2.799999713897705,
+    "textures": [
+        "Assets/_Project/Art/CharacterCompletion20261102/PapalThrone/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/CharacterCompletion20261102/PapalThrone/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/CharacterCompletion20261102/PapalThrone/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/CharacterCompletion20261102/PapalThrone/Textures/texture_pbr_20250901_roughness.png"
+    ]
+}

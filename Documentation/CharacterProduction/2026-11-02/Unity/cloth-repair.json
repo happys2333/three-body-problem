@@ -1,0 +1,7 @@
+{
+    "source": "ShangCourtLady_Rig.fbx",
+    "output": "ShangCourtLady_SkirtWeights.asset",
+    "method": "Continuous garment/covered-leg weights; arms, feet and exposed calf skin protected; original FBX retained.",
+    "changedVertices": 19391,
+    "topologyAndUvsPreserved": true
+}

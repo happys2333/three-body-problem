@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "id": "PopeV3",
+      "stage": "rig",
+      "sha256": "fc766b94cbae5782036e043c60fd5dfd99612f5be45ce44f84692edf4bf2e12c",
+      "passed": true
+    },
+    {
+      "id": "ShangCourtLady",
+      "stage": "concept",
+      "sha256": "ce5aa793dbac7f6e8f76102dde6fa61a457515776efb4d99bab7e3db02f024f2",
+      "passed": true
+    },
+    {
+      "id": "ShangCourtLady",
+      "stage": "geometry",
+      "sha256": "a7ebd546f731115ebf911c5c7ea44b50c59e64d5111af55688e1be350faccfda",
+      "passed": true
+    },
+    {
+      "id": "ShangCourtLady",
+      "stage": "textured",
+      "sha256": "08a1443d4369f9db2218111bd85c1164d6950cd554cacac0f4d7df3046e3772e",
+      "passed": true
+    },
+    {
+      "id": "ShangCourtLady",
+      "stage": "rig",
+      "sha256": "5f28660eca5ee36fcf910c714c9177ea9c14b4686457f7f434ad2229753e3725",
+      "passed": true
+    },
+    {
+      "id": "MedievalCleric",
+      "stage": "concept",
+      "sha256": "6f30fcb75f697aa2cb76fec645a3036b27d1d76a537d91e3129910a1c60e6108",
+      "passed": true
+    },
+    {
+      "id": "MedievalCleric",
+      "stage": "geometry",
+      "sha256": "30146d6fb935e88edabb86a05946342b54afb485a0156020e23f1d28ad78ab28",
+      "passed": true
+    },
+    {
+      "id": "MedievalCleric",
+      "stage": "textured",
+      "sha256": "3248ed3f95d60fa1ce100665fdc3cb88ac9573a7519d0b842a1a6183848b4355",
+      "passed": true
+    },
+    {
+      "id": "MedievalCleric",
+      "stage": "rig",
+      "sha256": "5c576ef21a03d534bc8891f698bfa337c248a9a22c80b52610045b9e052a76cb",
+      "passed": true
+    },
+    {
+      "id": "PapalThrone",
+      "stage": "concept",
+      "sha256": "82d7a01a7bb4b0cb43f414c2c3f73ae3d6fe4e6694d84854accd7817ae436e5b",
+      "passed": true
+    },
+    {
+      "id": "PapalThrone",
+      "stage": "textured",
+      "sha256": "453c1384243b055770424a8afe3c9a99a928cd8dcf32500bab6c49643587d0c5",
+      "passed": true
+    },
+    {
+      "id": "OpenManuscript",
+      "stage": "concept",
+      "sha256": "722acc9551c1cf0c388a34a01e299e757f2aa303ae5c920e49b70eec5f4b9737",
+      "passed": true
+    },
+    {
+      "id": "OpenManuscript",
+      "stage": "geometry",
+      "sha256": "561823de5251f39d721332476764e2da1bb5456854381ed844a7b7e5057a2aba",
+      "passed": true
+    },
+    {
+      "id": "OpenManuscript",
+      "stage": "textured",
+      "sha256": "3516032b1b091b11ed97bdfa87770fc996928ab1afd119eb2cc3f0aef3377c93",
+      "passed": true
+    }
+  ]
+}

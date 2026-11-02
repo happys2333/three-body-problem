@@ -18,7 +18,7 @@ namespace ThreeBodyProblem.Editor
         private const string Documentation = "Documentation/CharacterProduction";
         [Serializable] public class Export { public string projectFile; }
         [Serializable] public class Files { public Export rig, textured; }
-        [Serializable] public class Asset { public string id, name, state; public Files files; }
+        [Serializable] public class Asset { public string id, name, state, prefabFolder; public float heightMetres; public Files files; }
         [Serializable] public class Manifest { public List<Asset> plannedCharacters, props; }
         [Serializable] public class Check
         {
@@ -69,6 +69,17 @@ namespace ThreeBodyProblem.Editor
             if (!File.Exists(rigFile)) throw new FileNotFoundException(rigFile);
             Directory.CreateDirectory(Root + "/Prefabs"); AssetDatabase.Refresh();
             return Prepare(new Asset { id = id, files = new Files { rig = new Export { projectFile = rigFile } } }, true);
+        }
+
+        public static Check PrepareImportedAsset(string id, string modelFile, bool character, float heightMetres, string prefabFolder)
+        {
+            if (EditorApplication.isPlaying) throw new InvalidOperationException("Stop Play before importing a source model.");
+            if (!File.Exists(modelFile)) throw new FileNotFoundException(modelFile);
+            if (heightMetres <= 0 || string.IsNullOrWhiteSpace(prefabFolder) || !prefabFolder.StartsWith("Assets/_Project/", StringComparison.Ordinal))
+                throw new ArgumentException("A positive size and project prefab folder are required.");
+            Directory.CreateDirectory(prefabFolder); AssetDatabase.Refresh();
+            return Prepare(new Asset { id=id, heightMetres=heightMetres, prefabFolder=prefabFolder,
+                files=new Files { rig=character?new Export{projectFile=modelFile}:null, textured=character?null:new Export{projectFile=modelFile} } }, character);
         }
 
         private static Check Prepare(Asset asset, bool character, bool rigged = true)
@@ -172,7 +183,7 @@ namespace ThreeBodyProblem.Editor
                     var settings = AssetDatabase.LoadAssetAtPath<TravellerCastSettings>(TravellerStoryCharacters.SettingsPath);
                     animator.runtimeAnimatorController = settings.controller; animator.applyRootMotion = false; animator.cullingMode = AnimatorCullingMode.AlwaysAnimate;
                 }
-                float target = character ? Height(asset.id) : asset.id == "CalendarChest" ? .65f : asset.id == "BronzeHourglass" ? .45f : .32f;
+                float target = asset.heightMetres > 0 ? asset.heightMetres : character ? Height(asset.id) : asset.id == "CalendarChest" ? .65f : asset.id == "BronzeHourglass" ? .45f : .32f;
                 Action normalize = () => {
                     var bounds = Bounds(root);
                     visual.transform.localScale *= target / (character ? bounds.size.y : Mathf.Max(bounds.size.x, bounds.size.y, bounds.size.z));
@@ -188,7 +199,7 @@ namespace ThreeBodyProblem.Editor
                 foreach (var component in root.GetComponentsInChildren<Transform>(true))
                     if (PrefabUtility.IsPartOfPrefabInstance(component)) PrefabUtility.RecordPrefabInstancePropertyModifications(component);
                 if (animator != null) PrefabUtility.RecordPrefabInstancePropertyModifications(animator);
-                string prefab = Root + "/Prefabs/" + asset.id + ".prefab";
+                string prefab = (string.IsNullOrEmpty(asset.prefabFolder) ? Root + "/Prefabs" : asset.prefabFolder) + "/" + asset.id + ".prefab";
                 if (PrefabUtility.SaveAsPrefabAsset(root, prefab) == null) throw new IOException("Could not save " + prefab);
                 var skins = root.GetComponentsInChildren<SkinnedMeshRenderer>();
                 var meshes = skins.Select(s => s.sharedMesh).Concat(root.GetComponentsInChildren<MeshFilter>().Select(m => m.sharedMesh)).ToArray();

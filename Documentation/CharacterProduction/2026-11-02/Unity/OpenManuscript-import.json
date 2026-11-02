@@ -1,0 +1,21 @@
+{
+    "id": "OpenManuscript",
+    "kind": "prop",
+    "source": "Assets/_Project/Art/CharacterCompletion20261102/OpenManuscript/OpenManuscript_Textured.fbx",
+    "prefab": "Assets/_Project/Art/CharacterCompletion20261102/Prefabs/OpenManuscript.prefab",
+    "passed": true,
+    "validHumanAvatar": false,
+    "albedo": true,
+    "normal": true,
+    "metallicSmoothness": true,
+    "triangles": 50000,
+    "vertices": 32644,
+    "skinBones": 0,
+    "heightMetres": 0.07802294939756394,
+    "textures": [
+        "Assets/_Project/Art/CharacterCompletion20261102/OpenManuscript/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/CharacterCompletion20261102/OpenManuscript/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/CharacterCompletion20261102/OpenManuscript/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/CharacterCompletion20261102/OpenManuscript/Textures/texture_pbr_20250901_roughness.png"
+    ]
+}

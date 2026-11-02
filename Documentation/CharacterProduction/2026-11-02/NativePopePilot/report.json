@@ -1,0 +1,9 @@
+{
+    "passed": true,
+    "performanceBudgetPassed": false,
+    "checks": 6,
+    "meanMs": 0.0,
+    "p95Ms": 0.0,
+    "maximumHandError": 0.0,
+    "errors": []
+}

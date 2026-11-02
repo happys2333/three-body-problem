@@ -1,0 +1,21 @@
+{
+    "id": "PopeV3",
+    "kind": "character",
+    "source": "Assets/_Project/Art/CharacterCompletion20261102/PopeV3/PopeV3_Rig.fbx",
+    "prefab": "Assets/_Project/Art/CharacterCompletion20261102/Prefabs/PopeV3.prefab",
+    "passed": true,
+    "validHumanAvatar": true,
+    "albedo": true,
+    "normal": true,
+    "metallicSmoothness": true,
+    "triangles": 50000,
+    "vertices": 31833,
+    "skinBones": 23,
+    "heightMetres": 1.8399999141693116,
+    "textures": [
+        "Assets/_Project/Art/CharacterCompletion20261102/PopeV3/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/CharacterCompletion20261102/PopeV3/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/CharacterCompletion20261102/PopeV3/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/CharacterCompletion20261102/PopeV3/Textures/texture_pbr_20250901_roughness.png"
+    ]
+}

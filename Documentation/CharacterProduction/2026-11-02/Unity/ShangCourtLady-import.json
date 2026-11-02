@@ -1,0 +1,21 @@
+{
+    "id": "ShangCourtLady",
+    "kind": "character",
+    "source": "Assets/_Project/Art/CharacterCompletion20261102/ShangCourtLady/ShangCourtLady_Rig.fbx",
+    "prefab": "Assets/_Project/Art/CharacterCompletion20261102/Prefabs/ShangCourtLady.prefab",
+    "passed": true,
+    "validHumanAvatar": true,
+    "albedo": true,
+    "normal": true,
+    "metallicSmoothness": true,
+    "triangles": 49994,
+    "vertices": 33818,
+    "skinBones": 23,
+    "heightMetres": 1.6499998569488526,
+    "textures": [
+        "Assets/_Project/Art/CharacterCompletion20261102/ShangCourtLady/Textures/texture_pbr_20250901.png",
+        "Assets/_Project/Art/CharacterCompletion20261102/ShangCourtLady/Textures/texture_pbr_20250901_metallic.png",
+        "Assets/_Project/Art/CharacterCompletion20261102/ShangCourtLady/Textures/texture_pbr_20250901_normal.png",
+        "Assets/_Project/Art/CharacterCompletion20261102/ShangCourtLady/Textures/texture_pbr_20250901_roughness.png"
+    ]
+}

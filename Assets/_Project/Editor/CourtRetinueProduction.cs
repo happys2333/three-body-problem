@@ -80,6 +80,8 @@ namespace ThreeBodyProblem.Editor
             try
             {
                 string source = female ? HunyuanExpansionLibrary.Root + "/Prefabs/CitizenFemale.prefab" : TravellerCrowdLibrary.PrefabPath(index == 0 ? "CitizenMale_Indigo" : "CitizenMale_Hemp");
+                var reviewed = female ? CharacterCompletionProduction.ReviewedCharacter("ShangCourtLady") : null;
+                if (reviewed != null) source = AssetDatabase.GetAssetPath(reviewed);
                 var root = CopyForAuthoring(source, scene); root.name = id;
                 var actor = root.GetComponent<TravellerActor>(); if (actor == null) actor = root.AddComponent<TravellerActor>();
                 actor.role = female ? TravellerRole.CitizenFemale : TravellerRole.CitizenMale;

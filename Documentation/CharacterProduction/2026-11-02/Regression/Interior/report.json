@@ -1,0 +1,17 @@
+{
+    "passed": true,
+    "performanceBudgetPassed": false,
+    "checks": 172,
+    "width": 1600,
+    "height": 900,
+    "meanMs": 12.414981842041016,
+    "p95Ms": 20.898122787475587,
+    "gpu": "Apple M5",
+    "errors": [],
+    "resolutions": [
+        "960x540",
+        "1280x720",
+        "1600x900",
+        "1024x768"
+    ]
+}

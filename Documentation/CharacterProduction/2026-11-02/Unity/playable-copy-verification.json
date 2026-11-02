@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "files": 226,
+  "sha256Tree": "57702bcf3de2f462af29c9a5914a798e7b95bc656446a8644b5b3a904a7cc3e2",
+  "source": "Builds/CharacterCompletion20261102/Traveller.app",
+  "staging": "Builds/ActOneTraveller.characters-staging.app",
+  "promotedTo": "Builds/ActOneTraveller.app",
+  "previousBuild": "Builds/ActOneTraveller.previous.app",
+  "promotedUtc": "2026-11-02T06:00:14.199399+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "jobId": "11499a54a32043389293e502358e9c2b",
+  "scope": "All EditMode tests after final scenes, cloth correction and the added clerk roster expectation",
+  "total": 102,
+  "passed": 102,
+  "failed": 0,
+  "skipped": 0,
+  "durationSeconds": 35.608728,
+  "resultState": "Passed"
+}

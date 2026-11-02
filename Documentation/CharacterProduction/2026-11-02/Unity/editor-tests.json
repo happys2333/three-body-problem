@@ -1,0 +1,10 @@
+{
+  "jobId": "bc9f45c5a88e431a8c6839f56c1d4d03",
+  "scope": "All EditMode tests after character completion scripts and pope integration",
+  "total": 102,
+  "passed": 102,
+  "failed": 0,
+  "skipped": 0,
+  "durationSeconds": 104.1670167,
+  "resultState": "Passed"
+}

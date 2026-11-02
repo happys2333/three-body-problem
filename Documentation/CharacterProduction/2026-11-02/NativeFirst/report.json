@@ -1,0 +1,13 @@
+{
+    "passed": false,
+    "performanceBudgetPassed": false,
+    "checks": 38,
+    "meanMs": 7.690809726715088,
+    "p95Ms": 17.742162704467775,
+    "maximumHandError": 0.16661633551120759,
+    "errors": [
+        "Hand/prop contact error: 教廷书记官 [Humanoid] 0.1666163",
+        "Hand/prop contact error: 教廷书记官 [Humanoid] 0.09984343",
+        "Hand/prop contact error: 教廷书记官 [Humanoid] 0.1326987"
+    ]
+}

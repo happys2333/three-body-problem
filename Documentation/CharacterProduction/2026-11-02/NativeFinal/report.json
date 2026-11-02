@@ -1,0 +1,9 @@
+{
+    "passed": true,
+    "performanceBudgetPassed": true,
+    "checks": 39,
+    "meanMs": 6.1156744956970219,
+    "p95Ms": 11.81550407409668,
+    "maximumHandError": 0.000004046097274112981,
+    "errors": []
+}
