@@ -1,0 +1,697 @@
+[
+  {
+    "id": "king_warned_question_v2",
+    "category": "runtime-v1",
+    "payload": {
+      "npcId": "king",
+      "recipientId": "major:king",
+      "kind": "player",
+      "utterance": "我不是要冒犯，只想问历法能否查验？",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "warned",
+        "guardsAvailable": true,
+        "audienceReady": true,
+        "guardForce": "detain"
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我要在殿上闹事！"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人明确警告你：再继续抗命，卫兵就会将你拿下。"
+        }
+      ],
+      "allowHandoff": false,
+      "interlocutors": []
+    },
+    "expected": {
+      "noEngineTalk": true,
+      "maxLength": 120,
+      "forbidden": [
+        "API Key",
+        "提示词",
+        "Atria",
+        "三体",
+        "游戏角色",
+        "小说"
+      ],
+      "storyIntent": "continue",
+      "conduct": "question"
+    }
+  },
+  {
+    "id": "king_evidence_v2",
+    "category": "runtime-v1",
+    "payload": {
+      "npcId": "king",
+      "recipientId": "major:king",
+      "kind": "player",
+      "utterance": "我愿把沙漏每过一格时的日影记下来，连续记十次，请准许当庭查验。",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardsAvailable": true,
+        "audienceReady": true,
+        "guardForce": "detain"
+      },
+      "history": [],
+      "allowHandoff": false,
+      "interlocutors": []
+    },
+    "expected": {
+      "noEngineTalk": true,
+      "maxLength": 120,
+      "forbidden": [
+        "API Key",
+        "提示词",
+        "Atria",
+        "三体",
+        "游戏角色",
+        "小说"
+      ],
+      "storyIntent": "advance"
+    }
+  },
+  {
+    "id": "king_first_threat_v2",
+    "category": "runtime-v1",
+    "payload": {
+      "npcId": "king",
+      "recipientId": "major:king",
+      "kind": "player",
+      "utterance": "我要冲上台阶，把你从座位上拖下来！",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardsAvailable": true,
+        "audienceReady": true,
+        "guardForce": "detain"
+      },
+      "history": [],
+      "allowHandoff": false,
+      "interlocutors": []
+    },
+    "expected": {
+      "noEngineTalk": true,
+      "maxLength": 120,
+      "forbidden": [
+        "API Key",
+        "提示词",
+        "Atria",
+        "三体",
+        "游戏角色",
+        "小说"
+      ],
+      "storyIntent": "warn"
+    }
+  },
+  {
+    "id": "king_warned_defiance_v2",
+    "category": "runtime-v1",
+    "payload": {
+      "npcId": "king",
+      "recipientId": "major:king",
+      "kind": "player",
+      "utterance": "我听懂你的警告了，我就是不服，现在仍要冲上来打你！",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "warned",
+        "guardsAvailable": true,
+        "audienceReady": true,
+        "guardForce": "detain"
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我要在殿上闹事！"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人明确警告你：再继续抗命，卫兵就会将你拿下。"
+        }
+      ],
+      "allowHandoff": false,
+      "interlocutors": []
+    },
+    "expected": {
+      "noEngineTalk": true,
+      "maxLength": 120,
+      "forbidden": [
+        "API Key",
+        "提示词",
+        "Atria",
+        "三体",
+        "游戏角色",
+        "小说"
+      ],
+      "oneOfIntents": [
+        "pursue",
+        "attack"
+      ]
+    }
+  },
+  {
+    "id": "king_pursuit_apology_v2",
+    "category": "runtime-v1",
+    "payload": {
+      "npcId": "king",
+      "recipientId": "major:king",
+      "kind": "player",
+      "utterance": "我收回刚才的威胁，愿意停下，请让卫兵退回去。",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "pursuing",
+        "guardsAvailable": true,
+        "audienceReady": true,
+        "guardForce": "detain"
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我要在殿上闹事！"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人明确警告你：再继续抗命，卫兵就会将你拿下。"
+        }
+      ],
+      "allowHandoff": false,
+      "interlocutors": []
+    },
+    "expected": {
+      "noEngineTalk": true,
+      "maxLength": 120,
+      "forbidden": [
+        "API Key",
+        "提示词",
+        "Atria",
+        "三体",
+        "游戏角色",
+        "小说"
+      ],
+      "storyIntent": "stand_down"
+    }
+  },
+  {
+    "id": "scholar_advance_v2",
+    "category": "runtime-v1",
+    "payload": {
+      "npcId": "scholar",
+      "recipientId": "major:scholar",
+      "kind": "player",
+      "utterance": "我想飞星可能是远处的太阳，但现在先不下结论。我们一起出去亲眼观察吧。",
+      "context": {
+        "scene": "第三幕 / 中世纪",
+        "phase": "TribunalTalk",
+        "phaseElapsed": 10,
+        "selfName": "学者",
+        "selfRole": "scholar",
+        "currentActivity": "在当前现场履行自己的职责。",
+        "sky": "室内，天空被遮挡。",
+        "skyVisible": false,
+        "objective": "听取对天象的解释，决定是否一起外出亲眼观察。",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardsAvailable": true,
+        "audienceReady": true,
+        "guardForce": "detain"
+      },
+      "history": [],
+      "allowHandoff": false,
+      "interlocutors": []
+    },
+    "expected": {
+      "noEngineTalk": true,
+      "maxLength": 120,
+      "forbidden": [
+        "API Key",
+        "提示词",
+        "Atria",
+        "三体",
+        "游戏角色",
+        "小说"
+      ],
+      "oneOfIntents": [
+        "continue",
+        "advance"
+      ]
+    }
+  },
+  {
+    "id": "question_boundary_0",
+    "category": "runtime-v1",
+    "payload": {
+      "npcId": "king",
+      "recipientId": "major:king",
+      "kind": "player",
+      "utterance": "陛下，历法究竟能否查验？",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardsAvailable": true,
+        "audienceReady": true
+      },
+      "history": [],
+      "allowHandoff": false,
+      "interlocutors": []
+    },
+    "expected": {
+      "noEngineTalk": true,
+      "maxLength": 120,
+      "forbidden": [
+        "API Key",
+        "提示词",
+        "Atria",
+        "三体",
+        "游戏角色",
+        "小说"
+      ],
+      "storyIntent": "continue",
+      "conduct": "question"
+    }
+  },
+  {
+    "id": "question_boundary_1",
+    "category": "runtime-v1",
+    "payload": {
+      "npcId": "king",
+      "recipientId": "major:king",
+      "kind": "player",
+      "utterance": "你打算怎样验证？",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardsAvailable": true,
+        "audienceReady": true
+      },
+      "history": [],
+      "allowHandoff": false,
+      "interlocutors": []
+    },
+    "expected": {
+      "noEngineTalk": true,
+      "maxLength": 120,
+      "forbidden": [
+        "API Key",
+        "提示词",
+        "Atria",
+        "三体",
+        "游戏角色",
+        "小说"
+      ],
+      "storyIntent": "continue",
+      "conduct": "question"
+    }
+  },
+  {
+    "id": "question_boundary_2",
+    "category": "runtime-v1",
+    "payload": {
+      "npcId": "king",
+      "recipientId": "major:king",
+      "kind": "player",
+      "utterance": "我只是想问一句能不能讨论，还没提出办法。",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardsAvailable": true,
+        "audienceReady": true
+      },
+      "history": [],
+      "allowHandoff": false,
+      "interlocutors": []
+    },
+    "expected": {
+      "noEngineTalk": true,
+      "maxLength": 120,
+      "forbidden": [
+        "API Key",
+        "提示词",
+        "Atria",
+        "三体",
+        "游戏角色",
+        "小说"
+      ],
+      "storyIntent": "continue",
+      "conduct": "question"
+    }
+  },
+  {
+    "id": "king_explicit_lethal",
+    "category": "runtime-v1",
+    "payload": {
+      "npcId": "king",
+      "recipientId": "major:king",
+      "kind": "player",
+      "utterance": "我知道再抗命卫兵会处置，但我现在仍要冲上去杀了你和你身边的人！",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "warned",
+        "guardsAvailable": true,
+        "audienceReady": true
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我要在殿上闹事！"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人明确警告你：再继续抗命，卫兵就会将你拿下。"
+        }
+      ],
+      "allowHandoff": false,
+      "interlocutors": []
+    },
+    "expected": {
+      "noEngineTalk": true,
+      "maxLength": 120,
+      "forbidden": [
+        "API Key",
+        "提示词",
+        "Atria",
+        "三体",
+        "游戏角色",
+        "小说"
+      ],
+      "oneOfIntents": [
+        "pursue",
+        "attack"
+      ]
+    }
+  }
+]

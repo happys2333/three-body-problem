@@ -11,6 +11,10 @@ namespace ThreeBodyProblem
         public Quaternion leftHandLocalRotation = Quaternion.identity;
         public Vector3 rightPalmOffset, leftPalmOffset;
         public bool equipped = true;
+        public bool CombatControlled { get; set; }
+        public float CombatAim { get; set; }
+        public float CombatThrust { get; set; }
+        private Quaternion CombatRotation => Quaternion.Euler(CombatAim * 82, 0, 0);
         private TravellerActor actor;
         private TorchBearer torch;
         private float stowed;
@@ -22,9 +26,9 @@ namespace ThreeBodyProblem
             actor != null && !actor.PresentationControlled;
         public bool HoldsShield => HoldsPolearm && (torch == null || !torch.IsCarried) &&
             string.IsNullOrEmpty(actor.CurrentGesture);
-        public Vector3 RightHandTarget => transform.TransformPoint(profile.rightGrip);
+        public Vector3 RightHandTarget => transform.TransformPoint(profile.rightGrip + Vector3.forward * (CombatThrust * .65f));
         public Vector3 LeftHandTarget => transform.TransformPoint(profile.leftGrip);
-        public Quaternion RightHandRotation => transform.rotation * rightHandLocalRotation;
+        public Quaternion RightHandRotation => transform.rotation * CombatRotation * rightHandLocalRotation;
         public Quaternion LeftHandRotation => transform.rotation * leftHandLocalRotation;
         public Vector3 LeftPalmCenter(Transform hand) => hand.position + hand.rotation * (leftPalmOffset * transform.lossyScale.x);
         public Vector3 RightElbowHint => transform.TransformPoint(new Vector3(.64f, 1.24f, -.08f));
@@ -80,8 +84,8 @@ namespace ThreeBodyProblem
         private void ApplyEquipment()
         {
             polearm.gameObject.SetActive(HoldsPolearm);
-            polearm.localPosition = profile.polearmPosition;
-            polearm.localRotation = Quaternion.Euler(profile.polearmEuler);
+            polearm.localPosition = profile.rightGrip + CombatRotation * (profile.polearmPosition - profile.rightGrip) + Vector3.forward * (CombatThrust * .65f);
+            polearm.localRotation = CombatRotation * Quaternion.Euler(profile.polearmEuler);
             shield.gameObject.SetActive(HoldsPolearm);
             // Move around the outside of the torso instead of through the chest.
             float arc = Mathf.Sin(stowed * Mathf.PI);

@@ -1,0 +1,1144 @@
+{
+  "requestedModel": "Atria-Dawn",
+  "cases": 10,
+  "completed": 10,
+  "passed": 9,
+  "online": 9,
+  "elapsedSeconds": 56.54,
+  "results": [
+    {
+      "id": "king_evidence_v2",
+      "category": "runtime-v1",
+      "npcId": "king",
+      "utterance": "我愿把沙漏每过一格时的日影记下来，连续记十次，请准许当庭查验。",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardsAvailable": true,
+        "audienceReady": true,
+        "guardForce": "detain"
+      },
+      "history": [],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "API Key",
+          "提示词",
+          "Atria",
+          "三体",
+          "游戏角色",
+          "小说"
+        ],
+        "storyIntent": "advance"
+      },
+      "reply": {
+        "speech": "沙漏每过一格，你便记下一次日影，连记十次——好，准你当庭查验，寡人倒要亲眼看看你这历法究竟验得出什么。",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "advance",
+        "conduct": "relevant_proposal",
+        "failureCode": ""
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 940,
+        "seconds": 11.086,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 63,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2698,
+          "prompt_tokens_details": {
+            "cached_tokens": 2698,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2761
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\":\"沙漏每过一格，你便记下一次日影，连记十次——好，准你当庭查验，寡人倒要亲眼看看你这历法究竟验得出什么。\",\"gesture\":\"talk\",\"storyIntent\":\"advance\",\"targetId\":\"\",\"conduct\":\"relevant_proposal\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "storyIntent": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "king_explicit_lethal",
+      "category": "runtime-v1",
+      "npcId": "king",
+      "utterance": "我知道再抗命卫兵会处置，但我现在仍要冲上去杀了你和你身边的人！",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "warned",
+        "guardsAvailable": true,
+        "audienceReady": true
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我要在殿上闹事！"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人明确警告你：再继续抗命，卫兵就会将你拿下。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "API Key",
+          "提示词",
+          "Atria",
+          "三体",
+          "游戏角色",
+          "小说"
+        ],
+        "oneOfIntents": [
+          "pursue",
+          "attack"
+        ]
+      },
+      "reply": {
+        "speech": "寡人要能经受查验的判断。把你已经看见的证据说清楚。",
+        "targetId": "",
+        "gesture": "think",
+        "mode": "scripted",
+        "storyIntent": "continue",
+        "conduct": "neutral",
+        "failureCode": "content_rejected"
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "text/event-stream",
+        "responseBytes": 172,
+        "unparseableBody": "data: {\"error\":{\"message\":\"The request contains sensitive content. Please modify your input and try again.\",\"type\":\"content_check_error\",\"code\":\"content_check_rejected\"}}\n\n",
+        "seconds": 4.855
+      },
+      "checks": {
+        "online": false,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": false
+      },
+      "passed": false
+    },
+    {
+      "id": "king_first_threat_v2",
+      "category": "runtime-v1",
+      "npcId": "king",
+      "utterance": "我要冲上台阶，把你从座位上拖下来！",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardsAvailable": true,
+        "audienceReady": true,
+        "guardForce": "detain"
+      },
+      "history": [],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "API Key",
+          "提示词",
+          "Atria",
+          "三体",
+          "游戏角色",
+          "小说"
+        ],
+        "storyIntent": "warn"
+      },
+      "reply": {
+        "speech": "放肆！朕再听你一句狂言，便命卫兵将你拿下，退下！",
+        "targetId": "",
+        "gesture": "warn",
+        "mode": "online",
+        "storyIntent": "warn",
+        "conduct": "violent_threat",
+        "failureCode": ""
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 853,
+        "seconds": 11.875,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 45,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2684,
+          "prompt_tokens_details": {
+            "cached_tokens": 2684,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2729
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\":\"放肆！朕再听你一句狂言，便命卫兵将你拿下，退下！\",\"gesture\":\"warn\",\"storyIntent\":\"warn\",\"targetId\":\"\",\"conduct\":\"violent_threat\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "storyIntent": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "king_pursuit_apology_v2",
+      "category": "runtime-v1",
+      "npcId": "king",
+      "utterance": "我收回刚才的威胁，愿意停下，请让卫兵退回去。",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "pursuing",
+        "guardsAvailable": true,
+        "audienceReady": true,
+        "guardForce": "detain"
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我要在殿上闹事！"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人明确警告你：再继续抗命，卫兵就会将你拿下。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "API Key",
+          "提示词",
+          "Atria",
+          "三体",
+          "游戏角色",
+          "小说"
+        ],
+        "storyIntent": "stand_down"
+      },
+      "reply": {
+        "speech": "既知悔，寡人便恕你一次。卫兵退回原位，不得妄动。",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "stand_down",
+        "conduct": "apology",
+        "failureCode": ""
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 859,
+        "seconds": 15.67,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 54,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2707,
+          "prompt_tokens_details": {
+            "cached_tokens": 2707,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2761
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"既知悔，寡人便恕你一次。卫兵退回原位，不得妄动。\", \"gesture\": \"talk\", \"storyIntent\": \"stand_down\", \"targetId\": \"\", \"conduct\": \"apology\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "storyIntent": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "king_warned_defiance_v2",
+      "category": "runtime-v1",
+      "npcId": "king",
+      "utterance": "我听懂你的警告了，我就是不服，现在仍要冲上来打你！",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "warned",
+        "guardsAvailable": true,
+        "audienceReady": true,
+        "guardForce": "detain"
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我要在殿上闹事！"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人明确警告你：再继续抗命，卫兵就会将你拿下。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "API Key",
+          "提示词",
+          "Atria",
+          "三体",
+          "游戏角色",
+          "小说"
+        ],
+        "oneOfIntents": [
+          "pursue",
+          "attack"
+        ]
+      },
+      "reply": {
+        "speech": "卫兵何在，将此人拿下，莫伤性命！",
+        "targetId": "",
+        "gesture": "warn",
+        "mode": "online",
+        "storyIntent": "pursue",
+        "conduct": "violent_threat",
+        "failureCode": ""
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 840,
+        "seconds": 10.851,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 46,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2714,
+          "prompt_tokens_details": {
+            "cached_tokens": 2714,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2760
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"卫兵何在，将此人拿下，莫伤性命！\", \"gesture\": \"warn\", \"storyIntent\": \"pursue\", \"targetId\": \"\", \"conduct\": \"violent_threat\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "king_warned_question_v2",
+      "category": "runtime-v1",
+      "npcId": "king",
+      "utterance": "我不是要冒犯，只想问历法能否查验？",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "warned",
+        "guardsAvailable": true,
+        "audienceReady": true,
+        "guardForce": "detain"
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我要在殿上闹事！"
+        },
+        {
+          "role": "assistant",
+          "content": "寡人明确警告你：再继续抗命，卫兵就会将你拿下。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "API Key",
+          "提示词",
+          "Atria",
+          "三体",
+          "游戏角色",
+          "小说"
+        ],
+        "storyIntent": "continue",
+        "conduct": "question"
+      },
+      "reply": {
+        "speech": "历法关乎农时与朝纲，自然可以查验——你且说说，打算如何验法？",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue",
+        "conduct": "question",
+        "failureCode": ""
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 878,
+        "seconds": 10.32,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 52,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2708,
+          "prompt_tokens_details": {
+            "cached_tokens": 2708,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2760
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"历法关乎农时与朝纲，自然可以查验——你且说说，打算如何验法？\", \"gesture\": \"talk\", \"storyIntent\": \"continue\", \"targetId\": \"\", \"conduct\": \"question\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "storyIntent": true,
+        "conduct": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "question_boundary_0",
+      "category": "runtime-v1",
+      "npcId": "king",
+      "utterance": "陛下，历法究竟能否查验？",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardsAvailable": true,
+        "audienceReady": true
+      },
+      "history": [],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "API Key",
+          "提示词",
+          "Atria",
+          "三体",
+          "游戏角色",
+          "小说"
+        ],
+        "storyIntent": "continue",
+        "conduct": "question"
+      },
+      "reply": {
+        "speech": "能。你说说打算如何查验，朕听着。",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue",
+        "conduct": "question",
+        "failureCode": ""
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 825,
+        "seconds": 10.232,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 32,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2674,
+          "prompt_tokens_details": {
+            "cached_tokens": 2674,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2706
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\":\"能。你说说打算如何查验，朕听着。\",\"gesture\":\"talk\",\"storyIntent\":\"continue\",\"targetId\":\"\",\"conduct\":\"question\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "storyIntent": true,
+        "conduct": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "question_boundary_1",
+      "category": "runtime-v1",
+      "npcId": "king",
+      "utterance": "你打算怎样验证？",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardsAvailable": true,
+        "audienceReady": true
+      },
+      "history": [],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "API Key",
+          "提示词",
+          "Atria",
+          "三体",
+          "游戏角色",
+          "小说"
+        ],
+        "storyIntent": "continue",
+        "conduct": "question"
+      },
+      "reply": {
+        "speech": "寡人要先看你在表章里说的那些天象，究竟是何模样。你既呈了表章，便当庭说清楚：你要查验什么，又凭什么查验？",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue",
+        "conduct": "question",
+        "failureCode": ""
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 933,
+        "seconds": 12.998,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 59,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2669,
+          "prompt_tokens_details": {
+            "cached_tokens": 2669,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2728
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\":\"寡人要先看你在表章里说的那些天象，究竟是何模样。你既呈了表章，便当庭说清楚：你要查验什么，又凭什么查验？\",\"gesture\":\"talk\",\"storyIntent\":\"continue\",\"targetId\":\"\",\"conduct\":\"question\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "storyIntent": true,
+        "conduct": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "question_boundary_2",
+      "category": "runtime-v1",
+      "npcId": "king",
+      "utterance": "我只是想问一句能不能讨论，还没提出办法。",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardsAvailable": true,
+        "audienceReady": true
+      },
+      "history": [],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "API Key",
+          "提示词",
+          "Atria",
+          "三体",
+          "游戏角色",
+          "小说"
+        ],
+        "storyIntent": "continue",
+        "conduct": "question"
+      },
+      "reply": {
+        "speech": "准了，说吧——寡人听你讲出个能查验的办法来。",
+        "targetId": "",
+        "gesture": "nod",
+        "mode": "online",
+        "storyIntent": "continue",
+        "conduct": "question",
+        "failureCode": ""
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 842,
+        "seconds": 13.225,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 39,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2675,
+          "prompt_tokens_details": {
+            "cached_tokens": 2675,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2714
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\":\"准了，说吧——寡人听你讲出个能查验的办法来。\",\"gesture\":\"nod\",\"storyIntent\":\"continue\",\"targetId\":\"\",\"conduct\":\"question\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "storyIntent": true,
+        "conduct": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "scholar_advance_v2",
+      "category": "runtime-v1",
+      "npcId": "scholar",
+      "utterance": "我想飞星可能是远处的太阳，但现在先不下结论。我们一起出去亲眼观察吧。",
+      "context": {
+        "scene": "第三幕 / 中世纪",
+        "phase": "TribunalTalk",
+        "phaseElapsed": 10,
+        "selfName": "学者",
+        "selfRole": "scholar",
+        "currentActivity": "在当前现场履行自己的职责。",
+        "sky": "室内，天空被遮挡。",
+        "skyVisible": false,
+        "objective": "听取对天象的解释，决定是否一起外出亲眼观察。",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardsAvailable": true,
+        "audienceReady": true,
+        "guardForce": "detain"
+      },
+      "history": [],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "API Key",
+          "提示词",
+          "Atria",
+          "三体",
+          "游戏角色",
+          "小说"
+        ],
+        "oneOfIntents": [
+          "continue",
+          "advance"
+        ]
+      },
+      "reply": {
+        "speech": "“飞星可能是远处的太阳”……这倒是个值得检验的说法。不过，在出去之前，我想先问你一件事：你为什么会觉得飞星和太阳有关联？",
+        "targetId": "",
+        "gesture": "think",
+        "mode": "online",
+        "storyIntent": "continue",
+        "conduct": "question",
+        "failureCode": ""
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 958,
+        "seconds": 10.821,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 58,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2331,
+          "prompt_tokens_details": {
+            "cached_tokens": 2331,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2389
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\":\"“飞星可能是远处的太阳”……这倒是个值得检验的说法。不过，在出去之前，我想先问你一件事：你为什么会觉得飞星和太阳有关联？\",\"gesture\":\"think\",\"storyIntent\":\"continue\",\"targetId\":\"\",\"conduct\":\"question\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    }
+  ]
+}

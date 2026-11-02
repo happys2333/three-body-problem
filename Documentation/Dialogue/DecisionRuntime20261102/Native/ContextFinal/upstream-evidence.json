@@ -1,0 +1,46 @@
+{
+  "realPaidApiCalls": 0,
+  "tokenizerAvailable": true,
+  "requests": [
+    {
+      "role": "wenwang",
+      "scene": "第一幕 / 戈壁旅人",
+      "historyMessages": 48,
+      "hasOriginalIntroduction": true,
+      "hasPrivateNotebook": false,
+      "hasOldNotebookRecord": false,
+      "knownEvents": 3,
+      "skyVisible": true,
+      "activity": "停留在当前地点，与玩家交谈。",
+      "model": "qa-context-model",
+      "maxOutputTokens": 320
+    },
+    {
+      "role": "wenwang",
+      "scene": "第二幕 / 朝歌 · 殷商王都",
+      "historyMessages": 50,
+      "hasOriginalIntroduction": true,
+      "hasPrivateNotebook": false,
+      "hasOldNotebookRecord": false,
+      "knownEvents": 8,
+      "skyVisible": true,
+      "activity": "正在行走。",
+      "model": "qa-context-model",
+      "maxOutputTokens": 320
+    },
+    {
+      "role": "king",
+      "scene": "第二幕 / 朝歌 · 殷商王都",
+      "historyMessages": 0,
+      "hasOriginalIntroduction": false,
+      "hasPrivateNotebook": false,
+      "hasOldNotebookRecord": false,
+      "knownEvents": 1,
+      "skyVisible": false,
+      "activity": "坐着听取眼前的陈述。",
+      "model": "qa-context-model",
+      "maxOutputTokens": 320
+    }
+  ],
+  "boundariesVerified": true
+}

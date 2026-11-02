@@ -1,0 +1,15 @@
+{
+    "passed": true,
+    "checks": 109,
+    "guards": 3,
+    "damageEvents": 8,
+    "healthAfterHit": 70,
+    "phase": "tribunal explanation is retained until a real advance",
+    "courtIdleP95": 11.385586738586426,
+    "courtPursuitP95": 11.472335815429688,
+    "gpuP95": 8.772333145141602,
+    "cpuMainMean": 1.7256101369857789,
+    "renderMean": 1.7055184841156006,
+    "frameCap": 90,
+    "errors": []
+}

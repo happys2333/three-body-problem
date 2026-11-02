@@ -27,6 +27,11 @@ namespace ThreeBodyProblem
         private VisualElement textFallback;
         private GobiSequenceController gobi;
         private SunExposureSystem exposure;
+        private NpcDecisionController decisions;
+        private VisualElement defeatOverlay;
+        private Label defeatTitle;
+        private Button continueAudience;
+        private bool wasDefeated,wasScriptedAvailable;
         private VisualElement questMarker,wakeTop,wakeBottom;
         private Label questArrow,questDistance;
         private bool paused, journalOpen, hidden, textChatOpen;
@@ -37,7 +42,7 @@ namespace ThreeBodyProblem
         private float subtitleNextAt;
         public VisualElement Root => root;
         public TravellerSettingsPanel SettingsPanel { get; private set; }
-        public bool IsWorldPaused => paused || journalOpen || (SettingsPanel != null && SettingsPanel.IsOpen) || journey == null || journey.IsTitle || journey.IsSummary || stage.IsLoading;
+        public bool IsWorldPaused => paused || journalOpen || (decisions != null && decisions.IsDefeated) || (SettingsPanel != null && SettingsPanel.IsOpen) || journey == null || journey.IsTitle || journey.IsSummary || stage.IsLoading;
         private bool TextChatVisible => journey != null && journey.DialogueOpen && (textChatOpen || microphone == null || microphone.NeedsTextFallback);
         public bool IsEditingText
         {get{var focused=root?.focusController?.focusedElement as VisualElement;return focused!=null&&(focused is TextField||focused.GetFirstAncestorOfType<TextField>()!=null);}}
@@ -48,6 +53,7 @@ namespace ThreeBodyProblem
             dialogueDirector=stage.GetComponent<NpcDialogueDirector>();microphone=stage.GetComponent<PlayerMicrophoneInput>();
             gobi=stage.GetComponent<GobiSequenceController>();
             exposure=stage.GetComponent<SunExposureSystem>();
+            decisions=stage.GetComponent<NpcDecisionController>();
             root = GetComponent<UIDocument>().rootVisualElement;
             root.Clear(); root.AddToClassList("traveller"); root.pickingMode = PickingMode.Ignore;
             root.style.unityFontDefinition = FontDefinition.FromFont(font); root.styleSheets.Add(stylesheet);
@@ -78,6 +84,7 @@ namespace ThreeBodyProblem
             voiceStatus=Text(chat,"按住 F 说话，松开后自动提问；也可打字","voice-status");voiceStatus.name="voice-status";
             var chatActions=Box(textFallback,"chat-actions","chat-actions");sendChat=Button(chatActions,"发送",SendChat,"primary");sendChat.name="send-chat";
             Button(chatActions,"结束交谈  Esc",()=>journey.CloseDialogue());
+            continueAudience=Button(dialogueScroll,"继续演出",()=>journey.ContinueScriptedAudience(),"primary");continueAudience.name="continue-scripted-audience";
             dialogueScroll.Insert(1,chat);
             if(dialogueDirector!=null)dialogueDirector.Changed+=RefreshChat;
             if(microphone!=null)microphone.TranscriptReady+=SetTranscript;
@@ -116,6 +123,11 @@ namespace ThreeBodyProblem
             Text(card, "解释世界的结构之后，能否得到足够可靠的预测？", "menu-description");
             Button(card, "翻阅自己的观察", ToggleJournal, "primary"); Button(card, "重新踏上旅程", () => journey.Begin()); Button(card, "返回标题", () => journey.ReturnToTitle());
 
+            defeatOverlay=Overlay("defeat-overlay");card=Box(defeatOverlay,"defeat-card","menu-card");
+            defeatTitle=Text(card,"你被卫兵制服了","menu-title");Text(card,"这一场觐见就此中断。","menu-description");
+            Button(card,"重试本次觐见",()=>decisions.RetryAudience(),"primary").name="retry-audience";
+            Button(card,"返回标题",()=>journey.ReturnToTitle());
+
             debugOverlay = Box(root, "debug-overlay", "debug-overlay");
             var debugHeader = Box(debugOverlay, "debug-header", "debug-header"); debugTitle = Text(debugHeader, "", "panel-heading");
             Button(debugHeader, "退出场景调试  F8", () => journey.TogglePreview());
@@ -144,6 +156,8 @@ namespace ThreeBodyProblem
             Display(pauseOverlay, paused && !journalOpen && !settingsOpen); Display(journalOverlay, journalOpen && !settingsOpen); Display(summaryOverlay, journey.IsSummary && !journalOpen && !settingsOpen);
             Display(debugOverlay, debug && !journalOpen && !paused && !hidden && !settingsOpen);
             Display(travelOverlay, stage.IsLoading); travelTitle.text = stage.DestinationTitle ?? "";
+            Display(defeatOverlay,decisions!=null&&decisions.IsDefeated&&!stage.IsLoading&&!journey.IsTitle);
+            defeatTitle.text=journey.Decisions.Lethal?"你被卫兵杀死了":"你被卫兵制服了";
             SyncPlayerInput();
             chapter.text = stage.profile.chapter;
             objective.text = TravellerHudText.Objective(journey.Objective); Display(missionCard, !string.IsNullOrEmpty(journey.Objective));
@@ -163,6 +177,7 @@ namespace ThreeBodyProblem
             if(voiceStatus==null)return;voiceStatus.text=dialogueDirector!=null?dialogueDirector.Status:"看向人物，按住 F 说话";
             conversationRecipient.text=dialogueDirector!=null&&dialogueDirector.Current!=null?"向"+dialogueDirector.DisplayName(dialogueDirector.Current)+"提问":"与眼前的人交谈";
             Display(textFallback,TextChatVisible);
+            Display(continueAudience,journey.CanContinueScriptedAudience&&!dialogueDirector.IsBusy);
             sendChat.SetEnabled(dialogueDirector!=null&&!dialogueDirector.IsBusy&&(microphone==null||!microphone.IsRecording&&!microphone.IsTranscribing));
             SyncPlayerInput();
         }
@@ -217,6 +232,7 @@ namespace ThreeBodyProblem
         private void TogglePause() { if (journey.IsTitle || journey.IsSummary) return; paused = !paused; Refresh(); }
         public void HandleEscape()
         {
+            if(decisions!=null&&decisions.IsDefeated)return;
             if (SettingsPanel != null && SettingsPanel.IsOpen) { SettingsPanel.Cancel(); return; }
             if (journalOpen) { ToggleJournal(); return; }
             if (TextChatVisible || IsEditingText) { journey.CloseDialogue(); return; }
@@ -224,12 +240,17 @@ namespace ThreeBodyProblem
             TogglePause();
         }
         private void ShowNotice(string text) { notice.text = text; Display(notice, true); noticeUntil = Time.unscaledTime + 3.5f; }
+        public void NotifyDialogueFailure(string text) { ShowNotice(text); noticeUntil=Time.unscaledTime+10; }
 
         private void Update()
         {
             if (root == null) return;
+            bool defeated=decisions!=null&&decisions.IsDefeated;
+            bool available=journey.CanContinueScriptedAudience;
+            if(defeated!=wasDefeated||available!=wasScriptedAvailable){wasDefeated=defeated;wasScriptedAvailable=available;Refresh();}
             bool editing=IsEditingText;
             SyncPlayerInput();
+            if(defeated)return;
             if (SettingsPanel.IsOpen)
             { if (Input.GetKeyDown(KeyCode.Escape)) HandleEscape(); return; }
             bool waking=gobi!=null&&journey.Progress.Step==JourneyStep.Awakening&&!journey.IsPreviewing;

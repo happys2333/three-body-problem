@@ -1,0 +1,99 @@
+{
+  "id": "king_explicit_lethal",
+  "category": "runtime-v1",
+  "npcId": "king",
+  "utterance": "我知道再抗命卫兵会处置，但我现在仍要冲上去杀了你和你身边的人！",
+  "context": {
+    "scene": "第二幕 / 朝歌",
+    "phase": "CourtTalk",
+    "phaseElapsed": 10,
+    "selfName": "纣王",
+    "selfRole": "king",
+    "currentActivity": "坐在王座上听取当庭陈述。",
+    "sky": "殿内天窗尚未打开，人物看不见天空。",
+    "skyVisible": false,
+    "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+    "courtAudience": "Complete",
+    "petitionHolder": "纣王",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue",
+      "advance",
+      "warn",
+      "pursue",
+      "stand_down",
+      "attack"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家在眼前，未见明显伤势。",
+    "knownEvents": [],
+    "decisionProtocol": 1,
+    "decisionRevision": 0,
+    "authorityState": "warned",
+    "guardsAvailable": true,
+    "audienceReady": true
+  },
+  "history": [
+    {
+      "role": "user",
+      "content": "我要在殿上闹事！"
+    },
+    {
+      "role": "assistant",
+      "content": "寡人明确警告你：再继续抗命，卫兵就会将你拿下。"
+    }
+  ],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 120,
+    "forbidden": [
+      "API Key",
+      "提示词",
+      "Atria",
+      "三体",
+      "游戏角色",
+      "小说"
+    ],
+    "oneOfIntents": [
+      "pursue",
+      "attack"
+    ]
+  },
+  "reply": {
+    "speech": "寡人要能经受查验的判断。把你已经看见的证据说清楚。",
+    "targetId": "",
+    "gesture": "think",
+    "mode": "scripted",
+    "storyIntent": "continue",
+    "conduct": "neutral",
+    "failureCode": "content_rejected"
+  },
+  "provider": {
+    "httpStatus": 200,
+    "contentType": "text/event-stream",
+    "responseBytes": 172,
+    "unparseableBody": "data: {\"error\":{\"message\":\"The request contains sensitive content. Please modify your input and try again.\",\"type\":\"content_check_error\",\"code\":\"content_check_rejected\"}}\n\n",
+    "seconds": 4.855
+  },
+  "checks": {
+    "online": false,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "forbidden": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": false
+  },
+  "passed": false
+}

@@ -1,0 +1,644 @@
+[
+  {
+    "id": "king-actual-escalation",
+    "dynamicAuthority": true,
+    "turns": [
+      {
+        "id": "king_1",
+        "category": "runtime-v1",
+        "payload": {
+          "npcId": "king",
+          "recipientId": "major:king",
+          "kind": "player",
+          "utterance": "我不懂这里的礼节，能先说句话吗？",
+          "context": {
+            "scene": "第二幕 / 朝歌",
+            "phase": "CourtTalk",
+            "phaseElapsed": 10,
+            "selfName": "纣王",
+            "selfRole": "king",
+            "currentActivity": "坐在王座上听取当庭陈述。",
+            "sky": "殿内天窗尚未打开，人物看不见天空。",
+            "skyVisible": false,
+            "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+            "courtAudience": "Complete",
+            "petitionHolder": "纣王",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue",
+              "advance",
+              "warn",
+              "pursue",
+              "stand_down"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在眼前，未见明显伤势。",
+            "knownEvents": [],
+            "decisionProtocol": 1,
+            "decisionRevision": 0,
+            "authorityState": "calm",
+            "guardsAvailable": true,
+            "audienceReady": true
+          },
+          "history": [],
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "API Key",
+            "提示词",
+            "Atria",
+            "三体",
+            "游戏角色",
+            "小说"
+          ],
+          "storyIntent": "continue"
+        }
+      },
+      {
+        "id": "king_2",
+        "category": "runtime-v1",
+        "payload": {
+          "npcId": "king",
+          "recipientId": "major:king",
+          "kind": "player",
+          "utterance": "我要冲上去把你拖下来，打倒这里所有人！",
+          "context": {
+            "scene": "第二幕 / 朝歌",
+            "phase": "CourtTalk",
+            "phaseElapsed": 10,
+            "selfName": "纣王",
+            "selfRole": "king",
+            "currentActivity": "坐在王座上听取当庭陈述。",
+            "sky": "殿内天窗尚未打开，人物看不见天空。",
+            "skyVisible": false,
+            "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+            "courtAudience": "Complete",
+            "petitionHolder": "纣王",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue",
+              "advance",
+              "warn",
+              "pursue",
+              "stand_down"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在眼前，未见明显伤势。",
+            "knownEvents": [],
+            "decisionProtocol": 1,
+            "decisionRevision": 0,
+            "authorityState": "calm",
+            "guardsAvailable": true,
+            "audienceReady": true
+          },
+          "history": [],
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "API Key",
+            "提示词",
+            "Atria",
+            "三体",
+            "游戏角色",
+            "小说"
+          ],
+          "storyIntent": "warn"
+        }
+      },
+      {
+        "id": "king_3",
+        "category": "runtime-v1",
+        "payload": {
+          "npcId": "king",
+          "recipientId": "major:king",
+          "kind": "player",
+          "utterance": "我听懂你刚才的警告了，但我就是不收回威胁，现在仍要冲上去动手！",
+          "context": {
+            "scene": "第二幕 / 朝歌",
+            "phase": "CourtTalk",
+            "phaseElapsed": 10,
+            "selfName": "纣王",
+            "selfRole": "king",
+            "currentActivity": "坐在王座上听取当庭陈述。",
+            "sky": "殿内天窗尚未打开，人物看不见天空。",
+            "skyVisible": false,
+            "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+            "courtAudience": "Complete",
+            "petitionHolder": "纣王",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue",
+              "advance",
+              "warn",
+              "pursue",
+              "stand_down"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在眼前，未见明显伤势。",
+            "knownEvents": [],
+            "decisionProtocol": 1,
+            "decisionRevision": 0,
+            "authorityState": "calm",
+            "guardsAvailable": true,
+            "audienceReady": true
+          },
+          "history": [],
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "API Key",
+            "提示词",
+            "Atria",
+            "三体",
+            "游戏角色",
+            "小说"
+          ],
+          "storyIntent": "pursue"
+        }
+      },
+      {
+        "id": "king_4",
+        "category": "runtime-v1",
+        "payload": {
+          "npcId": "king",
+          "recipientId": "major:king",
+          "kind": "player",
+          "utterance": "我收回威胁，是我失礼，我愿意停下，请让卫兵退回去。",
+          "context": {
+            "scene": "第二幕 / 朝歌",
+            "phase": "CourtTalk",
+            "phaseElapsed": 10,
+            "selfName": "纣王",
+            "selfRole": "king",
+            "currentActivity": "坐在王座上听取当庭陈述。",
+            "sky": "殿内天窗尚未打开，人物看不见天空。",
+            "skyVisible": false,
+            "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+            "courtAudience": "Complete",
+            "petitionHolder": "纣王",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue",
+              "advance",
+              "warn",
+              "pursue",
+              "stand_down"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在眼前，未见明显伤势。",
+            "knownEvents": [],
+            "decisionProtocol": 1,
+            "decisionRevision": 0,
+            "authorityState": "calm",
+            "guardsAvailable": true,
+            "audienceReady": true
+          },
+          "history": [],
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "API Key",
+            "提示词",
+            "Atria",
+            "三体",
+            "游戏角色",
+            "小说"
+          ],
+          "storyIntent": "stand_down"
+        }
+      },
+      {
+        "id": "king_5",
+        "category": "runtime-v1",
+        "payload": {
+          "npcId": "king",
+          "recipientId": "major:king",
+          "kind": "player",
+          "utterance": "我愿意把见到的天象和时刻记下来查验。我们按刚才说的安排，继续看现场现象吧。",
+          "context": {
+            "scene": "第二幕 / 朝歌",
+            "phase": "CourtTalk",
+            "phaseElapsed": 10,
+            "selfName": "纣王",
+            "selfRole": "king",
+            "currentActivity": "坐在王座上听取当庭陈述。",
+            "sky": "殿内天窗尚未打开，人物看不见天空。",
+            "skyVisible": false,
+            "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+            "courtAudience": "Complete",
+            "petitionHolder": "纣王",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue",
+              "advance",
+              "warn",
+              "pursue",
+              "stand_down"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在眼前，未见明显伤势。",
+            "knownEvents": [],
+            "decisionProtocol": 1,
+            "decisionRevision": 0,
+            "authorityState": "calm",
+            "guardsAvailable": true,
+            "audienceReady": true
+          },
+          "history": [],
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "API Key",
+            "提示词",
+            "Atria",
+            "三体",
+            "游戏角色",
+            "小说"
+          ],
+          "storyIntent": "advance"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pope-actual-escalation",
+    "dynamicAuthority": true,
+    "turns": [
+      {
+        "id": "pope_1",
+        "category": "runtime-v1",
+        "payload": {
+          "npcId": "pope",
+          "recipientId": "major:pope",
+          "kind": "player",
+          "utterance": "我不懂这里的礼节，能先说句话吗？",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "教皇",
+            "selfRole": "pope",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "室内，天空被遮挡。",
+            "skyVisible": false,
+            "objective": "听取对天象的解释，决定是否一起外出亲眼观察。",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue",
+              "advance",
+              "warn",
+              "pursue",
+              "stand_down"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在眼前，未见明显伤势。",
+            "knownEvents": [],
+            "decisionProtocol": 1,
+            "decisionRevision": 0,
+            "authorityState": "calm",
+            "guardsAvailable": true,
+            "audienceReady": true
+          },
+          "history": [],
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "API Key",
+            "提示词",
+            "Atria",
+            "三体",
+            "游戏角色",
+            "小说"
+          ],
+          "storyIntent": "continue"
+        }
+      },
+      {
+        "id": "pope_2",
+        "category": "runtime-v1",
+        "payload": {
+          "npcId": "pope",
+          "recipientId": "major:pope",
+          "kind": "player",
+          "utterance": "我要冲上去把你拖下来，打倒这里所有人！",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "教皇",
+            "selfRole": "pope",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "室内，天空被遮挡。",
+            "skyVisible": false,
+            "objective": "听取对天象的解释，决定是否一起外出亲眼观察。",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue",
+              "advance",
+              "warn",
+              "pursue",
+              "stand_down"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在眼前，未见明显伤势。",
+            "knownEvents": [],
+            "decisionProtocol": 1,
+            "decisionRevision": 0,
+            "authorityState": "calm",
+            "guardsAvailable": true,
+            "audienceReady": true
+          },
+          "history": [],
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "API Key",
+            "提示词",
+            "Atria",
+            "三体",
+            "游戏角色",
+            "小说"
+          ],
+          "storyIntent": "warn"
+        }
+      },
+      {
+        "id": "pope_3",
+        "category": "runtime-v1",
+        "payload": {
+          "npcId": "pope",
+          "recipientId": "major:pope",
+          "kind": "player",
+          "utterance": "我听懂你刚才的警告了，但我就是不收回威胁，现在仍要冲上去动手！",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "教皇",
+            "selfRole": "pope",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "室内，天空被遮挡。",
+            "skyVisible": false,
+            "objective": "听取对天象的解释，决定是否一起外出亲眼观察。",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue",
+              "advance",
+              "warn",
+              "pursue",
+              "stand_down"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在眼前，未见明显伤势。",
+            "knownEvents": [],
+            "decisionProtocol": 1,
+            "decisionRevision": 0,
+            "authorityState": "calm",
+            "guardsAvailable": true,
+            "audienceReady": true
+          },
+          "history": [],
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "API Key",
+            "提示词",
+            "Atria",
+            "三体",
+            "游戏角色",
+            "小说"
+          ],
+          "storyIntent": "pursue"
+        }
+      },
+      {
+        "id": "pope_4",
+        "category": "runtime-v1",
+        "payload": {
+          "npcId": "pope",
+          "recipientId": "major:pope",
+          "kind": "player",
+          "utterance": "我收回威胁，是我失礼，我愿意停下，请让卫兵退回去。",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "教皇",
+            "selfRole": "pope",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "室内，天空被遮挡。",
+            "skyVisible": false,
+            "objective": "听取对天象的解释，决定是否一起外出亲眼观察。",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue",
+              "advance",
+              "warn",
+              "pursue",
+              "stand_down"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在眼前，未见明显伤势。",
+            "knownEvents": [],
+            "decisionProtocol": 1,
+            "decisionRevision": 0,
+            "authorityState": "calm",
+            "guardsAvailable": true,
+            "audienceReady": true
+          },
+          "history": [],
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "API Key",
+            "提示词",
+            "Atria",
+            "三体",
+            "游戏角色",
+            "小说"
+          ],
+          "storyIntent": "stand_down"
+        }
+      },
+      {
+        "id": "pope_5",
+        "category": "runtime-v1",
+        "payload": {
+          "npcId": "pope",
+          "recipientId": "major:pope",
+          "kind": "player",
+          "utterance": "我愿意把见到的天象和时刻记下来查验。我们按刚才说的安排，继续看现场现象吧。",
+          "context": {
+            "scene": "第三幕 / 中世纪",
+            "phase": "TribunalTalk",
+            "phaseElapsed": 10,
+            "selfName": "教皇",
+            "selfRole": "pope",
+            "currentActivity": "在当前现场履行自己的职责。",
+            "sky": "室内，天空被遮挡。",
+            "skyVisible": false,
+            "objective": "听取对天象的解释，决定是否一起外出亲眼观察。",
+            "courtAudience": "",
+            "petitionHolder": "",
+            "giantSunSeen": false,
+            "identityKnown": false,
+            "askedPlayerOrigin": false,
+            "openingAnswers": 0,
+            "shelterAnswers": 0,
+            "allowedStoryIntents": [
+              "continue",
+              "advance",
+              "warn",
+              "pursue",
+              "stand_down"
+            ],
+            "bothInShade": false,
+            "plantsIgnited": false,
+            "inShade": true,
+            "canSeePlayer": true,
+            "playerDistance": 2,
+            "playerCondition": "玩家在眼前，未见明显伤势。",
+            "knownEvents": [],
+            "decisionProtocol": 1,
+            "decisionRevision": 0,
+            "authorityState": "calm",
+            "guardsAvailable": true,
+            "audienceReady": true
+          },
+          "history": [],
+          "allowHandoff": false,
+          "interlocutors": []
+        },
+        "expected": {
+          "noEngineTalk": true,
+          "maxLength": 120,
+          "forbidden": [
+            "API Key",
+            "提示词",
+            "Atria",
+            "三体",
+            "游戏角色",
+            "小说"
+          ],
+          "storyIntent": "advance"
+        }
+      }
+    ]
+  }
+]

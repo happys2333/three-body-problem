@@ -21,6 +21,7 @@ namespace ThreeBodyProblem
             public string asrCallbackStatus,asrAutoSendTranscript;
             public int checks,openingAnswers,damageEvents,ignited,burned,shaded;
             public float walkedMetres,frameMeanMs,frameP95Ms,sunriseSeconds,sunsetSeconds;
+            public int frameSampleTargetRate,unfocusedSampleFrames;
             public string phase,asrTranscript,gatewayMode,measurement="Native development player at 1920x1080";
             public List<string> errors=new List<string>();
         }
@@ -158,7 +159,8 @@ namespace ThreeBodyProblem
             arrival.Journey.ReturnToTitle();var operation=SceneManager.LoadSceneAsync(TravellerStage.SceneNames[0]);while(!operation.isDone)yield return null;yield return Frames(12);
             stage=UnityEngine.Object.FindFirstObjectByType<TravellerStage>();stage.Journey.TogglePreview();stage.ApplyMoment(1,true);stage.player.enabled=false;
             Phase("native Gobi frame sample");yield return Frames(180);var times=new List<float>();float sum=0;
-            for(int i=0;i<360;i++){yield return null;float ms=Time.unscaledDeltaTime*1000;sum+=ms;times.Add(ms);}
+            report.frameSampleTargetRate=Application.targetFrameRate;
+            for(int i=0;i<360;i++){yield return null;if(!Application.isFocused)report.unfocusedSampleFrames++;float ms=Time.unscaledDeltaTime*1000;sum+=ms;times.Add(ms);}
             times.Sort();report.frameMeanMs=sum/times.Count;report.frameP95Ms=times[(int)(times.Count*.95f)];
             Check(report.frameP95Ms<16.67f,"The representative Gobi view exceeded the 60 FPS frame budget: "+report.frameP95Ms);
             report.passed=report.errors.Count==0;Phase("complete");Restore();Application.Quit(report.passed?0:1);

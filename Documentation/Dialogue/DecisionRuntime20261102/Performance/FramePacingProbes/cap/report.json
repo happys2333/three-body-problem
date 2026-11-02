@@ -1,0 +1,15 @@
+{
+    "passed": true,
+    "checks": 1,
+    "guards": 0,
+    "damageEvents": 0,
+    "healthAfterHit": 0,
+    "phase": "court rendering / cap",
+    "courtIdleP95": 11.395167350769043,
+    "courtPursuitP95": 0.0,
+    "gpuP95": 8.621582984924317,
+    "cpuMainMean": 1.8109601736068726,
+    "renderMean": 1.7630549669265748,
+    "frameCap": 90,
+    "errors": []
+}

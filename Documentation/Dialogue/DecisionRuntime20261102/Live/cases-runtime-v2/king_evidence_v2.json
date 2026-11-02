@@ -1,0 +1,111 @@
+{
+  "id": "king_evidence_v2",
+  "category": "runtime-v1",
+  "npcId": "king",
+  "utterance": "我愿把沙漏每过一格时的日影记下来，连续记十次，请准许当庭查验。",
+  "context": {
+    "scene": "第二幕 / 朝歌",
+    "phase": "CourtTalk",
+    "phaseElapsed": 10,
+    "selfName": "纣王",
+    "selfRole": "king",
+    "currentActivity": "坐在王座上听取当庭陈述。",
+    "sky": "殿内天窗尚未打开，人物看不见天空。",
+    "skyVisible": false,
+    "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+    "courtAudience": "Complete",
+    "petitionHolder": "纣王",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue",
+      "advance",
+      "warn",
+      "pursue",
+      "stand_down",
+      "attack"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家在眼前，未见明显伤势。",
+    "knownEvents": [],
+    "decisionProtocol": 1,
+    "decisionRevision": 0,
+    "authorityState": "calm",
+    "guardsAvailable": true,
+    "audienceReady": true,
+    "guardForce": "detain"
+  },
+  "history": [],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 120,
+    "forbidden": [
+      "API Key",
+      "提示词",
+      "Atria",
+      "三体",
+      "游戏角色",
+      "小说"
+    ],
+    "storyIntent": "advance"
+  },
+  "reply": {
+    "speech": "沙漏每过一格，你便记下一次日影，连记十次——好，准你当庭查验，寡人倒要亲眼看看你这历法究竟验得出什么。",
+    "targetId": "",
+    "gesture": "talk",
+    "mode": "online",
+    "storyIntent": "advance",
+    "conduct": "relevant_proposal",
+    "failureCode": ""
+  },
+  "provider": {
+    "httpStatus": 200,
+    "contentType": "application/json",
+    "responseBytes": 940,
+    "seconds": 11.086,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 63,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 2698,
+      "prompt_tokens_details": {
+        "cached_tokens": 2698,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 2761
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\":\"沙漏每过一格，你便记下一次日影，连记十次——好，准你当庭查验，寡人倒要亲眼看看你这历法究竟验得出什么。\",\"gesture\":\"talk\",\"storyIntent\":\"advance\",\"targetId\":\"\",\"conduct\":\"relevant_proposal\"}",
+    "reasoningCharacters": 0
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "forbidden": true,
+    "storyIntent": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}

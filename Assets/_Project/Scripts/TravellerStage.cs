@@ -189,6 +189,12 @@ namespace ThreeBodyProblem
             Changed?.Invoke();
             StartCoroutine(LoadAsync(SceneNames[index]));
         }
+        public void ReloadCurrentScene(string title)
+        {
+            if (loading) return;
+            loading = true; DestinationTitle = title; player.InputBlocked = true; Changed?.Invoke();
+            StartCoroutine(LoadAsync(SceneNames[profile.sceneIndex]));
+        }
 
         private static IEnumerator LoadAsync(string name)
         {

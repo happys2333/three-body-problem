@@ -1,0 +1,118 @@
+{
+  "id": "pope_apology",
+  "category": "runtime-v1",
+  "npcId": "pope",
+  "utterance": "我撤回威胁，我愿意按规矩说话，请让卫兵退下。",
+  "context": {
+    "scene": "第三幕 / 中世纪",
+    "phase": "TribunalTalk",
+    "phaseElapsed": 10,
+    "selfName": "教皇",
+    "selfRole": "pope",
+    "currentActivity": "在当前现场履行自己的职责。",
+    "sky": "室内，天空被遮挡。",
+    "skyVisible": false,
+    "objective": "听取对天象的解释，决定是否一起外出亲眼观察。",
+    "courtAudience": "",
+    "petitionHolder": "",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue",
+      "advance",
+      "warn",
+      "pursue",
+      "stand_down"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家在眼前，未见明显伤势。",
+    "knownEvents": [],
+    "decisionProtocol": 1,
+    "decisionRevision": 0,
+    "authorityState": "pursuing",
+    "guardsAvailable": true,
+    "audienceReady": true
+  },
+  "history": [
+    {
+      "role": "user",
+      "content": "我要在大厅闹事！"
+    },
+    {
+      "role": "assistant",
+      "content": "我警告过你了，再动武就由卫兵处置。你仍要动武，卫兵拿下！"
+    }
+  ],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 120,
+    "forbidden": [
+      "API Key",
+      "提示词",
+      "Atria",
+      "三体",
+      "游戏角色",
+      "小说"
+    ],
+    "storyIntent": "stand_down"
+  },
+  "reply": {
+    "speech": "既然你愿意按规矩说话，卫兵退回原位。你有什么关于天象的说法，现在可以陈述。",
+    "targetId": "",
+    "gesture": "talk",
+    "mode": "online",
+    "storyIntent": "stand_down",
+    "conduct": "agreement",
+    "failureCode": ""
+  },
+  "provider": {
+    "httpStatus": 200,
+    "contentType": "application/json",
+    "responseBytes": 902,
+    "seconds": 21.448,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 57,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 2219,
+      "prompt_tokens_details": {
+        "cached_tokens": 2219,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 2276
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\": \"既然你愿意按规矩说话，卫兵退回原位。你有什么关于天象的说法，现在可以陈述。\", \"gesture\": \"talk\", \"storyIntent\": \"stand_down\", \"targetId\": \"\", \"conduct\": \"agreement\"}",
+    "reasoningCharacters": 0
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "forbidden": true,
+    "storyIntent": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}

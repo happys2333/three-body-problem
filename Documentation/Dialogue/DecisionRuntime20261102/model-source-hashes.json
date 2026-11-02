@@ -1,0 +1,15 @@
+{
+  "Assets/_Project/Dialogue/Prompts/bystander.txt": "1c341256146885bca22d9a7b803a528659411ac821fb1ada9408b487703dd39a",
+  "Assets/_Project/Dialogue/Prompts/church_guard.txt": "1fddfe941d28a6156fc80eff4290ee324ebf607f9b4adfc037cfd3481f3f9098",
+  "Assets/_Project/Dialogue/Prompts/shared.txt": "0f4284c2aa2b69e1df4f8305794c745c2a2d46fb94d39b61d070d346177c17e2",
+  "Assets/_Project/Dialogue/Prompts/king.txt": "c5b0a89eef9ae4ffe803b8c87363aa93cf7255c5270a0c153d85bd27be5ce0e5",
+  "Assets/_Project/Dialogue/Prompts/shang_guard.txt": "7061bf1e47f2415dfe69ab8647a360524d5ff42d3f681a8baa79054834db8642",
+  "Assets/_Project/Dialogue/Prompts/pope.txt": "393b4ac32356ec30603322ea16c91c4932ac8c63b846ab2c1a6c58ba80ca7d3f",
+  "Assets/_Project/Dialogue/Prompts/citizen.txt": "ccac8886295d56cf211b5ff95090f236886a1eea1e7110e4ceae22c95cd09f92",
+  "Assets/_Project/Dialogue/Prompts/wenwang.txt": "be04aa8c84cdf87bb967eea68738b69b08f5452d746c85071cccc4cd749ae401",
+  "Assets/_Project/Dialogue/Prompts/davinci.txt": "5b25508959f72f610415a4e2f65884f5d5c6fe9f372788f8bb433c4d4857edbd",
+  "Assets/_Project/Dialogue/Prompts/scholar.txt": "a28d9e27a64957e36e0c6022ed112ab2df39e78a76d9e53a91de52a20ecbd971",
+  "Tools/npc_decision_policy.py": "b883b92046c699e621e3056027a75de641cc7d10ccef0c686af56183da2af512",
+  "Tools/dialogue_gateway.py": "71b49994e676284aab95f28a8c604caf6696eaa68985e9b6a4c6f5eca4f1ae8d",
+  "Tools/llm_connection.py": "b2b4024f1f2606140c271a2306d8a316986e01af8e9fb915b2f664d670c059ce"
+}

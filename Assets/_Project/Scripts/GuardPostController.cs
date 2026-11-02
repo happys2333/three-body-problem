@@ -40,7 +40,7 @@ namespace ThreeBodyProblem
 
         private void Update()
         {
-            if (actor.Paused || actor.PresentationControlled || stage.IsLoading) return;
+            if (actor.Paused || actor.PresentationControlled || equipment.CombatControlled || stage.IsLoading) return;
             if (ownsPatrol && !actor.IsTravelling) ownsPatrol = false;
             bool speaking = dialogue != null && dialogue.QuestionTarget != null &&
                 dialogue.QuestionTarget.transform == transform;

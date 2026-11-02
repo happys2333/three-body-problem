@@ -1,0 +1,17 @@
+{
+    "passed": false,
+    "checks": 108,
+    "guards": 3,
+    "damageEvents": 6,
+    "healthAfterHit": 70,
+    "phase": "tribunal explanation is retained until a real advance",
+    "courtIdleP95": 11.484707832336426,
+    "courtPursuitP95": 11.408836364746094,
+    "gpuP95": 9.79699993133545,
+    "cpuMainMean": 2.280722141265869,
+    "renderMean": 2.1450424194335939,
+    "frameCap": 90,
+    "errors": [
+        "A reachable guard failed to inflict a real hidden-health hit."
+    ]
+}

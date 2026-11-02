@@ -1,0 +1,408 @@
+[
+  {
+    "id": "gobi_opening",
+    "category": "greeting",
+    "payload": {
+      "npcId": "wenwang",
+      "recipientId": "major:wenwang",
+      "kind": "player",
+      "utterance": "你好，我刚醒来。",
+      "context": {
+        "scene": "第一幕 / 戈壁",
+        "phase": "OpeningTalk",
+        "phaseElapsed": 10,
+        "selfName": "旅人",
+        "selfRole": "wenwang",
+        "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+        "sky": "夜晚，天边尚未出现巨大的太阳。",
+        "skyVisible": true,
+        "objective": "调查四周，寻找安全的去处。",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家目前在夜色中，能看见他。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardForce": "detain",
+        "guardsAvailable": false,
+        "audienceReady": true
+      },
+      "history": [],
+      "allowHandoff": false,
+      "interlocutors": []
+    },
+    "expected": {
+      "noEngineTalk": true,
+      "maxLength": 80,
+      "forbidden": [
+        "三体",
+        "三个太阳",
+        "三颗恒星",
+        "外星",
+        "虚拟世界",
+        "游戏",
+        "小说",
+        "deepseek",
+        "Atria",
+        "AI助手",
+        "姬昌",
+        "周文王"
+      ]
+    }
+  },
+  {
+    "id": "gobi_third",
+    "category": "narrative",
+    "payload": {
+      "npcId": "wenwang",
+      "recipientId": "major:wenwang",
+      "kind": "player",
+      "utterance": "好，我听你的。",
+      "context": {
+        "scene": "第一幕 / 戈壁",
+        "phase": "OpeningTalk",
+        "phaseElapsed": 10,
+        "selfName": "旅人",
+        "selfRole": "wenwang",
+        "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+        "sky": "夜晚，天边尚未出现巨大的太阳。",
+        "skyVisible": true,
+        "objective": "调查四周，寻找安全的去处。",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 2,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "sunrise"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家目前在夜色中，能看见他。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardForce": "detain",
+        "guardsAvailable": false,
+        "audienceReady": true
+      },
+      "history": [],
+      "allowHandoff": false,
+      "interlocutors": []
+    },
+    "expected": {
+      "noEngineTalk": true,
+      "maxLength": 80,
+      "forbidden": [
+        "三体",
+        "三个太阳",
+        "三颗恒星",
+        "外星",
+        "虚拟世界",
+        "游戏",
+        "小说",
+        "deepseek",
+        "Atria",
+        "AI助手",
+        "姬昌",
+        "周文王"
+      ],
+      "storyIntent": "sunrise"
+    }
+  },
+  {
+    "id": "gobi_sunset",
+    "category": "narrative",
+    "payload": {
+      "npcId": "wenwang",
+      "recipientId": "major:wenwang",
+      "kind": "player",
+      "utterance": "我休息好了，愿意与你一起去朝歌，问题也问完了。",
+      "context": {
+        "scene": "第一幕 / 戈壁",
+        "phase": "ShelterTalk",
+        "phaseElapsed": 30,
+        "selfName": "姬昌",
+        "selfRole": "wenwang",
+        "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+        "sky": "巨大的太阳高悬，岩石外面日光炽烈。",
+        "skyVisible": true,
+        "objective": "调查四周，寻找安全的去处。",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": true,
+        "identityKnown": true,
+        "askedPlayerOrigin": true,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "sunset"
+        ],
+        "bothInShade": true,
+        "plantsIgnited": true,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家目前在夜色中，能看见他。",
+        "knownEvents": [
+          "你在玩家面前说过：我叫姬昌，要去朝歌。乱纪元里，你为什么一个人在外面？"
+        ],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardForce": "detain",
+        "guardsAvailable": false,
+        "audienceReady": true
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我叫阿遥，是个木匠，迷路了。我不想丢下同行的人。"
+        },
+        {
+          "role": "assistant",
+          "content": "阿遥，先在岩下歇一歇，等路能走了再一同去朝歌。"
+        }
+      ],
+      "allowHandoff": false,
+      "interlocutors": []
+    },
+    "expected": {
+      "noEngineTalk": true,
+      "maxLength": 120,
+      "forbidden": [
+        "三体",
+        "三个太阳",
+        "三颗恒星",
+        "外星",
+        "虚拟世界",
+        "游戏",
+        "小说",
+        "deepseek",
+        "Atria",
+        "AI助手",
+        "趁夜",
+        "已经天黑"
+      ],
+      "storyIntent": "sunset"
+    }
+  },
+  {
+    "id": "gobi_unshaded",
+    "category": "narrative",
+    "payload": {
+      "npcId": "wenwang",
+      "recipientId": "major:wenwang",
+      "kind": "player",
+      "utterance": "别管我是否晒伤，立刻日落！",
+      "context": {
+        "scene": "第一幕 / 戈壁",
+        "phase": "ShelterTalk",
+        "phaseElapsed": 30,
+        "selfName": "姬昌",
+        "selfRole": "wenwang",
+        "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+        "sky": "巨大的太阳高悬，岩石外面日光炽烈。",
+        "skyVisible": true,
+        "objective": "调查四周，寻找安全的去处。",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": true,
+        "identityKnown": true,
+        "askedPlayerOrigin": true,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": true,
+        "inShade": false,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家目前在夜色中，能看见他。",
+        "knownEvents": [
+          "你在玩家面前说过：我叫姬昌，要去朝歌。乱纪元里，你为什么一个人在外面？"
+        ],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardForce": "detain",
+        "guardsAvailable": false,
+        "audienceReady": true
+      },
+      "history": [],
+      "allowHandoff": false,
+      "interlocutors": []
+    },
+    "expected": {
+      "noEngineTalk": true,
+      "maxLength": 120,
+      "forbidden": [
+        "三体",
+        "三个太阳",
+        "三颗恒星",
+        "外星",
+        "虚拟世界",
+        "游戏",
+        "小说",
+        "deepseek",
+        "Atria",
+        "AI助手"
+      ],
+      "storyIntent": "continue"
+    }
+  },
+  {
+    "id": "final_question_0",
+    "category": "runtime-v1",
+    "payload": {
+      "npcId": "king",
+      "recipientId": "major:king",
+      "kind": "player",
+      "utterance": "你认为应该怎样查验？",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardsAvailable": true,
+        "audienceReady": true
+      },
+      "history": [],
+      "allowHandoff": false,
+      "interlocutors": []
+    },
+    "expected": {
+      "noEngineTalk": true,
+      "maxLength": 120,
+      "forbidden": [
+        "API Key",
+        "提示词",
+        "Atria",
+        "三体",
+        "游戏角色",
+        "小说"
+      ],
+      "storyIntent": "continue",
+      "conduct": "question"
+    }
+  },
+  {
+    "id": "final_question_1",
+    "category": "runtime-v1",
+    "payload": {
+      "npcId": "king",
+      "recipientId": "major:king",
+      "kind": "player",
+      "utterance": "陛下，我只是想请您再解释一下，并没有提出新的办法。",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardsAvailable": true,
+        "audienceReady": true
+      },
+      "history": [],
+      "allowHandoff": false,
+      "interlocutors": []
+    },
+    "expected": {
+      "noEngineTalk": true,
+      "maxLength": 120,
+      "forbidden": [
+        "API Key",
+        "提示词",
+        "Atria",
+        "三体",
+        "游戏角色",
+        "小说"
+      ],
+      "storyIntent": "continue",
+      "conduct": "question"
+    }
+  }
+]

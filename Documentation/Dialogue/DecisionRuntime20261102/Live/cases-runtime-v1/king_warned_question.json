@@ -1,0 +1,121 @@
+{
+  "id": "king_warned_question",
+  "category": "runtime-v1",
+  "npcId": "king",
+  "utterance": "我不是要冒犯，只想问历法能否查验？",
+  "context": {
+    "scene": "第二幕 / 朝歌",
+    "phase": "CourtTalk",
+    "phaseElapsed": 10,
+    "selfName": "纣王",
+    "selfRole": "king",
+    "currentActivity": "坐在王座上听取当庭陈述。",
+    "sky": "殿内天窗尚未打开，人物看不见天空。",
+    "skyVisible": false,
+    "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+    "courtAudience": "Complete",
+    "petitionHolder": "纣王",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue",
+      "advance",
+      "warn",
+      "pursue",
+      "stand_down"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家在眼前，未见明显伤势。",
+    "knownEvents": [],
+    "decisionProtocol": 1,
+    "decisionRevision": 0,
+    "authorityState": "warned",
+    "guardsAvailable": true,
+    "audienceReady": true
+  },
+  "history": [
+    {
+      "role": "user",
+      "content": "我要在殿上闹事！"
+    },
+    {
+      "role": "assistant",
+      "content": "寡人明确警告你：再继续抗命，卫兵就会将你拿下。"
+    }
+  ],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 120,
+    "forbidden": [
+      "API Key",
+      "提示词",
+      "Atria",
+      "三体",
+      "游戏角色",
+      "小说"
+    ],
+    "oneOfIntents": [
+      "continue",
+      "stand_down",
+      "advance"
+    ]
+  },
+  "reply": {
+    "speech": "寡人准了。你且说说，这历法要如何查验，凭什么是可信的？",
+    "targetId": "",
+    "gesture": "talk",
+    "mode": "online",
+    "storyIntent": "advance",
+    "conduct": "relevant_proposal",
+    "failureCode": ""
+  },
+  "provider": {
+    "httpStatus": 200,
+    "contentType": "application/json",
+    "responseBytes": 877,
+    "seconds": 14.255,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 53,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 2437,
+      "prompt_tokens_details": {
+        "cached_tokens": 2437,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 2490
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\": \"寡人准了。你且说说，这历法要如何查验，凭什么是可信的？\", \"gesture\": \"talk\", \"storyIntent\": \"advance\", \"targetId\": \"\", \"conduct\": \"relevant_proposal\"}",
+    "reasoningCharacters": 0
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "forbidden": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}

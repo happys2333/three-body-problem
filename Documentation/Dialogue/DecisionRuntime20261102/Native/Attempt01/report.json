@@ -1,0 +1,13 @@
+{
+    "passed": false,
+    "checks": 30,
+    "guards": 0,
+    "damageEvents": 0,
+    "healthAfterHit": 0,
+    "phase": "provider failures leave story and memory untouched",
+    "courtIdleP95": 0.0,
+    "courtPursuitP95": 0.0,
+    "errors": [
+        "No reachable court guards were integrated."
+    ]
+}

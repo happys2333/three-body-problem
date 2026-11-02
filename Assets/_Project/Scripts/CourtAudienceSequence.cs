@@ -59,7 +59,7 @@ namespace ThreeBodyProblem
         }
         private void Update()
         {
-            if(!prepared||State==AudienceState.Idle||journey.IsPreviewing||hud!=null&&hud.IsWorldPaused||ParticipantSpeaking)return;
+            if(!prepared||State==AudienceState.Idle||journey.IsPreviewing||journey.Decisions.Pursuing||hud!=null&&hud.IsWorldPaused||ParticipantSpeaking)return;
             age+=Time.deltaTime;
             switch(State)
             {

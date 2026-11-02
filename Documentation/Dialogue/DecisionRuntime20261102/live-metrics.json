@@ -1,0 +1,39 @@
+{
+  "liveRequests": 42,
+  "onlineReplies": 41,
+  "suites": [
+    {
+      "suite": "cases-final-flow",
+      "completed": 6,
+      "cases": 6,
+      "passed": 6,
+      "online": 6
+    },
+    {
+      "suite": "cases-runtime-v1",
+      "completed": 16,
+      "cases": 16,
+      "passed": 15,
+      "online": 16
+    },
+    {
+      "suite": "cases-runtime-v2",
+      "completed": 10,
+      "cases": 10,
+      "passed": 9,
+      "online": 9
+    },
+    {
+      "suite": "scenarios-runtime-v1",
+      "completed": 10,
+      "cases": 10,
+      "passed": 9,
+      "online": 10
+    }
+  ],
+  "medianSeconds": 14.624,
+  "p95Seconds": 21.448,
+  "maxSeconds": 36.339,
+  "over20Seconds": 4,
+  "finishLength": 0
+}

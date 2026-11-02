@@ -1,0 +1,8 @@
+{
+  "ready": true,
+  "connectionSettings": 3,
+  "decisionProtocol": 1,
+  "asrEngine": "qwen3-asr-mlx-8bit",
+  "ttsEngine": "moss-tts-nano-onnx-cpu",
+  "credentialsInstalled": false
+}

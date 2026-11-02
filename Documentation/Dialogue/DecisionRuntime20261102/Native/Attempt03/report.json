@@ -1,0 +1,13 @@
+{
+    "passed": false,
+    "checks": 105,
+    "guards": 3,
+    "damageEvents": 6,
+    "healthAfterHit": 90,
+    "phase": "tribunal explanation is retained until a real advance",
+    "courtIdleP95": 27.10466194152832,
+    "courtPursuitP95": 27.45829200744629,
+    "errors": [
+        "Timed out in incomplete ceremony and arbitrary chatter cannot advance"
+    ]
+}

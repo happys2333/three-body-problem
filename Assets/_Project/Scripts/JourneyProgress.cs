@@ -47,6 +47,11 @@ namespace ThreeBodyProblem
         }
 
         public void ReturnToTitle() => Enter(JourneyStep.Title);
+        public void RestartAudience()
+        {
+            if (Step == JourneyStep.CourtTalk) Enter(JourneyStep.CourtApproach);
+            else if (Step == JourneyStep.TribunalTalk) { ConsideredExplanation = OfferedExplanation = false; Enter(JourneyStep.TribunalApproach); }
+        }
         public void IdentifyTraveller() { if (Step == JourneyStep.ShelterTalk) { KnowsIdentity = true; Changed?.Invoke(); } }
         public void IntroduceTraveller(){if(Step==JourneyStep.ShelterTalk){KnowsIdentity=true;AskedPlayerOrigin=true;Changed?.Invoke();}}
         public void ConfigureGobi(float openingSeconds,float shelterSeconds,float sunsetSeconds,float walkSeconds,float walkMetres)

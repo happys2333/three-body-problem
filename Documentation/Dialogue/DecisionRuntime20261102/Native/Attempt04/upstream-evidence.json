@@ -1,0 +1,323 @@
+{
+  "realPaidApiCalls": 0,
+  "requests": [
+    {
+      "utterance": "QA_REJECT",
+      "role": "wenwang",
+      "phase": "OpeningTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue"
+      ],
+      "revision": 1,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_TIMEOUT",
+      "role": "wenwang",
+      "phase": "OpeningTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue"
+      ],
+      "revision": 1,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_AUTH",
+      "role": "wenwang",
+      "phase": "OpeningTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue"
+      ],
+      "revision": 1,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_RATE",
+      "role": "wenwang",
+      "phase": "OpeningTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue"
+      ],
+      "revision": 1,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_INVALID",
+      "role": "wenwang",
+      "phase": "OpeningTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue"
+      ],
+      "revision": 1,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_RECOVER",
+      "role": "wenwang",
+      "phase": "OpeningTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue"
+      ],
+      "revision": 1,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_ADVANCE",
+      "role": "king",
+      "phase": "CourtTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue",
+        "warn"
+      ],
+      "revision": 0,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_REJECT",
+      "role": "king",
+      "phase": "CourtTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue",
+        "advance",
+        "warn"
+      ],
+      "revision": 0,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_GREETING",
+      "role": "king",
+      "phase": "CourtTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue",
+        "advance",
+        "warn"
+      ],
+      "revision": 0,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_CLARIFY",
+      "role": "king",
+      "phase": "CourtTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue",
+        "advance",
+        "warn"
+      ],
+      "revision": 0,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_ATTACK_WITHOUT_WARNING",
+      "role": "king",
+      "phase": "CourtTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue",
+        "advance",
+        "warn"
+      ],
+      "revision": 0,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_CORRECT_CONCLUSION",
+      "role": "king",
+      "phase": "CourtTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue",
+        "advance",
+        "warn"
+      ],
+      "revision": 0,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_WARN",
+      "role": "king",
+      "phase": "CourtTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue",
+        "advance",
+        "warn"
+      ],
+      "revision": 0,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_PURSUIT",
+      "role": "king",
+      "phase": "CourtTalk",
+      "authorityState": "warned",
+      "allowed": [
+        "continue",
+        "advance",
+        "warn",
+        "pursue",
+        "attack",
+        "stand_down"
+      ],
+      "revision": 1,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_APOLOGY",
+      "role": "king",
+      "phase": "CourtTalk",
+      "authorityState": "pursuing",
+      "allowed": [
+        "continue",
+        "attack",
+        "stand_down"
+      ],
+      "revision": 2,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_WARN",
+      "role": "king",
+      "phase": "CourtTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue",
+        "advance",
+        "warn"
+      ],
+      "revision": 3,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_LETHAL",
+      "role": "king",
+      "phase": "CourtTalk",
+      "authorityState": "warned",
+      "allowed": [
+        "continue",
+        "advance",
+        "warn",
+        "pursue",
+        "attack",
+        "stand_down"
+      ],
+      "revision": 4,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_ADVANCE",
+      "role": "king",
+      "phase": "CourtTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue",
+        "advance",
+        "warn"
+      ],
+      "revision": 0,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_WARN",
+      "role": "pope",
+      "phase": "TribunalTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue",
+        "advance",
+        "warn"
+      ],
+      "revision": 0,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_PURSUIT",
+      "role": "pope",
+      "phase": "TribunalTalk",
+      "authorityState": "warned",
+      "allowed": [
+        "continue",
+        "advance",
+        "warn",
+        "pursue",
+        "attack",
+        "stand_down"
+      ],
+      "revision": 1,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_APOLOGY",
+      "role": "pope",
+      "phase": "TribunalTalk",
+      "authorityState": "pursuing",
+      "allowed": [
+        "continue",
+        "attack",
+        "stand_down"
+      ],
+      "revision": 2,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_EXPLANATION",
+      "role": "scholar",
+      "phase": "TribunalTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue",
+        "advance"
+      ],
+      "revision": 3,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_TRIBUNAL_ADVANCE",
+      "role": "scholar",
+      "phase": "TribunalTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue",
+        "advance"
+      ],
+      "revision": 3,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    }
+  ],
+  "failedInputsExcludedFromHistory": true,
+  "authenticatedFixtureRequests": true
+}

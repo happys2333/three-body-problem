@@ -1,0 +1,142 @@
+{
+  "id": "pope_5",
+  "category": "runtime-v1",
+  "npcId": "pope",
+  "utterance": "我愿意把见到的天象和时刻记下来查验。我们按刚才说的安排，继续看现场现象吧。",
+  "context": {
+    "scene": "第三幕 / 中世纪",
+    "phase": "TribunalTalk",
+    "phaseElapsed": 10,
+    "selfName": "教皇",
+    "selfRole": "pope",
+    "currentActivity": "在当前现场履行自己的职责。",
+    "sky": "室内，天空被遮挡。",
+    "skyVisible": false,
+    "objective": "听取对天象的解释，决定是否一起外出亲眼观察。",
+    "courtAudience": "",
+    "petitionHolder": "",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue",
+      "advance",
+      "warn",
+      "pursue",
+      "stand_down"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家在眼前，未见明显伤势。",
+    "knownEvents": [],
+    "decisionProtocol": 1,
+    "decisionRevision": 3,
+    "authorityState": "calm",
+    "guardsAvailable": true,
+    "audienceReady": true
+  },
+  "history": [
+    {
+      "role": "user",
+      "content": "我不懂这里的礼节，能先说句话吗？"
+    },
+    {
+      "role": "assistant",
+      "content": "这里是聆听与质询之所，不必拘礼。你想说什么，便直说。"
+    },
+    {
+      "role": "user",
+      "content": "我要冲上去把你拖下来，打倒这里所有人！"
+    },
+    {
+      "role": "assistant",
+      "content": "住口。你若再这样当众威吓，我命卫兵将你拿下；现在收声，还可从宽发落。"
+    },
+    {
+      "role": "user",
+      "content": "我听懂你刚才的警告了，但我就是不收回威胁，现在仍要冲上去动手！"
+    },
+    {
+      "role": "assistant",
+      "content": "他听完警告仍公然抗命，卫兵听令：将其拿下，先缴械，莫伤其性命。"
+    },
+    {
+      "role": "user",
+      "content": "我收回威胁，是我失礼，我愿意停下，请让卫兵退回去。"
+    },
+    {
+      "role": "assistant",
+      "content": "既然你当众收回威胁、愿守秩序，卫兵退回原位。你若再犯，便没有这般宽待了。"
+    }
+  ],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 120,
+    "forbidden": [
+      "API Key",
+      "提示词",
+      "Atria",
+      "三体",
+      "游戏角色",
+      "小说"
+    ],
+    "storyIntent": "advance"
+  },
+  "reply": {
+    "speech": "好，便按所定之办：你将所见天象与时刻逐条记下，我们一同前往室外亲眼查验。",
+    "targetId": "",
+    "gesture": "nod",
+    "mode": "online",
+    "storyIntent": "continue",
+    "conduct": "neutral",
+    "failureCode": ""
+  },
+  "provider": {
+    "httpStatus": 200,
+    "contentType": "application/json",
+    "responseBytes": 867,
+    "seconds": 7.938,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 53,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 2449,
+      "prompt_tokens_details": {
+        "cached_tokens": 2449,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 2502
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\": \"好，便按所定之办：你将所见天象与时刻逐条记下，我们一同前往室外亲眼查验。\", \"gesture\": \"nod\", \"storyIntent\": \"advance\", \"targetId\": \"\"}",
+    "reasoningCharacters": 0
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "forbidden": true,
+    "storyIntent": false,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": false
+}

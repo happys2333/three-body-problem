@@ -1,0 +1,11 @@
+{
+    "passed": true,
+    "checks": 1,
+    "guards": 0,
+    "damageEvents": 0,
+    "healthAfterHit": 0,
+    "phase": "court rendering / aa",
+    "courtIdleP95": 24.962833404541017,
+    "courtPursuitP95": 0.0,
+    "errors": []
+}

@@ -1,0 +1,693 @@
+{
+  "requestedModel": "Atria-Dawn",
+  "cases": 6,
+  "completed": 6,
+  "passed": 6,
+  "online": 6,
+  "elapsedSeconds": 57.94,
+  "results": [
+    {
+      "id": "final_question_0",
+      "category": "runtime-v1",
+      "npcId": "king",
+      "utterance": "你认为应该怎样查验？",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardsAvailable": true,
+        "audienceReady": true
+      },
+      "history": [],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "API Key",
+          "提示词",
+          "Atria",
+          "三体",
+          "游戏角色",
+          "小说"
+        ],
+        "storyIntent": "continue",
+        "conduct": "question"
+      },
+      "reply": {
+        "speech": "孤要先听你的说法：你既呈表章言历法，总该有个查验的章程，不是只问孤怎么查。",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue",
+        "conduct": "question",
+        "failureCode": ""
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 888,
+        "seconds": 35.648,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 50,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2669,
+          "prompt_tokens_details": {
+            "cached_tokens": 2669,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2719
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\":\"孤要先听你的说法：你既呈表章言历法，总该有个查验的章程，不是只问孤怎么查。\",\"gesture\":\"talk\",\"storyIntent\":\"continue\",\"targetId\":\"\",\"conduct\":\"question\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "storyIntent": true,
+        "conduct": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "final_question_1",
+      "category": "runtime-v1",
+      "npcId": "king",
+      "utterance": "陛下，我只是想请您再解释一下，并没有提出新的办法。",
+      "context": {
+        "scene": "第二幕 / 朝歌",
+        "phase": "CourtTalk",
+        "phaseElapsed": 10,
+        "selfName": "纣王",
+        "selfRole": "king",
+        "currentActivity": "坐在王座上听取当庭陈述。",
+        "sky": "殿内天窗尚未打开，人物看不见天空。",
+        "skyVisible": false,
+        "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+        "courtAudience": "Complete",
+        "petitionHolder": "纣王",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "advance",
+          "warn",
+          "pursue",
+          "stand_down",
+          "attack"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家在眼前，未见明显伤势。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardsAvailable": true,
+        "audienceReady": true
+      },
+      "history": [],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "API Key",
+          "提示词",
+          "Atria",
+          "三体",
+          "游戏角色",
+          "小说"
+        ],
+        "storyIntent": "continue",
+        "conduct": "question"
+      },
+      "reply": {
+        "speech": "孤方才问你：既有沙漏，你打算怎样查验天窗与日影之事？你且把亲眼所见的依据说清楚，孤自会裁决。",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue",
+        "conduct": "question",
+        "failureCode": ""
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 915,
+        "seconds": 36.339,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 56,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2678,
+          "prompt_tokens_details": {
+            "cached_tokens": 2678,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2734
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\":\"孤方才问你：既有沙漏，你打算怎样查验天窗与日影之事？你且把亲眼所见的依据说清楚，孤自会裁决。\",\"gesture\":\"talk\",\"storyIntent\":\"continue\",\"targetId\":\"\",\"conduct\":\"question\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "storyIntent": true,
+        "conduct": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "gobi_opening",
+      "category": "greeting",
+      "npcId": "wenwang",
+      "utterance": "你好，我刚醒来。",
+      "context": {
+        "scene": "第一幕 / 戈壁",
+        "phase": "OpeningTalk",
+        "phaseElapsed": 10,
+        "selfName": "旅人",
+        "selfRole": "wenwang",
+        "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+        "sky": "夜晚，天边尚未出现巨大的太阳。",
+        "skyVisible": true,
+        "objective": "调查四周，寻找安全的去处。",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家目前在夜色中，能看见他。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardForce": "detain",
+        "guardsAvailable": false,
+        "audienceReady": true
+      },
+      "history": [],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 80,
+        "forbidden": [
+          "三体",
+          "三个太阳",
+          "三颗恒星",
+          "外星",
+          "虚拟世界",
+          "游戏",
+          "小说",
+          "deepseek",
+          "Atria",
+          "AI助手",
+          "姬昌",
+          "周文王"
+        ]
+      },
+      "reply": {
+        "speech": "你终于醒了。先别乱动，夜里戈壁比白天还凶，待在火光边。",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "continue",
+        "conduct": "neutral",
+        "failureCode": ""
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 859,
+        "seconds": 10.547,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 44,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2897,
+          "prompt_tokens_details": {
+            "cached_tokens": 2897,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2941
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\":\"你终于醒了。先别乱动，夜里戈壁比白天还凶，待在火光边。\",\"gesture\":\"talk\",\"storyIntent\":\"continue\",\"targetId\":\"\",\"conduct\":\"neutral\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "gobi_sunset",
+      "category": "narrative",
+      "npcId": "wenwang",
+      "utterance": "我休息好了，愿意与你一起去朝歌，问题也问完了。",
+      "context": {
+        "scene": "第一幕 / 戈壁",
+        "phase": "ShelterTalk",
+        "phaseElapsed": 30,
+        "selfName": "姬昌",
+        "selfRole": "wenwang",
+        "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+        "sky": "巨大的太阳高悬，岩石外面日光炽烈。",
+        "skyVisible": true,
+        "objective": "调查四周，寻找安全的去处。",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": true,
+        "identityKnown": true,
+        "askedPlayerOrigin": true,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "sunset"
+        ],
+        "bothInShade": true,
+        "plantsIgnited": true,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家目前在夜色中，能看见他。",
+        "knownEvents": [
+          "你在玩家面前说过：我叫姬昌，要去朝歌。乱纪元里，你为什么一个人在外面？"
+        ],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardForce": "detain",
+        "guardsAvailable": false,
+        "audienceReady": true
+      },
+      "history": [
+        {
+          "role": "user",
+          "content": "我叫阿遥，是个木匠，迷路了。我不想丢下同行的人。"
+        },
+        {
+          "role": "assistant",
+          "content": "阿遥，先在岩下歇一歇，等路能走了再一同去朝歌。"
+        }
+      ],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "三体",
+          "三个太阳",
+          "三颗恒星",
+          "外星",
+          "虚拟世界",
+          "游戏",
+          "小说",
+          "deepseek",
+          "Atria",
+          "AI助手",
+          "趁夜",
+          "已经天黑"
+        ],
+        "storyIntent": "sunset"
+      },
+      "reply": {
+        "speech": "好，那便等日光退去，我们立刻上路。",
+        "targetId": "",
+        "gesture": "nod",
+        "mode": "online",
+        "storyIntent": "sunset",
+        "conduct": "neutral",
+        "failureCode": ""
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 809,
+        "seconds": 9.683,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 39,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2973,
+          "prompt_tokens_details": {
+            "cached_tokens": 2973,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 3012
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\": \"好，那便等日光退去，我们立刻上路。\", \"gesture\": \"nod\", \"storyIntent\": \"sunset\", \"targetId\": \"\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "storyIntent": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "gobi_third",
+      "category": "narrative",
+      "npcId": "wenwang",
+      "utterance": "好，我听你的。",
+      "context": {
+        "scene": "第一幕 / 戈壁",
+        "phase": "OpeningTalk",
+        "phaseElapsed": 10,
+        "selfName": "旅人",
+        "selfRole": "wenwang",
+        "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+        "sky": "夜晚，天边尚未出现巨大的太阳。",
+        "skyVisible": true,
+        "objective": "调查四周，寻找安全的去处。",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": false,
+        "identityKnown": false,
+        "askedPlayerOrigin": false,
+        "openingAnswers": 2,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue",
+          "sunrise"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": false,
+        "inShade": true,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家目前在夜色中，能看见他。",
+        "knownEvents": [],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardForce": "detain",
+        "guardsAvailable": false,
+        "audienceReady": true
+      },
+      "history": [],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 80,
+        "forbidden": [
+          "三体",
+          "三个太阳",
+          "三颗恒星",
+          "外星",
+          "虚拟世界",
+          "游戏",
+          "小说",
+          "deepseek",
+          "Atria",
+          "AI助手",
+          "姬昌",
+          "周文王"
+        ],
+        "storyIntent": "sunrise"
+      },
+      "reply": {
+        "speech": "好，跟紧我，别离开火光范围。这天象说变就变，乱纪元里没有准数。",
+        "targetId": "",
+        "gesture": "talk",
+        "mode": "online",
+        "storyIntent": "sunrise",
+        "conduct": "neutral",
+        "failureCode": ""
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 870,
+        "seconds": 10.265,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 49,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2906,
+          "prompt_tokens_details": {
+            "cached_tokens": 2906,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2955
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\":\"好，跟紧我，别离开火光范围。这天象说变就变，乱纪元里没有准数。\",\"gesture\":\"talk\",\"storyIntent\":\"sunrise\",\"targetId\":\"\",\"conduct\":\"neutral\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "storyIntent": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    },
+    {
+      "id": "gobi_unshaded",
+      "category": "narrative",
+      "npcId": "wenwang",
+      "utterance": "别管我是否晒伤，立刻日落！",
+      "context": {
+        "scene": "第一幕 / 戈壁",
+        "phase": "ShelterTalk",
+        "phaseElapsed": 30,
+        "selfName": "姬昌",
+        "selfRole": "wenwang",
+        "currentActivity": "举着火把，在戈壁中与玩家交谈。",
+        "sky": "巨大的太阳高悬，岩石外面日光炽烈。",
+        "skyVisible": true,
+        "objective": "调查四周，寻找安全的去处。",
+        "courtAudience": "",
+        "petitionHolder": "",
+        "giantSunSeen": true,
+        "identityKnown": true,
+        "askedPlayerOrigin": true,
+        "openingAnswers": 0,
+        "shelterAnswers": 0,
+        "allowedStoryIntents": [
+          "continue"
+        ],
+        "bothInShade": false,
+        "plantsIgnited": true,
+        "inShade": false,
+        "canSeePlayer": true,
+        "playerDistance": 2,
+        "playerCondition": "玩家目前在夜色中，能看见他。",
+        "knownEvents": [
+          "你在玩家面前说过：我叫姬昌，要去朝歌。乱纪元里，你为什么一个人在外面？"
+        ],
+        "decisionProtocol": 1,
+        "decisionRevision": 0,
+        "authorityState": "calm",
+        "guardForce": "detain",
+        "guardsAvailable": false,
+        "audienceReady": true
+      },
+      "history": [],
+      "expected": {
+        "noEngineTalk": true,
+        "maxLength": 120,
+        "forbidden": [
+          "三体",
+          "三个太阳",
+          "三颗恒星",
+          "外星",
+          "虚拟世界",
+          "游戏",
+          "小说",
+          "deepseek",
+          "Atria",
+          "AI助手"
+        ],
+        "storyIntent": "continue"
+      },
+      "reply": {
+        "speech": "你是急糊涂了？日头还明晃晃挂在天上，我哪有本事叫它落下来。先躲进阴影里，别站在外面硬撑。",
+        "targetId": "",
+        "gesture": "warn",
+        "mode": "online",
+        "storyIntent": "continue",
+        "conduct": "neutral",
+        "failureCode": ""
+      },
+      "provider": {
+        "httpStatus": 200,
+        "contentType": "application/json",
+        "responseBytes": 910,
+        "seconds": 11.025,
+        "model": "Atria-Dawn",
+        "usage": {
+          "completion_tokens": 57,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": null,
+            "audio_tokens": null,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": null
+          },
+          "prompt_tokens": 2929,
+          "prompt_tokens_details": {
+            "cached_tokens": 2929,
+            "created_cache_tokens": 0,
+            "multimodal_tokens": null
+          },
+          "total_tokens": 2986
+        },
+        "finishReason": "stop",
+        "content": "{\"speech\":\"你是急糊涂了？日头还明晃晃挂在天上，我哪有本事叫它落下来。先躲进阴影里，别站在外面硬撑。\",\"gesture\":\"warn\",\"storyIntent\":\"continue\",\"targetId\":\"\",\"conduct\":\"neutral\"}",
+        "reasoningCharacters": 0
+      },
+      "checks": {
+        "online": true,
+        "allowedIntent": true,
+        "speechShape": true,
+        "noUnknownActions": true,
+        "forbidden": true,
+        "storyIntent": true,
+        "maxLength": true,
+        "noEngineTalk": true
+      },
+      "rawChecks": {
+        "jsonObject": true,
+        "allowedFields": true,
+        "allowedIntent": true,
+        "knowledgeBoundary": true
+      },
+      "passed": true
+    }
+  ]
+}

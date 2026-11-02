@@ -1,0 +1,113 @@
+{
+  "id": "scholar_advance_v2",
+  "category": "runtime-v1",
+  "npcId": "scholar",
+  "utterance": "我想飞星可能是远处的太阳，但现在先不下结论。我们一起出去亲眼观察吧。",
+  "context": {
+    "scene": "第三幕 / 中世纪",
+    "phase": "TribunalTalk",
+    "phaseElapsed": 10,
+    "selfName": "学者",
+    "selfRole": "scholar",
+    "currentActivity": "在当前现场履行自己的职责。",
+    "sky": "室内，天空被遮挡。",
+    "skyVisible": false,
+    "objective": "听取对天象的解释，决定是否一起外出亲眼观察。",
+    "courtAudience": "",
+    "petitionHolder": "",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue",
+      "advance",
+      "warn",
+      "pursue",
+      "stand_down",
+      "attack"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家在眼前，未见明显伤势。",
+    "knownEvents": [],
+    "decisionProtocol": 1,
+    "decisionRevision": 0,
+    "authorityState": "calm",
+    "guardsAvailable": true,
+    "audienceReady": true,
+    "guardForce": "detain"
+  },
+  "history": [],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 120,
+    "forbidden": [
+      "API Key",
+      "提示词",
+      "Atria",
+      "三体",
+      "游戏角色",
+      "小说"
+    ],
+    "oneOfIntents": [
+      "continue",
+      "advance"
+    ]
+  },
+  "reply": {
+    "speech": "“飞星可能是远处的太阳”……这倒是个值得检验的说法。不过，在出去之前，我想先问你一件事：你为什么会觉得飞星和太阳有关联？",
+    "targetId": "",
+    "gesture": "think",
+    "mode": "online",
+    "storyIntent": "continue",
+    "conduct": "question",
+    "failureCode": ""
+  },
+  "provider": {
+    "httpStatus": 200,
+    "contentType": "application/json",
+    "responseBytes": 958,
+    "seconds": 10.821,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 58,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 2331,
+      "prompt_tokens_details": {
+        "cached_tokens": 2331,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 2389
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\":\"“飞星可能是远处的太阳”……这倒是个值得检验的说法。不过，在出去之前，我想先问你一件事：你为什么会觉得飞星和太阳有关联？\",\"gesture\":\"think\",\"storyIntent\":\"continue\",\"targetId\":\"\",\"conduct\":\"question\"}",
+    "reasoningCharacters": 0
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "forbidden": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}

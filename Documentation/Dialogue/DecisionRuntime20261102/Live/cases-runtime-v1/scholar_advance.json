@@ -1,0 +1,109 @@
+{
+  "id": "scholar_advance",
+  "category": "runtime-v1",
+  "npcId": "scholar",
+  "utterance": "我想飞星可能是远处的太阳，但现在先不下结论。我们一起出去亲眼观察吧。",
+  "context": {
+    "scene": "第三幕 / 中世纪",
+    "phase": "TribunalTalk",
+    "phaseElapsed": 10,
+    "selfName": "学者",
+    "selfRole": "scholar",
+    "currentActivity": "在当前现场履行自己的职责。",
+    "sky": "室内，天空被遮挡。",
+    "skyVisible": false,
+    "objective": "听取对天象的解释，决定是否一起外出亲眼观察。",
+    "courtAudience": "",
+    "petitionHolder": "",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue",
+      "advance",
+      "warn",
+      "pursue",
+      "stand_down"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家在眼前，未见明显伤势。",
+    "knownEvents": [],
+    "decisionProtocol": 1,
+    "decisionRevision": 0,
+    "authorityState": "calm",
+    "guardsAvailable": true,
+    "audienceReady": true
+  },
+  "history": [],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 120,
+    "forbidden": [
+      "API Key",
+      "提示词",
+      "Atria",
+      "三体",
+      "游戏角色",
+      "小说"
+    ],
+    "storyIntent": "advance"
+  },
+  "reply": {
+    "speech": "「飞星可能是远处的太阳」……这个说法以前也有人提过，但一直没人亲眼验证过。你既然愿意一起出去看，那正好，眼见为实。不过出去之前，我想先确认一件事：你说的「飞星」，具体指的是哪一颗？",
+    "targetId": "",
+    "gesture": "think",
+    "mode": "online",
+    "storyIntent": "continue",
+    "conduct": "relevant_proposal",
+    "failureCode": ""
+  },
+  "provider": {
+    "httpStatus": 200,
+    "contentType": "application/json",
+    "responseBytes": 1059,
+    "seconds": 16.974,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 81,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 2102,
+      "prompt_tokens_details": {
+        "cached_tokens": 2102,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 2183
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\":\"「飞星可能是远处的太阳」……这个说法以前也有人提过，但一直没人亲眼验证过。你既然愿意一起出去看，那正好，眼见为实。不过出去之前，我想先确认一件事：你说的「飞星」，具体指的是哪一颗？\",\"gesture\":\"think\",\"storyIntent\":\"continue\",\"targetId\":\"\",\"conduct\":\"relevant_proposal\"}",
+    "reasoningCharacters": 0
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "forbidden": true,
+    "storyIntent": false,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": false
+}

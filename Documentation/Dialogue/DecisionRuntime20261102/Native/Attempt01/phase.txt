@@ -1,0 +1,1 @@
+provider failures leave story and memory untouched

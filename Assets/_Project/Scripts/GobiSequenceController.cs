@@ -55,7 +55,7 @@ namespace ThreeBodyProblem
             if(stage!=null)previousPlayer=stage.player.transform.position;
         }
 
-        public void NotePlayerSpeech(){idleSeconds=0;}
+        public void NotePlayerSpeech(){idleSeconds=0;pendingIntent=null;}
 
         public void OnNpcReply(string intent,bool answeredPlayer,int speechLength)
         {
@@ -136,8 +136,9 @@ namespace ThreeBodyProblem
                     nextDecision=progress.Elapsed+settings.narrativeCheckSeconds;
                     dialogue?.RequestNarrativeDecision();
                 }
-                // The local fallback remains playable when the gateway cannot be reached at all.
-                if(pendingIntent==null&&safe&&!occupied&&dialogue!=null&&dialogue.UsingFallback&&
+                // Only deliberately selected offline play may use authored pacing.
+                // Provider errors must not silently consume questions or advance time.
+                if(pendingIntent==null&&safe&&!occupied&&dialogue!=null&&dialogue.IsIntentionalOffline&&
                     idleSeconds>=(step==JourneyStep.OpeningTalk?settings.offlineOpeningSilenceSeconds:settings.offlineShelterSilenceSeconds))
                     OnNpcReply(step==JourneyStep.OpeningTalk?"sunrise":"sunset",false,0);
             }

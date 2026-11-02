@@ -1,0 +1,14 @@
+{
+  "gpu": "Apple M5",
+  "resolution": [
+    1600,
+    900
+  ],
+  "sameCamera": true,
+  "qualityChanged": false,
+  "beforeFrameCap": -1,
+  "afterFrameCap": 90,
+  "beforeP95": 24.806123733520508,
+  "afterP95": 11.395167350769043,
+  "reductionPercent": 54.063087513464446
+}

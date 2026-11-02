@@ -14,7 +14,8 @@ namespace ThreeBodyProblem.Tests
         [SetUp] public void Remember() => original = UnityEngine.SceneManagement.SceneManager.GetActiveScene().path;
         [TearDown] public void Restore() => EditorSceneManager.OpenScene(string.IsNullOrEmpty(original) ? TravellerSceneBuilder.SceneFolder+"/01_GobiJourney.unity" : original);
 
-        [TestCase(0,2,0)] [TestCase(1,36,33)] [TestCase(2,6,2)]
+        // The medieval cast now includes the dedicated manuscript clerk.
+        [TestCase(0,2,0)] [TestCase(1,36,33)] [TestCase(2,7,3)]
         public void EverySceneCharacterHasARealSkinnedHumanoid(int index,int expected,int crowd)
         {
             Open(index);var stage=Object.FindFirstObjectByType<TravellerStage>();

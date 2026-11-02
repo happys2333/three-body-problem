@@ -1,0 +1,11 @@
+{
+    "passed": true,
+    "checks": 105,
+    "guards": 3,
+    "damageEvents": 6,
+    "healthAfterHit": 90,
+    "phase": "tribunal explanation is retained until a real advance",
+    "courtIdleP95": 32.1000862121582,
+    "courtPursuitP95": 30.38274574279785,
+    "errors": []
+}

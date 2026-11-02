@@ -1,0 +1,26 @@
+{
+  "allRequiredChecksPassed": true,
+  "unityEditMode": 133,
+  "python": 55,
+  "nativeDecisions": 109,
+  "nativeContext": 23,
+  "gobiViews": 6,
+  "gobiP95Range": [
+    11.276169776916504,
+    11.61379623413086
+  ],
+  "courtIdleP95": 11.385586738586426,
+  "courtPursuitP95": 11.472335815429688,
+  "keyScan": {
+    "filesScanned": 392,
+    "longKeyPatternsFound": 0
+  },
+  "installed": {
+    "installed": true,
+    "mainApp": "/Users/happys/Documents/GitHub/three-body-problem/Builds/ActOneTraveller.app",
+    "backupApp": "/Users/happys/Documents/GitHub/three-body-problem/Builds/ActOneTraveller.before-npc-decisions.app",
+    "files": 227,
+    "treeSha256": "c70e7f724ef97296e0e18a7538ec7eec7287132ac48019ffe132dafde0aa1cd0",
+    "sourceVerifiedBeforeRename": true
+  }
+}

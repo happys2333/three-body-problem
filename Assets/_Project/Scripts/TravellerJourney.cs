@@ -20,6 +20,12 @@ namespace ThreeBodyProblem
         private float speechUntil;
         private JourneyStep? advanceAfterAnswer;
         private float answerAdvanceAt;
+        private bool relevantExplanation;
+        private NpcDecisionController decisionController;
+        public NpcDecisionState Decisions { get; } = new NpcDecisionState();
+        public bool AudienceReady => stage != null && !stage.HasPendingCourtAudience;
+        public bool CanContinueScriptedAudience => NpcDecisionState.IsConversant(Progress.Step == JourneyStep.CourtTalk ? "king" : "pope", Progress.Step) &&
+            AudienceReady && !Decisions.Pursuing && !Decisions.Defeated && dialogueDirector != null && dialogueDirector.IsIntentionalOffline;
         public event Action Changed;
         public event Action<string> DialogueSelected;
         public JourneyProgress Progress => session ?? (session = new JourneyProgress());
@@ -32,7 +38,7 @@ namespace ThreeBodyProblem
         public bool IsSummary => !previewMode && Progress.Step == JourneyStep.Summary;
         public bool CanObserve => !previewMode && (Progress.Step != JourneyStep.ObserveRevival || stage.IsRevivalComplete) && ((Progress.Step==JourneyStep.WalkToChaoge&&stage.profile.sceneIndex==0&&(stage.MomentIndex==3||stage.MomentIndex==4))||Progress.Step == JourneyStep.ObserveFirstStar || Progress.Step == JourneyStep.ObserveTwoStars || Progress.Step == JourneyStep.ObserveRevival || Progress.Step == JourneyStep.ObserveLongNight || Progress.Step == JourneyStep.ObserveThreeSuns);
         public bool IsWalking => Progress.Step == JourneyStep.SeekShelter || Progress.Step == JourneyStep.WalkToFirstStar || Progress.Step == JourneyStep.WalkToTwoStars || Progress.Step == JourneyStep.WalkToChaoge || Progress.Step == JourneyStep.CourtApproach || Progress.Step == JourneyStep.WalkToWater || Progress.Step == JourneyStep.TribunalApproach || Progress.Step == JourneyStep.WalkOutside;
-        public bool HasNavigation => IsWalking || Progress.Step==JourneyStep.ExploreDesert || Progress.Step==JourneyStep.ApproachTraveller;
+        public bool HasNavigation => !Decisions.Pursuing && (IsWalking || Progress.Step==JourneyStep.ExploreDesert || Progress.Step==JourneyStep.ApproachTraveller);
         public Vector3 Goal
         {
             get
@@ -59,6 +65,7 @@ namespace ThreeBodyProblem
         {
             get
             {
+                if(Decisions.Pursuing)return stage.profile.sceneIndex==1?"卫兵正在追捕你，设法脱身或向纣王交涉":"卫兵正在追捕你，设法脱身或向教皇交涉";
                 switch (Progress.Step)
                 {
                     case JourneyStep.Awakening: return "……风声。你在荒漠中醒来。";
@@ -101,6 +108,7 @@ namespace ThreeBodyProblem
         {
             stage = GetComponent<TravellerStage>();
             gobi=GetComponent<GobiSequenceController>();hud=GetComponentInChildren<TravellerHud>();dialogueDirector=GetComponent<NpcDialogueDirector>();
+            decisionController=GetComponent<NpcDecisionController>();
             if(stage.profile.gobiStory!=null){var settings=stage.profile.gobiStory;Progress.ConfigureGobi(settings.minimumOpeningTalkSeconds,settings.minimumShelterTalkSeconds,settings.suddenSunsetSeconds,settings.minimumNightWalkSeconds,settings.minimumNightWalkMetres);}
             palaceSkylight = GetComponentInChildren<PalaceSkylight>();
             foreach (var candidate in GetComponentsInChildren<Transform>(true))
@@ -112,6 +120,8 @@ namespace ThreeBodyProblem
 
         public void Begin()
         {
+            CancelPendingDialogueDecision(); Decisions.Reset(); relevantExplanation=false;
+            NpcConversationMemory.Clear();
             DialogueOpen = false; previewMode = false; appliedStep = (JourneyStep)(-1); Progress.Begin();
             if (stage.profile.sceneIndex == 0) stage.player.Teleport(stage.profile.moments[0].viewPosition, stage.profile.moments[0].viewTarget);
         }
@@ -132,11 +142,31 @@ namespace ThreeBodyProblem
 
         public void OnQuestionAnswered(string npcId,string text)
         {
-            if(Progress.Step==JourneyStep.CourtTalk&&npcId=="king"||Progress.Step==JourneyStep.TribunalTalk&&(npcId=="pope"||npcId=="scholar"||npcId=="davinci"))
+            // Kept for old callers. An answered question alone grants no plot action.
+        }
+        public void CancelPendingDialogueDecision() { advanceAfterAnswer = null; }
+        public NpcDecisionOutcome ResolveNpcDecision(string npcId, string intent, string conduct, bool online,
+            JourneyStep answeredStep, int requestRevision)
+        {
+            if (Progress.Step != answeredStep || Decisions.Defeated || IsTitle || previewMode) return NpcDecisionOutcome.None;
+            if (online && requestRevision == Decisions.Revision && answeredStep == JourneyStep.TribunalTalk &&
+                NpcDecisionState.IsConversant(npcId, answeredStep) && conduct == "relevant_proposal") relevantExplanation = true;
+            var result = Decisions.Apply(npcId, answeredStep, AudienceReady, decisionController != null && decisionController.CanDispatchGuards,
+                intent, conduct, online, requestRevision);
+            if (result == NpcDecisionOutcome.None) return result;
+            CancelPendingDialogueDecision();
+            if (result == NpcDecisionOutcome.Advance)
             {
-                if(Progress.Step==JourneyStep.TribunalTalk)Progress.Explain(false);
-                advanceAfterAnswer=Progress.Step;answerAdvanceAt=Time.unscaledTime+3;
+                if (answeredStep == JourneyStep.TribunalTalk) Progress.Explain(relevantExplanation);
+                advanceAfterAnswer=answeredStep;answerAdvanceAt=Time.unscaledTime+3;
             }
+            decisionController?.Execute(result); Changed?.Invoke(); return result;
+        }
+        public void ContinueScriptedAudience()
+        {
+            if (!CanContinueScriptedAudience) return;
+            if (Progress.Step == JourneyStep.TribunalTalk) Progress.Explain(false);
+            advanceAfterAnswer=Progress.Step;answerAdvanceAt=Time.unscaledTime+1; CloseDialogue();
         }
 
         public void SelectDialogue(string choice)
@@ -244,26 +274,26 @@ namespace ThreeBodyProblem
         {
             if(stage.profile.sceneIndex==1&&(Progress.Step==JourneyStep.CourtTalk||Progress.Step==JourneyStep.CalendarWait))SetPath(positions);
         }
-        private void Say(string value, float seconds = 6f) { speech = value; SpeechVersion++; speechUntil = Time.unscaledTime + seconds; Changed?.Invoke(); }
+        private void Say(string value, float seconds = 6f) { speech = value; SpeechVersion++; speechUntil = Time.unscaledTime + seconds;dialogueDirector?.RememberAuthoredLine(value); Changed?.Invoke(); }
         public void Speak(string value,float seconds=8){Say(value,seconds);}
         public void CloseDialogue(){SetDialogueOpen(false);}
         public void SetDialogueOpen(bool value){DialogueOpen=value;Changed?.Invoke();}
 
         private void Update()
         {
-            if (stage == null || previewMode || IsTitle || IsSummary || stage.IsLoading || (hud!=null&&hud.IsWorldPaused)) return;
+            if (stage == null || previewMode || IsTitle || IsSummary || Decisions.Defeated || stage.IsLoading || (hud!=null&&hud.IsWorldPaused)) return;
             if(Progress.Step!=JourneyStep.CalendarWait||!stage.HasPendingCourtAudience)Progress.Tick(gobi!=null?Time.unscaledDeltaTime:Time.deltaTime);
             bool conversing=dialogueDirector!=null&&(dialogueDirector.HasPlayerQuestion||dialogueDirector.IsBusy||dialogueDirector.IsVocalising);
             if(!conversing)
             {
-                if(advanceAfterAnswer==Progress.Step&&Time.unscaledTime>=answerAdvanceAt){advanceAfterAnswer=null;Progress.Continue();}
+                if(advanceAfterAnswer==Progress.Step&&Time.unscaledTime>=answerAdvanceAt&&SpeechRemainingSeconds<=0){advanceAfterAnswer=null;Progress.Continue();}
                 else if(Progress.Elapsed>=3&&(Progress.Step==JourneyStep.DepartForCapital||Progress.Step==JourneyStep.AfterRevival||Progress.Step==JourneyStep.AfterLongNight||Progress.Step==JourneyStep.AfterThreeSuns))Progress.Continue();
             }
 
             if (gobi==null&&IsWalking&&Progress.SceneIndex == stage.profile.sceneIndex&&Vector2.Distance(new Vector2(stage.player.transform.position.x,stage.player.transform.position.z),new Vector2(Goal.x,Goal.z))<6f)Progress.Arrive();
-            if (traveller != null && actorPath != null && actorWaypoint < actorPath.Length &&
+            if (traveller != null && actorPath != null && actorWaypoint < actorPath.Length && !Decisions.Pursuing &&
                 !(stage.HasPendingCourtAudience&&stage.Audience.ParticipantSpeaking)&&
-                !ShouldWaitForPlayer(traveller.position, stage.player.transform.position, actorPath[actorPath.Length - 1]))
+                (stage.HasPendingCourtAudience||!ShouldWaitForPlayer(traveller.position, stage.player.transform.position, actorPath[actorPath.Length - 1])))
             {
                 var delta = actorPath[actorWaypoint] - traveller.position;
                 // The engraved ritual has a tighter arrival radius than travel waypoints.

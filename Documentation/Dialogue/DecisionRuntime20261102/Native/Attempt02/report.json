@@ -1,0 +1,16 @@
+{
+    "passed": false,
+    "checks": 91,
+    "guards": 3,
+    "damageEvents": 6,
+    "healthAfterHit": 90,
+    "phase": "tribunal explanation is retained until a real advance",
+    "courtIdleP95": 27.397584915161134,
+    "courtPursuitP95": 25.968210220336915,
+    "errors": [
+        "Timed out in incomplete ceremony and arbitrary chatter cannot advance",
+        "Timed out in only a valid substantive decision completes the audience",
+        "Timed out in only a valid substantive decision completes the audience",
+        "A validated advance did not start calendar verification."
+    ]
+}

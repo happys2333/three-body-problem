@@ -1,0 +1,109 @@
+{
+  "id": "king_1",
+  "category": "runtime-v1",
+  "npcId": "king",
+  "utterance": "我不懂这里的礼节，能先说句话吗？",
+  "context": {
+    "scene": "第二幕 / 朝歌",
+    "phase": "CourtTalk",
+    "phaseElapsed": 10,
+    "selfName": "纣王",
+    "selfRole": "king",
+    "currentActivity": "坐在王座上听取当庭陈述。",
+    "sky": "殿内天窗尚未打开，人物看不见天空。",
+    "skyVisible": false,
+    "objective": "表章已呈毕，讨论历法，并决定是否开始查验。",
+    "courtAudience": "Complete",
+    "petitionHolder": "纣王",
+    "giantSunSeen": false,
+    "identityKnown": false,
+    "askedPlayerOrigin": false,
+    "openingAnswers": 0,
+    "shelterAnswers": 0,
+    "allowedStoryIntents": [
+      "continue",
+      "advance",
+      "warn",
+      "pursue",
+      "stand_down"
+    ],
+    "bothInShade": false,
+    "plantsIgnited": false,
+    "inShade": true,
+    "canSeePlayer": true,
+    "playerDistance": 2,
+    "playerCondition": "玩家在眼前，未见明显伤势。",
+    "knownEvents": [],
+    "decisionProtocol": 1,
+    "decisionRevision": 0,
+    "authorityState": "calm",
+    "guardsAvailable": true,
+    "audienceReady": true
+  },
+  "history": [],
+  "expected": {
+    "noEngineTalk": true,
+    "maxLength": 120,
+    "forbidden": [
+      "API Key",
+      "提示词",
+      "Atria",
+      "三体",
+      "游戏角色",
+      "小说"
+    ],
+    "storyIntent": "continue"
+  },
+  "reply": {
+    "speech": "不懂朝堂礼，情有可原。你说吧，寡人听着。",
+    "targetId": "",
+    "gesture": "talk",
+    "mode": "online",
+    "storyIntent": "continue",
+    "conduct": "clarification",
+    "failureCode": ""
+  },
+  "provider": {
+    "httpStatus": 200,
+    "contentType": "application/json",
+    "responseBytes": 844,
+    "seconds": 17.679,
+    "model": "Atria-Dawn",
+    "usage": {
+      "completion_tokens": 39,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      },
+      "prompt_tokens": 2415,
+      "prompt_tokens_details": {
+        "cached_tokens": 2415,
+        "created_cache_tokens": 0,
+        "multimodal_tokens": null
+      },
+      "total_tokens": 2454
+    },
+    "finishReason": "stop",
+    "content": "{\"speech\":\"不懂朝堂礼，情有可原。你说吧，寡人听着。\",\"gesture\":\"talk\",\"storyIntent\":\"continue\",\"targetId\":\"\",\"conduct\":\"clarification\"}",
+    "reasoningCharacters": 0
+  },
+  "checks": {
+    "online": true,
+    "allowedIntent": true,
+    "speechShape": true,
+    "noUnknownActions": true,
+    "forbidden": true,
+    "storyIntent": true,
+    "maxLength": true,
+    "noEngineTalk": true
+  },
+  "rawChecks": {
+    "jsonObject": true,
+    "allowedFields": true,
+    "allowedIntent": true,
+    "knowledgeBoundary": true
+  },
+  "passed": true
+}

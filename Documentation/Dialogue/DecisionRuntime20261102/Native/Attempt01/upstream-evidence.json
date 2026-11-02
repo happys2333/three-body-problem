@@ -1,0 +1,79 @@
+{
+  "realPaidApiCalls": 0,
+  "requests": [
+    {
+      "utterance": "QA_REJECT",
+      "role": "wenwang",
+      "phase": "OpeningTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue"
+      ],
+      "revision": 1,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_TIMEOUT",
+      "role": "wenwang",
+      "phase": "OpeningTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue"
+      ],
+      "revision": 1,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_AUTH",
+      "role": "wenwang",
+      "phase": "OpeningTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue"
+      ],
+      "revision": 1,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_RATE",
+      "role": "wenwang",
+      "phase": "OpeningTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue"
+      ],
+      "revision": 1,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_INVALID",
+      "role": "wenwang",
+      "phase": "OpeningTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue"
+      ],
+      "revision": 1,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    },
+    {
+      "utterance": "QA_RECOVER",
+      "role": "wenwang",
+      "phase": "OpeningTalk",
+      "authorityState": "calm",
+      "allowed": [
+        "continue"
+      ],
+      "revision": 1,
+      "hasRejectedHistory": false,
+      "hasBearerKey": true
+    }
+  ],
+  "failedInputsExcludedFromHistory": true,
+  "authenticatedFixtureRequests": true
+}
