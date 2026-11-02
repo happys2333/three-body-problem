@@ -1,0 +1,135 @@
+{
+    "passed": false,
+    "checks": 57,
+    "gpu": "Apple M5",
+    "meanFrameMs": 16.7597599029541,
+    "p95FrameMs": 17.24620819091797,
+    "distanceWalked": 3.9005751609802248,
+    "errors": [
+        "FirstPerson_LookUp: first-person wick has left the lower-left view.",
+        "FirstPerson_LookUpExtreme: first-person wick has left the lower-left view."
+    ],
+    "poses": [
+        {
+            "id": "FirstPerson_Level",
+            "wickError": 0.007499704137444496,
+            "upDot": 1.0,
+            "handError": 9.499490261077881e-7,
+            "wickViewport": {
+                "x": 0.14733833074569703,
+                "y": 0.34321776032447817,
+                "z": 0.31933292746543887
+            }
+        },
+        {
+            "id": "FirstPerson_LookUp",
+            "wickError": 0.007499953731894493,
+            "upDot": 1.0,
+            "handError": 0.000003846007984975586,
+            "wickViewport": {
+                "x": 0.02015712670981884,
+                "y": 0.6822830438613892,
+                "z": 0.24086499214172364
+            }
+        },
+        {
+            "id": "FirstPerson_LookDown",
+            "wickError": 0.007499439176172018,
+            "upDot": 1.0,
+            "handError": 0.000001911070285132155,
+            "wickViewport": {
+                "x": 0.2422088384628296,
+                "y": 0.24335777759552003,
+                "z": 0.42000067234039309
+            }
+        },
+        {
+            "id": "FirstPerson_LookUpExtreme",
+            "wickError": 0.007499944418668747,
+            "upDot": 1.0,
+            "handError": 0.0000010629291864461266,
+            "wickViewport": {
+                "x": 0.05724608898162842,
+                "y": 1.044838786125183,
+                "z": 0.2642002999782562
+            }
+        },
+        {
+            "id": "FirstPerson_LookDownExtreme",
+            "wickError": 0.007499986328184605,
+            "upDot": 1.0,
+            "handError": 0.0000020162322016403779,
+            "wickViewport": {
+                "x": 0.2422122061252594,
+                "y": 0.2433566153049469,
+                "z": 0.4199989140033722
+            }
+        },
+        {
+            "id": "FirstPerson_Turn",
+            "wickError": 0.007500072009861469,
+            "upDot": 1.0,
+            "handError": 0.0000021591777112917045,
+            "wickViewport": {
+                "x": 0.14734235405921937,
+                "y": 0.3432178497314453,
+                "z": 0.3193337619304657
+            }
+        },
+        {
+            "id": "Walking_0",
+            "wickError": 0.007499704137444496,
+            "upDot": 1.0,
+            "handError": 7.32775106371264e-7,
+            "wickViewport": {
+                "x": 0.14745712280273438,
+                "y": 0.34314385056495669,
+                "z": 0.31943824887275698
+            }
+        },
+        {
+            "id": "Walking_15",
+            "wickError": 0.0074996729381382469,
+            "upDot": 1.0,
+            "handError": 0.0000019147846614941956,
+            "wickViewport": {
+                "x": 0.14306092262268067,
+                "y": 0.2817891240119934,
+                "z": 0.31924188137054446
+            }
+        },
+        {
+            "id": "Walking_30",
+            "wickError": 0.007499735802412033,
+            "upDot": 1.0,
+            "handError": 0.000003829569322988391,
+            "wickViewport": {
+                "x": 0.22099712491035462,
+                "y": 0.26420775055885317,
+                "z": 0.39129698276519778
+            }
+        },
+        {
+            "id": "Walking_45",
+            "wickError": 0.007499735802412033,
+            "upDot": 1.0,
+            "handError": 2.6656007889869218e-7,
+            "wickViewport": {
+                "x": 0.14886349439620973,
+                "y": 0.276727557182312,
+                "z": 0.32353097200393679
+            }
+        },
+        {
+            "id": "Walking_60",
+            "wickError": 0.007499735802412033,
+            "upDot": 1.0,
+            "handError": 0.0000019369217625353487,
+            "wickViewport": {
+                "x": 0.22169846296310426,
+                "y": 0.26531046628952029,
+                "z": 0.39257675409317019
+            }
+        }
+    ]
+}

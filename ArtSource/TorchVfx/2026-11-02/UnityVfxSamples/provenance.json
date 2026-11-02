@@ -1,0 +1,36 @@
+{
+  "commit": "bcd800405c1b019654a0af3b4b8bd68fec590b4b",
+  "repository": "https://github.com/Unity-Technologies/VisualEffectGraph-Samples",
+  "files": [
+    {
+      "path": "LICENSE.md",
+      "local": "ArtSource/TorchVfx/2026-11-02/UnityVfxSamples/LICENSE.md",
+      "url": "https://raw.githubusercontent.com/Unity-Technologies/VisualEffectGraph-Samples/bcd800405c1b019654a0af3b4b8bd68fec590b4b/LICENSE.md",
+      "sha256": "844556ccdedf5383d1c45f4bc9981c22e8faa010917652a67d178b5c9db3e54d",
+      "bytes": 464
+    },
+    {
+      "path": "LICENSE-3rdParty.md",
+      "local": "ArtSource/TorchVfx/2026-11-02/UnityVfxSamples/LICENSE-3rdParty.md",
+      "url": "https://raw.githubusercontent.com/Unity-Technologies/VisualEffectGraph-Samples/bcd800405c1b019654a0af3b4b8bd68fec590b4b/LICENSE-3rdParty.md",
+      "sha256": "cfb7e05bc1c6294bded0e0fed78d9e83618d605ab4d6e7cbfa03ed327a03a6dd",
+      "bytes": 2693
+    },
+    {
+      "path": "Assets/Samples/Visual Effect Graph/17.0.3/VisualEffectGraph Additions/Textures/Fire/SmallFlame01_15x4.png",
+      "local": "ArtSource/TorchVfx/2026-11-02/UnityVfxSamples/SmallFlame01_15x4.png",
+      "url": "https://raw.githubusercontent.com/Unity-Technologies/VisualEffectGraph-Samples/bcd800405c1b019654a0af3b4b8bd68fec590b4b/Assets/Samples/Visual%20Effect%20Graph/17.0.3/VisualEffectGraph%20Additions/Textures/Fire/SmallFlame01_15x4.png",
+      "sha256": "87c91575f2dd8bcfa7c543fbee0006c1aa8a20381dd578788e692a819e0e449c",
+      "bytes": 1773325
+    },
+    {
+      "path": "Assets/Samples/Visual Effect Graph/17.0.3/VisualEffectGraph Additions/Textures/Smoke/CandleSmoke01_20x4.png",
+      "local": "ArtSource/TorchVfx/2026-11-02/UnityVfxSamples/CandleSmoke01_20x4.png",
+      "url": "https://raw.githubusercontent.com/Unity-Technologies/VisualEffectGraph-Samples/bcd800405c1b019654a0af3b4b8bd68fec590b4b/Assets/Samples/Visual%20Effect%20Graph/17.0.3/VisualEffectGraph%20Additions/Textures/Smoke/CandleSmoke01_20x4.png",
+      "sha256": "6de27cdc7c63bd5ad8012de3028405e762ea06f3680db9f708b0503cabbb1998",
+      "bytes": 528781
+    }
+  ],
+  "license": "Unity Companion License; usable in Unity-dependent projects; copyright notice retained in StreamingAssets/ThirdPartyNotices/UnityVfxSamples.txt",
+  "adaptation": "Original texture pixels retained. Custom Built-in pipeline shader blends two adjacent frames; runtime fire geometry has a foot pivot at local y=.75 on the torch; world-up facing and particle velocities."
+}

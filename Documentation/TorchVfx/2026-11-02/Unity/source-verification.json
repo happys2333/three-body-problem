@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "commit": "bcd800405c1b019654a0af3b4b8bd68fec590b4b",
+  "files": [
+    {
+      "source": "ArtSource/TorchVfx/2026-11-02/UnityVfxSamples/SmallFlame01_15x4.png",
+      "imported": "Assets/ThirdParty/UnityVfxSamples/Textures/SmallFlame01_15x4.png",
+      "sha256": "87c91575f2dd8bcfa7c543fbee0006c1aa8a20381dd578788e692a819e0e449c",
+      "bytes": 1773325
+    },
+    {
+      "source": "ArtSource/TorchVfx/2026-11-02/UnityVfxSamples/CandleSmoke01_20x4.png",
+      "imported": "Assets/ThirdParty/UnityVfxSamples/Textures/CandleSmoke01_20x4.png",
+      "sha256": "6de27cdc7c63bd5ad8012de3028405e762ea06f3680db9f708b0503cabbb1998",
+      "bytes": 528781
+    }
+  ]
+}

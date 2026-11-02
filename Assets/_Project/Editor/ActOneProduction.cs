@@ -171,12 +171,7 @@ namespace ThreeBodyProblem.Editor
                 var group=root.AddComponent<LODGroup>();group.SetLODs(lods);group.RecalculateBounds();
                 if(id=="Torch")
                 {
-                    root.transform.localScale=new Vector3(.65f,1,.65f);
-                    var fire=MakeFlame(root.transform,"Torch sparks",new Vector3(0,.77f,0),.012f,3,new Color(1,.58f,.05f,.8f));
-                    var main=fire.main;main.startLifetime=new ParticleSystem.MinMaxCurve(.20f,.45f);main.startSpeed=new ParticleSystem.MinMaxCurve(.15f,.4f);
-                    var card=GameObject.CreatePrimitive(PrimitiveType.Quad);SceneManager.MoveGameObjectToScene(card,scene);card.name="Living torch flame";card.transform.SetParent(root.transform,false);card.transform.localPosition=new Vector3(0,.83f,0);card.transform.localScale=new Vector3(.13f,.30f,1);Object.DestroyImmediate(card.GetComponent<Collider>());
-                    card.GetComponent<Renderer>().sharedMaterial=SaveMaterial(new Material(Shader.Find("Traveller/Torch Flame")),Root+"/Materials/TorchFlame.mat");card.GetComponent<Renderer>().shadowCastingMode=ShadowCastingMode.Off;card.AddComponent<TorchFlameBillboard>();
-                    var lamp=new GameObject("Torch light").AddComponent<Light>();lamp.transform.SetParent(root.transform,false);lamp.transform.localPosition=new Vector3(0,.83f,0);lamp.type=LightType.Point;lamp.range=9.5f;lamp.intensity=2.6f;lamp.color=new Color(1,.48f,.17f);lamp.shadows=LightShadows.None;
+                    TorchVfxProduction.Configure(root);
                 }
                 return PrefabUtility.SaveAsPrefabAsset(root,Root+"/Prefabs/"+id+".prefab");
             }

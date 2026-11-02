@@ -1,0 +1,17 @@
+{
+  "pid": 30676,
+  "app": "/Users/happys/Documents/GitHub/three-body-problem/Builds/TorchVfx20261102/Traveller.app",
+  "command": [
+    "/Users/happys/Documents/GitHub/three-body-problem/Builds/TorchVfx20261102/Traveller.app/Contents/MacOS/Three Body Problem",
+    "-screen-fullscreen",
+    "0",
+    "-screen-width",
+    "1600",
+    "-screen-height",
+    "900",
+    "-logFile",
+    "/Users/happys/Documents/GitHub/three-body-problem/Documentation/TorchVfx/2026-11-02/Native/player.log",
+    "-torch-vfx-check",
+    "/Users/happys/Documents/GitHub/three-body-problem/Documentation/TorchVfx/2026-11-02/Native/report.json"
+  ]
+}

@@ -22,9 +22,17 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 6966aaa0dc40143eaa55dcb616f29da0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats: []
-    m_Colors: []
+    m_Floats:
+    - _FrameRate: 30
+    - _Intensity: 1.65
+    - _Phase: 0
+    m_Colors:
+    - _Grid: {r: 15, g: 4, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

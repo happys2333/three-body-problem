@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "source": "/Users/happys/Documents/GitHub/three-body-problem/Builds/TorchVfx20261102/Traveller.app",
+  "playable": "/Users/happys/Documents/GitHub/three-body-problem/Builds/ActOneTraveller.app",
+  "backup": "/Users/happys/Documents/GitHub/three-body-problem/Builds/ActOneTraveller.before-torch-vfx.app",
+  "files": 227,
+  "treeSha256": "be735a04a44f476a14550e55758a676f9b48ed65b645cab99294e3424a2491a8",
+  "nativeChecks": 57
+}

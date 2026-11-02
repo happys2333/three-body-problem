@@ -1,0 +1,1 @@
+pitch=45 upDot=0.9964299 baseError=0.05771448

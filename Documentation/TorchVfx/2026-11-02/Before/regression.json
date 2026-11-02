@@ -1,0 +1,44 @@
+{
+  "result": {
+    "success": true,
+    "message": "Test job status retrieved.",
+    "error": null,
+    "data": {
+      "job_id": "0384b6f9d31a405fb847960e62f055e7",
+      "status": "failed",
+      "mode": "EditMode",
+      "started_unix_ms": 1793600211838,
+      "finished_unix_ms": 1793600217734,
+      "last_update_unix_ms": 1793600217734,
+      "progress": {
+        "completed": 3,
+        "total": 3,
+        "current_test_full_name": null,
+        "current_test_started_unix_ms": 1793600217578,
+        "last_finished_test_full_name": "ThreeBodyProblem.Tests.TorchVfxTests.SavedTorchFlameStartsAtTheWick(-7.0f,240.0f,8.0f)",
+        "last_finished_unix_ms": 1793600217579,
+        "stuck_suspected": false,
+        "editor_is_focused": false,
+        "blocked_reason": null,
+        "failures_so_far": [
+          {
+            "full_name": "ThreeBodyProblem.Tests.TorchVfxTests.SavedTorchFlameStartsAtTheWick(40.0f,0.0f,8.0f)",
+            "message": "  Fire geometry needs a foot pivot at the wick.\n  Expected: 0 +/- 0.00100000005f\n  But was:  -0.5f\n"
+          },
+          {
+            "full_name": "ThreeBodyProblem.Tests.TorchVfxTests.SavedTorchFlameStartsAtTheWick(40.0f,135.0f,8.0f)",
+            "message": "  Fire geometry needs a foot pivot at the wick.\n  Expected: 0 +/- 0.00100000005f\n  But was:  -0.5f\n"
+          },
+          {
+            "full_name": "ThreeBodyProblem.Tests.TorchVfxTests.SavedTorchFlameStartsAtTheWick(-7.0f,240.0f,8.0f)",
+            "message": "  Fire geometry needs a foot pivot at the wick.\n  Expected: 0 +/- 0.00100000005f\n  But was:  -0.5f\n"
+          }
+        ],
+        "failures_capped": false
+      },
+      "error": null,
+      "result": null
+    },
+    "hint": null
+  }
+}
