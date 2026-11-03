@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -8,6 +9,7 @@ namespace ThreeBodyProblem.Editor
     public static partial class TravellerSceneBuilder
     {
         private static Mesh[] photographicTreeLods;
+        private static Mesh[] riverTreeRenderMeshes;
 
         // Fit each of the publisher's 30,250 disconnected leaf clusters to its
         // photographic atlas. Full-density leaf cards preserve the canopy shape
@@ -115,21 +117,42 @@ namespace ThreeBodyProblem.Editor
 
         private static void NaturalTree(Vector3 position, float height, Transform parent, float rotation)
         {
-            var meshes = TreeMeshes(); var root = new GameObject("Photographic broadleaf tree");
-            root.transform.SetParent(parent); var bounds = meshes[0].bounds;
-            root.transform.localScale = Vector3.one * height / bounds.size.y;
-            root.transform.position = position; root.transform.rotation = Quaternion.Euler(0, rotation, 0);
-            var lods = new LOD[3]; var materials = new[] { Materials["Environment_TreeBranch"], Materials["Environment_TreeLeaf"], Materials["Environment_TreeTrunk"] };
-            for (int i = 0; i < 3; i++)
+            // Wood is decimated separately from the atlas-mapped leaf cards.
+            if (riverTreeRenderMeshes == null)
             {
-                var child = new GameObject("Leaf-cluster LOD " + i, typeof(MeshFilter), typeof(MeshRenderer)); child.transform.SetParent(root.transform, false);
-                child.transform.localPosition = -new Vector3(bounds.center.x, bounds.min.y, bounds.center.z);
-                child.GetComponent<MeshFilter>().sharedMesh = i==0?meshes[i]:EnvironmentLod(meshes[i],"TreeCards",i);
-                var renderer = child.GetComponent<MeshRenderer>(); renderer.sharedMaterials = materials;
-                renderer.shadowCastingMode=i==0?ShadowCastingMode.On:ShadowCastingMode.Off;
-                lods[i] = new LOD(i == 0 ? 0.35f : i == 1 ? 0.12f : 0.018f, new Renderer[] { renderer });
+                var meshes = new Mesh[3];
+                for (int level = 0; level < meshes.Length; level++)
+                {
+                    string path = MeshFolder + "/RiverbankBroadleaf_LOD" + level + ".asset";
+                    meshes[level] = AssetDatabase.LoadAssetAtPath<Mesh>(path);
+                    if (meshes[level] == null) throw new FileNotFoundException("Riverbank tree mesh is missing.", path);
+                }
+                riverTreeRenderMeshes = meshes;
             }
-            root.AddComponent<LODGroup>().SetLODs(lods); root.GetComponent<LODGroup>().RecalculateBounds();
+            // Use the authored bounds so the new meshes keep existing placement.
+            var bounds = TreeMeshes()[0].bounds;
+            var root = new GameObject("Photographic broadleaf tree");
+            root.transform.SetParent(parent);
+            root.transform.localScale = Vector3.one * height / bounds.size.y;
+            root.transform.position = position;
+            root.transform.rotation = Quaternion.Euler(0, rotation, 0);
+
+            var lods = new LOD[3];
+            var materials = new[] { Materials["Environment_TreeBranch"], Materials["Environment_TreeLeaf"], Materials["Environment_TreeTrunk"] };
+            for (int level = 0; level < lods.Length; level++)
+            {
+                var child = new GameObject("Leaf-cluster LOD " + level, typeof(MeshFilter), typeof(MeshRenderer));
+                child.transform.SetParent(root.transform, false);
+                child.transform.localPosition = -new Vector3(bounds.center.x, bounds.min.y, bounds.center.z);
+                child.GetComponent<MeshFilter>().sharedMesh = riverTreeRenderMeshes[level];
+                var renderer = child.GetComponent<MeshRenderer>();
+                renderer.sharedMaterials = materials;
+                renderer.shadowCastingMode = level == 0 ? ShadowCastingMode.On : ShadowCastingMode.Off;
+                lods[level] = new LOD(level == 0 ? .35f : level == 1 ? .12f : .018f, new Renderer[] { renderer });
+            }
+            var group = root.AddComponent<LODGroup>();
+            group.SetLODs(lods);
+            group.RecalculateBounds();
         }
     }
 }

@@ -1,0 +1,17 @@
+{
+  "source": "https://3d.hunyuan.tencent.com/creation",
+  "generator": "Hunyuan 3D V3.1",
+  "date": "2026-11-03",
+  "selectedVariant": 3,
+  "file": "BronzePendulumBob_PBR.fbx",
+  "sha256": "037ef0a33606072bf1e35344737e3c643315a31d1e571d852599b84edf4c857a",
+  "sourceTriangles": 49984,
+  "preparation": "Tools/prepare_pendulum_model.py",
+  "output": "Assets/_Project/Art/Pendulum",
+  "operations": [
+    "trim and close the display base",
+    "scale to 4.6 metres",
+    "generate three mesh LODs",
+    "resize textures and pack metallic/smoothness"
+  ]
+}

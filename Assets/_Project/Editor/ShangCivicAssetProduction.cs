@@ -57,16 +57,26 @@ namespace ThreeBodyProblem.Editor
                 try
                 {
                     var root = new GameObject(data.id); UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(root, scene);
-                    root.isStatic = true; var lods = new LOD[3]; Mesh collision = null;
-                    for (int level = 0; level < 3; level++)
+                    root.isStatic = true;
+                    // Use the existing mid-detail mesh for close views of repeated small props.
+                    int firstLevel = data.id == "ShangStorageJar" || data.id == "ShangGrainBasket" ? 1 : 0;
+                    var lods = new LOD[3 - firstLevel]; Mesh collision = null;
+                    for (int level = firstLevel; level < 3; level++)
                     {
                         var mesh = ReadMesh(folder + "/LOD" + level + ".meshbin", data.id + "_LOD" + level);
                         var child = new GameObject("LOD " + level, typeof(MeshFilter), typeof(MeshRenderer));
                         child.transform.SetParent(root.transform, false); child.isStatic = true;
                         child.GetComponent<MeshFilter>().sharedMesh = mesh;
                         var renderer = child.GetComponent<MeshRenderer>(); renderer.sharedMaterials = materials;
-                        renderer.shadowCastingMode = level < 2 ? ShadowCastingMode.On : ShadowCastingMode.Off;
-                        lods[level] = new LOD(level == 0 ? .3f : level == 1 ? .075f : .006f, new Renderer[] { renderer });
+                        // The low mesh now appears close enough for contact shadows to matter.
+                        renderer.shadowCastingMode = level < 2 || firstLevel == 1 ? ShadowCastingMode.On : ShadowCastingMode.Off;
+                        float cutoff = level switch
+                        {
+                            0 => .3f,
+                            1 => firstLevel == 1 ? .25f : .075f,
+                            _ => .006f
+                        };
+                        lods[level - firstLevel] = new LOD(cutoff, new Renderer[] { renderer });
                         if (level == 2) collision = mesh;
                     }
                     var group = root.AddComponent<LODGroup>(); group.SetLODs(lods); group.RecalculateBounds();
@@ -95,7 +105,7 @@ namespace ThreeBodyProblem.Editor
                     string prefab = Root + "/Prefabs/" + data.id + ".prefab";
                     PrefabUtility.SaveAsPrefabAsset(root, prefab);
                     var check = new Ready { id = data.id, prefab = prefab, source = data.sourcePrefab,
-                        triangles = data.trianglesByLod, width = data.width, height = data.height, depth = data.depth,
+                        triangles = data.trianglesByLod.Skip(firstLevel).ToArray(), width = data.width, height = data.height, depth = data.depth,
                         passed = original != null && original.mainTexture != null && original.GetTexture("_BumpMap") != null &&
                             data.trianglesByLod.Length == 3 && data.trianglesByLod[0] > data.trianglesByLod[1] && data.trianglesByLod[1] > data.trianglesByLod[2] };
                     report.assets.RemoveAll(a => a.id == data.id); report.assets.Add(check);

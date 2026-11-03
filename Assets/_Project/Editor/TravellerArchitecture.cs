@@ -141,8 +141,12 @@ namespace ThreeBodyProblem.Editor
             Box("Lintel", position + Vector3.up * height, new Vector3(height * 0.65f, 3f, 5.2f), "PyramidStone", frame.transform);
             var pivot = new GameObject("Pendulum pivot"); pivot.transform.SetParent(frame.transform); pivot.transform.position = position + Vector3.up * (height - 0.4f);
             var motion = pivot.AddComponent<PendulumMotion>(); motion.period = height * 0.45f; motion.offset = offset;
-            Beam("Suspension", pivot.transform.position, position + Vector3.up * 3f, 0.18f, "CapitalBronze", pivot.transform);
-            Shape("Pendulum bob", PrimitiveType.Sphere, position + Vector3.up * 2.8f, new Vector3(2.8f, 4.6f, 2.8f), "CapitalBronze", pivot.transform, false);
+            var hanger = position + Vector3.up * 5.1f;
+            bool hasBronzeBob = PendulumVisualProduction.TryPlaceBob(pivot.transform, hanger);
+            var lower = hasBronzeBob ? hanger - Vector3.up * PendulumVisualProduction.HangerOverlap : position + Vector3.up * 3f;
+            Beam("Suspension", pivot.transform.position, lower, 0.18f, "CapitalBronze", pivot.transform);
+            if (!hasBronzeBob)
+                Shape(PendulumVisualProduction.BobName, PrimitiveType.Sphere, position + Vector3.up * 2.8f, new Vector3(2.8f, 4.6f, 2.8f), "CapitalBronze", pivot.transform, false);
         }
 
         private static void Cracks(Vector3 origin, float length, int seed)
