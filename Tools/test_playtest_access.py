@@ -14,6 +14,27 @@ import wave
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 from dialogue_gateway import Handler
+from package_windows_playtest import validate_player
+
+
+class PlayerPackageTests(unittest.TestCase):
+    def test_compressed_and_uncompressed_players_are_accepted(self):
+        for payload in ('globalgamemanagers', 'data.unity3d'):
+            with self.subTest(payload=payload), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                for name in ('ThreeBodyTraveller.exe', 'UnityPlayer.dll',
+                             'ThreeBodyTraveller_Data/Managed/ThreeBodyProblem.Runtime.dll',
+                             'ThreeBodyTraveller_Data/' + payload):
+                    path = root / name; path.parent.mkdir(parents=True, exist_ok=True); path.touch()
+                validate_player(root)
+
+    def test_missing_scene_data_cannot_be_shipped(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for name in ('ThreeBodyTraveller.exe', 'UnityPlayer.dll', 'ThreeBodyTraveller_Data/Managed/ThreeBodyProblem.Runtime.dll'):
+                path = root / name; path.parent.mkdir(parents=True, exist_ok=True); path.touch()
+            with self.assertRaisesRegex(ValueError, 'scene data'):
+                validate_player(root)
 
 
 class Provider(BaseHTTPRequestHandler):

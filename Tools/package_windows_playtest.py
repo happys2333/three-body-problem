@@ -41,12 +41,19 @@ def digest(path):
     return value.hexdigest()
 
 
-def package(build, output, python_zip):
-    build, output = build.resolve(), output.resolve()
-    for relative in ('ThreeBodyTraveller.exe', 'UnityPlayer.dll', 'ThreeBodyTraveller_Data/globalgamemanagers',
+def validate_player(build):
+    for relative in ('ThreeBodyTraveller.exe', 'UnityPlayer.dll',
                      'ThreeBodyTraveller_Data/Managed/ThreeBodyProblem.Runtime.dll'):
         if not (build / relative).is_file():
             raise ValueError('Incomplete Windows player: ' + relative)
+    data = build / 'ThreeBodyTraveller_Data'
+    if not any((data / name).is_file() for name in ('globalgamemanagers', 'data.unity3d')):
+        raise ValueError('Incomplete Windows player: scene data is missing')
+
+
+def package(build, output, python_zip):
+    build, output = build.resolve(), output.resolve()
+    validate_player(build)
     python_zip.parent.mkdir(parents=True, exist_ok=True)
     if not python_zip.exists():
         with urllib.request.urlopen(PYTHON_URL, timeout=60) as source, python_zip.open('wb') as target:

@@ -6,6 +6,7 @@ on:
       - 'Tools/llm_connection.py'
       - 'Tools/windows_voice.*'
       - 'Tools/test_playtest_access.py'
+      - 'Tools/package_windows_playtest.py'
       - '.github/workflows/windows-playtest-check.yml'
   workflow_dispatch:
 jobs:
