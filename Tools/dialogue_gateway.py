@@ -338,9 +338,11 @@ def dialogue(payload,online=False,opener=None):
     def fields(value,conduct='neutral',failure=''):
         if decisions.enabled(context):value.update(conduct=conduct,failureCode=failure)
         return value
-    def fallback(reason='offline'):
-        return fields({'speech':'' if director else safe_speech(npc_id,scripted_reply(npc_id,text,context),text,context),
+    def fallback(reason='offline',provider_status=0):
+        value=fields({'speech':'' if director else safe_speech(npc_id,scripted_reply(npc_id,text,context),text,context),
                 'targetId':'','gesture':'think','mode':'scripted','storyIntent':scripted_intent(npc_id,context,director) if reason=='offline' else 'continue'},failure=reason)
+        if provider_status:value['providerStatus']=provider_status
+        return value
     try:
         connection=resolve_connection(payload.get('connection'),online)
         if connection is None:return fallback()
@@ -385,7 +387,7 @@ def dialogue(payload,online=False,opener=None):
         return fields({'speech':'' if director else safe,'targetId':'','gesture':gesture if gesture in GESTURES else 'talk','mode':'online','storyIntent':intent},conduct)
     except ProviderRejectedError:return fallback('content_rejected')
     except urllib.error.HTTPError as error:
-        return fallback({401:'authentication',403:'authentication',429:'rate_limited'}.get(error.code,'unavailable'))
+        return fallback({401:'authentication',403:'authentication',429:'rate_limited'}.get(error.code,'unavailable'),error.code)
     except (TimeoutError,socket.timeout):return fallback('timeout')
     except urllib.error.URLError as error:return fallback('timeout' if isinstance(error.reason,(TimeoutError,socket.timeout)) else 'unreachable')
     except Exception:return fallback('invalid_response')

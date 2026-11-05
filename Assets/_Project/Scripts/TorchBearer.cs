@@ -126,6 +126,15 @@ namespace ThreeBodyProblem
             Vector3 grip=palm-rotation*Vector3.up*(first?.15f:.2f);
             instance.transform.SetPositionAndRotation(grip,rotation);
         }
+        private void OnDisable()
+        {
+            IsLit = IsCarried = false;
+            if (instance == null) return;
+            instance.SetActive(false);
+            if (lightSource != null) lightSource.enabled = false;
+            foreach (var flame in flames) flame.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            foreach (var card in flameCards) card.enabled = false;
+        }
         private void OnDestroy(){if(instance!=null)Destroy(instance);}
     }
 }

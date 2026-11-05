@@ -35,6 +35,9 @@ namespace ThreeBodyProblem
         private float retryNarrativeAt;
         private NpcDecisionController decisions;
         public string FailureCode { get; private set; } = "";
+        public int LastGatewayStatus { get; private set; }
+        public int LastProviderStatus { get; private set; }
+        public float LastRequestSeconds { get; private set; }
         public bool IsIntentionalOffline => false;
         private readonly NpcQuestionTurn question=new NpcQuestionTurn();
         public bool HasPlayerQuestion => question.IsActive;
@@ -56,7 +59,7 @@ namespace ThreeBodyProblem
         }
         [Serializable] private class Interlocutor{public string id,npcId,displayName;public string[] aliases;}
         [Serializable] private class Request{public string npcId,recipientId,utterance,kind;public bool allowHandoff;public Context context;public List<Message> history;public List<Interlocutor> interlocutors;public NpcApiConnection connection;}
-        [Serializable] private class Reply{public string speech,gesture,mode,error,storyIntent,targetId,conduct,failureCode,observationId;}
+        [Serializable] private class Reply{public string speech,gesture,mode,error,storyIntent,targetId,conduct,failureCode,observationId;public int providerStatus;}
         [Serializable] private class SpeechRequest{public string text,npcId;}
 
         private void Start()
@@ -127,6 +130,7 @@ namespace ThreeBodyProblem
         }
         private IEnumerator Ask(string text,int token,NpcIdentity identity,JourneyStep step,bool director,bool allowHandoff=true)
         {
+            float requestedAt = Time.realtimeSinceStartup; LastGatewayStatus = LastProviderStatus = 0;
             if(identity==null||!identity.CanAnswer){CancelQuestion();SetStatus("刚才的人物已离开，按住 F 重新提问");yield break;}
             string id=identity.persona.characterId;
             string memoryKey=NpcConversationMemory.Key(identity);
@@ -138,12 +142,18 @@ namespace ThreeBodyProblem
             while(!encoded.IsCompleted)yield return null;
             if(token!=version)yield break;
             if(encoded.IsFaulted){CancelQuestion();SetStatus("交流记录暂时无法整理，请重新提问");yield break;}
+#if TRAVELLER_STORY_QA
+            var snapshot = JsonUtility.FromJson<Request>(Encoding.UTF8.GetString(encoded.Result));
+            snapshot.connection.apiKey = "";
+            WindowsStoryPlayerCheck.TraceRequest(id, JsonUtility.ToJson(snapshot));
+#endif
             Reply reply=null;string transportFailure="unreachable";
             using(var web=new UnityWebRequest(GatewayUrl+"/dialogue","POST"))
             {
                 web.uploadHandler=new UploadHandlerRaw(encoded.Result);web.downloadHandler=new DownloadHandlerBuffer();web.SetRequestHeader("Content-Type","application/json");web.timeout=request.connection.mode=="gateway"?Mathf.Max(Mathf.CeilToInt(settings.replyTimeoutSeconds),request.connection.timeoutSeconds+3):request.connection.timeoutSeconds+3;pending=web;
                 yield return web.SendWebRequest();
                 if(token!=version)yield break;
+                LastGatewayStatus=(int)web.responseCode;LastRequestSeconds=Time.realtimeSinceStartup-requestedAt;
                 if(web.result==UnityWebRequest.Result.Success)
                 {try{reply=JsonUtility.FromJson<Reply>(web.downloadHandler.text);}catch(Exception){reply=null;}transportFailure="invalid_response";}
                 else if(web.result==UnityWebRequest.Result.ProtocolError)transportFailure="unavailable";
@@ -165,6 +175,7 @@ namespace ThreeBodyProblem
             bool fallback=reply==null||!director&&string.IsNullOrWhiteSpace(reply.speech);
             UsingFallback=fallback||reply.mode!="online";IsBusy=false;directing=false;
             FailureCode=reply==null?transportFailure:reply.failureCode??"";
+            LastProviderStatus=reply==null?0:reply.providerStatus;
             // A missing field from an old gateway cannot grant offline progression
             // after a custom online request. Failures never poison NPC memory.
             if(UsingFallback)
@@ -331,6 +342,7 @@ namespace ThreeBodyProblem
                 case "timeout":return "等待回答超时，可稍后重试或在设置中增加等待时间；剧情未推进";
                 case "authentication":return "对话服务认证失败，请检查设置中的 API Key；剧情未推进";
                 case "rate_limited":return "对话服务繁忙或额度不足，请稍后重试；剧情未推进";
+                case "unavailable":return "AI 服务暂时不可用，请稍后重试；剧情未推进";
                 case "invalid_response":return "对话服务未返回有效回答，请重试；剧情未推进";
                 default:return "暂时连不上对话服务，请检查网络与设置后重试；剧情未推进";
             }

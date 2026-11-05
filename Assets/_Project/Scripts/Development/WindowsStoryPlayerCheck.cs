@@ -19,6 +19,8 @@ namespace ThreeBodyProblem
         {
             public string npc, phase, question, reply, failure;
             public bool online;
+            public int gatewayStatus, providerStatus;
+            public float seconds;
         }
         [Serializable] private sealed class Report
         {
@@ -39,6 +41,7 @@ namespace ThreeBodyProblem
         private bool finished;
         private bool lastAttemptSucceeded;
         private string lastAttemptFailure;
+        private int requestSnapshotCount;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Boot()
@@ -67,7 +70,7 @@ namespace ThreeBodyProblem
             Check(journey.IsTitle && hud.SettingsPanel.IsOpen, "Missing AI configuration did not block Start.");
             yield return WaitForService();
             var ui = hud.SettingsPanel.Root;
-            ui.Q<DropdownField>("settings-provider").index = 1;
+            ui.Q<DropdownField>("settings-provider").index = connection.mode == "deepseek" ? 0 : 1;
             ui.Q<TextField>("settings-api-url").value = connection.apiUrl;
             ui.Q<TextField>("settings-model").value = connection.model;
             ui.Q<IntegerField>("settings-timeout").value = connection.timeoutSeconds;
@@ -162,8 +165,13 @@ namespace ThreeBodyProblem
             Capture("12_blue_snow");
             yield return Wait(() => journey.IsCapitalEnding, 30, "Civilization 137 did not reach its destruction ending.");
             Check(hud.Root.Q("summary-overlay").resolvedStyle.display == DisplayStyle.Flex, "Civilization 137 ending UI is missing.");
+            Check(stage.Combustion <= .001f && stage.GetComponentsInChildren<TorchBearer>(true).All(torch => !torch.IsLit), "Torches remained lit after atmospheric freezing.");
+            yield return Delay(2);
             Capture("13_civilization_137");
-            journey.EnterNextCivilization(); yield return WaitScene(2, 60);
+            yield return Frames(4);
+            var next = hud.Root.Q<Button>("next-civilization");
+            Check(next.enabledInHierarchy && next.worldBound.width > 0 && hud.Root.worldBound.Contains(next.worldBound.center), "The next-civilization button cannot be reached.");
+            Click(next); yield return WaitScene(2, 60);
             yield return Walk(new Vector3(0,0,22), 100);
             yield return Wait(() => journey.Progress.Step == JourneyStep.TribunalTalk, 20, "The medieval tribunal did not begin.");
             Capture("14_medieval_tribunal");
@@ -211,12 +219,12 @@ namespace ThreeBodyProblem
         }
         private IEnumerator Talk(string npcId, string question)
         {
-            for (int attempt = 0; attempt < 4; attempt++)
+            for (int attempt = 0; attempt < 6; attempt++)
             {
                 yield return TalkAttempt(npcId, question);
                 if (lastAttemptSucceeded) yield break;
                 bool transient = lastAttemptFailure == "rate_limited" || lastAttemptFailure == "timeout" || lastAttemptFailure == "unreachable" || lastAttemptFailure == "unavailable";
-                Check(transient && attempt < 3, "Real NPC response failed: " + director.Status);
+                Check(transient && attempt < 5, "Real NPC response failed: " + director.Status);
                 report.transientRetries++; Write();
                 yield return Delay(30 * (attempt + 1));
             }
@@ -239,7 +247,8 @@ namespace ThreeBodyProblem
             hud.Root.Q<TextField>("chat-input").value = question; Click(hud.Root.Q<Button>("send-chat"));
             Check(director.IsBusy, "The typed question did not start a model request.");
             yield return Wait(() => !director.IsBusy, connection.timeoutSeconds + 15, "The model request did not finish.");
-            report.turns.Add(new Turn { npc = npcId, phase = phase, question = question, reply = director.LastReply, failure = director.FailureCode, online = !director.UsingFallback });
+            report.turns.Add(new Turn { npc = npcId, phase = phase, question = question, reply = director.LastReply, failure = director.FailureCode, online = !director.UsingFallback,
+                gatewayStatus = director.LastGatewayStatus, providerStatus = director.LastProviderStatus, seconds = director.LastRequestSeconds });
             lastAttemptFailure = director.FailureCode;
             if (director.UsingFallback || !string.IsNullOrEmpty(director.FailureCode))
             {
@@ -298,6 +307,14 @@ namespace ThreeBodyProblem
             string file = Path.Combine(Path.GetDirectoryName(output), name + ".png");
             ScreenCapture.CaptureScreenshot(file); report.screenshots.Add(name + ".png");
         }
+        public static void TraceRequest(string npc, string json)
+        {
+            var check = FindFirstObjectByType<WindowsStoryPlayerCheck>();
+            if (check == null || string.IsNullOrEmpty(check.output)) return;
+            string folder = Path.Combine(Path.GetDirectoryName(check.output), "requests");
+            Directory.CreateDirectory(folder);
+            File.WriteAllText(Path.Combine(folder, (++check.requestSnapshotCount).ToString("D3") + "_" + npc + ".json"), json);
+        }
         private void Check(bool value, string error)
         {
             report.checks++;
@@ -309,7 +326,11 @@ namespace ThreeBodyProblem
             string safe = connection != null && !string.IsNullOrEmpty(connection.apiKey) ? message.Replace(connection.apiKey, "[REDACTED]") : message;
             report.errors.Add(safe); finished = true; report.passed = false; Write(); Application.Quit(1);
         }
-        private void Write() { if (!string.IsNullOrEmpty(output)) File.WriteAllText(output, JsonUtility.ToJson(report, true)); }
+        private void Write()
+        {
+            if (journey != null) { report.finalStep = journey.Progress.Step.ToString(); report.observations = journey.Progress.ObservationsThisRun; }
+            if (!string.IsNullOrEmpty(output)) File.WriteAllText(output, JsonUtility.ToJson(report, true));
+        }
         private static void Click(Button button)
         {
             using (var submit = NavigationSubmitEvent.GetPooled()) { submit.target = button; button.SendEvent(submit); }

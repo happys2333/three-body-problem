@@ -47,6 +47,8 @@ class Provider(BaseHTTPRequestHandler):
     def do_POST(self):
         type(self).calls += 1
         payload = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
+        if self.headers.get('Authorization') == 'Bearer test-service-unavailable':
+            self.send_response(503); self.end_headers(); return
         if self.headers.get('Authorization') != 'Bearer test-only-key':
             self.send_response(401); self.end_headers(); return
         system = payload['messages'][0]['content']
@@ -117,6 +119,16 @@ class PlaytestAccessTests(unittest.TestCase):
         self.assertEqual(status, 200)
         self.assertEqual(result['mode'], 'online')
         self.assertEqual(result['speech'], '先跟紧火光，别独自在戈壁里乱走。')
+
+    def test_upstream_503_is_identified_without_granting_a_story_action(self):
+        status, result = self.request('/dialogue', self.connection('test-service-unavailable'),
+            {'npcId': 'wenwang', 'utterance': '这里安全吗？', 'history': [],
+             'context': {'phase': 'OpeningTalk', 'decisionProtocol': 1, 'allowedStoryIntents': ['continue'], 'openingAnswers': 0}})
+        self.assertEqual(status, 200)
+        self.assertEqual(result['failureCode'], 'unavailable')
+        self.assertEqual(result['providerStatus'], 503)
+        self.assertEqual(result['storyIntent'], 'continue')
+        self.assertEqual(result['mode'], 'scripted')
 
     def test_chinese_prompts_work_with_non_utf8_system_encoding(self):
         tools = Path(__file__).resolve().parent
