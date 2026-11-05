@@ -184,6 +184,7 @@ namespace ThreeBodyProblem
                 yield return Talk("scholar", question); yield return Delay(15);
             }
             yield return Wait(() => journey.Progress.Step == JourneyStep.WalkOutside, 60, "The tribunal did not allow exterior observation.");
+            yield return Walk(new Vector3(0,0,22), 40);
             yield return Walk(new Vector3(0,0,-49), 100);
             yield return Wait(() => journey.Progress.Step == JourneyStep.ObserveThreeSuns, 20, "The exterior approach did not expose the three suns.");
             Observe(); Capture("15_three_suns");
