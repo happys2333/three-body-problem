@@ -15,3 +15,5 @@
 Unity 导入及预览入口为 `ThreeBodyProblem.Editor.MedievalAssetProduction.PrepareAndCapture`；场景放置和导航更新入口为 `ThreeBodyProblem.Editor.MedievalSceneProduction.ApplyAndReview`。在隔离工程中执行，核对结果后保存场景。混元原件适用平台内容条件；网格和生成纹理不按项目中 CC0 摄影素材的标识归类。
 
 [Windows 构建体积检查](resource-build.json)：正式配置构建成功，零错误、零警告；新增场景资源后增加 14,308,886 字节（1.529%）。这项是新版美术的构建检查；先前 R2 ZIP 的真实模型全剧情回归另见 `Documentation/WindowsStoryQA/verified-20261106.json`，R2 ZIP 尚未包含本轮新模型。
+
+[清理记录](cleanup.json)：删除隔离工程、测试构建、导出中间文件和弃用候选，只保留三份已采用工作流及对应原件。本轮没有新增本机模型权重。混元生成具有随机性，清单中的原档哈希用于精确定位已采用版本。

@@ -141,5 +141,14 @@
     "passed": "141",
     "failed": "0"
   },
-  "acceptedAssetLibraryBytes": 20721940
+  "acceptedAssetLibraryBytes": 20721940,
+  "cleanup": {
+    "passed": true,
+    "logicalBytesRemoved": 14503137050,
+    "retainedWorkflows": [
+      "CathedralPortal",
+      "ClusterPier",
+      "StoneGableHouse"
+    ]
+  }
 }

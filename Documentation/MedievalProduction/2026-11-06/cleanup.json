@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "removedOwnedTemporaryDirectories": [
+    {
+      "path": "Builds/MedievalProduction20261106/WindowsResourceCheck",
+      "logicalBytes": 950217167
+    },
+    {
+      "path": "Builds/MedievalProduction20261106/Optimized",
+      "logicalBytes": 361379065
+    },
+    {
+      "path": "Builds/MedievalProduction20261106/ImportAssets",
+      "logicalBytes": 20607244
+    },
+    {
+      "path": "Builds/MedievalProduction20261106/Downloads",
+      "logicalBytes": 0
+    },
+    {
+      "path": "Builds/MedievalProduction20261106/UnityMerchantUV",
+      "logicalBytes": 286005
+    },
+    {
+      "path": "Builds/WindowsPackaging/Project",
+      "logicalBytes": 13168695812
+    }
+  ],
+  "logicalBytesRemoved": 14503137050,
+  "retainedWorkflows": [
+    "CathedralPortal",
+    "ClusterPier",
+    "StoneGableHouse"
+  ],
+  "retainedOriginals": 3,
+  "localModelWeightsDownloaded": 0,
+  "sharedComfyService": "Existing local service and its model cache were left in place.",
+  "windowsVerifiedZipRetained": true
+}
