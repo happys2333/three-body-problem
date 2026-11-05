@@ -1,10 +1,11 @@
 {
   "tag": "windows-story-qa-20261105",
+  "releaseId": 435273971,
   "asset": "windows-story-qa-base.zip",
   "sha256": "7202f9d7e570b22322ca5019566f8fd5084a4de8ac8252e62a5f7e7b7d5ab617",
-  "sourceCommit": "21bc89753491cef687d862b94b7883a2396ab95b",
+  "sourceCommit": "9c1442df01386389baeb9854337933ffb3f72b31",
   "patch": {
-    "asset": "windows-story-qa-patch-1.zip",
-    "sha256": "c4b2c505276315b0af1870904a423e0ed6d21473b692c5fc0b567201712e0fba"
+    "asset": "windows-story-qa-patch-2.zip",
+    "sha256": "4d74adeb01ed106f847956f5f71cfa1238de874ca6a6e5821ff858892315bafb"
   }
 }
