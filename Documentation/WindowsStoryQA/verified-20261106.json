@@ -1,0 +1,182 @@
+{
+  "verifiedAtUtc": "2026-11-05T16:40:59Z",
+  "runUrl": "https://github.com/happys2333/three-body-problem/actions/runs/42065069558",
+  "sourceCommit": "f6e714bc41eb54db9882574a0f0e8e0aadb378aa",
+  "windows": {
+    "passed": true,
+    "authenticated": true,
+    "gatewayReady": true,
+    "development": false,
+    "checks": 83,
+    "observations": 5,
+    "realModelReplies": 7,
+    "npcToolConfirmations": 0,
+    "transientRetries": 0,
+    "platform": "WindowsPlayer",
+    "graphicsDevice": "Microsoft Basic Render Driver",
+    "model": "deepseek-v4.1-flash-1017",
+    "apiHost": "discovery-api.intern-ai.org.cn",
+    "finalStep": "Summary",
+    "errors": [],
+    "visited": [
+      "Title",
+      "Awakening",
+      "ExploreDesert",
+      "ApproachTraveller",
+      "OpeningTalk",
+      "Sunrise",
+      "SeekShelter",
+      "ShelterTalk",
+      "Sunset",
+      "WalkToChaoge",
+      "CourtApproach",
+      "CourtTalk",
+      "CalendarWait",
+      "WalkToWater",
+      "ObserveRevival",
+      "AfterRevival",
+      "WaitForDawn",
+      "ReturnToCourt",
+      "CalendarFailed",
+      "LeaveLongNightCourt",
+      "ObserveLongNight",
+      "AfterLongNight",
+      "DryIceSnow",
+      "AtmosphereFreeze",
+      "CapitalEnding",
+      "TribunalApproach",
+      "TribunalTalk",
+      "WalkOutside",
+      "ObserveThreeSuns",
+      "AfterThreeSuns",
+      "Collapse",
+      "Summary"
+    ],
+    "screenshots": [
+      "01_title.png",
+      "02_ai_verified.png",
+      "03_gobi_night.png",
+      "04_giant_sun.png",
+      "05_shelter.png",
+      "06_chaoge_arrival.png",
+      "07_court_petition.png",
+      "08_calendar.png",
+      "09_revival.png",
+      "10_failed_calendar.png",
+      "11_three_flying_stars.png",
+      "12_blue_snow.png",
+      "13_civilization_137.png",
+      "14_medieval_tribunal.png",
+      "15_three_suns.png",
+      "16_summary.png"
+    ],
+    "turns": [
+      {
+        "npc": "wenwang",
+        "phase": "OpeningTalk",
+        "question": "这里发生了什么？我应该待在哪里才安全？",
+        "reply": "我也不清楚你是怎么到这儿来的。眼下别走远，就留在我这火把旁边，乱纪元里天象说变就变。",
+        "failure": "",
+        "online": true,
+        "gatewayStatus": 200,
+        "providerStatus": 0,
+        "seconds": 2.2842864990234375
+      },
+      {
+        "npc": "wenwang",
+        "phase": "ShelterTalk",
+        "question": "我刚才看见太阳突然变得很大，岩石外被晒得发烫。现在我跟你躲在阴影里。这个亲眼所见可以记下来吗？",
+        "reply": "我亲眼也见着了，那光来得又快又狠。你说的没错，先记下这桩事——眼下最要紧的是别踏出这片阴影。",
+        "failure": "",
+        "online": true,
+        "gatewayStatus": 200,
+        "providerStatus": 0,
+        "seconds": 3.2457656860351562
+      },
+      {
+        "npc": "wenwang",
+        "phase": "ShelterTalk",
+        "question": "我记不清自己怎么来到这里，只想找个能安身的地方。我愿意跟你一起去朝歌。",
+        "reply": "愿意同行就好。我叫姬昌，正要去朝歌——等这日光退去，我们便动身。",
+        "failure": "",
+        "online": true,
+        "gatewayStatus": 200,
+        "providerStatus": 0,
+        "seconds": 3.428863525390625
+      },
+      {
+        "npc": "wenwang",
+        "phase": "ShelterTalk",
+        "question": "我明白了，等日光退去再走；我没有其他问题，会跟紧你的火光。",
+        "reply": "好，就守着这片阴影。等日光退去，我们便走。",
+        "failure": "",
+        "online": true,
+        "gatewayStatus": 200,
+        "providerStatus": 0,
+        "seconds": 2.5997085571289062
+      },
+      {
+        "npc": "king",
+        "phase": "CourtTalk",
+        "question": "表章已经呈毕。我建议沙漏每过一格就记下天窗光斑的位置，连续记录十次，再与历法预测的日影逐次比对；日照吻合后再让百姓复苏，请大王准许按此查验。",
+        "reply": "此法可验。寡人准你依此记录天窗光斑，十次之后与历法所测逐一比对；日照若合，再论百姓复苏之事。",
+        "failure": "",
+        "online": true,
+        "gatewayStatus": 200,
+        "providerStatus": 0,
+        "seconds": 3.941986083984375
+      },
+      {
+        "npc": "scholar",
+        "phase": "TribunalTalk",
+        "question": "我猜飞星可能是远处的太阳，异常的日照可能与它们的远近变化有关。这只是待查验的解释；我们可以先走出去共同观察，再与飞星记录对照，不急着把猜测当成定论。",
+        "reply": "这个解释把飞星和日照联系起来，至少可以拿出去比对；不过先要问清一点：你说的“远近变化”，是凭飞星出现的方位和明暗来判断，还是有别的依据？",
+        "failure": "",
+        "online": true,
+        "gatewayStatus": 200,
+        "providerStatus": 0,
+        "seconds": 3.89215087890625
+      },
+      {
+        "npc": "scholar",
+        "phase": "TribunalTalk",
+        "question": "我同意暂不作定论，先一起出门亲眼观察日照，再把所见与已有的飞星记录比较。",
+        "reply": "好，那就先出去看。外头若还被云遮着，我们就先记下明暗变化的方向和时刻，回来再与飞星记录并排比对。",
+        "failure": "",
+        "online": true,
+        "gatewayStatus": 200,
+        "providerStatus": 0,
+        "seconds": 7.09210205078125
+      }
+    ]
+  },
+  "windowsService": {
+    "passed": 11,
+    "runUrl": "https://github.com/happys2333/three-body-problem/actions/runs/42065069637"
+  },
+  "unityEditMode": {
+    "passed": 141,
+    "failed": 0
+  },
+  "python": {
+    "total": 72,
+    "passed": 69,
+    "windowsOnlySkippedOnMac": 3
+  },
+  "retailZip": {
+    "file": "ThreeBodyTraveller-Windows-x64-20261105-r2.zip",
+    "bytes": 808154646,
+    "sha256": "ee4d06b96760bf95aa764939a002d8e53381304cf5d0e11bbf2ee51d9b025c4b",
+    "aiRequired": true,
+    "includesQaDriver": false,
+    "includesCredentials": false
+  },
+  "fixes": [
+    "Windows Python 及对白模板统一 UTF-8。",
+    "暂时性叙事请求故障后支持冷却重试。",
+    "角色停用时关闭其独立火把、火焰与光源。",
+    "三日凌空观察等待期内，R 指认始终朝向天空。",
+    "Discovery 自定义 DeepSeek 关闭思考输出，保留短对白 JSON 额度。"
+  ],
+  "testMethod": "原生 Windows 正式构建配置，加独立 QA 检查器；通过实际设置、文字交谈、角色移动和观察界面推进，不直接设置剧情步骤。使用 Direct3D 11 WARP，不能据此评估物理显卡性能。"
+}

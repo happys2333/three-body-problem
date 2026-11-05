@@ -7,3 +7,7 @@
 本地设置 `TRAVELLER_STORY_QA=1` 和独立的 `TRAVELLER_WINDOWS_OUTPUT`，调用 `TravellerPlaytestBuild.BuildWindows` 后用现有打包脚本加 `--allow-story-qa` 生成 QA ZIP。普通打包默认拒绝包含测试检查器的程序集。压缩包临时放在未发布的 GitHub 草稿附件中。`request.json` 只包含附件名称、校验值和源码提交，不含凭据；更新该文件启动 Windows 检查，也可手动运行工作流。
 
 真实模型配置通过临时的 `WINDOWS_STORY_QA_CONFIG` Secret 注入，测试机在结果目录之外保存会话文件，测试结束删除。日志与报告遮挡 Key；完成本轮测试后移除临时 Secret。普通发行包不会包含测试配置、凭据或 QA 检查器。
+
+## 已验证版本
+
+2026-11-06：原生 Windows 主线回归通过，共 83 项检查、7 次真实 DeepSeek 回复、5 次关键观察，零重试，最终进入 `Summary`。覆盖标题配置、戈壁、朝歌、复苏池、长夜凝华、文明 137 毁灭、中世纪质询与三日凌空；详见 [验证记录](verified-20261106.json)。正式试玩包不含 QA 检查器与测试 Key。
