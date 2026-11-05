@@ -32,10 +32,11 @@ namespace ThreeBodyProblem
             {
                 Directory.CreateDirectory(Application.persistentDataPath);
                 var start = new System.Diagnostics.ProcessStartInfo(python,
-                    "-u \"" + script + "\" --require-online --port " + port + " --parent-pid " + System.Diagnostics.Process.GetCurrentProcess().Id)
+                    "-X utf8 -u \"" + script + "\" --require-online --port " + port + " --parent-pid " + System.Diagnostics.Process.GetCurrentProcess().Id)
                 {
                     WorkingDirectory = root, UseShellExecute = false, CreateNoWindow = true,
-                    RedirectStandardOutput = true, RedirectStandardError = true
+                    RedirectStandardOutput = true, RedirectStandardError = true,
+                    StandardOutputEncoding = System.Text.Encoding.UTF8, StandardErrorEncoding = System.Text.Encoding.UTF8
                 };
                 start.EnvironmentVariables.Remove("DEEPSEEK_API_KEY");
                 process = new System.Diagnostics.Process { StartInfo = start };

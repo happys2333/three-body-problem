@@ -1,6 +1,7 @@
 """Exercise required-key checks through the actual local HTTP service."""
 import io
 import json
+import os
 from pathlib import Path
 import subprocess
 import socket
@@ -45,10 +46,17 @@ class Provider(BaseHTTPRequestHandler):
 
     def do_POST(self):
         type(self).calls += 1
-        self.rfile.read(int(self.headers['Content-Length']))
+        payload = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
         if self.headers.get('Authorization') != 'Bearer test-only-key':
             self.send_response(401); self.end_headers(); return
-        data = json.dumps({'choices': [{'message': {'content': '{"ok":true}'}}]}).encode()
+        system = payload['messages'][0]['content']
+        if 'Connection test.' in system:
+            answer = {'ok': True}
+        elif '角色：姬昌' in system:
+            answer = {'speech': '先跟紧火光，别独自在戈壁里乱走。', 'gesture': 'talk', 'storyIntent': 'continue'}
+        else:
+            self.send_response(400); self.end_headers(); return
+        data = json.dumps({'choices': [{'message': {'content': json.dumps(answer, ensure_ascii=False)}}]}, ensure_ascii=False).encode('utf-8')
         self.send_response(200); self.send_header('Content-Length', str(len(data))); self.end_headers(); self.wfile.write(data)
 
 
@@ -66,8 +74,8 @@ class PlaytestAccessTests(unittest.TestCase):
         for server in (cls.gateway, cls.provider):
             server.shutdown(); server.server_close()
 
-    def request(self, path, connection):
-        data = json.dumps({'connection': connection}).encode()
+    def request(self, path, connection, payload=None):
+        data = json.dumps({**(payload or {}), 'connection': connection}).encode()
         request = urllib.request.Request(f'http://127.0.0.1:{self.gateway.server_port}' + path, data=data,
                                          headers={'Content-Type': 'application/json'})
         try:
@@ -101,6 +109,26 @@ class PlaytestAccessTests(unittest.TestCase):
         status, result = self.request('/connection-test', self.connection())
         self.assertEqual(status, 200); self.assertTrue(result['ok']); self.assertEqual(result['mode'], 'online')
         self.assertEqual(Provider.calls, before + 1)
+
+    def test_actual_npc_dialogue_reads_chinese_prompts_and_replies(self):
+        status, result = self.request('/dialogue', self.connection(),
+            {'npcId': 'wenwang', 'utterance': '这里安全吗？', 'history': [],
+             'context': {'phase': 'OpeningTalk', 'allowedStoryIntents': ['continue'], 'openingAnswers': 0}})
+        self.assertEqual(status, 200)
+        self.assertEqual(result['mode'], 'online')
+        self.assertEqual(result['speech'], '先跟紧火光，别独自在戈壁里乱走。')
+
+    def test_chinese_prompts_work_with_non_utf8_system_encoding(self):
+        tools = Path(__file__).resolve().parent
+        code = ("import sys,json;sys.path.insert(0," + repr(str(tools)) + ");"
+                "from dialogue_gateway import model_messages;"
+                "p={'npcId':'wenwang','utterance':'hello','context':{'phase':'OpeningTalk'},'history':[]};"
+                "s=model_messages(p)[3][0]['content'];"
+                "print(json.dumps({'chinese': '\\u89d2\\u8272\\uff1a\\u59ec\\u660c' in s}))")
+        result = subprocess.run([sys.executable, '-X', 'utf8=0', '-c', code], capture_output=True,
+            env={**os.environ, 'LC_ALL': 'C', 'PYTHONCOERCECLOCALE': '0', 'PYTHONUTF8': '0'}, timeout=20)
+        self.assertEqual(result.returncode, 0, result.stderr.decode(errors='replace'))
+        self.assertTrue(json.loads(result.stdout)['chinese'])
 
 
 @unittest.skipUnless(sys.platform == 'win32', 'Windows speech integration')

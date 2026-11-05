@@ -17,7 +17,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           lfs: false
-          sparse-checkout: Tools
+          sparse-checkout: |
+            Tools
+            Assets/_Project/Dialogue/Prompts
       - name: Check the shipped Python runtime, required AI access and Windows speech
         shell: pwsh
         run: |
@@ -28,6 +30,8 @@ jobs:
           if ((Get-FileHash $archive -Algorithm SHA256).Hash.ToLowerInvariant() -ne '9e35319bffedab8b36ad44d8f377cb4f1733bcec257a0b6d04d94f01486ddb38') { throw 'Python checksum mismatch' }
           New-Item -ItemType Directory -Path $service -Force | Out-Null
           Copy-Item Tools (Join-Path $service 'Tools') -Recurse
+          New-Item -ItemType Directory -Path (Join-Path $service 'Assets/_Project/Dialogue') -Force | Out-Null
+          Copy-Item Assets/_Project/Dialogue/Prompts (Join-Path $service 'Assets/_Project/Dialogue/Prompts') -Recurse
           Expand-Archive $archive $runtime
           Add-Content (Join-Path $runtime 'python313._pth') '../Tools' -Encoding ascii
           & (Join-Path $runtime 'python.exe') -m unittest discover -s (Join-Path $service 'Tools') -p test_playtest_access.py -v
