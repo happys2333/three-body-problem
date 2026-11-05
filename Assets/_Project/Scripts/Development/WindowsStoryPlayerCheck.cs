@@ -195,7 +195,11 @@ namespace ThreeBodyProblem
             yield return Walk(new Vector3(0,0,22), 40);
             yield return Walk(new Vector3(0,0,-49), 100);
             yield return Wait(() => journey.Progress.Step == JourneyStep.ObserveThreeSuns, 20, "The exterior approach did not expose the three suns.");
-            Observe(); Capture("15_three_suns");
+            journey.FaceGoal(); yield return Frames(2);
+            Check(stage.player.viewCamera.transform.forward.y > .1f, "Sky guidance pointed down during the three-sun reveal.");
+            Capture("15_three_suns");
+            yield return Wait(() => journey.Progress.Step != JourneyStep.ObserveThreeSuns, 12, "Looking at the three suns did not automatically record them.");
+            Check(stage.Journal.entries.Any(entry => entry.observationId == "medieval_three_suns"), "The three-sun observation is missing from the journal.");
             yield return Wait(() => journey.Progress.Step == JourneyStep.Summary, 45, "The final collapse did not reach Summary.");
             Check(journey.Progress.ObservationsThisRun >= 3, "The main route is missing its required observations.");
             Check(hud.Root.Q("summary-overlay").resolvedStyle.display == DisplayStyle.Flex, "The final summary UI is missing.");

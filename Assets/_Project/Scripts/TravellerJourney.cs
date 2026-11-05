@@ -226,7 +226,8 @@ namespace ThreeBodyProblem
 
         public void FaceGoal()
         {
-            Vector3 target = CanObserve ? stage.ObservationTarget() : (Progress.Step == JourneyStep.ShelterTalk || IsWalking) && traveller != null ? traveller.position + Vector3.up * 1.5f : Goal + Vector3.up;
+            // Guide the view during the reveal as well; recording still waits for the sky to settle.
+            Vector3 target = CanObserve || Progress.Step == JourneyStep.ObserveThreeSuns ? stage.ObservationTarget() : (Progress.Step == JourneyStep.ShelterTalk || IsWalking) && traveller != null ? traveller.position + Vector3.up * 1.5f : Goal + Vector3.up;
             if (IsLongNightWalk) target = Goal + Vector3.up;
             if(palaceSkylight!=null&&Progress.Step==JourneyStep.CalendarWait)target=palaceSkylight.observationPoint;
             else if(Progress.Step==JourneyStep.CalendarFailed && longNight!=null) target=longNight.CourtFocus;
