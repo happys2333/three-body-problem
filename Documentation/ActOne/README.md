@@ -4,13 +4,13 @@
 
 ## 体验入口
 
-Unity 打开 `Assets/_Project/Scenes/Traveller/01_GobiJourney.unity`，Play 后点击“开始旅程”。独立开发包是 `Builds/ActOneTraveller.app`。
+Unity 打开 `Assets/_Project/Scenes/Traveller/01_GobiJourney.unity`，Play 后在设置中填写 API Key 并通过 AI 连接测试，保存后点击“开始旅程”。独立开发包是 `Builds/ActOneTraveller.app`。
 
-macOS 可双击 `Tools/PlayActOne.command`，同时启动本机语音服务和试玩包；也可在项目根目录运行 `python3 Tools/play_act_one.py`。该入口默认使用离线剧情，不启用付费模型请求。
+macOS 可双击 `Tools/PlayActOne.command`，同时启动本机语音服务和试玩包；也可在项目根目录运行 `python3 Tools/play_act_one.py`。游戏必须配置在线 AI 才能开始，Key 在游戏设置中填写。
 
 WASD 行走，Shift 快走，直接移动鼠标环顾，T 切换玩家火把。看向人物按住 F 录音、松开后中文转写并自动发送；Enter 打开文字交谈，Esc 关闭文字输入或打开暂停菜单并释放鼠标。游戏不在后台持续录音。首次使用麦克风时由 macOS 显示授权提示，拒绝或无设备时仍能打字。
 
-标题页或 Esc 菜单的“设置 · AI 与操作”允许选择 DeepSeek、自定义 Chat Completions 兼容接口、离线对白或原有服务端配置。可填写 API 地址、Key、模型与等待时间并测试连接；Key 遮挡显示、仅在当前运行中使用。详细设置、操作与验证见 [游戏内设置说明](../Settings/2026-11-01/README_CN.md)。
+标题页或 Esc 菜单的设置允许选择 DeepSeek 或自定义 Chat Completions 兼容接口。填写 API 地址、Key、模型与等待时间并测试连接，成功后保存；Key 遮挡显示、仅在当前运行中使用。未测试或连接失败时不能开始，更换 Key、模型或服务地址后需要重新测试。历史设置与验证见 [游戏内设置说明](../Settings/2026-11-01/README_CN.md)。
 
 ## 第一幕时序
 

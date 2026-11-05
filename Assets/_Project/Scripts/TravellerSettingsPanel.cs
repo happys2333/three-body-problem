@@ -11,8 +11,8 @@ namespace ThreeBodyProblem
 {
     public sealed class TravellerSettingsPanel : IDisposable
     {
-        private static readonly List<string> Providers = new List<string> { "沿用本地服务配置", "DeepSeek", "自定义接口（OpenAI 兼容）", "离线剧情对白" };
-        private static readonly string[] Modes = { "gateway", "deepseek", "custom", "scripted" };
+        private static readonly List<string> Providers = new List<string> { "DeepSeek", "自定义接口（OpenAI 兼容）" };
+        private static readonly string[] Modes = { "deepseek", "custom" };
         private readonly TravellerHud owner;
         private readonly NpcDialogueSettings defaults;
         private readonly Action closed, saved;
@@ -47,7 +47,7 @@ namespace ThreeBodyProblem
         public bool IsOpen { get; private set; }
         public VisualElement Root => overlay;
         [Serializable] private class TestRequest { public NpcApiConnection connection; }
-        [Serializable] private class TestReply { public bool ok; public string message; }
+        [Serializable] private class TestReply { public bool ok; public string message, mode; }
 
         public TravellerSettingsPanel(TravellerHud owner, VisualElement parent, NpcDialogueSettings defaults, Action closed, Action saved)
         {
@@ -81,8 +81,10 @@ namespace ThreeBodyProblem
             timeout.AddToClassList("settings-select"); apiFields.Add(timeout);
             Text(apiFields,"回复较慢的模型可增加等待时间；超时或服务拒绝不会自动推进剧情。Atria-Dawn 本次实测建议 60 秒。","settings-hint");
             Button(apiFields,"使用 60 秒等待",()=>timeout.value=60,"settings-use-longer-wait");
-            gatewayUrl = Field(aiPage, "本地对话与语音服务", "settings-gateway-url");
-            Text(aiPage, "默认 http://127.0.0.1:8769。语音识别、NPC 声音与对话转接由本地服务提供。", "settings-hint");
+            var gatewayFields = Box(aiPage, "settings-gateway-fields", "settings-page");
+            gatewayUrl = Field(gatewayFields, "本地对话与语音服务", "settings-gateway-url");
+            Text(gatewayFields, "默认 http://127.0.0.1:8769。语音识别、NPC 声音与对话转接由本地服务提供。", "settings-hint");
+            if (Application.platform == RuntimePlatform.WindowsPlayer) gatewayFields.style.display = DisplayStyle.None;
             controlsPage = Box(scroll, "settings-controls", "settings-page");
             Text(controlsPage, "进入旅程后，直接移动鼠标环顾，无需按住右键。Esc 打开菜单；Enter 打开文字交谈。", "settings-description");
             sensitivity = new Slider("鼠标灵敏度", .2f, 5) { name = "settings-sensitivity", showInputField = true };
@@ -114,8 +116,8 @@ namespace ThreeBodyProblem
             Button(closing, "保存并返回", Apply, "settings-save", "primary");
             provider.RegisterValueChangedCallback(_ => {
                 CancelTest(); apiKey.value = ""; showKey.value = false;
-                if (provider.index == 1) { apiUrl.value = "https://api.deepseek.com/chat/completions"; model.value = "deepseek-flash"; }
-                else if (provider.index == 2) { apiUrl.value = "http://127.0.0.1:11434/v1"; model.value = ""; }
+                if (provider.index == 0) { apiUrl.value = "https://api.deepseek.com/chat/completions"; model.value = "deepseek-flash"; }
+                else { apiUrl.value = ""; model.value = ""; }
                 SetStatus("", false); RefreshProvider();
             });
             foreach (var input in new[] { apiUrl, apiKey, model, gatewayUrl }) input.RegisterValueChangedCallback(_ => { CancelTest(); SetStatus("", false); });
@@ -171,7 +173,7 @@ namespace ThreeBodyProblem
             resolution.SetValueWithoutNotify(resolution.choices[resolutionSizes.IndexOf(selected)]);
         }
 
-        private void RefreshProvider() => apiFields.style.display = provider.index == 1 || provider.index == 2 ? DisplayStyle.Flex : DisplayStyle.None;
+        private void RefreshProvider() => apiFields.style.display = DisplayStyle.Flex;
 
         private string SelectedMicrophone => microphoneIds.Count == 0 ? "" : microphoneIds[Mathf.Clamp(microphoneDevice.index, 0, microphoneIds.Count - 1)];
         private void RefreshMicrophones(string selection = null, bool scan = true)
@@ -217,6 +219,7 @@ namespace ThreeBodyProblem
         public void Apply()
         {
             string error; var value = ReadDraft();
+            if (!TravellerAiAccess.CanPlay(value, defaults, out error)) { SelectTab(0); SetStatus(error, true); return; }
             if (!TravellerUserSettings.Save(value, out error)) { SetStatus(error, true); return; }
             saved(); Close();
         }
@@ -233,6 +236,7 @@ namespace ThreeBodyProblem
         {
             CancelTest(); var draft = ReadDraft(); string error;
             if (!draft.Validate(out error)) { SetStatus(error, true); return; }
+            if (!TravellerAiAccess.Validate(draft.connection, out error)) { SetStatus(error, true); return; }
             SetStatus("正在测试本地服务与所选模型……", false); test.SetEnabled(false);
             testing = owner.StartCoroutine(Test(draft, generation));
         }
@@ -248,7 +252,12 @@ namespace ThreeBodyProblem
                 if (token != generation || !IsOpen) yield break;
                 TestReply reply = null;
                 try { reply = JsonUtility.FromJson<TestReply>(web.downloadHandler.text); } catch (ArgumentException) { }
-                if (reply != null && !string.IsNullOrWhiteSpace(reply.message)) SetStatus(reply.message, !reply.ok);
+                if (web.result == UnityWebRequest.Result.Success && reply != null && reply.ok && reply.mode == "online")
+                {
+                    TravellerAiAccess.Confirm(draft, defaults);
+                    SetStatus("AI 连接成功，保存设置后即可开始旅程。", false);
+                }
+                else if (reply != null && !string.IsNullOrWhiteSpace(reply.message)) SetStatus(reply.ok ? "需要配置在线 AI 模型，不能使用离线剧情。" : reply.message, true);
                 else SetStatus(web.responseCode == 404 ? "本地服务版本较旧，请重启更新后的对话服务。" : "无法连接本地对话服务，请检查地址及服务是否已启动。", true);
                 pending = null; testing = null; test.SetEnabled(true);
             }
@@ -262,6 +271,7 @@ namespace ThreeBodyProblem
         }
         private void SetStatus(string text, bool error)
         { status.text = text; status.EnableInClassList("settings-error", error); status.EnableInClassList("settings-good", !error && !string.IsNullOrEmpty(text)); }
+        public void ShowRequirement(string message) { SelectTab(0); SetStatus(message, true); }
         public void Dispose() { CancelTest(); overlay.RemoveFromHierarchy(); }
         private static VisualElement Box(VisualElement parent, string name, string classes)
         { var box = new VisualElement { name = name }; foreach (var c in classes.Split(' ')) box.AddToClassList(c); parent.Add(box); return box; }

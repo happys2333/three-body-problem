@@ -101,7 +101,7 @@ namespace ThreeBodyProblem
             Text(card, "在无法预测的世界里，找到问题的规律。", "menu-description");
             Button(card, "开始旅程", () => { hidden = false; journey.Begin(); }, "primary start-button").name = "start-journey";
             Button(card, "设置", OpenSettings).name = "title-settings";
-            Text(card, "调查四周，确认情况。", "menu-description");
+            Text(card, "请先在设置中填写 API Key，并测试 AI 模型连接。", "menu-description");
             Text(card, "WASD 行走 · 鼠标环顾 · F 语音交谈 · Enter 文字交谈 · Esc 菜单", "controls");
 
             pauseOverlay = Overlay("pause-overlay"); card = Box(pauseOverlay, "pause-card", "menu-card");
@@ -189,6 +189,12 @@ namespace ThreeBodyProblem
             Display(continueAudience,journey.CanContinueScriptedAudience&&!dialogueDirector.IsBusy);
             sendChat.SetEnabled(dialogueDirector!=null&&!dialogueDirector.IsBusy&&(microphone==null||!microphone.IsRecording&&!microphone.IsTranscribing));
             SyncPlayerInput();
+        }
+
+        public void RequireAiConfiguration(string message)
+        {
+            OpenSettings();
+            SettingsPanel?.ShowRequirement(message);
         }
 
         public void OpenSettings()

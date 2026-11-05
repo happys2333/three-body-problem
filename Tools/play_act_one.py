@@ -1,4 +1,4 @@
-"""Start the local offline voice gateway and open the current macOS demo build."""
+"""Start the local voice gateway and open the current macOS demo build."""
 import argparse
 import json
 import os
@@ -65,7 +65,7 @@ def main():
         while time.monotonic()<until and not ready():
             if process.poll() is not None:break
             time.sleep(.3)
-    print('本机语音已就绪。' if ready() else '语音暂未就绪，游戏仍可使用文字与离线剧情。',flush=True)
+    print('本机语音已就绪。' if ready() else '本地服务暂未就绪；请在游戏设置中测试连接，成功后才能开始旅程。',flush=True)
     subprocess.run(['open',str(app)],check=True)
 
 

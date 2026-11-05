@@ -160,9 +160,17 @@ def json_reply(choice):
     return value
 
 
-def connection_test(config=None, online=False, opener=None):
+def require_player_connection(config):
+    if not isinstance(config, dict) or config.get('mode') not in {'deepseek', 'custom'}:
+        raise ConnectionConfigError('请配置在线 AI 模型；试玩版不提供离线游玩。')
+    if not isinstance(config.get('apiKey'), str) or not config['apiKey'].strip():
+        raise ConnectionConfigError('请填写 API Key。')
+    return resolve_connection(config)
+
+
+def connection_test(config=None, online=False, opener=None, require_online=False):
     try:
-        connection = resolve_connection(config, online)
+        connection = require_player_connection(config) if require_online else resolve_connection(config, online)
         if connection is None:
             return {'ok': True, 'mode': 'scripted', 'message': '本地服务可用；当前使用离线剧情对白。'}
         value = chat_completion(connection, [

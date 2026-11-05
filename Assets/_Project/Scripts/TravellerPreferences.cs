@@ -6,7 +6,7 @@ namespace ThreeBodyProblem
     [Serializable]
     public sealed class NpcApiConnection
     {
-        public string mode = "gateway";
+        public string mode = "deepseek";
         public string apiUrl = "https://api.deepseek.com/chat/completions";
         public string model = "deepseek-flash";
         public string apiKey = "";
@@ -73,7 +73,7 @@ namespace ThreeBodyProblem
         // is sent to the local service. Keys never enter PlayerPrefs or assets.
         [Serializable] private sealed class Saved
         {
-            public string mode = "gateway", apiUrl = "https://api.deepseek.com/chat/completions", model = "deepseek-flash", gatewayUrl = "";
+            public string mode = "deepseek", apiUrl = "https://api.deepseek.com/chat/completions", model = "deepseek-flash", gatewayUrl = "";
             public int timeoutSeconds = 20;
             public int contextWindowTokens = 32000;
             public float mouseSensitivity = 2;
@@ -118,7 +118,7 @@ namespace ThreeBodyProblem
         internal static bool ValidDisplaySize(int width, int height) => width >= 640 && width <= 16384 && height >= 360 && height <= 16384;
 
         public string GatewayUrl(NpcDialogueSettings defaults) =>
-            (string.IsNullOrWhiteSpace(gatewayUrl) ? defaults.gatewayUrl : gatewayUrl).Trim().TrimEnd('/');
+            WindowsDialogueService.Url ?? (string.IsNullOrWhiteSpace(gatewayUrl) ? defaults.gatewayUrl : gatewayUrl).Trim().TrimEnd('/');
 
         public string ToSavedJson() => JsonUtility.ToJson(new Saved {
             mode = connection.mode, apiUrl = connection.apiUrl, model = connection.model,

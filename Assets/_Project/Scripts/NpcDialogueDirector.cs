@@ -34,7 +34,7 @@ namespace ThreeBodyProblem
         private bool emittingModelReply;
         private NpcDecisionController decisions;
         public string FailureCode { get; private set; } = "";
-        public bool IsIntentionalOffline => TravellerUserSettings.Current.connection.mode == "scripted" || FailureCode == "offline" && TravellerUserSettings.Current.connection.mode == "gateway";
+        public bool IsIntentionalOffline => false;
         private readonly NpcQuestionTurn question=new NpcQuestionTurn();
         public bool HasPlayerQuestion => question.IsActive;
         public int QuestionId => question.Id;
@@ -162,7 +162,7 @@ namespace ThreeBodyProblem
             FailureCode=reply==null?transportFailure:reply.failureCode??"";
             // A missing field from an old gateway cannot grant offline progression
             // after a custom online request. Failures never poison NPC memory.
-            if(UsingFallback&&FailureCode!="offline"&&!(request.connection.mode=="scripted"&&reply!=null))
+            if(UsingFallback)
             {
                 if(string.IsNullOrEmpty(FailureCode))FailureCode="invalid_response";
                 question.Complete();LastReply="";SetStatus(FailureMessage(FailureCode));hud?.NotifyDialogueFailure(Status);yield break;

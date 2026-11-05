@@ -22,7 +22,7 @@ import time
 from http.server import BaseHTTPRequestHandler,ThreadingHTTPServer
 import wave
 from llm_connection import (resolve_connection, chat_completion_choice, json_reply,
-                            connection_test, ProviderRejectedError, ToolCallingUnsupported)
+                            connection_test, ProviderRejectedError, ToolCallingUnsupported, require_player_connection)
 import socket
 import urllib.error
 import npc_decision_policy as decisions
@@ -115,6 +115,9 @@ def ensure_asr_worker():
 
 
 def transcribe(wav):
+    if sys.platform == 'win32':
+        from windows_voice import transcribe as windows_transcribe
+        return windows_transcribe(wav)
     if _neural is not None:return _neural.transcribe(wav)
     started=time.monotonic()
     if not _asr_lock.acquire(timeout=28):raise TimeoutError('ASR busy')
@@ -135,6 +138,9 @@ atexit.register(close_asr_worker)
 def speech_wav(text,npc_id='wenwang',use_cache=True):
     text=str(text).strip()[:240]
     if not text:raise ValueError('Empty speech')
+    if sys.platform == 'win32':
+        from windows_voice import speech_wav as windows_speech
+        return windows_speech(text, npc_id)
     tts = _qwen_tts or _neural
     if tts is not None:
         profile=tts.profiles.get(npc_id)
@@ -387,6 +393,7 @@ def dialogue(payload,online=False,opener=None):
 
 class Handler(BaseHTTPRequestHandler):
     online=False
+    require_online=False
     def log_message(self,*args):pass
     def send(self,value,status=200,content_type='application/json'):
         data=value if isinstance(value,bytes) else json.dumps(value,ensure_ascii=False).encode()
@@ -397,6 +404,8 @@ class Handler(BaseHTTPRequestHandler):
         if self.path=='/health':
             info={'ready':True,'mode':'online' if self.online and os.environ.get('DEEPSEEK_API_KEY') else 'scripted',
                 'asrModelPresent':MODEL.is_dir(),'asrModel':MODEL.name,'asrEngine':'vosk','ttsEngine':'macos-say','connectionSettings':4,'decisionProtocol':1}
+            if self.require_online:info['mode']='requires-key'
+            if sys.platform=='win32':info.update(asrEngine='windows-speech',ttsEngine='windows-speech')
             if _neural is not None:info.update(_neural.health());info['asrModelPresent']=True
             if _qwen_tts is not None:info.update(_qwen_tts.health())
             self.send(info)
@@ -410,8 +419,10 @@ class Handler(BaseHTTPRequestHandler):
             raw=self.rfile.read(size)
             if self.path=='/transcribe':self.send({'text':transcribe(raw)});return
             data=json.loads(raw)
-            if self.path=='/dialogue':self.send(dialogue(data,self.online));return
-            if self.path=='/connection-test':self.send(connection_test(data.get('connection'),self.online));return
+            if self.path=='/dialogue':
+                if self.require_online:require_player_connection(data.get('connection'))
+                self.send(dialogue(data,self.online));return
+            if self.path=='/connection-test':self.send(connection_test(data.get('connection'),self.online,require_online=self.require_online));return
             if self.path=='/speech':self.send(speech_wav(data.get('text',''),data.get('npcId','wenwang'),use_cache=data.get('cache',True) is not False),content_type='audio/wav');return
             self.send({'error':'Not found'},404)
         except (ValueError,KeyError,json.JSONDecodeError):self.send({'error':'Invalid request'},400)
@@ -432,9 +443,18 @@ def main():
     if '--transcribe-stdin' in sys.argv:
         print(json.dumps({'text':transcribe_in_process(sys.stdin.buffer.read(2_000_001))},ensure_ascii=False));return
     parser=argparse.ArgumentParser();parser.add_argument('--online',action='store_true');parser.add_argument('--port',type=int,default=8769)
-    parser.add_argument('--local-models',action='store_true');parser.add_argument('--legacy-voice',action='store_true');args=parser.parse_args()
+    parser.add_argument('--local-models',action='store_true');parser.add_argument('--legacy-voice',action='store_true')
+    parser.add_argument('--require-online',action='store_true');parser.add_argument('--parent-pid',type=int);args=parser.parse_args()
     signal.signal(signal.SIGTERM,lambda *_:sys.exit(0))
     Handler.online=args.online
+    Handler.require_online=args.require_online
+    if sys.platform=='win32':
+        server=ThreadingHTTPServer(('127.0.0.1',args.port),Handler)
+        if args.parent_pid:
+            from windows_voice import watch_parent
+            threading.Thread(target=watch_parent,args=(args.parent_pid,server),daemon=True).start()
+        print(f'Traveller AI service ready on 127.0.0.1:{args.port}; API key required: {args.require_online}',flush=True)
+        server.serve_forever();return
     local_setting=CACHE.parent/'active-backends.json'
     preference = json.loads(local_setting.read_text()) if local_setting.exists() else {}
     use_local = args.local_models or preference.get('useLocalModels', False)

@@ -133,6 +133,11 @@ namespace ThreeBodyProblem
 
         public void Begin()
         {
+            if (!TravellerAiAccess.CanPlay(TravellerUserSettings.Current, dialogueDirector != null ? dialogueDirector.settings : null, out string error))
+            {
+                hud?.RequireAiConfiguration(error);
+                return;
+            }
             CancelPendingDialogueDecision(); Decisions.Reset(); relevantExplanation=false;
             NpcConversationMemory.Clear();
             stage.ResetObservationWitnesses();

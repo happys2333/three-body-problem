@@ -44,6 +44,9 @@ namespace ThreeBodyProblem
             yield return Frames(15); Bind();
             yield return Until(() => Application.isFocused, 45);
             Check(journey.IsTitle && Cursor.lockState == CursorLockMode.None, "The title should leave the pointer available.");
+            journey.Begin(); yield return Frames(3);
+            Check(journey.IsTitle && hud.SettingsPanel.IsOpen, "Missing AI credentials allowed entry into gameplay.");
+            Click(hud.SettingsPanel.Root.Q<Button>("settings-cancel")); yield return Frames(2);
             Click(hud.Root.Q<Button>("title-settings")); yield return Frames(3);
             Check(hud.SettingsPanel.IsOpen && hud.IsWorldPaused, "Title settings did not open.");
             var ui = hud.SettingsPanel.Root;
@@ -63,7 +66,7 @@ namespace ThreeBodyProblem
             Check(!hud.SettingsPanel.IsOpen && TravellerUserSettings.Current.connection.model == originalModel, "Cancel applied an unsaved model.");
 
             hud.OpenSettings(); ui = hud.SettingsPanel.Root;
-            ui.Q<DropdownField>("settings-provider").index = 2;
+            ui.Q<DropdownField>("settings-provider").index = 1;
             ui.Q<TextField>("settings-api-url").value = Option("-settings-test-upstream");
             ui.Q<TextField>("settings-model").value = "qa-selected-model";
             ui.Q<TextField>("settings-api-key").value = "test-session-only-key";
@@ -86,6 +89,11 @@ namespace ThreeBodyProblem
             Click(ui.Q<Button>("settings-save"));yield return Frames(2);
             Check(hud.SettingsPanel.IsOpen, "Invalid API URL closed the settings form.");
             ui.Q<TextField>("settings-api-url").value = Option("-settings-test-upstream");
+            Click(ui.Q<Button>("settings-save"));yield return Frames(2);
+            Check(hud.SettingsPanel.IsOpen, "Untested credentials allowed settings to unlock gameplay.");
+            Click(ui.Q<Button>("settings-test"));
+            yield return Until(() => ui.Q<Button>("settings-test").enabledSelf, 12);
+            Check(ui.Q<Label>("settings-status").text.Contains("连接成功"), "The final connection was not verified.");
             Click(ui.Q<Button>("settings-save"));yield return Frames(3);
             Check(!hud.SettingsPanel.IsOpen, "Valid settings were not saved.");
             Check(TravellerUserSettings.Current.connection.model == "qa-selected-model", "The selected model was not applied.");

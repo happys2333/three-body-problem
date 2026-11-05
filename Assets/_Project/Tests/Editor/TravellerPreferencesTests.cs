@@ -56,7 +56,7 @@ namespace ThreeBodyProblem.Tests
         [Test]
         public void InvalidStoredPreferencesFallBackToUsableDefaults()
         {
-            Assert.That(TravellerPreferences.FromSavedJson("{broken").connection.mode, Is.EqualTo("gateway"));
+            Assert.That(TravellerPreferences.FromSavedJson("{broken").connection.mode, Is.EqualTo("deepseek"));
             var value = new TravellerPreferences { mouseSensitivity = float.NaN }; string error;
             Assert.That(value.Validate(out error), Is.False);
             value = new TravellerPreferences { gatewayUrl = "https://example.test" };
