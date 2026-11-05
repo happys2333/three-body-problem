@@ -23,7 +23,7 @@ namespace ThreeBodyProblem
         [Serializable] private sealed class Report
         {
             public bool passed, authenticated, gatewayReady, development;
-            public int checks, observations, realModelReplies, npcToolConfirmations;
+            public int checks, observations, realModelReplies, npcToolConfirmations, transientRetries;
             public string platform, graphicsDevice, model, apiHost, finalStep;
             public List<string> errors = new(), visited = new(), screenshots = new();
             public List<Turn> turns = new();
@@ -37,6 +37,8 @@ namespace ThreeBodyProblem
         private NpcDialogueDirector director;
         private float started, nextWrite;
         private bool finished;
+        private bool lastAttemptSucceeded;
+        private string lastAttemptFailure;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Boot()
@@ -209,6 +211,19 @@ namespace ThreeBodyProblem
         }
         private IEnumerator Talk(string npcId, string question)
         {
+            for (int attempt = 0; attempt < 4; attempt++)
+            {
+                yield return TalkAttempt(npcId, question);
+                if (lastAttemptSucceeded) yield break;
+                bool transient = lastAttemptFailure == "rate_limited" || lastAttemptFailure == "timeout" || lastAttemptFailure == "unreachable" || lastAttemptFailure == "unavailable";
+                Check(transient && attempt < 3, "Real NPC response failed: " + director.Status);
+                report.transientRetries++; Write();
+                yield return Delay(30 * (attempt + 1));
+            }
+        }
+        private IEnumerator TalkAttempt(string npcId, string question)
+        {
+            lastAttemptSucceeded = false; lastAttemptFailure = "";
             director.CancelQuestion(); hud.Root.Q<TextField>("chat-input").Blur(); journey.CloseDialogue();
             var npc = stage.GetComponentsInChildren<NpcIdentity>(true).First(value => value.persona != null && value.persona.characterId == npcId && value.CanAnswer);
             if (Vector3.Distance(stage.player.transform.position, npc.transform.position) > 5)
@@ -225,9 +240,16 @@ namespace ThreeBodyProblem
             Check(director.IsBusy, "The typed question did not start a model request.");
             yield return Wait(() => !director.IsBusy, connection.timeoutSeconds + 15, "The model request did not finish.");
             report.turns.Add(new Turn { npc = npcId, phase = phase, question = question, reply = director.LastReply, failure = director.FailureCode, online = !director.UsingFallback });
-            Check(!director.UsingFallback && string.IsNullOrEmpty(director.FailureCode) && !string.IsNullOrWhiteSpace(director.LastReply), "Real NPC response failed: " + director.Status);
+            lastAttemptFailure = director.FailureCode;
+            if (director.UsingFallback || !string.IsNullOrEmpty(director.FailureCode))
+            {
+                hud.Root.Q<TextField>("chat-input").Blur(); journey.CloseDialogue(); Write(); yield break;
+            }
+            Check(!string.IsNullOrWhiteSpace(director.LastReply), "The model returned empty player dialogue.");
+            lastAttemptSucceeded = true;
             report.realModelReplies++; Write();
-            yield return Delay(2); hud.Root.Q<TextField>("chat-input").Blur(); journey.CloseDialogue(); yield return Frames(2);
+            yield return Wait(() => journey.Progress.Step.ToString() != phase || !director.IsVocalising && journey.SpeechRemainingSeconds <= 0, 50, "NPC speech did not finish.");
+            hud.Root.Q<TextField>("chat-input").Blur(); journey.CloseDialogue(); yield return Frames(2);
         }
         private IEnumerator Walk(Vector3 point, float seconds)
         {

@@ -32,6 +32,7 @@ namespace ThreeBodyProblem
         private int version;
         private bool directing;
         private bool emittingModelReply;
+        private float retryNarrativeAt;
         private NpcDecisionController decisions;
         public string FailureCode { get; private set; } = "";
         public bool IsIntentionalOffline => false;
@@ -113,11 +114,15 @@ namespace ThreeBodyProblem
         }
         public void RequestNarrativeDecision()
         {
-            if(!string.IsNullOrEmpty(FailureCode)&&FailureCode!="offline")return;
-            if(HasPlayerQuestion||IsBusy||IsVocalising||sequence==null||!sequence.WorldRunning||Current==null||Current.persona.characterId!="wenwang")return;
+            if(!string.IsNullOrEmpty(FailureCode)&&FailureCode!="offline")
+            {
+                bool transient = FailureCode=="rate_limited"||FailureCode=="timeout"||FailureCode=="unreachable"||FailureCode=="unavailable";
+                if(!transient||Time.realtimeSinceStartup<retryNarrativeAt)return;
+            }
+            if(HasPlayerQuestion||IsBusy||IsVocalising||journey.SpeechRemainingSeconds>0||sequence==null||!sequence.WorldRunning||Current==null||Current.persona.characterId!="wenwang")return;
             var step=journey.Progress.Step;
             if(step!=JourneyStep.OpeningTalk&&step!=JourneyStep.ShelterTalk)return;
-            CancelPending();IsBusy=true;directing=true;
+            FailureCode="";CancelPending();IsBusy=true;directing=true;
             StartCoroutine(Ask("",version,Current,step,true));
         }
         private IEnumerator Ask(string text,int token,NpcIdentity identity,JourneyStep step,bool director,bool allowHandoff=true)
@@ -165,13 +170,14 @@ namespace ThreeBodyProblem
             if(UsingFallback)
             {
                 if(string.IsNullOrEmpty(FailureCode))FailureCode="invalid_response";
+                retryNarrativeAt=Time.realtimeSinceStartup+30;
                 question.Complete();LastReply="";SetStatus(FailureMessage(FailureCode));hud?.NotifyDialogueFailure(Status);yield break;
             }
             string intent=reply==null?"continue":reply.storyIntent;
             if(director)
             {
                 // Director ticks choose only a node. They never invent a player utterance or spend an answer.
-                sequence.OnNpcReply(intent,false,0);Changed?.Invoke();yield break;
+                sequence.OnNpcReply(intent,false,0);SetStatus("看向人物，按住 F 说话");yield break;
             }
             string speech=fallback?identity.persona.fallbackReply:reply.speech;
             if(sequence!=null&&id=="wenwang")speech=GobiDialoguePolicy.SafeSpeech(fallback?null:speech,text,step);

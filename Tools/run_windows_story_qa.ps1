@@ -10,6 +10,25 @@ if (-not $configuration.apiKey) { throw 'The temporary real-model test configura
 Write-Output ('::add-mask::' + $configuration.apiKey)
 $privateFile = Join-Path $work 'connection.private.json'
 $configuration | ConvertTo-Json -Compress | Set-Content -LiteralPath $privateFile -Encoding utf8NoBOM
+$checkpointToken = $env:GH_TOKEN
+function Publish-Checkpoint($state) {
+    if (-not $request.releaseId) { return }
+    try {
+        $headers = @{Authorization = ('Bearer ' + $checkpointToken); Accept = 'application/vnd.github+json'}
+        $api = 'https://api.github.com/repos/' + $env:GITHUB_REPOSITORY
+        $assets = Invoke-RestMethod -Headers $headers -Uri ($api + '/releases/' + $request.releaseId + '/assets') -TimeoutSec 10
+        foreach ($asset in $assets) {
+            if ($asset.name -eq 'story-progress.json') { Invoke-RestMethod -Method Delete -Headers $headers -Uri ($api + '/releases/assets/' + $asset.id) -TimeoutSec 10 | Out-Null }
+        }
+        $checkpoint = @{runId = $env:GITHUB_RUN_ID; phase = $state.finalStep; passed = $state.passed;
+            authenticated = $state.authenticated; checks = $state.checks; realModelReplies = $state.realModelReplies;
+            transientRetries = $state.transientRetries; visited = $state.visited; errors = $state.errors;
+            updatedUtc = [DateTime]::UtcNow.ToString('o')}
+        $data = [Text.Encoding]::UTF8.GetBytes(($checkpoint | ConvertTo-Json -Depth 5 -Compress))
+        $upload = 'https://uploads.github.com/repos/' + $env:GITHUB_REPOSITORY + '/releases/' + $request.releaseId + '/assets?name=story-progress.json'
+        Invoke-RestMethod -Method Post -Headers $headers -Uri $upload -ContentType 'application/json' -Body $data -TimeoutSec 10 | Out-Null
+    } catch { Write-Output 'Live checkpoint unavailable; the complete report remains in the result directory.' }
+}
 $process = $null
 try {
     & gh release download $request.tag --repo $env:GITHUB_REPOSITORY --pattern $request.asset --dir $work
@@ -37,21 +56,25 @@ try {
     $env:GH_TOKEN = $null
     $report = Join-Path $results 'story-report.json'
     $log = Join-Path $results 'player.log'
-    $arguments = @('-batchmode', '-silent-crashes', '-force-d3d11', '-force-driver-type-warp',
+    $arguments = @('-silent-crashes', '-force-d3d11', '-force-driver-type-warp',
         '-screen-fullscreen', '0', '-screen-width', '960', '-screen-height', '540',
         '-logFile', ('"' + $log + '"'), '-windows-story-qa', ('"' + $report + '"'),
         '-story-qa-config', ('"' + $privateFile + '"'))
     $process = Start-Process -FilePath (Join-Path $root 'ThreeBodyTraveller.exe') -ArgumentList $arguments -WorkingDirectory $root -PassThru
+    $null = $process.Handle
     $deadline = [DateTime]::UtcNow.AddMinutes(32)
     $phase = ''
+    $replies = -1
     while (-not $process.HasExited -and [DateTime]::UtcNow -lt $deadline) {
         Start-Sleep -Seconds 10
         if (Test-Path -LiteralPath $report) {
             try {
                 $state = Get-Content -LiteralPath $report -Raw | ConvertFrom-Json
-                if ($state.finalStep -ne $phase) {
+                if ($state.finalStep -ne $phase -or $state.realModelReplies -ne $replies) {
                     $phase = $state.finalStep
+                    $replies = $state.realModelReplies
                     Write-Output ('Story phase: ' + $phase + '; real model replies: ' + $state.realModelReplies)
+                    Publish-Checkpoint $state
                 }
             } catch { }
         }
@@ -61,6 +84,7 @@ try {
     $process.WaitForExit()
     if (-not (Test-Path -LiteralPath $report)) { throw 'The game exited without a story report. Inspect player.log.' }
     $state = Get-Content -LiteralPath $report -Raw | ConvertFrom-Json
+    Publish-Checkpoint $state
     $state | ConvertTo-Json -Depth 10 | Write-Output
     if ($process.ExitCode -ne 0 -or -not $state.passed -or $state.finalStep -ne 'Summary') { throw 'The native Windows full-story test failed.' }
 } finally {
