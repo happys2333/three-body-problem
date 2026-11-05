@@ -1,0 +1,29 @@
+{
+  "1": {
+    "class_type": "TencentTextToModelNode",
+    "inputs": {
+      "model": "3.1",
+      "prompt": "一栋独立完整的中世纪欧洲石砌街角民居，适合第一人称写实游戏，面宽7米、高10米、进深8米。两层灰褐色粗石墙，局部米灰抹灰修补，陡峭的暗灰板岩山墙屋顶，小型石烟囱。一扇拱形厚木门，三四处窄窗与深色木百叶，二楼在一侧略向街面出挑并有简单橡木支撑，另一侧墙朴素，形成清楚的非对称轮廓。石基与地面接触，不要外加地台。灰白石材和深棕木材低饱和、轻微磨损，真实PBR，均匀中性照明，不烘焙强烈阴影。完整360度结构和背面。只生成建筑本身，不要人物、植物、道路、家具、旗帜、商标、文字或发光窗户。",
+      "face_count": 50000,
+      "generate_type": "Normal",
+      "generate_type.pbr": true,
+      "seed": 20261109
+    },
+    "_meta": {
+      "title": "StoneGableHouse · Hunyuan3D 3.1 PBR"
+    }
+  },
+  "2": {
+    "class_type": "SaveGLB",
+    "inputs": {
+      "mesh": [
+        "1",
+        1
+      ],
+      "filename_prefix": "three-body-medieval-20261106/StoneGableHouse"
+    },
+    "_meta": {
+      "title": "Archive one GLB with embedded PBR maps"
+    }
+  }
+}

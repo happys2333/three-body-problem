@@ -1,0 +1,10 @@
+{
+    "portals": 1,
+    "piers": 10,
+    "houses": 4,
+    "guards": 2,
+    "doorwayClear": true,
+    "threeSunsVisible": true,
+    "guardsCanExit": true,
+    "passed": true
+}

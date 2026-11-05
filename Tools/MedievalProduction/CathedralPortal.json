@@ -1,0 +1,29 @@
+{
+  "1": {
+    "class_type": "TencentTextToModelNode",
+    "inputs": {
+      "model": "3.1",
+      "prompt": "一件独立的中世纪欧洲哥特式大教堂尖拱石门廊模块，第一人称写实游戏建筑素材。正面宽12米，高18米，进深2米。中间是前后贯通的宽大尖拱空门洞，门洞净宽8米、净高10米，可以让人走过；不要门板或填充物。两侧对称的三层凹进拱圈和细束柱，柱脚磨损，简洁叶纹柱头，顶部素面三角石山墙。真实灰褐色石灰岩大块砌石，少量风化缺角和深色接缝，石材颜色克制一致，清晰但不过度繁复的石刻几何纹样。完整立体厚度，背面也是砌石。比例庄重、空旷、略带压迫感，适合教廷质询大厅入口。PBR石材，均匀中性光照，无烘焙强阴影。只生成这个可拼装建筑构件，不要人物、植被、文字、地面底座或周围场景。",
+      "face_count": 50000,
+      "generate_type": "Normal",
+      "generate_type.pbr": true,
+      "seed": 20261106
+    },
+    "_meta": {
+      "title": "Medieval cathedral portal · Hunyuan3D 3.1 PBR"
+    }
+  },
+  "2": {
+    "class_type": "SaveGLB",
+    "inputs": {
+      "mesh": [
+        "1",
+        1
+      ],
+      "filename_prefix": "three-body-medieval-20261106/CathedralPortal"
+    },
+    "_meta": {
+      "title": "Archive one GLB with embedded PBR maps"
+    }
+  }
+}

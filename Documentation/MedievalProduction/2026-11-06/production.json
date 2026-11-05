@@ -1,0 +1,145 @@
+{
+  "date": "2026-11-06",
+  "design": "延续现有哥特式教廷大厅、解释与质询、警报后出门观察三日的剧情路线；本轮制作建筑构件和民居变化。",
+  "assets": [
+    {
+      "id": "CathedralPortal",
+      "name": "尖拱石门廊",
+      "generator": "Tencent Hunyuan3D 3.1 via Comfy Cloud",
+      "jobId": "e00c0f82-a516-400b-9200-fd0ffb4fcd6b",
+      "workflow": "Tools/MedievalProduction/CathedralPortal.json",
+      "source": "ArtSource/Environment/Hunyuan/2026-11-06/CathedralPortal/CathedralPortal_PBR.glb",
+      "sha256": "f002331e89ab9f17c8f18f0d1b57adf410837eb0c9fde448053f5b053a578ff4",
+      "sourceBytes": 42732352,
+      "sourceTriangles": 50026,
+      "pbr": true,
+      "dimensionsMetres": [
+        14.0,
+        16.0,
+        2.4
+      ],
+      "textureSizes": {
+        "albedo": 2048,
+        "normal": 1024,
+        "mask": 512
+      },
+      "trianglesByLod": [
+        20010,
+        9382,
+        5770
+      ],
+      "preparedAssetBytes": 11263469,
+      "prefab": "Assets/_Project/Art/Medieval20261106/Prefabs/CathedralPortal.prefab",
+      "visualReview": "accepted"
+    },
+    {
+      "id": "ClusterPier",
+      "name": "哥特式束柱",
+      "generator": "Tencent Hunyuan3D 3.1 via Comfy Cloud",
+      "jobId": "d23417ac-50d0-4dd6-abc3-4ef9e71b1d63",
+      "workflow": "Tools/MedievalProduction/ClusterPier.json",
+      "source": "ArtSource/Environment/Hunyuan/2026-11-06/ClusterPier/ClusterPier_PBR.glb",
+      "sha256": "da6e49d61be15cecdc49714ccd29870c3b19a700afef5e1c6e603c4dc11653ab",
+      "sourceBytes": 37108352,
+      "sourceTriangles": 30000,
+      "pbr": true,
+      "dimensionsMetres": [
+        2.0,
+        10.4,
+        2.0
+      ],
+      "textureSizes": {
+        "albedo": 1024,
+        "normal": 1024,
+        "mask": 512
+      },
+      "trianglesByLod": [
+        9144,
+        3566,
+        2518
+      ],
+      "preparedAssetBytes": 4681244,
+      "prefab": "Assets/_Project/Art/Medieval20261106/Prefabs/ClusterPier.prefab",
+      "visualReview": "accepted"
+    },
+    {
+      "id": "StoneGableHouse",
+      "name": "石砌山墙民居",
+      "generator": "Tencent Hunyuan3D 3.1 via Comfy Cloud",
+      "jobId": "d6b8b25d-dbcf-4445-ac13-416d054116c4",
+      "workflow": "Tools/MedievalProduction/StoneGableHouse.json",
+      "source": "ArtSource/Environment/Hunyuan/2026-11-06/StoneGableHouse/StoneGableHouse_PBR.glb",
+      "sha256": "b9f754d9673a3821961eb2b9e95b95aef5f22f366e9423f63712f50829785f72",
+      "sourceBytes": 43648652,
+      "sourceTriangles": 50000,
+      "pbr": true,
+      "dimensionsMetres": [
+        7.0,
+        10.0,
+        8.0
+      ],
+      "textureSizes": {
+        "albedo": 1024,
+        "normal": 1024,
+        "mask": 512
+      },
+      "trianglesByLod": [
+        10000,
+        3213,
+        879
+      ],
+      "preparedAssetBytes": 4659685,
+      "prefab": "Assets/_Project/Art/Medieval20261106/Prefabs/StoneGableHouse.prefab",
+      "visualReview": "accepted"
+    }
+  ],
+  "scene": {
+    "portals": 1,
+    "piers": 10,
+    "houses": 4,
+    "guards": 2,
+    "doorwayClear": true,
+    "threeSunsVisible": true,
+    "guardsCanExit": true,
+    "passed": true
+  },
+  "rejected": [
+    {
+      "id": "MerchantTownhouse",
+      "reason": "UV distortion in native Unity review after reduction; excluded from scene and final asset library.",
+      "job": "c805095c-170c-444d-8553-066c8f7ca8ea",
+      "prompt": "独立完整的中世纪末期欧洲商人民居，写实游戏场景建筑素材。两层加尖山墙阁楼，面宽8米、高11米、进深7米。底层灰褐石砌基座和一扇关闭的厚木门，上层米灰色抹灰墙与深棕色橡木梁框架，细而明确的木窗棂，窗户尺寸克制。陡峭的深灰板岩双坡屋顶，少量不规则瓦边和小烟囱。完整的侧面、背墙和屋顶厚度，后墙较朴素。色彩低饱和、材料粗糙自然，轻微风化，细节可读但体块清晰。统一中性光照PBR贴图，不要强烈烘焙阴影。建筑落地，不要额外的方形地台、周围街道、人物、植被、布景、招牌、文字或发光窗户。",
+      "sha256": "c9595115f010990c2b524c60aa2cfd9685f83edee6c76a34faf673ee7a2ffbf6",
+      "bytes": 43885464
+    }
+  ],
+  "runtimeOnlyPreparedAssets": true,
+  "localWeightDownloads": 0,
+  "dependencies": {
+    "meshoptimizer": "gltfpack 1.3",
+    "archiveSha256": "1002fe6a437aa005eca541502c27b8d2b184f91f4ad0c6d282e3614a1e35e75a",
+    "source": "https://github.com/zeux/meshoptimizer/releases/tag/v1.3"
+  },
+  "screenshots": "Previews/; 场景截图为建筑审阅，拍摄时暂时隐藏人物。",
+  "resourceBuild": {
+    "result": "Succeeded",
+    "entryScene": "Assets/_Project/Scenes/Traveller/01_GobiJourney.unity",
+    "unityVersion": "6000.3.27f2",
+    "bytes": 950216896,
+    "errors": 0,
+    "warnings": 0,
+    "development": false,
+    "aiRequired": true,
+    "storyQa": false,
+    "baselinePlayerBytes": 935908010,
+    "deltaBytes": 14308886,
+    "deltaPercent": 1.529,
+    "scope": "Windows player build-size check for the updated medieval art; prior R2 ZIP is the separately verified full-story build."
+  },
+  "editModeTests": {
+    "total": "141",
+    "passed": "141",
+    "failed": "0"
+  },
+  "acceptedAssetLibraryBytes": 20721949
+}

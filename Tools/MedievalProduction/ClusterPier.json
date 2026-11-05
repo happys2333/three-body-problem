@@ -1,0 +1,29 @@
+{
+  "1": {
+    "class_type": "TencentTextToModelNode",
+    "inputs": {
+      "model": "3.1",
+      "prompt": "一根独立的中世纪欧洲哥特式大教堂石质束柱，写实第一人称游戏建筑构件。高10米，四根圆形细柱围绕中央八角石柱芯，整体粗细比例修长，底座宽2米。底部是两层简洁八角柱础，中段直立通长，顶端为清楚的叶纹雕花柱头和方形承拱石。灰米色石灰岩，规则石材拼缝，轻微磨损、缺角和积尘，克制的自然风化，与灰白色尖拱石门廊一致。完整360度立体背面，真实PBR石材，纹理没有强烈烘焙阴影。只生成单根可重复拼装束柱，不要墙、门、横梁、屋顶、底板、人物、植物、文字或多根并排的柱子。",
+      "face_count": 30000,
+      "generate_type": "Normal",
+      "generate_type.pbr": true,
+      "seed": 20261107
+    },
+    "_meta": {
+      "title": "ClusterPier · Hunyuan3D 3.1 PBR"
+    }
+  },
+  "2": {
+    "class_type": "SaveGLB",
+    "inputs": {
+      "mesh": [
+        "1",
+        1
+      ],
+      "filename_prefix": "three-body-medieval-20261106/ClusterPier"
+    },
+    "_meta": {
+      "title": "Archive one GLB with embedded PBR maps"
+    }
+  }
+}

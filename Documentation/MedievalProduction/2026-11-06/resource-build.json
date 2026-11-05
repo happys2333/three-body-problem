@@ -1,0 +1,15 @@
+{
+  "result": "Succeeded",
+  "entryScene": "Assets/_Project/Scenes/Traveller/01_GobiJourney.unity",
+  "unityVersion": "6000.3.27f2",
+  "bytes": 950216896,
+  "errors": 0,
+  "warnings": 0,
+  "development": false,
+  "aiRequired": true,
+  "storyQa": false,
+  "baselinePlayerBytes": 935908010,
+  "deltaBytes": 14308886,
+  "deltaPercent": 1.529,
+  "scope": "Windows player build-size check for the updated medieval art; prior R2 ZIP is the separately verified full-story build."
+}
