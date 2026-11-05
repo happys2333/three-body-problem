@@ -18,7 +18,7 @@
       "level": 0,
       "triangles": 9144,
       "vertices": 8052,
-      "bytes": 1209501,
+      "bytes": 1209500,
       "bounds": [
         [
           -0.9999999999999999,
@@ -36,7 +36,7 @@
       "level": 1,
       "triangles": 3566,
       "vertices": 4090,
-      "bytes": 560612,
+      "bytes": 560611,
       "bounds": [
         [
           -0.9996096693248194,
@@ -54,7 +54,7 @@
       "level": 2,
       "triangles": 2518,
       "vertices": 3308,
-      "bytes": 435728,
+      "bytes": 435727,
       "bounds": [
         [
           -0.9991759395256735,
@@ -69,5 +69,5 @@
       ]
     }
   ],
-  "assetBytes": 4681244
+  "assetBytes": 4681241
 }

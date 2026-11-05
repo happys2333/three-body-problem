@@ -44,7 +44,7 @@ def prepare(source, lod_directory, destination, identifier, dimensions, albedo_s
             raise ValueError('Invalid geometry or UVs: ' + str(path))
         text = trimesh.exchange.obj.export_obj(mesh, include_normals=True, include_texture=True,
                                               include_color=False, write_texture=False)
-        text = '\n'.join(line for line in text.splitlines() if not line.startswith(('mtllib ', 'usemtl '))) + '\n'
+        text = '\n'.join(line for line in text.splitlines() if not line.startswith(('mtllib ', 'usemtl '))).rstrip() + '\n'
         output = destination / f'LOD{level}.obj'
         output.write_text(text)
         rows.append({'level': level, 'triangles': len(mesh.faces), 'vertices': len(mesh.vertices),
@@ -52,7 +52,7 @@ def prepare(source, lod_directory, destination, identifier, dimensions, albedo_s
     result = {'id': identifier, 'sourceSha256': hashlib.sha256(source.read_bytes()).hexdigest(),
               'sourceBytes': source.stat().st_size, 'sourceTriangles': len(source_mesh.faces),
               'dimensions': list(dimensions), 'textureSizes': {'albedo': albedo_size, 'normal': 1024, 'mask': 512}, 'lods': rows,
-              'assetBytes': sum(p.stat().st_size for p in destination.rglob('*') if p.is_file())}
+              'assetBytes': sum(p.stat().st_size for p in [*(destination.glob('LOD*.obj')), *(maps.glob('*.png'))])}
     (destination / 'prepared.json').write_text(json.dumps(result, indent=2) + '\n')
     print(json.dumps(result))
 

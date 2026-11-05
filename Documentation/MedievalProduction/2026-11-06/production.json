@@ -28,7 +28,7 @@
         9382,
         5770
       ],
-      "preparedAssetBytes": 11263469,
+      "preparedAssetBytes": 11262164,
       "prefab": "Assets/_Project/Art/Medieval20261106/Prefabs/CathedralPortal.prefab",
       "visualReview": "accepted"
     },
@@ -58,7 +58,7 @@
         3566,
         2518
       ],
-      "preparedAssetBytes": 4681244,
+      "preparedAssetBytes": 4681241,
       "prefab": "Assets/_Project/Art/Medieval20261106/Prefabs/ClusterPier.prefab",
       "visualReview": "accepted"
     },
@@ -88,7 +88,7 @@
         3213,
         879
       ],
-      "preparedAssetBytes": 4659685,
+      "preparedAssetBytes": 4659682,
       "prefab": "Assets/_Project/Art/Medieval20261106/Prefabs/StoneGableHouse.prefab",
       "visualReview": "accepted"
     }
@@ -141,5 +141,5 @@
     "passed": "141",
     "failed": "0"
   },
-  "acceptedAssetLibraryBytes": 20721949
+  "acceptedAssetLibraryBytes": 20721940
 }
