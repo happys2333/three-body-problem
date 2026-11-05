@@ -79,8 +79,16 @@ namespace ThreeBodyProblem
             yield return Wait(() => ui.Q<Button>("settings-test").enabledSelf, connection.timeoutSeconds + 10, "Invalid-key test did not finish.");
             Check(journey.IsTitle && !ui.Q<Label>("settings-status").ClassListContains("settings-good"), "Invalid API credentials unlocked the journey.");
             ui.Q<TextField>("settings-api-key").value = connection.apiKey;
-            Click(ui.Q<Button>("settings-test"));
-            yield return Wait(() => ui.Q<Button>("settings-test").enabledSelf, connection.timeoutSeconds + 10, "Real model connection test did not finish.");
+            for (int attempt = 0; attempt < 4; attempt++)
+            {
+                Click(ui.Q<Button>("settings-test"));
+                yield return Wait(() => ui.Q<Button>("settings-test").enabledSelf, connection.timeoutSeconds + 10, "Real model connection test did not finish.");
+                var status = ui.Q<Label>("settings-status");
+                if (status.ClassListContains("settings-good")) break;
+                bool transient = status.text.Contains("受限") || status.text.Contains("繁忙") || status.text.Contains("超时") || status.text.Contains("服务返回错误") || status.text.Contains("暂");
+                if (!transient || attempt == 3) break;
+                report.transientRetries++; Write(); yield return Delay(30 * (attempt + 1));
+            }
             Check(ui.Q<Label>("settings-status").ClassListContains("settings-good"), "Real model connection failed: " + ui.Q<Label>("settings-status").text);
             Check(ui.Q<TextField>("settings-api-key").isPasswordField, "The API key was exposed in the UI.");
             Capture("02_ai_verified");
