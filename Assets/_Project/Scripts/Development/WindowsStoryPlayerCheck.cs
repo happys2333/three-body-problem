@@ -236,7 +236,7 @@ namespace ThreeBodyProblem
             {
                 yield return TalkAttempt(npcId, question);
                 if (lastAttemptSucceeded) yield break;
-                bool transient = lastAttemptFailure == "rate_limited" || lastAttemptFailure == "timeout" || lastAttemptFailure == "unreachable" || lastAttemptFailure == "unavailable";
+                bool transient = lastAttemptFailure == "rate_limited" || lastAttemptFailure == "timeout" || lastAttemptFailure == "unreachable" || lastAttemptFailure == "unavailable" || lastAttemptFailure == "invalid_response";
                 Check(transient && attempt < 5, "Real NPC response failed: " + director.Status);
                 report.transientRetries++; Write();
                 yield return Delay(30 * (attempt + 1));

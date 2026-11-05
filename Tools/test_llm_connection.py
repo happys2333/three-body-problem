@@ -51,6 +51,19 @@ class ConnectionTests(unittest.TestCase):
             self.assertEqual(gateway.dialogue(payload, online=True, opener=fail)['mode'], 'scripted')
             self.assertEqual(llm.connection_test({'mode': 'scripted'}, True, fail)['mode'], 'scripted')
 
+    def test_discovery_custom_deepseek_uses_the_short_reply_budget_for_json(self):
+        for model in ('deepseek-v4.1-flash-1017', 'deepseek-v4-flash-0731', 'atria-dawn'):
+            with self.subTest(model=model):
+                captured = {}
+                def fake(request, timeout):
+                    captured.update(json.loads(request.data))
+                    return self.reply({'speech': '先出去观察。', 'storyIntent': 'continue'})
+                config = self.config(apiUrl='https://discovery-api.intern-ai.org.cn/v1', model=model)
+                value = llm.chat_completion(llm.resolve_connection(config), [], opener=fake)
+                self.assertEqual(captured['thinking'], {'type': 'disabled'})
+                self.assertEqual(captured['max_tokens'], 320)
+                self.assertEqual(value['speech'], '先出去观察。')
+
     def test_connection_test_requires_a_real_valid_upstream_reply(self):
         result = llm.connection_test(self.config(), opener=lambda *_args, **_kw: self.reply({'ok': True}))
         self.assertTrue(result['ok']); self.assertEqual(result['mode'], 'online')

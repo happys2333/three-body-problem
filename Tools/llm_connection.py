@@ -120,12 +120,11 @@ def chat_completion_choice(connection, messages, max_tokens=320, opener=None, to
             'temperature': .7, 'stream': False}
     if tools:
         body.update(tools=tools, tool_choice='auto')
-    # This endpoint's Atria model counts default reasoning against max_tokens.
-    # NPC JSON was truncated within the existing 320-token output budget. The
-    # live non-thinking profile returns complete short replies within that budget.
-    atria = (urllib.parse.urlsplit(connection.api_url).hostname == 'discovery-api.intern-ai.org.cn'
-             and connection.model.casefold().startswith('atria-dawn'))
-    if connection.deepseek or atria:
+    # Discovery's reasoning models spend the short NPC JSON output budget on
+    # hidden reasoning as well, including DeepSeek selected in custom mode.
+    discovery_reasoning = (urllib.parse.urlsplit(connection.api_url).hostname == 'discovery-api.intern-ai.org.cn'
+                           and connection.model.casefold().startswith(('atria-dawn', 'deepseek-')))
+    if connection.deepseek or discovery_reasoning:
         body['thinking'] = {'type': 'disabled'}
     headers = {'Content-Type': 'application/json'}
     if connection.key:
