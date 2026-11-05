@@ -64,7 +64,7 @@ namespace ThreeBodyProblem
             yield return Walk(new Vector3(-4,0,-14));Check(journey.Progress.Step==JourneyStep.ApproachTraveller,"The nearby fire did not trigger the invitation.");Capture("03_ComeHere");yield return Frames(3);
             yield return Walk(new Vector3(-6,0,-5.7f));yield return Frames(3);
             Check(journey.Progress.Step==JourneyStep.OpeningTalk,"Walking up to the stranger did not start the brief conversation.");
-            Check(journey.Speech.Contains("快过来，现在是乱纪元，不要命吗？"),"The requested greeting is missing.");
+            Check(journey.Speech.Contains("快过来，现在是乱纪元，太阳随时可能出现，不要命吗？"),"The requested greeting is missing.");
             Check(dialogue.EnsureVoiceConversation(),"Nearby push-to-talk cannot open the conversation.");
             Check(!stage.player.InputBlocked,"Conversation unexpectedly prevents walking.");Capture("04_FirstConversation");yield return Frames(3);
             int openingTurn=0;

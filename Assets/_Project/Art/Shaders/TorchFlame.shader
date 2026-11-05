@@ -7,6 +7,7 @@ Shader "Traveller/Torch Flame"
         _FrameRate ("Frames per second", Float) = 30
         _Intensity ("Emission", Range(0,4)) = 1.5
         _Phase ("Instance phase", Float) = 0
+        _Combustion ("Combustion", Range(0,1)) = 1
     }
     SubShader
     {
@@ -21,7 +22,7 @@ Shader "Traveller/Torch Flame"
             #include "UnityCG.cginc"
             sampler2D _MainTex;
             float4 _MainTex_TexelSize, _Grid;
-            float _FrameRate, _Intensity, _Phase;
+            float _FrameRate, _Intensity, _Phase, _Combustion;
             struct appdata { float4 vertex:POSITION; float2 uv:TEXCOORD0; };
             struct v2f { float4 pos:SV_POSITION; float2 uv:TEXCOORD0; };
             v2f vert(appdata v) { v2f o; o.pos=UnityObjectToClipPos(v.vertex);o.uv=v.uv;return o; }
@@ -43,7 +44,7 @@ Shader "Traveller/Torch Flame"
                 float4 a=tex2D(_MainTex,FrameUV(i.uv,frame));
                 float4 b=tex2D(_MainTex,FrameUV(i.uv,fmod(frame+1,frames)));
                 float4 fire=lerp(a,b,frac(time));
-                fire.rgb*=_Intensity;
+                fire.rgb*=_Intensity*_Combustion;
                 fire.a*=smoothstep(0,.018,i.uv.y);
                 return fire;
             }

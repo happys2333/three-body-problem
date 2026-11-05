@@ -41,7 +41,7 @@ namespace ThreeBodyProblem
             hud.OpenSettings();var ui=hud.SettingsPanel.Root;ui.Q<DropdownField>("settings-provider").index=2;
             ui.Q<TextField>("settings-api-url").value=Option("-context-test-upstream");ui.Q<TextField>("settings-gateway-url").value=Option("-context-test-gateway");
             ui.Q<TextField>("settings-model").value="qa-context-model";ui.Q<TextField>("settings-api-key").value="test-context-key";
-            ui.Q<DropdownField>("settings-context-window").index=2;ui.Q<Toggle>("settings-speak-replies").value=false;
+            ui.Q<DropdownField>("settings-context-window").value="1M";ui.Q<Toggle>("settings-speak-replies").value=false;
             yield return Frames(4);Capture("01_OneMillion_Context_Setting");yield return Frames(3);
             hud.SettingsPanel.Apply();
             Check(TravellerUserSettings.Current.connection.contextWindowTokens==1000000,"1M context preference not applied.");
@@ -59,7 +59,29 @@ namespace ThreeBodyProblem
             Check(NpcConversationMemory.History("major:king").Count==0,"The king inherited the traveller's private history.");
             Capture("02_Gobi_Memory_Reply");yield return Frames(3);
             journey.CloseDialogue();
-            p.Tick(p.MinimumOpeningTalkSeconds);p.ChooseStoryIntent("sunrise");p.MarkGiantSunVisible();p.Arrive();p.IntroduceTraveller();
+            p.Tick(p.MinimumOpeningTalkSeconds);p.ChooseStoryIntent("sunrise");p.MarkGiantSunVisible();
+            stage.ApplyMoment(1,true,false);
+            companion.transform.position = new Vector3(4,0,-12);
+            var observer = companion.GetComponent<NpcIdentity>();
+            stage.Journal.entries.RemoveAll(entry => entry.observationId == "gobi_giant_sun");
+            yield return Ask(observer,"我刚才看到三个太阳。");
+            Check(!stage.Journal.entries.Exists(entry => entry.observationId == "gobi_giant_sun"),"An unconfirmed claim entered the journal.");
+            yield return Ask(observer,"我刚才看到一轮特别大的太阳。");
+            var observation = stage.Journal.entries.Find(entry => entry.observationId == "gobi_giant_sun");
+            Check(observation != null && observation.category == "交谈确认" && observation.confirmedBy == "旅人",
+                "The witnessed fact was not saved with the responding NPC as source.");
+            Check(director.LastReply == "你说得对，我也看到了。","The tool call did not produce an acknowledgment.");
+            journey.CloseDialogue();
+            Vector3 eye = new Vector3(4,1.75f,-12);
+            stage.player.Teleport(eye,eye-Vector3.forward*20);
+            yield return new WaitForSecondsRealtime(.9f);
+            Check(observation != null && observation.category == "交谈确认","Looking away counted as a direct observation.");
+            stage.player.FaceTarget(stage.ObservationTarget());
+            yield return Until(() => observation != null && observation.category == "亲眼观察",4);
+            Check(stage.Journal.entries.FindAll(entry => entry.observationId == "gobi_giant_sun").Count == 1,
+                "Direct observation duplicated the confirmed journal entry.");
+            Capture("02b_Giant_Sun_Observed");
+            p.Arrive();p.IntroduceTraveller();
             p.Tick(p.MinimumShelterTalkSeconds);p.ChooseStoryIntent("sunset");p.Tick(p.SuddenSunsetSeconds);
             p.AddNightWalking(p.MinimumNightWalkMetres);p.Tick(p.MinimumNightWalkSeconds);p.Arrive();
             yield return Until(()=>SceneManager.GetActiveScene().name==TravellerStage.SceneNames[1],30);

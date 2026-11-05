@@ -100,7 +100,7 @@ namespace ThreeBodyProblem
             stage.player.Teleport(safe+Vector3.up*stage.player.eyeHeight,safe+Vector3.up*stage.player.eyeHeight+Vector3.forward*20);
             Vitality.Restore();exposed=false;PlayerIsSheltered=true;HitPulse=0;
             seconds=0;while(seconds<.5f){seconds+=Time.unscaledDeltaTime;Blackout=1-Mathf.Clamp01(seconds/.5f);yield return null;}
-            Blackout=0;IsRecovering=false;stage.Journey.Speak("旅人：别再站到日光里。先在这里缓一缓。",6);
+            Blackout=0;IsRecovering=false;stage.Journey.Speak("旅人：不要傻站在阳光下，会被烤焦的。",6);
         }
     }
 }

@@ -1,0 +1,131 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "three-body-environment/royal-relief-reference.jpg"
+    }
+  },
+  "2": {
+    "class_type": "ImageCrop",
+    "inputs": {
+      "image": [
+        "1",
+        0
+      ],
+      "width": 810,
+      "height": 810,
+      "x": 395,
+      "y": 45
+    }
+  },
+  "3": {
+    "class_type": "ImageOnlyCheckpointLoader",
+    "inputs": {
+      "ckpt_name": "hunyuan3d-dit-v2_fp16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "CLIPVisionEncode",
+    "inputs": {
+      "clip_vision": [
+        "3",
+        1
+      ],
+      "image": [
+        "2",
+        0
+      ],
+      "crop": "none"
+    }
+  },
+  "5": {
+    "class_type": "Hunyuan3Dv2Conditioning",
+    "inputs": {
+      "clip_vision_output": [
+        "4",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "EmptyLatentHunyuan3Dv2",
+    "inputs": {
+      "resolution": 3072,
+      "batch_size": 1
+    }
+  },
+  "7": {
+    "class_type": "ModelSamplingAuraFlow",
+    "inputs": {
+      "model": [
+        "3",
+        0
+      ],
+      "shift": 1.0,
+      "sampling": "flow"
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "7",
+        0
+      ],
+      "seed": 882514,
+      "steps": 18,
+      "cfg": 7.0,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "positive": [
+        "5",
+        0
+      ],
+      "negative": [
+        "5",
+        1
+      ],
+      "latent_image": [
+        "6",
+        0
+      ],
+      "denoise": 1.0
+    }
+  },
+  "9": {
+    "class_type": "VAEDecodeHunyuan3D",
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ],
+      "num_chunks": 4096,
+      "octree_resolution": 96
+    }
+  },
+  "10": {
+    "class_type": "VoxelToMesh",
+    "inputs": {
+      "voxel": [
+        "9",
+        0
+      ],
+      "algorithm": "basic",
+      "threshold": 0.51
+    }
+  },
+  "11": {
+    "class_type": "SaveGLB",
+    "inputs": {
+      "mesh": [
+        "10",
+        0
+      ],
+      "filename_prefix": "three-body-environment/ShangGateBronze2"
+    }
+  }
+}

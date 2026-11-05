@@ -42,7 +42,7 @@ namespace ThreeBodyProblem
             float target = player.y > 3.5f && player.y < 12.5f ? Mathf.Clamp01(edge / 2) : 0;
             indoor = Mathf.MoveTowards(indoor, target, Time.deltaTime * 2);
             stage.ambience.volume = outdoorVolume * Mathf.Lerp(1, .18f, indoor);
-            foreach (var fire in fires) SetLoop(fire, indoor > .01f);
+            foreach (var fire in fires) SetLoop(fire, indoor > .01f && stage.Combustion > 0f);
             SetLoop(sand, indoor > .01f && stage.Journey.Progress.Step == JourneyStep.CalendarWait && !stage.HasPendingCourtAudience);
             SetLoop(stone, indoor > .01f && Mathf.Abs(skylight.Opening - previousOpening) > .00001f);
             previousOpening = skylight.Opening;

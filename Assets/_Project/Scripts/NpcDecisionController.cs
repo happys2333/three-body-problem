@@ -36,7 +36,7 @@ namespace ThreeBodyProblem
         private NpcConversationMemory.Checkpoint checkpoint;
         private float grace, negotiationRemaining;
         private int previousFrameRate;
-        private bool rateApplied;
+        private bool rateApplied, pursuitDispatched;
         private readonly RaycastHit[] sightHits = new RaycastHit[32];
 
         private void Start()
@@ -77,6 +77,8 @@ namespace ThreeBodyProblem
         }
         private void BeginPursuit()
         {
+            if (pursuitDispatched) return;
+            pursuitDispatched = true;
             grace = settings.initialGraceSeconds; negotiationRemaining = settings.negotiationSeconds;
             foreach (var guard in guards)
             {
@@ -159,6 +161,7 @@ namespace ThreeBodyProblem
         { foreach(var guard in guards)if(guard.actor==actor)return ClearStrike(guard);return false; }
         private void RecallGuards()
         {
+            pursuitDispatched = false;
             foreach (var guard in guards)
             {
                 guard.attackAge = -1; guard.equipment.CombatThrust = guard.equipment.CombatAim = 0;

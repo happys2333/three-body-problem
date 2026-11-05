@@ -63,7 +63,16 @@ namespace ThreeBodyProblem.Tests
         [TestCase(true)] [TestCase(false)]
         public void TheLaterChaptersStillReachTheirEvidenceBasedSummary(bool explain)
         {
-            var p=NightWalk();p.Tick(12);p.AddNightWalking(35);p.Arrive();p.Arrive();p.Continue();p.Tick(7);p.Arrive();p.Observe(1,1);p.Continue();p.Tick(5);p.Observe(1,2);p.Continue();
+            var p=NightWalk();p.Tick(12);p.AddNightWalking(35);p.Arrive();p.Arrive();p.Continue();p.Tick(7);p.Arrive();p.Observe(1,1);p.Continue();p.Tick(5);
+            Assert.That(p.Step,Is.EqualTo(JourneyStep.ReturnToCourt));
+            Assert.That(p.Observe(1,2),Is.False);
+            p.Arrive();Assert.That(p.Continue(),Is.False);
+            p.Tick(JourneyProgress.FailedAudienceSeconds);Assert.That(p.Step,Is.EqualTo(JourneyStep.LeaveLongNightCourt));
+            p.Arrive();Assert.That(p.Observe(1,2),Is.True);
+            p.Tick(7);Assert.That(p.Step,Is.EqualTo(JourneyStep.DryIceSnow));
+            p.Tick(7);Assert.That(p.Step,Is.EqualTo(JourneyStep.AtmosphereFreeze));
+            p.Tick(10);Assert.That(p.Step,Is.EqualTo(JourneyStep.CapitalEnding));Assert.That(p.SceneIndex,Is.EqualTo(1));
+            p.Continue();
             Assert.That(p.SceneIndex,Is.EqualTo(2));p.Arrive();Assert.That(p.Continue(),Is.False);p.Explain(explain);p.Continue();p.Arrive();
             Assert.That(p.Observe(2,1),Is.False);p.Tick(3);p.Observe(2,1);p.Continue();p.Tick(9);
             Assert.That(p.Step,Is.EqualTo(JourneyStep.Summary));Assert.That(p.OfferedExplanation,Is.EqualTo(explain));Assert.That(p.ObservationsThisRun,Is.EqualTo(3));

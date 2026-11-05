@@ -35,7 +35,7 @@ WASD 行走，Shift 快走，直接移动鼠标环顾，T 切换玩家火把。�
 - `Ash.prefab`：散落灰烬、焦炭，三级 LOD；源文件与三档中间网格保留在同一源目录。
 - `VegetationFire.prefab`：燃烧与烟雾粒子，供池化复用；植被具有可复位的燃烧状态，本次另补三株开场枯木。
 - `SunDamage.shader`：第一人称晒伤反馈；`TorchFlame.shader`：随时间变化的火焰轮廓。
-- `Assets/_Project/Audio/ActOne/`：呼喊、警告、巨日避险、岩下、身份、沙漏与出发共七条 MOSS 神经语音配音，24 kHz 单声道，和实时回复使用同一周文王声线。现有戈壁风声继续使用。
+- `Assets/_Project/Audio/ActOne/`：呼喊、警告、巨日避险、岩下、身份、沙漏与出发共七条 MOSS 神经语音配音，24 kHz 单声道，和当时的 MOSS 实时回复使用同一周文王声线。现有戈壁风声继续使用。
 - 三个场景中的 **36 个角色**都装配了火把能力和 Humanoid 左手 IK。第一人称火把放在视野左侧；普通角色按手骨位置持火把。夜间点亮，白天熄灭火焰；主要玩家使用像素光，其他角色使用较便宜的顶点光。
 - **8 组角色提示词**覆盖周文王、纣王、教皇、学者、达芬奇、两类守卫与居民；每个可交互实例持有独立会话历史。
 - 当前本机模型：Qwen3-ASR-0.6B MLX 8-bit、MOSS-TTS-Nano ONNX 及配套音频编解码器，总下载约 1.77 GB，保存在用户缓存而非 Git 仓库。旧 Vosk 轻量、完整模型保留为回退资源。当前版本与哈希核验见 [模型安装记录](LocalVoice/model-installation.json)。
@@ -44,9 +44,21 @@ WASD 行走，Shift 快走，直接移动鼠标环顾，T 切换玩家火把。�
 
 ## 本机语音服务
 
-### 2026-10-29 本地神经语音已接入
+在 Apple Silicon 上为实时 NPC 回复选用 Qwen3-TTS：
 
-当前 Apple M5 / 16 GB Mac 默认使用 **MOSS-TTS-Nano-100M 的 ONNX CPU 版负责 NPC 发声，Qwen3-ASR-0.6B 的 MLX 8-bit 版负责玩家语音转文字**，已安装并完成合成语音回环、Unity 实播、打断和前台性能验证。详细结果见 [本轮汇总](LocalVoice/summary.json)；真实麦克风、现场噪声和主观自然度仍需实际体验。
+```sh
+python3 Tools/setup_voice_gateway.py
+python3 Tools/setup_qwen_tts.py
+python3 Tools/play_act_one.py
+```
+
+启动器使用 `Builds/ActOneTraveller.app`；先在 Unity 调用 `ActOneProduction.BuildPlayer()` 构建。Qwen3-TTS 使用 `speech.cpp 0.10.1` 的 Metal 后端，权重为 **Qwen3-TTS-12Hz-0.6B-CustomVoice Q5_K**。纣王使用 Dylan，周文王使用 Uncle Fu。模型保存在用户缓存中，每次新回复合成后释放权重，命中缓存时直接读取 24 kHz 单声道 WAV。原有 ASR 选择与预制台词不受影响。运行 `python3 Tools/setup_local_voice_models.py --activate` 可选回 MOSS（需先安装其模型），`--legacy` 可回到 Vosk 与 macOS 语音。
+
+DeepSeek 可在游戏的「设置 · AI 与操作」中填写地址、模型和本次会话的 Key。测试中的 DeepSeek 朝堂回复有一轮超过 30 秒；连接该服务时可以选「使用 60 秒等待」。实时发音由本机 TTS 完成。
+
+### 旧组合：MOSS 与 Qwen3-ASR
+
+此前在 Apple M5 / 16 GB Mac 上使用 **MOSS-TTS-Nano-100M 的 ONNX CPU 版负责 NPC 发声，Qwen3-ASR-0.6B 的 MLX 8-bit 版负责玩家语音转文字**，已安装并完成合成语音回环、Unity 实播、打断和前台性能验证。详细结果见 [本轮汇总](LocalVoice/summary.json)；真实麦克风、现场噪声和主观自然度仍需实际体验。
 
 MOSS 官方提供独立 ONNX CPU 推理、参考音频克隆和流式解码路径，适合作为减少 GPU 竞争的首选候选；同时需要配套的 `MOSS-Audio-Tokenizer-Nano-ONNX`。不把小模型直接视为音质胜出，也不默认它支持 CosyVoice 那样的自然语言情绪指令。[官方部署说明](https://github.com/OpenMOSS/MOSS-TTS-Nano#onnx-cpu-inference)
 
@@ -56,9 +68,9 @@ ASR 使用 `mlx-community/Qwen3-ASR-0.6B-8bit` 与 `mlx-audio 0.6.3`，是上游
 
 关键剧情台词提前合成并缓存，自由回复实时合成；同一角色配置保持相同声线。MOSS 内部使用增量解码，但当前 Unity HTTP 接口仍接收完整 WAV 后播放，尚未实现网络音频流缓冲；模型内部的首段 PCM 时间不能当成玩家实际听到首音的延迟。CosyVoice 3 留作后续听感比较候选。具体模型 ID 与限制见 [选型记录](voice-model-selection.json)。
 
-### 当前可用实现
+### 安装旧组合
 
-当前电脑已安装依赖和识别模型。其他电脑可先执行：
+如需安装旧组合，可执行：
 
 ```sh
 python3 Tools/setup_voice_gateway.py
@@ -86,7 +98,7 @@ ASR 与 TTS 分别在独立常驻进程运行，复用权重。MOSS 限制为一
 
 游戏发送角色 ID、当前阶段、已经见到的天象、观察记录、玩家假说和当前实例的有限历史。服务端组装提示词；角色不会共享其他实例的私下聊天。模型返回台词、五种表演意图及 `storyIntent`。第一幕可选择日出、日落；Unity 校验当前阶段、双方是否安全、身份介绍和交流时长后执行。伤害、燃烧、移动和转场仍由实际游戏条件驱动，模型不能任意修改。开场不发送旧轮次观察簿。
 
-没有启用在线服务时，界面明确显示“离线剧情”，采用预设回复，主线仍可完整运行。**目前未使用真实 DeepSeek 密钥验证在线生成**；接口适配测试使用模拟上游，不能当成真人自由对话或模型角色表现验收。
+没有启用在线服务时，界面明确显示“离线剧情”，采用预设回复，主线仍可完整运行。朝歌已经用真实 DeepSeek 连接验证过四轮连续对话：质疑、煽动、警告后抗命和撤回。卫兵移动、伤害与重试另用可重复的原生玩家测试验证。
 
 现在可直接在游戏设置中填写在线接口、模型和 Key。选择“沿用本地服务配置”时，仍支持原有环境变量方式：在服务端设置 `DEEPSEEK_API_KEY`，可选设置 `DEEPSEEK_MODEL`，然后运行：
 

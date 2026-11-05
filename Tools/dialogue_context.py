@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 import threading
 
-CONTEXT_WINDOWS = (32_000, 128_000, 1_000_000)
+CONTEXT_WINDOWS = (32_000, 128_000, 512_000, 1_000_000)
 OUTPUT_RESERVE = 320
 REQUEST_LIMIT = 16_000_000
 _tokenizer = None

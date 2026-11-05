@@ -50,12 +50,12 @@ namespace ThreeBodyProblem
             public bool guardsAvailable,audienceReady;
             public float phaseElapsed;
             public string[] allowedStoryIntents;
-            public List<string> observations=new List<string>();
+            public List<SceneObservation> witnessedObservations;
             public List<string> knownEvents=new List<string>();
         }
         [Serializable] private class Interlocutor{public string id,npcId,displayName;public string[] aliases;}
         [Serializable] private class Request{public string npcId,recipientId,utterance,kind;public bool allowHandoff;public Context context;public List<Message> history;public List<Interlocutor> interlocutors;public NpcApiConnection connection;}
-        [Serializable] private class Reply{public string speech,gesture,mode,error,storyIntent,targetId,conduct,failureCode;}
+        [Serializable] private class Reply{public string speech,gesture,mode,error,storyIntent,targetId,conduct,failureCode,observationId;}
         [Serializable] private class SpeechRequest{public string text,npcId;}
 
         private void Start()
@@ -180,6 +180,11 @@ namespace ThreeBodyProblem
             question.Complete();LastReply=speech;SetStatus(FailureCode=="offline"?"当前使用剧情对白；可继续交谈或继续演出":"按住 F 继续提问");
             if(id=="wenwang"&&!GobiDialoguePolicy.IsOpening(step)&&(speech.Contains("姬昌")||speech.Contains("周文王")))journey.Progress.IdentifyTraveller();
             string name=DisplayName(identity);
+            if(!UsingFallback&&!string.IsNullOrEmpty(reply.observationId)&&request.context.witnessedObservations!=null)
+            {
+                var fact=request.context.witnessedObservations.Find(item=>item.id==reply.observationId);
+                if(fact!=null)stage.RecordConfirmedObservation(fact,name);
+            }
             emittingModelReply=true;
             try{journey.Speak(name+"："+speech,Mathf.Max(7,speech.Length*.16f));}
             finally{emittingModelReply=false;}
@@ -225,7 +230,8 @@ namespace ThreeBodyProblem
                 openingAnswers=companion?p.OpeningAnswers:0,shelterAnswers=companion?p.ShelterAnswers:0,allowedStoryIntents=allowed.ToArray(),bothInShade=companion&&sequence!=null&&sequence.BothInShade,
                 plantsIgnited=companion&&sequence!=null&&sequence.VegetationIgnited,inShade=shade,canSeePlayer=seesPlayer,playerDistance=Mathf.Round(distance),
                 playerCondition=!seesPlayer?"听见玩家的声音，看不清其身体状况。":exposure!=null&&exposure.HitPulse>.1f?"玩家正被日光灼伤，显得痛苦。":shade?"玩家目前在遮阴或夜色中。":"玩家在眼前，未见明显伤势。",
-                knownEvents=NpcConversationMemory.KnownEvents(NpcConversationMemory.Key(observer))};
+                knownEvents=NpcConversationMemory.KnownEvents(NpcConversationMemory.Key(observer)),
+                witnessedObservations=stage.ObservationsKnownTo(observer)};
             context.decisionProtocol=1;context.decisionRevision=journey.Decisions.Revision;
             context.authorityState=journey.Decisions.Defeated?"defeated":journey.Decisions.Pursuing?"pursuing":journey.Decisions.WarningActive?"warned":"calm";
             context.guardForce=journey.Decisions.Lethal?"lethal":"detain";

@@ -25,7 +25,7 @@ namespace ThreeBodyProblem
             if (Defeated) return values;
             if (IsConversant(npc, step) && audienceReady && !Pursuing) values.Add("advance");
             if (!IsAuthority(npc, step)) return values;
-            if (!Pursuing) values.Add("warn");
+            if (!WarningActive && !Pursuing) values.Add("warn");
             if (WarningActive && !Pursuing && guardsAvailable) values.Add("pursue");
             if (WarningActive && !Lethal && guardsAvailable) values.Add("attack");
             if (WarningActive || Pursuing) values.Add("stand_down");
@@ -41,13 +41,13 @@ namespace ThreeBodyProblem
                     if (!IsCooperative(conduct)) return NpcDecisionOutcome.None;
                     WarningActive = false; Revision++; return NpcDecisionOutcome.Advance;
                 case "warn":
-                    if (conduct != "disruption" && conduct != "persistent_defiance" && conduct != "violent_threat") return NpcDecisionOutcome.None;
+                    if (conduct != "disruption" && conduct != "violent_threat" && !(npc == "king" && conduct == "court_incitation")) return NpcDecisionOutcome.None;
                     WarningActive = true; Revision++; return NpcDecisionOutcome.Warning;
                 case "pursue":
                     if (conduct != "persistent_defiance" && conduct != "violent_threat") return NpcDecisionOutcome.None;
                     Pursuing = true; Revision++; return NpcDecisionOutcome.Pursue;
                 case "attack":
-                    if (conduct != "persistent_defiance" && conduct != "violent_threat") return NpcDecisionOutcome.None;
+                    if (conduct != "violent_threat") return NpcDecisionOutcome.None;
                     Pursuing = true; Lethal = true; Revision++; return NpcDecisionOutcome.Attack;
                 case "stand_down":
                     if (conduct != "apology" && !IsCooperative(conduct)) return NpcDecisionOutcome.None;

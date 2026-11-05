@@ -37,7 +37,7 @@ def main():
             if text=='QA_INVALID':self.send(b'not valid JSON');return
             if text=='QA_TIMEOUT':time.sleep(6);self.send(b'{}');return
             intent,conduct={
-                'QA_WARN':('warn','disruption'),
+                'QA_WARN':('warn','court_incitation' if facts.get('selfRole')=='king' else 'disruption'),
                 'QA_PURSUIT':('pursue','persistent_defiance'),
                 'QA_LETHAL':('attack','violent_threat'),
                 'QA_APOLOGY':('stand_down','apology'),

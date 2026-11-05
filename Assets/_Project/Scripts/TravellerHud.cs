@@ -14,7 +14,8 @@ namespace ThreeBodyProblem
         private TravellerJourney journey;
         private VisualElement root, gameplay, titleOverlay, pauseOverlay, journalOverlay, summaryOverlay, debugOverlay, travelOverlay;
         private VisualElement dialogue, debugMoments, debugScenes, captionCard, helpCard, missionCard;
-        private Label chapter, objective, navigation, caption, notice, summaryText, debugTitle, travelTitle;
+        private Button nextCivilization;
+        private Label chapter, objective, navigation, caption, notice, summaryTitle, summaryText, summaryQuestion, debugTitle, travelTitle;
         private ScrollView journalEntries;
         private TextField hypothesis;
         private Button observe;
@@ -97,21 +98,21 @@ namespace ThreeBodyProblem
             var card = Box(titleOverlay, "title-card", "menu-card title-card");
             Text(card, "T R I S O L A R I S   /   T H E   T R A V E L L E R", "eyebrow");
             Text(card, "三体 · 旅人", "game-title");
-            Text(card, "在无法预测的世界里，带着自己的观察继续前行。", "menu-description");
+            Text(card, "在无法预测的世界里，找到问题的规律。", "menu-description");
             Button(card, "开始旅程", () => { hidden = false; journey.Begin(); }, "primary start-button").name = "start-journey";
-            Button(card, "设置 · AI 与操作", OpenSettings).name = "title-settings";
-            Text(card, "在荒漠中醒来，调查四周，寻找远处的火光。", "menu-description");
+            Button(card, "设置", OpenSettings).name = "title-settings";
+            Text(card, "调查四周，确认情况。", "menu-description");
             Text(card, "WASD 行走 · 鼠标环顾 · F 语音交谈 · Enter 文字交谈 · Esc 菜单", "controls");
 
             pauseOverlay = Overlay("pause-overlay"); card = Box(pauseOverlay, "pause-card", "menu-card");
             Text(card, "旅程暂停", "menu-title"); Button(card, "继续旅程", TogglePause, "primary");
-            Button(card, "设置 · AI 与操作", OpenSettings).name = "pause-settings";
+            Button(card, "设置", OpenSettings).name = "pause-settings";
             Button(card, "查看观察簿", () => { paused = false; ToggleJournal(); });
-            Button(card, "从戈壁重新开始", () => { paused = false; journey.Begin(); });
+            Button(card, "重新开始", () => { paused = false; journey.Begin(); });
             Button(card, "返回标题", () => { paused = false; journey.ReturnToTitle(); });
 
             journalOverlay = Overlay("journal-overlay"); card = Box(journalOverlay, "journal-card", "menu-card journal-card");
-            Text(card, "旅人的观察簿", "menu-title"); Text(card, "亲眼观察、人物判断与自己的假说分别保存。", "menu-description");
+            Text(card, "旅人的观察簿", "menu-title"); Text(card, "看清眼前的现象会自动记录，也可以按 E。和人物核对过的所见会注明来源。", "menu-description");
             journalEntries = new ScrollView(); journalEntries.AddToClassList("journal-entries"); card.Add(journalEntries);
             Text(card, "我的假说", "panel-heading");
             hypothesis = new TextField { multiline = true }; hypothesis.AddToClassList("hypothesis"); card.Add(hypothesis);
@@ -119,13 +120,15 @@ namespace ThreeBodyProblem
             Button(card, "返回旅程  J / Esc", ToggleJournal, "primary");
 
             summaryOverlay = Overlay("summary-overlay"); card = Box(summaryOverlay, "summary-card", "menu-card");
-            Text(card, "旅程回顾", "menu-title"); summaryText = Text(card, "", "menu-description");
-            Text(card, "解释世界的结构之后，能否得到足够可靠的预测？", "menu-description");
+            summaryTitle = Text(card, "旅程回顾", "menu-title"); summaryText = Text(card, "", "menu-description");
+            summaryQuestion = Text(card, "解释世界的结构之后，能否得到足够可靠的预测？", "menu-description");
+            nextCivilization = Button(card, "再次登录 · 进入下一文明", journey.EnterNextCivilization, "primary");
+            nextCivilization.name = "next-civilization";
             Button(card, "翻阅自己的观察", ToggleJournal, "primary"); Button(card, "重新踏上旅程", () => journey.Begin()); Button(card, "返回标题", () => journey.ReturnToTitle());
 
             defeatOverlay=Overlay("defeat-overlay");card=Box(defeatOverlay,"defeat-card","menu-card");
             defeatTitle=Text(card,"你被卫兵制服了","menu-title");Text(card,"这一场觐见就此中断。","menu-description");
-            Button(card,"重试本次觐见",()=>decisions.RetryAudience(),"primary").name="retry-audience";
+            Button(card,"重试本次探索",()=>decisions.RetryAudience(),"primary").name="retry-audience";
             Button(card,"返回标题",()=>journey.ReturnToTitle());
 
             debugOverlay = Box(root, "debug-overlay", "debug-overlay");
@@ -164,7 +167,13 @@ namespace ThreeBodyProblem
             UpdateSubtitle();
             Display(dialogue, journey.DialogueOpen); Display(observe, journey.CanObserve && !journey.DialogueOpen);
             if(!journey.DialogueOpen&&chatInput!=null){textChatOpen=false;chatInput.Blur();}
-            summaryText.text = "这一程你完成了 " + journey.Progress.ObservationsThisRun + " 次关键观察。\n\n" + (journey.Progress.OfferedExplanation ? "你把飞星与远处的太阳联系起来，提出了自己的解释。" : "你保留了疑问，并亲眼见证了三日凌空。") + "\n\n短期应验，仍不能保证文明长期安全。";
+            bool capitalEnding = journey.IsCapitalEnding;
+            summaryTitle.text = capitalEnding ? "第 137 号文明 · 毁灭" : "旅程回顾";
+            Display(summaryQuestion, !capitalEnding);
+            Display(nextCivilization, capitalEnding);
+            summaryText.text = capitalEnding
+                ? "长夜延续了四十八年。严寒摧毁了第 137 号文明，它曾发展到战国时代。\n\n仍有文明的种子留在这片土地上。等待时机，再次登录。"
+                : "这一程你完成了 " + journey.Progress.ObservationsThisRun + " 次关键观察。\n\n" + (journey.Progress.OfferedExplanation ? "你把飞星与远处的太阳联系起来，提出了自己的解释。" : "你保留了疑问，并亲眼见证了三日凌空。") + "\n\n短期应验，仍不能保证文明长期安全。";
             if (debug) RefreshDebug(); if (journalOpen) RefreshJournal();
             RefreshChat();
             nextNavigationUpdate=0;
@@ -191,7 +200,7 @@ namespace ThreeBodyProblem
         private void OnSettingsSaved()
         {
             microphone?.CancelCapture(); dialogueDirector?.CancelQuestion();
-            ShowNotice("设置已保存。API Key 仅在本次运行中使用。");
+            ShowNotice("设置已保存。");
         }
         public void BeginTextChat()
         {
@@ -220,11 +229,20 @@ namespace ThreeBodyProblem
         private void RefreshJournal()
         {
             journalEntries.Clear();
-            foreach (string category in new[] { "亲眼观察", "人物判断" })
+            foreach (string category in new[] { "亲眼观察", "交谈确认", "人物判断" })
             {
-                Text(journalEntries, category, "panel-heading"); var lines = new StringBuilder();
-                foreach (var entry in stage.Journal.entries) if (entry.category == category) lines.Append("• ").Append(entry.text).Append('\n');
-                Text(journalEntries, lines.Length == 0 ? "还没有记录。亲眼看清后，按 E 留下所见。" : lines.ToString().TrimEnd(), "journal-text");
+                var lines = new StringBuilder();
+                foreach (var entry in stage.Journal.entries)
+                {
+                    if (entry.category != category) continue;
+                    lines.Append("• ").Append(entry.text);
+                    if (!string.IsNullOrEmpty(entry.confirmedBy)) lines.Append("（").Append(entry.confirmedBy).Append("确认）");
+                    lines.Append('\n');
+                }
+                if (category == "人物判断" && lines.Length == 0) continue;
+                Text(journalEntries, category, "panel-heading");
+                string empty = category == "亲眼观察" ? "还没有记录。看清眼前的现象后会自动写入。" : "还没有经交谈确认的观察。";
+                Text(journalEntries, lines.Length == 0 ? empty : lines.ToString().TrimEnd(), "journal-text");
             }
         }
 

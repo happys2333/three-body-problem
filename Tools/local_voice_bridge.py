@@ -60,13 +60,14 @@ class ModelWorker:
 
 
 class LocalVoice:
-    def __init__(self,threads=1):
-        self.asr=ModelWorker('qwen');self.tts=ModelWorker('moss',threads)
+    def __init__(self,threads=1,use_moss=True):
+        self.asr=ModelWorker('qwen');self.tts=ModelWorker('moss',threads) if use_moss else None
         self.profiles=json.loads((TOOLS/'voice_profiles.json').read_text())['profiles']
         self.stats={}
 
     def start(self):
-        self.asr.start();self.tts.start()
+        self.asr.start()
+        if self.tts is not None:self.tts.start()
 
     def transcribe(self,wav):
         value=self.asr.request({'audio':base64.b64encode(wav).decode()},timeout=28)
@@ -80,7 +81,8 @@ class LocalVoice:
         return base64.b64decode(value['wav'],validate=True)
 
     def close(self):
-        self.asr.close();self.tts.close()
+        self.asr.close()
+        if self.tts is not None:self.tts.close()
 
     def health(self):
         return {'asrEngine':'qwen3-asr-mlx-8bit','ttsEngine':'moss-tts-nano-onnx-cpu',

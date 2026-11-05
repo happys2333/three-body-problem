@@ -29,7 +29,7 @@ namespace ThreeBodyProblem
         private int previousFrameLimit,previousCascades,previousAntiAliasing;
         private ShadowResolution previousShadowResolution;
         private Terrain terrain;
-        private bool qualityApplied;
+        private bool qualityApplied, frameLimitApplied;
 
         private void Start()
         {
@@ -37,13 +37,26 @@ namespace ThreeBodyProblem
             dialogue=GetComponent<NpcDialogueDirector>();microphone=GetComponent<PlayerMicrophoneInput>();vegetation=GetComponent<GobiVegetationFire>();
             foreach(var actor in GetComponentsInChildren<TravellerActor>())if(actor.role==TravellerRole.WenWang){companion=actor.transform;break;}
             previousPlayer=stage.player.transform.position;
+            previousFrameLimit = Application.targetFrameRate;
+            Application.targetFrameRate = settings.frameRateLimit;
+            frameLimitApplied = true;
+            terrain = GetComponentInChildren<Terrain>();
+            if (TravellerUserSettings.Current.graphicsQuality == TravellerGraphicsQuality.SceneDefault) ApplySceneQuality();
+            journey.Progress.ConfigureGobi(settings.minimumOpeningTalkSeconds,settings.minimumShelterTalkSeconds,settings.suddenSunsetSeconds,settings.minimumNightWalkSeconds,settings.minimumNightWalkMetres);
+        }
+
+        internal void ApplySceneQuality()
+        {
+            if (qualityApplied) return;
             previousShadowDistance=QualitySettings.shadowDistance;QualitySettings.shadowDistance=settings.shadowDistance;
-            previousFrameLimit=Application.targetFrameRate;Application.targetFrameRate=settings.frameRateLimit;
             previousLodBias=QualitySettings.lodBias;previousCascades=QualitySettings.shadowCascades;previousShadowResolution=QualitySettings.shadowResolution;
             previousAntiAliasing=QualitySettings.antiAliasing;QualitySettings.antiAliasing=settings.antiAliasingSamples;
             QualitySettings.lodBias=settings.lodBias;QualitySettings.shadowCascades=settings.shadowCascades;QualitySettings.shadowResolution=ShadowResolution.High;qualityApplied=true;
-            terrain=GetComponentInChildren<Terrain>();if(terrain!=null){previousTerrainError=terrain.heightmapPixelError;terrain.heightmapPixelError=settings.terrainPixelError;}
-            journey.Progress.ConfigureGobi(settings.minimumOpeningTalkSeconds,settings.minimumShelterTalkSeconds,settings.suddenSunsetSeconds,settings.minimumNightWalkSeconds,settings.minimumNightWalkMetres);
+            if (terrain != null)
+            {
+                previousTerrainError = terrain.heightmapPixelError;
+                terrain.heightmapPixelError = settings.terrainPixelError;
+            }
         }
 
         public void ResetForNewRun()
@@ -154,12 +167,19 @@ namespace ThreeBodyProblem
             previousPlayer=stage.player.transform.position;
         }
         private void PlayLine(AudioClip clip){if(dialogue!=null)dialogue.PlayScriptedLine(clip);}
-        private void OnDestroy()
+        internal void RestoreSceneQuality()
         {
-            if(!qualityApplied)return;
+            if (!qualityApplied) return;
+            qualityApplied = false;
             QualitySettings.shadowDistance=previousShadowDistance;QualitySettings.lodBias=previousLodBias;QualitySettings.shadowCascades=previousCascades;QualitySettings.shadowResolution=previousShadowResolution;
             QualitySettings.antiAliasing=previousAntiAliasing;
-            if(terrain!=null&&previousTerrainError>0)terrain.heightmapPixelError=previousTerrainError;Application.targetFrameRate=previousFrameLimit;
+            if (terrain != null) terrain.heightmapPixelError = previousTerrainError;
+        }
+
+        private void OnDestroy()
+        {
+            RestoreSceneQuality();
+            if (frameLimitApplied) Application.targetFrameRate = previousFrameLimit;
         }
     }
 }

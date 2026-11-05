@@ -219,6 +219,7 @@ namespace ThreeBodyProblem.Editor
             stage.embers = Particles("Heat ash", new Vector3(0f, 1f, 10f), new Vector3(60f, 2f, 70f), new Color(1f, 0.45f, 0.08f, 0.6f), 30f, 8f, 0.08f, 1f);
             stage.ApplyMoment(0, true);
             if (TravellerStoryCharacters.IsAvailable) TravellerStoryCharacters.ApplyToScene(SceneManager.GetActiveScene());
+            UpgradeEnvironmentModels(SceneManager.GetActiveScene(), name);
             EditorSceneManager.SaveScene(SceneManager.GetActiveScene(), SceneFolder + "/" + name + ".unity");
         }
 

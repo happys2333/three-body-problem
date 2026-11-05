@@ -7,12 +7,22 @@ namespace ThreeBodyProblem
     {
         private Transform view;
         private static readonly int Phase = Shader.PropertyToID("_Phase");
+        private static readonly int Combustion = Shader.PropertyToID("_Combustion");
+        private Renderer flame;
+        private MaterialPropertyBlock properties;
         private void Awake()
         {
-            var renderer = GetComponent<Renderer>();
-            var properties = new MaterialPropertyBlock();
+            flame = GetComponent<Renderer>();
+            properties = new MaterialPropertyBlock();
             properties.SetFloat(Phase, Mathf.Repeat(GetInstanceID() * .618034f, 1f) * 60f);
-            renderer.SetPropertyBlock(properties);
+            flame.SetPropertyBlock(properties);
+        }
+        internal void SetCombustion(float strength)
+        {
+            if (flame == null) return;
+            flame.GetPropertyBlock(properties);
+            properties.SetFloat(Combustion, strength);
+            flame.SetPropertyBlock(properties);
         }
         private void Start() { if (Camera.main != null) view = Camera.main.transform; }
         public void FaceCamera(Vector3 cameraPosition)

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -15,11 +16,19 @@ namespace ThreeBodyProblem
         private readonly TravellerHud owner;
         private readonly NpcDialogueSettings defaults;
         private readonly Action closed, saved;
-        private readonly VisualElement overlay, apiFields, aiPage, controlsPage;
+        private readonly VisualElement overlay, apiFields, aiPage, controlsPage, graphicsPage;
         private readonly DropdownField provider;
-        private readonly DropdownField contextWindow;
-        private static readonly List<string> ContextLabels = new List<string> { "32K · 标准", "128K · 长对话", "1M · 超长对话（需模型支持）" };
-        private static readonly int[] ContextTokens = { 32000, 128000, 1000000 };
+        private readonly DropdownField contextWindow, displayMode, resolution, graphicsQuality;
+        private readonly List<Vector2Int> resolutionSizes = new List<Vector2Int>();
+        private static readonly List<string> DisplayModes = new List<string> { "窗口", "全屏" };
+        private static readonly List<string> QualityLabels = new List<string> { "默认", "低", "中", "高", "极高" };
+        private static readonly Vector2Int[] StandardSizes =
+        {
+            new Vector2Int(960, 540), new Vector2Int(1280, 720), new Vector2Int(1600, 900),
+            new Vector2Int(1920, 1080), new Vector2Int(2560, 1440), new Vector2Int(3840, 2160)
+        };
+        private static readonly List<string> ContextLabels = new List<string> { "32K", "128K", "512K", "1M" };
+        private static readonly int[] ContextTokens = { 32000, 128000, 512000, 1000000 };
         private readonly TextField apiUrl, apiKey, model, gatewayUrl;
         private readonly IntegerField timeout;
         private readonly Slider sensitivity;
@@ -31,7 +40,7 @@ namespace ThreeBodyProblem
         private readonly List<string> microphoneIds = new List<string>();
         private string[] availableMicrophones = Array.Empty<string>();
         private readonly Label status;
-        private readonly Button test, aiTab, controlsTab;
+        private readonly Button test, aiTab, controlsTab, graphicsTab;
         private UnityWebRequest pending;
         private Coroutine testing;
         private int generation;
@@ -46,17 +55,16 @@ namespace ThreeBodyProblem
             overlay = Box(parent, "settings-overlay", "overlay settings-overlay");
             var card = Box(overlay, "settings-card", "menu-card settings-card");
             Text(card, "设置", "menu-title settings-title");
-            Text(card, "调整操作，选择与你的旅程相连的 AI。", "settings-description");
             var tabs = Box(card, "settings-tabs", "settings-tabs");
-            aiTab = Button(tabs, "AI 对话", () => SelectTab(true), "settings-ai-tab");
-            controlsTab = Button(tabs, "操作与声音", () => SelectTab(false), "settings-controls-tab");
+            aiTab = Button(tabs, "AI 对话", () => SelectTab(0), "settings-ai-tab");
+            controlsTab = Button(tabs, "操作与声音", () => SelectTab(1), "settings-controls-tab");
+            graphicsTab = Button(tabs, "显示与画质", () => SelectTab(2), "settings-graphics-tab");
             scroll = new ScrollView { name = "settings-scroll" }; scroll.AddToClassList("settings-scroll"); card.Add(scroll);
             aiPage = Box(scroll, "settings-ai", "settings-page");
             provider = new DropdownField("对话模式", Providers, 0) { name = "settings-provider" };
             provider.AddToClassList("settings-select"); aiPage.Add(provider);
             contextWindow = new DropdownField("上下文长度", ContextLabels, 0) { name = "settings-context-window" };
             contextWindow.AddToClassList("settings-select"); aiPage.Add(contextWindow);
-            Text(aiPage, "保存本轮人物交流，按所选长度发送相关记忆；1M 是上限，不会自动填满，也不会让台词变长。模型需支持对应窗口，长输入可增加等待时间。", "settings-hint");
             apiFields = Box(aiPage, "settings-api-fields", "settings-api-fields");
             apiUrl = Field(apiFields, "API 地址", "settings-api-url");
             Text(apiFields, "可填写 Base URL（如含 /v1 的地址），也可填写完整 /chat/completions 地址。", "settings-hint");
@@ -89,6 +97,15 @@ namespace ThreeBodyProblem
             Text(controlsPage, "仅在按住 F 时录音，松开后自动转写发送；首次使用时按系统提示授权。关闭后仍可按 Enter 打字交谈。", "settings-hint");
             speakReplies = new Toggle("播放 NPC 语音回复") { name = "settings-speak-replies" }; controlsPage.Add(speakReplies);
             Text(controlsPage, "WASD 行走 · Shift 快走 · F 按住说话、松开发送 · J 观察簿", "settings-hint");
+            graphicsPage = Box(scroll, "settings-graphics", "settings-page");
+            displayMode = new DropdownField("显示模式", DisplayModes, 0) { name = "settings-display-mode" };
+            resolution = new DropdownField("分辨率", new List<string> { "当前分辨率" }, 0) { name = "settings-resolution" };
+            graphicsQuality = new DropdownField("画质", QualityLabels, 0) { name = "settings-graphics-quality" };
+            foreach (var field in new[] { displayMode, resolution, graphicsQuality })
+            {
+                field.AddToClassList("settings-select");
+                graphicsPage.Add(field);
+            }
             status = Text(card, "", "settings-status"); status.name = "settings-status";
             var footer = Box(card, "settings-footer", "settings-footer");
             test = Button(footer, "测试连接", BeginTest, "settings-test");
@@ -119,17 +136,39 @@ namespace ThreeBodyProblem
             contextWindow.SetValueWithoutNotify(ContextLabels[Mathf.Max(0, Array.IndexOf(ContextTokens, value.connection.contextWindowTokens))]);
             sensitivity.SetValueWithoutNotify(value.mouseSensitivity); invertY.SetValueWithoutNotify(value.invertMouseY); speakReplies.SetValueWithoutNotify(value.speakReplies);
             microphoneEnabled.SetValueWithoutNotify(value.microphoneEnabled); RefreshMicrophones(value.microphoneDevice, false);
-            IsOpen = true; overlay.style.display = DisplayStyle.Flex; SelectTab(true); RefreshProvider(); SetStatus("", false);
+            displayMode.SetValueWithoutNotify(DisplayModes[(value.displayWidth > 0 ? value.fullscreen : Screen.fullScreen) ? 1 : 0]);
+            graphicsQuality.SetValueWithoutNotify(QualityLabels[(int)value.graphicsQuality]);
+            var size = value.displayWidth > 0 ? new Vector2Int(value.displayWidth, value.displayHeight) : new Vector2Int(Screen.width, Screen.height);
+            RefreshResolutions(size);
+            IsOpen = true; overlay.style.display = DisplayStyle.Flex; SelectTab(0); RefreshProvider(); SetStatus("", false);
         }
 
-        private void SelectTab(bool ai)
+        private void SelectTab(int tab)
         {
-            aiPage.style.display = ai ? DisplayStyle.Flex : DisplayStyle.None;
-            controlsPage.style.display = ai ? DisplayStyle.None : DisplayStyle.Flex;
-            aiTab.EnableInClassList("selected", ai); controlsTab.EnableInClassList("selected", !ai);
-            test.style.display = ai ? DisplayStyle.Flex : DisplayStyle.None;
+            aiPage.style.display = tab == 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            controlsPage.style.display = tab == 1 ? DisplayStyle.Flex : DisplayStyle.None;
+            graphicsPage.style.display = tab == 2 ? DisplayStyle.Flex : DisplayStyle.None;
+            aiTab.EnableInClassList("selected", tab == 0);
+            controlsTab.EnableInClassList("selected", tab == 1);
+            graphicsTab.EnableInClassList("selected", tab == 2);
+            test.style.display = tab == 0 ? DisplayStyle.Flex : DisplayStyle.None;
             scroll.scrollOffset = Vector2.zero;
-            if (!ai) RefreshMicrophones(null, microphoneEnabled.value);
+            if (tab == 1) RefreshMicrophones(null, microphoneEnabled.value);
+        }
+
+        private void RefreshResolutions(Vector2Int selected)
+        {
+            if (!TravellerPreferences.ValidDisplaySize(selected.x, selected.y)) selected = new Vector2Int(960, 540);
+            int width = Display.main.systemWidth;
+            int height = Display.main.systemHeight;
+            var sizes = StandardSizes.Where(size => size.x <= width && size.y <= height)
+                .Concat(Screen.resolutions.Select(mode => new Vector2Int(mode.width, mode.height)))
+                .Append(selected);
+            resolutionSizes.Clear();
+            resolutionSizes.AddRange(sizes.Where(size => TravellerPreferences.ValidDisplaySize(size.x, size.y))
+                .Distinct().OrderBy(size => size.x).ThenBy(size => size.y));
+            resolution.choices = resolutionSizes.Select(size => size.x + " × " + size.y).ToList();
+            resolution.SetValueWithoutNotify(resolution.choices[resolutionSizes.IndexOf(selected)]);
         }
 
         private void RefreshProvider() => apiFields.style.display = provider.index == 1 || provider.index == 2 ? DisplayStyle.Flex : DisplayStyle.None;
@@ -161,13 +200,19 @@ namespace ThreeBodyProblem
                 MicrophoneDeviceSelection.TryResolve(SelectedMicrophone, availableMicrophones, out device, out error) ? "录音只使用所选设备；插拔或切换耳机后可刷新列表。" : error;
         }
 
-        private TravellerPreferences ReadDraft() => new TravellerPreferences {
-            connection = new NpcApiConnection { mode = Modes[Mathf.Clamp(provider.index, 0, Modes.Length - 1)],
-                apiUrl = apiUrl.value, apiKey = apiKey.value, model = model.value, timeoutSeconds = timeout.value,
-                contextWindowTokens = ContextTokens[Mathf.Clamp(contextWindow.index, 0, ContextTokens.Length - 1)] },
-            gatewayUrl = gatewayUrl.value, mouseSensitivity = sensitivity.value, invertMouseY = invertY.value, speakReplies = speakReplies.value,
-            microphoneEnabled = microphoneEnabled.value, microphoneDevice = SelectedMicrophone
-        };
+        private TravellerPreferences ReadDraft()
+        {
+            Vector2Int size = resolutionSizes[Mathf.Clamp(resolution.index, 0, resolutionSizes.Count - 1)];
+            return new TravellerPreferences {
+                connection = new NpcApiConnection { mode = Modes[Mathf.Clamp(provider.index, 0, Modes.Length - 1)],
+                    apiUrl = apiUrl.value, apiKey = apiKey.value, model = model.value, timeoutSeconds = timeout.value,
+                    contextWindowTokens = ContextTokens[Mathf.Clamp(contextWindow.index, 0, ContextTokens.Length - 1)] },
+                gatewayUrl = gatewayUrl.value, mouseSensitivity = sensitivity.value, invertMouseY = invertY.value, speakReplies = speakReplies.value,
+                microphoneEnabled = microphoneEnabled.value, microphoneDevice = SelectedMicrophone,
+                fullscreen = displayMode.index == 1, displayWidth = size.x, displayHeight = size.y,
+                graphicsQuality = (TravellerGraphicsQuality)Mathf.Clamp(graphicsQuality.index, 0, QualityLabels.Count - 1)
+            };
+        }
 
         public void Apply()
         {

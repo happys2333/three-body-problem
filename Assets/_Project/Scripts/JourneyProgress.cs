@@ -8,7 +8,8 @@ namespace ThreeBodyProblem
         SeekShelter, ShelterTalk, Sunset, WalkToFirstStar, ObserveFirstStar,
         WalkToTwoStars, ObserveTwoStars, WalkToChaoge, DepartForCapital,
         CourtApproach, CourtTalk, CalendarWait, WalkToWater, ObserveRevival,
-        AfterRevival, WaitForDawn, ObserveLongNight, AfterLongNight,
+        AfterRevival, WaitForDawn, ReturnToCourt, CalendarFailed, LeaveLongNightCourt, ObserveLongNight,
+        AfterLongNight, DryIceSnow, AtmosphereFreeze, CapitalEnding,
         TribunalApproach, TribunalTalk, WalkOutside, ObserveThreeSuns, AfterThreeSuns, Collapse, Summary
     }
 
@@ -96,6 +97,8 @@ namespace ThreeBodyProblem
                     Enter(JourneyStep.CourtApproach);return true;
                 case JourneyStep.CourtApproach: Enter(JourneyStep.CourtTalk); return true;
                 case JourneyStep.WalkToWater: Enter(JourneyStep.ObserveRevival); return true;
+                case JourneyStep.ReturnToCourt: Enter(JourneyStep.CalendarFailed); return true;
+                case JourneyStep.LeaveLongNightCourt: Enter(JourneyStep.ObserveLongNight); return true;
                 case JourneyStep.TribunalApproach: Enter(JourneyStep.TribunalTalk); return true;
                 case JourneyStep.WalkOutside: Enter(JourneyStep.ObserveThreeSuns); return true;
                 default: return false;
@@ -110,7 +113,7 @@ namespace ThreeBodyProblem
                 case JourneyStep.DepartForCapital: Enter(JourneyStep.CourtApproach); return true;
                 case JourneyStep.CourtTalk: Enter(JourneyStep.CalendarWait); return true;
                 case JourneyStep.AfterRevival: Enter(JourneyStep.WaitForDawn); return true;
-                case JourneyStep.AfterLongNight: Enter(JourneyStep.TribunalApproach); return true;
+                case JourneyStep.CapitalEnding: Enter(JourneyStep.TribunalApproach); return true;
                 case JourneyStep.TribunalTalk: if (!ConsideredExplanation) return false; Enter(JourneyStep.WalkOutside); return true;
                 case JourneyStep.AfterThreeSuns: Enter(JourneyStep.Collapse); return true;
                 default: return false;
@@ -135,12 +138,20 @@ namespace ThreeBodyProblem
             ObservationsThisRun++; Enter(next); return true;
         }
 
+        public const float FailedAudienceSeconds = 22f;
+        internal const float SnowStageSeconds = 7f;
+        internal const float AtmosphereFreezeSeconds = 10f;
+
         public void Tick(float seconds)
         {
             Elapsed += Math.Max(0f, seconds);
             if (Step == JourneyStep.Sunset && Elapsed >= SuddenSunsetSeconds) Enter(JourneyStep.WalkToChaoge);
             else if (Step == JourneyStep.CalendarWait && Elapsed >= CalendarWaitSeconds) Enter(JourneyStep.WalkToWater);
-            else if (Step == JourneyStep.WaitForDawn && Elapsed >= 5f) Enter(JourneyStep.ObserveLongNight);
+            else if (Step == JourneyStep.WaitForDawn && Elapsed >= 5f) Enter(JourneyStep.ReturnToCourt);
+            else if (Step == JourneyStep.CalendarFailed && Elapsed >= FailedAudienceSeconds) Enter(JourneyStep.LeaveLongNightCourt);
+            else if (Step == JourneyStep.AfterLongNight && Elapsed >= SnowStageSeconds) Enter(JourneyStep.DryIceSnow);
+            else if (Step == JourneyStep.DryIceSnow && Elapsed >= SnowStageSeconds) Enter(JourneyStep.AtmosphereFreeze);
+            else if (Step == JourneyStep.AtmosphereFreeze && Elapsed >= AtmosphereFreezeSeconds) Enter(JourneyStep.CapitalEnding);
             else if (Step == JourneyStep.Collapse && Elapsed >= 9f) Enter(JourneyStep.Summary);
         }
 

@@ -26,6 +26,13 @@ class DecisionTests(unittest.TestCase):
         self.assertEqual(self.reply(self.payload(state='warned'),storyIntent='attack',conduct='violent_threat')['storyIntent'],'attack')
         self.assertEqual(self.reply(self.payload(state='pursuing'),storyIntent='attack',conduct='violent_threat')['storyIntent'],'attack')
         self.assertEqual(self.reply(self.payload(state='warned'),storyIntent='attack',conduct='question')['storyIntent'],'continue')
+    def test_chaoge_incitation_warns_once_and_nonviolent_defiance_cannot_execute(self):
+        self.assertEqual(self.reply(self.payload(),storyIntent='warn',conduct='court_incitation')['storyIntent'],'warn')
+        self.assertEqual(self.reply(self.payload('pope','TribunalTalk'),storyIntent='warn',conduct='court_incitation')['storyIntent'],'continue')
+        warned=self.payload(state='warned')
+        self.assertEqual(self.reply(warned,storyIntent='warn',conduct='court_incitation')['storyIntent'],'continue')
+        self.assertEqual(self.reply(warned,storyIntent='attack',conduct='persistent_defiance')['storyIntent'],'continue')
+        self.assertEqual(self.reply(warned,storyIntent='pursue',conduct='persistent_defiance')['storyIntent'],'pursue')
     def test_prior_warning_and_actual_defiance_are_both_required(self):
         p=self.payload(state='warned')
         self.assertEqual(self.reply(p,storyIntent='pursue',conduct='persistent_defiance')['storyIntent'],'pursue')

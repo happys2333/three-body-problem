@@ -69,11 +69,14 @@ namespace ThreeBodyProblem
             ui.Q<TextField>("settings-api-key").value = "test-session-only-key";
             ui.Q<TextField>("settings-gateway-url").value = Option("-settings-test-gateway");
             ui.Q<IntegerField>("settings-timeout").value = 5;
-            ui.Q<DropdownField>("settings-context-window").index = 2;
+            var context = ui.Q<DropdownField>("settings-context-window");
+            Check(context.choices.SequenceEqual(new[] { "32K", "128K", "512K", "1M" }), "Unexpected context size choices.");
+            context.value = "512K";
             ui.Q<Toggle>("settings-speak-replies").value = false;
             Click(ui.Q<Button>("settings-test"));
             yield return Until(() => ui.Q<Button>("settings-test").enabledSelf, 12);
-            Check(ui.Q<Label>("settings-status").text.Contains("连接成功"), "The selected model did not pass its real local HTTP connection test.");
+            Check(ui.Q<Label>("settings-status").text.Contains("连接成功"), "The gateway did not accept the 512K context setting.");
+            context.value = "1M";
             ui.Q<TextField>("settings-api-key").value = "bad-test-key";
             Click(ui.Q<Button>("settings-test"));yield return Until(() => ui.Q<Button>("settings-test").enabledSelf, 12);
             Check(ui.Q<Label>("settings-status").text.Contains("认证失败")&&!ui.Q<Label>("settings-status").text.Contains("bad-test-key"), "Bad credentials were accepted or exposed.");
@@ -143,7 +146,57 @@ namespace ThreeBodyProblem
             Check(TravellerPreferences.FromSavedJson(persisted).connection.apiKey=="","A fresh preference load recovered a secret.");
             Check(TravellerPreferences.FromSavedJson(persisted).connection.contextWindowTokens==1000000,"The long-context setting was not persisted.");
             yield return VerifyMicrophoneSettings();
+            yield return VerifyGraphicsSettings();
             Finish();
+        }
+        private IEnumerator VerifyGraphicsSettings()
+        {
+            hud.OpenSettings();
+            var ui = hud.SettingsPanel.Root;
+            Click(ui.Q<Button>("settings-graphics-tab"));
+            yield return Frames(3);
+            var mode = ui.Q<DropdownField>("settings-display-mode");
+            var size = ui.Q<DropdownField>("settings-resolution");
+            var quality = ui.Q<DropdownField>("settings-graphics-quality");
+            Check(ui.Q("settings-graphics").resolvedStyle.display == DisplayStyle.Flex &&
+                  ui.Q<Button>("settings-test").resolvedStyle.display == DisplayStyle.None &&
+                  size.choices.Contains("1280 × 720") && size.choices.Contains("1600 × 900"), "Graphics options were not available.");
+            CheckInside(ui.Q("settings-card"));
+            Capture("Display_And_Graphics");
+            yield return Frames(3);
+
+            mode.value = "窗口";
+            size.value = "1280 × 720";
+            quality.value = "低";
+            hud.SettingsPanel.Apply();
+            yield return Until(() => Screen.width == 1280 && Screen.height == 720, 6);
+            Check(Screen.width == 1280 && Screen.height == 720 && Screen.fullScreenMode == FullScreenMode.Windowed &&
+                  QualitySettings.names[QualitySettings.GetQualityLevel()] == "Low" && QualitySettings.shadows == ShadowQuality.Disable,
+                  "Windowed resolution or the Low graphics preset was not applied.");
+            hud.OpenSettings();
+            Click(ui.Q<Button>("settings-graphics-tab"));
+            yield return Frames(3);
+            Check(mode.value == "窗口" && size.value == "1280 × 720" && quality.value == "低", "Saved graphics choices did not reopen.");
+            mode.value = "全屏";
+            hud.SettingsPanel.Apply();
+            yield return Until(() => Screen.fullScreenMode == FullScreenMode.FullScreenWindow, 6);
+            var stored = TravellerPreferences.FromSavedJson(PlayerPrefs.GetString(TravellerUserSettings.StorageKey));
+            Check(Screen.fullScreenMode == FullScreenMode.FullScreenWindow && stored.fullscreen &&
+                  stored.displayWidth == 1280 && stored.displayHeight == 720 && stored.graphicsQuality == TravellerGraphicsQuality.Low,
+                  "Full screen was not applied and saved.");
+            report.resolutions.Add(Screen.width + "x" + Screen.height + " fullscreen");
+
+            hud.OpenSettings();
+            Click(ui.Q<Button>("settings-graphics-tab"));
+            mode.value = "窗口";
+            size.value = "1600 × 900";
+            quality.value = "默认";
+            hud.SettingsPanel.Apply();
+            yield return Until(() => Screen.fullScreenMode == FullScreenMode.Windowed && Screen.width == 1600 && Screen.height == 900, 6);
+            var gobi = stage.GetComponent<GobiSequenceController>();
+            Check(Screen.fullScreenMode == FullScreenMode.Windowed && Screen.width == 1600 && Screen.height == 900 &&
+                  Mathf.Approximately(QualitySettings.shadowDistance, gobi.settings.shadowDistance), "Default Gobi quality or windowed mode was not restored.");
+            QualitySettings.vSyncCount = 0;
         }
         private sealed class SimulatedMicrophone : IMicrophoneCaptureSource
         {

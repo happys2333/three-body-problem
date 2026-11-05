@@ -26,7 +26,8 @@ namespace ThreeBodyProblem.Tests
         public void PreferencesPersistChoicesButNeverPersistTheSessionKey()
         {
             var value = new TravellerPreferences { mouseSensitivity = 3.1f, invertMouseY = true, speakReplies = false,
-                microphoneEnabled = false, microphoneDevice = "USB Audio 麦克风" };
+                microphoneEnabled = false, microphoneDevice = "USB Audio 麦克风", fullscreen = true,
+                displayWidth = 1600, displayHeight = 900, graphicsQuality = TravellerGraphicsQuality.High };
             value.connection.mode = "deepseek"; value.connection.apiKey = "test-session-secret-marker";
             value.connection.timeoutSeconds = 35;
             value.connection.contextWindowTokens = 1000000;
@@ -38,6 +39,8 @@ namespace ThreeBodyProblem.Tests
             Assert.That(loaded.connection.apiKey, Is.Empty); Assert.That(loaded.mouseSensitivity, Is.EqualTo(3.1f));
             Assert.That(loaded.connection.contextWindowTokens, Is.EqualTo(1000000));
             Assert.That(loaded.invertMouseY, Is.True); Assert.That(loaded.speakReplies, Is.False);
+            Assert.That(loaded.fullscreen, Is.True); Assert.That(loaded.graphicsQuality, Is.EqualTo(TravellerGraphicsQuality.High));
+            Assert.That(loaded.displayWidth, Is.EqualTo(1600)); Assert.That(loaded.displayHeight, Is.EqualTo(900));
             Assert.That(loaded.microphoneEnabled, Is.False); Assert.That(loaded.microphoneDevice, Is.EqualTo("USB Audio 麦克风"));
         }
 
@@ -69,6 +72,7 @@ namespace ThreeBodyProblem.Tests
 
         [TestCase(32000, true)]
         [TestCase(128000, true)]
+        [TestCase(512000, true)]
         [TestCase(1000000, true)]
         [TestCase(0, false)]
         [TestCase(9999999, false)]

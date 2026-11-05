@@ -15,6 +15,8 @@ namespace ThreeBodyProblem
         private TravellerActor actor;private TravellerStage stage;private Transform hand,shoulder,view;
         private GameObject instance;private Light lightSource;private ParticleSystem[] flames;
         private Renderer[] flameCards;
+        private TorchFlameBillboard[] billboards;
+        private float lastCombustion = 1f;
         private float nextLightingUpdate;
         private bool manualCarry;
         private EraGuardEquipment guardEquipment;
@@ -22,6 +24,7 @@ namespace ThreeBodyProblem
         private Quaternion carryRotation;
         public void ToggleCarrying()
         {
+            if (stage != null && stage.Combustion < 1f) return;
             equipped=!IsCarried;
             manualCarry=equipped;
         }
@@ -39,9 +42,9 @@ namespace ThreeBodyProblem
             instance=Instantiate(torchPrefab);instance.name="Held travel torch";Grip=instance.transform;
             if(actor.firstPersonPlayer!=null)Grip.localScale*=.75f;
             lightSource=instance.GetComponentInChildren<Light>();flames=instance.GetComponentsInChildren<ParticleSystem>();
-            var cards=instance.GetComponentsInChildren<TorchFlameBillboard>();
-            flameCards=new Renderer[cards.Length];
-            for(int i=0;i<cards.Length;i++){flameCards[i]=cards[i].GetComponent<Renderer>();flameCards[i].enabled=false;}
+            billboards=instance.GetComponentsInChildren<TorchFlameBillboard>();
+            flameCards=new Renderer[billboards.Length];
+            for(int i=0;i<billboards.Length;i++){flameCards[i]=billboards[i].GetComponent<Renderer>();flameCards[i].enabled=false;}
             foreach(var flame in flames)flame.Stop(true,ParticleSystemStopBehavior.StopEmittingAndClear);
             if(lightSource!=null)lightSource.enabled=false;
             instance.SetActive(false);
@@ -86,7 +89,8 @@ namespace ThreeBodyProblem
             HandRotation=Quaternion.LookRotation(first&&view!=null?view.forward:forward,first&&view!=null?view.up:Vector3.up)*Quaternion.Euler(0,0,-15);
             if(first)HandRotation=carryRotation*Quaternion.Inverse(requestedRotation)*HandRotation;
             bool darkness=stage==null||stage.Current.sunCount==0;
-            IsCarried=equipped&&(darkness||manualCarry)&&!CarrySuppressed&&!actor.PresentationControlled;
+            float combustion = stage != null ? stage.Combustion : 1f;
+            IsCarried=combustion>0&&equipped&&(darkness||manualCarry)&&!CarrySuppressed&&!actor.PresentationControlled;
             bool lit=IsCarried;
             instance.SetActive(IsCarried);
             if(lit!=IsLit)
@@ -94,11 +98,19 @@ namespace ThreeBodyProblem
                 IsLit=lit;foreach(var flame in flames){if(lit)flame.Play();else flame.Stop(true,ParticleSystemStopBehavior.StopEmittingAndClear);}
                 foreach(var card in flameCards)card.enabled=lit;
             }
+            if (combustion != lastCombustion)
+            {
+                foreach (var billboard in billboards) billboard.SetCombustion(combustion);
+                if (combustion < 1f && lastCombustion == 1f)
+                    foreach (var flame in flames) flame.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+                lastCombustion = combustion;
+                nextLightingUpdate = 0f;
+            }
             if(lightSource!=null)
             {
                 if(Time.time<nextLightingUpdate)return;nextLightingUpdate=Time.time+.2f;
                 lightSource.enabled=lit&&(first||view==null||Vector3.Distance(view.position,transform.position)<24);
-                lightSource.intensity=2.1f+Mathf.PerlinNoise(Time.time*5.5f,transform.position.x*.1f)*.35f;
+                lightSource.intensity=(2.1f+Mathf.PerlinNoise(Time.time*5.5f,transform.position.x*.1f)*.35f)*combustion;
                 lightSource.renderMode=first?LightRenderMode.ForcePixel:LightRenderMode.ForceVertex;
             }
         }

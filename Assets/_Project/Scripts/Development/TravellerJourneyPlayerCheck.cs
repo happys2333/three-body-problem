@@ -12,7 +12,7 @@ namespace ThreeBodyProblem
     // Opt-in integration check; never created during an ordinary game launch.
     public sealed class TravellerJourneyPlayerCheck : MonoBehaviour
     {
-        [Serializable] private class Report { public bool passed; public int checks; public List<string> errors = new List<string>(); public List<string> resolutions = new List<string>(); }
+        [Serializable] private class Report { public bool passed; public int checks, observations; public string finalStep; public List<string> errors = new List<string>(); public List<string> resolutions = new List<string>(); }
         private readonly Report report = new Report();
         private string output, savedJournal;
         private bool hadJournal, captured;
@@ -84,34 +84,74 @@ namespace ThreeBodyProblem
             ScreenCapture.CaptureScreenshot(Path.Combine(Path.GetDirectoryName(output),"capital_arrival.png")); yield return Frames(3);
             yield return GoToGoal();
             journey.Interact(); journey.SelectDialogue("verification"); journey.SelectDialogue("continue");
-            float openingUntil=Time.realtimeSinceStartup+1.8f;while(Time.realtimeSinceStartup<openingUntil)yield return null;
             var skylight=UnityEngine.Object.FindFirstObjectByType<PalaceSkylight>();
+            yield return Until(() => journey.AudienceReady && skylight != null && skylight.Opening > .99f, 150);
             Check(skylight!=null&&skylight.Opening>0.99f,"The palace stone plate did not open during calendar verification.");
             Vector3 calendarPosition=stage.player.transform.position;journey.FaceGoal();
             Check(Vector3.Distance(calendarPosition,stage.player.transform.position)<0.01f,"Looking at the skylight result teleported the player.");
             Check(skylight!=null&&Vector3.Dot(stage.player.viewCamera.transform.forward,(skylight.observationPoint-stage.player.viewCamera.transform.position).normalized)>0.99f,"Calendar observation guidance misses the sunlight patch.");
-            Check(skylight!=null&&!Physics.Linecast(stage.player.viewCamera.transform.position,skylight.observationPoint,~0,QueryTriggerInteraction.Ignore),"The calendar table or another object hides the sunlight patch.");
+            var daylight = skylight.observationPoint - stage.player.viewCamera.transform.position;
+            var occluders = Physics.RaycastAll(stage.player.viewCamera.transform.position, daylight.normalized,
+                daylight.magnitude, ~0, QueryTriggerInteraction.Ignore);
+            Check(Array.TrueForAll(occluders, hit => hit.collider.GetComponentInParent<TravellerActor>() != null ||
+                hit.collider.GetComponentInParent<TravellerPlayer>() != null), "Scene geometry hides the sunlight patch.");
             ScreenCapture.CaptureScreenshot(Path.Combine(Path.GetDirectoryName(output),"calendar_skylight.png"));yield return Frames(3);
             journey.Progress.Tick(journey.Progress.CalendarWaitSeconds); yield return Frames(2);
-            yield return GoToGoal(); Observe(); yield return Frames(2);
+            yield return GoToGoal();
+            yield return Until(() => stage.IsRevivalComplete, 55);
+            Check(stage.IsRevivalComplete, "The citizens did not finish rehydrating.");
+            Observe(); yield return Frames(2);
             Check(journey.Progress.Step == JourneyStep.AfterRevival, "Revival observation missing.");
-            journey.Interact(); journey.Progress.Tick(5f); yield return Frames(2); Observe(); yield return Frames(2);
+            journey.Progress.Continue(); journey.Progress.Tick(5f); yield return Frames(2);
+            var cast = stage.GetComponent<TravellerCastDirector>();
+            for (int i=0; i<stage.profile.waterWaypoints.Length+1 && journey.IsLongNightWalk; i++)
+                yield return GoToLongNightGoal();
+            if (cast.companion != null) cast.companion.transform.position = stage.profile.courtGoal;
+            yield return Frames(3);
+            Check(journey.Progress.Step == JourneyStep.CalendarFailed, "The failed audience did not start.");
+            yield return Realtime(JourneyProgress.FailedAudienceSeconds+1);
+            Check(!cast.king.gameObject.activeSelf && !cast.companion.gameObject.activeSelf, "The King or King Wen is still in court.");
+            for (int i=0; i<stage.profile.waterWaypoints.Length+1 && journey.IsLongNightWalk; i++)
+                yield return GoToLongNightGoal();
+            Observe(); yield return Frames(2);
             Check(journey.Progress.Step == JourneyStep.AfterLongNight, "Long-night counterexample missing.");
-            journey.Interact(); yield return WaitForScene(2); yield return GoToGoal();
+            journey.Progress.Tick(7); yield return Frames(2);
+            Check(journey.Progress.Step == JourneyStep.DryIceSnow, "Dry ice snow missing.");
+            journey.Progress.Tick(7); yield return Frames(2);
+            Check(journey.Progress.Step == JourneyStep.AtmosphereFreeze, "Atmospheric freezing missing.");
+            journey.Progress.Tick(10); yield return Frames(4);
+            Check(journey.Progress.Step == JourneyStep.CapitalEnding && hud.Root.Q("summary-overlay").resolvedStyle.display == DisplayStyle.Flex, "Civilization 137 ending missing.");
+            journey.EnterNextCivilization(); yield return WaitForScene(2); yield return GoToGoal();
             journey.Interact(); journey.SelectDialogue("explain"); journey.SelectDialogue("continue"); yield return Frames(2);
             yield return GoToGoal(); journey.Progress.Tick(3f); Observe(); yield return Frames(2);
             Check(journey.Progress.Step == JourneyStep.AfterThreeSuns, "Three-sun observation missing.");
-            journey.Interact(); journey.Progress.Tick(9f); yield return Frames(4);
+            journey.CloseDialogue();
+            yield return Until(() => journey.Progress.Step == JourneyStep.Collapse, 6);
+            Check(journey.Progress.Step == JourneyStep.Collapse, "The three-sun observation did not begin the collapse.");
+            journey.Progress.Tick(9f); yield return Frames(4);
             Check(journey.Progress.Step == JourneyStep.Summary && journey.Progress.ObservationsThisRun == 5, "The main route did not reach its evidence-based summary.");
             Check(hud.Root.Q("summary-overlay").resolvedStyle.display == DisplayStyle.Flex, "Summary UI is missing."); CheckInside(hud.Root.Q("summary-card"));
             ScreenCapture.CaptureScreenshot(Path.Combine(Path.GetDirectoryName(output),"summary.png")); yield return Frames(4);
+            report.finalStep = journey.Progress.Step.ToString(); report.observations = journey.Progress.ObservationsThisRun;
             Restore(); report.passed = report.errors.Count == 0; File.WriteAllText(output,JsonUtility.ToJson(report,true)); Application.Quit(report.passed ? 0 : 1);
         }
 
         private void Bind() { stage = UnityEngine.Object.FindFirstObjectByType<TravellerStage>(); journey = stage.Journey; hud = UnityEngine.Object.FindFirstObjectByType<TravellerHud>(); }
         private static IEnumerator Realtime(float seconds){float until=Time.realtimeSinceStartup+seconds;while(Time.realtimeSinceStartup<until)yield return null;}
+        private static IEnumerator Until(Func<bool> ready, float seconds)
+        {
+            float deadline = Time.realtimeSinceStartup + seconds;
+            while (!ready() && Time.realtimeSinceStartup < deadline) yield return null;
+        }
         private static IEnumerator Frames(int frames) { for (int i=0;i<frames;i++) yield return null; }
         private IEnumerator GoToGoal() { var point = journey.Goal; stage.player.Teleport(point + Vector3.up * 1.75f,point + new Vector3(0f,1.75f,10f)); yield return Frames(5); }
+        private IEnumerator GoToLongNightGoal()
+        {
+            var point = journey.Goal;
+            stage.player.Teleport(point + Vector3.up * stage.player.eyeHeight,
+                point + new Vector3(0, stage.player.eyeHeight, 10));
+            yield return Frames(3);
+        }
         private IEnumerator WaitForScene(int index)
         {
             float until = Time.realtimeSinceStartup + 20f;

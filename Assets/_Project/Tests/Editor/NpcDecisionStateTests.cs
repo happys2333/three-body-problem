@@ -23,6 +23,15 @@ namespace ThreeBodyProblem.Tests
             Assert.That(Apply(s, "pursue", "persistent_defiance", revision: before), Is.EqualTo(NpcDecisionOutcome.None));
             Assert.That(Apply(s, "pursue", "persistent_defiance"), Is.EqualTo(NpcDecisionOutcome.Pursue)); Assert.That(s.Pursuing, Is.True);
         }
+        [Test] public void ChaogeIncitationWarnsOnceAndNonviolentDefianceCannotAuthorizeLethalForce()
+        {
+            var s = new NpcDecisionState();
+            Assert.That(Apply(s, "warn", "court_incitation", npc:"pope", step:JourneyStep.TribunalTalk), Is.EqualTo(NpcDecisionOutcome.None));
+            Assert.That(Apply(s, "warn", "court_incitation"), Is.EqualTo(NpcDecisionOutcome.Warning));
+            Assert.That(Apply(s, "warn", "court_incitation"), Is.EqualTo(NpcDecisionOutcome.None));
+            Assert.That(Apply(s, "attack", "persistent_defiance"), Is.EqualTo(NpcDecisionOutcome.None));
+            Assert.That(Apply(s, "pursue", "persistent_defiance"), Is.EqualTo(NpcDecisionOutcome.Pursue));
+        }
         [Test] public void ApologyRecallsGuardsAndMakesOldOrdersStale()
         {
             var s = new NpcDecisionState(); Apply(s, "warn", "disruption"); Apply(s, "pursue", "persistent_defiance"); int old = s.Revision;

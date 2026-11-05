@@ -18,6 +18,10 @@ class ProviderRejectedError(ValueError):
     pass
 
 
+class ToolCallingUnsupported(ValueError):
+    """The configured provider rejected the optional tools request."""
+
+
 def provider_response(data):
     try:
         value = json.loads(data)
@@ -110,10 +114,12 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
         raise urllib.error.HTTPError(request.full_url, code, 'API redirect', headers, fp)
 
 
-def chat_completion(connection, messages, max_tokens=320, opener=None):
+def chat_completion_choice(connection, messages, max_tokens=320, opener=None, tools=None):
     body = {'model': connection.model, 'messages': messages,
             'response_format': {'type': 'json_object'}, 'max_tokens': max_tokens,
             'temperature': .7, 'stream': False}
+    if tools:
+        body.update(tools=tools, tool_choice='auto')
     # This endpoint's Atria model counts default reasoning against max_tokens.
     # NPC JSON was truncated within the existing 320-token output budget. The
     # live non-thinking profile returns complete short replies within that budget.
@@ -130,9 +136,25 @@ def chat_completion(connection, messages, max_tokens=320, opener=None):
         with open_request(request, timeout=connection.timeout) as response:
             raw = provider_response(response.read())
     except urllib.error.HTTPError as error:
+        unsupported = False
+        if tools and error.code in {400, 422}:
+            detail = error.read(4096).decode('utf-8', errors='replace').lower()
+            unsupported = 'tool' in detail and any(word in detail for word in
+                ('unsupported', 'not support', 'not allowed', 'unknown field', 'extra_forbidden'))
         error.close()
+        if unsupported:
+            raise ToolCallingUnsupported() from None
         raise
-    value = json.loads(raw['choices'][0]['message']['content'])
+    return raw['choices'][0]
+
+
+def chat_completion(connection, messages, max_tokens=320, opener=None):
+    choice = chat_completion_choice(connection, messages, max_tokens=max_tokens, opener=opener)
+    return json_reply(choice)
+
+
+def json_reply(choice):
+    value = json.loads(choice['message']['content'])
     if not isinstance(value, dict):
         raise ValueError('Expected JSON object')
     return value

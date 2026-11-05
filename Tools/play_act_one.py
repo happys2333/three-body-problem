@@ -1,4 +1,5 @@
 """Start the local offline voice gateway and open the current macOS demo build."""
+import argparse
 import json
 import os
 from pathlib import Path
@@ -22,10 +23,15 @@ def ready():return health().get('ready',False)
 
 def refresh_owned_gateway_if_needed():
     preference=Path.home()/'.cache/three-body-voice/active-backends.json'
-    desired=json.loads(preference.read_text()).get('useLocalModels',False) if preference.exists() else False
+    settings = json.loads(preference.read_text()) if preference.exists() else {}
+    desired = settings.get('useLocalModels', False)
+    tts = settings.get('tts') or ('moss-tts-nano-onnx-cpu' if desired else 'macos-say')
     current=health()
     if not current:return
-    if current.get('connectionSettings',0)>=3 and (current.get('asrEngine')=='qwen3-asr-mlx-8bit')==desired:return
+    if (current.get('connectionSettings', 0) >= 4 and current.get('ttsEngine') == tts and
+            (current.get('asrEngine') == 'qwen3-asr-mlx-8bit') == desired and
+            (not os.environ.get('DEEPSEEK_API_KEY') or current.get('mode') == 'online')):
+        return
     record=ROOT/'Logs/ActOne/voice-gateway.pid'
     if not record.exists():raise SystemExit('8769 端口上已有另一项语音服务，请先关闭它再启动试玩。')
     pid=int(record.read_text())
@@ -38,7 +44,9 @@ def refresh_owned_gateway_if_needed():
 
 
 def main():
-    app=ROOT/'Builds/ActOneTraveller.app'
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--app',type=Path,default=ROOT/'Builds/ActOneTraveller.app')
+    app=parser.parse_args().app.resolve()
     if not app.exists():raise SystemExit('请先在 Unity 运行 ActOneProduction.BuildPlayer() 构建试玩包。')
     python=Path.home()/'.cache/three-body-voice/venv/bin/python'
     if not python.exists():subprocess.run(['python3',str(ROOT/'Tools/setup_voice_gateway.py')],check=True,cwd=ROOT)
@@ -46,7 +54,10 @@ def main():
     if not ready():
         folder=ROOT/'Logs/ActOne';folder.mkdir(parents=True,exist_ok=True)
         with (folder/'gateway.log').open('a') as log:
-            process=subprocess.Popen([str(python),str(ROOT/'Tools/dialogue_gateway.py')],cwd=ROOT,
+            command = [str(python), str(ROOT/'Tools/dialogue_gateway.py')]
+            if os.environ.get('DEEPSEEK_API_KEY'):
+                command.append('--online')
+            process=subprocess.Popen(command,cwd=ROOT,
                 stdin=subprocess.DEVNULL,stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
         (folder/'voice-gateway.pid').write_text(str(process.pid))
         print('正在准备本机语音识别……',flush=True)

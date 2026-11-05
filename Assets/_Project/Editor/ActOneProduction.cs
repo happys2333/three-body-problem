@@ -223,7 +223,7 @@ namespace ThreeBodyProblem.Editor
         }
         public static string BuildPlayer()
         {
-            var build=BuildPipeline.BuildPlayer(new BuildPlayerOptions{scenes=TravellerStage.SceneNames.Select(n=>"Assets/_Project/Scenes/Traveller/"+n+".unity").ToArray(),locationPathName="Builds/ActOneTraveller.app",target=BuildTarget.StandaloneOSX,options=BuildOptions.Development});
+            var build=BuildPipeline.BuildPlayer(new BuildPlayerOptions{scenes=TravellerStage.SceneNames.Select(n=>"Assets/_Project/Scenes/Traveller/"+n+".unity").ToArray(),locationPathName="Builds/ActOneTraveller.app",target=BuildTarget.StandaloneOSX,options=BuildOptions.Development | BuildOptions.CompressWithLz4});
             File.WriteAllText(Docs+"/build.json","{\"result\":\""+build.summary.result+"\",\"errors\":"+build.summary.totalErrors+",\"warnings\":"+build.summary.totalWarnings+"}");
             if(build.summary.result!=UnityEditor.Build.Reporting.BuildResult.Succeeded)throw new InvalidOperationException("Act one build failed.");return Path.GetFullPath("Builds/ActOneTraveller.app");
         }
