@@ -1,0 +1,10 @@
+{
+  "tag": "windows-story-qa-20261105",
+  "asset": "windows-story-qa-base.zip",
+  "sha256": "7202f9d7e570b22322ca5019566f8fd5084a4de8ac8252e62a5f7e7b7d5ab617",
+  "sourceCommit": "21bc89753491cef687d862b94b7883a2396ab95b",
+  "patch": {
+    "asset": "windows-story-qa-patch-1.zip",
+    "sha256": "c4b2c505276315b0af1870904a423e0ed6d21473b692c5fc0b567201712e0fba"
+  }
+}
