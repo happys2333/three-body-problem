@@ -51,9 +51,12 @@ def validate_player(build):
         raise ValueError('Incomplete Windows player: scene data is missing')
 
 
-def package(build, output, python_zip):
+def package(build, output, python_zip, allow_story_qa=False):
     build, output = build.resolve(), output.resolve()
     validate_player(build)
+    story_qa = b'WindowsStoryPlayerCheck' in (build / 'ThreeBodyTraveller_Data/Managed/ThreeBodyProblem.Runtime.dll').read_bytes()
+    if story_qa and not allow_story_qa:
+        raise ValueError('This is a story QA player. Use the separate QA output or explicitly pass --allow-story-qa.')
     python_zip.parent.mkdir(parents=True, exist_ok=True)
     if not python_zip.exists():
         with urllib.request.urlopen(PYTHON_URL, timeout=60) as source, python_zip.open('wb') as target:
@@ -81,7 +84,7 @@ def package(build, output, python_zip):
                    not any(any(term in part for term in excluded) for part in p.relative_to(build).parts)
                    and p.name != 'playtest-manifest.json' and not p.name.endswith('.build.json'))
     commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
-    manifest = {'sourceCommit': commit, 'platform': 'Windows x64', 'aiRequired': True,
+    manifest = {'sourceCommit': commit, 'platform': 'Windows x64', 'aiRequired': True, 'storyQa': story_qa,
                 'pythonVersion': PYTHON_VERSION, 'pythonArchiveSha256': PYTHON_SHA256,
                 'files': {str(p.relative_to(build)).replace('\\', '/'): {'bytes': p.stat().st_size, 'sha256': digest(p)} for p in files}}
     manifest_file = build / 'playtest-manifest.json'
@@ -101,5 +104,6 @@ if __name__ == '__main__':
     parser.add_argument('--build-dir', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--python-zip', type=Path, default=Path.home() / '.cache/three-body-build/python-3.13.17-embed-amd64.zip')
+    parser.add_argument('--allow-story-qa', action='store_true', help='Only for the separate, private story QA build.')
     args = parser.parse_args()
-    package(args.build_dir, args.output, args.python_zip)
+    package(args.build_dir, args.output, args.python_zip, args.allow_story_qa)

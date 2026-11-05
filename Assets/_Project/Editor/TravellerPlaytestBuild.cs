@@ -21,6 +21,7 @@ namespace ThreeBodyProblem.Editor
             if (string.IsNullOrWhiteSpace(output)) output = Path.GetFullPath("Builds/Windows/ThreeBodyTraveller/ThreeBodyTraveller.exe");
             Directory.CreateDirectory(Path.GetDirectoryName(output));
             var backend = PlayerSettings.GetScriptingBackend(NamedBuildTarget.Standalone);
+            bool storyQa = Environment.GetEnvironmentVariable("TRAVELLER_STORY_QA") == "1";
             try
             {
                 PlayerSettings.SetScriptingBackend(NamedBuildTarget.Standalone, ScriptingImplementation.Mono2x);
@@ -29,6 +30,7 @@ namespace ThreeBodyProblem.Editor
                     scenes = TravellerStage.SceneNames.Select(name => TravellerSceneBuilder.SceneFolder + "/" + name + ".unity").ToArray(),
                     locationPathName = output,
                     target = BuildTarget.StandaloneWindows64,
+                    extraScriptingDefines = storyQa ? new[] { "TRAVELLER_STORY_QA" } : Array.Empty<string>(),
                     options = BuildOptions.CompressWithLz4HC | BuildOptions.StrictMode
                 });
                 File.WriteAllText(output + ".build.json", JsonUtility.ToJson(new BuildSummaryRecord
@@ -36,7 +38,7 @@ namespace ThreeBodyProblem.Editor
                     result = result.summary.result.ToString(), bytes = result.summary.totalSize,
                     errors = result.summary.totalErrors, warnings = result.summary.totalWarnings,
                     entryScene = TravellerProjectStartup.EntryScenePath,
-                    unityVersion = Application.unityVersion, development = false, aiRequired = true
+                    unityVersion = Application.unityVersion, development = false, aiRequired = true, storyQa = storyQa
                 }, true));
                 if (result.summary.result != BuildResult.Succeeded)
                     throw new InvalidOperationException("Windows build failed: " + result.summary.result);
@@ -50,7 +52,7 @@ namespace ThreeBodyProblem.Editor
             public string result, entryScene, unityVersion;
             public ulong bytes;
             public int errors, warnings;
-            public bool development, aiRequired;
+            public bool development, aiRequired, storyQa;
         }
     }
 }

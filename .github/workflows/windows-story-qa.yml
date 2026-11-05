@@ -1,0 +1,32 @@
+name: Windows full story with real AI
+on:
+  push:
+    paths:
+      - 'Documentation/WindowsStoryQA/request.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  story:
+    runs-on: windows-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+          sparse-checkout: |
+            Tools
+            Documentation/WindowsStoryQA
+      - name: Play the Windows game from API configuration to the ending
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TRAVELLER_QA_CONFIG: ${{ secrets.WINDOWS_STORY_QA_CONFIG }}
+        run: ./Tools/run_windows_story_qa.ps1
+      - name: Retain reports and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-full-story-${{ github.run_number }}
+          path: ${{ runner.temp }}/WindowsStoryQA/Results
+          retention-days: 7
