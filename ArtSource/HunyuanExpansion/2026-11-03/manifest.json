@@ -1,0 +1,311 @@
+{
+  "date": "2026-11-03",
+  "source": "https://3d.hunyuan.tencent.com/creation",
+  "browser": "Google Chrome",
+  "generator": "Hunyuan 3D V3.1 text to 3D",
+  "status": "downloaded_and_fbx_validated",
+  "validationScope": "候选缩略图筛选，FBX 网格、三角面、UV、四张内嵌贴图和文件哈希检查。待 Unity 导入、尺寸、材质和场景验证。",
+  "assets": [
+    {
+      "id": "BronzeHourglassCandidate",
+      "name": "青铜沙漏",
+      "selectedVariant": 3,
+      "use": "戈壁岩下桌面、周文王背部、朝歌献历桌",
+      "review": "网页生成结果保留了沙漏芯。需要分离外框和芯体、重做透明玻璃与流沙。",
+      "path": "BronzeHourglassCandidate/BronzeHourglassCandidate_PBR.fbx",
+      "browserDisplayedTriangles": 50014,
+      "file": "BronzeHourglassCandidate_PBR.fbx",
+      "bytes": 37686524,
+      "sha256": "6caff2ee1081af88809dbde35b09d6114841d738e39aa97af60921fbfcde6c93",
+      "fbx_version": 7400,
+      "objects": {
+        "Geometry": 1,
+        "Model": 1,
+        "Material": 1,
+        "Texture": 4,
+        "Video": 4
+      },
+      "vertices": 24999,
+      "polygons": 50002,
+      "triangles": 50002,
+      "uv_sets": 1,
+      "embedded_images": [
+        {
+          "name": "texture_pbr_20250901.png",
+          "file": "texture_pbr_20250901.png",
+          "bytes": 14956279
+        },
+        {
+          "name": "texture_pbr_20250901_normal.png",
+          "file": "texture_pbr_20250901_normal.png",
+          "bytes": 8557663
+        },
+        {
+          "name": "texture_pbr_20250901_roughness.png",
+          "file": "texture_pbr_20250901_roughness.png",
+          "bytes": 4818839
+        },
+        {
+          "name": "texture_pbr_20250901_metallic.png",
+          "file": "texture_pbr_20250901_metallic.png",
+          "bytes": 6256742
+        }
+      ],
+      "map_connections": [
+        "DiffuseColor",
+        "NormalMap",
+        "ReflectionFactor",
+        "ShininessExponent"
+      ],
+      "axis_and_units": {
+        "UpAxis": 1,
+        "UpAxisSign": 1,
+        "UnitScaleFactor": 1.0
+      }
+    },
+    {
+      "id": "BambooCalendarSlips",
+      "name": "历法竹简",
+      "selectedVariant": 3,
+      "use": "朝歌石殿献历桌",
+      "review": "高模原档。进场景前需减面并复查编绳和竹片边缘。",
+      "path": "BambooCalendarSlips/BambooCalendarSlips_PBR.fbx",
+      "browserDisplayedTriangles": 1506148,
+      "file": "BambooCalendarSlips_PBR.fbx",
+      "bytes": 121902748,
+      "sha256": "f9d002ae9471f6ece52da7369a52cca194c1ca83e28d010044da2b2829104708",
+      "fbx_version": 7400,
+      "objects": {
+        "Geometry": 1,
+        "Model": 1,
+        "Material": 1,
+        "Texture": 4,
+        "Video": 4
+      },
+      "vertices": 752965,
+      "polygons": 1506028,
+      "triangles": 1506028,
+      "uv_sets": 1,
+      "embedded_images": [
+        {
+          "name": "texture_pbr_20250901.png",
+          "file": "texture_pbr_20250901.png",
+          "bytes": 18830066
+        },
+        {
+          "name": "texture_pbr_20250901_normal.png",
+          "file": "texture_pbr_20250901_normal.png",
+          "bytes": 6986109
+        },
+        {
+          "name": "texture_pbr_20250901_roughness.png",
+          "file": "texture_pbr_20250901_roughness.png",
+          "bytes": 3713756
+        },
+        {
+          "name": "texture_pbr_20250901_metallic.png",
+          "file": "texture_pbr_20250901_metallic.png",
+          "bytes": 3488642
+        }
+      ],
+      "map_connections": [
+        "DiffuseColor",
+        "NormalMap",
+        "ReflectionFactor",
+        "ShininessExponent"
+      ],
+      "axis_and_units": {
+        "UpAxis": 1,
+        "UpAxisSign": 1,
+        "UnitScaleFactor": 1.0
+      }
+    },
+    {
+      "id": "BronzePendulumBob",
+      "name": "青铜摆锤",
+      "selectedVariant": 3,
+      "use": "朝歌巨摆区",
+      "review": "缩略图显示底部有附加圆台。接入前去掉圆台，检查吊耳，按既有摆动枢轴定位。",
+      "path": "../../Pendulum/2026-11-03/BronzePendulumBob_PBR.fbx",
+      "browserDisplayedTriangles": 49984,
+      "file": "BronzePendulumBob_PBR.fbx",
+      "bytes": 33870444,
+      "sha256": "037ef0a33606072bf1e35344737e3c643315a31d1e571d852599b84edf4c857a",
+      "fbx_version": 7400,
+      "objects": {
+        "Geometry": 1,
+        "Model": 1,
+        "Material": 1,
+        "Texture": 4,
+        "Video": 4
+      },
+      "vertices": 24988,
+      "polygons": 49984,
+      "triangles": 49984,
+      "uv_sets": 1,
+      "embedded_images": [
+        {
+          "name": "texture_pbr_20250901.png",
+          "file": "texture_pbr_20250901.png",
+          "bytes": 13474842
+        },
+        {
+          "name": "texture_pbr_20250901_normal.png",
+          "file": "texture_pbr_20250901_normal.png",
+          "bytes": 8623259
+        },
+        {
+          "name": "texture_pbr_20250901_roughness.png",
+          "file": "texture_pbr_20250901_roughness.png",
+          "bytes": 3928029
+        },
+        {
+          "name": "texture_pbr_20250901_metallic.png",
+          "file": "texture_pbr_20250901_metallic.png",
+          "bytes": 4794522
+        }
+      ],
+      "map_connections": [
+        "DiffuseColor",
+        "NormalMap",
+        "ReflectionFactor",
+        "ShininessExponent"
+      ],
+      "axis_and_units": {
+        "UpAxis": 1,
+        "UpAxisSign": 1,
+        "UnitScaleFactor": 1.0
+      }
+    },
+    {
+      "id": "ShangEarthenwareJar",
+      "name": "粗陶储粮罐",
+      "selectedVariant": 1,
+      "use": "朝歌集市和粮仓",
+      "review": "接入前检查罐口内壁和粗糙度。用于重复摆放时准备低面数 LOD。",
+      "path": "ShangEarthenwareJar/ShangEarthenwareJar_PBR.fbx",
+      "browserDisplayedTriangles": 50000,
+      "file": "ShangEarthenwareJar_PBR.fbx",
+      "bytes": 31881676,
+      "sha256": "7a5f19284accc143949a26441de7d79a14892fcc72a1423a454d66ec8027ead2",
+      "fbx_version": 7400,
+      "objects": {
+        "Geometry": 1,
+        "Model": 1,
+        "Material": 1,
+        "Texture": 4,
+        "Video": 4
+      },
+      "vertices": 25002,
+      "polygons": 50000,
+      "triangles": 50000,
+      "uv_sets": 1,
+      "embedded_images": [
+        {
+          "name": "texture_pbr_20250901.png",
+          "file": "texture_pbr_20250901.png",
+          "bytes": 12867919
+        },
+        {
+          "name": "texture_pbr_20250901_normal.png",
+          "file": "texture_pbr_20250901_normal.png",
+          "bytes": 7526902
+        },
+        {
+          "name": "texture_pbr_20250901_roughness.png",
+          "file": "texture_pbr_20250901_roughness.png",
+          "bytes": 5236260
+        },
+        {
+          "name": "texture_pbr_20250901_metallic.png",
+          "file": "texture_pbr_20250901_metallic.png",
+          "bytes": 3184702
+        }
+      ],
+      "map_connections": [
+        "DiffuseColor",
+        "NormalMap",
+        "ReflectionFactor",
+        "ShininessExponent"
+      ],
+      "axis_and_units": {
+        "UpAxis": 1,
+        "UpAxisSign": 1,
+        "UnitScaleFactor": 1.0
+      }
+    },
+    {
+      "id": "RevivalReedStretcher",
+      "name": "木架芦苇担架",
+      "selectedVariant": 2,
+      "use": "朝歌复苏池边",
+      "review": "静态道具。需要核对与人物的尺寸和接触位置。",
+      "path": "RevivalReedStretcher/RevivalReedStretcher_PBR.fbx",
+      "browserDisplayedTriangles": 50000,
+      "file": "RevivalReedStretcher_PBR.fbx",
+      "bytes": 41194828,
+      "sha256": "6e65e4bde6c5c14574265c702e8680f4d69cbdf56ed337d75be3097c65181379",
+      "fbx_version": 7400,
+      "objects": {
+        "Geometry": 1,
+        "Model": 1,
+        "Material": 1,
+        "Texture": 4,
+        "Video": 4
+      },
+      "vertices": 24928,
+      "polygons": 50000,
+      "triangles": 50000,
+      "uv_sets": 1,
+      "embedded_images": [
+        {
+          "name": "texture_pbr_20250901.png",
+          "file": "texture_pbr_20250901.png",
+          "bytes": 19163386
+        },
+        {
+          "name": "texture_pbr_20250901_normal.png",
+          "file": "texture_pbr_20250901_normal.png",
+          "bytes": 12901108
+        },
+        {
+          "name": "texture_pbr_20250901_roughness.png",
+          "file": "texture_pbr_20250901_roughness.png",
+          "bytes": 3257114
+        },
+        {
+          "name": "texture_pbr_20250901_metallic.png",
+          "file": "texture_pbr_20250901_metallic.png",
+          "bytes": 2675317
+        }
+      ],
+      "map_connections": [
+        "DiffuseColor",
+        "NormalMap",
+        "ReflectionFactor",
+        "ShininessExponent"
+      ],
+      "axis_and_units": {
+        "UpAxis": 1,
+        "UpAxisSign": 1,
+        "UnitScaleFactor": 1.0
+      }
+    }
+  ],
+  "archive": {
+    "date": "2026-11-06",
+    "pathBase": "manifest_directory",
+    "candidateIds": [
+      "BronzeHourglassCandidate",
+      "BambooCalendarSlips",
+      "ShangEarthenwareJar",
+      "RevivalReedStretcher"
+    ],
+    "candidateStatus": "source_only_pending_unity_import_optimization_and_scene_review",
+    "reusedSourceIds": [
+      "BronzePendulumBob"
+    ],
+    "reusedSourceStatus": "already_integrated_using_ArtSource/Pendulum/2026-11-03",
+    "newRuntimeAssets": 0
+  }
+}
