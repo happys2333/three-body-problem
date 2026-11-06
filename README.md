@@ -31,6 +31,8 @@ Apple Silicon 可运行 `python3 Tools/setup_qwen_tts.py`，为实时 NPC 回复
 
 Windows 64 位试玩包包含 EXE、游戏资源和自动启动的本地 AI 服务，不要求试玩者安装 Python。构建与打包方法见 [Windows 试玩说明](Documentation/WindowsPlaytest.md)。
 
+最近交付的游戏修复、中世纪模型、场景接入、制作工具、源素材与验收记录，统一从[分类交付索引](Documentation/DELIVERY_INDEX.md)查阅。
+
 - [场景、操作与制作结构](Documentation/SCENE_GUIDE.md)
 - [Unity CLI、共享技能与跨会话制作流程](Documentation/UNITY_CLI_WORKFLOW.md)
 - [素材来源、授权与用途](Documentation/ASSET_SOURCES.md)
@@ -69,6 +71,7 @@ Windows 64 位试玩包包含 EXE、游戏资源和自动启动的本地 AI 服�
 | `Art/HunyuanExpansion/` | 2026-10-28 新生成的人物与道具源文件、PBR 材质和米制预制体 |
 | `Art/HunyuanEnvironment/` | 混元生成的建筑与自然环境模型、PBR 材质和三级 LOD 预制体 |
 | `Art/EnvironmentReady/` | 修整后的 20 件静态环境预制体、摄影材质、碰撞和三级 LOD |
+| `Art/Medieval20261106/` | 混元 3D 3.1 门廊、束柱与石砌民居，含 PBR 材质、碰撞和三级 LOD |
 | `Art/ActOne/`、`Settings/ActOne/` | 火把、灰烬、燃烧特效与第一幕时序、伤害配置 |
 | `Dialogue/` | 八类角色提示词、身份和独立会话配置 |
 | `Scenes/CharacterPreview/` | 独立角色动作预览场景 |
@@ -76,6 +79,8 @@ Windows 64 位试玩包包含 EXE、游戏资源和自动启动的本地 AI 服�
 | `Audio/` | 音乐与音效 |
 | `UI/` | 界面资源 |
 | `Settings/` | 项目配置资源 |
+
+制作原件放在仓库根目录的 `ArtSource/`，可复用工作流与处理脚本放在 `Tools/`，制作清单和验收证据放在 `Documentation/`。待加工候选原模与已接入游戏的素材分别标记，详见分类交付索引。
 
 ## 版本管理
 
