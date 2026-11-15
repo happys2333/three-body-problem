@@ -100,10 +100,10 @@ namespace ThreeBodyProblem
             if(stage==null||journey.IsTitle||journey.IsSummary||journey.IsPreviewing||stage.IsLoading||hud!=null&&hud.IsWorldPaused)return false;
             return question.IsActive||BeginPlayerQuestion();
         }
-        public void Submit(string text)
+        public bool Submit(string text)
         {
-            if(IsBusy||string.IsNullOrWhiteSpace(text)||!EnsureVoiceConversation())return;
-            SubmitQuestion(text,question.Recipient,question.Id);
+            if(IsBusy||string.IsNullOrWhiteSpace(text)||!EnsureVoiceConversation())return false;
+            return SubmitQuestion(text,question.Recipient,question.Id);
         }
         public bool SubmitQuestion(string text,NpcIdentity recipient,int questionId)
         {

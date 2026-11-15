@@ -35,7 +35,7 @@ namespace ThreeBodyProblem
         private bool wasDefeated,wasScriptedAvailable;
         private VisualElement questMarker,wakeTop,wakeBottom;
         private Label questArrow,questDistance;
-        private bool paused, journalOpen, hidden, textChatOpen;
+        private bool paused, journalOpen, hidden, textChatOpen, chatWasComposing;
         private float noticeUntil, nextNavigationUpdate,nextMarkerText;
         private List<string> subtitlePages = new List<string>();
         private string displayedSpeech;
@@ -45,6 +45,10 @@ namespace ThreeBodyProblem
         public TravellerSettingsPanel SettingsPanel { get; private set; }
         public bool IsWorldPaused => paused || journalOpen || (decisions != null && decisions.IsDefeated) || (SettingsPanel != null && SettingsPanel.IsOpen) || journey == null || journey.IsTitle || journey.IsSummary || stage.IsLoading;
         private bool TextChatVisible => journey != null && journey.DialogueOpen && (textChatOpen || microphone == null || microphone.NeedsTextFallback);
+        private bool ChatCompositionActive => TextChatVisible && !string.IsNullOrEmpty(Input.compositionString);
+        private bool CanSendChat => TextChatVisible && dialogueDirector != null && !dialogueDirector.IsBusy
+            && (microphone == null || !microphone.IsRecording && !microphone.IsTranscribing)
+            && !chatWasComposing && !ChatCompositionActive && !string.IsNullOrWhiteSpace(chatInput.value);
         public bool IsEditingText
         {get{var focused=root?.focusController?.focusedElement as VisualElement;return focused!=null&&(focused is TextField||focused.GetFirstAncestorOfType<TextField>()!=null);}}
 
@@ -80,15 +84,18 @@ namespace ThreeBodyProblem
             conversationRecipient=Text(dialogueScroll, "与眼前的人交谈", "panel-heading");conversationRecipient.name="conversation-recipient";
             var chat=Box(dialogueScroll,"free-dialogue","free-dialogue");
             textFallback=Box(chat,"text-fallback","text-fallback");
-            chatInput=new TextField{maxLength=1200,name="chat-input"};chatInput.AddToClassList("chat-input");textFallback.Add(chatInput);
-            chatInput.RegisterCallback<KeyDownEvent>(e=>{if(e.keyCode==KeyCode.Return&&!e.shiftKey){SendChat();e.StopPropagation();}});
+            chatInput = new TextField { name = "chat-input", multiline = true, verticalScrollerVisibility = ScrollerVisibility.Auto };
+            chatInput.textEdition.maxLength = 1200;
+            chatInput.textEdition.placeholder = "输入问题，确认文字后点发送";
+            chatInput.AddToClassList("chat-input");
+            textFallback.Add(chatInput);
             voiceStatus=Text(chat,"按住 F 说话，松开后自动提问；也可打字","voice-status");voiceStatus.name="voice-status";
             var chatActions=Box(textFallback,"chat-actions","chat-actions");sendChat=Button(chatActions,"发送",SendChat,"primary");sendChat.name="send-chat";
+            chatInput.RegisterValueChangedCallback(_ => RefreshChatSendButton());
             Button(chatActions,"结束交谈  Esc",()=>journey.CloseDialogue());
             continueAudience=Button(dialogueScroll,"继续演出",()=>journey.ContinueScriptedAudience(),"primary");continueAudience.name="continue-scripted-audience";
             dialogueScroll.Insert(1,chat);
             if(dialogueDirector!=null)dialogueDirector.Changed+=RefreshChat;
-            if(microphone!=null)microphone.TranscriptReady+=SetTranscript;
             var actions = Box(gameplay, "action-row", "action-row context-actions");
             observe = Button(actions, "E  记录所见", () => stage.RecordObservation(), "context-action");
             wakeTop=Box(gameplay,"wake-top","wake-lid wake-top");wakeBottom=Box(gameplay,"wake-bottom","wake-lid wake-bottom");
@@ -179,15 +186,23 @@ namespace ThreeBodyProblem
             nextNavigationUpdate=0;
         }
 
-        private void SendChat(){if(dialogueDirector==null||dialogueDirector.IsBusy||string.IsNullOrWhiteSpace(chatInput.value))return;dialogueDirector.Submit(chatInput.value);chatInput.value="";chatInput.Blur();}
-        private void SetTranscript(string text){chatInput.value="";}
+        private void SendChat()
+        {
+            if (!CanSendChat || !dialogueDirector.Submit(chatInput.value)) return;
+            // Release the editor and its selection before replacing the submitted draft.
+            chatInput.Blur();
+            chatInput.SelectRange(0, 0);
+            chatInput.SetValueWithoutNotify(string.Empty);
+            RefreshChatSendButton();
+        }
+        private void RefreshChatSendButton() => sendChat.SetEnabled(CanSendChat);
         private void RefreshChat()
         {
             if(voiceStatus==null)return;voiceStatus.text=dialogueDirector!=null?dialogueDirector.Status:"看向人物，按住 F 说话";
             conversationRecipient.text=dialogueDirector!=null&&dialogueDirector.Current!=null?"向"+dialogueDirector.DisplayName(dialogueDirector.Current)+"提问":"与眼前的人交谈";
             Display(textFallback,TextChatVisible);
             Display(continueAudience,journey.CanContinueScriptedAudience&&!dialogueDirector.IsBusy);
-            sendChat.SetEnabled(dialogueDirector!=null&&!dialogueDirector.IsBusy&&(microphone==null||!microphone.IsRecording&&!microphone.IsTranscribing));
+            RefreshChatSendButton();
             SyncPlayerInput();
         }
 
@@ -273,6 +288,14 @@ namespace ThreeBodyProblem
             bool available=journey.CanContinueScriptedAudience;
             if(defeated!=wasDefeated||available!=wasScriptedAvailable){wasDefeated=defeated;wasScriptedAvailable=available;Refresh();}
             bool editing=IsEditingText;
+            // The IME can end composition in the same frame as the key that cancels it.
+            bool composing = ChatCompositionActive;
+            bool imeOwnsKey = composing || chatWasComposing;
+            if (chatWasComposing != composing)
+            {
+                chatWasComposing = composing;
+                RefreshChatSendButton();
+            }
             SyncPlayerInput();
             if(defeated)return;
             if (SettingsPanel.IsOpen)
@@ -282,9 +305,9 @@ namespace ThreeBodyProblem
             if(waking){float closed=50*(1-Mathf.SmoothStep(0,1,gobi.WakeProgress));wakeTop.style.height=Length.Percent(closed);wakeBottom.style.height=Length.Percent(closed);}
             UpdateQuestMarker();
             UpdateSubtitle();
-            if (!editing && Input.GetKeyDown(KeyCode.Return) && !IsWorldPaused) BeginTextChat();
+            if (!editing && !TextChatVisible && Input.GetKeyDown(KeyCode.Return) && !IsWorldPaused) BeginTextChat();
             if (!editing && Input.GetKeyDown(KeyCode.J)) ToggleJournal();
-            if (Input.GetKeyDown(KeyCode.Escape)) HandleEscape();
+            if (!imeOwnsKey && Input.GetKeyDown(KeyCode.Escape)) HandleEscape();
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
             if (!journalOpen && Input.GetKeyDown(KeyCode.F8)) { paused = false; hidden = false; journey.TogglePreview(); }
 #endif
@@ -340,7 +363,7 @@ namespace ThreeBodyProblem
             if(Time.unscaledTime>=nextMarkerText){nextMarkerText=Time.unscaledTime+.25f;questDistance.text=Vector3.Distance(stage.player.transform.position,journey.Goal).ToString("0")+" m";}
         }
 
-        private void OnDestroy() { SettingsPanel?.Dispose(); if (stage != null) { stage.Changed -= Refresh; stage.Notice -= ShowNotice; } if (journey != null) journey.Changed -= Refresh;if(dialogueDirector!=null)dialogueDirector.Changed-=RefreshChat;if(microphone!=null)microphone.TranscriptReady-=SetTranscript; }
+        private void OnDestroy() { SettingsPanel?.Dispose(); if (stage != null) { stage.Changed -= Refresh; stage.Notice -= ShowNotice; } if (journey != null) journey.Changed -= Refresh;if(dialogueDirector!=null)dialogueDirector.Changed-=RefreshChat; }
         private static VisualElement Box(VisualElement parent, string name, string classes) { var v = new VisualElement { name = name }; foreach (var c in classes.Split(' ')) v.AddToClassList(c); parent.Add(v); return v; }
         private static Label Text(VisualElement parent, string value, string cls) { var v = new Label(value) { pickingMode = PickingMode.Ignore }; v.AddToClassList(cls); parent.Add(v); return v; }
         private static Button Button(VisualElement parent, string text, System.Action action, string classes = "") { var v = new Button(action) { text = text }; v.AddToClassList("button"); foreach (var c in classes.Split(' ')) if (c.Length > 0) v.AddToClassList(c); parent.Add(v); return v; }

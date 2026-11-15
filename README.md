@@ -14,7 +14,7 @@
 2. 编辑器启动后自动打开 `Assets/_Project/Scenes/Traveller/01_GobiJourney.unity`；也可通过 **Tools → Three Body Traveller → Open Game Entry** 返回入口。
 3. 点击 **Play**，在标题页进入 **设置 → AI 对话**，填写自己的 API Key、地址和模型；**测试连接** 成功并保存后，点击 **开始旅程**。
 4. 在荒漠中醒来，使用 WASD 行走、直接移动鼠标环顾，沿绿色箭头调查四周并接近火光。巨日出现后跟随旅人进入巨岩阴影。
-5. 看向人物按住 F 说话，松开后自动转写并提问；按下时锁定本次接收者，转头不改选。Enter 打开文字交谈，T 切换火把，E 记录观察，J 打开观察簿，Esc 打开菜单并释放鼠标。
+5. 看向人物按住 F 说话，松开后自动转写并提问；按下时锁定本次接收者，转头不改选。Enter 打开文字交谈，确认输入法候选字后点击“发送”。T 切换火把，E 记录观察，J 打开观察簿，Esc 打开菜单并释放鼠标。
 6. 标题页或暂停菜单选择“设置”。“AI 对话”提供 32K／128K／512K／1M 上下文；“操作与声音”可调整鼠标灵敏度和选择麦克风；“显示与画质”可切换窗口、全屏、分辨率和画质。地址、模型和设备选择保存在本机，Key 仅在本次运行中使用。[设置说明](Documentation/Settings/2026-11-01/README_CN.md)、[麦克风设置](Documentation/Settings/2026-11-02/README_CN.md)与[角色记忆及长上下文验证](Documentation/Dialogue/2026-11-02/README_CN.md)。
 
 主线顺序：荒漠苏醒与调查 → 火光相遇、最多三次简短回答 → AI 决定巨日升起与晒伤避险 → 岩下认识姬昌、交流与植被燃烧 → AI 决定日落、原路退回地平线 → 同行一段夜路后自动抵达朝歌 → 穿城进入金字塔石殿 → 献历验证 → 复苏池苑 → 历法失验、长夜与三颗飞星 → 第 137 号文明毁灭 → 再次登录进入中世纪质询 → 三日凌空 → 回顾。夜路上的两次飞星观察为可选，不阻止第一幕结束。当前第一幕完整说明、语音服务启动和验收见 [夜色中的戈壁旅人](Documentation/ActOne/README.md)，独立开发包为 `Builds/ActOneTraveller.app`。
@@ -43,6 +43,7 @@ Windows 64 位试玩包包含 EXE、游戏资源和自动启动的本地 AI 服�
 - [项目清理与恢复记录](Documentation/ProjectCleanup/README.md)
 - [荒漠苏醒：第一幕开场设计](Documentation/ActOne/OPENING_DESIGN.md)：调查、绿色指引、初谈上限、AI 日出日落与麦克风流程。
 - [统一 F 键提问与 LLM 转交](Documentation/F_DIALOGUE.md)：视线选人、开始时锁定、单人回答，以及 LLM 接入与验收边界。
+- [中文文字交谈复测](Documentation/Dialogue/ChineseInput20261115/README_CN.md)：系统拼音、发送和纣王在线回复。
 - [角色扮演、人物记忆与 1M 上下文](Documentation/Dialogue/2026-11-02/README_CN.md)：主要人物跨场景延续本轮交流，按各自亲历提供现场事实，支持按模型窗口发送长记录。
 - [AI 角色决策与剧情推进](Documentation/AI_NPC_DECISIONS.md)：已接通日出、日落、语义推进、警告、卫兵拘捕／致命攻击与召回；[实现及验收](Documentation/Dialogue/DecisionRuntime20261102/README_CN.md)记录权限校验、失败重试和实际测试边界。
 - [角色生成记录](Documentation/CharacterProduction/hunyuan-production-manifest.json)与[实际动作覆盖表](Documentation/CharacterProduction/ACTION_COVERAGE.csv)：六套主要角色已接入三个剧情场景。动作库共 99 个片段／版本，594 种角色与动作组合通过骨架和蒙皮检查；剧情按需要使用其中的待机、移动、交谈、手势和环境反应。
