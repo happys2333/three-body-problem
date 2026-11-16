@@ -44,6 +44,7 @@ Windows 64 位试玩包包含 EXE、游戏资源和自动启动的本地 AI 服�
 - [荒漠苏醒：第一幕开场设计](Documentation/ActOne/OPENING_DESIGN.md)：调查、绿色指引、初谈上限、AI 日出日落与麦克风流程。
 - [统一 F 键提问与 LLM 转交](Documentation/F_DIALOGUE.md)：视线选人、开始时锁定、单人回答，以及 LLM 接入与验收边界。
 - [中文文字交谈复测](Documentation/Dialogue/ChineseInput20261115/README_CN.md)：系统拼音、发送和纣王在线回复。
+- [第二轮实机测试与图形设置](Documentation/Performance/RoundTwo20261116.md)：朝歌至结局、分辨率与超分辨率、麦克风修复及性能实测。
 - [角色扮演、人物记忆与 1M 上下文](Documentation/Dialogue/2026-11-02/README_CN.md)：主要人物跨场景延续本轮交流，按各自亲历提供现场事实，支持按模型窗口发送长记录。
 - [AI 角色决策与剧情推进](Documentation/AI_NPC_DECISIONS.md)：已接通日出、日落、语义推进、警告、卫兵拘捕／致命攻击与召回；[实现及验收](Documentation/Dialogue/DecisionRuntime20261102/README_CN.md)记录权限校验、失败重试和实际测试边界。
 - [角色生成记录](Documentation/CharacterProduction/hunyuan-production-manifest.json)与[实际动作覆盖表](Documentation/CharacterProduction/ACTION_COVERAGE.csv)：六套主要角色已接入三个剧情场景。动作库共 99 个片段／版本，594 种角色与动作组合通过骨架和蒙皮检查；剧情按需要使用其中的待机、移动、交谈、手势和环境反应。
