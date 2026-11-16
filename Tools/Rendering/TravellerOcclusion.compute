@@ -1,0 +1,67 @@
+#pragma kernel TraceOcclusion
+#pragma only_renderers d3d11
+#pragma use_dxc
+#pragma require inlineraytracing
+#include "UnityRayQuery.cginc"
+
+RaytracingAccelerationStructure _SceneGeometry;
+Texture2D<float> _CameraDepthTexture;
+RWTexture2D<float> _Occlusion;
+float4x4 _InverseViewProjection;
+float3 _ViewPosition;
+int2 _OutputSize;
+
+float3 WorldPosition(int2 pixel, int2 size, float depth)
+{
+    float2 clip = (pixel + 0.5) / size * 2.0 - 1.0;
+    #if defined(UNITY_UV_STARTS_AT_TOP)
+    clip.y = -clip.y;
+    #endif
+    float4 world = mul(_InverseViewProjection, float4(clip, depth, 1.0));
+    return world.xyz / world.w;
+}
+
+float IsBlocked(float3 origin, float3 direction)
+{
+    RayDesc ray;
+    ray.Origin = origin;
+    ray.Direction = direction;
+    ray.TMin = 0.025;
+    ray.TMax = 1.6;
+    const uint flags = RAY_FLAG_ACCEPT_FIRST_HIT_AND_END_SEARCH | RAY_FLAG_FORCE_OPAQUE;
+    UnityRayQuery<flags> query;
+    query.TraceRayInline(_SceneGeometry, 0, 0xff, ray);
+    query.Proceed();
+    return query.CommittedStatus() == COMMITTED_TRIANGLE_HIT ? saturate(1.0 - query.CommittedRayT() / ray.TMax) : 0.0;
+}
+
+[numthreads(8, 8, 1)]
+void TraceOcclusion(uint3 id : SV_DispatchThreadID)
+{
+    if (any(id.xy >= (uint2)_OutputSize)) return;
+    uint width, height;
+    _CameraDepthTexture.GetDimensions(width, height);
+    int2 size = int2(width, height);
+    int2 pixel = min((int2)((id.xy + 0.5) * size / _OutputSize), size - 1);
+    float depth = _CameraDepthTexture.Load(int3(pixel, 0));
+    // DX12 uses reversed Z. A clear depth is the sky.
+    if (depth < 0.000001) { _Occlusion[id.xy] = 0.0; return; }
+
+    int2 xLeft = max(pixel - int2(1, 0), 0), xRight = min(pixel + int2(1, 0), size - 1);
+    int2 yUp = max(pixel - int2(0, 1), 0), yDown = min(pixel + int2(0, 1), size - 1);
+    float dl = _CameraDepthTexture.Load(int3(xLeft, 0)), dr = _CameraDepthTexture.Load(int3(xRight, 0));
+    float du = _CameraDepthTexture.Load(int3(yUp, 0)), dd = _CameraDepthTexture.Load(int3(yDown, 0));
+    float3 positionWS = WorldPosition(pixel, size, depth);
+    float3 dx = abs(dr-depth) < abs(dl-depth) ? WorldPosition(xRight,size,dr)-positionWS : positionWS-WorldPosition(xLeft,size,dl);
+    float3 dy = abs(dd-depth) < abs(du-depth) ? WorldPosition(yDown,size,dd)-positionWS : positionWS-WorldPosition(yUp,size,du);
+    float3 crossNormal = cross(dx, dy);
+    float normalLength = dot(crossNormal,crossNormal);
+    if (normalLength < 1e-12) { _Occlusion[id.xy] = 0.0; return; }
+    float3 normal = crossNormal * rsqrt(normalLength);
+    if (dot(normal, _ViewPosition - positionWS) < 0.0) normal = -normal;
+    float3 tangent = normalize(abs(normal.y) > 0.9 ? cross(normal,float3(1,0,0)) : cross(normal,float3(0,1,0)));
+    float3 origin = positionWS + normal * 0.025;
+    float first = IsBlocked(origin, normal);
+    float second = IsBlocked(origin, normalize(normal + tangent * 0.9));
+    _Occlusion[id.xy] = (first + second) * 0.5;
+}

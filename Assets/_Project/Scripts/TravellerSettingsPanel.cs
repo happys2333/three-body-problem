@@ -18,10 +18,16 @@ namespace ThreeBodyProblem
         private readonly Action closed, saved;
         private readonly VisualElement overlay, apiFields, aiPage, controlsPage, graphicsPage;
         private readonly DropdownField provider;
-        private readonly DropdownField contextWindow, displayMode, resolution, graphicsQuality;
+        private readonly DropdownField contextWindow, displayMode, resolution, graphicsQuality, upscaling;
         private readonly List<Vector2Int> resolutionSizes = new List<Vector2Int>();
         private static readonly List<string> DisplayModes = new List<string> { "窗口", "全屏" };
         private static readonly List<string> QualityLabels = new List<string> { "默认", "低", "中", "高", "极高" };
+        private static readonly string[] UpscalingLabels =
+        {
+            "原生", "FSR 1.0 · 质量", "FSR 1.0 · 均衡", "FSR 1.0 · 性能", "DLSS · 质量", "DLSS · 均衡", "DLSS · 性能"
+        };
+        private readonly List<TravellerUpscaling> availableUpscaling = new List<TravellerUpscaling>();
+        private readonly Toggle rayTracedOcclusion;
         private static readonly Vector2Int[] StandardSizes =
         {
             new Vector2Int(960, 540), new Vector2Int(1280, 720), new Vector2Int(1600, 900),
@@ -44,6 +50,7 @@ namespace ThreeBodyProblem
         private UnityWebRequest pending;
         private Coroutine testing;
         private int generation;
+        private int selectedTab;
         public bool IsOpen { get; private set; }
         public VisualElement Root => overlay;
         [Serializable] private class TestRequest { public NpcApiConnection connection; }
@@ -103,11 +110,14 @@ namespace ThreeBodyProblem
             displayMode = new DropdownField("显示模式", DisplayModes, 0) { name = "settings-display-mode" };
             resolution = new DropdownField("分辨率", new List<string> { "当前分辨率" }, 0) { name = "settings-resolution" };
             graphicsQuality = new DropdownField("画质", QualityLabels, 0) { name = "settings-graphics-quality" };
-            foreach (var field in new[] { displayMode, resolution, graphicsQuality })
+            upscaling = new DropdownField("超分辨率", new List<string> { UpscalingLabels[0] }, 0) { name = "settings-upscaling" };
+            foreach (var field in new[] { displayMode, resolution, graphicsQuality, upscaling })
             {
                 field.AddToClassList("settings-select");
                 graphicsPage.Add(field);
             }
+            rayTracedOcclusion = new Toggle("光追环境遮蔽") { name = "settings-ray-tracing" };
+            graphicsPage.Add(rayTracedOcclusion);
             status = Text(card, "", "settings-status"); status.name = "settings-status";
             var footer = Box(card, "settings-footer", "settings-footer");
             test = Button(footer, "测试连接", BeginTest, "settings-test");
@@ -140,6 +150,19 @@ namespace ThreeBodyProblem
             microphoneEnabled.SetValueWithoutNotify(value.microphoneEnabled); RefreshMicrophones(value.microphoneDevice, false);
             displayMode.SetValueWithoutNotify(DisplayModes[(value.displayWidth > 0 ? value.fullscreen : Screen.fullScreen) ? 1 : 0]);
             graphicsQuality.SetValueWithoutNotify(QualityLabels[(int)value.graphicsQuality]);
+            availableUpscaling.Clear();
+            availableUpscaling.Add(TravellerUpscaling.Native);
+            if (TravellerSceneUpscaler.IsSupported)
+                availableUpscaling.AddRange(new[] { TravellerUpscaling.FsrQuality, TravellerUpscaling.FsrBalanced, TravellerUpscaling.FsrPerformance });
+            if (TravellerDlssPass.IsSupported)
+                availableUpscaling.AddRange(new[] { TravellerUpscaling.DlssQuality, TravellerUpscaling.DlssBalanced, TravellerUpscaling.DlssPerformance });
+            upscaling.choices = availableUpscaling.Select(mode => UpscalingLabels[(int)mode]).ToList();
+            upscaling.SetEnabled(availableUpscaling.Count > 1);
+            upscaling.SetValueWithoutNotify(upscaling.choices[Mathf.Max(0, availableUpscaling.IndexOf(value.upscaling))]);
+            bool supportsRayTracing = TravellerRayTracedOcclusion.IsSupported;
+            rayTracedOcclusion.SetEnabled(supportsRayTracing);
+            rayTracedOcclusion.SetValueWithoutNotify(supportsRayTracing && value.rayTracedOcclusion);
+            rayTracedOcclusion.tooltip = supportsRayTracing ? "真实几何遮挡，增加物体接触处的阴影" : "需要含光追资源的 Windows DX12 构建及支持 DXR 1.1 的显卡";
             var size = value.displayWidth > 0 ? new Vector2Int(value.displayWidth, value.displayHeight) : new Vector2Int(Screen.width, Screen.height);
             RefreshResolutions(size);
             IsOpen = true; overlay.style.display = DisplayStyle.Flex; SelectTab(0); RefreshProvider(); SetStatus("", false);
@@ -147,6 +170,7 @@ namespace ThreeBodyProblem
 
         private void SelectTab(int tab)
         {
+            selectedTab = tab;
             aiPage.style.display = tab == 0 ? DisplayStyle.Flex : DisplayStyle.None;
             controlsPage.style.display = tab == 1 ? DisplayStyle.Flex : DisplayStyle.None;
             graphicsPage.style.display = tab == 2 ? DisplayStyle.Flex : DisplayStyle.None;
@@ -212,14 +236,28 @@ namespace ThreeBodyProblem
                 gatewayUrl = gatewayUrl.value, mouseSensitivity = sensitivity.value, invertMouseY = invertY.value, speakReplies = speakReplies.value,
                 microphoneEnabled = microphoneEnabled.value, microphoneDevice = SelectedMicrophone,
                 fullscreen = displayMode.index == 1, displayWidth = size.x, displayHeight = size.y,
-                graphicsQuality = (TravellerGraphicsQuality)Mathf.Clamp(graphicsQuality.index, 0, QualityLabels.Count - 1)
+                graphicsQuality = (TravellerGraphicsQuality)Mathf.Clamp(graphicsQuality.index, 0, QualityLabels.Count - 1),
+                upscaling = availableUpscaling[Mathf.Clamp(upscaling.index, 0, availableUpscaling.Count - 1)],
+                rayTracedOcclusion = rayTracedOcclusion.value
             };
         }
 
         public void Apply()
         {
-            string error; var value = ReadDraft();
-            if (!TravellerAiAccess.CanPlay(value, defaults, out error)) { SelectTab(0); SetStatus(error, true); return; }
+            var value = ReadDraft();
+            if (!TravellerAiAccess.CanPlay(value, defaults, out string error))
+            {
+                if (selectedTab == 0)
+                {
+                    SetStatus(error, true);
+                    return;
+                }
+                // Display and input settings can be saved before an AI connection
+                // is verified. Keep the previous connection in that case.
+                var current = TravellerUserSettings.Current;
+                value.connection = current.connection.Copy();
+                value.gatewayUrl = current.gatewayUrl;
+            }
             if (!TravellerUserSettings.Save(value, out error)) { SetStatus(error, true); return; }
             saved(); Close();
         }

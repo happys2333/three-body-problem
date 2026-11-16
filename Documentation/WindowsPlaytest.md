@@ -12,6 +12,8 @@
 
 在 Unity 菜单选择 `Tools → Three Body Traveller → Build Windows Playtest`，或批处理调用 `ThreeBodyProblem.Editor.TravellerPlaytestBuild.BuildWindows`。环境变量 `TRAVELLER_WINDOWS_OUTPUT` 可以指定 EXE 的绝对输出路径。构建记录写入同目录的 `.build.json`。
 
+构建优先使用 DirectX 12，支持回退至 DirectX 11。构建工具从当前 Unity 安装的 Windows Build Support 补齐 DLSS 所需运行库。光追环境遮蔽需要使用 Windows 版 Unity 构建，并在支持 DXR 1.1 的显卡上运行；Mac 生成的 Windows 包仍可使用 FSR，以及受支持显卡上的 DLSS。
+
 ```sh
 python3 Tools/package_windows_playtest.py \
   --build-dir Builds/Windows/ThreeBodyTraveller \

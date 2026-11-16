@@ -54,6 +54,7 @@ namespace ThreeBodyProblem
     }
 
     public enum TravellerGraphicsQuality { SceneDefault, Low, Medium, High, Ultra }
+    public enum TravellerUpscaling { Native, FsrQuality, FsrBalanced, FsrPerformance, DlssQuality, DlssBalanced, DlssPerformance }
 
     [Serializable]
     public sealed class TravellerPreferences
@@ -66,8 +67,19 @@ namespace ThreeBodyProblem
         public bool microphoneEnabled = true;
         public string microphoneDevice = "";
         public TravellerGraphicsQuality graphicsQuality;
+        public TravellerUpscaling upscaling;
+        public bool rayTracedOcclusion;
         public bool fullscreen;
         public int displayWidth, displayHeight;
+        public float RenderScale => upscaling switch
+        {
+            TravellerUpscaling.FsrQuality => 1f / 1.5f,
+            TravellerUpscaling.FsrBalanced => 1f / 1.7f,
+            TravellerUpscaling.FsrPerformance => 0.5f,
+            _ => 1f
+        };
+        public bool UsesDlss => upscaling == TravellerUpscaling.DlssQuality || upscaling == TravellerUpscaling.DlssBalanced ||
+            upscaling == TravellerUpscaling.DlssPerformance;
 
         // Deliberately has no credential field: only the in-memory connection
         // is sent to the local service. Keys never enter PlayerPrefs or assets.
@@ -83,6 +95,8 @@ namespace ThreeBodyProblem
             public bool microphoneEnabled;
             public string microphoneDevice;
             public TravellerGraphicsQuality graphicsQuality;
+            public TravellerUpscaling upscaling;
+            public bool rayTracedOcclusion;
             public bool fullscreen;
             public int displayWidth, displayHeight;
         }
@@ -108,7 +122,7 @@ namespace ThreeBodyProblem
             { error = "鼠标灵敏度需在 0.2–5 之间。"; return false; }
             if ((microphoneDevice ?? "").Length > 512 || (microphoneDevice ?? "").IndexOfAny(new[] { '\r', '\n', '\0' }) >= 0)
             { error = "麦克风名称无效，请重新选择设备。"; return false; }
-            if (!Enum.IsDefined(typeof(TravellerGraphicsQuality), graphicsQuality))
+            if (!Enum.IsDefined(typeof(TravellerGraphicsQuality), graphicsQuality) || !Enum.IsDefined(typeof(TravellerUpscaling), upscaling))
             { error = "请选择画质。"; return false; }
             if ((displayWidth != 0 || displayHeight != 0) && !ValidDisplaySize(displayWidth, displayHeight))
             { error = "请选择分辨率。"; return false; }
@@ -125,7 +139,7 @@ namespace ThreeBodyProblem
             timeoutSeconds = connection.timeoutSeconds, contextWindowTokens = connection.contextWindowTokens, gatewayUrl = gatewayUrl,
             mouseSensitivity = mouseSensitivity, invertMouseY = invertMouseY, speakReplies = speakReplies,
             microphonePreferencesVersion = 1, microphoneEnabled = microphoneEnabled, microphoneDevice = microphoneDevice ?? "",
-            graphicsQuality = graphicsQuality, fullscreen = fullscreen, displayWidth = displayWidth, displayHeight = displayHeight
+            graphicsQuality = graphicsQuality, upscaling = upscaling, rayTracedOcclusion = rayTracedOcclusion, fullscreen = fullscreen, displayWidth = displayWidth, displayHeight = displayHeight
         });
 
         public static TravellerPreferences FromSavedJson(string json)
@@ -143,6 +157,8 @@ namespace ThreeBodyProblem
                     microphoneEnabled = saved.microphonePreferencesVersion < 1 || saved.microphoneEnabled,
                     microphoneDevice = saved.microphoneDevice ?? "",
                     graphicsQuality = Enum.IsDefined(typeof(TravellerGraphicsQuality), saved.graphicsQuality) ? saved.graphicsQuality : TravellerGraphicsQuality.SceneDefault,
+                    upscaling = Enum.IsDefined(typeof(TravellerUpscaling), saved.upscaling) ? saved.upscaling : TravellerUpscaling.Native,
+                    rayTracedOcclusion = saved.rayTracedOcclusion,
                     fullscreen = saved.fullscreen
                 };
                 if (ValidDisplaySize(saved.displayWidth, saved.displayHeight))
@@ -210,6 +226,11 @@ namespace ThreeBodyProblem
             }
             if (previous.fullscreen != copy.fullscreen || previous.displayWidth != copy.displayWidth || previous.displayHeight != copy.displayHeight)
                 ApplyDisplay(copy);
+            if (previous.rayTracedOcclusion != copy.rayTracedOcclusion)
+            {
+                var stage = UnityEngine.Object.FindFirstObjectByType<TravellerStage>();
+                if (stage != null) TravellerRayTracedOcclusion.Apply(stage.player.viewCamera, copy.rayTracedOcclusion);
+            }
             return true;
         }
     }

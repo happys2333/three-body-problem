@@ -60,6 +60,8 @@ namespace ThreeBodyProblem
             revival = GetComponent<CapitalRevivalDirector>();
             audience = GetComponentInChildren<CourtAudienceSequence>(true);
             hud = GetComponentInChildren<TravellerHud>();
+            player.viewCamera.gameObject.AddComponent<TravellerSceneUpscaler>();
+            TravellerRayTracedOcclusion.Apply(player.viewCamera, TravellerUserSettings.Current.rayTracedOcclusion);
             observers = GetComponentsInChildren<NpcIdentity>(true);
             liveSky = new Material(skyMaterial);
             RenderSettings.skybox = liveSky;
