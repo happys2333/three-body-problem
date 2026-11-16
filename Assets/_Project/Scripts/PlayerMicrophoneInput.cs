@@ -45,13 +45,21 @@ namespace ThreeBodyProblem
             var sequence=GetComponent<GobiSequenceController>();sequence?.NotePlayerSpeech();
             int token=++generation;awaitingPermission=true;
             dialogue.CancelPending();dialogue.SetStatus("准备麦克风……");
-            if(!source.HasPermission)yield return source.RequestPermission();
+            bool requestedPermission = !source.HasPermission;
+            if (requestedPermission) yield return source.RequestPermission();
             if(token!=generation)yield break;
             awaitingPermission=false;
             if(!isActiveAndEnabled||stage==null||!stage.Journey.DialogueOpen||(hud!=null&&hud.IsWorldPaused))yield break;
             if(!TravellerUserSettings.Current.microphoneEnabled){TextFallback("麦克风已关闭，仍可打字交谈");yield break;}
             if(!source.HasPermission){TextFallback("麦克风未获授权，请在系统隐私设置中允许，仍可打字交谈");yield break;}
-            if(fromKeyboard&&!Input.GetKey(KeyCode.F)){dialogue.CancelQuestion();dialogue.SetStatus("麦克风已就绪，按住 F 说话");yield break;}
+            // An operating system permission prompt takes focus and may consume
+            // the key release. Start only from a new press after first consent.
+            if (!Application.isFocused || fromKeyboard && (requestedPermission || !Input.GetKey(KeyCode.F)))
+            {
+                dialogue.CancelQuestion();
+                dialogue.SetStatus("麦克风已就绪，按住 F 说话");
+                yield break;
+            }
             string error;
             if(!MicrophoneDeviceSelection.TryResolve(TravellerUserSettings.Current.microphoneDevice,source.Devices,out device,out error))
             {TextFallback(error);yield break;}
@@ -62,14 +70,48 @@ namespace ThreeBodyProblem
         }
         public void FinishCapture()
         {
-            if(!IsRecording)return;
-            int frames;
-            try{frames=source.GetPosition(device);source.End(device);}catch(Exception){CancelCapture();TextFallback("麦克风连接中断，请重新选择设备或打字交谈");return;}
-            IsRecording=false;
-            if(recording==null||frames<1600){if(recording!=null)Destroy(recording);recording=null;dialogue.CancelQuestion();dialogue.SetStatus("说得太短了，按住 F 重新提问");return;}
-            var samples=new float[frames*recording.channels];recording.GetData(samples,0);
-            byte[] wav=VoiceWave.EncodeMono16(samples,recording.frequency,recording.channels);Destroy(recording);recording=null;
-            StartCoroutine(Transcribe(wav,++generation));
+            if (!IsRecording) return;
+            IsRecording = false;
+            var clip = recording;
+            recording = null;
+            float[] samples;
+            int frequency, channels;
+            try
+            {
+                try
+                {
+                    int frames = clip == null ? 0 : Mathf.Min(source.GetPosition(device), clip.samples);
+                    if (frames < 1600)
+                    {
+                        dialogue.CancelQuestion();
+                        dialogue.SetStatus("说得太短了，按住 F 重新提问");
+                        return;
+                    }
+                    frequency = clip.frequency;
+                    channels = clip.channels;
+                    samples = new float[frames * channels];
+                    // The microphone owns this clip's backing samples. Copy
+                    // them while the device is still recording.
+                    if (!clip.GetData(samples, 0))
+                    {
+                        TextFallback("没有取得录音，请重试或打字");
+                        return;
+                    }
+                }
+                finally { source.End(device); }
+            }
+            catch (Exception)
+            {
+                TextFallback("麦克风连接中断，请重新选择设备或打字交谈");
+                return;
+            }
+            finally { if (clip != null) Destroy(clip); }
+            if (!Array.Exists(samples, sample => sample != 0f))
+            {
+                TextFallback("麦克风未收到声音，请检查输入设备或打字交谈");
+                return;
+            }
+            StartCoroutine(Transcribe(VoiceWave.EncodeMono16(samples, frequency, channels), ++generation));
         }
         private IEnumerator Transcribe(byte[] wav,int token)
         {
@@ -107,9 +149,9 @@ namespace ThreeBodyProblem
             recordingTarget=null;
             if(active&&dialogue!=null)dialogue.CancelQuestion();
         }
-        private void OnApplicationFocus(bool focused){if(!focused&&(IsRecording||IsTranscribing||awaitingPermission))CancelCapture();}
+        private void OnApplicationFocus(bool focused){if(!focused&&(IsRecording||IsTranscribing))CancelCapture();}
         private void TextFallback(string message){NeedsTextFallback=true;dialogue.CancelQuestion();dialogue.SetStatus(message);}
-        private void OnApplicationPause(bool paused){if(paused)CancelCapture();}
+        private void OnApplicationPause(bool paused){if(paused&&!awaitingPermission)CancelCapture();}
         private void OnDisable(){CancelCapture();}
     }
 }

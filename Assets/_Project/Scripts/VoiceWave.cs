@@ -7,17 +7,42 @@ namespace ThreeBodyProblem
 {
     public static class VoiceWave
     {
-        public static byte[] EncodeMono16(float[] samples,int sourceRate,int channels,int targetRate=16000)
+        public static byte[] EncodeMono16(float[] samples, int sourceRate, int channels, int targetRate = 16000)
         {
-            int sourceFrames=samples.Length/channels;int count=(int)(sourceFrames*(double)targetRate/sourceRate);
-            using(var stream=new MemoryStream())using(var writer=new BinaryWriter(stream))
+            if (samples == null) throw new ArgumentNullException(nameof(samples));
+            if (sourceRate < 1) throw new ArgumentOutOfRangeException(nameof(sourceRate));
+            if (channels < 1) throw new ArgumentOutOfRangeException(nameof(channels));
+            if (targetRate < 1) throw new ArgumentOutOfRangeException(nameof(targetRate));
+
+            int sourceFrames = samples.Length / channels;
+            int count = checked((int)((long)sourceFrames * targetRate / sourceRate));
+            int dataBytes = checked(count * sizeof(short));
+            using (var stream = new MemoryStream(checked(44 + dataBytes)))
+            using (var writer = new BinaryWriter(stream))
             {
-                writer.Write(Encoding.ASCII.GetBytes("RIFF"));writer.Write(36+count*2);writer.Write(Encoding.ASCII.GetBytes("WAVEfmt "));writer.Write(16);writer.Write((short)1);writer.Write((short)1);writer.Write(targetRate);writer.Write(targetRate*2);writer.Write((short)2);writer.Write((short)16);writer.Write(Encoding.ASCII.GetBytes("data"));writer.Write(count*2);
-                for(int i=0;i<count;i++)
+                writer.Write(Encoding.ASCII.GetBytes("RIFF"));
+                writer.Write(36 + dataBytes);
+                writer.Write(Encoding.ASCII.GetBytes("WAVEfmt "));
+                writer.Write(16);
+                writer.Write((short)1);
+                writer.Write((short)1);
+                writer.Write(targetRate);
+                writer.Write(checked(targetRate * sizeof(short)));
+                writer.Write((short)sizeof(short));
+                writer.Write((short)16);
+                writer.Write(Encoding.ASCII.GetBytes("data"));
+                writer.Write(dataBytes);
+                for (int i = 0; i < count; i++)
                 {
-                    float position=i*sourceRate/(float)targetRate;int a=Math.Min(sourceFrames-1,(int)position),b=Math.Min(sourceFrames-1,a+1);float value=0;
-                    for(int channel=0;channel<channels;channel++)value+=Mathf.Lerp(samples[a*channels+channel],samples[b*channels+channel],position-a);
-                    writer.Write((short)(Mathf.Clamp(value/channels,-1,1)*32767));
+                    // Convert before multiplying. A few seconds of hardware
+                    // audio can already exceed the range of a 32-bit product.
+                    double position = (double)i * sourceRate / targetRate;
+                    int a = Math.Min(sourceFrames - 1, (int)position);
+                    int b = Math.Min(sourceFrames - 1, a + 1);
+                    float value = 0f;
+                    for (int channel = 0; channel < channels; channel++)
+                        value += Mathf.Lerp(samples[a * channels + channel], samples[b * channels + channel], (float)(position - a));
+                    writer.Write((short)(Mathf.Clamp(value / channels, -1, 1) * 32767));
                 }
                 return stream.ToArray();
             }

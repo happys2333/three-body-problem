@@ -34,6 +34,19 @@ namespace ThreeBodyProblem.Tests
             var bytes=VoiceWave.EncodeMono16(samples,48000,2);Assert.That(bytes.Length,Is.EqualTo(44+16000*2));
             var clip=VoiceWave.DecodePcm16(bytes);Assert.That(clip,Is.Not.Null);Assert.That(clip.channels,Is.EqualTo(1));Assert.That(clip.frequency,Is.EqualTo(16000));Assert.That(clip.length,Is.EqualTo(1).Within(.001));Object.DestroyImmediate(clip);
         }
+        [TestCase(16000, 12)]
+        [TestCase(48000, 6)]
+        public void LongMicrophoneAudioKeepsTheLastSampleAfterResampling(int rate, int seconds)
+        {
+            var raw = new float[rate * seconds];
+            raw[0] = -.5f;
+            for (int i = raw.Length - rate / 16000; i < raw.Length; i++) raw[i] = .5f;
+
+            var wav = VoiceWave.EncodeMono16(raw, rate, 1);
+            Assert.That(wav.Length, Is.EqualTo(44 + 2 * 16000 * seconds));
+            Assert.That(System.BitConverter.ToInt16(wav, 44), Is.EqualTo(-16383));
+            Assert.That(System.BitConverter.ToInt16(wav, wav.Length - 2), Is.EqualTo(16383));
+        }
         [Test] public void UntrustedAiIntentCannotBecomeAStateChangingCommand()
         {Assert.That(NpcDialogueDirector.GestureClip("advance_scene"),Is.EqualTo("MX_TalkCalm"));Assert.That(NpcDialogueDirector.GestureClip("set_health_100"),Is.EqualTo("MX_TalkCalm"));}
         [Test] public void SavedOpeningIsNightWithShortWakeAndAiDirectedConversation()
